@@ -1,5 +1,5 @@
 # Local source inputs and agent metadata
-__agent/
+__agent__/
 PROMPT.md
 Aniket_Thakur_Resume.pdf
 .DS_Store
