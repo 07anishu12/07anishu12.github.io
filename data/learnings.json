@@ -1,0 +1,26 @@
+[
+  {
+    "title": "TODO — Add a LinkedIn build note",
+    "date": "TODO",
+    "tag": "AI Engineering",
+    "excerpt": "Replace this placeholder with a real LinkedIn post about an AI system, experiment, or engineering lesson.",
+    "link": "https://www.linkedin.com/in/aniket-thakur-a23a9b372",
+    "todo": true
+  },
+  {
+    "title": "TODO — Add a fintech product note",
+    "date": "TODO",
+    "tag": "Fintech",
+    "excerpt": "Replace this placeholder with a real LinkedIn post about lending, loan journeys, or financial engineering.",
+    "link": "https://www.linkedin.com/in/aniket-thakur-a23a9b372",
+    "todo": true
+  },
+  {
+    "title": "TODO — Add a product lesson",
+    "date": "TODO",
+    "tag": "Product",
+    "excerpt": "Replace this placeholder with a real LinkedIn or X post about building, shipping, or learning in public.",
+    "link": "https://x.com/07anni04",
+    "todo": true
+  }
+]
