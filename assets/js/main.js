@@ -114,62 +114,39 @@
   function initLearnings() {
     const grid = document.querySelector('[data-learning-grid]');
     if (!grid) return;
+    const cards = [...grid.querySelectorAll('.note-card')];
     const status = document.querySelector('[data-learning-status]');
     const filters = [...document.querySelectorAll('[data-filter]')];
-    let entries = [];
-
-    const render = (filter = 'All') => {
-      const filtered = filter === 'All' ? entries : entries.filter((entry) => entry.tag === filter);
-      grid.innerHTML = '';
-      if (!filtered.length) {
-        grid.innerHTML = `
-          <div class="learnings-empty-box" style="grid-column: 1 / -1;">
-            <p class="eyebrow">Coming Soon</p>
-            <h3>Notes from the build</h3>
-            <p>Writing and technical notes are currently being prepared. Topics will cover multi-LLM orchestration, core banking integrations, graph neural networks, and financial engineering.</p>
-            <div style="margin-top: 8px;">
-              <a class="btn btn-secondary btn-sm" href="contact.html">Connect for early drafts ↗</a>
-            </div>
-          </div>
-        `;
-        return;
-      }
-      filtered.forEach((entry) => {
-        const card = document.createElement('article');
-        card.className = 'note-card';
-        card.innerHTML = `
-          <div class="project-card-header">
-            <span class="project-card-number">${escapeHtml(entry.tag || 'Note')}</span>
-            <span class="meta-text">${escapeHtml(entry.date || '')}</span>
-          </div>
-          <h3>${escapeHtml(entry.title || '')}</h3>
-          <p>${escapeHtml(entry.excerpt || '')}</p>
-        `;
-        if (entry.link) {
-          card.innerHTML += `<div style="margin-top:auto"><a class="link-subtle" href="${escapeAttribute(entry.link)}" target="_blank" rel="noopener">Read note <span class="arrow">↗</span></a></div>`;
-        }
-        grid.appendChild(card);
-      });
-    };
 
     filters.forEach((button) => button.addEventListener('click', () => {
       filters.forEach((item) => item.setAttribute('aria-pressed', 'false'));
       button.setAttribute('aria-pressed', 'true');
-      render(button.dataset.filter);
-    }));
+      const filter = button.dataset.filter;
 
-    fetch('data/learnings.json', { cache: 'no-store' })
-      .then((response) => response.ok ? response.json() : [])
-      .then((data) => {
-        entries = Array.isArray(data) ? data : [];
-        render(document.querySelector('[data-filter][aria-pressed="true"]')?.dataset.filter || 'All');
-        if (status) status.textContent = entries.length ? `${entries.length} note${entries.length === 1 ? '' : 's'} published` : 'No notes published yet.';
-      })
-      .catch(() => {
-        entries = [];
-        render();
-        if (status) status.textContent = 'No notes published yet.';
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const cat = card.dataset.category;
+        const matches = (filter === 'All' || cat === filter);
+        card.hidden = !matches;
+        if (matches) visibleCount++;
       });
+
+      let emptyMsg = grid.querySelector('.learnings-filter-empty');
+      if (visibleCount === 0) {
+        if (!emptyMsg) {
+          emptyMsg = document.createElement('div');
+          emptyMsg.className = 'learnings-filter-empty';
+          emptyMsg.style.gridColumn = '1 / -1';
+          emptyMsg.innerHTML = '<p class="lead" style="text-align: center; padding: 40px 0; color: var(--text-secondary);">No notes found in this topic yet.</p>';
+          grid.appendChild(emptyMsg);
+        }
+        emptyMsg.hidden = false;
+      } else if (emptyMsg) {
+        emptyMsg.hidden = true;
+      }
+
+      if (status) status.textContent = `${visibleCount} note${visibleCount === 1 ? '' : 's'} displayed`;
+    }));
   }
 
   function initContactForm() {

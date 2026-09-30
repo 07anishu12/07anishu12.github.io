@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aniket Thakur personal portfolio and knowledge library",
+  "scripts": {
+    "admin": "node tools/admin/server.js",
+    "build:content": "node tools/admin/build.js"
+  }
+}

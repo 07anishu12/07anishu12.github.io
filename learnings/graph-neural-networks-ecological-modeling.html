@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Graph Neural Networks for Topological Food-Web Interactions — Aniket Thakur</title>
+  <meta name="description" content="Research notes from OIST: applying GraphSAGE and GAT architectures to model topological trophic networks and synthesize scientific literature.">
+  <link rel="canonical" href="https://07anishu12.github.io/learnings/graph-neural-networks-ecological-modeling.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="Graph Neural Networks for Topological Food-Web Interactions">
+  <meta property="og:description" content="Research notes from OIST: applying GraphSAGE and GAT architectures to model topological trophic networks and synthesize scientific literature.">
+  <meta property="og:url" content="https://07anishu12.github.io/learnings/graph-neural-networks-ecological-modeling.html">
+  <meta property="og:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Graph Neural Networks for Topological Food-Web Interactions">
+  <meta name="twitter:description" content="Research notes from OIST: applying GraphSAGE and GAT architectures to model topological trophic networks and synthesize scientific literature.">
+  <meta name="twitter:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Graph Neural Networks for Topological Food-Web Interactions",
+    "description": "Research notes from OIST: applying GraphSAGE and GAT architectures to model topological trophic networks and synthesize scientific literature.",
+    "author": {
+      "@type": "Person",
+      "name": "Aniket Thakur",
+      "url": "https://07anishu12.github.io/"
+    },
+    "datePublished": "2026-07-28",
+    "dateModified": "2026-09-30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://07anishu12.github.io/learnings/graph-neural-networks-ecological-modeling.html"
+    }
+  }
+  </script>
+</head>
+<body data-page="learnings-article">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="../about.html">About</a>
+        <a href="../work.html">Work</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../learnings.html" aria-current="page">Learnings</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="../about.html">About</a>
+      <a href="../work.html">Work</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../learnings.html" aria-current="page">Learnings</a>
+      <a href="../contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container">
+      <!-- Article Header -->
+      <header class="article-header">
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="../learnings.html">← Back to Notes</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Research</span>
+          <span class="breadcrumb-separator">/</span>
+          <span>Research</span>
+        </nav>
+
+        <h1 class="article-title">Graph Neural Networks for Topological Food-Web Interactions</h1>
+        <p class="article-lead">Research notes from OIST: applying GraphSAGE and GAT architectures to model topological trophic networks and synthesize scientific literature.</p>
+
+        <div class="article-meta-row">
+          <div class="article-author-info">
+            <span class="author-name">Aniket Thakur</span>
+            <span class="meta-dot">·</span>
+            <time datetime="2026-07-28">Jul 28, 2026</time>
+            <span class="meta-dot">·</span>
+            <span>4 min read</span>
+          </div>
+          <div class="article-tags-wrap"><span class="tag">GNN</span> <span class="tag">PyTorch Geometric</span> <span class="tag">OIST</span> <span class="tag">Scientific AI</span> <span class="tag">GraphSAGE</span></div>
+        </div>
+
+        
+        <div class="note-source-badge">
+          <span>Source: Research</span>
+          <a href="https://07anishu12.github.io/about.html" target="_blank" rel="noopener" class="note-source-link">View source reference ↗</a>
+        </div>
+      
+      </header>
+
+      
+
+      <!-- Article Body -->
+      <div class="article-body">
+        <h3>Modeling Non-Euclidean Relationships</h3>
+
+<p>During my AI research internship at the <strong>Okinawa Institute of Science and Technology (OIST)</strong> in Japan, our core objective was modeling complex ecological trophic networks. In an ecological food web, interactions are not linear sequences; they form directed, heterogeneous graphs where energy flows, predator-prey dependencies, and topological trophic nodes evolve dynamically.</p>
+
+<p>Traditional convolutional and tabular machine learning methods stumble when processing graph structures because permutation invariance and variable neighborhood degree distributions break standard matrix assumptions.</p>
+
+<h3>GraphSAGE vs. Graph Attention Networks (GAT)</h3>
+
+<ul><li><strong>GraphSAGE (Sample and Aggregate):</strong> Enabled inductive representation learning across large graphs by sampling uniform local neighborhoods and aggregating neighbor node features rather than processing the entire adjacency matrix.</li><li><strong>Graph Attention Networks (GAT):</strong> Applied multi-head self-attention over node edges, allowing the model to weight the ecological significance of specific trophic links differentially.</li></ul>
+
+<h3>Multi-LLM Synthesis for Literature Bottlenecks</h3>
+
+<p>To complement graph topological modeling, we engineered data synthesis pipelines leveraging multi-LLM ensembles (Gemini, DeepSeek, Anthropic, and OpenAI). The system extracted unstructured interaction data from thousands of ecological research publications, transforming fragmented citations into structured edge-list datasets for graph training.</p>
+      </div>
+
+      <!-- Article Footer & Attribution -->
+      <footer class="article-footer">
+        <div class="article-share-strip">
+          <span>Written &amp; published by <strong>Aniket Thakur</strong></span>
+          <div class="share-actions">
+            <a class="btn btn-secondary btn-sm" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Flearnings%2Fgraph-neural-networks-ecological-modeling.html" target="_blank" rel="noopener">Share on LinkedIn ↗</a>
+            <a class="btn btn-secondary btn-sm" href="../learnings.html">← All Notes</a>
+          </div>
+        </div>
+
+        
+          <div class="related-notes-section">
+            <h3 class="related-notes-title">Continue reading</h3>
+            <div class="related-notes-grid">
+              
+          <a class="related-note-card" href="physical-ai-heavy-industry-hardware-bottleneck.html">
+            <span class="eyebrow">Research · Research</span>
+            <h4>Physical AI & Heavy Industry: Where Software Speed Hits Hardware Bottlenecks</h4>
+            <p>Training foundation models on real-world physics and molecular dynamics enables automated engineering, but software iteration speed inevitably confronts physical validation cycles.</p>
+            <span class="meta-link">Read note →</span>
+          </a>
+        
+          <a class="related-note-card" href="deterministic-validation-schemas-multi-llm-pipelines.html">
+            <span class="eyebrow">AI Engineering · Note</span>
+            <h4>Designing Deterministic Validation Schemas for Multi-LLM Pipelines</h4>
+            <p>Lessons from production AI pipelines: why multi-LLM orchestration fails without rigorous schema guardrails and programmatic retry backoff.</p>
+            <span class="meta-link">Read note →</span>
+          </a>
+        
+            </div>
+          </div>
+        
+      </footer>
+    </article>
+
+    <!-- Discussion Banner -->
+    <section class="section-compact section-border-top" aria-labelledby="article-cta-title">
+      <div class="container">
+        <div class="cta-banner">
+          <p class="eyebrow">Discussion</p>
+          <h2 id="article-cta-title">Have thoughts on AI, finance, or <span class="serif-accent">product?</span></h2>
+          <p>I welcome conversations around technical architectures, systemic risks, and product trade-offs.</p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="../contact.html">Start a conversation ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">Follow on LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../work.html">Selected Work</a></li>
+            <li><a href="../index.html#research">Research at OIST</a></li>
+            <li><a href="../learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:kumaraniketn@gmail.com">kumaraniketn@gmail.com</a></li>
+            <li><a href="tel:+918448769791">+91 8448769791</a></li>
+            <li><a href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: +81 70-1290-5081 ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=2.1.0" defer></script>
+</body>
+</html>

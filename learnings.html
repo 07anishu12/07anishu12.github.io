@@ -90,35 +90,256 @@
             <div class="section-header-content">
               <h1 id="learnings-title">Notes from <span class="serif-accent">the build.</span></h1>
               <p class="lead">
-                Essays, architectural observations, and field notes exploring AI engineering, fintech product systems, graph machine learning, and quantitative finance.
+                A growing library of notes on AI engineering, financial systems, product thinking, research, and the ideas I'm exploring along the way.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Filter tabs for future articles -->
-        <div class="filter-tabs" role="group" aria-label="Filter notes by topic">
-          <button class="filter-tab" type="button" data-filter="All" aria-pressed="true">All Topics</button>
-          <button class="filter-tab" type="button" data-filter="AI Engineering" aria-pressed="false">AI Engineering</button>
-          <button class="filter-tab" type="button" data-filter="Fintech" aria-pressed="false">Fintech</button>
-          <button class="filter-tab" type="button" data-filter="Product" aria-pressed="false">Product</button>
-          <button class="filter-tab" type="button" data-filter="Research" aria-pressed="false">Research</button>
-        </div>
 
-        <p class="sr-only" data-learning-status aria-live="polite">Status update for notes</p>
+        <!-- Featured Note -->
+        <section class="featured-note-card" aria-label="Featured note">
+          <div class="featured-note-content">
+            <div class="featured-badge-row">
+              <span class="badge badge-featured">Featured Analysis</span>
+              <span class="meta-tag">Finance & Banking · Case Study</span>
+              <span class="meta-dot">·</span>
+              <time datetime="2026-09-24">Sep 24, 2026</time>
+              <span class="meta-dot">·</span>
+              <span>5 min read</span>
+            </div>
 
-        <!-- Dynamic grid or elegant empty state container -->
-        <div class="notes-grid" data-learning-grid aria-live="polite">
-          <div class="learnings-empty-box" style="grid-column: 1 / -1;">
-            <p class="eyebrow">Coming Soon</p>
-            <h3>Notes from the build</h3>
-            <p>
-              Writing and technical notes are currently being prepared. Topics will cover multi-LLM orchestration, core banking integrations, graph neural networks, and financial engineering.
-            </p>
-            <div style="margin-top: 8px;">
-              <a class="btn btn-secondary btn-sm" href="contact.html">Connect for early drafts ↗</a>
+            <h2 class="featured-note-title">
+              <a href="learnings/tata-sons-vs-tata-trusts-ownership-and-control.html">Tata Sons vs Tata Trusts: Ownership, Control & the IPO Fight</a>
+            </h2>
+
+            <p class="featured-note-lead">Why the RBI wants Tata Sons listed under Scale-Based Regulation, why Tata Trusts resists, the holding company discount dilemma, and the structural concentration risk in TCS.</p>
+
+            <div class="featured-note-actions">
+              <a class="btn btn-primary btn-sm" href="learnings/tata-sons-vs-tata-trusts-ownership-and-control.html">Read full analysis →</a>
+              <a class="btn btn-secondary btn-sm" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">Original on LinkedIn ↗</a>
+              <div class="featured-tags"><span class="tag">Corporate Governance</span> <span class="tag">Tata Sons</span> <span class="tag">CFA</span> <span class="tag">Holding Companies</span> <span class="tag">RBI Regulations</span></div>
             </div>
           </div>
+        </section>
+    
+
+        <div class="notes-catalog-header">
+          <h3 class="notes-catalog-title">Selected Notes</h3>
+          <!-- Filter tabs -->
+          <div class="filter-tabs" role="group" aria-label="Filter notes by topic">
+          <button class="filter-tab" type="button" data-filter="All" aria-pressed="true">All Topics</button>
+          <button class="filter-tab" type="button" data-filter="Finance & Banking" aria-pressed="false">Finance & Banking</button>
+          <button class="filter-tab" type="button" data-filter="Fintech" aria-pressed="false">Fintech</button>
+          <button class="filter-tab" type="button" data-filter="Product" aria-pressed="false">Product</button>
+          <button class="filter-tab" type="button" data-filter="AI Engineering" aria-pressed="false">AI Engineering</button>
+          <button class="filter-tab" type="button" data-filter="Research" aria-pressed="false">Research</button>
+          <button class="filter-tab" type="button" data-filter="Career" aria-pressed="false">Career</button>
+          </div>
+        </div>
+
+        <p class="sr-only" data-learning-status aria-live="polite">9 notes published</p>
+
+        <!-- Dynamic Grid -->
+        <div class="notes-grid" data-learning-grid aria-live="polite">
+
+            <article class="note-card" data-category="Finance & Banking" data-featured="true">
+              <div class="note-card-meta">
+                <span class="eyebrow">Finance & Banking</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-09-24">Sep 24, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>5 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/tata-sons-vs-tata-trusts-ownership-and-control.html">Tata Sons vs Tata Trusts: Ownership, Control & the IPO Fight</a>
+              </h3>
+              <p class="note-card-desc">Why the RBI wants Tata Sons listed under Scale-Based Regulation, why Tata Trusts resists, the holding company discount dilemma, and the structural concentration risk in TCS.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Corporate Governance</span> <span class="tag">Tata Sons</span> <span class="tag">CFA</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/tata-sons-vs-tata-trusts-ownership-and-control.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="Fintech" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">Fintech</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-09-18">Sep 18, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/what-nsfr-actually-tells-you-about-a-bank.html">What NSFR Actually Tells You About Bank Structural Liquidity</a>
+              </h3>
+              <p class="note-card-desc">Why the Net Stable Funding Ratio matters more than short-term liquidity coverage when evaluating structural balance-sheet stability and funding mismatches.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Banking</span> <span class="tag">Liquidity</span> <span class="tag">NSFR</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/what-nsfr-actually-tells-you-about-a-bank.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="Product" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">Product</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-09-12">Sep 12, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/why-market-validation-trumps-vibes.html">Why Market Validation Trumps Vibes: A Three-Step Query Framework</a>
+              </h3>
+              <p class="note-card-desc">Stop writing production software before knowing whether active search demand exists. A practical framework to validate buyer intent before committing capital.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Product Management</span> <span class="tag">Idea Validation</span> <span class="tag">Market Research</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/why-market-validation-trumps-vibes.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="AI Engineering" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">AI Engineering</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-09-08">Sep 8, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/distilled-video-models-regional-ai-production.html">Distilled Video Models & Regional AI Production Economics</a>
+              </h3>
+              <p class="note-card-desc">How specialized, distilled generative models bring video synthesis down to a fraction of a cent per second, revolutionizing regional commerce.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Generative AI</span> <span class="tag">Model Distillation</span> <span class="tag">Unit Economics</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/distilled-video-models-regional-ai-production.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="Research" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">Research</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-08-30">Aug 30, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/physical-ai-heavy-industry-hardware-bottleneck.html">Physical AI & Heavy Industry: Where Software Speed Hits Hardware Bottlenecks</a>
+              </h3>
+              <p class="note-card-desc">Training foundation models on real-world physics and molecular dynamics enables automated engineering, but software iteration speed inevitably confronts physical validation cycles.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Physical AI</span> <span class="tag">Deep Learning</span> <span class="tag">Robotics</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/physical-ai-heavy-industry-hardware-bottleneck.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="Career" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">Career</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-08-22">Aug 22, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/robot-fleet-configuration-in-micro-factories.html">The Shift from Static Machinery to Robot Fleet Configuration</a>
+              </h3>
+              <p class="note-card-desc">How reconfigurable robotics and localized micro-factories are transforming manufacturing roles from manual assembly to intelligent fleet orchestration.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Robotics</span> <span class="tag">Hardware</span> <span class="tag">Manufacturing</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/robot-fleet-configuration-in-micro-factories.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="Finance & Banking" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">Finance & Banking</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-08-14">Aug 14, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/public-market-stress-test-for-ai-valuations.html">Public Market Listings as the Ultimate Stress Test for AI Valuations</a>
+              </h3>
+              <p class="note-card-desc">Private venture rounds can sustain narrative-driven multiples, but public equity markets enforce rigorous discipline on gross margins and recurring cash flow.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Valuation</span> <span class="tag">Public Markets</span> <span class="tag">Venture Capital</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/public-market-stress-test-for-ai-valuations.html">Read note →</a>
+                  <a class="note-linkedin-link" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener" aria-label="Original post on LinkedIn">LinkedIn ↗</a>
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="AI Engineering" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">AI Engineering</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-08-04">Aug 4, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/deterministic-validation-schemas-multi-llm-pipelines.html">Designing Deterministic Validation Schemas for Multi-LLM Pipelines</a>
+              </h3>
+              <p class="note-card-desc">Lessons from production AI pipelines: why multi-LLM orchestration fails without rigorous schema guardrails and programmatic retry backoff.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">Multi-LLM</span> <span class="tag">Schema Validation</span> <span class="tag">Prompt Engineering</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/deterministic-validation-schemas-multi-llm-pipelines.html">Read note →</a>
+                  
+                </div>
+              </div>
+            </article>
+      
+
+            <article class="note-card" data-category="Research" data-featured="false">
+              <div class="note-card-meta">
+                <span class="eyebrow">Research</span>
+                <span class="meta-dot">·</span>
+                <time datetime="2026-07-28">Jul 28, 2026</time>
+                <span class="meta-dot">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="note-card-title">
+                <a href="learnings/graph-neural-networks-ecological-modeling.html">Graph Neural Networks for Topological Food-Web Interactions</a>
+              </h3>
+              <p class="note-card-desc">Research notes from OIST: applying GraphSAGE and GAT architectures to model topological trophic networks and synthesize scientific literature.</p>
+              <div class="note-card-footer">
+                <div class="note-card-tags"><span class="tag">GNN</span> <span class="tag">PyTorch Geometric</span> <span class="tag">OIST</span></div>
+                <div class="note-card-links">
+                  <a class="note-read-link" href="learnings/graph-neural-networks-ecological-modeling.html">Read note →</a>
+                  
+                </div>
+              </div>
+            </article>
+      
         </div>
       </div>
     </section>

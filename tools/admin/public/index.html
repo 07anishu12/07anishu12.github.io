@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publishing Studio — Aniket Thakur</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.1.0">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <div class="studio-layout">
+    <!-- Sidebar -->
+    <aside class="studio-sidebar">
+      <div class="sidebar-header">
+        <h1 class="studio-brand-title">Aniket Thakur</h1>
+        <p class="studio-brand-sub">Publishing Studio</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Content Views -->
+        <div>
+          <p class="nav-group-title">Content</p>
+          <button class="nav-item active" data-nav="all">
+            <span>All Articles</span>
+            <span class="nav-badge" id="badge-all">0</span>
+          </button>
+          <button class="nav-item" data-nav="published">
+            <span>Published</span>
+            <span class="nav-badge" id="badge-published">0</span>
+          </button>
+          <button class="nav-item" data-nav="drafts">
+            <span>Drafts</span>
+            <span class="nav-badge" id="badge-drafts">0</span>
+          </button>
+          <button class="nav-item" data-nav="featured">
+            <span>Featured</span>
+            <span class="nav-badge" id="badge-featured">0</span>
+          </button>
+        </div>
+
+        <!-- Content Types -->
+        <div>
+          <p class="nav-group-title">Content Types</p>
+          <button class="nav-item" data-filter-type="Article">Articles</button>
+          <button class="nav-item" data-filter-type="Note">Notes</button>
+          <button class="nav-item" data-filter-type="Research">Research</button>
+          <button class="nav-item" data-filter-type="Case Study">Case Studies</button>
+          <button class="nav-item" data-filter-type="Product Insight">Product Insights</button>
+          <button class="nav-item" data-filter-type="Career/Interview">Career</button>
+        </div>
+
+        <!-- Topics -->
+        <div>
+          <p class="nav-group-title">Topics</p>
+          <button class="nav-item" data-filter-cat="AI Engineering">AI Engineering</button>
+          <button class="nav-item" data-filter-cat="Fintech">Fintech</button>
+          <button class="nav-item" data-filter-cat="Product">Product</button>
+          <button class="nav-item" data-filter-cat="Research">Research</button>
+          <button class="nav-item" data-filter-cat="Finance & Banking">Finance & Banking</button>
+          <button class="nav-item" data-filter-cat="Career">Career</button>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-footer-link" id="btn-rebuild">
+          <span>⚡ Rebuild Static Site</span>
+        </button>
+        <a class="sidebar-footer-link" href="/learnings.html" target="_blank">
+          <span>View Public Library ↗</span>
+        </a>
+        <a class="sidebar-footer-link" href="/" target="_blank">
+          <span>View Portfolio Homepage ↗</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="studio-main">
+      <!-- Topbar -->
+      <header class="studio-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-secondary btn-sm" id="btn-back-to-list" style="display: none;">
+            ← Back to Articles
+          </button>
+          <h2 id="view-title" style="font-size: 1.125rem; font-weight: 700;">Knowledge Library</h2>
+        </div>
+
+        <div class="topbar-right">
+          <div id="list-actions">
+            <button class="btn btn-primary btn-sm" id="btn-create-new">
+              + New Article / Note
+            </button>
+          </div>
+
+          <div id="editor-actions" style="display: none;">
+            <button class="btn btn-secondary btn-sm" id="btn-preview-modal">
+              Preview Article
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btn-save-draft">
+              Save Draft
+            </button>
+            <button class="btn btn-primary btn-sm" id="btn-save-publish">
+              Save &amp; Publish
+            </button>
+            <button class="btn btn-danger btn-sm" id="btn-archive-article">
+              Archive
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- VIEW 1: Dashboard List -->
+      <section class="view-container" id="view-dashboard">
+        <!-- Stats Row -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <p class="stat-label">Total Articles</p>
+            <p class="stat-value" id="stat-total">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Published</p>
+            <p class="stat-value" id="stat-published" style="color: var(--status-published);">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Drafts</p>
+            <p class="stat-value" id="stat-drafts" style="color: var(--status-draft);">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Featured Article</p>
+            <p class="stat-value" id="stat-featured" style="font-size: 1.25rem; margin-top: 8px; line-height: 1.3;">—</p>
+          </div>
+        </div>
+
+        <!-- Catalog Filter Bar -->
+        <div class="catalog-toolbar">
+          <input type="search" class="search-input" id="search-input" placeholder="Search by title, topic, or tag...">
+          <span style="font-size: 0.8125rem; color: var(--text-muted);" id="catalog-count-label">Showing all articles</span>
+        </div>
+
+        <!-- Articles Table -->
+        <div class="articles-card">
+          <table class="articles-table">
+            <thead>
+              <tr>
+                <th>Title &amp; Summary</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Reading Time</th>
+                <th style="text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="articles-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- VIEW 2: Writing Studio Editor -->
+      <section class="editor-layout" id="view-editor" style="display: none;">
+        <!-- Left Main Canvas -->
+        <div class="editor-main-canvas">
+          <div class="editor-header-inputs">
+            <input type="text" class="editor-title-input" id="edit-title" placeholder="Enter article title...">
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--text-muted);">
+              <span>Slug:</span>
+              <input type="text" id="edit-slug" style="border: 1px solid var(--border-main); background: var(--bg-surface); padding: 4px 8px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.8125rem; flex-grow: 1; max-width: 480px;">
+            </div>
+            <textarea class="editor-subtitle-input" id="edit-desc" placeholder="Add a concise subtitle or short editorial summary (1–2 sentences)..."></textarea>
+          </div>
+
+          <!-- Formatting Toolbar -->
+          <div class="formatting-toolbar">
+            <button class="tool-btn" data-tool="h2">H2</button>
+            <button class="tool-btn" data-tool="h3">H3</button>
+            <div class="tool-divider"></div>
+            <button class="tool-btn" data-tool="bold"><strong>B</strong></button>
+            <button class="tool-btn" data-tool="italic"><em>I</em></button>
+            <button class="tool-btn" data-tool="quote">Quote</button>
+            <div class="tool-divider"></div>
+            <button class="tool-btn" data-tool="ul">Bullet List</button>
+            <button class="tool-btn" data-tool="ol">Numbered List</button>
+            <button class="tool-btn" data-tool="code">Code Block</button>
+            <button class="tool-btn" data-tool="inline-code">`Code`</button>
+            <button class="tool-btn" data-tool="link">Link</button>
+            <button class="tool-btn" data-tool="hr">Divider</button>
+
+            <div class="tab-toggle">
+              <button class="tab-btn active" id="tab-write">Write</button>
+              <button class="tab-btn" id="tab-preview">Live Preview</button>
+            </div>
+          </div>
+
+          <!-- Editor Body Textarea -->
+          <textarea class="editor-body-textarea" id="edit-body" placeholder="Write your article in Markdown here..."></textarea>
+
+          <!-- Live Preview Canvas -->
+          <div class="preview-canvas article-body" id="edit-preview" style="display: none;"></div>
+        </div>
+
+        <!-- Right Publishing Sidebar -->
+        <aside class="editor-sidebar">
+          <!-- Publishing Details -->
+          <div class="sidebar-panel">
+            <p class="panel-title">Publishing</p>
+            <div class="form-group">
+              <label class="form-label" for="edit-status">Status</label>
+              <select class="form-select" id="edit-status">
+                <option value="published">Published</option>
+                <option value="draft">Draft</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="edit-category">Category / Topic</label>
+              <select class="form-select" id="edit-category">
+                <option value="AI Engineering">AI Engineering</option>
+                <option value="Fintech">Fintech</option>
+                <option value="Product">Product</option>
+                <option value="Research">Research</option>
+                <option value="Finance & Banking">Finance & Banking</option>
+                <option value="Career">Career</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="edit-content-type">Content Type</label>
+              <select class="form-select" id="edit-content-type">
+                <option value="Article">Article</option>
+                <option value="Note">Note</option>
+                <option value="Research">Research</option>
+                <option value="Case Study">Case Study</option>
+                <option value="Product Insight">Product Insight</option>
+                <option value="Career/Interview">Career/Interview</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="edit-date">Published Date</label>
+              <input type="date" class="form-input" id="edit-date">
+            </div>
+
+            <label class="checkbox-group">
+              <input type="checkbox" id="edit-featured">
+              <span>Featured on Learnings</span>
+            </label>
+          </div>
+
+          <!-- Image Asset Upload -->
+          <div class="sidebar-panel">
+            <p class="panel-title">Hero Image</p>
+            <div class="dropzone" id="dropzone">
+              <span class="dropzone-label">Drop image here or click to browse</span>
+              <input type="file" id="image-file-input" accept="image/*" style="display: none;">
+            </div>
+            <img id="image-preview" class="image-preview-thumb" style="display: none;" alt="Preview">
+            <input type="text" class="form-input" id="edit-hero-image" placeholder="Image path (e.g. assets/images/...)">
+            <input type="text" class="form-input" id="edit-image-alt" placeholder="Image alt text...">
+          </div>
+
+          <!-- Source Attribution -->
+          <div class="sidebar-panel">
+            <p class="panel-title">Source Attribution</p>
+            <div class="form-group">
+              <label class="form-label" for="edit-source">Source Type</label>
+              <select class="form-select" id="edit-source">
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Personal">Personal Insight</option>
+                <option value="Research">Research</option>
+                <option value="Project">Project Delivery</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-source-url">Source / LinkedIn Post URL</label>
+              <input type="url" class="form-input" id="edit-source-url" placeholder="https://www.linkedin.com/...">
+            </div>
+          </div>
+
+          <!-- SEO & Organization -->
+          <div class="sidebar-panel">
+            <p class="panel-title">SEO &amp; Organization</p>
+            <div class="form-group">
+              <label class="form-label" for="edit-tags">Tags (comma-separated)</label>
+              <input type="text" class="form-input" id="edit-tags" placeholder="Banking, Liquidity, NSFR">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-seo-title">SEO Meta Title</label>
+              <input type="text" class="form-input" id="edit-seo-title" placeholder="Optional custom title...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-seo-desc">SEO Meta Description</label>
+              <input type="text" class="form-input" id="edit-seo-desc" placeholder="Optional custom description...">
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <!-- Preview Modal -->
+  <div class="modal-backdrop" id="preview-modal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1rem; font-weight: 700;">Live Public Article Preview</h3>
+        <button class="btn btn-secondary btn-sm" id="btn-close-modal">✕ Close</button>
+      </div>
+      <div class="modal-body" id="modal-preview-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="/admin/app.js"></script>
+</body>
+</html>
