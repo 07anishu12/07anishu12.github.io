@@ -1,0 +1,50 @@
+[
+  {
+    "id": "laya",
+    "name": "Laya",
+    "title": "Automated SEO Intelligence & Generation System",
+    "eyebrow": "01 / Flagship system",
+    "summary": "An automated SEO pipeline that connects search evidence to optimized content generation.",
+    "problem": "Content creation needed a faster, more informed path from what people search for to what gets written.",
+    "approach": "Engineered a pipeline integrating web scraping, SERP ranking analysis, and large language models.",
+    "technology": ["Web scraping", "SERP analysis", "LLMs"],
+    "impact": "Reduced content creation cycles by 70%.",
+    "featured": true
+  },
+  {
+    "id": "prompt-bi",
+    "name": "Prompt-Based Business Intelligence System",
+    "title": "Natural-language analysis over SQL data",
+    "eyebrow": "02 / Data product",
+    "summary": "A natural-language query engine over SQL databases for self-serve analysis.",
+    "problem": "Non-technical stakeholders needed to explore business data without writing SQL.",
+    "approach": "Built a natural-language query layer over SQL databases to support faster executive decision-making.",
+    "technology": ["Natural language", "SQL", "Data analytics"],
+    "impact": "Enabled non-technical stakeholders to perform self-serve data analysis.",
+    "featured": true
+  },
+  {
+    "id": "osticket",
+    "name": "osTicket",
+    "title": "AI / Automated Ticketing Workflow",
+    "eyebrow": "03 / Automation",
+    "summary": "An LLM-assisted workflow for categorization and auto-response routing in osTicket.",
+    "problem": "Support desk operations needed more consistent routing and response handling.",
+    "approach": "Integrated LLM-based categorization with automated auto-response routing.",
+    "technology": ["LLMs", "Categorization", "Workflow automation"],
+    "impact": "Streamlined support desk operations and improved resolution turnaround times.",
+    "featured": true
+  },
+  {
+    "id": "multi-llm",
+    "name": "AI Content Generation & Multi-LLM System",
+    "title": "Structured multi-model orchestration",
+    "eyebrow": "04 / Generative AI",
+    "summary": "A multi-model orchestration framework for reliable, multi-channel content workflows.",
+    "problem": "Content workflows needed automation without sacrificing response accuracy or consistency.",
+    "approach": "Designed multi-model orchestration with structured output validation.",
+    "technology": ["Multi-LLM orchestration", "Structured outputs", "Content generation"],
+    "impact": "Automated multi-channel content workflows and improved response accuracy.",
+    "featured": true
+  }
+]

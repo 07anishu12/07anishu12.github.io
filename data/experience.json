@@ -1,0 +1,34 @@
+[
+  {
+    "company": "Drivio Technologies",
+    "location": "Gurugram, India",
+    "role": "Associate Product Manager",
+    "dates": "Dec 2025 – Present",
+    "description": "Own end-to-end loan journeys for a two-wheeler marketplace, manage stakeholders, and integrate core banking APIs for KYC, disbursement, and repayment in the LMS. Also managed HRX/HRMS operations and built LLM content-generation agents with structured output validation.",
+    "themes": ["Product", "Fintech", "LLM systems"]
+  },
+  {
+    "company": "Okinawa Institute of Science and Technology (OIST)",
+    "location": "Okinawa, Japan",
+    "role": "AI Research Intern",
+    "dates": "June 2025 – Feb 2026",
+    "description": "Developed GNN algorithms to analyze ecological food webs and model energy-flow dynamics. Engineered data pipelines using multi-LLM ensembles with Gemini, DeepSeek, Anthropic, and OpenAI to synthesize semantic representations.",
+    "themes": ["Research", "Graph ML", "Multi-LLM"]
+  },
+  {
+    "company": "Drivio Technologies",
+    "location": "Gurugram, India",
+    "role": "Business Analyst",
+    "dates": "Nov 2024 – June 2025",
+    "description": "Led AI implementation for a used-car finance system, deploying LLM automation to accelerate loan processing and credit decisions. Fine-tuned LLM content agents for marketing and automated multi-channel asset creation.",
+    "themes": ["AI automation", "Analytics", "Fintech"]
+  },
+  {
+    "company": "Analy Assist",
+    "location": "New Delhi, India",
+    "role": "Business Consultant & Analyst",
+    "dates": "Mar 2023 – July 2023",
+    "description": "Facilitated go-to-market launches for four startups across food, health, and fashion through market research and cross-functional execution. Delivered cost analysis and executive reports that reduced expenses by 15%.",
+    "themes": ["Strategy", "Analytics", "Finance"]
+  }
+]

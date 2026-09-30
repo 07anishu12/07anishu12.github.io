@@ -1,0 +1,7 @@
+{
+  "aiEngineering": ["Generative AI", "Transformers", "RAG", "Fine-Tuning", "Prompt Engineering", "AI Evaluation", "AI Security"],
+  "machineLearning": ["Graph Neural Networks", "PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas"],
+  "languages": ["Python", "R", "SQL", "JavaScript"],
+  "analyticsAndProduct": ["Tableau", "Power BI", "SPSS", "Excel / Financial Modeling", "Google Analytics", "Jira", "Confluence"],
+  "competencies": ["Feature Engineering", "Scalable Pipelines", "A/B Testing", "Experiment Tracking", "Stakeholder Management", "Git/GitHub"]
+}

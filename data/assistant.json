@@ -1,0 +1,16 @@
+{
+  "name": "Portfolio assistant",
+  "intro": "I can help you navigate Aniket's work. I am a lightweight portfolio guide, not Aniket.",
+  "answers": {
+    "What does Aniket do?": "Aniket is an AI researcher and product builder working across Generative AI, machine learning, fintech, data analytics, and financial engineering.",
+    "What are Aniket's projects?": "His featured projects are Laya, a Prompt-Based Business Intelligence System, an osTicket AI/automated ticketing workflow, and an AI Content Generation & Multi-LLM System.",
+    "What is Laya?": "Laya is an automated SEO intelligence and generation system combining web scraping, SERP ranking analysis, and LLMs. It reduced content creation cycles by 70%.",
+    "Where did Aniket work?": "He is an Associate Product Manager and previously a Business Analyst at Drivio Technologies, an AI Research Intern at OIST in Okinawa, and a Business Consultant & Analyst at Analy Assist.",
+    "What did he research at OIST?": "At OIST, he developed GNN algorithms for ecological food webs and energy-flow dynamics, and engineered multi-LLM data pipelines using Gemini, DeepSeek, Anthropic, and OpenAI.",
+    "What technologies does he use?": "His toolkit includes Generative AI, Transformers, RAG, fine-tuning, prompt engineering, GNNs, AI evaluation, Python, PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas, R, SQL, JavaScript, BI tools, and financial modeling.",
+    "Where can I download his résumé?": "You can download Aniket's résumé from the Download Résumé link in the navigation or contact section.",
+    "How can I contact Aniket?": "You can email Aniket, call his primary phone number, connect on LinkedIn or GitHub, or send an enquiry through WhatsApp.",
+    "Can I contact Aniket on WhatsApp?": "You can contact Aniket directly through WhatsApp."
+  },
+  "whatsappLabel": "WhatsApp Aniket"
+}
