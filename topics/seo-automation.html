@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>SEO Automation &amp; Search Intelligence — Aniket Thakur</title>
+  <meta name="description" content="Technical guide and system architecture on SEO Automation, SERP analysis, and LLM content pipelines by Aniket Thakur, creator of SEO-Agent-using-LAYA.">
+  <link rel="canonical" href="https://07anishu12.github.io/topics/seo-automation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="SEO Automation &amp; Search Intelligence — Aniket Thakur">
+  <meta property="og:description" content="Engineering programmatic SEO pipelines combining web scraping, SERP ranking signals, keyword clustering, and LLM text generation with deterministic validation.">
+  <meta property="og:url" content="https://07anishu12.github.io/topics/seo-automation.html">
+  <meta property="og:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEO Automation &amp; Search Intelligence — Aniket Thakur">
+  <meta name="twitter:description" content="Automated SEO intelligence, SERP analysis, and Laya architecture by Aniket Thakur.">
+  <meta name="twitter:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://07anishu12.github.io/topics/seo-automation.html#webpage",
+        "url": "https://07anishu12.github.io/topics/seo-automation.html",
+        "name": "SEO Automation & Search Intelligence — Aniket Thakur",
+        "description": "Comprehensive authority hub on SEO automation, programmatic content engineering, and search intelligence authored by Aniket Thakur.",
+        "about": [
+          {"@type": "Thing", "name": "Search Engine Optimization", "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization"},
+          {"@type": "Thing", "name": "Web Scraping"},
+          {"@type": "Thing", "name": "Natural Language Processing"},
+          {"@type": "Thing", "name": "Large Language Models"}
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://07anishu12.github.io/#person",
+          "name": "Aniket Thakur",
+          "url": "https://07anishu12.github.io/author/aniket-thakur.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://07anishu12.github.io/topics/seo-automation.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://07anishu12.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Topics",
+            "item": "https://07anishu12.github.io/topics/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SEO Automation",
+            "item": "https://07anishu12.github.io/topics/seo-automation.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="topics">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="../about.html">About</a>
+        <a href="../work.html">Work</a>
+        <a href="../research/index.html">Research</a>
+        <a href="../topics/index.html" aria-current="page">Topics</a>
+        <a href="../learnings.html">Learnings</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="../about.html">About</a>
+      <a href="../work.html">Work</a>
+      <a href="../research/index.html">Research</a>
+      <a href="../topics/index.html" aria-current="page">Topics</a>
+      <a href="../learnings.html">Learnings</a>
+      <a href="../contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <!-- Breadcrumb -->
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="index.html">Topics</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>SEO Automation</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-meta-top">
+          <span class="badge badge-featured">Engineering Hub</span>
+          <span class="meta-tag">Search Intelligence · Laya · Python</span>
+          <span class="meta-dot">·</span>
+          <span>Curated by Aniket Thakur</span>
+        </div>
+
+        <h1 class="article-title" style="font-size: clamp(2.1rem, 4vw, 3rem);">
+          SEO Automation &amp; <span class="serif-accent">Search Intelligence.</span>
+        </h1>
+
+        <p class="lead">
+          Bridging search demand signals, web scraping pipelines, competitive SERP analysis, and LLM orchestration with deterministic schema validation to build high-ranking topical authority.
+        </p>
+
+        <div class="article-byline">
+          <div class="byline-avatar">
+            <img src="../assets/img/aniket-portrait.png" alt="Aniket Thakur" width="40" height="40">
+          </div>
+          <div>
+            <div class="byline-name"><a href="../author/aniket-thakur.html">Aniket Thakur</a></div>
+            <div class="byline-role">Associate Product Manager &amp; System Architect</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <h2>The Paradigm Shift: From Manual Copywriting to Algorithmic SEO</h2>
+        <p>
+          Traditional SEO workflows suffer from severe human bottlenecks: manual keyword clustering in spreadsheets, subjective content briefs, slow drafting cycles, and disconnected technical metadata. By the time an article is published, search intent and competitor positioning have frequently shifted.
+        </p>
+        <p>
+          <strong>SEO Automation</strong> replaces guesswork with programmatic feedback loops:
+        </p>
+        <ol>
+          <li><strong>Intent Ingestion:</strong> Continuous monitoring of search autocomplete matrices, search volume velocity, and intent classification (informational, commercial, transactional).</li>
+          <li><strong>Competitive SERP Extraction:</strong> Scraping top 10 ranked URLs, parsing heading hierarchies, evaluating content depth, and identifying topical gaps.</li>
+          <li><strong>Deterministic Generation:</strong> Orchestrating multi-LLM ensembles bounded by strict structural schemas (Pydantic / Zod) rather than freeform unconstrained output.</li>
+        </ol>
+
+        <h2>The Flagship System: SEO-Agent-using-LAYA</h2>
+        <p>
+          To solve this operational bottleneck at scale, I engineered <strong>SEO-Agent-using-LAYA</strong>. The system unifies real-time SERP intelligence with automated content drafting, reducing end-to-end production cycles by <strong>70%</strong> while dramatically improving topical completeness.
+        </p>
+
+        <div class="research-spec-grid">
+          <div class="spec-card">
+            <h4>Live Search Intelligence</h4>
+            <p>Scrapes organic SERPs, extracts competitor heading structures (H1/H2/H3), and clusters semantic query variations to build data-driven content outlines.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Deterministic Output Guardrails</h4>
+            <p>Every generated section is validated against structured JSON schemas, guaranteeing valid markdown, Schema.org JSON-LD tags, and internal link suggestions.</p>
+          </div>
+        </div>
+
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-featured">Flagship Project Deep-Dive</span>
+            <h4><a href="../projects/seo-agent-laya.html">SEO-Agent-using-LAYA Technical Architecture</a></h4>
+            <p>Complete breakdown of the multi-agent pipeline: scraper workers, SERP analyzer, LLM orchestrator, and automated publishing loop.</p>
+            <a class="topic-hub-link" href="../projects/seo-agent-laya.html">Read System Architecture →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">GitHub Repository</span>
+            <h4><a href="https://github.com/07anishu12/SEO-Agent-using-LAYA" target="_blank" rel="noopener">07anishu12 / SEO-Agent-using-LAYA</a></h4>
+            <p>Source code and open-source implementation for the automated SEO intelligence and generation system.</p>
+            <a class="topic-hub-link" href="https://github.com/07anishu12/SEO-Agent-using-LAYA" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </div>
+
+        <h2>Relevant Articles &amp; Frameworks</h2>
+        <ul>
+          <li>
+            <strong><a href="../learnings/why-market-validation-trumps-vibes.html">Why Market Validation Trumps Vibes: A Three-Step Query Framework</a></strong>: Validating buyer search intent through autocomplete queries before building products or writing copy.
+          </li>
+          <li>
+            <strong><a href="../learnings/deterministic-validation-schemas-multi-llm-pipelines.html">Designing Deterministic Validation Schemas for Multi-LLM Pipelines</a></strong>: Why programmatic retries and Pydantic validation are essential when generating structured web copy.
+          </li>
+        </ul>
+
+        <h2>Core Technical Stack</h2>
+        <ul>
+          <li><strong>Python &amp; BeautifulSoup / Playwright:</strong> High-throughput headless browser scraping, DOM extraction, and SERP parsing.</li>
+          <li><strong>Large Language Models:</strong> Multi-tiered model prompting (Gemini, Claude, DeepSeek) for analysis, outlining, and drafting.</li>
+          <li><strong>Schema.org &amp; Semantic SEO:</strong> Automated generation of valid `Article`, `TechArticle`, `BreadcrumbList`, and `FAQPage` JSON-LD schemas.</li>
+        </ul>
+      </div>
+
+      <!-- Cross-Link Footer -->
+      <footer class="article-footer" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+        <p class="eyebrow">Explore Other Topic Hubs</p>
+        <div class="btn-group">
+          <a class="btn btn-secondary btn-sm" href="graph-neural-networks.html">Graph Neural Networks Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="artificial-intelligence.html">Artificial Intelligence Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="fintech.html">FinTech &amp; Finance Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="data-science.html">Data Science Hub →</a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher, Data Scientist &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../work.html">Selected Work</a></li>
+            <li><a href="../research/index.html">Research at OIST</a></li>
+            <li><a href="index.html">Topic Hubs</a></li>
+            <li><a href="../learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:kumaraniketn@gmail.com">kumaraniketn@gmail.com</a></li>
+            <li><a href="tel:+918448769791">+91 8448769791</a></li>
+            <li><a href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: +81 70-1290-5081 ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=2.1.0" defer></script>
+</body>
+</html>

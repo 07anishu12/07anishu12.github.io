@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Graph Neural Networks for Ecological Trophic Dynamics — Aniket Thakur</title>
+  <meta name="description" content="AI Research Case Study by Aniket Thakur at OIST: Using GraphSAGE and Graph Attention Networks (GAT) to model non-Euclidean ecological food webs and energy flows.">
+  <link rel="canonical" href="https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="Graph Neural Networks for Ecological Trophic Dynamics — Aniket Thakur">
+  <meta property="og:description" content="Research at OIST developing GNN architectures to model non-Euclidean ecological networks and energy-flow mechanics.">
+  <meta property="og:url" content="https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html">
+  <meta property="og:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Graph Neural Networks for Ecological Networks — Aniket Thakur">
+  <meta name="twitter:description" content="Research conducted at the Okinawa Institute of Science and Technology (OIST).">
+  <meta name="twitter:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html#article",
+        "headline": "Graph Neural Networks for Topological Food-Web & Energy-Flow Dynamics",
+        "name": "Graph Neural Networks for Topological Food-Web Dynamics",
+        "description": "Scientific AI research by Aniket Thakur at the Okinawa Institute of Science and Technology (OIST) applying GraphSAGE and GAT architectures to non-Euclidean ecological trophic networks.",
+        "author": {
+          "@type": "Person",
+          "@id": "https://07anishu12.github.io/#person",
+          "name": "Aniket Thakur",
+          "url": "https://07anishu12.github.io/author/aniket-thakur.html"
+        },
+        "publisher": {
+          "@type": "ResearchOrganization",
+          "name": "Okinawa Institute of Science and Technology Graduate University",
+          "sameAs": "https://www.oist.jp/"
+        },
+        "datePublished": "2025-09-15",
+        "dateModified": "2026-09-30",
+        "about": [
+          "Graph Neural Networks",
+          "GraphSAGE",
+          "Graph Attention Networks",
+          "Computational Ecology",
+          "Multi-LLM Knowledge Extraction"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://07anishu12.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Research",
+            "item": "https://07anishu12.github.io/research/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Graph Neural Networks",
+            "item": "https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="research-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="../about.html">About</a>
+        <a href="../work.html">Work</a>
+        <a href="../research/index.html" aria-current="page">Research</a>
+        <a href="../topics/index.html">Topics</a>
+        <a href="../learnings.html">Learnings</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <!-- Breadcrumbs -->
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="index.html">Research</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Graph Neural Networks</span>
+      </nav>
+
+      <header class="article-header">
+        <p class="eyebrow">AI Research Monograph · OIST</p>
+        <h1 class="article-title">
+          Graph Neural Networks for Topological Food-Web &amp; Energy-Flow Modeling
+        </h1>
+        <p class="article-lead">
+          Modeling directed trophic networks using inductive GraphSAGE and Graph Attention Networks (GAT), coupled with multi-LLM scientific literature synthesis.
+        </p>
+
+        <div class="article-meta-row">
+          <div class="article-author-info">
+            <a class="author-name" href="../author/aniket-thakur.html">Aniket Thakur</a>
+            <span class="meta-dot">·</span>
+            <span>AI Research Intern</span>
+            <span class="meta-dot">·</span>
+            <span>OIST (Okinawa, Japan)</span>
+            <span class="meta-dot">·</span>
+            <time datetime="2025-09-15">June 2025 – Feb 2026</time>
+          </div>
+          <div class="article-tags-wrap">
+            <span class="tag">GNN</span>
+            <span class="tag">GraphSAGE</span>
+            <span class="tag">GAT</span>
+            <span class="tag">PyG</span>
+            <span class="tag">Multi-LLM</span>
+          </div>
+        </div>
+
+        <div class="note-source-badge">
+          <span>Conducted at Okinawa Institute of Science and Technology (OIST Graduate University)</span>
+          <a class="note-source-link" href="https://www.oist.jp/" target="_blank" rel="noopener">About OIST ↗</a>
+        </div>
+      </header>
+
+      <div class="detail-grid">
+        <div class="detail-main article-body">
+          <section>
+            <h2>1. Research Problem &amp; Scientific Motivation</h2>
+            <p>
+              In computational ecology and systems biology, ecological food webs represent complex directed graphs where vertices denote biological taxa (species, functional groups) and edges represent energy-flow interactions (predation, parasitism, mutualism).
+            </p>
+            <p>
+              Traditional tabular machine learning and Convolutional Neural Networks (CNNs) assume Euclidean geometric structures—fixed grid representations with spatial locality. However, food webs are inherently <strong>non-Euclidean</strong>: they exhibit variable node degree distributions, arbitrary graph sizing, and permutation invariance. When an apex predator or keystone species suffers decline, energy dissipation cascades across topological pathways that linear regression models cannot predict.
+            </p>
+          </section>
+
+          <section>
+            <h2>2. Methodology &amp; Mathematical Formulation</h2>
+            <p>
+              To capture these dependencies, we investigated two principal Graph Neural Network architectures implemented in <strong>PyTorch Geometric (PyG)</strong>:
+            </p>
+
+            <h3>A. GraphSAGE (Sample and Aggregate)</h3>
+            <p>
+              Rather than computing full graph Laplacians (which scale quadratically and require transductive retraining), GraphSAGE learns inductive neighborhood aggregation functions:
+            </p>
+            <div class="formula-block">
+              <code>h_v^(k) = σ(W · Concat(h_v^(k-1), AGGREGATE({h_u^(k-1), ∀u ∈ N(v)})))</code>
+            </div>
+            <p>
+              By sampling a fixed size of 1-hop and 2-hop ecological neighbors, GraphSAGE generalizes to previously unseen marine ecosystems without re-evaluating the full adjacency matrix.
+            </p>
+
+            <h3>B. Graph Attention Networks (GAT)</h3>
+            <p>
+              Not all ecological interactions carry equivalent energetic consequence. GAT introduces multi-head self-attention coefficients $\alpha_{ij}$ to weight the relative importance of connected prey and predator nodes:
+            </p>
+            <div class="formula-block">
+              <code>α_ij = softmax_j(LeakyReLU(a^T [W h_i || W h_j]))</code>
+            </div>
+          </section>
+
+          <section>
+            <h2>3. The Literature Extraction Bottleneck &amp; Multi-LLM Ensembles</h2>
+            <p>
+              A fundamental barrier in biological graph modeling is data sparsity: empirical trophic interaction observations reside locked inside unstructured scientific monographs and PDF papers published over the past 40 years.
+            </p>
+            <div class="architecture-box">
+              <h4 style="margin-bottom: 12px; font-weight: 700;">Multi-LLM Synthesis Pipeline</h4>
+              <p style="font-size: 0.9375rem; margin-bottom: 12px;">
+                We engineered an automated data extraction and validation pipeline using a multi-LLM ensemble combining <strong>Gemini, DeepSeek, Anthropic, and OpenAI</strong>:
+              </p>
+              <ul style="font-size: 0.875rem; margin-bottom: 0;">
+                <li><strong>Document Parsing:</strong> Chunking academic biological papers and extracting textual interaction tables.</li>
+                <li><strong>Schema Enforcement:</strong> Forcing structured JSON edge lists (Source Species, Target Species, Biomass Flow, Interaction Type, Confidence Score).</li>
+                <li><strong>Consensus Voting:</strong> Multi-model cross-verification to prevent hallucinated predator-prey links.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>4. Key Results &amp; Research Takeaways</h2>
+            <div class="outcome-stat-strip">
+              <div class="outcome-stat-unit">
+                <span class="outcome-stat-num">Inductive</span>
+                <span class="outcome-stat-desc">Zero-shot generalization across novel ecosystem graphs</span>
+              </div>
+              <div class="outcome-stat-unit">
+                <span class="outcome-stat-num">Multi-LLM</span>
+                <span class="outcome-stat-desc">4-model ensemble automated literature parsing</span>
+              </div>
+              <div class="outcome-stat-unit">
+                <span class="outcome-stat-num">GAT</span>
+                <span class="outcome-stat-desc">Differential trophic edge-weighting via attention</span>
+              </div>
+            </div>
+            <p>
+              This work proved that combining relational graph architectures with deterministic LLM extraction pipelines bridges the gap between unstructured scientific literature and high-accuracy predictive modeling.
+            </p>
+          </section>
+
+          <!-- Crosslinks -->
+          <section style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-main);">
+            <h3>Explore Related Topics &amp; Articles</h3>
+            <div class="topic-hub-grid" style="grid-template-columns: 1fr 1fr; margin-top: 16px;">
+              <a class="topic-hub-card" href="../topics/graph-neural-networks.html">
+                <span class="eyebrow">Topic Hub</span>
+                <h4 style="font-size: 1.125rem;">Graph Neural Networks →</h4>
+                <p>Topical overview of GNN research, algorithms, and applications.</p>
+              </a>
+              <a class="topic-hub-card" href="../learnings/graph-neural-networks-ecological-modeling.html">
+                <span class="eyebrow">Field Note</span>
+                <h4 style="font-size: 1.125rem;">Research Field Notes →</h4>
+                <p>Read the personal reflections and engineering details from OIST.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="detail-sidebar">
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">Research Specifications</h3>
+            <ul class="meta-field-list">
+              <li class="meta-field-item">
+                <span class="meta-field-label">Institution</span>
+                <span class="meta-field-value">OIST (Okinawa, Japan)</span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Researcher</span>
+                <span class="meta-field-value">
+                  <a class="topic-hub-link" href="../author/aniket-thakur.html">Aniket Thakur</a>
+                </span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Core Models</span>
+                <span class="meta-field-value">GraphSAGE, GAT, Multi-LLM</span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Frameworks</span>
+                <span class="meta-field-value">PyTorch, PyG, NetworkX</span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Timeline</span>
+                <span class="meta-field-value">June 2025 – Feb 2026</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">Related Projects</h3>
+            <ul class="meta-field-list">
+              <li>
+                <a class="topic-hub-link" href="../projects/seo-agent-laya.html">
+                  SEO-Agent-using-LAYA →
+                </a>
+              </li>
+              <li>
+                <a class="topic-hub-link" href="../projects/prompt-based-bi.html">
+                  Prompt-Based Business Intelligence →
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher, Data Scientist &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../work.html">Selected Work</a></li>
+            <li><a href="index.html">Research at OIST</a></li>
+            <li><a href="../topics/index.html">Topic Hubs</a></li>
+            <li><a href="../learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:kumaraniketn@gmail.com">kumaraniketn@gmail.com</a></li>
+            <li><a href="tel:+918448769791">+91 8448769791</a></li>
+            <li><a href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: +81 70-1290-5081 ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=2.1.0" defer></script>
+</body>
+</html>

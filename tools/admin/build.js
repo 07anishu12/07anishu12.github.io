@@ -220,8 +220,9 @@ function buildStaticPages() {
     "description": ${JSON.stringify(description)},
     "author": {
       "@type": "Person",
+      "@id": "https://07anishu12.github.io/#person",
       "name": "Aniket Thakur",
-      "url": "https://07anishu12.github.io/"
+      "url": "https://07anishu12.github.io/author/aniket-thakur.html"
     },
     "datePublished": "${article.publishedDate}",
     "dateModified": "${article.updatedDate || article.publishedDate}",
@@ -246,7 +247,8 @@ function buildStaticPages() {
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="../about.html">About</a>
         <a href="../work.html">Work</a>
-        <a href="../index.html#research">Research</a>
+        <a href="../research/index.html">Research</a>
+        <a href="../topics/index.html">Topics</a>
         <a href="../learnings.html" aria-current="page">Learnings</a>
         <a href="../contact.html">Contact</a>
       </nav>
@@ -262,7 +264,8 @@ function buildStaticPages() {
     <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="../about.html">About</a>
       <a href="../work.html">Work</a>
-      <a href="../index.html#research">Research</a>
+      <a href="../research/index.html">Research</a>
+      <a href="../topics/index.html">Topics</a>
       <a href="../learnings.html" aria-current="page">Learnings</a>
       <a href="../contact.html">Contact</a>
       <div class="mobile-actions">
@@ -356,8 +359,11 @@ function buildStaticPages() {
           <ul class="footer-links-list">
             <li><a href="../about.html">About</a></li>
             <li><a href="../work.html">Selected Work</a></li>
-            <li><a href="../index.html#research">Research at OIST</a></li>
+            <li><a href="../projects/index.html">Projects Index</a></li>
+            <li><a href="../research/index.html">Research at OIST</a></li>
+            <li><a href="../topics/index.html">Topic Hubs</a></li>
             <li><a href="../learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="../author/aniket-thakur.html">Author Entity Profile</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
         </div>
@@ -530,6 +536,63 @@ ${cardsHtml}
   } else {
     console.warn(`Could not match main content section in ${INDEX_HTML}`);
   }
+
+  // Generate sitemap.xml
+  generateSitemap(published);
+}
+
+function generateSitemap(publishedArticles) {
+  const SITEMAP_FILE = path.join(ROOT_DIR, 'sitemap.xml');
+  const today = '2026-09-30';
+
+  const staticUrls = [
+    { loc: 'https://07anishu12.github.io/', priority: '1.0', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/about.html', priority: '0.8', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/work.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/learnings.html', priority: '0.8', changefreq: 'daily', lastmod: today },
+    { loc: 'https://07anishu12.github.io/contact.html', priority: '0.8', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/author/aniket-thakur.html', priority: '0.9', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/research/index.html', priority: '0.9', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/projects/index.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/projects/seo-agent-laya.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/projects/prompt-based-bi.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/topics/index.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/topics/graph-neural-networks.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/topics/seo-automation.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/topics/artificial-intelligence.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/topics/fintech.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://07anishu12.github.io/topics/data-science.html', priority: '0.85', changefreq: 'monthly', lastmod: today }
+  ];
+
+  const articleUrls = (publishedArticles || []).map(article => {
+    const slug = article.slug || article.id;
+    const lastmod = article.updatedDate || article.publishedDate || today;
+    return {
+      loc: `https://07anishu12.github.io/learnings/${slug}.html`,
+      priority: '0.8',
+      changefreq: 'monthly',
+      lastmod: lastmod
+    };
+  });
+
+  const allUrls = [...staticUrls, ...articleUrls];
+
+  const xmlEntries = allUrls.map(item => `  <url>
+    <loc>${item.loc}</loc>
+    <lastmod>${item.lastmod}</lastmod>
+    <changefreq>${item.changefreq}</changefreq>
+    <priority>${item.priority}</priority>
+  </url>`).join('\n');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${xmlEntries}
+</urlset>
+`;
+
+  fs.writeFileSync(SITEMAP_FILE, xml, 'utf8');
+  console.log(`Generated sitemap.xml with ${allUrls.length} URLs successfully.`);
 }
 
 buildStaticPages();

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Prompt-Based Business Intelligence System — Aniket Thakur</title>
+  <meta name="description" content="Technical engineering case study of Prompt-Based Business Intelligence System by Aniket Thakur: Natural-language to SQL query translation, read-only sandboxing, and self-serve data analytics.">
+  <link rel="canonical" href="https://07anishu12.github.io/projects/prompt-based-bi.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="Prompt-Based Business Intelligence System — Aniket Thakur">
+  <meta property="og:description" content="Natural-language query engine over relational SQL databases, bridging non-technical teams with audited database reporting.">
+  <meta property="og:url" content="https://07anishu12.github.io/projects/prompt-based-bi.html">
+  <meta property="og:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prompt-Based Business Intelligence System — Aniket Thakur">
+  <meta name="twitter:description" content="Natural-language SQL analytics engine for business teams.">
+  <meta name="twitter:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://07anishu12.github.io/projects/prompt-based-bi.html#software",
+        "name": "Prompt-Based Business Intelligence System",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cross-platform",
+        "description": "Natural-language query engine over relational SQL databases for audited self-serve business intelligence and automated visualization.",
+        "author": {
+          "@type": "Person",
+          "@id": "https://07anishu12.github.io/#person",
+          "name": "Aniket Thakur",
+          "url": "https://07anishu12.github.io/author/aniket-thakur.html"
+        },
+        "url": "https://07anishu12.github.io/projects/prompt-based-bi.html"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://07anishu12.github.io/projects/prompt-based-bi.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://07anishu12.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://07anishu12.github.io/projects/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Prompt-Based BI System",
+            "item": "https://07anishu12.github.io/projects/prompt-based-bi.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="project-detail">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="../about.html">About</a>
+        <a href="../work.html">Work</a>
+        <a href="../research/index.html">Research</a>
+        <a href="../topics/index.html">Topics</a>
+        <a href="../learnings.html">Learnings</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <!-- Breadcrumbs -->
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../work.html">Projects</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Prompt-Based BI System</span>
+      </nav>
+
+      <header class="article-header">
+        <p class="eyebrow">Data Product Architecture · 02</p>
+        <h1 class="article-title">
+          Prompt-Based Business Intelligence System
+        </h1>
+        <p class="article-lead">
+          A natural-language query engine over relational SQL databases, bridging non-technical executive teams with immediate, audited database reporting and chart visualizations.
+        </p>
+
+        <div class="article-meta-row">
+          <div class="article-author-info">
+            <a class="author-name" href="../author/aniket-thakur.html">Aniket Thakur</a>
+            <span class="meta-dot">·</span>
+            <span>Product Builder &amp; Data Analyst</span>
+            <span class="meta-dot">·</span>
+            <span>Natural Language · SQL · Data Science</span>
+          </div>
+          <div class="article-tags-wrap">
+            <span class="tag">Text-to-SQL</span>
+            <span class="tag">Data Analytics</span>
+            <span class="tag">SQL Databases</span>
+            <span class="tag">BI Reporting</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="detail-grid">
+        <div class="detail-main article-body">
+          <section>
+            <h2>1. The Operational Challenge: Analytics Turnaround Lag</h2>
+            <p>
+              In growing technology and fintech startups, product managers and executive leaders require immediate quantitative answers to operational queries: *\"What was the default rate on 36-month two-wheeler loans last month in Delhi compared to Mumbai?\"* or *\"Which affiliate partner is driving the highest volume of drop-offs during KYC verification?\"*
+            </p>
+            <p>
+              Because querying relational production databases requires structured SQL and familiarity with database schemas, every question turns into a Jira ticket queued for the data engineering team, creating multiday turnaround delays for routine business decisions.
+            </p>
+          </section>
+
+          <section>
+            <h2>2. Architectural Design &amp; Security Sandboxing</h2>
+            <div class="architecture-box">
+              <pre><code>[ Executive Natural-Language Prompt ]
+               │
+               ▼
+   [ Schema Metadata Injector ] ───► Sanitized DB Table & Column Schema
+               │
+               ▼
+   [ LLM Translation Engine ] ────► Generate Audited Read-Only SQL Query
+               │
+               ▼
+   [ Security Validator & Linter ] ─► Block DROP/DELETE/INSERT/UPDATE;
+               │                     Enforce Strict Limit Clamping & Timeouts
+               ▼
+   [ Read-Only Sandbox Execution ] ─► Execute Against Analytics Replica
+               │
+               ▼
+   [ Dynamic Visualizer & Summary ] ─► Render Clean Data Table & Plotly Charts</code></pre>
+            </div>
+
+            <h3>Security &amp; Determinism Guardrails</h3>
+            <ul>
+              <li><strong>Zero Write Access:</strong> Strict read-only database user credentials and AST (Abstract Syntax Tree) SQL linting prevent any accidental state mutation or data leaks.</li>
+              <li><strong>Schema Embedding:</strong> Embeds table relationships, foreign key constraints, and business acronyms into the context prompt to ensure exact join logic across normalized databases.</li>
+              <li><strong>Explainable SQL:</strong> Outputs the executed SQL alongside the visual chart so analysts can verify query logic before relying on calculations.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>3. Results &amp; Business Value</h2>
+            <div class="outcome-stat-strip">
+              <div class="outcome-stat-unit">
+                <span class="outcome-stat-num">Self-Serve</span>
+                <span class="outcome-stat-desc">Non-technical teams explore database metrics independently</span>
+              </div>
+              <div class="outcome-stat-unit">
+                <span class="outcome-stat-num">0</span>
+                <span class="outcome-stat-desc">Zero SQL queries written by executive leadership</span>
+              </div>
+              <div class="outcome-stat-unit">
+                <span class="outcome-stat-num">100%</span>
+                <span class="outcome-stat-desc">Read-only enforcement across all query sandboxes</span>
+              </div>
+            </div>
+            <p>
+              The system democratized access to data, freeing data engineers from answering repetitive operational requests while empowering leadership with immediate insights.
+            </p>
+          </section>
+
+          <!-- Crosslinks -->
+          <section style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-main);">
+            <h3>Explore Related Hubs &amp; Projects</h3>
+            <div class="topic-hub-grid" style="grid-template-columns: 1fr 1fr; margin-top: 16px;">
+              <a class="topic-hub-card" href="../topics/data-science.html">
+                <span class="eyebrow">Topic Hub</span>
+                <h4 style="font-size: 1.125rem;">Data Science Topic Hub →</h4>
+                <p>Statistical computing, SQL data pipelines, and analytics frameworks.</p>
+              </a>
+              <a class="topic-hub-card" href="seo-agent-laya.html">
+                <span class="eyebrow">Project</span>
+                <h4 style="font-size: 1.125rem;">SEO-Agent-using-LAYA →</h4>
+                <p>Automated SEO intelligence and multi-LLM generation pipeline.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="detail-sidebar">
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">Project Specifications</h3>
+            <ul class="meta-field-list">
+              <li class="meta-field-item">
+                <span class="meta-field-label">Project Name</span>
+                <span class="meta-field-value">Prompt-Based BI System</span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Creator</span>
+                <span class="meta-field-value">
+                  <a class="topic-hub-link" href="../author/aniket-thakur.html">Aniket Thakur</a>
+                </span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Core Technologies</span>
+                <span class="meta-field-value">Python, PostgreSQL, Text-to-SQL, AST Parsing, Plotly</span>
+              </li>
+              <li class="meta-field-item">
+                <span class="meta-field-label">Category</span>
+                <span class="meta-field-value">Data Analytics &amp; Natural Language</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">Explore Work</h3>
+            <ul class="meta-field-list">
+              <li>
+                <a class="topic-hub-link" href="seo-agent-laya.html">SEO-Agent-using-LAYA →</a>
+              </li>
+              <li>
+                <a class="topic-hub-link" href="../work.html">All Case Studies →</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher, Data Scientist &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../work.html">Selected Work</a></li>
+            <li><a href="../research/index.html">Research at OIST</a></li>
+            <li><a href="../topics/index.html">Topic Hubs</a></li>
+            <li><a href="../learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:kumaraniketn@gmail.com">kumaraniketn@gmail.com</a></li>
+            <li><a href="tel:+918448769791">+91 8448769791</a></li>
+            <li><a href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: +81 70-1290-5081 ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=2.1.0" defer></script>
+</body>
+</html>

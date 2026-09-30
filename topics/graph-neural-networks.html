@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Graph Neural Networks (GNNs) — Research &amp; Applications — Aniket Thakur</title>
+  <meta name="description" content="Technical guide and research overview on Graph Neural Networks (GNNs), GraphSAGE, Graph Attention Networks (GAT), and ecological modeling by AI researcher Aniket Thakur.">
+  <link rel="canonical" href="https://07anishu12.github.io/topics/graph-neural-networks.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="Graph Neural Networks (GNNs) — Research &amp; Applications — Aniket Thakur">
+  <meta property="og:description" content="Deep dive into non-Euclidean representation learning, GraphSAGE inductive message passing, GAT attention mechanisms, and ecological food-web research at OIST.">
+  <meta property="og:url" content="https://07anishu12.github.io/topics/graph-neural-networks.html">
+  <meta property="og:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Graph Neural Networks (GNNs) — Aniket Thakur">
+  <meta name="twitter:description" content="Graph Neural Networks, GraphSAGE, GAT, and ecological network research at OIST.">
+  <meta name="twitter:image" content="https://07anishu12.github.io/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://07anishu12.github.io/topics/graph-neural-networks.html#webpage",
+        "url": "https://07anishu12.github.io/topics/graph-neural-networks.html",
+        "name": "Graph Neural Networks (GNNs) — Research & Applications — Aniket Thakur",
+        "description": "Comprehensive authority hub on Graph Neural Networks (GNNs) written by AI researcher Aniket Thakur, based on research at OIST.",
+        "about": [
+          {"@type": "Thing", "name": "Graph Neural Network", "sameAs": "https://en.wikipedia.org/wiki/Graph_neural_network"},
+          {"@type": "Thing", "name": "Graph Attention Network"},
+          {"@type": "Thing", "name": "GraphSAGE"},
+          {"@type": "Thing", "name": "PyTorch Geometric"}
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://07anishu12.github.io/#person",
+          "name": "Aniket Thakur",
+          "url": "https://07anishu12.github.io/author/aniket-thakur.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://07anishu12.github.io/topics/graph-neural-networks.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://07anishu12.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Topics",
+            "item": "https://07anishu12.github.io/topics/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Graph Neural Networks",
+            "item": "https://07anishu12.github.io/topics/graph-neural-networks.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="topics">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="../about.html">About</a>
+        <a href="../work.html">Work</a>
+        <a href="../research/index.html">Research</a>
+        <a href="../topics/index.html" aria-current="page">Topics</a>
+        <a href="../learnings.html">Learnings</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="../about.html">About</a>
+      <a href="../work.html">Work</a>
+      <a href="../research/index.html">Research</a>
+      <a href="../topics/index.html" aria-current="page">Topics</a>
+      <a href="../learnings.html">Learnings</a>
+      <a href="../contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" href="../assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <!-- Breadcrumb -->
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="index.html">Topics</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Graph Neural Networks</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-meta-top">
+          <span class="badge badge-featured">Research Hub</span>
+          <span class="meta-tag">Deep Learning · PyTorch Geometric</span>
+          <span class="meta-dot">·</span>
+          <span>Curated by Aniket Thakur</span>
+        </div>
+
+        <h1 class="article-title" style="font-size: clamp(2.1rem, 4vw, 3rem);">
+          Graph Neural Networks <span class="serif-accent">(GNNs).</span>
+        </h1>
+
+        <p class="lead">
+          Modeling non-Euclidean relationships, inductive neighborhood aggregation, attention over topological graphs, and scientific applications at the Okinawa Institute of Science and Technology.
+        </p>
+
+        <div class="article-byline">
+          <div class="byline-avatar">
+            <img src="../assets/img/aniket-portrait.png" alt="Aniket Thakur" width="40" height="40">
+          </div>
+          <div>
+            <div class="byline-name"><a href="../author/aniket-thakur.html">Aniket Thakur</a></div>
+            <div class="byline-role">AI Researcher (Former OIST Intern) &amp; APM</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <h2>What are Graph Neural Networks?</h2>
+        <p>
+          Standard deep learning architectures—such as Convolutional Neural Networks (CNNs) for 2D pixel grids or Transformers and Recurrent Neural Networks (RNNs) for 1D sequential text—rely on strict geometric grids. However, a significant fraction of high-value real-world phenomena exists in <strong>non-Euclidean space</strong>:
+        </p>
+        <ul>
+          <li><strong>Biological &amp; Ecological Systems:</strong> Predator-prey interactions, food webs, and molecular structures.</li>
+          <li><strong>Knowledge &amp; Semantic Graphs:</strong> Entity-relation networks, corporate cross-holdings, and academic citations.</li>
+          <li><strong>Financial &amp; Transactional Networks:</strong> Counterparty credit exposure, payment flows, and anti-money laundering graphs.</li>
+        </ul>
+        <p>
+          Graph Neural Networks process graphs $G = (V, E)$ directly, preserving permutation invariance and structural relational dependencies through recursive message passing between connected vertices.
+        </p>
+
+        <h2>Core GNN Architectures: GraphSAGE vs. GAT</h2>
+        <p>
+          During my research at the <strong>Okinawa Institute of Science and Technology (OIST)</strong>, our work investigated how to represent dense, heterogeneous interaction graphs without succumbing to memory bottlenecks or oversmoothing:
+        </p>
+
+        <div class="research-spec-grid">
+          <div class="spec-card">
+            <h4>GraphSAGE (Hamilton et al.)</h4>
+            <p><strong>Mechanism:</strong> Uniform local neighborhood sampling followed by symmetric feature aggregation (Mean, Pooling, or LSTM aggregator).</p>
+            <p><strong>Core Advantage:</strong> Inductive capability. The model learns aggregator functions rather than individual node embeddings, allowing generalization to previously unseen subgraphs.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Graph Attention Networks (GAT)</h4>
+            <p><strong>Mechanism:</strong> Multi-head self-attention applied over edge connections $\alpha_{ij} = \text{Softmax}_j(e_{ij})$.</p>
+            <p><strong>Core Advantage:</strong> Differential weighting. Enables the neural network to prioritize critical topological links (such as keystone predator dependencies in a food web) over peripheral interactions.</p>
+          </div>
+        </div>
+
+        <h2>Mathematical Foundation: The Message-Passing Framework</h2>
+        <p>
+          Most modern spatial GNNs can be formalized through the Gilmer et al. Message Passing Neural Network (MPNN) paradigm. For a node $v$ with neighborhood $\mathcal{N}(v)$ at layer $k$:
+        </p>
+
+        <div class="formula-block">
+          <code>h_v^{(k)} = \text{UPDATE}^{(k)} \left( h_v^{(k-1)}, \text{AGGREGATE}^{(k)} \left( \left\{ \text{MESSAGE}^{(k)} \left( h_v^{(k-1)}, h_u^{(k-1)}, e_{uv} \right) : u \in \mathcal{N}(v) \right\} \right) \right)</code>
+        </div>
+
+        <p>
+          By stacking $K$ message-passing layers, each node incorporates information from its $K$-hop neighborhood.
+        </p>
+
+        <h2>Research &amp; Field Work by Aniket Thakur</h2>
+        <p>
+          Explore the exact papers, technical notes, and research monographs authored by Aniket Thakur in this domain:
+        </p>
+
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-featured">Research Monograph</span>
+            <h4><a href="../research/graph-neural-networks-ecological-modeling.html">Graph Neural Networks for Topological Food-Web Interactions at OIST</a></h4>
+            <p>In-depth case study of applying GraphSAGE and GAT architectures to model multi-trophic ecological networks in Okinawa, Japan.</p>
+            <a class="topic-hub-link" href="../research/graph-neural-networks-ecological-modeling.html">Read Full Monograph →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Knowledge Library Note</span>
+            <h4><a href="../learnings/graph-neural-networks-ecological-modeling.html">Field Notes: Modeling Non-Euclidean Relationships</a></h4>
+            <p>Compact engineering synthesis on tackling permutation invariance and multi-LLM literature extraction for graph training.</p>
+            <a class="topic-hub-link" href="../learnings/graph-neural-networks-ecological-modeling.html">Read Field Note →</a>
+          </div>
+        </div>
+
+        <h2>Key Technologies &amp; Libraries</h2>
+        <ul>
+          <li><strong>PyTorch Geometric (PyG):</strong> Geometric deep learning extension library for PyTorch providing scalable message-passing implementations and CUDA sparse kernels.</li>
+          <li><strong>NetworkX:</strong> Complex network creation, topological metric extraction (betweenness centrality, clustering coefficients), and graph visualization.</li>
+          <li><strong>DGL (Deep Graph Library):</strong> Framework for efficient message passing on large heterogeneous graphs.</li>
+        </ul>
+      </div>
+
+      <!-- Cross-Link Footer -->
+      <footer class="article-footer" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+        <p class="eyebrow">Explore Other Topic Hubs</p>
+        <div class="btn-group">
+          <a class="btn btn-secondary btn-sm" href="seo-automation.html">SEO Automation Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="artificial-intelligence.html">Artificial Intelligence Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="fintech.html">FinTech &amp; Finance Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="data-science.html">Data Science Hub →</a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher, Data Scientist &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../work.html">Selected Work</a></li>
+            <li><a href="../research/index.html">Research at OIST</a></li>
+            <li><a href="index.html">Topic Hubs</a></li>
+            <li><a href="../learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:kumaraniketn@gmail.com">kumaraniketn@gmail.com</a></li>
+            <li><a href="tel:+918448769791">+91 8448769791</a></li>
+            <li><a href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: +81 70-1290-5081 ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=2.1.0" defer></script>
+</body>
+</html>
