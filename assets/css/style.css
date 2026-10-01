@@ -937,7 +937,7 @@ p.lead {
 /* Secondary Projects Grid */
 .projects-subgrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(20px, 2.5vw, 32px);
 }
 
@@ -998,6 +998,8 @@ p.lead {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 @media (max-width: 960px) {
