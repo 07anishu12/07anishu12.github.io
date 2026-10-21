@@ -63,14 +63,14 @@
     nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
     document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
     document.addEventListener('click', (event) => {
-      if (nav.hidden || nav.contains(event.target) || toggle.contains(event.target)) return;
+      if (nav.hidden || nav.contains(event.target) || event.composedPath().includes(toggle)) return;
       closeMenu();
     });
   }
 
   async function initContactData() {
     try {
-      const response = await fetch('data/contact.json', { cache: 'no-store' });
+      const response = await fetch('/data/contact.json', { cache: 'no-store' });
       if (response.ok) contact = { ...contactFallback, ...(await response.json()) };
     } catch (_) {
       // Local fallback keeps file preview functional
@@ -100,7 +100,7 @@
       github: contact.github,
       linkedin: contact.linkedin,
       x: contact.x,
-      resume: contact.resume
+      resume: `/${contact.resume.replace(/^\//, '')}`
     };
     document.querySelectorAll('[data-contact-link]').forEach((element) => {
       const key = element.dataset.contactLink;
@@ -246,7 +246,7 @@
 
     populateQuestions();
 
-    fetch('data/assistant.json', { cache: 'no-store' })
+    fetch('/data/assistant.json', { cache: 'no-store' })
       .then((response) => response.ok ? response.json() : null)
       .then((data) => {
         if (!data || !data.answers) return;

@@ -8,3 +8,9 @@ Professional Maroon Shirt Portrait.png
 !assets/img/aniket-portrait.png
 .DS_Store
 test_debug.html
+
+# Dependencies and generated artifacts (sources and ownership manifest are tracked)
+node_modules/
+_site/
+_preview/
+.validation/

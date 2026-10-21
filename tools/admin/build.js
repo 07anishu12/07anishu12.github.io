@@ -596,3 +596,5 @@ ${xmlEntries}
 }
 
 buildStaticPages();
+// Keep Blog navigation, Analytics, and the combined sitemap after Studio builds.
+require('../blog/build').buildBlog();

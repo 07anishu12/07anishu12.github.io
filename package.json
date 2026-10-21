@@ -5,6 +5,24 @@
   "description": "Aniket Thakur personal portfolio and knowledge library",
   "scripts": {
     "admin": "node tools/admin/server.js",
-    "build:content": "node tools/admin/build.js"
+    "build:content": "node tools/admin/build.js",
+    "build": "node tools/blog/build.js",
+    "blog:new": "node tools/blog/new.js",
+    "preview": "node tools/blog/preview.js --drafts",
+    "serve": "node tools/blog/preview.js",
+    "check": "node tools/blog/check.js",
+    "test": "node --test tools/blog/test.js",
+    "search-console": "node tools/blog/verification.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "cheerio": "^1.2.0",
+    "image-size": "^2.0.4",
+    "markdown-it": "^15.0.3",
+    "markdown-it-footnote": "^4.0.0",
+    "yaml": "^2.9.1"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

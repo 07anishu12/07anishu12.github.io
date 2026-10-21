@@ -8,6 +8,10 @@
   <title>Page Not Found — Aniket Thakur</title>
   <meta name="description" content="The page you were looking for could not be found. Explore Aniket Thakur's AI research, data science projects, and technical notes.">
   <link rel="stylesheet" href="/assets/css/style.css?v=2.1.0">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="alternate" type="application/rss+xml" title="Aniket Thakur — Blog" href="/blog/feed.xml">
+  <script src="/assets/js/site-config.js" defer></script>
+  <script src="/assets/js/analytics.js" defer></script>
 </head>
 <body data-page="404">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -26,13 +30,31 @@
         <a href="/research/index.html">Research</a>
         <a href="/topics/index.html">Topics</a>
         <a href="/learnings.html">Learnings</a>
-        <a href="/contact.html">Contact</a>
+        <a href="/blog/">Blog</a>
+      <a href="/contact.html">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-quiet btn-sm nav-resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
       </div>
     </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
   </header>
 
   <main id="main-content">

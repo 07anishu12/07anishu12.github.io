@@ -17,7 +17,7 @@ Aniket is an Associate Product Manager at Drivio Technologies (previously Busine
 
 **[https://07anishu12.github.io](https://07anishu12.github.io)**
 
-The repository is structured for GitHub Pages at the root.
+Source pages remain at the repository root. The new Pages workflow builds and deploys only `_site/`; see the Blog publishing and deployment instructions below.
 
 ## Architecture
 
@@ -77,3 +77,236 @@ Portfolio-Website/
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Blog publishing
+
+The Blog extends the existing static site. Learnings, topic hubs, projects, research, the author profile, contact tools, and portfolio content remain in place. The build reuses the homepage header/footer and existing design tokens. There is no browser-side article loading, framework, or production backend.
+
+Use Node.js 22 or newer (CI uses Node 24):
+
+```sh
+npm ci
+npm test
+npm run build
+npm run check
+```
+
+`npm run build` creates real article `index.html` files, main/category listings (9 articles per page), static pagination links, homepage Latest Articles, related articles, `/blog/search.json`, `/blog/feed.xml`, and the combined sitemap. Production output is `_site/`. Root `blog/` files are also generated for inspection and version control. The blog/category pages show an honest empty state when there are no articles in that category. The first Auto article is `/blog/auto/tata-aeris-review/`. No demonstration articles are published.
+
+### 1. Create an article
+
+```sh
+npm run blog:new -- technology my-article-slug
+# Or:
+npm run blog:new -- auto my-car-guide
+npm run blog:new -- finance my-finance-explainer
+```
+
+This copies the appropriate draft template to `data/blog/{category}/{slug}.md` without overwriting an existing file. Edit that Markdown file. Reusable templates live in `tools/blog/templates/`. Categories are `technology`, `auto`, and `finance`; the metadata category must match its directory. `author` is the existing identity, `Aniket Thakur`.
+
+The permanent URL comes from category + slug, for example `/blog/auto/my-car-guide/`. Keep both stable after publishing. Changing a slug removes the old generated page; add an intentional redirect separately if you need to preserve an established URL. `page`, `index`, and the local `formatting-example` slug are reserved.
+
+### 2–3. Add the single cover image
+
+Copy your own licensed image to `assets/images/blog/{article-slug}/`. For example, after exporting your selected image as WebP:
+
+```sh
+cp /absolute/path/to/your-selected-cover.webp assets/images/blog/my-car-guide/cover.webp
+```
+
+In `data/blog/auto/my-car-guide.md`, set:
+
+```yaml
+coverImage: "/assets/images/blog/my-car-guide/cover.webp"
+coverImageAlt: "Describe the actual subject and useful visual details."
+imageCaption: ""        # Optional visible caption
+imageCredit: ""         # Optional genuine credit; never invent one
+imageSourceUrl: ""      # Optional original HTTP(S) source URL
+```
+
+One file supplies the article cover, listing image, related thumbnail, and social metadata. No thumbnail upload is needed. The article shows the full image at up to its natural size; cards use a consistent crop. Image dimensions are read during the build. PNG, JPEG, WebP, AVIF, and SVG dimensions are supported. Prefer an appropriately compressed WebP/AVIF, usually at no more than the resolution needed for your cover; inspect important subjects in the card crop. Do not enlarge a small source merely to meet a suggested size. SVG uploads must be trusted files you authored or reviewed.
+
+To replace it, copy the new image into that folder and change `coverImage` and `coverImageAlt` in the Markdown. Replacing a file at the same URL may be cached by browsers, GitHub Pages, and social platforms. Use a new descriptive filename (for example, `front-view-2026.webp`) when the changed image needs a new URL. Rebuild and redeploy.
+
+### 4. Format the body
+
+The `title` generates the only H1. Optional `seoTitle` supplies a separate exact HTML/social title when you want different wording; otherwise the page uses the article title with the portfolio name. Begin body headings at `##`; `###` and `####` are also supported. The build rejects extra H1s, H5/H6, body images, missing covers/alt text, invalid dates, and duplicate output paths. Raw HTML is escaped; scripts and dangerous Markdown links cannot become executable article HTML. See [Markdown-it safety guidance](https://github.com/markdown-it/markdown-it/blob/master/docs/safety.md).
+
+```markdown
+## A heading
+
+Ordinary paragraph with **bold**, *italic*, ***bold italic***,
+~~strikethrough~~, and `inline code`.
+
+**Introductory label:** The requested “sub-bold” style is ordinary bold text.
+
+- **A bold label:** A bullet point.
+  - A nested bullet.
+
+1. First step.
+2. Second step.
+   1. A nested step.
+
+| Comparison | Detail |
+| --- | --- |
+| One option | A sourced statement |
+
+> An ordinary blockquote.
+
+> [!NOTE]
+> Supporting context.
+
+> [!TIP]
+> A practical suggestion.
+
+> [!IMPORTANT]
+> Essential information.
+
+[Descriptive link label](/learnings.html)
+
+A footnote reference.[^detail]
+
+[^detail]: A supporting explanation.
+
+---
+```
+
+Use fenced code blocks with a language immediately after the opening three backticks (`javascript`, `python`, `text`, etc.). A visible language label is generated; no heavy syntax-highlighting library is downloaded. Tables receive semantic column headers and a keyboard-focusable horizontal scroll region on small screens. H2/H3 headings receive stable unique anchors; three or more generate a table of contents. The author chooses the sequence and mix of sections.
+
+For source references, use this front matter shape:
+
+```yaml
+sources:
+  - title: "The actual title of the source you consulted"
+    url: "https://github.com/markdown-it/markdown-it/blob/master/docs/safety.md"
+```
+
+The URL above is a real example of the required structure. Replace both fields with the actual reference for your article. The visible Sources section is generated from this list. Inline reference links are also supported. Link to evidence for prices, specifications, figures, and claims; distinguish sourced facts, manufacturer statements, your analysis, and personal opinion. Do not invent testing, ownership experience, qualifications, ratings, or returns. Auto templates prompt for model year, market, dated prices and running-cost assumptions; Technology templates prompt for compatibility and limitations; Finance templates prompt for dates, assumptions, formulas and risks. Finance pages automatically include an educational-content disclaimer.
+
+### 5. Topic tags
+
+```yaml
+tags: ["Electric Vehicles", "Ownership Costs", "India"]
+```
+
+Tags describe topics; H1–H4 headings organise the body. Topic links open the blog's tag filter, and search covers title, description, tags, and body text across all pagination pages. No thin tag archive pages are generated. Category links and pagination work with JavaScript disabled; search is an optional enhancement. `featured: true` adds a visible featured badge. Latest Articles remains ordered by publication date.
+
+### 6. Preview drafts locally
+
+After adding the cover and completing required metadata:
+
+```sh
+npm run preview
+```
+
+Open `http://127.0.0.1:4173/blog/`. This builds `_preview/` with drafts and the comprehensive synthetic formatting example at `http://127.0.0.1:4173/blog/technology/formatting-example/`. It demonstrates cover metadata, tags, H2/H3/H4, emphasis, lists, nested lists, tables, quotes, code, callouts, footnotes, and references. Preview pages are noindex, responses carry `X-Robots-Tag`, the server binds only to localhost, and Analytics is disabled. Preview feeds and sitemap list published URLs only. Stop with Ctrl+C and rerun after edits. Set `PORT=4174 npm run preview` if needed.
+
+`npm run serve` previews the production artifact without drafts. Never deploy `_preview/` or serve the repository root as a production website. Drafts in a **public GitHub repository are still visible as repository source**, even though they are excluded from the website artifact; keep sensitive unpublished text outside a public repository.
+
+### 7–8. Publish and update
+
+Set `draft: false` only after review. `datePublished` must be the genuine publication date in quoted `YYYY-MM-DD` format. Leave `dateModified` empty initially; set it to a genuine substantive update date when updating text, data, or the main image. Do not reset dates on unchanged rebuilds. Future dates and invalid calendar dates are rejected; scheduling is manual.
+
+```sh
+npm test
+npm run build
+npm run check
+```
+
+All derived blog output is updated automatically. Drafts are excluded from production HTML, cards, related articles, homepage, search, RSS, sitemap, and uploaded cover assets. Deleting an article, changing its slug, or setting `draft: true` removes its old **owned** generated files on the next build. `.blog-generated.json` records file ownership and hashes. Keep it under version control. Do not hand-edit generated blog pages; edit Markdown instead. If an owned page was manually changed, the build stops rather than deleting/overwriting it. Move your manual work out of the generated path and restore the generated version before rebuilding. Unrelated manually maintained files are preserved.
+
+The existing Learnings Studio (`npm run admin`) remains available. If you edit Learnings JSON directly, run `npm run build:content`, then `npm run build`. The Learnings generator now reapplies the shared integration and combined sitemap after rebuilding its pages.
+
+### 9. Deploy through GitHub Pages
+
+The previous Pages configuration served `main` at `/` directly. **This implementation requires repository Settings → Pages → Build and deployment → Source to be GitHub Actions.** This is necessary to deploy `_site/` alone and keep draft Markdown, templates, local examples, and admin tools out of the public website. See [GitHub's custom workflow instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+The equivalent one-time authenticated CLI setting is documented by the [Pages REST API](https://docs.github.com/en/rest/pages/pages):
+
+```sh
+gh api --method PUT repos/07anishu12/07anishu12.github.io/pages -f build_type=workflow
+```
+
+Then review and commit the changes, including generated root blog pages, the ownership manifest, source files, assets and lockfile:
+
+```sh
+npm ci
+npm test
+npm run build
+npm run check
+git diff --check
+git status --short
+# After reviewing git status and the diff, stage the intended implementation.
+git add .
+git commit -m "Add static blog publishing and Google integrations"
+git push origin main
+```
+
+`.github/workflows/pages.yml` installs locked dependencies, runs tests, builds, validates, and uploads **only `_site/`** before deployment. Pull requests validate without deploying. Check the Actions run and deployment URL. `_site/`, `_preview/`, and `node_modules/` are ignored by Git. Existing root HTML and portfolio URLs are preserved. Nested blog URLs resolve to physical `index.html` files, including on refresh. The genuine `404.html` is returned for missing paths; there is no SPA redirect. `robots.txt` keeps the production sitemap directive and allows public crawling. Sitemap portfolio entries retain existing lastmod values; article/category entries derive dates from content metadata and do not change every build.
+
+### 10. Configure GA4
+
+No existing Analytics or Tag Manager integration was found. Tracking remains inactive until you enter your genuine Measurement ID in **one location**, `assets/js/site-config.js`:
+
+```javascript
+measurementId: '' // Replace the empty string with the genuine G-… ID.
+```
+
+Find it in Google Analytics → Admin → Data streams → select the website stream → Measurement ID. Check that the stream Website URL is `https://07anishu12.github.io/`. Rebuild and deploy after changing it. Never add a second gtag/GTM snippet. No service-account key or private credential is needed.
+
+In the web stream's Enhanced measurement settings:
+
+- Keep **Page views on**; disable advanced history-change page views for this ordinary static site.
+- Keep **File downloads on**. Resume downloads use the built-in `file_download` event; no duplicate custom download event is emitted. Filter the file name for `Aniket_Thakur_Resume.pdf`.
+- Turn **Outbound clicks, Site search, and Form interactions off**. The code sends privacy-limited custom reference/contact/share events instead. This avoids duplicated interactions and prevents enhanced measurement from collecting contact destinations, search terms, or form-related data.
+- Other options such as scroll measurement are optional. Review any future measurement changes for unintended personal data.
+
+One GA4 config sends the normal page view; there is no second manual page-view event. `share` records the method and article canonical URL; `contact_click` records only `email`, `phone`, or `whatsapp`; `outbound_reference` records only the destination domain for external body/source links. Blog events include `article_category` and `article_slug`. Link text, contact addresses/numbers, query strings, fragments, and form contents are not sent by the integration. Page location uses the static canonical; referrer is limited to its origin. Google signals and ad-personalisation signals are disabled. Resume `file_download` is provided by enhanced measurement. Register event-scoped custom dimensions for `article_category`, `article_slug`, `contact_method`, and `reference_domain` if you want them in report breakdowns.
+
+Tracking runs only on the exact production origin, never localhost, file previews, another host, or the marked draft preview. No consent mechanism existed. If your site adds one, set `requireAnalyticsConsent: true`; have its explicit grant set `window.portfolioAnalyticsConsent = true` and dispatch `new Event('portfolio:analytics-consent')`. Set it to false and dispatch the same event on withdrawal. The Analytics loader waits for the grant; do not treat the config flag as a consent UI.
+
+### 11. Search Console verification and sitemap
+
+Use the **URL-prefix property** `https://07anishu12.github.io/`, not DNS verification for the parent `github.io` domain. The `~/Downloads/google*.html` search did not find a candidate during implementation. Supply the exact downloaded path; do not invent or edit a verification token.
+
+Import the actual file (replace the sample filename/path below with its exact downloaded name):
+
+```sh
+npm run search-console -- import /absolute/path/googleYOUR_ACTUAL_FILENAME.html
+npm run build
+npm run check
+```
+
+The importer validates the verification document and copies its bytes unchanged into the root alongside `index.html`. Every production build copies root `google*.html` files without rewriting them; validation checks their exact bytes. Keep the actual verification file under version control permanently. Commit and deploy it through the workflow.
+
+After deployment:
+
+```sh
+npm run search-console -- check googleYOUR_ACTUAL_FILENAME.html
+```
+
+This requests `https://07anishu12.github.io/<exact-filename>`, requires HTTP 200 with no redirect, and compares the response bytes to the local original. **Only after this passes, click Verify in Search Console.** Then open Sitemaps and submit `https://07anishu12.github.io/sitemap.xml`. See [Google's ownership verification instructions](https://support.google.com/webmasters/answer/9008080?cq_net=g&hl=en). An Analytics tag does not perform HTML-file verification.
+
+### 12. Link Search Console with GA4
+
+Once the URL-prefix property is verified, use GA4 Admin → Product links → Search Console Links → Link → Choose accounts → select the verified `https://07anishu12.github.io/` property → Confirm → Next → choose its matching web stream → Next → review and Submit. This requires verified Search Console ownership and Editor access to GA4. Follow [Google's linking instructions](https://support.google.com/analytics/answer/10737381?hl=en). No account link was created or claimed during local implementation.
+
+### 13. Check visits and indexing
+
+After deploying a real Measurement ID, open the production site through Google Tag Assistant and GA4 Realtime. Confirm one page view per page load; click an article share, resume download, contact link, and reference, and inspect the expected events. Confirm no personal fields are present. Use a separate clean browser session if filters/ad blockers suppress your test. The local test suite verifies loader gates, one initialization, event payloads, and no custom duplicate download event; **it does not prove Google received real traffic**. See Google's [page-view documentation](https://developers.google.com/analytics/devguides/collection/ga4/views?technology=websites) and [enhanced measurement documentation](https://support.google.com/analytics/answer/9216061?hl=en).
+
+In Search Console URL Inspection, enter an actual published canonical article URL, run Test live URL, inspect rendered text/canonical/crawl access, then request indexing when appropriate. Check Pages indexing and sitemap processing over time. Search Console reporting may lag publication. These tools do not guarantee indexing, rankings, or rich results.
+
+### Validation and implementation status
+
+`npm test` exercises formatting, unsafe content, required metadata, dates, path collisions, pagination, related cards, publishing/unpublishing/deletion/slug changes, safe stale-output removal, draft isolation, deterministic sitemap dates, verification bytes, and Analytics gates/events using explicitly synthetic fixtures in temporary workspaces. `npm run check` validates the deployable portfolio/blog HTML, internal links and fragments, canonicals, JSON-LD, single covers and dimensions, sitemap/RSS/search inclusion, draft/source exclusion, and shared Analytics script counts. `npm run preview` supports a desktop/mobile visual check of the comprehensive local example.
+
+Implementation delivery includes the Blog generator/templates (`tools/blog/`), source directories (`data/blog/`), generated routes (`blog/`), blog CSS/JS and central Analytics config (`assets/`), navigation/head integration across portfolio HTML, Latest Articles on `index.html`, combined `sitemap.xml`, Pages workflow, package scripts/lockfile, and these instructions. The root `robots.txt` already had the correct crawl policy/sitemap and was preserved. The genuine verification file/HTTP check, GA4 ID and Realtime confirmation, Search Console verification/sitemap submission, and account linking remain dependent on your Google inputs/access. The Pages workflow handles website deployment independently of those Google account steps.
+
+
+Local validation performed on 21 October 2026: all 7 test groups passed, including the original `build:content` command in an isolated copy; `npm ci`, the production build, `npm run check`, `npm audit` (0 vulnerabilities), and `git diff --check` passed. The initial production validator inspected 31 HTML pages and 30 sitemap URLs before the first article was added. The Tata Aeris publication adds one full article page and sitemap entry. The synthetic article passed axe WCAG 2 A/AA and WCAG 2.1 AA checks at 1440px and 390px with **0 detected violations** after fixes; this automated check is not a complete accessibility certification. Neither viewport had document overflow; the mobile table scrolled within 358px while its content remained 480px wide. The mobile Blog link, full-text search, topic filter, and real HTTP 404 response were verified in the browser. Home, About, Contact, Learnings, an existing note, and Blog returned HTTP 200 at both widths with no JavaScript errors. Local article navigation samples recorded DOMContentLoaded at 24ms (desktop) and 90ms (mobile); these are local browser timings, not production Core Web Vitals or a Lighthouse score. No Google Analytics requests occurred during draft preview. These local checks do not confirm a real verification-file response, GA4 collection, or Google account verification/link.
+
+Article-image follow-up: listing, category, and filtered-search image previews were confirmed loaded at both 1440px and 390px. Cards reuse `coverImage` with `coverImageAlt`; initial listing images load eagerly, and validation now rejects missing/mismatched card previews. The Auto article uses one sourced Tata Aeris cover on its article, blog/category/search cards, homepage card and social metadata; the synthetic formatting example remains local-only.
+
+
+Tata Aeris publication checks (21 October 2026): the research-supported article is `data/blog/auto/tata-aeris-review.md`, with a 20,436-byte WebP cover at `assets/images/blog/tata-aeris-review/cover.webp` and source attribution in its metadata. The exact `seoTitle` is separate from the visible H1. The rewrite includes dated launch-price references, explicit mileage limitations, a concise FAQ, linked sources, and an educational buying comparison without claiming an independent road test. Seven test groups passed; the production validator checked 32 HTML pages and 31 sitemap URLs. Browser checks at 1440px and 390px found no document overflow and zero detected axe WCAG 2 A/AA or WCAG 2.1 AA violations on the article. The cover, blog/search thumbnails, mobile menu, collapsible contents and heading links worked. Comparison cells retained a 150px minimum width on mobile and scrolled inside their container. These checks establish the tested behaviour, not perfect accessibility, search rankings, or inclusion in search/AI answers.
