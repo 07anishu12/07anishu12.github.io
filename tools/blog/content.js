@@ -24,7 +24,7 @@ function renderMarkdown(body) {
   md.renderer.rules.image = () => { throw new Error('Body images are disabled; use coverImage for the single main image.'); };
   const env = {};
   const tokens = md.parse(body, env);
-  const headings = [], ids = new Set(['main-content', 'blog-title', 'article-title', 'article-sources', 'article-related', 'article-toc']);
+  const headings = [], ids = new Set(['main-content', 'blog-title', 'article-title', 'article-sources', 'article-related', 'article-toc', 'article-answer', 'article-details', 'article-enquiry', 'article-answer-note']);
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
     if (token.type === 'heading_open') {
@@ -42,7 +42,7 @@ function renderMarkdown(body) {
       const inline = tokens[i + 2], marker = inline.content.match(/^\[!(NOTE|TIP|IMPORTANT)\](?:\n|$)/);
       if (marker) {
         token.attrSet('class', `blog-callout blog-callout-${marker[1].toLowerCase()}`);
-        inline.content = `${marker[1][0]}${marker[1].slice(1).toLowerCase()}: ${inline.content.slice(marker[0].length)}`;
+        inline.content = `**${marker[1][0]}${marker[1].slice(1).toLowerCase()}:** ${inline.content.slice(marker[0].length)}`;
         inline.children = md.parseInline(inline.content, {})[0].children;
       }
     }
@@ -72,6 +72,15 @@ function parseArticle(source, category, { root = ROOT, preview = false, imageRoo
   assert(CATEGORIES[category] && data.category.toLowerCase() === category, 'category must match its directory.');
   assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.slug) && !['page', 'index'].includes(data.slug), 'Use a lowercase hyphenated slug (page and index are reserved).');
   assert(data.seoTitle === undefined || (typeof data.seoTitle === 'string' && data.seoTitle.trim()), 'seoTitle must be a nonempty string when supplied.');
+  for (const key of ['showSources', 'enquiry']) assert(data[key] === undefined || typeof data[key] === 'boolean', `${key} must be a boolean.`);
+  if (data.quickAnswer !== undefined) {
+    const q = data.quickAnswer;
+    const text = value => typeof value === 'string' && value.trim();
+    assert(q && typeof q === 'object' && text(q.question) && text(q.answer), 'quickAnswer needs question and answer strings.');
+    assert(Array.isArray(q.facts) && q.facts.length > 0 && q.facts.length <= 4 && q.facts.every(f => f && text(f.label) && text(f.value)), 'quickAnswer.facts needs 1–4 label/value pairs.');
+    for (const key of ['goodFor', 'watchFor']) assert(Array.isArray(q[key]) && q[key].length > 0 && q[key].length <= 3 && q[key].every(text), `quickAnswer.${key} needs 1–3 short strings.`);
+    assert(q.note === undefined || text(q.note), 'quickAnswer.note must be a nonempty string when supplied.');
+  }
   assert(data.author === AUTHOR.name, `author must be ${AUTHOR.name}.`);
   assert(data.featured === undefined || typeof data.featured === 'boolean', 'featured must be a boolean.');
   for (const key of ['datePublished', 'dateModified']) {

@@ -1,5 +1,5 @@
 const fs = require('node:fs');
-const { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape: e, json } = require('./content');
+const { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape: e, json, assert } = require('./content');
 const date = value => new Date(`${value}T00:00:00Z`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 const rssLink = '<link rel="alternate" type="application/rss+xml" title="Aniket Thakur — Blog" href="/blog/feed.xml">';
 
@@ -31,7 +31,7 @@ function chrome(root = ROOT) {
 function page({ title, description, url, content, post, breadcrumbs = [], preview = false, root = ROOT }) {
   const canonical = `${ORIGIN}${url}`, image = post ? `${ORIGIN}${post.coverImage}` : `${ORIGIN}/assets/img/aniket-portrait.png`;
   const graph = [];
-  if (post) graph.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.title, description: post.description, url: canonical, mainEntityOfPage: canonical, author: AUTHOR, image: { '@type': 'ImageObject', url: image, width: post.width, height: post.height, caption: post.coverImageAlt }, datePublished: post.datePublished, dateModified: post.dateModified || post.datePublished, articleSection: CATEGORIES[post.category].name, keywords: post.tags.join(', '), inLanguage: 'en', wordCount: post.body.trim().split(/\s+/).length });
+  if (post) graph.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.title, description: post.description, ...(post.quickAnswer ? { abstract: post.quickAnswer.answer } : {}), url: canonical, mainEntityOfPage: canonical, author: AUTHOR, image: { '@type': 'ImageObject', url: image, width: post.width, height: post.height, caption: post.coverImageAlt }, datePublished: post.datePublished, dateModified: post.dateModified || post.datePublished, articleSection: CATEGORIES[post.category].name, keywords: post.tags.join(', '), inLanguage: 'en', wordCount: post.body.trim().split(/\s+/).length });
   if (breadcrumbs.length) graph.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: `${ORIGIN}${b.url}` })) });
   const { header, footer } = chrome(root);
   return `<!doctype html>
@@ -42,7 +42,7 @@ function page({ title, description, url, content, post, breadcrumbs = [], previe
 <meta name="theme-color" content="#FAF9F6">
 <title>${e(title)}${post?.seoTitle ? '' : ' — Aniket Thakur'}</title>
 <meta name="description" content="${e(description)}">
-${preview ? '<meta name="robots" content="noindex, nofollow">' : ''}
+${preview ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="robots" content="index, follow, max-image-preview:large">'}
 <link rel="canonical" href="${e(canonical)}">
 <meta property="og:type" content="${post ? 'article' : 'website'}">
 <meta property="og:site_name" content="Aniket Thakur">
@@ -103,6 +103,27 @@ function listing(posts, { category = '', number = 1, size = 9, ...options } = {}
 ${total > 1 ? `<nav class="blog-pagination" aria-label="Article pages">${Array.from({ length: total }, (_, i) => `<a href="${i === 0 ? base : `${base}page/${i + 1}/`}"${i + 1 === number ? ' aria-current="page"' : ''}>${i + 1}</a>`).join('')}</nav>` : ''}</div>` });
 }
 
+function quickAnswer(post) {
+  const q = post.quickAnswer;
+  if (!q) return '';
+  return `<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">${e(q.question)}</h2>
+<p class="blog-answer-verdict">${e(q.answer)}</p>
+<dl class="blog-answer-facts"${q.note ? ' aria-describedby="article-answer-note"' : ''}>${q.facts.map(f => `<div><dt>${e(f.label)}</dt><dd>${e(f.value)}</dd></div>`).join('')}</dl>
+${q.note ? `<p class="blog-answer-note" id="article-answer-note">${e(q.note)}</p>` : ''}
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul>${q.goodFor.map(s => `<li>${e(s)}</li>`).join('')}</ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul>${q.watchFor.map(s => `<li>${e(s)}</li>`).join('')}</ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full buying guide <span aria-hidden="true">↓</span></a>
+</section>`;
+}
+
+function enquiry(post, root) {
+  if (!post.enquiry) return '';
+  const contact = JSON.parse(fs.readFileSync(`${root}/data/contact.json`, 'utf8'));
+  assert(/^\d{7,15}$/.test(contact.whatsapp), 'The enquiry WhatsApp number must be configured in data/contact.json.');
+  const message = `Hi Aniket, I have a question about this car. I read your guide: ${ORIGIN}${post.url}`;
+  return `<section class="blog-enquiry" aria-labelledby="article-enquiry"><p class="eyebrow">Ask Aniket</p><h2 id="article-enquiry">Questions about this car?</h2><p>Leave a message or start a WhatsApp conversation about a feature, variant, or something in this guide.</p><div class="blog-enquiry-actions"><a class="btn blog-whatsapp" data-article-enquiry="whatsapp" href="https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(message)}" target="_blank" rel="noopener">Ask on WhatsApp ↗</a><a class="btn btn-secondary" href="/contact.html">Leave a message</a></div></section>`;
+}
+
 function article(post, posts, options = {}) {
   const category = CATEGORIES[post.category];
   const related = posts.filter(p => p.url !== post.url).map(p => ({ p, score: (p.category === post.category ? 3 : 0) + p.tags.filter(t => post.tags.includes(t)).length })).filter(x => x.score > 0).sort((a, b) => b.score - a.score).slice(0, 3).map(x => x.p);
@@ -111,14 +132,16 @@ function article(post, posts, options = {}) {
 <article class="blog-article" data-article-category="${post.category}" data-article-slug="${post.slug}">
 <nav class="blog-breadcrumb" aria-label="Breadcrumb">${crumbs.slice(0, -1).map(c => `<a href="${c.url}">${e(c.name)}</a>`).join('<span aria-hidden="true">/</span>')}<span aria-current="page">Article</span></nav>
 <header class="blog-article-header"><a class="eyebrow" href="/blog/${post.category}/">${category.name}</a>
-<div class="blog-tags">${post.tags.map(t => `<a href="/blog/?tag=${encodeURIComponent(t)}">${e(t)}</a>`).join('')}</div>
-<h1 id="article-title">${e(post.title)}</h1><p class="blog-description">${e(post.description)}</p>
+<h1 id="article-title">${e(post.title)}</h1>${post.quickAnswer ? '' : `<p class="blog-description">${e(post.description)}</p>`}
 <div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">${e(post.author)}</a><span>Published <time datetime="${post.datePublished}">${date(post.datePublished)}</time></span>${post.dateModified && post.dateModified !== post.datePublished ? `<span>Updated <time datetime="${post.dateModified}">${date(post.dateModified)}</time></span>` : ''}<span>${post.readingTime} min read</span></div></header>
+${quickAnswer(post)}
 <figure class="blog-cover"><img src="${e(post.coverImage)}" alt="${e(post.coverImageAlt)}" width="${post.width}" height="${post.height}" fetchpriority="high" decoding="async">${post.imageCaption || post.imageCredit || post.imageSourceUrl ? `<figcaption>${e(post.imageCaption || '')}${post.imageCredit ? ` · Credit: ${e(post.imageCredit)}` : ''}${post.imageSourceUrl ? ` · <a href="${e(post.imageSourceUrl)}" rel="noopener">Image source</a>` : ''}</figcaption>` : ''}</figure>
+<nav class="blog-tags" aria-label="Article topics">${post.tags.map(t => `<a href="/blog/?tag=${encodeURIComponent(t)}">${e(t)}</a>`).join('')}</nav>
 ${post.headings.length >= 3 ? `<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>${post.headings.length} sections</span></summary><ol>${post.headings.map(h => `<li class="toc-${h.level}"><a href="#${h.id}">${e(h.text)}</a></li>`).join('')}</ol></details></nav>` : ''}
-<div class="blog-body">${post.html}</div>
+<div class="blog-body" id="article-details">${post.html}</div>
 ${post.category === 'finance' ? '<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>' : ''}
-${post.sources.length ? `<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol>${post.sources.map(s => `<li><a href="${e(s.url)}" rel="noopener">${e(s.title)}</a></li>`).join('')}</ol></section>` : ''}
+${post.sources.length && post.showSources !== false ? `<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol>${post.sources.map(s => `<li><a href="${e(s.url)}" rel="noopener">${e(s.title)}</a></li>`).join('')}</ol></section>` : ''}
+${enquiry(post, options.root || ROOT)}
 <div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="${ORIGIN}${post.url}">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(ORIGIN + post.url)}" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
 ${related.length ? `<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid">${related.map(p => card(p, 'h3')).join('')}</div></section>` : ''}
 </article>` });

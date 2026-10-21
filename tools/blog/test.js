@@ -200,3 +200,37 @@ test('Existing Learnings build continues to integrate Blog and combined sitemap'
     checkSite(buildSite({ root: f.root }), f.root);
   } finally { f.clean(); }
 });
+
+
+test('Answer-first summary, contextual references, and car enquiry stay in static HTML', () => {
+  const f = fixture();
+  try {
+    const base = parseArticle(example, 'technology', { root: f.root, preview: true });
+    const post = { ...base, showSources: false, enquiry: true, quickAnswer: {
+      question: 'Synthetic reader question?', answer: 'A short, explicitly synthetic answer.',
+      facts: [{ label: 'Synthetic label', value: 'Synthetic value' }],
+      goodFor: ['A sample use case'], watchFor: ['A sample limitation'], note: 'Synthetic test note'
+    } };
+    const html = outputs([post], { root: f.root }).get('blog/technology/formatting-example/index.html');
+    const $ = cheerio.load(html);
+    assert.equal($('.blog-answer h2').text(), post.quickAnswer.question);
+    assert.equal($('.blog-answer-verdict').text(), post.quickAnswer.answer);
+    assert.equal($('.blog-answer-facts dd').text(), 'Synthetic value');
+    assert.ok(html.indexOf('class="blog-answer"') < html.indexOf('class="blog-cover"'));
+    assert.equal($('.blog-sources').length, 0);
+    assert.ok($('.blog-body a[href^="https://"]').length > 0, 'contextual references disappeared');
+    assert.equal($('#article-details').length, 1);
+    assert.equal($('.blog-answer-read').attr('href'), '#article-details');
+    const contact = JSON.parse(fs.readFileSync(path.join(f.root, 'data/contact.json'), 'utf8'));
+    const whatsapp = new URL($('.blog-enquiry [data-article-enquiry="whatsapp"]').attr('href'));
+    assert.equal(whatsapp.origin, 'https://wa.me');
+    assert.equal(whatsapp.pathname, '/' + contact.whatsapp);
+    assert.ok(whatsapp.searchParams.get('text').includes(ORIGIN + post.url));
+    assert.equal($('.blog-enquiry a[href="/contact.html"]').length, 1);
+    const schema = JSON.parse($('script[type="application/ld+json"]').first().text());
+    assert.equal(schema.abstract, post.quickAnswer.answer);
+    const source = example.replace('draft: true', 'draft: false');
+    assert.throws(() => parseArticle(source.replace('featured: false', 'showSources: "false"'), 'technology', { root: f.root }), /boolean/);
+    assert.throws(() => parseArticle(source.replace('featured: false', 'quickAnswer: {answer: "incomplete"}'), 'technology', { root: f.root }), /question/);
+  } finally { f.clean(); }
+});

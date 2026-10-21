@@ -1,20 +1,34 @@
 ---
-title: "Working title — replace before publishing"
-slug: "ARTICLE_SLUG"
-description: "Replace with an accurate summary of the article."
-category: "finance"
-tags: ["Finance", "Personal Finance"]
-author: "Aniket Thakur"
-datePublished: "YYYY-MM-DD"
+title: Working title — replace before publishing
+slug: ARTICLE_SLUG
+description: Replace with an accurate summary of the article.
+category: finance
+tags:
+  - Finance
+  - Personal Finance
+author: Aniket Thakur
+datePublished: YYYY-MM-DD
 dateModified: ""
-coverImage: "/assets/images/blog/ARTICLE_SLUG/cover.webp"
-coverImageAlt: "Replace with a description of what your cover actually shows."
+coverImage: /assets/images/blog/ARTICLE_SLUG/cover.webp
+coverImageAlt: Replace with a description of what your cover actually shows.
 imageCaption: ""
 imageCredit: ""
 imageSourceUrl: ""
 draft: true
 featured: false
 sources: []
+showSources: false
+enquiry: false
+quickAnswer:
+  question: Replace with the reader’s main question.
+  answer: Replace with a short, supported answer before writing the full guide.
+  facts:
+    - label: Key fact
+      value: Replace with an accurate value
+  goodFor:
+    - Describe who this helps.
+  watchFor:
+    - State the main limitation.
 ---
 
 ## The question

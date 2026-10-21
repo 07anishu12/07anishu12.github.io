@@ -77,6 +77,14 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     const schema = schemas.find(s => s['@type'] === 'BlogPosting');
     check(schema && schema.headline === post.title && schema.datePublished === post.datePublished && schema.dateModified === (post.dateModified || post.datePublished) && schema.author.name === post.author && schema.image.url === ORIGIN + post.coverImage, `${post.url}: BlogPosting mismatch`);
     check(schemas.some(s => s['@type'] === 'BreadcrumbList'), `${post.url}: breadcrumbs missing`);
+    if (post.quickAnswer) {
+      check($('.blog-answer-verdict').text() === post.quickAnswer.answer && schema.abstract === post.quickAnswer.answer, `${post.url}: visible answer and structured abstract differ`);
+      check($('.blog-answer h2').text() === post.quickAnswer.question, `${post.url}: reader question missing`);
+      check($('.blog-answer-read').attr('href') === '#article-details', `${post.url}: full-guide link missing`);
+    }
+    if (post.showSources === false) check(!$('.blog-sources').length, `${post.url}: unwanted sources list`);
+    if (post.enquiry) check($('.blog-enquiry [data-article-enquiry="whatsapp"]').length === 1 && $('.blog-enquiry a[href="/contact.html"]').length === 1, `${post.url}: enquiry actions missing`);
+
     check(urls.includes(ORIGIN + post.url) && search.some(p => p.url === post.url) && feed('item > link').toArray().some(el => feed(el).text() === ORIGIN + post.url), `${post.url}: discovery output missing`);
   }
   for (const file of fs.readdirSync(root).filter(f => /^google.*\.html$/.test(f))) check(fs.existsSync(path.join(dir, file)) && fs.readFileSync(path.join(root, file)).equals(fs.readFileSync(path.join(dir, file))), `Verification bytes changed or missing: ${file}`);
