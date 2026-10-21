@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const { ROOT, ORIGIN, CATEGORIES, escape: e, readArticles, parseArticle, assert } = require('./content');
+const { ROOT, ORIGIN, CATEGORIES, readArticles, parseArticle, assert } = require('./content');
 const { enhancePortfolio, latest, listing, article } = require('./pages');
 const hash = s => crypto.createHash('sha256').update(s).digest('hex');
 const walk = dir => fs.existsSync(dir) ? fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? walk(path.join(dir, entry.name)) : [path.join(dir, entry.name)]) : [];
@@ -17,11 +17,48 @@ function outputs(posts, { preview = false, root = ROOT } = {}) {
     }
   }
   files.set('blog/search.json', JSON.stringify(posts.map(p => ({ url: p.url, title: p.title, description: p.description, category: p.category, categoryName: CATEGORIES[p.category].name, tags: p.tags, datePublished: p.datePublished, coverImage: p.coverImage, coverImageAlt: p.coverImageAlt, width: p.width, height: p.height, readingTime: p.readingTime, text: p.text })), null, 2) + '\n');
-  files.set('blog/feed.xml', `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aniket Thakur — Blog</title><link>${ORIGIN}/blog/</link><description>Technology, Auto, and Finance articles by Aniket Thakur.</description><language>en</language><atom:link href="${ORIGIN}/blog/feed.xml" rel="self" type="application/rss+xml"/>
-${posts.map(p => `<item><title>${e(p.title)}</title><link>${ORIGIN}${p.url}</link><guid isPermaLink="true">${ORIGIN}${p.url}</guid><description>${e(p.description)}</description><pubDate>${new Date(`${p.datePublished}T00:00:00Z`).toUTCString()}</pubDate><category>${CATEGORIES[p.category].name}</category></item>`).join('\n')}
-</channel></rss>\n`);
   return files;
+}
+
+function llms(posts) {
+  const link = (label, url, description) => `- [${label.replace(/[\[\]\r\n]/g, '')}](${ORIGIN}${url}): ${description.replace(/[\r\n]+/g, ' ')}`;
+  return `# Aniket Thakur
+
+> Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.
+
+This file is a navigation aid. The linked HTML pages contain the full public content and its canonical URLs. Article dates, qualifications, claims, and disclosures should be read in context on those pages.
+
+## Portfolio
+${[
+    ['Home', '/', 'Portfolio overview and latest articles.'],
+    ['About', '/about.html', 'Background and profile.'],
+    ['Work', '/work.html', 'Selected work and projects.'],
+    ['Research', '/research/index.html', 'Research overview.'],
+    ['Learnings', '/learnings.html', 'Learning notes and explainers.'],
+    ['Topics', '/topics/index.html', 'Browse existing topic collections.'],
+    ['Author', '/author/aniket-thakur.html', 'Author profile.'],
+    ['Contact', '/contact.html', 'Contact options.']
+  ].map(args => link(...args)).join('\n')}
+
+## Blog
+${link('Blog', '/blog/', 'All published articles; full article text is available in HTML without JavaScript.')}
+${Object.entries(CATEGORIES).map(([key, c]) => link(c.name, `/blog/${key}/`, c.description)).join('\n')}
+
+## Published articles
+${posts.map(p => link(p.title, p.url, `${p.description} Published ${p.datePublished}.${p.dateModified && p.dateModified !== p.datePublished ? ` Updated ${p.dateModified}.` : ''}`)).join('\n') || 'No articles published yet.'}
+
+## Content context
+
+- Article topic tags describe the subject; headings organise each article.
+- Manufacturer claims, sourced specifications, editorial analysis, and first-hand testing are distinct. Only describe an article as an independent test when it explicitly documents one.
+- Automotive prices and specifications are dated and can vary by market and variant. Finance articles are educational and include their own disclosures.
+- Illustrative artwork is identified in image captions; it is not evidence of a vehicle specification or test.
+- Drafts, local previews, publishing tools, and source files are excluded from the deployed site.
+
+## Optional
+${link('Sitemap', '/sitemap.xml', 'Canonical public page inventory.')}
+${link('Crawler policy', '/robots.txt', 'Crawl rules; this navigation file does not override them.')}
+`;
 }
 
 function sitemap(posts, root = ROOT) {
@@ -72,6 +109,7 @@ function buildBlog({ root = ROOT } = {}) {
     }
   }
   write(path.join(root, 'sitemap.xml'), sitemap(posts, root));
+  write(path.join(root, 'llms.txt'), llms(posts));
   console.log(`Blog: ${posts.length} published article(s); ${files.size} generated files. Draft sources excluded.`);
   return posts;
 }
@@ -86,7 +124,7 @@ function prepareOutput(dir) {
 }
 function copyPublic(root, dest, posts) {
   for (const name of fs.readdirSync(root)) {
-    if (name.endsWith('.html') || ['robots.txt', 'sitemap.xml', '.nojekyll', 'CNAME'].includes(name)) fs.copyFileSync(path.join(root, name), path.join(dest, name));
+    if (name.endsWith('.html') || ['robots.txt', 'sitemap.xml', 'llms.txt', '.nojekyll', 'CNAME'].includes(name)) fs.copyFileSync(path.join(root, name), path.join(dest, name));
   }
   for (const dir of ['learnings', 'projects', 'research', 'topics', 'author', 'blog']) {
     for (const file of walk(path.join(root, dir))) {
@@ -121,8 +159,7 @@ function buildSite({ root = ROOT, preview = false } = {}) {
     let home = updateHome(fs.readFileSync(path.join(dest, 'index.html'), 'utf8'), posts);
     home = home.replace('<html lang="en">', '<html lang="en" data-preview="true">').replace('</head>', '<meta name="robots" content="noindex, nofollow"></head>');
     write(path.join(dest, 'index.html'), home);
-    // Preview feeds and sitemap never advertise draft URLs.
-    write(path.join(dest, 'blog/feed.xml'), outputs(published, { root }).get('blog/feed.xml'));
+    // Preview sitemap and llms.txt retain published URLs only.
     write(path.join(dest, 'robots.txt'), 'User-agent: *\nAllow: /\n');
   }
   console.log(`${preview ? 'Local preview' : 'Deployable site'}: ${dest}`);

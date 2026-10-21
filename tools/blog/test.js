@@ -108,7 +108,7 @@ test('Optional social artwork preserves one cover, deploys both assets, and excl
   } finally { f.clean(); }
 });
 
-test('Publishing lifecycle, safe cleanup, draft exclusion, sitemap, RSS, and exact Google bytes', () => {
+test('Publishing lifecycle, safe cleanup, draft exclusion, sitemap, llms.txt, and exact Google bytes', () => {
   const f = fixture();
   try {
     const valid = example.replace('draft: true', 'draft: false');
@@ -132,7 +132,7 @@ test('Publishing lifecycle, safe cleanup, draft exclusion, sitemap, RSS, and exa
     assert.equal(fs.readFileSync(manual, 'utf8'), 'Unrelated manual file');
     assert.equal(JSON.parse(fs.readFileSync(path.join(dir, 'blog/search.json'), 'utf8')).length, 0);
     assert.ok(!fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8').includes('renamed-example'));
-    assert.ok(!fs.readFileSync(path.join(dir, 'blog/feed.xml'), 'utf8').includes('renamed-example'));
+    assert.ok(!fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8').includes('renamed-example'));
     assert.equal(fs.existsSync(path.join(dir, 'assets/images/blog/formatting-example/cover.svg')), false);
     fs.unlinkSync(f.file);
     buildSite({ root: f.root });
@@ -165,6 +165,36 @@ test('Crawlable pagination and category/related links', () => {
     assert.ok(result.has('blog/technology/page/2/index.html'));
     const article = cheerio.load(result.get('blog/technology/synthetic-0/index.html'));
     assert.equal(article('.blog-related .blog-card').length, 3);
+  } finally { f.clean(); }
+});
+
+test('RSS retirement removes owned output and links; crawler guide lists only published content', () => {
+  const f = fixture();
+  try {
+    fs.writeFileSync(f.file, example.replace('draft: true', 'draft: false'));
+    const dir = buildSite({ root: f.root });
+    // Synthetic legacy feed reproduces the previously generated, owned output.
+    const legacy = 'Synthetic retired RSS';
+    const feedFile = path.join(f.root, 'blog/feed.xml');
+    fs.writeFileSync(feedFile, legacy);
+    const manifestFile = path.join(f.root, '.blog-generated.json');
+    const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
+    manifest['blog/feed.xml'] = require('node:crypto').createHash('sha256').update(legacy).digest('hex');
+    fs.writeFileSync(manifestFile, JSON.stringify(manifest));
+    buildSite({ root: f.root });
+    assert.equal(fs.existsSync(feedFile), false);
+    assert.equal(fs.existsSync(path.join(dir, 'blog/feed.xml')), false);
+    const $ = cheerio.load(fs.readFileSync(path.join(dir, 'blog/index.html'), 'utf8'));
+    assert.equal($('a[href="/blog/feed.xml"], link[type="application/rss+xml"]').length, 0);
+    assert.equal($('[data-static-listing] .blog-card').length, 1);
+    assert.equal($('[data-search-results][hidden]').length, 1);
+    const guide = fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8');
+    assert.ok(guide.includes(`${ORIGIN}/blog/technology/formatting-example/`));
+    assert.ok(!guide.includes('feed.xml'));
+    const unchanged = guide;
+    buildSite({ root: f.root });
+    assert.equal(fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8'), unchanged);
+    checkSite(dir, f.root);
   } finally { f.clean(); }
 });
 
@@ -212,7 +242,7 @@ test('Local preview contains noindex drafts and example; production remains isol
     assert.ok(fs.existsSync(path.join(preview, 'blog/technology/formatting-example/index.html')));
     assert.ok(!fs.existsSync(path.join(f.root, 'blog/technology/synthetic-draft/index.html')));
     assert.ok(!fs.readFileSync(path.join(preview, 'sitemap.xml'), 'utf8').includes('synthetic-draft'));
-    assert.ok(!fs.readFileSync(path.join(preview, 'blog/feed.xml'), 'utf8').includes('synthetic-draft'));
+    assert.ok(!fs.readFileSync(path.join(preview, 'llms.txt'), 'utf8').includes('synthetic-draft'));
     const production = buildSite({ root: f.root });
     assert.ok(!fs.existsSync(path.join(production, 'blog/technology/synthetic-draft/index.html')));
     assert.ok(!fs.existsSync(path.join(production, 'assets/images/blog/formatting-example/cover.svg')));

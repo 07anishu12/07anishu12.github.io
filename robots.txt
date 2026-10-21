@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /tools/
+Disallow: /blog/feed.xml
+Disallow: /blog/search.json
 
 Sitemap: https://07anishu12.github.io/sitemap.xml

@@ -1,5 +1,5 @@
 /* The only GA4 Measurement ID setting. Empty means no Google tag is loaded. */
 window.PORTFOLIO_CONFIG = Object.freeze({
-  measurementId: '',
+  measurementId: 'G-R1WX270J0D',
   requireAnalyticsConsent: false
 });

@@ -18,6 +18,7 @@
 .blog-card p, .blog-meta { color: var(--text-secondary); }
 .blog-card .blog-meta { font-size: .8rem; margin-block: 12px; gap: 6px 12px; }
 .blog-card .eyebrow { color: var(--accent); }
+.blog-card-labels { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .blog-empty { padding: 32px 0; border-block: 1px solid var(--border-main); }
 .blog-pagination { margin-top: 36px; }
 .blog-article { max-width: 940px; margin-inline: auto; min-width: 0; }
@@ -70,7 +71,7 @@
 .blog-latest { padding-block: 64px; border-top: 1px solid var(--border-main); }
 .blog-latest h2 { margin-bottom: 16px; }
 .blog-status { color: var(--text-secondary); }
-.blog-grid [hidden], [data-search-results][hidden], [data-static-listing][hidden] { display: none; }
+.blog-grid [hidden], .blog-search[hidden], [data-search-results][hidden], [data-static-listing][hidden] { display: none; }
 /* Seven desktop links plus the resume action need more room than before. */
 @media (max-width: 1100px) {
   .desktop-nav, .nav-actions .nav-resume { display: none; }

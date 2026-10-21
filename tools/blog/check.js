@@ -22,11 +22,12 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     check($('h1').length === 1, `${label}: expected one H1`);
     const ids = $('[id]').map((_, el) => $(el).attr('id')).get();
     check(new Set(ids).size === ids.length, `${label}: duplicate IDs`);
-    check($('script[src="/assets/js/site-config.js"]').length === 1 && $('script[src="/assets/js/analytics.js"]').length === 1, `${label}: Analytics shared scripts missing or duplicated`);
+    check($('script[src^="/assets/js/site-config.js"]').length === 1 && $('script[src="/assets/js/analytics.js"]').length === 1, `${label}: Analytics shared scripts missing or duplicated`);
     check(!$('script[src*="googletagmanager.com"]').length && !/gtag\s*\(\s*['"]config/.test($('script:not([src])').text()), `${label}: duplicate or inline Analytics initialization`);
     check($('.desktop-nav a[href="/blog/"]').length === 1, `${label}: Blog desktop link missing`);
     if ($('.mobile-nav').length) check($('.mobile-nav a[href="/blog/"]').length === 1, `${label}: Blog mobile link missing`);
     check(!$('meta[name="robots"][content*="noindex"]').length || relative === '/404.html', `${label}: published noindex`);
+    check(!$('a[href="/blog/feed.xml"], link[type="application/rss+xml"]').length, `${label}: retired RSS link remains`);
     for (const el of $('[href], [src]').toArray()) {
       const value = $(el).attr('href') || $(el).attr('src');
       if (!value || /^(mailto:|tel:|data:)/i.test(value)) continue;
@@ -49,7 +50,6 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     if (relative.startsWith('/blog/')) {
       check($('link[rel="canonical"]').length === 1, `${label}: canonical count`);
       check($('link[rel="canonical"]').attr('href') === ORIGIN + relative.replace(/index\.html$/, ''), `${label}: canonical mismatch`);
-      check($('link[type="application/rss+xml"]').length === 1, `${label}: RSS discovery missing`);
     }
   }
   const sitemap = cheerio.load(fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8'), { xmlMode: true });
@@ -61,9 +61,21 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     const target = resolveUrl(url, '/');
     check(target && fs.existsSync(target.file), `Sitemap target missing: ${url}`);
   });
-  const feed = cheerio.load(fs.readFileSync(path.join(dir, 'blog/feed.xml'), 'utf8'), { xmlMode: true });
+  check(!fs.existsSync(path.join(dir, 'blog/feed.xml')), 'Retired RSS feed must not deploy');
+  const llms = fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8');
+  check(llms.startsWith('# Aniket Thakur\n') && llms.includes('## Published articles'), 'llms.txt structure missing');
+  for (const match of llms.matchAll(/\]\((https:\/\/[^)]+)\)/g)) {
+    const target = resolveUrl(match[1], '/');
+    check(target && fs.existsSync(target.file), `llms.txt target missing or external: ${match[1]}`);
+  }
+  const robots = fs.readFileSync(path.join(dir, 'robots.txt'), 'utf8');
+  const blocked = [...robots.matchAll(/^Disallow:\s*(\S+)/gm)].map(m => m[1]);
+  check(/^User-agent: \*$/m.test(robots) && robots.includes(`Sitemap: ${ORIGIN}/sitemap.xml`), 'robots.txt wildcard group or sitemap missing');
+  check(blocked.includes('/blog/feed.xml') && blocked.includes('/blog/search.json'), 'robots.txt feed/search restrictions missing');
+  const publicPaths = [...urls.map(url => new URL(url).pathname), '/llms.txt', '/sitemap.xml', ...posts.map(p => p.coverImage), ...posts.map(p => p.socialImage).filter(Boolean), ...fs.readdirSync(root).filter(f => /^google.*\.html$/.test(f)).map(f => '/' + f)];
+  for (const pathname of publicPaths) check(!blocked.some(rule => pathname.startsWith(rule)), `Public page or asset blocked in robots.txt: ${pathname}`);
   const search = JSON.parse(fs.readFileSync(path.join(dir, 'blog/search.json'), 'utf8'));
-  check(feed('item').length === posts.length && search.length === posts.length, 'Feed/search published count mismatch');
+  check(search.length === posts.length, 'Search published count mismatch');
   for (const post of posts) {
     const file = path.join(dir, post.url, 'index.html'), $ = dom.get(file);
     check(Boolean($), `Article page missing: ${post.url}`);
@@ -89,7 +101,7 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     if (post.showSources === false) check(!$('.blog-sources').length, `${post.url}: unwanted sources list`);
     if (post.enquiry) check($('.blog-enquiry [data-article-enquiry="whatsapp"]').length === 1 && $('.blog-enquiry a[href="/contact.html"]').length === 1, `${post.url}: enquiry actions missing`);
 
-    check(urls.includes(ORIGIN + post.url) && search.some(p => p.url === post.url) && feed('item > link').toArray().some(el => feed(el).text() === ORIGIN + post.url), `${post.url}: discovery output missing`);
+    check(urls.includes(ORIGIN + post.url) && search.some(p => p.url === post.url) && llms.includes(`](${ORIGIN}${post.url})`), `${post.url}: discovery output missing`);
   }
   for (const file of fs.readdirSync(root).filter(f => /^google.*\.html$/.test(f))) check(fs.existsSync(path.join(dir, file)) && fs.readFileSync(path.join(root, file)).equals(fs.readFileSync(path.join(dir, file))), `Verification bytes changed or missing: ${file}`);
   for (const name of ['tools', 'data/blog', '_preview', 'node_modules', '__agent__', 'PROMPT.md']) check(!fs.existsSync(path.join(dir, name)), `Private/source content leaked: ${name}`);
@@ -99,7 +111,7 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
   const config = fs.readFileSync(path.join(root, 'assets/js/site-config.js'), 'utf8');
   if (/measurementId:\s*''/.test(config)) warnings.push('GA4 is inactive: Measurement ID has not been supplied.');
   assert(!failures.length, failures.join('\n'));
-  console.log(`Validated ${dom.size} HTML pages, ${posts.length} articles, ${urls.length} sitemap URLs, RSS, internal links, metadata, draft isolation, and verification preservation.`);
+  console.log(`Validated ${dom.size} HTML pages, ${posts.length} articles, ${urls.length} sitemap URLs, llms.txt, robots.txt, RSS retirement, internal links, metadata, draft isolation, and verification preservation.`);
   warnings.forEach(w => console.log(`Note: ${w}`));
   return { pages: dom.size, articles: posts.length, sitemap: urls.length };
 }

@@ -2,16 +2,19 @@ const fs = require('node:fs');
 const { createHash } = require('node:crypto');
 const { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape: e, json, assert } = require('./content');
 const date = value => new Date(`${value}T00:00:00Z`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
-const rssLink = '<link rel="alternate" type="application/rss+xml" title="Aniket Thakur — Blog" href="/blog/feed.xml">';
 
-function stylesheet(root) {
-  const version = createHash('sha256').update(fs.readFileSync(`${root}/assets/css/blog.css`)).digest('hex').slice(0, 12);
-  return `/assets/css/blog.css?v=${version}`;
+function versionedAsset(root, file) {
+  const version = createHash('sha256').update(fs.readFileSync(`${root}/${file}`)).digest('hex').slice(0, 12);
+  return `/${file}?v=${version}`;
 }
+const stylesheet = root => versionedAsset(root, 'assets/css/blog.css');
 
 function enhancePortfolio(html, root = ROOT) {
   const style = stylesheet(root);
+  const config = versionedAsset(root, 'assets/js/site-config.js');
+  html = html.replace(/\s*<link\b[^>]*type="application\/rss\+xml"[^>]*>/g, '');
   html = html.replace(/href="\/assets\/css\/blog\.css(?:\?[^\"]*)?"/g, `href="${style}"`);
+  html = html.replace(/src="\/assets\/js\/site-config\.js(?:\?[^\"]*)?"/g, `src="${config}"`);
   html = html.replace(/(<nav\b[^>]*class="(?:desktop-nav|mobile-nav[^\"]*)"[^>]*>)([\s\S]*?)(<\/nav>)/g, (_, open, body, close) => {
     if (!body.includes('href="/blog/"')) body = body.replace(/(<a\b[^>]*>Contact<\/a>)/, '<a href="/blog/">Blog</a>\n      $1');
     return open + body + close;
@@ -19,8 +22,7 @@ function enhancePortfolio(html, root = ROOT) {
   html = html.replace(/<a(?![^>]*data-share=)([^>]*href="https:\/\/www\.linkedin\.com\/sharing\/share-offsite[^>]*>)/g, '<a data-share="linkedin"$1');
   const additions = [
     [`href="${style}"`, `<link rel="stylesheet" href="${style}">`],
-    ['href="/blog/feed.xml"', rssLink],
-    ['src="/assets/js/site-config.js"', '<script src="/assets/js/site-config.js" defer></script>'],
+    [`src="${config}"`, `<script src="${config}" defer></script>`],
     ['src="/assets/js/analytics.js"', '<script src="/assets/js/analytics.js" defer></script>']
   ];
   for (const [marker, tag] of additions) if (!html.includes(marker)) html = html.replace('</head>', `  ${tag}\n</head>`);
@@ -68,10 +70,9 @@ ${post ? `<meta property="article:published_time" content="${post.datePublished}
 <meta name="twitter:description" content="${e(description)}">
 <meta name="twitter:image" content="${e(socialImage)}">
 <meta name="twitter:image:alt" content="${e(socialAlt)}">
-${rssLink}
 <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
 <link rel="stylesheet" href="${stylesheet(root)}">
-<script src="/assets/js/site-config.js" defer></script>
+<script src="${versionedAsset(root, 'assets/js/site-config.js')}" defer></script>
 <script src="/assets/js/analytics.js" defer></script>
 ${graph.map(s => `<script type="application/ld+json">${json(s)}</script>`).join('\n')}
 </head>
@@ -90,7 +91,7 @@ ${footer}
 function card(post, heading = 'h2', eager = false) {
   return `<article class="blog-card">
 <a class="blog-card-image" href="${post.url}" aria-label="Read ${e(post.title)}"><img src="${e(post.coverImage)}" alt="${e(post.coverImageAlt)}" width="${post.width}" height="${post.height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"></a>
-<a class="eyebrow" href="/blog/${post.category}/">${CATEGORIES[post.category].name}</a>${post.featured ? '<span class="tag">Featured</span>' : ''}
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/${post.category}/">${CATEGORIES[post.category].name}</a>${post.featured ? '<span class="tag">Featured</span>' : ''}</div>
 <${heading}><a href="${post.url}">${e(post.title)}</a></${heading}>
 <p>${e(post.description)}</p>
 <div class="blog-meta"><time datetime="${post.datePublished}">${date(post.datePublished)}</time><span>${post.readingTime} min read</span>${post.draft ? '<strong>Draft preview</strong>' : ''}</div>
@@ -108,7 +109,7 @@ function listing(posts, { category = '', number = 1, size = 9, ...options } = {}
   return page({ ...options, title: `${title}${number > 1 ? ` — Page ${number}` : ''}`, description, url,
     breadcrumbs: [{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog/' }, ...(category ? [{ name: CATEGORIES[category].name, url: base }] : [])],
     content: `<header class="blog-heading"><p class="eyebrow">Writing &amp; explainers</p><h1>${e(title)}<span class="serif-accent">.</span></h1><p class="lead">${e(description)}</p></header>
-<nav class="blog-categories" aria-label="Article categories"><a href="/blog/"${!category ? ' aria-current="page"' : ''}>All articles</a>${Object.entries(CATEGORIES).map(([key, c]) => `<a href="/blog/${key}/"${category === key ? ' aria-current="page"' : ''}>${c.name}</a>`).join('')}<a href="/blog/feed.xml">RSS feed ↗</a></nav>
+<nav class="blog-categories" aria-label="Article categories"><a href="/blog/"${!category ? ' aria-current="page"' : ''}>All articles</a>${Object.entries(CATEGORIES).map(([key, c]) => `<a href="/blog/${key}/"${category === key ? ' aria-current="page"' : ''}>${c.name}</a>`).join('')}</nav>
 <form class="blog-search" data-blog-search data-category="${category}" role="search" hidden><label>Search articles<input type="search" name="q" autocomplete="off" placeholder="Title, topic, or phrase"></label><label>Topic tag<select name="tag"><option value="">All topics</option></select></label></form>
 <p class="blog-status" data-search-status role="status"></p><div class="blog-grid" data-search-results hidden></div>
 <div data-static-listing>${selected.length ? `<div class="blog-grid">${selected.map((p, i) => card(p, 'h2', i < 3)).join('\n')}</div>` : empty}
