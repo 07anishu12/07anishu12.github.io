@@ -66,7 +66,7 @@ function buildBlog({ root = ROOT } = {}) {
     const folder = path.join(root, dir);
     for (const name of fs.readdirSync(folder).filter(f => f.endsWith('.html') && !/^google.*\.html$/.test(f))) {
       const file = path.join(folder, name);
-      let html = enhancePortfolio(fs.readFileSync(file, 'utf8'));
+      let html = enhancePortfolio(fs.readFileSync(file, 'utf8'), root);
       if (!dir && name === 'index.html') html = updateHome(html, posts);
       write(file, html);
     }

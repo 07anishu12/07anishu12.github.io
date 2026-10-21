@@ -1,16 +1,24 @@
 const fs = require('node:fs');
+const { createHash } = require('node:crypto');
 const { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape: e, json, assert } = require('./content');
 const date = value => new Date(`${value}T00:00:00Z`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 const rssLink = '<link rel="alternate" type="application/rss+xml" title="Aniket Thakur — Blog" href="/blog/feed.xml">';
 
-function enhancePortfolio(html) {
+function stylesheet(root) {
+  const version = createHash('sha256').update(fs.readFileSync(`${root}/assets/css/blog.css`)).digest('hex').slice(0, 12);
+  return `/assets/css/blog.css?v=${version}`;
+}
+
+function enhancePortfolio(html, root = ROOT) {
+  const style = stylesheet(root);
+  html = html.replace(/href="\/assets\/css\/blog\.css(?:\?[^\"]*)?"/g, `href="${style}"`);
   html = html.replace(/(<nav\b[^>]*class="(?:desktop-nav|mobile-nav[^\"]*)"[^>]*>)([\s\S]*?)(<\/nav>)/g, (_, open, body, close) => {
     if (!body.includes('href="/blog/"')) body = body.replace(/(<a\b[^>]*>Contact<\/a>)/, '<a href="/blog/">Blog</a>\n      $1');
     return open + body + close;
   });
   html = html.replace(/<a(?![^>]*data-share=)([^>]*href="https:\/\/www\.linkedin\.com\/sharing\/share-offsite[^>]*>)/g, '<a data-share="linkedin"$1');
   const additions = [
-    ['href="/assets/css/blog.css"', '<link rel="stylesheet" href="/assets/css/blog.css">'],
+    [`href="${style}"`, `<link rel="stylesheet" href="${style}">`],
     ['href="/blog/feed.xml"', rssLink],
     ['src="/assets/js/site-config.js"', '<script src="/assets/js/site-config.js" defer></script>'],
     ['src="/assets/js/analytics.js"', '<script src="/assets/js/analytics.js" defer></script>']
@@ -20,7 +28,7 @@ function enhancePortfolio(html) {
 }
 
 function chrome(root = ROOT) {
-  const home = enhancePortfolio(fs.readFileSync(`${root}/index.html`, 'utf8'));
+  const home = enhancePortfolio(fs.readFileSync(`${root}/index.html`, 'utf8'), root);
   const absolute = html => html.replace(/(href|src)="(?![a-z]+:|\/|#)([^\"]+)"/g, '$1="/$2"');
   return {
     header: absolute(home.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]).replaceAll('href="/blog/"', 'href="/blog/" aria-current="page"'),
@@ -58,7 +66,7 @@ ${post ? `<meta property="article:published_time" content="${post.datePublished}
 <meta name="twitter:image" content="${e(image)}">
 ${rssLink}
 <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
-<link rel="stylesheet" href="/assets/css/blog.css">
+<link rel="stylesheet" href="${stylesheet(root)}">
 <script src="/assets/js/site-config.js" defer></script>
 <script src="/assets/js/analytics.js" defer></script>
 ${graph.map(s => `<script type="application/ld+json">${json(s)}</script>`).join('\n')}
