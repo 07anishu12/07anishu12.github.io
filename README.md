@@ -276,12 +276,12 @@ Tracking runs only on the exact production origin, never localhost, file preview
 
 ### 11. Search Console verification and sitemap
 
-Use the **URL-prefix property** `https://07anishu12.github.io/`, not DNS verification for the parent `github.io` domain. The `~/Downloads/google*.html` search did not find a candidate during implementation. Supply the exact downloaded path; do not invent or edit a verification token.
+Use the **URL-prefix property** `https://07anishu12.github.io/`, not DNS verification for the parent `github.io` domain. The supplied file `google983893da26c421d4.html` is preserved at the repository root with the exact downloaded contents. It verifies Search Console ownership; it does not enable Analytics tracking.
 
-Import the actual file (replace the sample filename/path below with its exact downloaded name):
+To reimport the same original file and build:
 
 ```sh
-npm run search-console -- import /absolute/path/googleYOUR_ACTUAL_FILENAME.html
+npm run search-console -- import /Users/anny/Downloads/google983893da26c421d4.html
 npm run build
 npm run check
 ```
@@ -291,10 +291,10 @@ The importer validates the verification document and copies its bytes unchanged 
 After deployment:
 
 ```sh
-npm run search-console -- check googleYOUR_ACTUAL_FILENAME.html
+npm run search-console -- check google983893da26c421d4.html
 ```
 
-This requests `https://07anishu12.github.io/<exact-filename>`, requires HTTP 200 with no redirect, and compares the response bytes to the local original. **Only after this passes, click Verify in Search Console.** Then open Sitemaps and submit `https://07anishu12.github.io/sitemap.xml`. See [Google's ownership verification instructions](https://support.google.com/webmasters/answer/9008080?cq_net=g&hl=en). An Analytics tag does not perform HTML-file verification.
+This requests `https://07anishu12.github.io/google983893da26c421d4.html`, requires HTTP 200 with no redirect, and compares the response bytes to the local original. **Only after this passes, click Verify in Search Console.** Then open Sitemaps and submit `https://07anishu12.github.io/sitemap.xml`. See [Google's ownership verification instructions](https://support.google.com/webmasters/answer/9008080?cq_net=g&hl=en). An Analytics tag does not perform HTML-file verification.
 
 ### 12. Link Search Console with GA4
 
