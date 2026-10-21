@@ -13,11 +13,11 @@ tags:
 author: Aniket Thakur
 datePublished: 2026-10-21
 dateModified: 2026-10-21
-coverImage: /assets/images/blog/tata-aeris-review/cover.webp
-coverImageAlt: Purple Tata Aeris compact sedan shown from the front three-quarter angle against a white background.
-imageCaption: Tata Aeris in Dandeli Drizzle. Equipment and appearance vary by variant.
-imageCredit: Tata Motors, via SP Tata’s official-image gallery
-imageSourceUrl: https://www.spgroupvehicles.com/cars/aeris/index.html
+coverImage: /assets/images/blog/tata-aeris-review/tata-aeris-golden-hour-cover.webp
+coverImageAlt: Red and purple Tata-branded sedans on a worn city road at sunset.
+socialImage: /assets/images/blog/tata-aeris-review/tata-aeris-review-poster.webp
+socialImageAlt: Tata Aeris review poster with red and purple sedans and the headline Bad-road champion? Dzire vs Amaze.
+imageCaption: Illustrative artwork supplied for this article. Vehicle details may differ from the production model.
 draft: false
 featured: true
 sources:

@@ -72,7 +72,11 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     check($('.blog-cover img').length === 1 && !$('.blog-body img').length, `${post.url}: single main image violation`);
     check($('.blog-cover img').attr('src') === post.coverImage && $('.blog-cover img').attr('alt') === post.coverImageAlt, `${post.url}: image metadata mismatch`);
     check($('.blog-cover img').attr('width') === String(post.width) && $('.blog-cover img').attr('height') === String(post.height), `${post.url}: image dimensions missing`);
-    check($('meta[property="og:image"]').attr('content') === ORIGIN + post.coverImage, `${post.url}: social image mismatch`);
+    const socialImage = post.socialImage || post.coverImage, socialAlt = post.socialImageAlt || post.coverImageAlt;
+    check(fs.existsSync(path.join(dir, socialImage)), `${post.url}: missing deployed social image`);
+    check($('meta[property="og:image"]').attr('content') === ORIGIN + socialImage && $('meta[name="twitter:image"]').attr('content') === ORIGIN + socialImage, `${post.url}: social image mismatch`);
+    check($('meta[property="og:image:alt"]').attr('content') === socialAlt && $('meta[name="twitter:image:alt"]').attr('content') === socialAlt, `${post.url}: social image alt mismatch`);
+    check($('meta[property="og:image:width"]').attr('content') === String(post.socialWidth) && $('meta[property="og:image:height"]').attr('content') === String(post.socialHeight), `${post.url}: social dimensions mismatch`);
     const schemas = $('script[type="application/ld+json"]').map((_, el) => JSON.parse($(el).text())).get();
     const schema = schemas.find(s => s['@type'] === 'BlogPosting');
     check(schema && schema.headline === post.title && schema.datePublished === post.datePublished && schema.dateModified === (post.dateModified || post.datePublished) && schema.author.name === post.author && schema.image.url === ORIGIN + post.coverImage, `${post.url}: BlogPosting mismatch`);

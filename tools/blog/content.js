@@ -93,15 +93,24 @@ function parseArticle(source, category, { root = ROOT, preview = false, imageRoo
   assert(Array.isArray(data.tags) && data.tags.every(t => typeof t === 'string' && t.trim()), 'tags must be an array of nonempty strings.');
   for (const key of ['imageCaption', 'imageCredit', 'imageSourceUrl']) assert(data[key] === undefined || typeof data[key] === 'string', `${key} must be a string.`);
   assert(!data.imageSourceUrl || httpUrl(data.imageSourceUrl), 'imageSourceUrl must be an HTTP(S) URL.');
-  assert(/^\/assets\/images\/blog\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(webp|avif|png|jpe?g|svg)$/i.test(data.coverImage), 'coverImage must be a local file under /assets/images/blog/.');
-  const imageFile = path.join(imageRoot, data.coverImage);
-  assert(fs.existsSync(imageFile), `Missing cover image: ${data.coverImage}`);
-  const size = imageSize(fs.readFileSync(imageFile));
-  assert(size.width > 0 && size.height > 0, 'Image dimensions could not be read.');
+  const readImage = key => {
+    assert(typeof data[key] === 'string' && /^\/assets\/images\/blog\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(webp|avif|png|jpe?g|svg)$/i.test(data[key]), `${key} must be a local file under /assets/images/blog/.`);
+    const imageFile = path.join(imageRoot, data[key]);
+    assert(fs.existsSync(imageFile), `Missing ${key === 'coverImage' ? 'cover image' : 'social image'}: ${data[key]}`);
+    const size = imageSize(fs.readFileSync(imageFile));
+    assert(size.width > 0 && size.height > 0, `${key} dimensions could not be read.`);
+    return size;
+  };
+  const size = readImage('coverImage');
+  let socialSize = size;
+  if (data.socialImage !== undefined) {
+    assert(typeof data.socialImageAlt === 'string' && data.socialImageAlt.trim(), 'socialImageAlt is required with socialImage.');
+    socialSize = readImage('socialImage');
+  } else assert(data.socialImageAlt === undefined, 'socialImageAlt needs a socialImage.');
   const sources = data.sources || [];
   assert(Array.isArray(sources) && sources.every(s => s && typeof s.title === 'string' && s.title.trim() && httpUrl(s.url)), 'sources must be an array of {title, url} HTTP(S) references.');
   assert(match[2].trim(), 'Article body cannot be empty.');
-  return { ...data, category, sources, width: size.width, height: size.height, url: `/blog/${category}/${data.slug}/`, body: match[2], ...renderMarkdown(match[2]) };
+  return { ...data, category, sources, width: size.width, height: size.height, socialWidth: socialSize.width, socialHeight: socialSize.height, url: `/blog/${category}/${data.slug}/`, body: match[2], ...renderMarkdown(match[2]) };
 }
 
 function readArticles(options = {}) {

@@ -38,6 +38,8 @@ function chrome(root = ROOT) {
 
 function page({ title, description, url, content, post, breadcrumbs = [], preview = false, root = ROOT }) {
   const canonical = `${ORIGIN}${url}`, image = post ? `${ORIGIN}${post.coverImage}` : `${ORIGIN}/assets/img/aniket-portrait.png`;
+  const socialImage = post?.socialImage ? `${ORIGIN}${post.socialImage}` : image;
+  const socialAlt = post?.socialImageAlt || post?.coverImageAlt || 'Portrait of Aniket Thakur';
   const graph = [];
   if (post) graph.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.title, description: post.description, ...(post.quickAnswer ? { abstract: post.quickAnswer.answer } : {}), url: canonical, mainEntityOfPage: canonical, author: AUTHOR, image: { '@type': 'ImageObject', url: image, width: post.width, height: post.height, caption: post.coverImageAlt }, datePublished: post.datePublished, dateModified: post.dateModified || post.datePublished, articleSection: CATEGORIES[post.category].name, keywords: post.tags.join(', '), inLanguage: 'en', wordCount: post.body.trim().split(/\s+/).length });
   if (breadcrumbs.length) graph.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: `${ORIGIN}${b.url}` })) });
@@ -57,13 +59,15 @@ ${preview ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="ro
 <meta property="og:title" content="${e(title)}">
 <meta property="og:description" content="${e(description)}">
 <meta property="og:url" content="${e(canonical)}">
-<meta property="og:image" content="${e(image)}">
-<meta property="og:image:alt" content="${e(post?.coverImageAlt || 'Portrait of Aniket Thakur')}">
+<meta property="og:image" content="${e(socialImage)}">
+<meta property="og:image:alt" content="${e(socialAlt)}">
+${post ? `<meta property="og:image:width" content="${post.socialWidth}">\n<meta property="og:image:height" content="${post.socialHeight}">` : ''}
 ${post ? `<meta property="article:published_time" content="${post.datePublished}">\n<meta property="article:modified_time" content="${post.dateModified || post.datePublished}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${e(title)}">
 <meta name="twitter:description" content="${e(description)}">
-<meta name="twitter:image" content="${e(image)}">
+<meta name="twitter:image" content="${e(socialImage)}">
+<meta name="twitter:image:alt" content="${e(socialAlt)}">
 ${rssLink}
 <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
 <link rel="stylesheet" href="${stylesheet(root)}">

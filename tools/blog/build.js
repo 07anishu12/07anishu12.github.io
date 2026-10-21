@@ -100,7 +100,7 @@ function copyPublic(root, dest, posts) {
     if (relative.startsWith('assets/images/blog/')) continue;
     write(path.join(dest, relative), fs.readFileSync(file));
   }
-  for (const p of posts) write(path.join(dest, p.coverImage), fs.readFileSync(path.join(root, p.coverImage)));
+  for (const p of posts) for (const image of new Set([p.coverImage, p.socialImage].filter(Boolean))) write(path.join(dest, image), fs.readFileSync(path.join(root, image)));
   for (const name of ['contact.json', 'assistant.json']) write(path.join(dest, 'data', name), fs.readFileSync(path.join(root, 'data', name)));
 }
 function buildSite({ root = ROOT, preview = false } = {}) {
@@ -112,7 +112,7 @@ function buildSite({ root = ROOT, preview = false } = {}) {
     const image = '/assets/images/blog/formatting-example/cover.svg';
     write(path.join(dest, image), fs.readFileSync(path.join(__dirname, 'examples/cover.svg')));
     const posts = readArticles({ root, preview: true });
-    for (const p of posts) write(path.join(dest, p.coverImage), fs.readFileSync(path.join(root, p.coverImage)));
+    for (const p of posts) for (const image of new Set([p.coverImage, p.socialImage].filter(Boolean))) write(path.join(dest, image), fs.readFileSync(path.join(root, image)));
     const example = parseArticle(fs.readFileSync(path.join(__dirname, 'examples/formatting.md'), 'utf8'), 'technology', { root, preview: true, imageRoot: dest });
     assert(!posts.some(p => p.url === example.url), 'formatting-example is reserved for the local example.');
     posts.push(example);

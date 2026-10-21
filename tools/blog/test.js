@@ -76,6 +76,38 @@ test('Reject invalid metadata and collisions before generating output', () => {
   } finally { f.clean(); }
 });
 
+test('Optional social artwork preserves one cover, deploys both assets, and excludes draft assets', () => {
+  const f = fixture();
+  try {
+    const image = '/assets/images/blog/formatting-example/poster.svg';
+    fs.copyFileSync(path.join(f.root, 'assets/images/blog/formatting-example/cover.svg'), path.join(f.root, image));
+    const valid = example.replace('draft: true', 'draft: false').replace('slug: "formatting-example"', 'slug: "social-example"');
+    const withPoster = valid.replace('draft: false', `socialImage: "${image}"\nsocialImageAlt: "Synthetic sharing poster"\ndraft: false`);
+    const post = parseArticle(withPoster, 'technology', { root: f.root });
+    const $ = cheerio.load(outputs([post], { root: f.root }).get('blog/technology/social-example/index.html'));
+    assert.equal($('.blog-cover img').length, 1);
+    assert.equal($('.blog-cover img').attr('src'), post.coverImage);
+    assert.equal($('.blog-body img').length, 0);
+    for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) assert.equal($(selector).attr('content'), ORIGIN + image);
+    const schema = $('script[type="application/ld+json"]').toArray().map(el => JSON.parse($(el).text())).find(s => s['@type'] === 'BlogPosting');
+    assert.equal(schema.image.url, ORIGIN + post.coverImage, 'Structured data must describe the visible cover');
+    const fallback = parseArticle(valid, 'technology', { root: f.root });
+    const fallbackDOM = cheerio.load(outputs([fallback], { root: f.root }).get('blog/technology/social-example/index.html'));
+    assert.equal(fallbackDOM('meta[property="og:image"]').attr('content'), ORIGIN + fallback.coverImage);
+    assert.throws(() => parseArticle(withPoster.replace('socialImageAlt: "Synthetic sharing poster"', 'socialImageAlt: ""'), 'technology', { root: f.root }), /socialImageAlt/);
+    assert.throws(() => parseArticle(withPoster.replace('poster.svg', 'missing.svg'), 'technology', { root: f.root }), /Missing social image/);
+    fs.writeFileSync(f.file, withPoster);
+    const dir = buildSite({ root: f.root });
+    checkSite(dir, f.root);
+    assert.deepEqual(fs.readFileSync(path.join(dir, image)), fs.readFileSync(path.join(f.root, image)));
+    fs.writeFileSync(f.file, withPoster.replace('draft: false', 'draft: true'));
+    buildSite({ root: f.root });
+    assert.equal(fs.existsSync(path.join(dir, image)), false, 'Draft social artwork must not deploy');
+    const preview = buildSite({ root: f.root, preview: true });
+    assert.ok(fs.existsSync(path.join(preview, image)), 'Draft social artwork must be available in local preview');
+  } finally { f.clean(); }
+});
+
 test('Publishing lifecycle, safe cleanup, draft exclusion, sitemap, RSS, and exact Google bytes', () => {
   const f = fixture();
   try {
