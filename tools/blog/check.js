@@ -71,7 +71,7 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
   const robots = fs.readFileSync(path.join(dir, 'robots.txt'), 'utf8');
   const blocked = [...robots.matchAll(/^Disallow:\s*(\S+)/gm)].map(m => m[1]);
   check(/^User-agent: \*$/m.test(robots) && robots.includes(`Sitemap: ${ORIGIN}/sitemap.xml`), 'robots.txt wildcard group or sitemap missing');
-  check(blocked.includes('/blog/feed.xml') && blocked.includes('/blog/search.json'), 'robots.txt feed/search restrictions missing');
+  check(blocked.includes('/blog/feed.xml') && blocked.includes('/blog/search.json') && blocked.includes('/blog/search-text.json'), 'robots.txt feed/search restrictions missing');
   const publicPaths = [...urls.map(url => new URL(url).pathname), '/llms.txt', '/sitemap.xml', ...posts.map(p => p.coverImage), ...posts.map(p => p.socialImage).filter(Boolean), ...fs.readdirSync(root).filter(f => /^google.*\.html$/.test(f)).map(f => '/' + f)];
   for (const pathname of publicPaths) check(!blocked.some(rule => pathname.startsWith(rule)), `Public page or asset blocked in robots.txt: ${pathname}`);
   const search = JSON.parse(fs.readFileSync(path.join(dir, 'blog/search.json'), 'utf8'));

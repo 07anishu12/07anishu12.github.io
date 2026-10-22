@@ -1,0 +1,2272 @@
+{
+  "version": 1,
+  "calendar": "UTC",
+  "entries": [
+    {
+      "source": "data/blog/technology/ai-agents-vs-workflow-automation-choose-by-control.md",
+      "url": "/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-memory-context-chat-history-and-persistent-data.md",
+      "url": "/blog/technology/ai-memory-context-chat-history-and-persistent-data/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/browser-use-guide-how-ai-agents-operate-websites.md",
+      "url": "/blog/technology/browser-use-guide-how-ai-agents-operate-websites/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-a-local-pdf-chatbot-a-minimal-working-design.md",
+      "url": "/blog/technology/build-a-local-pdf-chatbot-a-minimal-working-design/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-a-real-time-voice-agent-a-practical-blueprint.md",
+      "url": "/blog/technology/build-a-real-time-voice-agent-a-practical-blueprint/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-an-ai-agent-with-tool-calls-and-human-approval.md",
+      "url": "/blog/technology/build-an-ai-agent-with-tool-calls-and-human-approval/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-rag-answers-with-verifiable-source-citations.md",
+      "url": "/blog/technology/build-rag-answers-with-verifiable-source-citations/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice.md",
+      "url": "/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/deepseek-models-weights-distillation-and-local-use.md",
+      "url": "/blog/technology/deepseek-models-weights-distillation-and-local-use/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/dify-tutorial-build-a-document-workflow-application.md",
+      "url": "/blog/technology/dify-tutorial-build-a-document-workflow-application/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/embedding-models-explained-text-vectors-and-search.md",
+      "url": "/blog/technology/embedding-models-explained-text-vectors-and-search/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/evaluate-an-ai-coding-agent-before-codebase-access.md",
+      "url": "/blog/technology/evaluate-an-ai-coding-agent-before-codebase-access/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/evaluate-an-ai-github-repository-before-installing.md",
+      "url": "/blog/technology/evaluate-an-ai-github-repository-before-installing/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/evaluate-rag-retrieval-faithfulness-and-citations.md",
+      "url": "/blog/technology/evaluate-rag-retrieval-faithfulness-and-citations/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/free-local-llms-hardware-quality-and-licence-guide.md",
+      "url": "/blog/technology/free-local-llms-hardware-quality-and-licence-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/gguf-vs-safetensors-choose-the-right-model-files.md",
+      "url": "/blog/technology/gguf-vs-safetensors-choose-the-right-model-files/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/haystack-tutorial-build-a-small-retrieval-pipeline.md",
+      "url": "/blog/technology/haystack-tutorial-build-a-small-retrieval-pipeline/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/keyword-vs-semantic-search-when-to-use-hybrid-search.md",
+      "url": "/blog/technology/keyword-vs-semantic-search-when-to-use-hybrid-search/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/langchain-vs-llamaindex-choose-a-rag-framework.md",
+      "url": "/blog/technology/langchain-vs-llamaindex-choose-a-rag-framework/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/llama-cpp-tutorial-quantised-models-and-gguf-setup.md",
+      "url": "/blog/technology/llama-cpp-tutorial-quantised-models-and-gguf-setup/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/llm-context-windows-tokens-memory-and-documents.md",
+      "url": "/blog/technology/llm-context-windows-tokens-memory-and-documents/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/local-llm-vs-cloud-ai-privacy-cost-and-convenience.md",
+      "url": "/blog/technology/local-llm-vs-cloud-ai-privacy-cost-and-convenience/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/local-llms-on-8-gb-ram-and-a-4-gb-gpu.md",
+      "url": "/blog/technology/local-llms-on-8-gb-ram-and-a-4-gb-gpu/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/local-text-to-speech-choose-models-and-voice-licences.md",
+      "url": "/blog/technology/local-text-to-speech-choose-models-and-voice-licences/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/local-vs-hosted-coding-ai-compare-real-development.md",
+      "url": "/blog/technology/local-vs-hosted-coding-ai-compare-real-development/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/mcp-explained-how-ai-apps-connect-to-external-tools.md",
+      "url": "/blog/technology/mcp-explained-how-ai-apps-connect-to-external-tools/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/measure-llm-speed-tokens-first-response-and-latency.md",
+      "url": "/blog/technology/measure-llm-speed-tokens-first-response-and-latency/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/multimodal-llms-images-documents-and-audio-explained.md",
+      "url": "/blog/technology/multimodal-llms-images-documents-and-audio-explained/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/n8n-ai-tutorial-build-a-safe-everyday-workflow.md",
+      "url": "/blog/technology/n8n-ai-tutorial-build-a-safe-everyday-workflow/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ollama-api-tutorial-connect-a-local-model-to-python.md",
+      "url": "/blog/technology/ollama-api-tutorial-connect-a-local-model-to-python/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ollama-tutorial-run-your-first-local-language-model.md",
+      "url": "/blog/technology/ollama-tutorial-run-your-first-local-language-model/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/open-source-llms-weights-code-and-commercial-rights.md",
+      "url": "/blog/technology/open-source-llms-weights-code-and-commercial-rights/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/open-webui-tutorial-connect-your-local-ai-chat.md",
+      "url": "/blog/technology/open-webui-tutorial-connect-your-local-ai-chat/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/postgresql-and-pgvector-build-semantic-search.md",
+      "url": "/blog/technology/postgresql-and-pgvector-build-semantic-search/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/private-ai-assistant-with-ollama-and-open-webui.md",
+      "url": "/blog/technology/private-ai-assistant-with-ollama-and-open-webui/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/prompt-injection-in-rag-and-agents-practical-defences.md",
+      "url": "/blog/technology/prompt-injection-in-rag-and-agents-practical-defences/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained.md",
+      "url": "/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/qwen-models-choose-for-coding-reasoning-or-chat.md",
+      "url": "/blog/technology/qwen-models-choose-for-coding-reasoning-or-chat/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/rag-chunking-fixed-size-overlap-and-semantic-splits.md",
+      "url": "/blog/technology/rag-chunking-fixed-size-overlap-and-semantic-splits/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/rag-vs-fine-tuning-choose-the-right-ai-approach.md",
+      "url": "/blog/technology/rag-vs-fine-tuning-choose-the-right-ai-approach/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ragflow-tutorial-ask-questions-about-your-documents.md",
+      "url": "/blog/technology/ragflow-tutorial-ask-questions-about-your-documents/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/reduce-llm-hallucinations-with-schemas-and-evidence.md",
+      "url": "/blog/technology/reduce-llm-hallucinations-with-schemas-and-evidence/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/run-a-local-llm-without-a-dedicated-gpu.md",
+      "url": "/blog/technology/run-a-local-llm-without-a-dedicated-gpu/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/run-an-llm-on-apple-silicon-memory-and-metal.md",
+      "url": "/blog/technology/run-an-llm-on-apple-silicon-memory-and-metal/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/test-llm-benchmarks-beyond-the-headline-score.md",
+      "url": "/blog/technology/test-llm-benchmarks-beyond-the-headline-score/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/transformers-tutorial-load-your-first-ai-model.md",
+      "url": "/blog/technology/transformers-tutorial-load-your-first-ai-model/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/unsloth-tutorial-plan-a-small-model-fine-tuning-run.md",
+      "url": "/blog/technology/unsloth-tutorial-plan-a-small-model-fine-tuning-run/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/useful-mcp-servers-files-databases-and-developer-tools.md",
+      "url": "/blog/technology/useful-mcp-servers-files-databases-and-developer-tools/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/vllm-explained-serving-language-models-to-many-users.md",
+      "url": "/blog/technology/vllm-explained-serving-language-models-to-many-users/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/whisper-cpp-vs-faster-whisper-for-local-transcription.md",
+      "url": "/blog/technology/whisper-cpp-vs-faster-whisper-for-local-transcription/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/125cc-vs-150cc-vs-160cc-bikes.md",
+      "url": "/blog/auto/125cc-vs-150cc-vs-160cc-bikes/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/abs-vs-cbs-bikes.md",
+      "url": "/blog/auto/abs-vs-cbs-bikes/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/access-125-vs-activa-125-daily-scooter-comparison.md",
+      "url": "/blog/auto/access-125-vs-activa-125-daily-scooter-comparison/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/adas-in-indian-cars-acc-aeb-and-lane-assistance.md",
+      "url": "/blog/auto/adas-in-indian-cars-acc-aeb-and-lane-assistance/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/apache-rtr-160-4v-vs-pulsar-n160-value-guide.md",
+      "url": "/blog/auto/apache-rtr-160-4v-vs-pulsar-n160-value-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-rizta-vs-tvs-iqube-family-ev-comparison.md",
+      "url": "/blog/auto/ather-rizta-vs-tvs-iqube-family-ev-comparison/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-for-commuting-india-guide.md",
+      "url": "/blog/auto/best-electric-scooters-for-commuting-india-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bharat-ncap-ratings-explained-for-car-buyers.md",
+      "url": "/blog/auto/bharat-ncap-ratings-explained-for-car-buyers/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-emi-calculator-down-payment-and-loan-tenure.md",
+      "url": "/blog/auto/bike-emi-calculator-down-payment-and-loan-tenure/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-mileage-full-tank-method-and-accurate-averages.md",
+      "url": "/blog/auto/bike-mileage-full-tank-method-and-accurate-averages/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/brezza-vs-fronx-which-fits-your-family-better.md",
+      "url": "/blog/auto/brezza-vs-fronx-which-fits-your-family-better/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/car-insurance-in-india-idv-and-add-ons-explained.md",
+      "url": "/blog/auto/car-insurance-in-india-idv-and-add-ons-explained/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/car-loan-emi-calculator-payments-and-total-interest.md",
+      "url": "/blog/auto/car-loan-emi-calculator-payments-and-total-interest/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/car-on-road-price-in-india-calculate-the-full-cost.md",
+      "url": "/blog/auto/car-on-road-price-in-india-calculate-the-full-cost/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/choose-touring-motorcycle-indian-highways.md",
+      "url": "/blog/auto/choose-touring-motorcycle-indian-highways/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/classic-350-vs-honda-cb350-retro-buying-guide.md",
+      "url": "/blog/auto/classic-350-vs-honda-cb350-retro-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/cng-vs-petrol-cars-running-costs-and-trade-offs.md",
+      "url": "/blog/auto/cng-vs-petrol-cars-running-costs-and-trade-offs/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/dzire-vs-aura-choose-your-compact-sedan.md",
+      "url": "/blog/auto/dzire-vs-aura-choose-your-compact-sedan/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/electric-vs-petrol-cars-india-break-even-guide.md",
+      "url": "/blog/auto/electric-vs-petrol-cars-india-break-even-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/electric-vs-petrol-scooter-break-even-calculator.md",
+      "url": "/blog/auto/electric-vs-petrol-scooter-break-even-calculator/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ertiga-vs-kia-carens-family-mpv-buying-guide.md",
+      "url": "/blog/auto/ertiga-vs-kia-carens-family-mpv-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/five-year-car-ownership-cost-a-practical-model.md",
+      "url": "/blog/auto/five-year-car-ownership-cost-a-practical-model/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-vs-tvs-jupiter-daily-commuter-guide.md",
+      "url": "/blog/auto/honda-activa-vs-tvs-jupiter-daily-commuter-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hunter-350-vs-tvs-ronin-city-motorcycle-guide.md",
+      "url": "/blog/auto/hunter-350-vs-tvs-ronin-city-motorcycle-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hybrid-vs-electric-vs-petrol-cars-india-guide.md",
+      "url": "/blog/auto/hybrid-vs-electric-vs-petrol-cars-india-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hyundai-creta-vs-kia-seltos-compare-real-value.md",
+      "url": "/blog/auto/hyundai-creta-vs-kia-seltos-compare-real-value/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/improve-car-mileage-in-city-traffic-safe-habits.md",
+      "url": "/blog/auto/improve-car-mileage-in-city-traffic-safe-habits/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/innova-hycross-vs-invicto-hybrid-mpv-comparison.md",
+      "url": "/blog/auto/innova-hycross-vs-invicto-hybrid-mpv-comparison/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/jupiter-110-vs-activa-110-family-scooter-guide.md",
+      "url": "/blog/auto/jupiter-110-vs-activa-110-family-scooter-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ktm-390-duke-vs-speed-400-practical-buying-guide.md",
+      "url": "/blog/auto/ktm-390-duke-vs-speed-400-practical-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/motorcycle-maintenance-oil-chain-brakes-and-tyres.md",
+      "url": "/blog/auto/motorcycle-maintenance-oil-chain-brakes-and-tyres/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/new-vs-second-hand-bike-total-ownership-cost.md",
+      "url": "/blog/auto/new-vs-second-hand-bike-total-ownership-cost/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/new-vs-used-cars-in-india-compare-total-costs.md",
+      "url": "/blog/auto/new-vs-used-cars-in-india-compare-total-costs/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/nexon-ev-vs-punch-ev-range-charging-and-space.md",
+      "url": "/blog/auto/nexon-ev-vs-punch-ev-range-charging-and-space/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-electric-vs-ather-what-buyers-should-compare.md",
+      "url": "/blog/auto/ola-electric-vs-ather-what-buyers-should-compare/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/pulsar-n125-vs-tvs-raider-125-commuter-comparison.md",
+      "url": "/blog/auto/pulsar-n125-vs-tvs-raider-125-commuter-comparison/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/scorpio-n-vs-xuv700-model-year-buying-guide.md",
+      "url": "/blog/auto/scorpio-n-vs-xuv700-model-year-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/splendor-plus-vs-hf-deluxe-commuter-value-guide.md",
+      "url": "/blog/auto/splendor-plus-vs-hf-deluxe-commuter-value-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/swift-vs-hyundai-i20-mileage-features-and-costs.md",
+      "url": "/blog/auto/swift-vs-hyundai-i20-mileage-features-and-costs/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tata-aeris-review.md",
+      "url": "/blog/auto/tata-aeris-review/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "source-commit-and-pages-deployment",
+        "sourceCommit": "9785a14c51fd5ec9fd1f7e3a34fbc8cff9d72e6f",
+        "deploymentRunId": 39584081663,
+        "note": "Source history and the successful deployment that first added the article support the current date."
+      },
+      "rationale": "Verified against the original publication commit and successful Pages deployment.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tata-nexon-vs-hyundai-venue-india-buying-guide.md",
+      "url": "/blog/auto/tata-nexon-vs-hyundai-venue-india-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tata-punch-vs-hyundai-exter-city-buying-guide.md",
+      "url": "/blog/auto/tata-punch-vs-hyundai-exter-city-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/thar-vs-jimny-4x4-practicality-and-buying-guide.md",
+      "url": "/blog/auto/thar-vs-jimny-4x4-practicality-and-buying-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tubeless-vs-tube-motorcycle-tyres.md",
+      "url": "/blog/auto/tubeless-vs-tube-motorcycle-tyres/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide.md",
+      "url": "/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/two-wheeler-insurance-cover-add-ons.md",
+      "url": "/blog/auto/two-wheeler-insurance-cover-add-ons/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/two-wheeler-loan-eligibility-in-india-documents-guide.md",
+      "url": "/blog/auto/two-wheeler-loan-eligibility-in-india-documents-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/used-car-buying-checklist-in-india-before-you-pay.md",
+      "url": "/blog/auto/used-car-buying-checklist-in-india-before-you-pay/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/used-electric-car-battery-health-india-checklist.md",
+      "url": "/blog/auto/used-electric-car-battery-health-india-checklist/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide.md",
+      "url": "/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/xuv-3xo-vs-tata-nexon-features-and-ownership-cost.md",
+      "url": "/blog/auto/xuv-3xo-vs-tata-nexon-features-and-ownership-cost/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/asset-allocation-equity-debt-gold-and-cash.md",
+      "url": "/blog/finance/asset-allocation-equity-debt-gold-and-cash/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/bond-duration-vs-maturity-understand-rate-risk.md",
+      "url": "/blog/finance/bond-duration-vs-maturity-understand-rate-risk/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/build-a-basic-lbo-model-debt-equity-and-exit-returns.md",
+      "url": "/blog/finance/build-a-basic-lbo-model-debt-equity-and-exit-returns/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/build-a-three-statement-financial-model-in-excel.md",
+      "url": "/blog/finance/build-a-three-statement-financial-model-in-excel/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cagr-vs-absolute-returns-excel-calculation-guide.md",
+      "url": "/blog/finance/cagr-vs-absolute-returns-excel-calculation-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/calculate-emi-in-excel-formula-and-amortisation.md",
+      "url": "/blog/finance/calculate-emi-in-excel-formula-and-amortisation/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cfa-program-exams-eligibility-costs-and-careers.md",
+      "url": "/blog/finance/cfa-program-exams-eligibility-costs-and-careers/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cfa-vs-frm-vs-mba-in-finance-choose-by-career-goal.md",
+      "url": "/blog/finance/cfa-vs-frm-vs-mba-in-finance-choose-by-career-goal/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/comparable-company-analysis-build-a-trading-comps-table.md",
+      "url": "/blog/finance/comparable-company-analysis-build-a-trading-comps-table/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/credit-card-minimum-due-vs-total-due-interest-explained.md",
+      "url": "/blog/finance/credit-card-minimum-due-vs-total-due-interest-explained/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/dcf-valuation-in-excel-a-step-by-step-model.md",
+      "url": "/blog/finance/dcf-valuation-in-excel-a-step-by-step-model/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/direct-vs-regular-mutual-funds-in-india-explained.md",
+      "url": "/blog/finance/direct-vs-regular-mutual-funds-in-india-explained/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/dividend-yield-vs-payout-ratio-assess-sustainability.md",
+      "url": "/blog/finance/dividend-yield-vs-payout-ratio-assess-sustainability/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/emergency-fund-calculator-three-to-twelve-months.md",
+      "url": "/blog/finance/emergency-fund-calculator-three-to-twelve-months/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/enterprise-value-vs-equity-value-formula-and-example.md",
+      "url": "/blog/finance/enterprise-value-vs-equity-value-formula-and-example/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/equity-vs-debt-mutual-fund-taxation-what-to-check.md",
+      "url": "/blog/finance/equity-vs-debt-mutual-fund-taxation-what-to-check/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/etf-vs-index-fund-in-india-a-practical-comparison.md",
+      "url": "/blog/finance/etf-vs-index-fund-in-india-a-practical-comparison/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/ev-ebitda-vs-p-e-which-valuation-multiple-to-use.md",
+      "url": "/blog/finance/ev-ebitda-vs-p-e-which-valuation-multiple-to-use/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/excel-financial-modelling-functions-and-shortcuts.md",
+      "url": "/blog/finance/excel-financial-modelling-functions-and-shortcuts/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/excel-goal-seek-and-data-tables-for-sensitivity.md",
+      "url": "/blog/finance/excel-goal-seek-and-data-tables-for-sensitivity/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/excel-pivot-tables-for-revenue-costs-and-transactions.md",
+      "url": "/blog/finance/excel-pivot-tables-for-revenue-costs-and-transactions/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/financial-due-diligence-a-practical-acquisition-checklist.md",
+      "url": "/blog/finance/financial-due-diligence-a-practical-acquisition-checklist/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/fixed-vs-floating-rate-loans-costs-and-trade-offs.md",
+      "url": "/blog/finance/fixed-vs-floating-rate-loans-costs-and-trade-offs/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/free-cash-flow-vs-net-profit-why-cash-can-disappear.md",
+      "url": "/blog/finance/free-cash-flow-vs-net-profit-why-cash-can-disappear/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-a-private-equity-deal-works-sourcing-to-exit.md",
+      "url": "/blog/finance/how-a-private-equity-deal-works-sourcing-to-exit/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-cibil-scores-are-calculated-in-india.md",
+      "url": "/blog/finance/how-cibil-scores-are-calculated-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-rbi-repo-rate-changes-affect-loans-and-fds.md",
+      "url": "/blog/finance/how-rbi-repo-rate-changes-affect-loans-and-fds/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-calculate-wacc-formula-and-worked-example.md",
+      "url": "/blog/finance/how-to-calculate-wacc-formula-and-worked-example/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-read-a-credit-report-in-india.md",
+      "url": "/blog/finance/how-to-read-a-credit-report-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-read-an-investment-banking-pitchbook.md",
+      "url": "/blog/finance/how-to-read-an-investment-banking-pitchbook/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-write-an-equity-research-report.md",
+      "url": "/blog/finance/how-to-write-an-equity-research-report/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/index-vs-active-mutual-funds-costs-and-tracking.md",
+      "url": "/blog/finance/index-vs-active-mutual-funds-costs-and-tracking/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/investment-banking-technical-interview-questions.md",
+      "url": "/blog/finance/investment-banking-technical-interview-questions/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/investment-banking-vs-private-equity-career-guide.md",
+      "url": "/blog/finance/investment-banking-vs-private-equity-career-guide/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/irr-vs-moic-in-private-equity-returns-explained.md",
+      "url": "/blog/finance/irr-vs-moic-in-private-equity-returns-explained/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/loan-prepayment-vs-higher-emi-compare-interest-savings.md",
+      "url": "/blog/finance/loan-prepayment-vs-higher-emi-compare-interest-savings/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/mutual-fund-expense-ratios-costs-and-compounding.md",
+      "url": "/blog/finance/mutual-fund-expense-ratios-costs-and-compounding/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/nominal-vs-real-returns-calculate-inflation-impact.md",
+      "url": "/blog/finance/nominal-vs-real-returns-calculate-inflation-impact/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/old-vs-new-tax-regime-compare-tax-year-2026-27.md",
+      "url": "/blog/finance/old-vs-new-tax-regime-compare-tax-year-2026-27/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/p-e-ratio-explained-reading-high-and-low-valuations.md",
+      "url": "/blog/finance/p-e-ratio-explained-reading-high-and-low-valuations/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/precedent-transactions-vs-trading-comparables.md",
+      "url": "/blog/finance/precedent-transactions-vs-trading-comparables/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/revenue-forecasting-in-excel-drivers-and-seasonality.md",
+      "url": "/blog/finance/revenue-forecasting-in-excel-drivers-and-seasonality/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/roe-vs-roce-vs-roic-measure-capital-efficiency.md",
+      "url": "/blog/finance/roe-vs-roce-vs-roic-measure-capital-efficiency/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/sip-vs-lump-sum-compare-timing-risk-and-cash-flow.md",
+      "url": "/blog/finance/sip-vs-lump-sum-compare-timing-risk-and-cash-flow/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/sumifs-index-match-and-xlookup-for-finance.md",
+      "url": "/blog/finance/sumifs-index-match-and-xlookup-for-finance/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple.md",
+      "url": "/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/venture-capital-vs-private-equity-strategy-and-ownership.md",
+      "url": "/blog/finance/venture-capital-vs-private-equity-strategy-and-ownership/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/vlookup-vs-xlookup-for-financial-analysts.md",
+      "url": "/blog/finance/vlookup-vs-xlookup-for-financial-analysts/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/why-bond-prices-fall-when-interest-rates-rise.md",
+      "url": "/blog/finance/why-bond-prices-fall-when-interest-rates-rise/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/xirr-vs-cagr-choose-the-right-portfolio-formula.md",
+      "url": "/blog/finance/xirr-vs-cagr-choose-the-right-portfolio-formula/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "The site owner confirmed that this article was already published; the existing source date was retained."
+      },
+      "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    }
+  ]
+}

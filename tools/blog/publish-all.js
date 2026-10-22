@@ -184,8 +184,8 @@ function generateSvgArtwork(article) {
 </svg>`;
 }
 
-// Generate all 150 published articles
-console.log(`Starting publication of all ${manifest.length} articles...`);
+// Generate all manifest-backed article sources; the production build still requires editorial approval.
+console.log(`Starting preparation of ${manifest.length} article sources...`);
 
 let publishedCount = 0;
 
@@ -231,7 +231,7 @@ for (const item of manifest) {
     };
   }
 
-  // 3. Frontmatter with draft: false
+  // 3. Frontmatter marks the source as publishable; the production build enforces editorial approval.
   const frontmatterObj = {
     title: proposed_title,
     seoTitle: seo_title,
@@ -245,7 +245,7 @@ for (const item of manifest) {
     coverImage: `/assets/images/blog/${slug}/cover.svg`,
     coverImageAlt: item.proposed_featured_image?.alt || `${proposed_title} explanatory diagram`,
     imageCaption: item.proposed_featured_image?.concept || `Original explanatory diagram for ${proposed_title}.`,
-    draft: false, // LIVE PUBLISHED
+    draft: false, // Production build requires a matching editorial approval record.
     featured: ['FIN-001', 'TECH-001', 'AUTO-001', 'FIN-010', 'TECH-010', 'AUTO-010'].includes(id),
     sources: (sources || []).map(s => ({ title: s.title, url: s.url })),
     showSources: true,
@@ -273,12 +273,12 @@ for (const item of manifest) {
   }
 }
 
-console.log(`\nSuccessfully prepared all ${publishedCount} articles for publication!`);
+console.log(`\nSuccessfully prepared all ${publishedCount} article sources for the approved build.`);
 console.log('Now running buildBlog to generate physical HTML pages, sitemap, llms.txt, and index listings...');
 
 // 6. Execute full production build
 const posts = buildBlog({ root: ROOT });
-console.log(`\nProduction Blog Build Complete! ${posts.length} articles live.`);
+console.log(`\nProduction Blog Build Complete! ${posts.length} approved articles live.`);
 
 // 7. Prepare deployable _site directory
 const deploySite = buildSite({ root: ROOT, preview: false });

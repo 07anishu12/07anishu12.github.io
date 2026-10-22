@@ -68,12 +68,11 @@
     const queryParam = new URLSearchParams(location.search).get('q');
     if (queryParam) query.value = queryParam;
     form.hidden = false;
-    function update() {
-      const term = query.value.trim().toLocaleLowerCase(), topic = tag.value;
-      const active = Boolean(term || topic);
-      listing.hidden = active; results.hidden = !active; results.replaceChildren();
-      if (!active) { status.textContent = ''; return; }
-      const found = scoped.filter(p => (!topic || p.tags.includes(topic)) && (!term || `${p.title} ${p.description} ${p.tags.join(' ')} ${p.text}`.toLocaleLowerCase().includes(term)));
+    let textIndexPromise;
+    let requestId = 0;
+    const loadTextIndex = () => textIndexPromise ||= fetch('/blog/search-text.json').then(r => { if (!r.ok) throw new Error('Search text unavailable'); return r.json(); });
+    function render(found) {
+      results.replaceChildren();
       status.textContent = `${found.length} article${found.length === 1 ? '' : 's'} found`;
       found.forEach(p => {
         const card = document.createElement('article'); card.className = 'blog-card';
@@ -87,6 +86,23 @@
         const duration = document.createElement('span'); duration.textContent = `${p.readingTime} min read`; meta.append(time, duration);
         card.append(imageLink, category, heading, desc, meta); results.append(card);
       });
+    }
+    function update() {
+      const currentRequest = ++requestId;
+      const term = query.value.trim().toLocaleLowerCase(), topic = tag.value;
+      const active = Boolean(term || topic);
+      listing.hidden = active; results.hidden = !active;
+      if (!active) { status.textContent = ''; return; }
+      const matches = textByUrl => scoped.filter(p => {
+        const searchable = `${p.title} ${p.description} ${p.tags.join(' ')} ${textByUrl?.get(p.url) || ''}`.toLocaleLowerCase();
+        return (!topic || p.tags.includes(topic)) && (!term || searchable.includes(term));
+      });
+      if (!term) { render(matches()); return; }
+      status.textContent = 'Searching…';
+      loadTextIndex().then(items => {
+        if (currentRequest !== requestId) return;
+        render(matches(new Map(items.map(item => [item.url, item.text]))));
+      }).catch(() => { status.textContent = 'Search is unavailable. Browse the category and page links below.'; });
     }
     form.addEventListener('submit', e => e.preventDefault());
     query.addEventListener('input', update); tag.addEventListener('change', update); update();

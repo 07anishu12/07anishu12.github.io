@@ -16,7 +16,8 @@ function outputs(posts, { preview = false, root = ROOT } = {}) {
       files.set(`blog/${category ? `${category}/` : ''}${n > 1 ? `page/${n}/` : ''}index.html`, listing(selected, { category, number: n, preview, root }));
     }
   }
-  files.set('blog/search.json', JSON.stringify(posts.map(p => ({ url: p.url, title: p.title, description: p.description, category: p.category, categoryName: CATEGORIES[p.category].name, tags: p.tags, datePublished: p.datePublished, coverImage: p.coverImage, coverImageAlt: p.coverImageAlt, width: p.width, height: p.height, readingTime: p.readingTime, text: p.text })), null, 2) + '\n');
+  files.set('blog/search.json', JSON.stringify(posts.map(p => ({ url: p.url, title: p.title, description: p.description, category: p.category, categoryName: CATEGORIES[p.category].name, tags: p.tags, datePublished: p.datePublished, coverImage: p.coverImage, coverImageAlt: p.coverImageAlt, width: p.width, height: p.height, readingTime: p.readingTime }))) + '\n');
+  files.set('blog/search-text.json', JSON.stringify(posts.map(p => ({ url: p.url, text: p.text }))) + '\n');
   return files;
 }
 
@@ -68,7 +69,7 @@ function sitemap(posts, root = ROOT) {
   const listingUrls = [...outputs(posts, { root }).keys()].filter(f => f.endsWith('index.html') && !posts.some(p => f === `${p.url.slice(1)}index.html`));
   const rows = listingUrls.map(file => {
     const url = '/' + file.replace(/index\.html$/, '');
-    const category = url.match(/^\/blog\/(technology|auto|finance)\//)?.[1];
+    const category = url.match(new RegExp(`^\\/blog\\/(${Object.keys(CATEGORIES).join('|')})\\/`))?.[1];
     const dates = posts.filter(p => !category || p.category === category).map(p => p.dateModified || p.datePublished).sort();
     return `<url><loc>${ORIGIN}${url}</loc>${dates.length ? `<lastmod>${dates.at(-1)}</lastmod>` : ''}</url>`;
   });
@@ -92,7 +93,7 @@ function buildBlog({ root = ROOT } = {}) {
     assert(!fs.existsSync(file) || old[relative] === hash(fs.readFileSync(file)) || fs.readFileSync(file, 'utf8') === content, `Refusing to overwrite an unowned or manually modified generated file: ${relative}`);
   }
   for (const [relative, digest] of Object.entries(old)) {
-    assert(/^blog\/(?:[a-z0-9-]+\/)*(?:index\.html|search\.json|feed\.xml)$/.test(relative), 'Invalid generated manifest path.');
+    assert(/^blog\/(?:[a-z0-9-]+\/)*(?:index\.html|search(?:-text)?\.json|feed\.xml)$/.test(relative), 'Invalid generated manifest path.');
     const file = path.join(root, relative);
     if (!files.has(relative) && fs.existsSync(file)) assert(hash(fs.readFileSync(file)) === digest, `Stale generated file was manually edited; preserve or move it before rebuilding: ${relative}`);
   }

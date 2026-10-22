@@ -4,12 +4,14 @@ const YAML = require('yaml');
 const MarkdownIt = require('markdown-it');
 const footnote = require('markdown-it-footnote');
 const { imageSize } = require('image-size');
+const { assertApproved } = require('./editorial');
 
 const ROOT = path.resolve(__dirname, '../..');
 const ORIGIN = 'https://07anishu12.github.io';
 const AUTHOR = { '@type': 'Person', '@id': `${ORIGIN}/#person`, name: 'Aniket Thakur', url: `${ORIGIN}/author/aniket-thakur.html` };
 const CATEGORIES = {
   technology: { name: 'Technology', description: 'AI, software, gadgets, tutorials, comparisons, and explainers.' },
+  product: { name: 'Product', description: 'Product discovery, experimentation, AI product execution, and product operations.' },
   auto: { name: 'Auto', description: 'Cars, bikes, EVs, ownership costs, and automotive technology.' },
   finance: { name: 'Finance', description: 'Personal finance, markets, fintech, and financial explainers.' }
 };
@@ -121,6 +123,7 @@ function readArticles(options = {}) {
       try {
         const post = parseArticle(fs.readFileSync(path.join(dir, file), 'utf8'), category, options);
         if (!post) continue;
+        if (!options.preview && !post.draft) assertApproved(root, post);
         assert(!paths.has(post.url), `Duplicate output path: ${post.url}`);
         paths.add(post.url); posts.push(post);
       } catch (e) { throw new Error(`data/blog/${category}/${file}: ${e.message}`); }

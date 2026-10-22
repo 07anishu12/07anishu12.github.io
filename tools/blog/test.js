@@ -17,10 +17,13 @@ function fixture() {
   for (const dir of ['learnings', 'projects', 'research', 'topics', 'author', 'assets', 'data']) fs.cpSync(path.join(ROOT, dir), path.join(root, dir), { recursive: true });
   // Isolate real articles from synthetic test content.
   fs.rmSync(path.join(root, 'data/blog'), { recursive: true, force: true });
-  for (const category of ['technology', 'auto', 'finance']) fs.mkdirSync(path.join(root, 'data/blog', category), { recursive: true });
+  for (const category of ['technology', 'product', 'auto', 'finance']) fs.mkdirSync(path.join(root, 'data/blog', category), { recursive: true });
   const imageDir = path.join(root, 'assets/images/blog/formatting-example');
   fs.mkdirSync(imageDir, { recursive: true });
   fs.copyFileSync(path.join(__dirname, 'examples/cover.svg'), path.join(imageDir, 'cover.svg'));
+  const syntheticUrls = ['formatting-example', 'social-example', 'renamed-example'].map(slug => `/blog/technology/${slug}/`);
+  fs.writeFileSync(path.join(root, 'data/blog-editorial.json'), JSON.stringify({ version: 1, entries: Object.fromEntries(syntheticUrls.map(url => [url, { status: 'approved', reviewer: 'synthetic-test', reviewedOn: '2026-01-01' }])) }, null, 2));
+  fs.writeFileSync(path.join(root, 'data/blog-date-audit.json'), JSON.stringify({ version: 1, calendar: 'UTC', entries: syntheticUrls.map(url => ({ source: `data/blog/technology/${url.split('/').at(-2)}.md`, url, datePublished: '2026-01-01', dateModified: null, status: 'verified', confidence: 'synthetic-test', evidence: { kind: 'synthetic-fixture' } })) }, null, 2));
   const file = path.join(root, 'data/blog/technology/example.md');
   return { root, file, clean: () => fs.rmSync(root, { recursive: true, force: true }) };
 }
@@ -163,6 +166,10 @@ test('Crawlable pagination and category/related links', () => {
     assert.equal(second('.blog-card').length, 2);
     assert.equal(second('link[rel="canonical"]').attr('href'), ORIGIN + '/blog/page/2/');
     assert.ok(result.has('blog/technology/page/2/index.html'));
+    const search = JSON.parse(result.get('blog/search.json'));
+    assert.equal('text' in search[0], false, 'Metadata search index must not contain full article text.');
+    assert.equal(JSON.parse(result.get('blog/search-text.json'))[0].text, base.text);
+    assert.ok(result.has('blog/product/index.html'), 'Product category must have a crawlable listing.');
     const article = cheerio.load(result.get('blog/technology/synthetic-0/index.html'));
     assert.equal(article('.blog-related .blog-card').length, 3);
   } finally { f.clean(); }

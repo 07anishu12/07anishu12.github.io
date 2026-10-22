@@ -17,6 +17,7 @@ This file is a navigation aid. The linked HTML pages contain the full public con
 ## Blog
 - [Blog](https://07anishu12.github.io/blog/): All published articles; full article text is available in HTML without JavaScript.
 - [Technology](https://07anishu12.github.io/blog/technology/): AI, software, gadgets, tutorials, comparisons, and explainers.
+- [Product](https://07anishu12.github.io/blog/product/): Product discovery, experimentation, AI product execution, and product operations.
 - [Auto](https://07anishu12.github.io/blog/auto/): Cars, bikes, EVs, ownership costs, and automotive technology.
 - [Finance](https://07anishu12.github.io/blog/finance/): Personal finance, markets, fintech, and financial explainers.
 

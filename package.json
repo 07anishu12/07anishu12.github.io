@@ -11,6 +11,8 @@
     "preview": "node tools/blog/preview.js --drafts",
     "serve": "node tools/blog/preview.js",
     "check": "node tools/blog/check.js",
+    "audit:dates": "node tools/blog/date-audit.js",
+    "audit:dates:write": "node tools/blog/date-audit.js --write",
     "test": "node --test tools/blog/test.js",
     "search-console": "node tools/blog/verification.js"
   },

@@ -22,6 +22,7 @@ function enhancePortfolio(html, root = ROOT) {
   html = html.replace(/<a(?![^>]*data-share=)([^>]*href="https:\/\/www\.linkedin\.com\/sharing\/share-offsite[^>]*>)/g, '<a data-share="linkedin"$1');
   const additions = [
     [`href="${style}"`, `<link rel="stylesheet" href="${style}">`],
+    ['href="/assets/favicon.svg"', '<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">'],
     [`src="${config}"`, `<script src="${config}" defer></script>`],
     ['src="/assets/js/analytics.js"', '<script src="/assets/js/analytics.js" defer></script>'],
     ['name="robots"', '<meta name="robots" content="index, follow, max-image-preview:large">']
@@ -73,6 +74,7 @@ ${post ? `<meta property="article:published_time" content="${post.datePublished}
 <meta name="twitter:image:alt" content="${e(socialAlt)}">
 <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
 <link rel="stylesheet" href="${stylesheet(root)}">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script src="${versionedAsset(root, 'assets/js/site-config.js')}" defer></script>
 <script src="/assets/js/analytics.js" defer></script>
 ${graph.map(s => `<script type="application/ld+json">${json(s)}</script>`).join('\n')}
@@ -100,13 +102,13 @@ function card(post, heading = 'h2', eager = false) {
 }
 const empty = '<div class="blog-empty"><p>No articles published here yet. Explore the <a class="meta-link" href="/learnings.html">Learnings library →</a></p></div>';
 function latest(posts) {
-  return `<!-- BLOG:LATEST:START -->\n<section class="blog-latest" aria-labelledby="latest-articles"><div class="container"><p class="eyebrow">From the blog</p><h2 id="latest-articles">Latest <span class="serif-accent">Articles.</span></h2><p>Technology, Auto, and Finance.</p>${posts.length ? `<div class="blog-grid">${posts.slice(0, 3).map(p => card(p, 'h3')).join('\n')}</div>` : empty}<a class="meta-link" href="/blog/">Browse all articles →</a></div></section>\n<!-- BLOG:LATEST:END -->`;
+  return `<!-- BLOG:LATEST:START -->\n<section class="blog-latest" aria-labelledby="latest-articles"><div class="container"><p class="eyebrow">From the blog</p><h2 id="latest-articles">Latest <span class="serif-accent">Articles.</span></h2><p>Technology, Product, Auto, and Finance.</p>${posts.length ? `<div class="blog-grid">${posts.slice(0, 3).map(p => card(p, 'h3')).join('\n')}</div>` : empty}<a class="meta-link" href="/blog/">Browse all articles →</a></div></section>\n<!-- BLOG:LATEST:END -->`;
 }
 function listing(posts, { category = '', number = 1, size = 9, ...options } = {}) {
   const base = `/blog/${category ? `${category}/` : ''}`, url = number === 1 ? base : `${base}page/${number}/`;
   const total = Math.max(1, Math.ceil(posts.length / size)), selected = posts.slice((number - 1) * size, number * size);
   const title = category ? `${CATEGORIES[category].name} Articles` : 'Blog';
-  const description = category ? CATEGORIES[category].description : 'Articles by Aniket Thakur on Technology, Auto, and Finance.';
+  const description = category ? CATEGORIES[category].description : 'Articles by Aniket Thakur on Technology, Product, Auto, and Finance.';
   return page({ ...options, title: `${title}${number > 1 ? ` — Page ${number}` : ''}`, description, url,
     breadcrumbs: [{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog/' }, ...(category ? [{ name: CATEGORIES[category].name, url: base }] : [])],
     content: `<header class="blog-heading"><p class="eyebrow">Writing &amp; explainers</p><h1>${e(title)}<span class="serif-accent">.</span></h1><p class="lead">${e(description)}</p></header>
@@ -120,7 +122,7 @@ ${total > 1 ? `<nav class="blog-pagination" aria-label="Article pages">${Array.f
 function quickAnswer(post) {
   const q = post.quickAnswer;
   if (!q) return '';
-  const ctaText = post.category === 'auto' ? 'Read the full buying guide' : (post.category === 'finance' ? 'Read the full financial guide' : 'Read the full technical guide');
+  const ctaText = post.category === 'auto' ? 'Read the full buying guide' : (post.category === 'finance' ? 'Read the full financial guide' : (post.category === 'product' ? 'Read the full product guide' : 'Read the full technical guide'));
   return `<section class="blog-answer" aria-labelledby="article-answer">
 <p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">${e(q.question)}</h2>
 <p class="blog-answer-verdict">${e(q.answer)}</p>

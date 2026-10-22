@@ -4,5 +4,6 @@ Disallow: /admin/
 Disallow: /tools/
 Disallow: /blog/feed.xml
 Disallow: /blog/search.json
+Disallow: /blog/search-text.json
 
 Sitemap: https://07anishu12.github.io/sitemap.xml
