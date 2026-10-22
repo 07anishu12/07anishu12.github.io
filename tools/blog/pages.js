@@ -23,7 +23,8 @@ function enhancePortfolio(html, root = ROOT) {
   const additions = [
     [`href="${style}"`, `<link rel="stylesheet" href="${style}">`],
     [`src="${config}"`, `<script src="${config}" defer></script>`],
-    ['src="/assets/js/analytics.js"', '<script src="/assets/js/analytics.js" defer></script>']
+    ['src="/assets/js/analytics.js"', '<script src="/assets/js/analytics.js" defer></script>'],
+    ['name="robots"', '<meta name="robots" content="index, follow, max-image-preview:large">']
   ];
   for (const [marker, tag] of additions) if (!html.includes(marker)) html = html.replace('</head>', `  ${tag}\n</head>`);
   return html;

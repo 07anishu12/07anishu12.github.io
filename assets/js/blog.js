@@ -65,6 +65,8 @@
     const requested = new URLSearchParams(location.search).get('tag');
     if (requested && ![...tag.options].some(o => o.value === requested)) tag.add(new Option(requested, requested));
     tag.value = requested || '';
+    const queryParam = new URLSearchParams(location.search).get('q');
+    if (queryParam) query.value = queryParam;
     form.hidden = false;
     function update() {
       const term = query.value.trim().toLocaleLowerCase(), topic = tag.value;
