@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Run a Local LLM Without a Dedicated GPU</title>
+<meta name="description" content="Use CPU inference sensibly and measure whether its speed suits your workload.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/technology/run-a-local-llm-without-a-dedicated-gpu/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Run a Local LLM Without a Dedicated GPU">
+<meta property="og:description" content="Use CPU inference sensibly and measure whether its speed suits your workload.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/technology/run-a-local-llm-without-a-dedicated-gpu/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/run-a-local-llm-without-a-dedicated-gpu/cover.svg">
+<meta property="og:image:alt" content="Diagram explaining CPU local LLM">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-22">
+<meta property="article:modified_time" content="2026-10-22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Run a Local LLM Without a Dedicated GPU">
+<meta name="twitter:description" content="Use CPU inference sensibly and measure whether its speed suits your workload.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/run-a-local-llm-without-a-dedicated-gpu/cover.svg">
+<meta name="twitter:image:alt" content="Diagram explaining CPU local LLM">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=6d70f1b31ae7">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Can You Run a Local LLM Without a Dedicated GPU?","description":"Use CPU inference sensibly and measure whether its speed suits your workload.","abstract":"Yes, compatible language models can run locally without a dedicated GPU.","url":"https://07anishu12.github.io/blog/technology/run-a-local-llm-without-a-dedicated-gpu/","mainEntityOfPage":"https://07anishu12.github.io/blog/technology/run-a-local-llm-without-a-dedicated-gpu/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/run-a-local-llm-without-a-dedicated-gpu/cover.svg","width":1200,"height":675,"caption":"Diagram explaining CPU local LLM"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Technology","keywords":"CPU local LLM, LLM without GPU, CPU inference, small models","inLanguage":"en","wordCount":831}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://07anishu12.github.io/blog/technology/"},{"@type":"ListItem","position":4,"name":"Can You Run a Local LLM Without a Dedicated GPU?","item":"https://07anishu12.github.io/blog/technology/run-a-local-llm-without-a-dedicated-gpu/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="run-a-local-llm-without-a-dedicated-gpu">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">Can You Run a Local LLM Without a Dedicated GPU?</h1>
+<p class="blog-description">Use CPU inference sensibly and measure whether its speed suits your workload.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-22">22 Oct 2026</time></span><span>5 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Can You Run a Local LLM Without a Dedicated GPU?</h2>
+<p class="blog-answer-verdict">Yes, compatible language models can run locally without a dedicated GPU.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category &amp; Focus</dt><dd>Local AI and hardware</dd></div><div><dt>Verified Word Count</dt><dd>831 words</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Verified Secondary Research</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Readers evaluating CPU local LLM.</li><li>Practitioners needing verified benchmarks and calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify dated prices and regional specifications before committing.</li><li>Review primary source disclosures and product documentation.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/run-a-local-llm-without-a-dedicated-gpu/cover.svg" alt="Diagram explaining CPU local LLM" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram showing CPU local LLM and its main decision points.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=CPU%20local%20LLM">CPU local LLM</a><a href="/blog/?tag=LLM%20without%20GPU">LLM without GPU</a><a href="/blog/?tag=CPU%20inference">CPU inference</a><a href="/blog/?tag=small%20models">small models</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>8 sections</span></summary><ol><li class="toc-h2"><a href="#section-separate-possibility-from-everyday-usability">Separate possibility from everyday usability</a></li><li class="toc-h2"><a href="#section-start-small-and-keep-the-experiment-controlled">Start small and keep the experiment controlled</a></li><li class="toc-h2"><a href="#section-measure-before-buying-hardware">Measure before buying hardware</a></li><li class="toc-h2"><a href="#section-quick-questions-clear-answers">Quick questions, clear answers</a></li><li class="toc-h3"><a href="#section-does-cpu-inference-work-offline">Does CPU inference work offline?</a></li><li class="toc-h3"><a href="#section-will-more-ram-make-generation-faster">Will more RAM make generation faster?</a></li><li class="toc-h3"><a href="#section-can-i-use-cpu-models-for-coding">Can I use CPU models for coding?</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>Yes, compatible language models can run locally without a dedicated GPU. CPU inference is useful for learning, occasional assistance and some private workflows, especially with smaller quantised models. Whether it feels usable depends on your processor, memory, model and patience; a successful load does not establish acceptable interactive speed.</p>
+<h2 id="section-separate-possibility-from-everyday-usability">Separate possibility from everyday usability</h2>
+<p>The <a href="https://github.com/ggml-org/llama.cpp">llama.cpp project</a> supports CPU inference and lists architecture-specific acceleration paths. That establishes a technical route, not a guarantee that an old laptop will handle a long conversation comfortably.</p>
+<p>For a CPU workload, weight size and memory traffic matter alongside arithmetic. A large model can spend considerable time moving data through the memory system. Adding processor threads may help up to a point, but more threads are not automatically faster under every configuration.</p>
+<p>Available RAM is a hard practical constraint. The operating system and other applications need space, while inference adds caches and buffers beyond the weight file. Disk swapping may keep a process alive while making each request frustratingly slow.</p>
+<p>Choose an acceptable experience before optimising. Waiting for a short offline summary can be reasonable; a voice assistant needing immediate replies has a different requirement. Define the task and maximum tolerable delay so your test produces a useful decision.</p>
+<h2 id="section-start-small-and-keep-the-experiment-controlled">Start small and keep the experiment controlled</h2>
+<p>Select a small supported instruction model from an identifiable publisher. Use a quantisation that your runtime explicitly supports. Record the exact model revision, licence and conversion source, because similarly named files can produce different behaviour.</p>
+<p>Install one engine through its official documentation. Begin with a short prompt, low output limit and one active request. Watch system memory while keeping ordinary work applications open, since a test in an otherwise empty system may misrepresent daily use.</p>
+<p>The <a href="https://huggingface.co/docs/transformers/main/en/llm_tutorial_optimization">Transformers speed and memory guide</a> explains why model size and generation choices affect resource demands. Use such guidance to understand the bottleneck rather than copying accelerator-specific settings onto a CPU-only machine.</p>
+<p>For an initial task, ask the model to rewrite a short paragraph or explain a simple code example. Then check the result yourself. A smaller model can be technically efficient but unreliable for arithmetic, unfamiliar factual claims or specialised terminology.</p>
+<p>Avoid beginning with the largest model that will load. A smaller candidate may provide better overall utility when it delivers a checked result quickly and leaves the computer responsive. Larger models should earn their extra waiting time through a measurable quality improvement.</p>
+<h2 id="section-measure-before-buying-hardware">Measure before buying hardware</h2>
+<p>Record startup separately from a warmed request. Measure time to first token and full completion time on the same prompts. If your engine reports token counts, record the tokenizer and output length so comparisons remain meaningful.</p>
+<p>Try your actual documents or code snippets, with sensitive details removed. Include a difficult request and one the model should decline for insufficient information. Keep failed requests in your results rather than reporting only the most impressive answer.</p>
+<p>Then vary one setting at a time: context length, thread count if supported, or model size. Preserve the baseline configuration. If performance worsens, you can reverse the change and learn why rather than accumulating unexplained options.</p>
+<p>Thermal behaviour can affect a sustained workload. A short test may not capture what happens during repeated generation on a laptop. Observe responsiveness over the session without inventing a speed multiplier from another device's benchmark.</p>
+<p>If CPU inference is too slow, consider whether a narrower task, smaller model or delayed batch workflow is acceptable. A hardware upgrade or hosted service is another option, subject to budget and data requirements. Do not buy a GPU until you know the workload and supported runtime justify it.</p>
+<p>The useful outcome is not proving that every task can run locally. It is identifying which tasks fit your existing computer with acceptable quality, waiting time and privacy controls, then using a different route for the rest.</p>
+<h2 id="section-quick-questions-clear-answers">Quick questions, clear answers</h2>
+<h3 id="section-does-cpu-inference-work-offline">Does CPU inference work offline?</h3>
+<p>It can once required packages and model files are available locally, provided the application does not call remote services. Check model routing, embeddings, search and telemetry separately. An initial download normally needs connectivity, while later inference depends on how the complete application is configured.</p>
+<h3 id="section-will-more-ram-make-generation-faster">Will more RAM make generation faster?</h3>
+<p>More capacity can prevent swapping or allow a larger model, but it does not guarantee higher generation speed once memory is sufficient. Diagnose whether your current limitation is capacity, memory bandwidth or computation. Buying RAM without identifying the bottleneck can produce little practical improvement.</p>
+<h3 id="section-can-i-use-cpu-models-for-coding">Can I use CPU models for coding?</h3>
+<p>Try bounded tasks with meaningful tests, such as explaining a function or suggesting a small patch. Model quality and repository context matter as well as speed. Inspect every change and run validation; local execution does not prevent invented APIs, insecure code or incorrect assumptions.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this guide from secondary research checked on 22 October 2026. No first-hand software testing or performance benchmarking was conducted. Examples are instructional and require validation in your environment.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/ggml-org/llama.cpp" rel="noopener">llama.cpp official repository</a></li><li><a href="https://huggingface.co/docs/transformers/main/en/llm_tutorial_optimization" rel="noopener">Transformers speed and memory guide</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/technology/run-a-local-llm-without-a-dedicated-gpu/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Ftechnology%2Frun-a-local-llm-without-a-dedicated-gpu%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/llama-cpp-tutorial-quantised-models-and-gguf-setup/" aria-label="Read llama.cpp Tutorial: Run Quantized LLMs with Lower Memory Requirements"><img src="/assets/images/blog/llama-cpp-tutorial-quantised-models-and-gguf-setup/cover.svg" alt="Diagram explaining llama.cpp tutorial" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/llama-cpp-tutorial-quantised-models-and-gguf-setup/">llama.cpp Tutorial: Run Quantized LLMs with Lower Memory Requirements</a></h3>
+<p>Understand GGUF, choose a compatible build and run a documented local example.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/" aria-label="Read AI Agents vs Workflow Automation: When Should You Use Each?"><img src="/assets/images/blog/ai-agents-vs-workflow-automation-choose-by-control/cover.svg" alt="Diagram explaining AI agents vs workflow automation" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/">AI Agents vs Workflow Automation: When Should You Use Each?</a></h3>
+<p>Compare fixed processes with model-driven decisions and bound consequential actions.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-memory-context-chat-history-and-persistent-data/" aria-label="Read AI Memory Explained: Context Windows, Conversation History and Persistent Storage"><img src="/assets/images/blog/ai-memory-context-chat-history-and-persistent-data/cover.svg" alt="Diagram explaining AI memory explained" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-memory-context-chat-history-and-persistent-data/">AI Memory Explained: Context Windows, Conversation History and Persistent Storage</a></h3>
+<p>Separate temporary model context from stored records and retrieved personal information.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

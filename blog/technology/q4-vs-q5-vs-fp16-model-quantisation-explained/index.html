@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Q4 vs Q5 vs FP16: Model Quantisation Explained</title>
+<meta name="description" content="Compare idealised weight storage, runtime support and task-specific quality trade-offs.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Q4 vs Q5 vs FP16: Model Quantisation Explained">
+<meta property="og:description" content="Compare idealised weight storage, runtime support and task-specific quality trade-offs.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/q4-vs-q5-vs-fp16-model-quantisation-explained/cover.svg">
+<meta property="og:image:alt" content="Diagram explaining Q4 vs Q5 vs FP16">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-22">
+<meta property="article:modified_time" content="2026-10-22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Q4 vs Q5 vs FP16: Model Quantisation Explained">
+<meta name="twitter:description" content="Compare idealised weight storage, runtime support and task-specific quality trade-offs.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/q4-vs-q5-vs-fp16-model-quantisation-explained/cover.svg">
+<meta name="twitter:image:alt" content="Diagram explaining Q4 vs Q5 vs FP16">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=6d70f1b31ae7">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Q4 vs Q5 vs FP16: How Model Quantisation Changes Memory and Quality","description":"Compare idealised weight storage, runtime support and task-specific quality trade-offs.","abstract":"Q4 and Q5 commonly describe low-bit weight quantisations, while FP16 is a 16-bit floating-point representation.","url":"https://07anishu12.github.io/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/","mainEntityOfPage":"https://07anishu12.github.io/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/q4-vs-q5-vs-fp16-model-quantisation-explained/cover.svg","width":1200,"height":675,"caption":"Diagram explaining Q4 vs Q5 vs FP16"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Technology","keywords":"Q4 vs Q5 vs FP16, model quantisation, LLM memory, quantised weights","inLanguage":"en","wordCount":768}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://07anishu12.github.io/blog/technology/"},{"@type":"ListItem","position":4,"name":"Q4 vs Q5 vs FP16: How Model Quantisation Changes Memory and Quality","item":"https://07anishu12.github.io/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="q4-vs-q5-vs-fp16-model-quantisation-explained">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">Q4 vs Q5 vs FP16: How Model Quantisation Changes Memory and Quality</h1>
+<p class="blog-description">Compare idealised weight storage, runtime support and task-specific quality trade-offs.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-22">22 Oct 2026</time></span><span>4 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Q4 vs Q5 vs FP16: How Model Quantisation Changes Memory and Quality: Key Verdict &amp; Summary</h2>
+<p class="blog-answer-verdict">Q4 and Q5 commonly describe low-bit weight quantisations, while FP16 is a 16-bit floating-point representation.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category &amp; Focus</dt><dd>Local AI and hardware</dd></div><div><dt>Verified Word Count</dt><dd>768 words</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Verified Secondary Research</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Readers evaluating Q4 vs Q5 vs FP16.</li><li>Practitioners needing verified benchmarks and calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify dated prices and regional specifications before committing.</li><li>Review primary source disclosures and product documentation.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/q4-vs-q5-vs-fp16-model-quantisation-explained/cover.svg" alt="Diagram explaining Q4 vs Q5 vs FP16" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram showing Q4 vs Q5 vs FP16 and its main decision points.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Q4%20vs%20Q5%20vs%20FP16">Q4 vs Q5 vs FP16</a><a href="/blog/?tag=model%20quantisation">model quantisation</a><a href="/blog/?tag=LLM%20memory">LLM memory</a><a href="/blog/?tag=quantised%20weights">quantised weights</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>8 sections</span></summary><ol><li class="toc-h2"><a href="#section-read-the-label-without-overinterpreting-it">Read the label without overinterpreting it</a></li><li class="toc-h2"><a href="#section-estimate-storage-then-budget-runtime-memory">Estimate storage, then budget runtime memory</a></li><li class="toc-h2"><a href="#section-compare-accuracy-where-your-application-is-sensitive">Compare accuracy where your application is sensitive</a></li><li class="toc-h2"><a href="#section-quick-questions-clear-answers">Quick questions, clear answers</a></li><li class="toc-h3"><a href="#section-is-q5-always-better-than-q4">Is Q5 always better than Q4?</a></li><li class="toc-h3"><a href="#section-does-quantisation-guarantee-faster-generation">Does quantisation guarantee faster generation?</a></li><li class="toc-h3"><a href="#section-can-i-quantise-an-already-quantised-model-again">Can I quantise an already quantised model again?</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>Q4 and Q5 commonly describe low-bit weight quantisations, while FP16 is a 16-bit floating-point representation. Lower-bit weights can reduce model storage and memory demand, but labels do not establish universal quality or speed. Compare the same original checkpoint, conversion method and runtime before choosing the smallest file.</p>
+<h2 id="section-read-the-label-without-overinterpreting-it">Read the label without overinterpreting it</h2>
+<p>Quantisation represents numbers using fewer bits or a more constrained numeric scheme. The <a href="https://huggingface.co/docs/transformers/main/en/quantization/overview">Transformers quantisation overview</a> documents multiple methods rather than one interchangeable four-bit format. Hardware and engine support differ across methods.</p>
+<p>A name such as Q4 can conceal details about block sizes, scaling information, mixed precision and calibration. Two four-bit files need not have identical memory usage or accuracy. Keep the complete filename, method and converter provenance in your experiment record.</p>
+<p>FP16 is not automatically the original training precision or an error-free reference. It is one representation with its own numerical properties. For a fair comparison, establish what source weights each artefact came from and whether anything besides quantisation changed.</p>
+<p>The <a href="https://github.com/ggml-org/llama.cpp">llama.cpp repository</a> lists several supported quantisation levels. Its support should be checked against the exact model architecture and release. A filename that another engine accepts may still be incompatible with your chosen tool.</p>
+<h2 id="section-estimate-storage-then-budget-runtime-memory">Estimate storage, then budget runtime memory</h2>
+<p>For a hypothetical dense model with one billion parameters, idealised weight storage is parameter count multiplied by bits divided by eight. This rough comparison ignores metadata and implementation overhead:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Representation</th>
+<th style="text-align:right" scope="col">Idealised bytes per parameter</th>
+<th style="text-align:right" scope="col">Idealised storage for 1B parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Four bits</td>
+<td style="text-align:right">0.5</td>
+<td style="text-align:right">0.5 billion bytes</td>
+</tr>
+<tr>
+<td>Five bits</td>
+<td style="text-align:right">0.625</td>
+<td style="text-align:right">0.625 billion bytes</td>
+</tr>
+<tr>
+<td>FP16</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2 billion bytes</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are arithmetic illustrations, not measured download sizes. Real formats contain scales, headers, alignment and sometimes tensors retained at higher precision. Use the actual artefact size when planning disk space.</p>
+<p>Runtime demand adds attention caches, buffers, application overhead and any simultaneously loaded components. A four-bit weight file does not imply every part of generation uses four-bit arithmetic. Long context can raise memory usage even when model weights stay fixed.</p>
+<p>Leave capacity for the operating system and ordinary work. If a Q5 version almost exhausts memory while Q4 leaves comfortable headroom, the lower-bit option may deliver a better experience. That remains conditional on acceptable answer quality.</p>
+<h2 id="section-compare-accuracy-where-your-application-is-sensitive">Compare accuracy where your application is sensitive</h2>
+<p>Use one checkpoint and a fixed set of prompts. Keep input formatting, generation settings and output limits constant. Otherwise a change in template or sampling can be mistaken for a quantisation effect.</p>
+<p>Include demanding examples. For code, test precise API usage and small logic changes. For extraction, check exact fields and missing values. For multilingual tasks, include the scripts and terminology you need. A general English conversation can miss important degradation.</p>
+<p>Measure correctness before speed. Then record first-token delay, output throughput, full completion time and peak memory. Distinguish cold loading from warm generation and report failed requests. No benchmark was conducted for this guide, so it supplies no accuracy-loss percentage or speed multiplier.</p>
+<p>Do not select a larger, more aggressively compressed model merely because its parameter count sounds better. Compare it against a smaller model at gentler precision. The winner can change with the task and memory budget.</p>
+<p>Choose the least expensive configuration that clears a defined quality threshold and remains stable at your intended context length. Preserve the selected artefact and its licence information so later updates can be evaluated against a reproducible baseline.</p>
+<h2 id="section-quick-questions-clear-answers">Quick questions, clear answers</h2>
+<h3 id="section-is-q5-always-better-than-q4">Is Q5 always better than Q4?</h3>
+<p>It can retain more numeric information under a comparable method, but that does not guarantee a meaningful improvement on your task. Different conversion settings and source checkpoints complicate the comparison. Test the actual files under equal conditions and include memory pressure in the decision.</p>
+<h3 id="section-does-quantisation-guarantee-faster-generation">Does quantisation guarantee faster generation?</h3>
+<p>No. Speed depends on available kernels, hardware, memory traffic and runtime implementation. A smaller file may load more easily without generating faster on a particular device. Measure the operation you care about rather than assuming compression translates directly into a fixed performance gain.</p>
+<h3 id="section-can-i-quantise-an-already-quantised-model-again">Can I quantise an already quantised model again?</h3>
+<p>Repeated lossy conversion can introduce additional errors and may not be supported sensibly. Prefer a documented conversion from an appropriate source checkpoint. Keep provenance clear, and avoid distributing a re-converted artefact without checking both its licence and quality against the intended original.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this guide from secondary research checked on 22 October 2026. No first-hand software testing or performance benchmarking was conducted. Examples are instructional and require validation in your environment.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://huggingface.co/docs/transformers/main/en/quantization/overview" rel="noopener">Transformers quantisation overview</a></li><li><a href="https://github.com/ggml-org/llama.cpp" rel="noopener">llama.cpp official repository</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Ftechnology%2Fq4-vs-q5-vs-fp16-model-quantisation-explained%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/" aria-label="Read AI Agents vs Workflow Automation: When Should You Use Each?"><img src="/assets/images/blog/ai-agents-vs-workflow-automation-choose-by-control/cover.svg" alt="Diagram explaining AI agents vs workflow automation" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/">AI Agents vs Workflow Automation: When Should You Use Each?</a></h3>
+<p>Compare fixed processes with model-driven decisions and bound consequential actions.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-memory-context-chat-history-and-persistent-data/" aria-label="Read AI Memory Explained: Context Windows, Conversation History and Persistent Storage"><img src="/assets/images/blog/ai-memory-context-chat-history-and-persistent-data/cover.svg" alt="Diagram explaining AI memory explained" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-memory-context-chat-history-and-persistent-data/">AI Memory Explained: Context Windows, Conversation History and Persistent Storage</a></h3>
+<p>Separate temporary model context from stored records and retrieved personal information.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/browser-use-guide-how-ai-agents-operate-websites/" aria-label="Read Browser-Use GitHub Repository: How AI Agents Interact with Websites"><img src="/assets/images/blog/browser-use-guide-how-ai-agents-operate-websites/cover.svg" alt="Diagram explaining Browser Use GitHub" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/browser-use-guide-how-ai-agents-operate-websites/">Browser-Use GitHub Repository: How AI Agents Interact with Websites</a></h3>
+<p>Understand the verified library, test a read-only task and isolate browser permissions.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>4 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

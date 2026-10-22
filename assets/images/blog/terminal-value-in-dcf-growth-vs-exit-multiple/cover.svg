@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F6"/>
+      <stop offset="100%" stop-color="#F0FDF4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Card Frame -->
+  <rect x="40" y="40" width="1120" height="595" rx="20" fill="#FFFFFF" stroke="#E5E2D9" stroke-width="2"/>
+  
+  <!-- Left Side: Editorial Content -->
+  <g transform="translate(90, 100)">
+    <!-- Category Badge -->
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#ECFDF5" stroke="#059669" stroke-opacity="0.3"/>
+    <circle cx="16" cy="17" r="5" fill="#059669"/>
+    <text x="30" y="22" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="800" fill="#065F46" letter-spacing="1">FINANCE PUBLICATION</text>
+    
+    <!-- Topic ID Stamp -->
+    <text x="175" y="22" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#6B7280">FIN-020</text>
+
+    <!-- Main Title -->
+    <text x="0" y="85" font-family="Plus Jakarta Sans, sans-serif" font-size="36" font-weight="800" fill="#121316" letter-spacing="-0.5">Terminal Value in DCF:</text>
+    <text x="0" y="132" font-family="Plus Jakarta Sans, sans-serif" font-size="36" font-weight="800" fill="#121316" letter-spacing="-0.5">Perpetuity Growth vs</text>
+    <text x="0" y="179" font-family="Plus Jakarta Sans, sans-serif" font-size="36" font-weight="800" fill="#121316" letter-spacing="-0.5">Exit Multiple Method</text>
+
+    <!-- Subtitle / Meta Description -->
+    <g transform="translate(0, 220)">
+      <text x="0" y="24" font-family="Newsreader, Georgia, serif" font-size="20" font-style="italic" fill="#059669">
+        Excel and financial modelling
+      </text>
+      
+      <!-- Key tags pills -->
+      <g transform="translate(0, 50)">
+        
+          <rect x="0" y="0" width="150" height="28" rx="6" fill="#F3F4F6"/>
+          <text x="75" y="18" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#4B5563" text-anchor="middle">Excel and financia</text>
+        
+          <rect x="160" y="0" width="150" height="28" rx="6" fill="#F3F4F6"/>
+          <text x="235" y="18" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#4B5563" text-anchor="middle">terminal value DCF</text>
+        
+      </g>
+    </g>
+
+    <!-- Author & Editorial Verification Badge -->
+    <g transform="translate(0, 440)">
+      <circle cx="16" cy="16" r="16" fill="#059669"/>
+      <text x="16" y="21" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">AT</text>
+      <text x="44" y="14" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#121316">Aniket Thakur</text>
+      <text x="44" y="28" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#6B7280">Researched &amp; Verified · 2026 Edition</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Graphic Diagram -->
+  
+      <g transform="translate(620, 140)">
+        <rect width="460" height="395" rx="14" fill="#FFFFFF" stroke="#E5E2D9" stroke-width="1.5"/>
+        <text x="30" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700" fill="#4B5563">VALUATION &amp; FINANCIAL ANALYSIS</text>
+        
+        <rect x="30" y="75" width="400" height="85" rx="8" fill="#F0FDF4" stroke="#A7F3D0"/>
+        <text x="45" y="105" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700" fill="#065F46">Quantitative Model Structure</text>
+        <text x="45" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#374151">Formula-driven Excel spreadsheet with dynamic assumptions.</text>
+
+        <rect x="30" y="180" width="400" height="85" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+        <text x="45" y="210" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700" fill="#1E40AF">Risk &amp; Return Trade-Off</text>
+        <text x="45" y="235" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#374151">Stress-tested calculations under conservative market cases.</text>
+
+        <rect x="30" y="285" width="400" height="80" rx="8" fill="#FAF9F6" stroke="#E5E2D9"/>
+        <text x="45" y="315" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#121316">Practical Key Takeaway:</text>
+        <text x="45" y="340" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#4B5563">Clear mathematical proof without speculative assertions.</text>
+      </g>
+    
+</svg>

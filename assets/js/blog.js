@@ -6,6 +6,52 @@
     try { await navigator.clipboard.writeText(share.dataset.url); status.textContent = 'Link copied.'; }
     catch { status.textContent = `Copy this link: ${share.dataset.url}`; }
   });
+  // Code block copy functionality
+  document.querySelectorAll('.blog-code').forEach(block => {
+    const pre = block.querySelector('pre');
+    const label = block.querySelector('.blog-code-label');
+    if (!pre || !label) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'blog-code-copy-btn';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(pre.textContent.trim());
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch {
+        btn.textContent = 'Error';
+      }
+    });
+    label.append(btn);
+  });
+
+  // Reading progress indicator
+  const progressBar = document.getElementById('reading-progress');
+  const articleEl = document.querySelector('.blog-article');
+  if (progressBar && articleEl) {
+    const updateProgress = () => {
+      const rect = articleEl.getBoundingClientRect();
+      const scrollable = rect.height - window.innerHeight;
+      if (scrollable <= 0) {
+        progressBar.style.width = '0%';
+        return;
+      }
+      const scrolled = -rect.top;
+      const progress = Math.min(100, Math.max(0, (scrolled / scrollable) * 100));
+      progressBar.style.width = `${progress}%`;
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+    updateProgress();
+  }
+
   const form = document.querySelector('[data-blog-search]');
   if (!form) return;
   const query = form.elements.q, tag = form.elements.tag;

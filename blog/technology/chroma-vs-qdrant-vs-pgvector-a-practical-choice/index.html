@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Chroma vs Qdrant vs pgvector: A Practical Choice</title>
+<meta name="description" content="Compare vector-search options by deployment, filtering and the system you already operate.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Chroma vs Qdrant vs pgvector: A Practical Choice">
+<meta property="og:description" content="Compare vector-search options by deployment, filtering and the system you already operate.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/chroma-vs-qdrant-vs-pgvector-a-practical-choice/cover.svg">
+<meta property="og:image:alt" content="Diagram explaining Chroma vs Qdrant vs pgvector">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-22">
+<meta property="article:modified_time" content="2026-10-22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chroma vs Qdrant vs pgvector: A Practical Choice">
+<meta name="twitter:description" content="Compare vector-search options by deployment, filtering and the system you already operate.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/chroma-vs-qdrant-vs-pgvector-a-practical-choice/cover.svg">
+<meta name="twitter:image:alt" content="Diagram explaining Chroma vs Qdrant vs pgvector">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=6d70f1b31ae7">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Chroma vs Qdrant vs pgvector: Which Vector Database Should You Choose?","description":"Compare vector-search options by deployment, filtering and the system you already operate.","abstract":"Choose a vector-search system by your existing infrastructure, access filters, durability needs and retrieval workload.","url":"https://07anishu12.github.io/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/","mainEntityOfPage":"https://07anishu12.github.io/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/chroma-vs-qdrant-vs-pgvector-a-practical-choice/cover.svg","width":1200,"height":675,"caption":"Diagram explaining Chroma vs Qdrant vs pgvector"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Technology","keywords":"Chroma vs Qdrant vs pgvector, vector database, semantic search, RAG storage","inLanguage":"en","wordCount":854}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://07anishu12.github.io/blog/technology/"},{"@type":"ListItem","position":4,"name":"Chroma vs Qdrant vs pgvector: Which Vector Database Should You Choose?","item":"https://07anishu12.github.io/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="chroma-vs-qdrant-vs-pgvector-a-practical-choice">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">Chroma vs Qdrant vs pgvector: Which Vector Database Should You Choose?</h1>
+<p class="blog-description">Compare vector-search options by deployment, filtering and the system you already operate.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-22">22 Oct 2026</time></span><span>5 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Chroma vs Qdrant vs pgvector: Which Vector Database Should You Choose?</h2>
+<p class="blog-answer-verdict">Choose a vector-search system by your existing infrastructure, access filters, durability needs and retrieval workload.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category &amp; Focus</dt><dd>RAG, vector databases and document chatbots</dd></div><div><dt>Verified Word Count</dt><dd>854 words</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Verified Secondary Research</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Readers evaluating Chroma vs Qdrant vs pgvector.</li><li>Practitioners needing verified benchmarks and calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify dated prices and regional specifications before committing.</li><li>Review primary source disclosures and product documentation.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/chroma-vs-qdrant-vs-pgvector-a-practical-choice/cover.svg" alt="Diagram explaining Chroma vs Qdrant vs pgvector" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram showing Chroma vs Qdrant vs pgvector and its main decision points.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Chroma%20vs%20Qdrant%20vs%20pgvector">Chroma vs Qdrant vs pgvector</a><a href="/blog/?tag=vector%20database">vector database</a><a href="/blog/?tag=semantic%20search">semantic search</a><a href="/blog/?tag=RAG%20storage">RAG storage</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>8 sections</span></summary><ol><li class="toc-h2"><a href="#section-start-with-the-system-you-need-to-maintain">Start with the system you need to maintain</a></li><li class="toc-h2"><a href="#section-compare-more-than-nearest-neighbour-syntax">Compare more than nearest-neighbour syntax</a></li><li class="toc-h2"><a href="#section-run-a-matched-pilot-and-choose-conditionally">Run a matched pilot and choose conditionally</a></li><li class="toc-h2"><a href="#section-quick-questions-clear-answers">Quick questions, clear answers</a></li><li class="toc-h3"><a href="#section-do-i-need-a-specialised-vector-database-for-rag">Do I need a specialised vector database for RAG?</a></li><li class="toc-h3"><a href="#section-does-the-fastest-query-give-the-best-answer">Does the fastest query give the best answer?</a></li><li class="toc-h3"><a href="#section-can-i-switch-embedding-models-without-rebuilding-data">Can I switch embedding models without rebuilding data?</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>Choose a vector-search system by your existing infrastructure, access filters, durability needs and retrieval workload. Chroma, Qdrant and pgvector offer different deployment paths, but no universal winner follows from their feature lists. Test them with the same embeddings, queries and operational requirements before committing a production corpus.</p>
+<h2 id="section-start-with-the-system-you-need-to-maintain">Start with the system you need to maintain</h2>
+<p><a href="https://docs.trychroma.com/docs/overview/introduction">Chroma's documentation</a> describes storing embeddings, documents and metadata, with local, self-hosted and managed options. It is a candidate when a direct retrieval-oriented development workflow suits the project. Inspect the specific client and deployment mode rather than assuming every mode has identical operations.</p>
+<p><a href="https://qdrant.tech/documentation/overview/">Qdrant's documentation</a> presents a dedicated vector-search system with vector, payload and filtering concepts. It is a candidate when your team wants to operate search as a distinct service and evaluate its indexing and filtering behaviour directly.</p>
+<p><a href="https://github.com/pgvector/pgvector">pgvector</a> adds vector similarity search to PostgreSQL. It is a candidate when relational records, transactions and database operations already live in Postgres, and keeping embeddings close to those records simplifies the application.</p>
+<p>These are starting conditions, not performance conclusions. A dedicated service can still be unnecessary operational work for a small team, while an extension can become difficult if its workload competes with critical transactional queries. Measure the trade-off in your environment.</p>
+<h2 id="section-compare-more-than-nearest-neighbour-syntax">Compare more than nearest-neighbour syntax</h2>
+<p>Use a requirement table before a benchmark:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Requirement</th>
+<th scope="col">What to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document metadata</td>
+<td>Storage shape, updates and source identifiers</td>
+</tr>
+<tr>
+<td>Access rules</td>
+<td>Filter semantics and enforcement before generation</td>
+</tr>
+<tr>
+<td>Durability</td>
+<td>Persistence, backups and restore process</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Index build, query latency and update behaviour</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Monitoring, upgrades and failure recovery</td>
+</tr>
+</tbody>
+</table></div>
+<p>Keep model and vector dimensions fixed across candidates. Equal dimensions alone do not make vectors from different embedding models comparable. Record the model revision, normalisation and distance metric with each collection or table.</p>
+<p>Evaluate exact and approximate search separately. Approximate indexing can reduce query work while changing recall. Use an exact baseline where practical so you know whether missing evidence comes from the index or embedding representation.</p>
+<p>Filters deserve specific tests. A search engine returning relevant text from the wrong user's documents is incorrect even if its semantic ranking is excellent. Construct synthetic tenants and verify that unauthorised passages never reach generation.</p>
+<p>Test updates and deletion, including old document versions. Your application must know when an embedding becomes stale, what happens if ingestion fails midway and whether deleted content remains in backups or derived stores. A successful insertion tutorial does not answer these questions.</p>
+<h2 id="section-run-a-matched-pilot-and-choose-conditionally">Run a matched pilot and choose conditionally</h2>
+<p>Create a small but realistic corpus, fixed queries and expected evidence labels. Include exact identifiers, paraphrases and restricted documents. Keep retrieval limits and filtering conditions comparable.</p>
+<p>Measure retrieval quality, latency distribution, memory, storage and index-building time. Include failures, restarts and concurrent writes. A tiny sample may reveal integration problems, but it cannot support an ambitious scale claim or a universal throughput ranking.</p>
+<p>Compare total maintenance effort alongside query speed. Which system can your team back up and restore? How will credentials be managed? Who can diagnose a slow query? Existing operational competence can matter more than a marginal result from an unrelated benchmark.</p>
+<p>Review licences and service terms for the actual software and managed products. Chroma's overview identifies Apache 2.0 for its open-source software; hosted offerings have separate service conditions. Apply the same component-specific checking to each candidate rather than treating an ecosystem as one legal artefact.</p>
+<p>Prefer pgvector when keeping search near existing relational data meets measured needs. Consider Chroma for a development and retrieval workflow that fits its supported modes. Consider Qdrant when a dedicated vector service and its operational model match your requirements. These are conditional choices, not a ranked recommendation.</p>
+<p>Your next step is a reproducible pilot and a recovery test, not importing the entire production corpus. The best fit is the one that retrieves authorised evidence well and can be maintained reliably by the people operating it.</p>
+<h2 id="section-quick-questions-clear-answers">Quick questions, clear answers</h2>
+<h3 id="section-do-i-need-a-specialised-vector-database-for-rag">Do I need a specialised vector database for RAG?</h3>
+<p>Not always. A small corpus may work with in-memory search, and an existing database may provide adequate capabilities. Introduce another service when scale, filtering, search quality or operations justify it. The generator does not require a particular database brand to use retrieved evidence.</p>
+<h3 id="section-does-the-fastest-query-give-the-best-answer">Does the fastest query give the best answer?</h3>
+<p>Only if it retrieves useful authorised evidence. Compare recall and relevance as well as time. An approximate index can return results quickly while missing the passage needed for a correct answer, and adding more results can increase noise and generation cost.</p>
+<h3 id="section-can-i-switch-embedding-models-without-rebuilding-data">Can I switch embedding models without rebuilding data?</h3>
+<p>Usually you need a deliberate re-embedding or parallel-index plan. Vectors from different models may inhabit incompatible spaces even when dimensions match. Version the embedding model and document pipeline so migration can be tested without mixing old and new representations silently.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this guide from secondary research checked on 22 October 2026. No first-hand software testing or performance benchmarking was conducted. Examples are instructional and require validation in your environment.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://docs.trychroma.com/docs/overview/introduction" rel="noopener">Chroma introduction</a></li><li><a href="https://qdrant.tech/documentation/overview/" rel="noopener">Qdrant overview</a></li><li><a href="https://github.com/pgvector/pgvector" rel="noopener">pgvector official repository</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Ftechnology%2Fchroma-vs-qdrant-vs-pgvector-a-practical-choice%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/" aria-label="Read AI Agents vs Workflow Automation: When Should You Use Each?"><img src="/assets/images/blog/ai-agents-vs-workflow-automation-choose-by-control/cover.svg" alt="Diagram explaining AI agents vs workflow automation" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/">AI Agents vs Workflow Automation: When Should You Use Each?</a></h3>
+<p>Compare fixed processes with model-driven decisions and bound consequential actions.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-memory-context-chat-history-and-persistent-data/" aria-label="Read AI Memory Explained: Context Windows, Conversation History and Persistent Storage"><img src="/assets/images/blog/ai-memory-context-chat-history-and-persistent-data/cover.svg" alt="Diagram explaining AI memory explained" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-memory-context-chat-history-and-persistent-data/">AI Memory Explained: Context Windows, Conversation History and Persistent Storage</a></h3>
+<p>Separate temporary model context from stored records and retrieved personal information.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/browser-use-guide-how-ai-agents-operate-websites/" aria-label="Read Browser-Use GitHub Repository: How AI Agents Interact with Websites"><img src="/assets/images/blog/browser-use-guide-how-ai-agents-operate-websites/cover.svg" alt="Diagram explaining Browser Use GitHub" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/browser-use-guide-how-ai-agents-operate-websites/">Browser-Use GitHub Repository: How AI Agents Interact with Websites</a></h3>
+<p>Understand the verified library, test a read-only task and isolate browser permissions.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>4 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

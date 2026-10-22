@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Terminal Value in DCF: Growth vs Exit Multiple</title>
+<meta name="description" content="Compare perpetuity growth and exit multiples, including reinvestment and sensitivity checks.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Terminal Value in DCF: Growth vs Exit Multiple">
+<meta property="og:description" content="Compare perpetuity growth and exit multiples, including reinvestment and sensitivity checks.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/terminal-value-in-dcf-growth-vs-exit-multiple/cover.svg">
+<meta property="og:image:alt" content="Educational diagram explaining terminal value DCF">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-22">
+<meta property="article:modified_time" content="2026-10-22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Terminal Value in DCF: Growth vs Exit Multiple">
+<meta name="twitter:description" content="Compare perpetuity growth and exit multiples, including reinvestment and sensitivity checks.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/terminal-value-in-dcf-growth-vs-exit-multiple/cover.svg">
+<meta name="twitter:image:alt" content="Educational diagram explaining terminal value DCF">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=6d70f1b31ae7">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Terminal Value in DCF: Perpetuity Growth vs Exit Multiple Method","description":"Compare perpetuity growth and exit multiples, including reinvestment and sensitivity checks.","abstract":"Terminal value estimates cash flows beyond the explicit forecast in a DCF.","url":"https://07anishu12.github.io/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/","mainEntityOfPage":"https://07anishu12.github.io/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/terminal-value-in-dcf-growth-vs-exit-multiple/cover.svg","width":1200,"height":675,"caption":"Educational diagram explaining terminal value DCF"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Finance","keywords":"Excel and financial modelling, terminal value DCF, perpetuity growth","inLanguage":"en","wordCount":838}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Finance","item":"https://07anishu12.github.io/blog/finance/"},{"@type":"ListItem","position":4,"name":"Terminal Value in DCF: Perpetuity Growth vs Exit Multiple Method","item":"https://07anishu12.github.io/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="finance" data-article-slug="terminal-value-in-dcf-growth-vs-exit-multiple">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/finance/">Finance</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h1 id="article-title">Terminal Value in DCF: Perpetuity Growth vs Exit Multiple Method</h1>
+<p class="blog-description">Compare perpetuity growth and exit multiples, including reinvestment and sensitivity checks.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-22">22 Oct 2026</time></span><span>5 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Terminal Value in DCF: Perpetuity Growth vs Exit Multiple Method: Key Verdict &amp; Summary</h2>
+<p class="blog-answer-verdict">Terminal value estimates cash flows beyond the explicit forecast in a DCF.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category &amp; Focus</dt><dd>Excel and financial modelling</dd></div><div><dt>Verified Word Count</dt><dd>838 words</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Verified Secondary Research</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Readers evaluating Excel and financial modelling.</li><li>Practitioners needing verified benchmarks and calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify dated prices and regional specifications before committing.</li><li>Review primary source disclosures and product documentation.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full financial guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/terminal-value-in-dcf-growth-vs-exit-multiple/cover.svg" alt="Educational diagram explaining terminal value DCF" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Proposed explanatory diagram showing terminal value DCF with clearly labelled illustrative figures.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Excel%20and%20financial%20modelling">Excel and financial modelling</a><a href="/blog/?tag=terminal%20value%20DCF">terminal value DCF</a><a href="/blog/?tag=perpetuity%20growth">perpetuity growth</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>9 sections</span></summary><ol><li class="toc-h2"><a href="#section-put-terminal-value-at-the-correct-date">Put terminal value at the correct date</a></li><li class="toc-h2"><a href="#section-calculate-the-growing-perpetuity">Calculate the growing perpetuity</a></li><li class="toc-h2"><a href="#section-make-growth-pay-for-its-reinvestment">Make growth pay for its reinvestment</a></li><li class="toc-h2"><a href="#section-cross-check-with-an-exit-multiple">Cross-check with an exit multiple</a></li><li class="toc-h2"><a href="#section-quick-questions-clear-answers">Quick questions, clear answers</a></li><li class="toc-h3"><a href="#section-is-the-exit-multiple-method-more-objective">Is the exit-multiple method more objective?</a></li><li class="toc-h3"><a href="#section-can-growth-equal-the-discount-rate">Can growth equal the discount rate?</a></li><li class="toc-h3"><a href="#section-what-if-the-business-has-a-finite-life">What if the business has a finite life?</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>Terminal value estimates cash flows beyond the explicit forecast in a DCF. The perpetuity-growth method extends a sustainable cash flow; the exit-multiple method applies a market-based valuation multiple to a terminal metric. Both require economic consistency. A large terminal value is not automatically wrong, but it makes the valuation particularly sensitive to assumptions about the distant future.</p>
+<h2 id="section-put-terminal-value-at-the-correct-date">Put terminal value at the correct date</h2>
+<p>A five-year DCF normally forecasts cash flows for years one through five, then places terminal value at the end of year five. That terminal value must still be discounted to the valuation date. Adding an undiscounted future value to present values mixes dates.</p>
+<p>The <a href="https://aswathdamodaran.blogspot.com/2016/11/myth-51-if-you-don-believe-in-forever.html">Damodaran discussion of terminal value</a> explains its role in valuing cash flows beyond the detailed forecast. The explicit period should extend until the business can reasonably be described using stable economics, rather than stopping at an arbitrary year while margins and risk remain abnormal.</p>
+<p>Keep the valuation framework aligned. FCFF discounted at WACC needs an enterprise operating terminal value. Equity cash flow discounted at the cost of equity needs an equity terminal value. Mixing these conventions produces an output that can look sensible while valuing different claims.</p>
+<h2 id="section-calculate-the-growing-perpetuity">Calculate the growing perpetuity</h2>
+<p>For an FCFF model, <code>TVn = FCFFn+1/(WACC-g)</code>, where g is sustainable perpetual growth and FCFFn+1 is the following year's normalised cash flow. Standard application requires WACC greater than g. A denominator near zero creates extreme sensitivity rather than strong evidence of value.</p>
+<p>Suppose hypothetical year-five FCFF is ₹100 crore, growth 4% and WACC 10%. Year-six FCFF is ₹104 crore. Terminal value is <code>104/(10%-4%)</code>, about ₹1,733.33 crore at the end of year five. Its present value is <code>1733.33/(1.10^5)</code>, about ₹1,076.26 crore.</p>
+<p>Do not use year-five cash flow directly if the formula assumes growth begins in year six. Conversely, do not add growth twice. In Excel, a clear formula is <code>=FCFF_Year5*(1+g)/(WACC-g)</code> followed by a separate discount factor.</p>
+<h2 id="section-make-growth-pay-for-its-reinvestment">Make growth pay for its reinvestment</h2>
+<p>Perpetual growth is not free. A growing business usually requires investment in operating assets or working capital. A terminal forecast that raises revenue indefinitely while capital expenditure merely matches depreciation and working capital never changes needs a defensible business explanation.</p>
+<p>A useful stable-state relationship is <code>Reinvestment rate = g/Return on capital</code>, subject to consistent definitions and sustainable economics. With hypothetical growth 4% and return on capital 10%, the implied reinvestment rate is 40% of after-tax operating earnings. Only the remainder is available as free cash flow.</p>
+<p>Match terminal growth with the model currency and inflation assumptions. A nominal rupee growth assumption cannot be evaluated independently of nominal rupee discount rates and the business's long-run market. No particular long-run growth rate is verified as universally appropriate in this guide.</p>
+<h2 id="section-cross-check-with-an-exit-multiple">Cross-check with an exit multiple</h2>
+<p>The exit-multiple approach might use <code>Terminal enterprise value = Terminal EBITDA × EV/EBITDA multiple</code>. If hypothetical year-five EBITDA is ₹200 crore and the selected multiple is 8×, terminal enterprise value is ₹1,600 crore, which is then discounted for five years.</p>
+<p>Choose the multiple using comparable businesses with relevant growth, margins, risk and capital needs. A current high-growth peer multiple may be unsuitable for a mature terminal business. <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valuation/val.htm">Damodaran's relative-valuation material</a> provides the conceptual framework; it does not verify any current company multiple used here.</p>
+<p>An exit multiple introduces market pricing into a DCF. Compare its implied growth and cash-flow yield with the perpetuity method. If the methods diverge sharply, investigate the economics rather than averaging the outputs automatically.</p>
+<p>Show a sensitivity grid for WACC and g, and a separate range for exit multiples. Report how much total value comes from the terminal component. The calculations here are hypothetical and were not executed in Excel. A useful conclusion explains which assumptions support the valuation and what evidence could invalidate them, rather than presenting one terminal-value number as fact.</p>
+<h2 id="section-quick-questions-clear-answers">Quick questions, clear answers</h2>
+<h3 id="section-is-the-exit-multiple-method-more-objective">Is the exit-multiple method more objective?</h3>
+<p>Not automatically. Choosing peers, timing, accounting adjustments and a suitable future multiple requires judgement. Market prices can reflect a temporary cycle or optimism. The method is useful as a cross-check when those limitations are explicit, not as an assumption-free alternative.</p>
+<h3 id="section-can-growth-equal-the-discount-rate">Can growth equal the discount rate?</h3>
+<p>Not in the standard growing-perpetuity formula. The denominator becomes zero, so the expression does not yield a finite value. Growth above the discount rate is also incompatible with that standard application. Revisit the stable-state assumptions rather than forcing the spreadsheet to calculate.</p>
+<h3 id="section-what-if-the-business-has-a-finite-life">What if the business has a finite life?</h3>
+<p>Model the finite operating cash flows and any justified disposal or recovery value, including closure costs. A perpetual-growth terminal value may be inappropriate for an asset with an exhausted concession, resource or contract and no credible continuation. The model must follow the actual economic life.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this educational guide from secondary research checked on 22 October 2026. All numerical illustrations are hypothetical unless stated otherwise. No investment product was tested, and no individual financial circumstances were assessed. Read the cited primary material and relevant product documents before acting.</p>
+</div>
+<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://aswathdamodaran.blogspot.com/2016/11/myth-51-if-you-don-believe-in-forever.html" rel="noopener">Damodaran terminal value discussion</a></li><li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valuation/val.htm" rel="noopener">Damodaran valuation resources</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/finance/terminal-value-in-dcf-growth-vs-exit-multiple/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Ffinance%2Fterminal-value-in-dcf-growth-vs-exit-multiple%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/build-a-three-statement-financial-model-in-excel/" aria-label="Read How to Build a Three-Statement Financial Model in Excel"><img src="/assets/images/blog/build-a-three-statement-financial-model-in-excel/cover.svg" alt="Educational diagram explaining three statement model Excel" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/build-a-three-statement-financial-model-in-excel/">How to Build a Three-Statement Financial Model in Excel</a></h3>
+<p>Connect profit, balance-sheet movements and cash flow with schedules and model checks.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/dcf-valuation-in-excel-a-step-by-step-model/" aria-label="Read DCF Valuation in Excel: A Step-by-Step Discounted Cash Flow Model"><img src="/assets/images/blog/dcf-valuation-in-excel-a-step-by-step-model/cover.svg" alt="Educational diagram explaining DCF valuation Excel" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/dcf-valuation-in-excel-a-step-by-step-model/">DCF Valuation in Excel: A Step-by-Step Discounted Cash Flow Model</a></h3>
+<p>Forecast free cash flow, discount terminal value and bridge enterprise to equity value.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/excel-financial-modelling-functions-and-shortcuts/" aria-label="Read How to Use Excel for Financial Modelling: Essential Functions and Shortcuts"><img src="/assets/images/blog/excel-financial-modelling-functions-and-shortcuts/cover.svg" alt="Educational diagram explaining Excel financial modelling" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/excel-financial-modelling-functions-and-shortcuts/">How to Use Excel for Financial Modelling: Essential Functions and Shortcuts</a></h3>
+<p>Learn the Excel functions, references and controls used in practical financial models.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

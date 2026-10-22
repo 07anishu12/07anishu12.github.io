@@ -119,13 +119,14 @@ ${total > 1 ? `<nav class="blog-pagination" aria-label="Article pages">${Array.f
 function quickAnswer(post) {
   const q = post.quickAnswer;
   if (!q) return '';
+  const ctaText = post.category === 'auto' ? 'Read the full buying guide' : (post.category === 'finance' ? 'Read the full financial guide' : 'Read the full technical guide');
   return `<section class="blog-answer" aria-labelledby="article-answer">
 <p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">${e(q.question)}</h2>
 <p class="blog-answer-verdict">${e(q.answer)}</p>
 <dl class="blog-answer-facts"${q.note ? ' aria-describedby="article-answer-note"' : ''}>${q.facts.map(f => `<div><dt>${e(f.label)}</dt><dd>${e(f.value)}</dd></div>`).join('')}</dl>
 ${q.note ? `<p class="blog-answer-note" id="article-answer-note">${e(q.note)}</p>` : ''}
 <div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul>${q.goodFor.map(s => `<li>${e(s)}</li>`).join('')}</ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul>${q.watchFor.map(s => `<li>${e(s)}</li>`).join('')}</ul></div></div>
-<a class="blog-answer-read" href="#article-details">Read the full buying guide <span aria-hidden="true">↓</span></a>
+<a class="blog-answer-read" href="#article-details">${ctaText} <span aria-hidden="true">↓</span></a>
 </section>`;
 }
 
@@ -143,9 +144,11 @@ function article(post, posts, options = {}) {
   const crumbs = [{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog/' }, { name: category.name, url: `/blog/${post.category}/` }, { name: post.title, url: post.url }];
   return page({ ...options, title: post.seoTitle || post.title, description: post.description, url: post.url, post, breadcrumbs: crumbs, content: `
 <article class="blog-article" data-article-category="${post.category}" data-article-slug="${post.slug}">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
 <nav class="blog-breadcrumb" aria-label="Breadcrumb">${crumbs.slice(0, -1).map(c => `<a href="${c.url}">${e(c.name)}</a>`).join('<span aria-hidden="true">/</span>')}<span aria-current="page">Article</span></nav>
-<header class="blog-article-header"><a class="eyebrow" href="/blog/${post.category}/">${category.name}</a>
-<h1 id="article-title">${e(post.title)}</h1>${post.quickAnswer ? '' : `<p class="blog-description">${e(post.description)}</p>`}
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/${post.category}/">${category.name}</a></div>
+<h1 id="article-title">${e(post.title)}</h1>
+<p class="blog-description">${e(post.description)}</p>
 <div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">${e(post.author)}</a><span>Published <time datetime="${post.datePublished}">${date(post.datePublished)}</time></span>${post.dateModified && post.dateModified !== post.datePublished ? `<span>Updated <time datetime="${post.dateModified}">${date(post.dateModified)}</time></span>` : ''}<span>${post.readingTime} min read</span></div></header>
 ${quickAnswer(post)}
 <figure class="blog-cover"><img src="${e(post.coverImage)}" alt="${e(post.coverImageAlt)}" width="${post.width}" height="${post.height}" fetchpriority="high" decoding="async">${post.imageCaption || post.imageCredit || post.imageSourceUrl ? `<figcaption>${e(post.imageCaption || '')}${post.imageCredit ? ` · Credit: ${e(post.imageCredit)}` : ''}${post.imageSourceUrl ? ` · <a href="${e(post.imageSourceUrl)}" rel="noopener">Image source</a>` : ''}</figcaption>` : ''}</figure>

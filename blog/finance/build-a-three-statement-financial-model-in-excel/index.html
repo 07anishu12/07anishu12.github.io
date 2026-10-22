@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Build a Three-Statement Financial Model in Excel</title>
+<meta name="description" content="Connect profit, balance-sheet movements and cash flow with schedules and model checks.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/finance/build-a-three-statement-financial-model-in-excel/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Build a Three-Statement Financial Model in Excel">
+<meta property="og:description" content="Connect profit, balance-sheet movements and cash flow with schedules and model checks.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/finance/build-a-three-statement-financial-model-in-excel/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/build-a-three-statement-financial-model-in-excel/cover.svg">
+<meta property="og:image:alt" content="Educational diagram explaining three statement model Excel">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-22">
+<meta property="article:modified_time" content="2026-10-22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build a Three-Statement Financial Model in Excel">
+<meta name="twitter:description" content="Connect profit, balance-sheet movements and cash flow with schedules and model checks.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/build-a-three-statement-financial-model-in-excel/cover.svg">
+<meta name="twitter:image:alt" content="Educational diagram explaining three statement model Excel">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=6d70f1b31ae7">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Build a Three-Statement Financial Model in Excel","description":"Connect profit, balance-sheet movements and cash flow with schedules and model checks.","abstract":"A three-statement model links the income statement, balance sheet and cash flow statement so that operating assumptions explain profit, investment and financing.","url":"https://07anishu12.github.io/blog/finance/build-a-three-statement-financial-model-in-excel/","mainEntityOfPage":"https://07anishu12.github.io/blog/finance/build-a-three-statement-financial-model-in-excel/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/build-a-three-statement-financial-model-in-excel/cover.svg","width":1200,"height":675,"caption":"Educational diagram explaining three statement model Excel"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Finance","keywords":"Excel and financial modelling, three statement model Excel, financial model accounting","inLanguage":"en","wordCount":861}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Finance","item":"https://07anishu12.github.io/blog/finance/"},{"@type":"ListItem","position":4,"name":"How to Build a Three-Statement Financial Model in Excel","item":"https://07anishu12.github.io/blog/finance/build-a-three-statement-financial-model-in-excel/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="finance" data-article-slug="build-a-three-statement-financial-model-in-excel">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/finance/">Finance</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h1 id="article-title">How to Build a Three-Statement Financial Model in Excel</h1>
+<p class="blog-description">Connect profit, balance-sheet movements and cash flow with schedules and model checks.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-22">22 Oct 2026</time></span><span>5 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How to Build a Three-Statement Financial Model in Excel: Key Verdict &amp; Summary</h2>
+<p class="blog-answer-verdict">A three-statement model links the income statement, balance sheet and cash flow statement so that operating assumptions explain profit, investment and financing.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category &amp; Focus</dt><dd>Excel and financial modelling</dd></div><div><dt>Verified Word Count</dt><dd>861 words</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Verified Secondary Research</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Readers evaluating Excel and financial modelling.</li><li>Practitioners needing verified benchmarks and calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify dated prices and regional specifications before committing.</li><li>Review primary source disclosures and product documentation.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full financial guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/build-a-three-statement-financial-model-in-excel/cover.svg" alt="Educational diagram explaining three statement model Excel" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Proposed explanatory diagram showing three statement model Excel with clearly labelled illustrative figures.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Excel%20and%20financial%20modelling">Excel and financial modelling</a><a href="/blog/?tag=three%20statement%20model%20Excel">three statement model Excel</a><a href="/blog/?tag=financial%20model%20accounting">financial model accounting</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>9 sections</span></summary><ol><li class="toc-h2"><a href="#section-set-up-history-and-operating-assumptions">Set up history and operating assumptions</a></li><li class="toc-h2"><a href="#section-build-the-balance-sheet-schedules">Build the balance-sheet schedules</a></li><li class="toc-h2"><a href="#section-turn-accounting-profit-into-cash">Turn accounting profit into cash</a></li><li class="toc-h2"><a href="#section-link-cash-financing-and-checks">Link cash, financing and checks</a></li><li class="toc-h2"><a href="#section-quick-questions-clear-answers">Quick questions, clear answers</a></li><li class="toc-h3"><a href="#section-why-does-profit-rise-while-cash-falls">Why does profit rise while cash falls?</a></li><li class="toc-h3"><a href="#section-can-cash-be-the-balancing-plug">Can cash be the balancing plug?</a></li><li class="toc-h3"><a href="#section-how-detailed-should-a-first-model-be">How detailed should a first model be?</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>A three-statement model links the income statement, balance sheet and cash flow statement so that operating assumptions explain profit, investment and financing. Build supporting schedules before linking outputs. The balance sheet must balance because the accounting links are correct, not because a hidden plug forces the difference to zero.</p>
+<h2 id="section-set-up-history-and-operating-assumptions">Set up history and operating assumptions</h2>
+<p>Import several relevant historical periods with consistent units, accounting definitions and fiscal dates. Preserve a source reference beside each reported figure. Separate actuals from forecasts and identify restatements, discontinued operations or unusual events that make periods difficult to compare.</p>
+<p>Forecast revenue using a suitable driver, such as units multiplied by price, rather than applying one growth rate to every business. Forecast operating costs using a mix of variable relationships and explicit fixed costs. Show depreciation from the asset schedule and interest from the debt schedule, rather than hardcoding both independently.</p>
+<p>For a hypothetical first forecast year, assume revenue ₹1,000 lakh, cash operating costs ₹700 lakh and depreciation ₹50 lakh. EBIT is ₹250 lakh. With interest ₹30 lakh and an illustrative 25% tax assumption applied to positive pre-tax earnings, net profit is ₹165 lakh. The tax percentage is synthetic, not a current Indian statutory rate.</p>
+<h2 id="section-build-the-balance-sheet-schedules">Build the balance-sheet schedules</h2>
+<p>Receivables can be linked to revenue through days sales outstanding, inventory to cost of sales through inventory days, and payables to relevant purchases or costs through payable days. Choose denominators that match the business; not every payable finances cost of goods sold.</p>
+<p>A simple receivables estimate is <code>Revenue/365*ReceivableDays</code> for a 365-day annual model. It is an approximation using a closing-balance convention. Seasonal businesses may need monthly schedules because a year-end snapshot can misrepresent peak working-capital needs.</p>
+<p>Roll forward net fixed assets as opening net assets plus capital expenditure minus depreciation, with separate adjustments for disposals or impairments where relevant. Roll forward retained earnings as opening retained earnings plus profit less dividends and applicable adjustments. Keep share issues and debt movements in their own schedules.</p>
+<h2 id="section-turn-accounting-profit-into-cash">Turn accounting profit into cash</h2>
+<p>Under a simplified indirect approach, start with profit, add back non-cash charges and adjust for operating working-capital movements. A rise in receivables uses cash because recorded sales have not yet been collected. A rise in payables can release cash because relevant costs have not yet been paid.</p>
+<p>Continuing the hypothetical example, net profit ₹165 lakh plus depreciation ₹50 lakh minus a ₹40 lakh increase in operating working capital gives ₹175 lakh cash flow before other adjustments. Capital expenditure of ₹100 lakh leaves ₹75 lakh before financing movements.</p>
+<p><a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows.html/?trk=article-ssr-frontend-pulse_little-text-block">IAS 7's official overview</a> explains operating, investing and financing classifications and reconciliation of cash balances. Actual reporting must follow the company's applicable standards and effective requirements; this teaching model is not a complete Ind AS or IFRS reporting template.</p>
+<h2 id="section-link-cash-financing-and-checks">Link cash, financing and checks</h2>
+<p>If the business repays ₹20 lakh of principal and pays ₹15 lakh dividends, net cash increases by ₹40 lakh in this illustration. With opening cash ₹60 lakh, closing cash becomes ₹100 lakh. Debt declines by the principal repaid, while retained earnings reflect profit and dividends.</p>
+<p>Check assets minus liabilities minus equity in every period. Also check opening cash plus net cash movement equals closing cash and opening debt plus drawdowns minus principal repayments equals closing debt. Each control should be visible and close to zero within a defined rounding tolerance.</p>
+<p>Interest based on average debt can create circularity if debt depends on cash available after interest. Begin with a clearly documented simpler convention, or implement controlled iteration only when needed and understood. Do not switch on iterative calculation merely to hide a broken formula.</p>
+<p>Test a slower collection period, lower sales and higher capital expenditure. Explain why cash changes even where profit barely moves. The Excel logic here has not been executed in an application. Build a minimal linked model, validate each roll-forward, then add detail that affects the actual decision. A more elaborate workbook is not automatically a more reliable forecast.</p>
+<h2 id="section-quick-questions-clear-answers">Quick questions, clear answers</h2>
+<h3 id="section-why-does-profit-rise-while-cash-falls">Why does profit rise while cash falls?</h3>
+<p>Customers may pay later, inventory may increase or capital expenditure may consume cash. Profit recognises activity under accounting rules, while cash flow records collections and payments. Trace working-capital and investment schedules before assuming that a profitable company must have surplus cash.</p>
+<h3 id="section-can-cash-be-the-balancing-plug">Can cash be the balancing plug?</h3>
+<p>Cash should result from the cash flow and financing schedules. A designed revolver can fund an identified shortfall, subject to limits, but a hidden cash plug merely conceals missing links. Reconcile the movements and make any financing requirement explicit.</p>
+<h3 id="section-how-detailed-should-a-first-model-be">How detailed should a first model be?</h3>
+<p>Include enough detail to explain major economic drivers and risks. A small business may need customer collections and inventory more than dozens of valuation outputs. Start with transparent schedules and add complexity only where it changes forecast accuracy, financing needs or the decision being made.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this educational guide from secondary research checked on 22 October 2026. All numerical illustrations are hypothetical unless stated otherwise. No investment product was tested, and no individual financial circumstances were assessed. Read the cited primary material and relevant product documents before acting.</p>
+</div>
+<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows.html/?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener">IFRS Foundation IAS 7 overview</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/finance/build-a-three-statement-financial-model-in-excel/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Ffinance%2Fbuild-a-three-statement-financial-model-in-excel%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/dcf-valuation-in-excel-a-step-by-step-model/" aria-label="Read DCF Valuation in Excel: A Step-by-Step Discounted Cash Flow Model"><img src="/assets/images/blog/dcf-valuation-in-excel-a-step-by-step-model/cover.svg" alt="Educational diagram explaining DCF valuation Excel" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/dcf-valuation-in-excel-a-step-by-step-model/">DCF Valuation in Excel: A Step-by-Step Discounted Cash Flow Model</a></h3>
+<p>Forecast free cash flow, discount terminal value and bridge enterprise to equity value.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/excel-financial-modelling-functions-and-shortcuts/" aria-label="Read How to Use Excel for Financial Modelling: Essential Functions and Shortcuts"><img src="/assets/images/blog/excel-financial-modelling-functions-and-shortcuts/cover.svg" alt="Educational diagram explaining Excel financial modelling" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/excel-financial-modelling-functions-and-shortcuts/">How to Use Excel for Financial Modelling: Essential Functions and Shortcuts</a></h3>
+<p>Learn the Excel functions, references and controls used in practical financial models.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/excel-goal-seek-and-data-tables-for-sensitivity/" aria-label="Read Excel Goal Seek and Data Tables: How to Build Financial Sensitivity Analysis"><img src="/assets/images/blog/excel-goal-seek-and-data-tables-for-sensitivity/cover.svg" alt="Educational diagram explaining Excel sensitivity analysis" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/excel-goal-seek-and-data-tables-for-sensitivity/">Excel Goal Seek and Data Tables: How to Build Financial Sensitivity Analysis</a></h3>
+<p>Use Goal Seek to solve one input and Data Tables to compare financial scenarios.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>
