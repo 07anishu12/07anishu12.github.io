@@ -1,14 +1,14 @@
 # Medium Story Import Queue
 
-> Generated: 2026-10-23T19:56:55.034Z  
+> Generated: 2026-10-23T20:41:44.883Z  
 > Medium Account: [kumaraniketn](https://medium.com/@kumaraniketn)  
 > Mode: Official Webpage Import Queue (Semi-Automated)
 
 ## Summary
 
-- **Total Tracked Articles:** 155
+- **Total Tracked Articles:** 176
 - **Published on Medium:** 0
-- **Queued for Import:** 155
+- **Queued for Import:** 176
 - **Modified (Review Required):** 0
 - **Failed / Errors:** 0
 
@@ -177,3 +177,24 @@ To import each story to Medium using Medium's official webpage importer:
 | Queued | 2026-10-23 | Product Manager vs Project Manager vs Business Analyst: Key Differences Explained | [Portfolio Link](https://07anishu12.github.io/blog/product/product-manager-vs-project-manager-vs-business-analyst/) | [Import URL](https://medium.com/p/import) |
 | Queued | 2026-10-23 | What Does a Product Manager Do? Roles, Responsibilities and Daily Tasks | [Portfolio Link](https://07anishu12.github.io/blog/product/what-does-a-product-manager-do/) | [Import URL](https://medium.com/p/import) |
 | Queued | 2026-10-23 | What Is Product Management? A Complete Beginner's Guide | [Portfolio Link](https://07anishu12.github.io/blog/product/what-is-product-management/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | A/B Testing for Product Managers: Hypotheses, Sample Size and Results | [Portfolio Link](https://07anishu12.github.io/blog/product/ab-testing-for-product-managers/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Agile Product Management: Scrum, Kanban, Backlogs and Sprints | [Portfolio Link](https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | AI Product Management: LLMs, Evaluation, Costs and Product Safety | [Portfolio Link](https://07anishu12.github.io/blog/product/ai-product-management-llms-evaluation-costs-safety/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Best Product Management Tools: Jira, Linear, Notion, Figma and Alternatives | [Portfolio Link](https://07anishu12.github.io/blog/product/best-product-management-tools/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Customer Discovery for Product Managers: Interviews, Surveys and Research | [Portfolio Link](https://07anishu12.github.io/blog/product/customer-discovery-for-product-managers/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Go-to-Market Strategy for Product Managers: From Launch to Adoption | [Portfolio Link](https://07anishu12.github.io/blog/product/go-to-market-strategy-for-product-managers/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | How to Build a Product Roadmap: Templates, Examples and Best Practices | [Portfolio Link](https://07anishu12.github.io/blog/product/how-to-build-a-product-roadmap/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | How to Diagnose a Drop in Product Metrics: A Step-by-Step Framework | [Portfolio Link](https://07anishu12.github.io/blog/product/how-to-diagnose-a-drop-in-product-metrics/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | How to Write a Product Requirements Document (PRD) With a Real Example | [Portfolio Link](https://07anishu12.github.io/blog/product/how-to-write-a-product-requirements-document-prd/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Design for PMs: Wireframes, Prototypes and Usability Testing | [Portfolio Link](https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Management OKRs: How to Set Objectives and Key Results | [Portfolio Link](https://07anishu12.github.io/blog/product/product-management-okrs/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Manager Interview Preparation: Product Sense, Metrics and Strategy Cases | [Portfolio Link](https://07anishu12.github.io/blog/product/product-manager-interview-preparation/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product-Market Fit: Meaning, Metrics, Examples and Validation | [Portfolio Link](https://07anishu12.github.io/blog/product/product-market-fit-meaning-metrics-examples/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Metrics Explained: North Star Metric, KPIs, DAU, MAU and Retention | [Portfolio Link](https://07anishu12.github.io/blog/product/product-metrics-explained-north-star-kpis-retention/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Operations Explained: Processes, Tools, Data and Scaling Product Teams | [Portfolio Link](https://07anishu12.github.io/blog/product/product-operations-explained/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Strategy Explained: Vision, Goals, Positioning and Execution | [Portfolio Link](https://07anishu12.github.io/blog/product/product-strategy-explained/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | RICE, MoSCoW and ICE: How to Prioritize Product Features | [Portfolio Link](https://07anishu12.github.io/blog/product/rice-moscow-ice-prioritization-frameworks/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Stakeholder Management: How Product Managers Align Teams and Handle Conflict | [Portfolio Link](https://07anishu12.github.io/blog/product/stakeholder-management-for-product-managers/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | User Personas, Jobs to Be Done and Customer Journey Mapping | [Portfolio Link](https://07anishu12.github.io/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | What Is an MVP? How to Define Scope and Validate a Product Idea | [Portfolio Link](https://07anishu12.github.io/blog/product/what-is-an-mvp-minimum-viable-product/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Why Products Fail: Root-Cause Analysis, Postmortems and Lessons Learned | [Portfolio Link](https://07anishu12.github.io/blog/product/why-products-fail-root-cause-analysis-postmortems/) | [Import URL](https://medium.com/p/import) |
