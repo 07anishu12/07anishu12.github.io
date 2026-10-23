@@ -930,6 +930,132 @@
       "reviewer": "Aniket Thakur",
       "reviewedOn": "2026-10-23",
       "note": "Author-reviewed and verified career transition and portfolio guide."
+    },
+    "/blog/product/best-product-management-tools/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Best Product Management Tools: Jira, Linear, Notion, Figma and Alternatives)."
+    },
+    "/blog/product/product-strategy-explained/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product Strategy Explained: Vision, Goals, Positioning and Execution)."
+    },
+    "/blog/product/how-to-build-a-product-roadmap/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (How to Build a Product Roadmap: Templates, Examples and Best Practices)."
+    },
+    "/blog/product/rice-moscow-ice-prioritization-frameworks/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (RICE, MoSCoW and ICE: How to Prioritize Product Features)."
+    },
+    "/blog/product/how-to-write-a-product-requirements-document-prd/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (How to Write a Product Requirements Document (PRD) With a Real Example)."
+    },
+    "/blog/product/product-management-okrs/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product Management OKRs: How to Set Objectives and Key Results)."
+    },
+    "/blog/product/customer-discovery-for-product-managers/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Customer Discovery for Product Managers: Interviews, Surveys and Research)."
+    },
+    "/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (User Personas, Jobs to Be Done and Customer Journey Mapping)."
+    },
+    "/blog/product/product-market-fit-meaning-metrics-examples/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product-Market Fit: Meaning, Metrics, Examples and Validation)."
+    },
+    "/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product Design for PMs: Wireframes, Prototypes and Usability Testing)."
+    },
+    "/blog/product/what-is-an-mvp-minimum-viable-product/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (What Is an MVP? How to Define Scope and Validate a Product Idea)."
+    },
+    "/blog/product/agile-product-management-scrum-kanban/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Agile Product Management: Scrum, Kanban, Backlogs and Sprints)."
+    },
+    "/blog/product/product-metrics-explained-north-star-kpis-retention/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product Metrics Explained: North Star Metric, KPIs, DAU, MAU and Retention)."
+    },
+    "/blog/product/ab-testing-for-product-managers/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (A/B Testing for Product Managers: Hypotheses, Sample Size and Results)."
+    },
+    "/blog/product/go-to-market-strategy-for-product-managers/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Go-to-Market Strategy for Product Managers: From Launch to Adoption)."
+    },
+    "/blog/product/stakeholder-management-for-product-managers/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Stakeholder Management: How Product Managers Align Teams and Handle Conflict)."
+    },
+    "/blog/product/how-to-diagnose-a-drop-in-product-metrics/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (How to Diagnose a Drop in Product Metrics: A Step-by-Step Framework)."
+    },
+    "/blog/product/why-products-fail-root-cause-analysis-postmortems/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Why Products Fail: Root-Cause Analysis, Postmortems and Lessons Learned)."
+    },
+    "/blog/product/ai-product-management-llms-evaluation-costs-safety/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (AI Product Management: LLMs, Evaluation, Costs and Product Safety)."
+    },
+    "/blog/product/product-manager-interview-preparation/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product Manager Interview Preparation: Product Sense, Metrics and Strategy Cases)."
+    },
+    "/blog/product/product-operations-explained/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management guide (Product Operations Explained: Processes, Tools, Data and Scaling Product Teams)."
     }
   }
 }

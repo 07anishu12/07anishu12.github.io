@@ -110,31 +110,39 @@ Role overlap depends heavily on the type of company:
 The following swimlane diagram illustrates how a Product Manager, Business Analyst, and Project Manager collaborate on an enterprise lending release without overlapping responsibilities:
 
 ```mermaid
-flowchart TB
-    subgraph PM ["Product Manager (Why & What)"]
-        P1[Identifies High Churn in Loan Disbursal & Sets KPI Target: Cut Disbursal Time by 50%]
-        P2[Prioritizes 'Tranche-Based Instant Disbursal' on Roadmap & Defines MVP Scope]
-        P3[Audits Post-Launch Adoption & Cohort Retention]
+flowchart TD
+    subgraph S1 ["1. Strategic Opportunity & Scope (Product Manager)"]
+        P1["Identify Customer Problem: High Churn in Loan Disbursal Flow"]
+        P2["Define Success Target & Scope: Cut Disbursal Time by 50%"]
+        P1 --> P2
     end
-    subgraph BA ["Business Analyst (Detailed Operational & System Rules)"]
-        B1[Maps 'As-Is' vs 'To-Be' Ledger Accounting & Escrow State Transitions]
-        B2[Authors Field-Level API Mapping Table Between LOS and Core Banking ERP]
-        B3[Executes Edge-Case UAT Reconciliation Scripts]
+
+    subgraph S2 ["2. Cross-Functional Specification & Delivery Planning"]
+        subgraph BA ["Business Analyst (System Logic)"]
+            B1["Map NBFC ledger rules & KYC data contracts"]
+            B2["Specify edge cases: Partial KYC & fallback logic"]
+            B1 --> B2
+        end
+
+        subgraph PjM ["Project Manager (Delivery Schedule)"]
+            M1["Map critical path dependencies across squads"]
+            M2["Manage 6-week milestone sprints & API SLAs"]
+            M1 --> M2
+        end
     end
-    subgraph PJM ["Project Manager / TPM (Cross-Team Schedule & Risk)"]
-        J1[Builds Dependency Schedule Across Core Banking, Infosec, Partner Bank API & Mobile App]
-        J2[Tracks RAID Log & Escalates Partner Bank Sandbox Delay]
-        J3[Coordinates Cutover Runbook & Go-Live Sign-Off]
+
+    subgraph S3 ["3. Execution, Deployment & Validation"]
+        E1["Engineering & QA Build Sprints (against PRD and API contracts)"]
+        E2["Production Deployment & Phased Feature-Flag Rollout"]
+        E3["Impact Audit: PM measures disbursal speed vs 50% target"]
+        E1 --> E2 --> E3
     end
-    P1 --> P2
-    P2 --> B1
-    P2 --> J1
-    B1 --> B2
-    J1 --> J2
-    B2 --> B3
-    J2 --> J3
-    B3 --> J3
-    J3 --> P3
+
+    P2 ==>|"Passes Product Scope"| BA
+    P2 ==>|"Aligns Delivery Window"| PjM
+    B2 ==>|"Supplies API Contracts"| E1
+    M2 ==>|"Clears Critical Path"| E1
+    E3 --> Phase2["PM & Trio evaluate outcome and decide Phase 2 priorities"]
 ```
 
 ## Practical Worked Example: Launching a Tranche-Based Loan Payment System

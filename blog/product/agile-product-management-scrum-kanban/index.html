@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Agile Product Management: Scrum, Kanban, Backlogs &amp; Sprints</title>
+<meta name="description" content="Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide accountabilities, Dual-Track Agile discovery, backlog refinement, and Little&#39;s Law math.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Agile Product Management: Scrum, Kanban, Backlogs &amp; Sprints">
+<meta property="og:description" content="Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide accountabilities, Dual-Track Agile discovery, backlog refinement, and Little&#39;s Law math.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/agile-product-management-scrum-kanban/cover.svg">
+<meta property="og:image:alt" content="Diagram showing Dual-Track Agile connecting continuous discovery with Scrum sprint execution and Kanban WIP-limited flow.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-23">
+<meta property="article:modified_time" content="2026-10-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agile Product Management: Scrum, Kanban, Backlogs &amp; Sprints">
+<meta name="twitter:description" content="Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide accountabilities, Dual-Track Agile discovery, backlog refinement, and Little&#39;s Law math.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/agile-product-management-scrum-kanban/cover.svg">
+<meta name="twitter:image:alt" content="Diagram showing Dual-Track Agile connecting continuous discovery with Scrum sprint execution and Kanban WIP-limited flow.">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=b70b1bdb2eea">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agile Product Management: Scrum, Kanban, Backlogs and Sprints","description":"Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide accountabilities, Dual-Track Agile discovery, backlog refinement, and Little's Law math.","abstract":"Agile product management uses Dual-Track Agile to run continuous discovery 1–2 sprints ahead of delivery, while managing execution flow through backlogs, sprints, and Kanban WIP limits.","url":"https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/","mainEntityOfPage":"https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/agile-product-management-scrum-kanban/cover.svg","width":1200,"height":675,"caption":"Diagram showing Dual-Track Agile connecting continuous discovery with Scrum sprint execution and Kanban WIP-limited flow."},"datePublished":"2026-10-23","dateModified":"2026-10-23","articleSection":"Product","keywords":"Agile Product Management`, Scrum Vs Kanban For Product Managers, Backlog Refinement Best Practices, Sprint Goal Examples, Dual Track Agile Discovery Delivery","inLanguage":"en","wordCount":2941}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Product","item":"https://07anishu12.github.io/blog/product/"},{"@type":"ListItem","position":4,"name":"Agile Product Management: Scrum, Kanban, Backlogs and Sprints","item":"https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="product" data-article-slug="agile-product-management-scrum-kanban">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/product/">Product</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h1 id="article-title">Agile Product Management: Scrum, Kanban, Backlogs and Sprints</h1>
+<p class="blog-description">Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide accountabilities, Dual-Track Agile discovery, backlog refinement, and Little&#39;s Law math.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-23">23 Oct 2026</time></span><span>15 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How do modern product managers practice Agile with Scrum and Kanban?</h2>
+<p class="blog-answer-verdict">Agile product management uses Dual-Track Agile to run continuous discovery 1–2 sprints ahead of delivery, while managing execution flow through backlogs, sprints, and Kanban WIP limits.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Dual-Track Agile</dt><dd>Discovery track feeds validated user stories to delivery track</dd></div><div><dt>Scrum Rhythms</dt><dd>Sprint Planning, Daily Standup, Backlog Grooming, Retros</dd></div><div><dt>Kanban WIP Limits</dt><dd>Cap work-in-progress to reduce cycle time and context switching</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Agile Product Execution</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>PMs seeking to eliminate sprint fire drills and mid-sprint requirement changes.</li><li>Engineering teams balancing technical maintenance with feature velocity.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Do not turn Agile ceremonies into bureaucratic micromanagement meetings.</li><li>Refine tickets with engineering at least 1 sprint before sprint planning.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full product guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/agile-product-management-scrum-kanban/cover.svg" alt="Diagram showing Dual-Track Agile connecting continuous discovery with Scrum sprint execution and Kanban WIP-limited flow." width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram showing agile product management: scrum, kanban, backlogs and sprints.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Agile%20Product%20Management%60">Agile Product Management`</a><a href="/blog/?tag=Scrum%20Vs%20Kanban%20For%20Product%20Managers">Scrum Vs Kanban For Product Managers</a><a href="/blog/?tag=Backlog%20Refinement%20Best%20Practices">Backlog Refinement Best Practices</a><a href="/blog/?tag=Sprint%20Goal%20Examples">Sprint Goal Examples</a><a href="/blog/?tag=Dual%20Track%20Agile%20Discovery%20Delivery">Dual Track Agile Discovery Delivery</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>23 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-scrum-fundamentals-for-product-managers-grounded-in-the-2020-scrum-guide">1. Scrum Fundamentals for Product Managers (Grounded in The 2020 Scrum Guide)</a></li><li class="toc-h3"><a href="#section-the-three-accountabilities-in-a-scrum-team-typically-le-10-people">The Three Accountabilities in a Scrum Team (Typically $\le 10$ People)</a></li><li class="toc-h3"><a href="#section-the-three-scrum-artifacts-and-their-official-2020-commitments">The Three Scrum Artifacts and Their Official 2020 Commitments</a></li><li class="toc-h2"><a href="#section-2-kanban-and-little-s-law-managing-continuous-flow-via-wip-limits">2. Kanban and Little&#39;s Law: Managing Continuous Flow via WIP Limits</a></li><li class="toc-h2"><a href="#section-3-dual-track-agile-preventing-sprint-starvation-and-design-on-the-fly">3. Dual-Track Agile: Preventing &quot;Sprint Starvation&quot; and &quot;Design-on-the-Fly&quot;</a></li><li class="toc-h2"><a href="#section-frameworks-and-comparison-tables">Frameworks and Comparison Tables</a></li><li class="toc-h3"><a href="#section-table-16-1-choosing-your-execution-cadence-scrum-vs-kanban-vs-scrumban">Table 16.1: Choosing Your Execution Cadence — Scrum vs. Kanban vs. Scrumban</a></li><li class="toc-h3"><a href="#section-table-16-2-definition-of-ready-dor-vs-definition-of-done-dod-governance-checklist">Table 16.2: Definition of Ready (DoR) vs. Definition of Done (DoD) Governance Checklist</a></li><li class="toc-h2"><a href="#section-visualizing-the-framework">Visualizing the Framework</a></li><li class="toc-h2"><a href="#section-practical-worked-example">Practical Worked Example</a></li><li class="toc-h2"><a href="#section-part-1-calculating-focus-adjusted-sprint-capacity-preventing-overcommitment">Part 1: Calculating Focus-Adjusted Sprint Capacity (Preventing Overcommitment)</a></li><li class="toc-h2"><a href="#section-part-2-applying-little-s-law-wip-limits-to-slash-cycle-time">Part 2: Applying Little&#39;s Law &amp; WIP Limits to Slash Cycle Time</a></li><li class="toc-h2"><a href="#section-common-mistakes-and-limitations">Common Mistakes and Limitations</a></li><li class="toc-h2"><a href="#section-practical-implementation-checklist">Practical Implementation Checklist</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-1-should-a-product-manager-attend-the-daily-standup-daily-scrum-every-day-and-what-should-they-say">1. Should a Product Manager attend the Daily Standup (Daily Scrum) every day, and what should they say?</a></li><li class="toc-h3"><a href="#section-2-story-points-vs-noestimates-counting-stories-or-engineering-days-which-is-better-in-2026">2. Story Points vs. NoEstimates (Counting Stories or Engineering Days): Which is better in 2026?</a></li><li class="toc-h3"><a href="#section-3-what-should-a-product-manager-do-when-a-stakeholder-demands-adding-an-urgent-feature-in-the-middle-of-an-active-2-week-sprint">3. What should a Product Manager do when a stakeholder demands adding an urgent feature in the middle of an active 2-week Sprint?</a></li><li class="toc-h3"><a href="#section-4-how-should-bugs-and-technical-debt-be-prioritized-alongside-new-features-in-the-product-backlog">4. How should bugs and technical debt be prioritized alongside new features in the Product Backlog?</a></li><li class="toc-h3"><a href="#section-5-what-happens-when-a-squad-finishes-only-80-of-a-user-story-by-the-last-day-of-the-sprint">5. What happens when a squad finishes only 80% of a user story by the last day of the Sprint?</a></li><li class="toc-h3"><a href="#section-6-how-does-agile-product-management-work-when-building-hardware-or-ai-models-with-long-training-cycles">6. How does Agile Product Management work when building hardware or AI models with long training cycles?</a></li><li class="toc-h2"><a href="#section-next-steps-and-recommended-reading">Next Steps and Recommended Reading</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>Walk into many self-described &quot;Agile&quot; enterprises and you will witness a masterclass in theatrical bureaucracy: teams spend four hours every Monday debating whether a ticket is 3 story points or 5 story points, hold 45-minute daily status interrogations, and still require nine months to ship a customer-facing change because requirements are locked a year in advance. Industry practitioners call this anti-pattern <strong>Water-Scrum-Fall</strong>—wrapping a rigid waterfall feature factory inside two-week Scrum vocabulary.</p>
+<p>True <strong>Agile Product Management</strong>—rooted in the 2001 <em>Agile Manifesto</em> and codified in Ken Schwaber and Jeff Sutherland's official <a href="https://scrumguides.org/scrum-guide.html"><em>2020 Scrum Guide</em></a> alongside Lean Kanban flow theory—exists for one purpose: <strong>maximizing empirical learning and customer value delivery under conditions of high uncertainty</strong>. Rather than treating Agile as a rigid checklist of rituals, an effective Product Manager understands how to choose between time-boxed <strong>Scrum</strong> and continuous-flow <strong>Kanban</strong>, how to synchronize <strong>Dual-Track Agile</strong> (so discovery stays 1–2 sprints ahead of engineering delivery), and how to govern <strong>Product Backlog Refinement</strong>, <strong>Sprint Goals</strong>, and <strong>Work-in-Progress (WIP) limits</strong>. This guide breaks down the official Scrum accountabilities and artifacts, compares Scrum vs. Kanban vs. Scrumban, and walks through a quantitative sprint capacity and Little's Law cycle-time calculation.</p>
+<h2 id="section-1-scrum-fundamentals-for-product-managers-grounded-in-the-2020-scrum-guide">1. Scrum Fundamentals for Product Managers (Grounded in <em>The 2020 Scrum Guide</em>)</h2>
+<p>As defined by Scrum co-creators Ken Schwaber and Jeff Sutherland on <a href="https://scrumguides.org/scrum-guide.html">ScrumGuides.org</a> (and summarized in <a href="https://www.learnsignal.com/blog/scrum-guide-roles-events-artifacts-explained-guide/">Learnsignal's 2020 Scrum Guide Analysis</a>), Scrum is built on <strong>empiricism</strong> (transparency, inspection, and adaptation) and organizes work around three specific accountabilities, three artifacts (each paired with a formal commitment), and five time-boxed events:</p>
+<h3 id="section-the-three-accountabilities-in-a-scrum-team-typically-le-10-people">The Three Accountabilities in a Scrum Team (Typically $\le 10$ People)</h3>
+<ol>
+<li><strong>Product Owner (Typically fulfilled by the Product Manager in tech companies):</strong> Accountable for maximizing the value of the product resulting from the work of the Scrum Team and for effective <strong>Product Backlog management</strong>—including articulating the Product Goal, ordering backlog items clearly, and ensuring backlog transparency. Crucially, the Product Owner is <strong>one person, not a committee</strong>.</li>
+<li><strong>Scrum Master:</strong> Accountable for establishing Scrum as defined in the Scrum Guide and improving the Scrum Team's effectiveness by removing organizational impediments and coaching flow (often fulfilled by a rotating Tech Lead, Engineering Manager, or agile coach in modern software squads).</li>
+<li><strong>Developers:</strong> The cross-functional professionals (software engineers, UX designers, QA specialists) committed to creating any aspect of a usable Increment each Sprint.</li>
+</ol>
+<h3 id="section-the-three-scrum-artifacts-and-their-official-2020-commitments">The Three Scrum Artifacts and Their Official 2020 Commitments</h3>
+<ul>
+<li><strong>Artifact 1: Product Backlog $\rightarrow$ Commitment: <em>Product Goal</em>:</strong> An emergent, ordered list of what is needed to improve the product, anchored by a long-term <strong>Product Goal</strong> (which aligns directly with your quarterly OKR, <strong>Article 10</strong>).</li>
+<li><strong>Artifact 2: Sprint Backlog $\rightarrow$ Commitment: <em>Sprint Goal</em>:</strong> Composed of the <strong>Sprint Goal</strong> (the <em>why</em>—a single coherent outcome objective for the Sprint), the set of Product Backlog items selected for the Sprint (the <em>what</em>), and an actionable plan for delivering them (the <em>how</em>).</li>
+<li><strong>Artifact 3: Increment $\rightarrow$ Commitment: <em>Definition of Done (DoD)</em>:</strong> A concrete, verified stepping stone toward the Product Goal. The moment a Product Backlog item meets the formal <strong>Definition of Done</strong> (e.g., unit/integration tests passing, security checks green, telemetry events verified, staged behind a feature flag), an Increment is born.</li>
+</ul>
+<h2 id="section-2-kanban-and-little-s-law-managing-continuous-flow-via-wip-limits">2. Kanban and Little's Law: Managing Continuous Flow via WIP Limits</h2>
+<p>While Scrum organizes work into fixed time-boxes (typically 2-week Sprints, or <em>Cycles</em> in <a href="https://linear.app/pricing">Linear</a>), <strong>Kanban</strong> (adapted for software by David J. Anderson from Toyota's Lean production system) manages work as a <strong>continuous, pull-based flow</strong> without fixed sprint boundaries.</p>
+<p>Kanban is governed by <strong>Little's Law</strong> from queueing theory:
+$$\text{Average Cycle Time} = \frac{\text{Average Work in Progress (WIP)}}{\text{Average Throughput}}$$
+For example, if a 6-engineer squad has a steady throughput of <strong>6 completed stories per week</strong>, and they allow <strong>24 stories to sit &quot;In Progress&quot; simultaneously ($\text{WIP} = 24$)</strong> because every developer is multitasking across 4 half-finished tickets, the average time required for any single story to finish (<strong>Cycle Time</strong>) balloons to $\frac{24}{6} = \mathbf{4.0\text{ weeks}}$. If the team enforces a strict <strong>WIP Limit of 6 items in progress at once ($\text{WIP} = 6$)</strong>, developers finish and code-review active items before pulling new ones, slashing <strong>Average Cycle Time</strong> from $4.0\text{ weeks}$ down to $\frac{6}{6} = \mathbf{1.0\text{ week}}$ without anyone working longer hours!</p>
+<h2 id="section-3-dual-track-agile-preventing-sprint-starvation-and-design-on-the-fly">3. Dual-Track Agile: Preventing &quot;Sprint Starvation&quot; and &quot;Design-on-the-Fly&quot;</h2>
+<p>The single biggest failure mode in Agile product management occurs when a PM tries to run customer discovery (<strong>Article 11</strong>) and UX usability testing (<strong>Article 14</strong>) <em>inside</em> the exact same 2-week sprint in which engineers are expected to code the feature. By Day 3 of the sprint, engineers are sitting idle waiting for <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> screens; by Day 8, the designer rushes an untested mockup into code just to &quot;make the sprint.&quot;</p>
+<p><strong>Dual-Track Agile</strong> solves this by running two parallel, continuously synchronized tracks within the same Product Trio:</p>
+<ul>
+<li><strong>The Discovery Track (Looking 1–2 Sprints Ahead — Sprints $N+1$ and $N+2$):</strong> The PM, Product Designer, and Tech Lead spend 20%–30% of their weekly capacity interviewing users, testing Figma prototypes, running 1-day technical spikes, and authoring the PRD (<strong>Article 09</strong>).</li>
+<li><strong>The Delivery Track (Current Sprint $N$):</strong> Only items that meet the <strong>Definition of Ready (DoR)</strong>—validated problem, usability-tested design, clear Gherkin acceptance criteria, and sized by engineers during <strong>Backlog Refinement</strong>—enter Sprint Planning for production coding.</li>
+</ul>
+<h2 id="section-frameworks-and-comparison-tables">Frameworks and Comparison Tables</h2>
+<h3 id="section-table-16-1-choosing-your-execution-cadence-scrum-vs-kanban-vs-scrumban">Table 16.1: Choosing Your Execution Cadence — Scrum vs. Kanban vs. Scrumban</h3>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:left" scope="col">Dimension</th>
+<th style="text-align:left" scope="col">Scrum (<a href="https://scrumguides.org/scrum-guide.html">2020 Scrum Guide</a>)</th>
+<th style="text-align:left" scope="col">Kanban (Continuous Flow)</th>
+<th style="text-align:left" scope="col">Scrumban (Hybrid Model)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Planning Cadence</strong></td>
+<td style="text-align:left">Fixed time-boxes (1–4 week Sprints; 2 weeks standard)</td>
+<td style="text-align:left">Continuous pull-based replenishment whenever WIP drops below limit</td>
+<td style="text-align:left">Fixed 2-week planning &amp; review cadence + Kanban WIP limits</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Scope Changes Mid-Cycle</strong></td>
+<td style="text-align:left">No changes allowed that endanger the committed <strong>Sprint Goal</strong></td>
+<td style="text-align:left">New top-priority item can be pulled into the next open WIP slot immediately</td>
+<td style="text-align:left">Protected Sprint Goal + small reserved buffer lane for urgent bugs</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Primary Flow Metric</strong></td>
+<td style="text-align:left"><strong>Sprint Velocity</strong> (Story points or stories completed per Sprint) &amp; Sprint Goal hit rate</td>
+<td style="text-align:left"><strong>Cycle Time</strong>, <strong>Lead Time</strong>, <strong>Throughput</strong>, and <strong>Cumulative Flow Diagram (CFD)</strong></td>
+<td style="text-align:left">Both <strong>Cycle Time</strong> (for flow speed) and <strong>Sprint Goal completion</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Estimation Requirement</strong></td>
+<td style="text-align:left">Relative sizing (Story Points: $1, 2, 3, 5, 8$ or Engineering Days)</td>
+<td style="text-align:left">Optional; often uses right-sized uniform items (Throughput counting)</td>
+<td style="text-align:left">Lightweight sizing to ensure stories fit inside a 2–3 day cycle time</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Best Product Fit</strong></td>
+<td style="text-align:left">Core product feature squads building multi-week roadmap initiatives</td>
+<td style="text-align:left">Platform/SRE teams, production bug-triage squads, and rapid Growth experiment teams</td>
+<td style="text-align:left">Scale-up product squads (e.g., teams using <a href="https://linear.app/pricing">Linear Cycles</a>) balancing roadmap bets with live customer issues</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-table-16-2-definition-of-ready-dor-vs-definition-of-done-dod-governance-checklist">Table 16.2: Definition of Ready (DoR) vs. Definition of Done (DoD) Governance Checklist</h3>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:left" scope="col">Gate</th>
+<th style="text-align:left" scope="col">Entry Gate: <strong>Definition of Ready (DoR)</strong> <em>(Required Before Pulling Into Sprint)</em></th>
+<th style="text-align:left" scope="col">Exit Gate: <strong>Definition of Done (DoD)</strong> <em>(Required Before Closing Story as Complete)</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>1. Problem &amp; Value</strong></td>
+<td style="text-align:left">User story clearly states persona, action, and expected outcome; linked to parent PRD</td>
+<td style="text-align:left">Feature verified by PM in staging environment against all PRD acceptance criteria</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>2. UX &amp; Design States</strong></td>
+<td style="text-align:left">Final <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> frames attached covering Empty, Loading, Ideal, Edge, and Error states</td>
+<td style="text-align:left">UI implementation reviewed by Product Designer (Design QA passed across mobile/desktop)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>3. Technical &amp; Sizing</strong></td>
+<td style="text-align:left">Dependencies resolved; story sized by engineers at $\le 3\text{–}5$ days of work (split if larger)</td>
+<td style="text-align:left">Peer code review approved; automated unit, integration, and regression tests passing ($\ge 85%$ coverage)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>4. Testability &amp; QA</strong></td>
+<td style="text-align:left">Deterministic Gherkin (<code>Given / When / Then</code>) acceptance criteria written</td>
+<td style="text-align:left">Zero P0/P1 defects open; p95 latency and security/RBAC permission checks verified</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>5. Telemetry &amp; Release</strong></td>
+<td style="text-align:left">Exact analytics event names and properties specified in ticket</td>
+<td style="text-align:left">Telemetry events verified firing in staging; wrapped in production feature flag with rollback switch</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-visualizing-the-framework">Visualizing the Framework</h2>
+<p>The following architecture diagram illustrates the workflow and decision criteria:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart LR
+    subgraph Discovery_Track[&quot;Discovery Track: Sprints N+1 &amp; N+2&quot;]
+        D1[&quot;Opportunity Tree &amp; User Interviews&quot;] --&gt; D2[&quot;Figma Prototype &amp; 5-User Usability Test&quot;]
+        D2 --&gt; D3[&quot;Tech Lead Feasibility Spike &amp; Draft PRD&quot;]
+    end
+    subgraph Refinement_Gate[Mid-Sprint Backlog Refinement]
+        D3 --&gt; R1[&quot;Meets Definition of Ready - DoR?&quot;]
+        R1 --&gt;|No: Missing Edge Cases or Too Large| D2
+        R1 --&gt;|Yes: Split into &lt;=3-Day Stories with Gherkin ACs| R2[Top of Ordered Product Backlog]
+    end
+    subgraph Delivery_Track[Delivery Track: Current Sprint N]
+        R2 --&gt; S1[Sprint Planning: Commit to Cohesive Sprint Goal]
+        S1 --&gt; S2[&quot;Daily Execution with WIP Limits &amp; Code Review&quot;]
+        S2 --&gt; S3[&quot;Meets Definition of Done - DoD?&quot;]
+        S3 --&gt;|Yes| S4[Shipped Increment + Telemetry Feedback to Discovery]
+    end</pre></div>
+<h2 id="section-practical-worked-example">Practical Worked Example</h2>
+<p><strong>Scenario (Hypothetical B2B SaaS Squad — <em>CloudInvoice Sprint 22 Planning</em>):</strong><br>
+Your squad uses 2-week sprints (10 working days per sprint) and consists of <strong>6 Software Engineers</strong>. Over the past 4 sprints, the team repeatedly committed to <strong>60 story points</strong> per sprint, finished only <strong>38 story points</strong>, and carried 22 half-finished points over to the next sprint, while average story <strong>Cycle Time</strong> ballooned to <strong>9.5 working days</strong>.</p>
+<h2 id="section-part-1-calculating-focus-adjusted-sprint-capacity-preventing-overcommitment">Part 1: Calculating Focus-Adjusted Sprint Capacity (Preventing Overcommitment)</h2>
+<ol>
+<li><strong>Historical Rolling Velocity (Empirical Baseline):</strong> Over Sprints 18, 19, 20, and 21, completed velocities were $36, 40, 38,\text{ and }38\text{ points}$ across $60\text{ available engineer-days per sprint}$.
+<ul>
+<li><strong>Empirical Velocity per Engineer-Day:</strong> $\frac{38\text{ avg points}}{60\text{ engineer-days}} = \mathbf{0.633\text{ points/engineer-day}}$.</li>
+</ul>
+</li>
+<li><strong>Accounting for Real-World Availability in Sprint 22:</strong>
+<ul>
+<li><strong>Gross Engineer-Days:</strong> $6\text{ engineers} \times 10\text{ days} = 60\text{ days}$.</li>
+<li><strong>Subtract Planned PTO &amp; Public Holiday:</strong> 1 Diwali/Regional holiday for all 6 engineers ($-6\text{ days}$) + Engineer B taking 3 days vacation ($-3\text{ days}$) = $-9\text{ days}$.</li>
+<li><strong>Subtract Rotating On-Call / Production Bug Triage (1 Engineer at 50% capacity):</strong> $-4.5\text{ days}$.</li>
+<li><strong>Net Available Feature Engineering Days for Sprint 22:</strong> $60 - 9 - 4.5 = \mathbf{46.5\text{ net engineer-days}}$.</li>
+</ul>
+</li>
+<li><strong>Focus-Adjusted Sprint 22 Commitment:</strong>
+$$\text{Sprint 22 Target Capacity} = 46.5\text{ net days} \times 0.633\text{ pts/day} = \mathbf{29.4 \approx 30\text{ story points}}$$
+Instead of blindly committing to 60 points (which guarantees a 50% failure rate during a holiday sprint), the PM and Tech Lead scope a cohesive <strong>30-point Sprint Goal</strong> (<em>&quot;Enable self-serve multi-currency invoice PDF generation for USD/EUR accounts&quot;</em>).</li>
+</ol>
+<h2 id="section-part-2-applying-little-s-law-wip-limits-to-slash-cycle-time">Part 2: Applying Little's Law &amp; WIP Limits to Slash Cycle Time</h2>
+<p>Why was average story Cycle Time previously stuck at <strong>9.5 working days</strong>? Auditing the <a href="https://www.atlassian.com/software/jira/pricing">Jira</a> / <a href="https://linear.app/pricing">Linear</a> board revealed that all 6 developers started 2 stories each on Day 1 ($\text{Active WIP} = 12\text{ stories}$), leaving 8 stories bottlenecked in the <code>Awaiting Code Review &amp; QA</code> column on Day 9 of the sprint.</p>
+<ul>
+<li><strong>Baseline State (No WIP Limit):</strong> $\text{Throughput} = 1.2\text{ stories/day}$ ($12\text{ stories per 10-day sprint}$); $\text{Average WIP} = 11.4\text{ stories} \rightarrow \text{Cycle Time} = \frac{11.4}{1.2} = \mathbf{9.5\text{ days}}$.</li>
+<li><strong>Intervention (Enforcing a Strict Column WIP Limit of $\text{Max WIP} = 4\text{ stories in Code}$ and $\text{Max WIP} = 2\text{ in Review}$):</strong> Developers pair on code reviews before pulling new tickets, keeping total active $\text{WIP} = 4.5\text{ stories}$ while Throughput rises slightly to $1.3\text{ stories/day}$ due to zero context-switching penalty:
+$$\text{New Average Cycle Time} = \frac{\text{WIP}}{\text{Throughput}} = \frac{4.5\text{ stories}}{1.3\text{ stories/day}} = \mathbf{3.46\text{ working days}}\ (-63.6%\text{ faster delivery})$$</li>
+</ul>
+<h2 id="section-common-mistakes-and-limitations">Common Mistakes and Limitations</h2>
+<ol>
+<li><strong>Weaponizing Story Points as an Individual Developer Performance Metric:</strong> Story points are an internal squad capacity-planning guesstimate of relative effort and uncertainty—never a measure of developer productivity or customer value. The moment management compares &quot;Story Points per Engineer&quot; across squads, developers simply inflate every 2-point ticket to 8 points, destroying planning accuracy.</li>
+<li><strong>Turning the Sprint Review into an Internal Box-Checking Demo:</strong> Per <a href="https://scrumguides.org/scrum-guide.html">The 2020 Scrum Guide</a>, the Sprint Review is a working inspection session with stakeholders to adapt the Product Backlog based on real market feedback, not a passive theatre presentation where nobody asks questions.</li>
+<li><strong>Skipping Backlog Refinement:</strong> When a PM cancels the mid-sprint 60-minute Backlog Refinement session, Sprint Planning on Monday morning drags on for 3 exhausting hours because engineers are seeing the requirements for the very first time.</li>
+</ol>
+<h2 id="section-practical-implementation-checklist">Practical Implementation Checklist</h2>
+<ul>
+<li>[ ] <strong>Cohesive Sprint Goal:</strong> Does our current Sprint have a single, outcome-oriented <strong>Sprint Goal</strong> sentence (rather than <em>&quot;Finish these 14 random unrelated Jira tickets&quot;</em>)?</li>
+<li>[ ] <strong>1.5-Sprint Refined Buffer:</strong> Are the top stories in our Product Backlog refined, sized ($\le 3\text{–}5$ days of work each), and meeting the <strong>Definition of Ready</strong> at least 1.5 sprints ahead?</li>
+<li>[ ] <strong>WIP Limit Enforcement:</strong> Have we set an explicit Work-in-Progress (WIP) limit on our <code>In Progress</code> and <code>In Code Review</code> columns ($\le 1.0\times$ the number of active engineers) to prevent Day-9 QA bottlenecks?</li>
+<li>[ ] <strong>Telemetry Inside Definition of Done:</strong> Does our squad's <strong>Definition of Done</strong> explicitly forbid closing a user story until its analytics events are verified firing in staging?</li>
+<li>[ ] <strong>Protected Discovery Track:</strong> Are the PM, Designer, and Tech Lead dedicating weekly time to Sprints $N+1 / N+2$ discovery so engineers never build unvalidated specs?</li>
+</ul>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-1-should-a-product-manager-attend-the-daily-standup-daily-scrum-every-day-and-what-should-they-say">1. Should a Product Manager attend the Daily Standup (Daily Scrum) every day, and what should they say?</h3>
+<p>Per <a href="https://scrumguides.org/scrum-guide.html">The 2020 Scrum Guide</a>, the Daily Scrum is a 15-minute event <strong>for the Developers</strong> to inspect progress toward the Sprint Goal and adapt their plan for the next 24 hours; if the Product Owner/PM is actively working on items in the Sprint Backlog, they participate as a Developer. In practice, PMs should attend to <strong>listen, unblock edge-case questions immediately after standup (&quot;in the parking lot&quot;), and share urgent customer/experiment context</strong>—never to interrogate engineers like a micromanager asking <em>&quot;Why did you only write 50 lines of code yesterday?&quot;</em></p>
+<h3 id="section-2-story-points-vs-noestimates-counting-stories-or-engineering-days-which-is-better-in-2026">2. Story Points vs. NoEstimates (Counting Stories or Engineering Days): Which is better in 2026?</h3>
+<p>Both work when applied consistently, and many modern high-velocity teams using <a href="https://linear.app/pricing">Linear</a> have moved away from abstract Fibonacci debates toward <strong>right-sizing every story to 1–3 engineering days</strong> and tracking <strong>Throughput (count of completed issues per cycle) and Cycle Time</strong>. If your team uses Fibonacci story points ($1, 2, 3, 5, 8$), cap any single sprint story at <strong>8 points max</strong> (anything rated $13+$ is an Epic that must be split during Backlog Refinement).</p>
+<h3 id="section-3-what-should-a-product-manager-do-when-a-stakeholder-demands-adding-an-urgent-feature-in-the-middle-of-an-active-2-week-sprint">3. What should a Product Manager do when a stakeholder demands adding an urgent feature in the middle of an active 2-week Sprint?</h3>
+<p>First, evaluate whether it is a true <strong>P0 Production Outage / Regulatory Blocker</strong> or merely an impatient feature request. If it is a routine feature request, protect the squad: explain that the current Sprint closes in $X$ days and offer to prioritize it at the top of the very next Sprint Planning session. If it is a genuine emergency that cannot wait 5 days, invoke the <strong>1-for-1 Swap Rule</strong> with the Tech Lead: pull an equivalent number of unstarted story points out of the active Sprint so the team does not fail its core commitment.</p>
+<h3 id="section-4-how-should-bugs-and-technical-debt-be-prioritized-alongside-new-features-in-the-product-backlog">4. How should bugs and technical debt be prioritized alongside new features in the Product Backlog?</h3>
+<p>Separate bugs into two buckets: (1) <strong>In-Sprint Defects</strong> discovered on a story currently being built (these must be fixed immediately <em>before</em> that story can pass the Definition of Done—never log them as separate backlog items to artificially inflate velocity); and (2) <strong>Escaped Production Bugs &amp; Tech Debt</strong>, which are mitigated by reserving a fixed <strong>15% KTLO + 20% Tech Debt capacity allocation</strong> every sprint (<strong>Article 07</strong>) rather than letting minor bugs pile up for two years.</p>
+<h3 id="section-5-what-happens-when-a-squad-finishes-only-80-of-a-user-story-by-the-last-day-of-the-sprint">5. What happens when a squad finishes only 80% of a user story by the last day of the Sprint?</h3>
+<p>In Scrum, <strong>partially done work receives zero velocity credit</strong> for the closing Sprint because it does not meet the <a href="https://scrumguides.org/scrum-guide.html">Definition of Done</a>. Do not artificially split a story into &quot;Part A (Code written — 3 pts)&quot; and &quot;Part B (Tested — 2 pts)&quot; just to make a burndown chart look pretty. Move the unfinished story into the next Sprint, re-estimate the remaining effort, and use the <strong>Sprint Retrospective</strong> to diagnose why it spilled over (usually because the story was too large or started on Day 8 of the sprint).</p>
+<h3 id="section-6-how-does-agile-product-management-work-when-building-hardware-or-ai-models-with-long-training-cycles">6. How does Agile Product Management work when building hardware or AI models with long training cycles?</h3>
+<p>When working with long-duration physical validation cycles (as discussed in Aniket Thakur's <a href="https://07anishu12.github.io/learnings.html">Physical AI &amp; Heavy Industry note</a>) or multi-day foundation model training runs, <strong>decouple the research/hardware cadence from the software integration cadence</strong>: run evaluation dataset creation, prompt/guardrail engineering, and simulation testing in rapid 1-to-2 week Agile iterations while long-lead hardware or base-model training milestones are governed on a synchronized program timeline.</p>
+<h2 id="section-next-steps-and-recommended-reading">Next Steps and Recommended Reading</h2>
+<p>Agile Product Management is not about worshiping story points or sitting in endless ceremonies—it is about establishing a fast, predictable rhythm of <strong>Dual-Track Discovery and WIP-Limited Delivery</strong> that turns validated customer insights into working software every single week.</p>
+<p><strong>Practical Next Step:</strong> Open your squad's active <a href="https://www.atlassian.com/software/jira/pricing">Jira</a> or <a href="https://linear.app/pricing">Linear</a> board right now and count the total number of tickets sitting in <code>In Progress</code> + <code>In Review</code>. If that number exceeds $1.5\times$ the number of engineers on your squad, propose a 2-sprint experiment enforcing a strict WIP limit and measure the resulting drop in Average Cycle Time.</p>
+<p><strong>Recommended Follow-Up Reading:</strong> Once your Agile delivery engine is shipping increments smoothly, read <strong>Article 17: Product Metrics Explained: North Star Metric, KPIs, DAU, MAU and Retention</strong> (<code>/blog/product/product-metrics-explained-north-star-kpis-retention/</code> — <em>Planned Destination</em>) to measure whether those shipped increments actually move customer behavior.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this comprehensive Product Management guide based on continuous discovery frameworks, operational research, and practitioner benchmarks checked on 24 October 2026. All quantitative scenarios in Section G are explicitly labelled hypothetical worked examples illustrating decision math.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://scrumguides.org/scrum-guide.html" rel="noopener">ScrumGuides.org Official Page</a></li><li><a href="https://www.learnsignal.com/blog/scrum-guide-roles-events-artifacts-explained-guide/" rel="noopener">Learnsignal 2020 Scrum Guide Summary</a></li><li><a href="https://07anishu12.github.io/learnings.html" rel="noopener">Knowledge Library &amp; Technical Notes — Aniket Thakur</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/product/agile-product-management-scrum-kanban/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Fproduct%2Fagile-product-management-scrum-kanban%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/product/ab-testing-for-product-managers/" aria-label="Read A/B Testing for Product Managers: Hypotheses, Sample Size and Results"><img src="/assets/images/blog/ab-testing-for-product-managers/cover.svg" alt="Diagram showing randomized Control vs Treatment split, OEC and Guardrail evaluation, Sample Ratio Mismatch check, and Type I vs Type II error matrix." width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h3><a href="/blog/product/ab-testing-for-product-managers/">A/B Testing for Product Managers: Hypotheses, Sample Size and Results</a></h3>
+<p>Master A/B testing for product managers: falsifiable hypotheses, sample size &amp; MDE formulas, guardrail metrics, Sample Ratio Mismatch (SRM), and p-value math.</p>
+<div class="blog-meta"><time datetime="2026-10-23">23 Oct 2026</time><span>16 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/product/ai-product-management-llms-evaluation-costs-safety/" aria-label="Read AI Product Management: LLMs, Evaluation, Costs and Product Safety"><img src="/assets/images/blog/ai-product-management-llms-evaluation-costs-safety/cover.svg" alt="Architecture diagram showing multi-model tiering, RAG context retrieval, deterministic Zod/Pydantic schema guardrails, and offline/online evaluation loops." width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h3><a href="/blog/product/ai-product-management-llms-evaluation-costs-safety/">AI Product Management: LLMs, Evaluation, Costs and Product Safety</a></h3>
+<p>Master AI Product Management in 2026: RAG vs fine-tuning, LLM evaluation datasets, TTFT latency budgets, token inference unit economics, and safety guardrails.</p>
+<div class="blog-meta"><time datetime="2026-10-23">23 Oct 2026</time><span>16 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/product/best-product-management-tools/" aria-label="Read Best Product Management Tools: Jira, Linear, Notion, Figma and Alternatives"><img src="/assets/images/blog/best-product-management-tools/cover.svg" alt="Architecture diagram and pricing comparison matrix of the modern product management tool stack across Jira, Linear, Notion, Figma, and Amplitude." width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h3><a href="/blog/product/best-product-management-tools/">Best Product Management Tools: Jira, Linear, Notion, Figma and Alternatives</a></h3>
+<p>Compare the best product management tools in 2026: Jira vs Linear, Notion, Figma, and analytics platforms with verified pricing tiers, limits, and stack TCO math.</p>
+<div class="blog-meta"><time datetime="2026-10-23">23 Oct 2026</time><span>17 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

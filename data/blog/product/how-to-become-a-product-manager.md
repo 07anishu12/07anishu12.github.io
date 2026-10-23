@@ -111,16 +111,29 @@ The following decision tree helps determine which entry pathway offers the highe
 
 ```mermaid
 flowchart TD
-    Start[Goal: Transition into Product Management] --> Q1{Does your current company have an engineering & product team?}
-    Q1 -- Yes --> PathA[Path A: Internal Lateral Transfer]
-    PathA --> A1[Shadow a PM, take over analytics and PRD drafts, and pitch internal move]
-    Q1 -- No --> Q2{Are you a final-year student or within 1 year of graduation?}
-    Q2 -- Yes --> PathC[Path C: APM Programs & Product Internships]
-    PathC --> C1[Build shipped technical projects and drill Product Sense and Analytical cases]
-    Q2 -- No --> Q3{Do you have 1-3+ years in a specific industry or technical niche?}
-    Q3 -- Yes --> PathB[Path B: Domain-Specialist PM Entry]
-    PathB --> B1[Target Series A-C startups in that domain with deep domain PRDs]
-    Q3 -- No --> PathD[Step-Stone Strategy: Join a tech company in Analytics or Ops first, then execute Path A]
+    Start["Goal: Transition into Product Management"] --> Strategy["Select Your Highest-Probability Entry Pathway Based on Background"]
+
+    subgraph P1 ["Pathway 1: Internal Lateral Transfer (Highest Success Rate: ~60%)"]
+        A1["Best for: Software engineers, product designers, data analysts, customer success"]
+        A2["Strategy: Shadow a squad PM, draft PRDs, lead telemetry audits, and transition without cold applying"]
+        A1 --> A2
+    end
+
+    subgraph P2 ["Pathway 2: Domain-Specialist Entry (SME to Vertical B2B PM)"]
+        B1["Best for: Industry practitioners in Fintech, Healthcare, Logistics, or Banking"]
+        B2["Strategy: Target vertical B2B SaaS startups where industry rules and workflows represent your unfair advantage"]
+        B1 --> B2
+    end
+
+    subgraph P3 ["Pathway 3: APM Programs & Startup Proof-of-Work (Generalist Entry)"]
+        C1["Best for: Recent graduates, career switchers without tech or domain background"]
+        C2["Strategy: Build a 3-piece verifiable portfolio: shipped micro-tool, product teardown & SQL analytics case study"]
+        C1 --> C2
+    end
+
+    Strategy --> P1
+    P1 --> P2
+    P2 --> P3
 ```
 
 ## Practical Worked Example: Rewriting a Resume Bullet

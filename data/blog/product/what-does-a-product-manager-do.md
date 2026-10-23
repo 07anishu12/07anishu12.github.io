@@ -125,13 +125,18 @@ The following workflow illustrates how a Product Manager triages incoming signal
 
 ```mermaid
 flowchart TD
-    A[Incoming Signals: User Friction, Telemetry, Business Goals, Tech Debt] --> B{Product Manager Triage & Synthesis}
-    B -->|Immediate Production Bug?| C[Triage Severity & Unblock Hotfix with Eng]
-    B -->|Validated High-Impact Problem?| D[Co-Design Solution with UX & Tech Lead]
-    B -->|Unvalidated Idea / Request?| E[Park in Discovery Queue & Run Lightweight Test]
-    D --> F[Author PRD, Edge Cases & Acceptance Criteria]
-    F --> G[Sprint Execution, UAT & Staged GTM Rollout]
-    G --> H[Measure Post-Launch Cohort Behavior vs Hypothesis]
+    Signals["Incoming Signals<br/>(User telemetry, customer friction, business OKRs, tech debt)"]
+    Triage{"Triage & Prioritize Signal<br/>(Impact vs Effort vs Strategy)"}
+
+    Signals --> Triage
+
+    Triage -->|"Production Blocker"| Hotfix["Hotfix Incident Triage<br/>(Unblock eng & communicate status)"]
+    Triage -->|"Validated High-ROI Need"| Discovery["Co-Design Solution<br/>(Product Trio: PM + Design + Tech Lead)"]
+    Triage -->|"Low ROI or Distraction"| Reject["Document Rationale & Close<br/>(Protect team focus & bandwidth)"]
+
+    Discovery --> PRD["Author Lean PRD<br/>(Scope, acceptance criteria & metrics)"]
+    PRD --> Sprint["Sprint Execution & Delivery<br/>(Backlog refinement, unblocking & QA review)"]
+    Sprint --> Launch["Launch & Measure Telemetry<br/>(Compare actual vs forecasted business impact)"]
 ```
 
 ## Practical Worked Example: Navigating a Mid-Sprint Scope Trade-Off

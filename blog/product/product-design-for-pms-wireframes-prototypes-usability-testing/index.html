@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Product Design for PMs: Wireframes, Prototypes &amp; Usability Tests</title>
+<meta name="description" content="Learn product design for product managers: wireframe vs prototype fidelity, Jakob Nielsen&#39;s 10 usability heuristics, the 5-user test math, and test scripts.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Product Design for PMs: Wireframes, Prototypes &amp; Usability Tests">
+<meta property="og:description" content="Learn product design for product managers: wireframe vs prototype fidelity, Jakob Nielsen&#39;s 10 usability heuristics, the 5-user test math, and test scripts.">
+<meta property="og:url" content="https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/">
+<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/product-design-for-pms-wireframes-prototypes-usability-testing/cover.svg">
+<meta property="og:image:alt" content="Diagram showing the 4-step design fidelity ladder from sketch to interactive prototype alongside Jakob Nielsen&#39;s 5-user usability problem discovery curve.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-23">
+<meta property="article:modified_time" content="2026-10-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Product Design for PMs: Wireframes, Prototypes &amp; Usability Tests">
+<meta name="twitter:description" content="Learn product design for product managers: wireframe vs prototype fidelity, Jakob Nielsen&#39;s 10 usability heuristics, the 5-user test math, and test scripts.">
+<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/product-design-for-pms-wireframes-prototypes-usability-testing/cover.svg">
+<meta name="twitter:image:alt" content="Diagram showing the 4-step design fidelity ladder from sketch to interactive prototype alongside Jakob Nielsen&#39;s 5-user usability problem discovery curve.">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=b70b1bdb2eea">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=249c63e7b5a6" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Product Design for PMs: Wireframes, Prototypes and Usability Testing","description":"Learn product design for product managers: wireframe vs prototype fidelity, Jakob Nielsen's 10 usability heuristics, the 5-user test math, and test scripts.","abstract":"PMs partner with product designers to evaluate wireframes, establish clear information architecture, and run 5-user usability tests that identify ~85% of usability flaws before engineering begins.","url":"https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/","mainEntityOfPage":"https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/product-design-for-pms-wireframes-prototypes-usability-testing/cover.svg","width":1200,"height":675,"caption":"Diagram showing the 4-step design fidelity ladder from sketch to interactive prototype alongside Jakob Nielsen's 5-user usability problem discovery curve."},"datePublished":"2026-10-23","dateModified":"2026-10-23","articleSection":"Product","keywords":"Product Design For Product Managers`, Wireframe Vs Mockup Vs Prototype, Usability Testing 5 Users Nielsen, Ten Usability Heuristics Jakob Nielsen, Pm Designer Collaboration","inLanguage":"en","wordCount":3145}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Product","item":"https://07anishu12.github.io/blog/product/"},{"@type":"ListItem","position":4,"name":"Product Design for PMs: Wireframes, Prototypes and Usability Testing","item":"https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/"}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="product" data-article-slug="product-design-for-pms-wireframes-prototypes-usability-testing">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/product/">Product</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h1 id="article-title">Product Design for PMs: Wireframes, Prototypes and Usability Testing</h1>
+<p class="blog-description">Learn product design for product managers: wireframe vs prototype fidelity, Jakob Nielsen&#39;s 10 usability heuristics, the 5-user test math, and test scripts.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-23">23 Oct 2026</time></span><span>16 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How do product managers collaborate on UX design and usability testing?</h2>
+<p class="blog-answer-verdict">PMs partner with product designers to evaluate wireframes, establish clear information architecture, and run 5-user usability tests that identify ~85% of usability flaws before engineering begins.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>5-User Usability Rule</dt><dd>5 target users uncover 85% of core UX usability defects (NN/g)</dd></div><div><dt>PM Responsibility</dt><dd>Problem framing, edge states, and business logic</dd></div><div><dt>Designer Responsibility</dt><dd>Interaction design, visual hierarchy, and component systems</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · UX &amp; Usability Testing</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>PMs conducting quick qualitative usability audits on interactive prototypes.</li><li>Design and engineering teams seeking seamless Figma-to-code handoffs.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Never prompt users during usability testing; observe where they get stuck.</li><li>Ensure all empty, loading, error, and partial-permission states are specified.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full product guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/product-design-for-pms-wireframes-prototypes-usability-testing/cover.svg" alt="Diagram showing the 4-step design fidelity ladder from sketch to interactive prototype alongside Jakob Nielsen&#39;s 5-user usability problem discovery curve." width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram showing product design for pms: wireframes, prototypes and usability testing.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Product%20Design%20For%20Product%20Managers%60">Product Design For Product Managers`</a><a href="/blog/?tag=Wireframe%20Vs%20Mockup%20Vs%20Prototype">Wireframe Vs Mockup Vs Prototype</a><a href="/blog/?tag=Usability%20Testing%205%20Users%20Nielsen">Usability Testing 5 Users Nielsen</a><a href="/blog/?tag=Ten%20Usability%20Heuristics%20Jakob%20Nielsen">Ten Usability Heuristics Jakob Nielsen</a><a href="/blog/?tag=Pm%20Designer%20Collaboration">Pm Designer Collaboration</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>19 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-the-fidelity-ladder-sketch-vs-wireframe-vs-mockup-vs-prototype">1. The Fidelity Ladder: Sketch vs. Wireframe vs. Mockup vs. Prototype</a></li><li class="toc-h2"><a href="#section-2-conducting-a-pre-test-audit-using-jakob-nielsen-s-10-usability-heuristics">2. Conducting a Pre-Test Audit Using Jakob Nielsen&#39;s 10 Usability Heuristics</a></li><li class="toc-h2"><a href="#section-3-the-mathematics-behind-jakob-nielsen-s-5-user-usability-testing-law">3. The Mathematics Behind Jakob Nielsen&#39;s 5-User Usability Testing Law</a></li><li class="toc-h2"><a href="#section-frameworks-and-comparison-tables">Frameworks and Comparison Tables</a></li><li class="toc-h3"><a href="#section-table-14-1-comparison-of-the-four-design-fidelity-artifacts">Table 14.1: Comparison of the Four Design Fidelity Artifacts</a></li><li class="toc-h3"><a href="#section-table-14-2-usability-defect-severity-action-rubric-adapted-from-nn-g-severity-scale">Table 14.2: Usability Defect Severity &amp; Action Rubric (Adapted from NN/g Severity Scale)</a></li><li class="toc-h2"><a href="#section-visualizing-the-framework">Visualizing the Framework</a></li><li class="toc-h2"><a href="#section-practical-worked-example">Practical Worked Example</a></li><li class="toc-h2"><a href="#section-common-mistakes-and-limitations">Common Mistakes and Limitations</a></li><li class="toc-h2"><a href="#section-practical-implementation-checklist">Practical Implementation Checklist</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-1-should-a-product-manager-create-wireframes-in-figma-or-does-that-step-on-the-product-designer-s-toes">1. Should a Product Manager create wireframes in Figma, or does that step on the Product Designer&#39;s toes?</a></li><li class="toc-h3"><a href="#section-2-when-does-the-5-user-usability-rule-not-apply">2. When does the &quot;5-User Usability Rule&quot; NOT apply?</a></li><li class="toc-h3"><a href="#section-3-what-is-the-difference-between-moderated-and-unmoderated-usability-testing">3. What is the difference between Moderated and Unmoderated Usability Testing?</a></li><li class="toc-h3"><a href="#section-4-how-do-you-test-usability-for-an-api-cli-or-developer-platform-that-has-no-graphical-ui">4. How do you test usability for an API, CLI, or Developer Platform that has no graphical UI?</a></li><li class="toc-h3"><a href="#section-5-what-is-think-aloud-protocol-in-usability-testing">5. What is &quot;Think-Aloud Protocol&quot; in usability testing?</a></li><li class="toc-h3"><a href="#section-6-how-should-pms-and-designers-hand-off-validated-designs-to-software-engineers">6. How should PMs and Designers hand off validated designs to Software Engineers?</a></li><li class="toc-h2"><a href="#section-next-steps-and-recommended-reading">Next Steps and Recommended Reading</a></li><li class="toc-h2"><a href="#section-about-this-guide">About this guide</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>A Product Manager does not need to master typography kerning, custom vector illustration, or design-system token maintenance—those crafts belong to your Product Designer. Yet every great PM must possess deep <strong>interaction literacy and usability testing rigor</strong>. Why? Because even if a feature solves a genuine, high-priority customer problem (passing <strong>Value Risk</strong>), it will still fail in production if users cannot understand the interface hierarchy, get trapped in dead-end error states, or abandon the flow halfway through (failing <strong>Usability Risk</strong>, <a href="https://www.svpg.com/product-management-start-here/">SVPG Four Risks</a>).</p>
+<p>Friction between Product Managers and UX Designers almost always happens for one of two reasons: either the PM jumps straight into <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> and draws a pixel-specific mockup before explaining the underlying customer problem, or the PM throws a text-only specification at the designer two days before sprint planning and treats UX as cosmetic decoration. This guide establishes the exact collaboration boundary within the Product Trio, compares the four levels of design fidelity (Sketches, Wireframes, Mockups, and Interactive Prototypes), explains how to apply <strong>Jakob Nielsen's 10 Usability Heuristics</strong> (<a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g Official Guide</a>) and the mathematical <strong>5-User Usability Testing Law</strong> (<a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">NN/g 5-User Research</a>), and walks through a complete quantitative usability test evaluation.</p>
+<h2 id="section-1-the-fidelity-ladder-sketch-vs-wireframe-vs-mockup-vs-prototype">1. The Fidelity Ladder: Sketch vs. Wireframe vs. Mockup vs. Prototype</h2>
+<p>Choosing the wrong artifact fidelity wastes weeks of design time and corrupts user feedback. Match your visual artifact to the specific question you are trying to answer:</p>
+<ol>
+<li><strong>Level 1 — User Flow &amp; State Diagram (Logical Fidelity):</strong> Boxes and arrows in FigJam or Mermaid mapping every screen transition, conditional branch (<code>If KYC verified</code> vs <code>If KYC rejected</code>), and edge case. <em>Owner:</em> Co-created by PM, Designer, and Tech Lead before drawing any screens.</li>
+<li><strong>Level 2 — Low-Fidelity Sketch / Wireframe (Structural Fidelity):</strong> Grayscale, schematic layouts focusing strictly on information hierarchy, content grouping, and primary actions without colors, brand fonts, or polished icons. <em>Why low fidelity matters early:</em> When you show a rough grayscale wireframe to a customer in discovery, they feel comfortable saying <em>&quot;This whole workflow is backwards.&quot;</em> When you show them a gleaming, pixel-perfect mockup, they assume you spent a month building it and give polite comments about button colors instead.</li>
+<li><strong>Level 3 — High-Fidelity Static Mockup (Visual Fidelity):</strong> Pixel-accurate screens in <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> using the production design system, typography, color contrast (WCAG $\ge 4.5:1$), and exact microcopy across all five UI states (Empty, Loading, Ideal, Partial/Edge, Error). <em>Owner:</em> Product Designer.</li>
+<li><strong>Level 4 — Interactive Prototype (Behavioral Fidelity):</strong> Clickable Figma flows (or lightweight front-end code prototypes) that simulate realistic task sequences so a test participant can attempt an end-to-end workflow without moderator hand-holding.</li>
+</ol>
+<h2 id="section-2-conducting-a-pre-test-audit-using-jakob-nielsen-s-10-usability-heuristics">2. Conducting a Pre-Test Audit Using Jakob Nielsen's 10 Usability Heuristics</h2>
+<p>Before spending participant recruiting budget on external usability tests, the Product Manager and Product Designer should run a 30-minute internal <strong>Heuristic Evaluation</strong> (<a href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/">NN/g How to Conduct a Heuristic Evaluation</a>) against <strong>Jakob Nielsen's 10 Usability Heuristics for User Interface Design</strong> (<a href="https://www.nngroup.com/articles/ten-usability-heuristics/">NN/g 10 Heuristics</a>):</p>
+<ol>
+<li><strong>Visibility of System Status:</strong> Keep users informed about what is happening (e.g., showing step progress <code>Step 2 of 4</code> or streaming token progress in an LLM response rather than a frozen blank screen).</li>
+<li><strong>Match Between System and the Real World:</strong> Speak the user's domain language (<em>&quot;Cancel Invoice&quot;</em> instead of <em>&quot;Execute Nullification Mutation ID 409&quot;</em>).</li>
+<li><strong>User Control and Freedom:</strong> Provide a clear &quot;Emergency Exit&quot; (<code>Undo</code>, <code>Cancel</code>, <code>Back to Draft</code>) when users click something by mistake.</li>
+<li><strong>Consistency and Standards:</strong> Follow platform conventions (per Jakob's Law, users spend most of their time on other products and expect standard patterns).</li>
+<li><strong>Error Prevention:</strong> Eliminate error-prone conditions upfront (e.g., disabling the <code>Submit</code> button until mandatory fields validate, or requiring confirmation before deleting a production database).</li>
+<li><strong>Recognition Rather Than Recall:</strong> Minimize memory load by making options, recent queries, and field formats visible inline rather than forcing users to memorize syntax from another tab.</li>
+<li><strong>Flexibility and Efficiency of Use:</strong> Provide accelerators (such as <code>Cmd+K</code> command palettes and keyboard shortcuts, as championed by <a href="https://linear.app/pricing">Linear</a>) for power users while keeping the default interface clean for novices.</li>
+<li><strong>Aesthetic and Minimalist Design:</strong> Remove irrelevant information; every extra badge or secondary metric on a card competes with the primary call-to-action and reduces relative visibility.</li>
+<li><strong>Help Users Recognize, Diagnose, and Recover from Errors:</strong> Write error messages in plain language stating <strong>what went wrong, why, and the exact action to fix it</strong> (<em>&quot;CSV upload failed on Row 14: Date <code>14/31/2026</code> must use <code>YYYY-MM-DD</code> format — Click here to auto-convert&quot;</em>).</li>
+<li><strong>Help and Documentation:</strong> Provide concise, contextual inline tooltips tied directly to the user's immediate task.</li>
+</ol>
+<h2 id="section-3-the-mathematics-behind-jakob-nielsen-s-5-user-usability-testing-law">3. The Mathematics Behind Jakob Nielsen's 5-User Usability Testing Law</h2>
+<p>Why do <a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">Jakob Nielsen and Tom Landauer at the Nielsen Norman Group (NN/g)</a> famously recommend testing qualitative usability with <strong>5 users per round</strong> rather than running a single massive 30-user study?</p>
+<p>The recommendation is grounded in the <strong>Poisson / Binomial Problem-Discovery Model</strong>:
+$$P(\text{Proportions of Usability Problems Found}) = 1 - (1 - p)^n$$
+where:</p>
+<ul>
+<li>$n =$ the number of test participants in a homogeneous user group, and</li>
+<li>$p =$ the probability that any single participant encounters a given usability problem during the task (empirically averaged at <strong>$p = 0.31$</strong> across NN/g's multi-project database).</li>
+</ul>
+<p>Plugging <strong>$p = 0.31$</strong> into the formula across increasing sample sizes $n$:</p>
+<ul>
+<li><strong>$n = 1\text{ user}$:</strong> $1 - (1 - 0.31)^1 = \mathbf{31.0%}$ of usability problems discovered.</li>
+<li><strong>$n = 3\text{ users}$:</strong> $1 - (0.69)^3 = 1 - 0.3285 = \mathbf{67.1%}$ of problems discovered.</li>
+<li><strong>$n = 5\text{ users}$:</strong> $1 - (0.69)^5 = 1 - 0.1564 = \mathbf{84.4%\ (\approx 85%)}$ of problems discovered.</li>
+<li><strong>$n = 10\text{ users}$:</strong> $1 - (0.69)^{10} = \mathbf{97.6%}$ (spending $2\times$ the budget to find only an incremental $13%$).</li>
+<li><strong>$n = 15\text{ users}$:</strong> $1 - (0.69)^{15} = \mathbf{99.6%}$.</li>
+</ul>
+<p><strong>The Practitioner Rule:</strong> If you have budget and time to recruit <strong>15 users</strong>, <strong>never test all 15 on the exact same static prototype</strong>. Instead, run <strong>three iterative rounds of 5 users each</strong>: test with 5 users on Monday (uncovering ~85% of flaws), fix the prototype in <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> on Tuesday, test the revised design with 5 new users on Wednesday to verify the fixes didn't introduce new bugs, and run a final 5-user validation on Friday (<a href="https://www.nngroup.com/articles/5-test-users-qual-quant/">NN/g Qualitative vs. Quantitative 5-User Distinction</a>). <em>(Note: If your product serves two completely distinct personas—such as Doctors and Patients—test 5 users per distinct persona).</em></p>
+<h2 id="section-frameworks-and-comparison-tables">Frameworks and Comparison Tables</h2>
+<h3 id="section-table-14-1-comparison-of-the-four-design-fidelity-artifacts">Table 14.1: Comparison of the Four Design Fidelity Artifacts</h3>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:left" scope="col">Artifact Level</th>
+<th style="text-align:left" scope="col">Speed to Create</th>
+<th style="text-align:left" scope="col">Primary Purpose</th>
+<th style="text-align:left" scope="col">Who Creates It</th>
+<th style="text-align:left" scope="col">What Feedback to Ask For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>1. User Flow / State Diagram</strong></td>
+<td style="text-align:left">30–60 mins</td>
+<td style="text-align:left">Map logic, branches, permissions, and system states</td>
+<td style="text-align:left">PM + Designer + Tech Lead</td>
+<td style="text-align:left"><em>&quot;Did we miss any edge cases, API failures, or role restrictions?&quot;</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>2. Low-Fi Wireframe / Sketch</strong></td>
+<td style="text-align:left">1–3 hours</td>
+<td style="text-align:left">Explore 3+ layout concepts and information hierarchy cheaply</td>
+<td style="text-align:left">Designer (or PM for rough concept framing)</td>
+<td style="text-align:left"><em>&quot;Does the sequence of steps match how you think about this task?&quot;</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>3. High-Fi Static Mockup</strong></td>
+<td style="text-align:left">1–3 days</td>
+<td style="text-align:left">Lock visual hierarchy, design system tokens, and all 5 UI states</td>
+<td style="text-align:left">Product Designer</td>
+<td style="text-align:left"><em>&quot;Is visual contrast clear, and are all 5 states specified for devs?&quot;</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>4. Interactive Prototype</strong></td>
+<td style="text-align:left">2–5 days</td>
+<td style="text-align:left">Simulate end-to-end task completion with real test users</td>
+<td style="text-align:left">Product Designer (or Frontend Engineer)</td>
+<td style="text-align:left">Observe unassisted task completion rate, time-on-task, and misclicks</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-table-14-2-usability-defect-severity-action-rubric-adapted-from-nn-g-severity-scale">Table 14.2: Usability Defect Severity &amp; Action Rubric (Adapted from NN/g Severity Scale)</h3>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:left" scope="col">Severity Rating</th>
+<th style="text-align:left" scope="col">Definition (Frequency $\times$ Impact $\times$ Persistence)</th>
+<th style="text-align:left" scope="col">Action Required Before Engineering Sprint / Launch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>S0 — Catastrophic Blocker (4/4)</strong></td>
+<td style="text-align:left">Prevents user from completing the core task entirely or causes accidental data/financial loss</td>
+<td style="text-align:left"><strong>Mandatory P0 Fix</strong> before coding/launch; re-test with 5 users after redesign</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>S1 — Major Usability Problem (3/4)</strong></td>
+<td style="text-align:left">Causes significant delay (&gt;2 mins confusion) or requires moderator rescue for $\ge 2/5$ users</td>
+<td style="text-align:left"><strong>High-Priority Fix</strong> in current design iteration before Sprint Planning sign-off</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>S2 — Minor Usability Friction (2/4)</strong></td>
+<td style="text-align:left">User hesitates briefly (10–20 seconds) or misclicks once but recovers unassisted</td>
+<td style="text-align:left"><strong>Fast-Follow Fix</strong>; adjust label copy, tooltip, or visual contrast in Figma</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>S3 — Cosmetic / Preference Note (1/4)</strong></td>
+<td style="text-align:left">Subjective visual comment that does not impede task speed or comprehension</td>
+<td style="text-align:left"><strong>Log &amp; Monitor</strong>; fix only if effortless and aligned with the design system</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-visualizing-the-framework">Visualizing the Framework</h2>
+<p>The following architecture diagram illustrates the workflow and decision criteria:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart LR
+    A[&quot;Internal Heuristic Audit: Check Nielsen&#39;s 10 Heuristics&quot;] --&gt; B[Round 1: Test Prototype v1 with 5 Target Users]
+    B --&gt;|Finds ~85% of v1 Usability Flaws| C[&quot;Triage Defects by S0-S3 Severity &amp; Redesign in Figma&quot;]
+    C --&gt; D[Round 2: Test Prototype v2 with 5 New Target Users]
+    D --&gt;|Verifies v1 Fixes &amp; Catches Secondary Edge Cases| E[&quot;Refine Microcopy, Error States &amp; Affordances&quot;]
+    E --&gt; F[Round 3: Test Prototype v3 with 5 Final Users]
+    F --&gt;|Task Completion &gt;= 85% Unassisted| G[&quot;Approve PRD &amp; Hand Off via Figma Dev Mode to Sprint&quot;]</pre></div>
+<h2 id="section-practical-worked-example">Practical Worked Example</h2>
+<p><strong>Scenario (Hypothetical B2B E-Commerce Checkout Platform — <em>TaxShield</em>):</strong><br>
+Your Product Trio is designing a &quot;Custom Multi-State GST/VAT Rule Builder&quot; for finance managers. Before committing 3 engineering sprints, you conduct a <strong>30-minute moderated Think-Aloud Usability Test</strong> on a clickable <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> prototype across <strong>3 core tasks</strong> with <strong>$n = 5$ target finance managers (Round 1)</strong>:</p>
+<ul>
+<li><strong>Task 1:</strong> Create a conditional tax exemption rule for B2B buyers with a verified GSTIN.</li>
+<li><strong>Task 2:</strong> Run a sandbox simulation on a sample ₹50,000 invoice to verify the tax calculation.</li>
+<li><strong>Task 3:</strong> Schedule the rule to go live on the 1st of next month at 00:00 IST.</li>
+</ul>
+<p><strong>Moderator Protocol Used:</strong> Rather than giving step-by-step instructions (<em>&quot;Click the blue Settings gear in the top right, then click Rules&quot;</em>—which ruins the test by telling the user where to click), the moderator gives a <strong>realistic scenario goal</strong> (<em>&quot;Imagine your CFO asked you to exempt verified B2B buyers from regional surcharge starting next month. Show me how you would set that up here, thinking out loud as you go&quot;</em>).</p>
+<p><strong>Round 1 Empirical Results ($n = 5$ Users on Prototype v1):</strong></p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:left" scope="col">Task ID</th>
+<th style="text-align:left" scope="col">Unassisted Success ($n / 5$)</th>
+<th style="text-align:left" scope="col">Assisted / Rescue ($n / 5$)</th>
+<th style="text-align:left" scope="col">Task Failure ($n / 5$)</th>
+<th style="text-align:left" scope="col">Median Time on Task (Target)</th>
+<th style="text-align:left" scope="col">Root-Cause Heuristic Violation Observed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Task 1 (Create B2B Rule)</strong></td>
+<td style="text-align:left">$4 / 5$ ($80%$)</td>
+<td style="text-align:left">$1 / 5$ ($20%$)</td>
+<td style="text-align:left">$0 / 5$ ($0%$)</td>
+<td style="text-align:left">$75\text{s}$ ($\le 90\text{s}$)</td>
+<td style="text-align:left"><strong>S2 Minor:</strong> 1 user hesitated between <code>AND</code> vs <code>OR</code> boolean dropdowns.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Task 2 (Run Sandbox Test)</strong></td>
+<td style="text-align:left"><strong>$1 / 5$ ($20%$)</strong></td>
+<td style="text-align:left">$2 / 5$ ($40%$)</td>
+<td style="text-align:left"><strong>$2 / 5$ ($40%$)</strong></td>
+<td style="text-align:left">$240\text{s}$ ($\le 60\text{s}$)</td>
+<td style="text-align:left"><strong>S0 Blocker (Heuristic #6 — Recognition over Recall &amp; #1 — System Status):</strong> The <code>Simulate Invoice</code> icon looked like a decorative terminal symbol (<code>&gt;_</code>) with no text label, hidden inside a collapsed drawer.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Task 3 (Schedule Go-Live)</strong></td>
+<td style="text-align:left"><strong>$2 / 5$ ($40%$)</strong></td>
+<td style="text-align:left">$1 / 5$ ($20%$)</td>
+<td style="text-align:left"><strong>$2 / 5$ ($40%$)</strong></td>
+<td style="text-align:left">$165\text{s}$ ($\le 45\text{s}$)</td>
+<td style="text-align:left"><strong>S1 Major (Heuristic #5 — Error Prevention):</strong> Clicking <code>Save Rule</code> immediately published the rule live to production without asking <code>Publish Now</code> vs <code>Schedule Future Date</code>!</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Design Iteration (24 Hours in Figma) &amp; Round 2 Results ($n = 5$ New Users on Prototype v2):</strong></p>
+<ol>
+<li><strong>Fixing Task 2 (S0 Blocker):</strong> Replaced the cryptic <code>&gt;_</code> icon with an always-visible right-hand split pane titled <strong><code>Live Invoice Preview &amp; Sandbox Calculator</code></strong>, automatically recalculating sample tax as the user edits conditions.</li>
+<li><strong>Fixing Task 3 (S1 Major):</strong> Changed the primary CTA from an ambiguous <code>Save Rule</code> button into a split two-button footer: <code>Save as Draft</code> (Secondary) and <code>Review &amp; Schedule Activation...</code> (Primary, opening a confirmation modal with <code>Activate Immediately</code> vs <code>Schedule Date/Time</code>).</li>
+<li><strong>Round 2 Verification Metrics ($n = 5$ new users):</strong>
+<ul>
+<li><strong>Task 1 Unassisted Success:</strong> $5 / 5$ ($100%$, median time $52\text{s}$).</li>
+<li><strong>Task 2 Unassisted Success:</strong> Lifted from <strong>$20%$ to $100%$ ($5 / 5$)</strong>, median time dropped from $240\text{s}$ to <strong>$28\text{s}$</strong>.</li>
+<li><strong>Task 3 Unassisted Success:</strong> Lifted from <strong>$40%$ to $100%$ ($5 / 5$)</strong>, median time dropped from $165\text{s}$ to <strong>$31\text{s}$</strong>.</li>
+</ul>
+</li>
+</ol>
+<p>By investing <strong>4 days and 10 user sessions in Figma</strong>, the Product Trio prevented a catastrophic production UX flaw where 60% of finance managers would have accidentally published unverified tax rules live to production checkout.</p>
+<h2 id="section-common-mistakes-and-limitations">Common Mistakes and Limitations</h2>
+<ol>
+<li><strong>Leading the Witness During Usability Tests (&quot;Click the Top-Right Button&quot;):</strong> If your task prompt uses the exact text label printed on the button (<em>&quot;Click on 'Manage Webhook Endpoints' to add a URL&quot;</em>), you are testing whether the user can read English, not whether your interface is intuitive. Describe the <strong>goal</strong> in natural words that do not match the UI button label.</li>
+<li><strong>Asking &quot;Do You Like This Design?&quot; Instead of Measuring Behavior:</strong> Usability testing is an <strong>observational behavioral method</strong>, not an opinion poll. Watch where the user's cursor hovers, where they misclick, and whether they complete the task without help.</li>
+<li><strong>Confusing 5-User Qualitative Testing with Quantitative Statistical Significance:</strong> As <a href="https://www.nngroup.com/articles/5-test-users-qual-quant/">NN/g explicitly clarifies</a>, 5 users are ideal for <strong>qualitative formative discovery of major interface bottlenecks ($p \approx 0.31$)</strong>. If you need to compare whether Design A converts $2.5%$ higher than Design B with $95%$ statistical confidence, you need a quantitative live A/B test with thousands of users (<strong>Article 18</strong>), not a 5-person usability test.</li>
+</ol>
+<h2 id="section-practical-implementation-checklist">Practical Implementation Checklist</h2>
+<ul>
+<li>[ ] <strong>Problem First, Pixels Second:</strong> Did the PM share a clear Problem Framing Brief and user journey context <em>before</em> asking the Product Designer to open Figma?</li>
+<li>[ ] <strong>All Five UI States Designed:</strong> Before marking an epic ready for engineering refinement, do the Figma frames explicitly show <strong>Empty</strong>, <strong>Loading</strong>, <strong>Ideal Populated</strong>, <strong>Edge/Overflow</strong>, and <strong>Error/Offline</strong> states?</li>
+<li>[ ] <strong>Nielsen Heuristic Pre-Check:</strong> Did the PM and Designer review the flow against <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen's 10 Usability Heuristics</a> (especially Error Prevention and Recognition over Recall)?</li>
+<li>[ ] <strong>Non-Leading Task Scenarios:</strong> Are our usability test prompts written as realistic user goals without containing the exact UI button labels?</li>
+<li>[ ] <strong>Iterative 5-User Rounds:</strong> Have we scheduled at least two rounds of 5 users ($5 + 5$) with a 48-hour design fix buffer in between?</li>
+</ul>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-1-should-a-product-manager-create-wireframes-in-figma-or-does-that-step-on-the-product-designer-s-toes">1. Should a Product Manager create wireframes in Figma, or does that step on the Product Designer's toes?</h3>
+<p>It depends entirely on fidelity and intent. Product Designers universally appreciate a PM who maps <strong>logical user flows, state transitions, or rough box-and-arrow concept sketches</strong> to clarify complex domain rules—provided the PM frames them explicitly as <em>&quot;Here is a disposable logic diagram to show the required data fields; let's throw it away and design the right UX together.&quot;</em> Designers rightly push back when a PM spends 10 hours building a rigid, high-fidelity UI mockup and treats the designer as a pixel-polishing contractor.</p>
+<h3 id="section-2-when-does-the-5-user-usability-rule-not-apply">2. When does the &quot;5-User Usability Rule&quot; NOT apply?</h3>
+<p>You need <strong>more than 5 users</strong> in three specific situations (<a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">NN/g 5-User Exceptions</a>): (1) When your product has <strong>multiple distinct user groups</strong> with completely different workflows (e.g., Buyers vs. Sellers on a marketplace—test 5 users <em>per group</em>); (2) When running a <strong>quantitative benchmark study</strong> comparing time-on-task or conversion rates statistically across versions (which requires 20–40+ users for quantitative UX metrics or thousands for live A/B tests); or (3) When performing <strong>Card Sorting</strong> or <strong>Tree Testing</strong> for large navigation menus (typically 20–30+ participants).</p>
+<h3 id="section-3-what-is-the-difference-between-moderated-and-unmoderated-usability-testing">3. What is the difference between Moderated and Unmoderated Usability Testing?</h3>
+<p>In <strong>Moderated Usability Testing</strong> (conducted live over Zoom/Meet or in person), a facilitator observes the participant in real time and can ask probing follow-up questions (<em>&quot;I noticed you paused before clicking 'Confirm'—what were you expecting to happen?&quot;</em>). It is the gold standard for early complex workflows. In <strong>Unmoderated Testing</strong> (via tools like Maze or UserTesting), participants record themselves completing tasks asynchronously; it is faster for scaling 15–30 checks on simple, self-contained flows, but you cannot rescue a confused user or probe unexpected behavior live.</p>
+<h3 id="section-4-how-do-you-test-usability-for-an-api-cli-or-developer-platform-that-has-no-graphical-ui">4. How do you test usability for an API, CLI, or Developer Platform that has no graphical UI?</h3>
+<p>Developer experience (DX) is still user experience! Run a <strong>30-minute &quot;Time-to-First-Hello-World&quot; Developer Usability Test</strong>: give 5 target software engineers your staging API documentation and an API key, ask them to share their IDE/terminal screen, and observe them attempting to authenticate and make their first successful webhook or SDK call without help. You will immediately spot missing environment variable explanations, confusing HTTP error payloads, and broken code snippets.</p>
+<h3 id="section-5-what-is-think-aloud-protocol-in-usability-testing">5. What is &quot;Think-Aloud Protocol&quot; in usability testing?</h3>
+<p>Originated in cognitive psychology and adapted for HCI by Clayton Lewis and Jakob Nielsen, the <strong>Concurrent Think-Aloud Protocol</strong> asks participants to verbalize their stream of consciousness continuously as they interact with the prototype (<em>&quot;I'm looking for where the tax rate is set... maybe under Billing? No, that's just my credit card...&quot;</em>). This reveals the exact gap between the <strong>Designer's Mental Model</strong> and the <strong>User's Mental Model</strong>.</p>
+<h3 id="section-6-how-should-pms-and-designers-hand-off-validated-designs-to-software-engineers">6. How should PMs and Designers hand off validated designs to Software Engineers?</h3>
+<p>Never throw a Figma link into Slack on Friday afternoon and consider handoff &quot;done.&quot; Instead, involve the <strong>Tech Lead early during Level 1 (Flows) and Level 2 (Wireframes)</strong> so technical constraints are baked in from day one. Once Round 2 usability testing passes, conduct a live <strong>30-minute Trio Walkthrough</strong> walking through Figma Dev Mode annotations, the 5 UI states, responsive breakpoints, and the PRD's Gherkin acceptance criteria (<strong>Article 09</strong>).</p>
+<h2 id="section-next-steps-and-recommended-reading">Next Steps and Recommended Reading</h2>
+<p>Great product design is not about winning Dribbble visual awards; it is about reducing cognitive friction so customers can accomplish their Job to Be Done effortlessly on the first try. By respecting the design fidelity ladder, auditing interfaces against Nielsen's 10 Heuristics, and running fast, iterative 5-user usability tests before committing engineering sprints, you eliminate Usability Risk at a fraction of the cost of post-launch rework.</p>
+<p><strong>Practical Next Step:</strong> Before your squad's next major feature enters Sprint Planning, run a <strong>5-user Think-Aloud Usability Test</strong> on the clickable <a href="https://uichemy.com/blog/figma-pricing/">Figma</a> prototype using three non-leading task prompts, and fix every <strong>S0 and S1 defect</strong> before writing a single line of production front-end code.</p>
+<p><strong>Recommended Follow-Up Reading:</strong> Complete Pillar C (Discovery, Customers and Product Design) by reading <strong>Article 15: What Is an MVP? How to Define Scope and Validate a Product Idea</strong> (<code>/blog/product/what-is-an-mvp-minimum-viable-product/</code> — <em>Planned Destination</em>) to learn how prototypes fit into the broader Minimum Viable Product validation strategy.</p>
+<h2 id="section-about-this-guide">About this guide</h2>
+<p>Aniket Thakur prepared this comprehensive Product Management guide based on continuous discovery frameworks, operational research, and practitioner benchmarks checked on 24 October 2026. All quantitative scenarios in Section G are explicitly labelled hypothetical worked examples illustrating decision math.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" rel="noopener">Nielsen Norman Group (NN/g)</a></li><li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" rel="noopener">Nielsen Norman Group (NN/g)</a></li><li><a href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/" rel="noopener">How to Conduct a Heuristic Evaluation</a></li><li><a href="https://www.nngroup.com/articles/5-test-users-qual-quant/" rel="noopener">Nielsen Norman Group (NN/g)</a></li></ol></section>
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Fproduct%2Fproduct-design-for-pms-wireframes-prototypes-usability-testing%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/product/ab-testing-for-product-managers/" aria-label="Read A/B Testing for Product Managers: Hypotheses, Sample Size and Results"><img src="/assets/images/blog/ab-testing-for-product-managers/cover.svg" alt="Diagram showing randomized Control vs Treatment split, OEC and Guardrail evaluation, Sample Ratio Mismatch check, and Type I vs Type II error matrix." width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h3><a href="/blog/product/ab-testing-for-product-managers/">A/B Testing for Product Managers: Hypotheses, Sample Size and Results</a></h3>
+<p>Master A/B testing for product managers: falsifiable hypotheses, sample size &amp; MDE formulas, guardrail metrics, Sample Ratio Mismatch (SRM), and p-value math.</p>
+<div class="blog-meta"><time datetime="2026-10-23">23 Oct 2026</time><span>16 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/product/agile-product-management-scrum-kanban/" aria-label="Read Agile Product Management: Scrum, Kanban, Backlogs and Sprints"><img src="/assets/images/blog/agile-product-management-scrum-kanban/cover.svg" alt="Diagram showing Dual-Track Agile connecting continuous discovery with Scrum sprint execution and Kanban WIP-limited flow." width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h3><a href="/blog/product/agile-product-management-scrum-kanban/">Agile Product Management: Scrum, Kanban, Backlogs and Sprints</a></h3>
+<p>Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide accountabilities, Dual-Track Agile discovery, backlog refinement, and Little&#39;s Law math.</p>
+<div class="blog-meta"><time datetime="2026-10-23">23 Oct 2026</time><span>15 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/product/ai-product-management-llms-evaluation-costs-safety/" aria-label="Read AI Product Management: LLMs, Evaluation, Costs and Product Safety"><img src="/assets/images/blog/ai-product-management-llms-evaluation-costs-safety/cover.svg" alt="Architecture diagram showing multi-model tiering, RAG context retrieval, deterministic Zod/Pydantic schema guardrails, and offline/online evaluation loops." width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/product/">Product</a></div>
+<h3><a href="/blog/product/ai-product-management-llms-evaluation-costs-safety/">AI Product Management: LLMs, Evaluation, Costs and Product Safety</a></h3>
+<p>Master AI Product Management in 2026: RAG vs fine-tuning, LLM evaluation datasets, TTFT latency budgets, token inference unit economics, and safety guardrails.</p>
+<div class="blog-meta"><time datetime="2026-10-23">23 Oct 2026</time><span>16 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

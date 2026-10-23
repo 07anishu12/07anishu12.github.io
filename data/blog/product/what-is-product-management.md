@@ -118,20 +118,28 @@ Rather than a linear waterfall where teams spend six months writing specificatio
 The following architecture diagram illustrates the dual-track lifecycle connecting continuous customer discovery with iterative technical delivery:
 
 ```mermaid
-flowchart LR
-    subgraph Track_1_Discovery ["Track 1: Continuous Discovery (De-risking Value & Usability)"]
-        A[User Pain & Telemetry Signals] --> B[Opportunity Sizing & Hypothesis]
-        B --> C[Prototype & Technical Spike]
-        C --> D{Validated across 4 Risks?}
-        D -- No: Pivot or Kill --> B
+flowchart TD
+    subgraph Discovery ["Phase 1: Continuous Discovery (De-Risking Value & Usability)"]
+        D1["1. Signals & User Friction<br/>(Drop-offs, support tickets, customer requests)"]
+        D2["2. Opportunity Sizing & Hypotheses<br/>(Target customer outcome & business impact)"]
+        D3["3. Spike & Prototype Validation<br/>(Interactive mockups, discovery interviews, tech checks)"]
+        D4{"Validated across<br/>4 Big Product Risks?"}
+        D1 --> D2 --> D3 --> D4
+        D4 -- "No: Pivot or Kill" --> D2
     end
-    subgraph Track_2_Delivery ["Track 2: Iterative Delivery (Building & Scaling)"]
-        D -- Yes: Commit Scope --> E[PRD & Backlog Refinement]
-        E --> F[Sprint Execution & QA]
-        F --> G[Staged Rollout & GTM]
-        G --> H[Cohort Telemetry & Outcome Audit]
+
+    subgraph Delivery ["Phase 2: Iterative Delivery (Execution & Scale)"]
+        E1["4. Sprint Planning & Backlog Slicing<br/>(Trio aligns on MVP stories & acceptance criteria)"]
+        E2["5. Incremental Code Deployment<br/>(Feature flag rollout & staging verification)"]
+        E3["6. Telemetry Audit & Impact Review<br/>(Funnel conversion, retention & latency audit)"]
+        E4{"Target Outcome<br/>Achieved?"}
+        E1 --> E2 --> E3 --> E4
+        E4 -- "No: Refine UX or Flow" --> E1
     end
-    H -->|Feedback Loop| A
+
+    D4 ==>|"Yes: Validated PRD"| E1
+    E4 ==>|"Yes: Scale Feature"| Scale["Feature Hardened & Scaled into Core Product"]
+    Scale --> Next["Insights & telemetry feed next discovery iteration"]
 ```
 
 ## Practical Worked Example: Reducing Drop-Off in B2B SaaS Onboarding
