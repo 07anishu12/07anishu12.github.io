@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastSyncedAt": "2026-10-23T20:41:44.880Z",
+  "lastSyncedAt": "2026-10-23T20:47:41.844Z",
   "mode": "import_queue",
   "account": {
     "profile": "https://medium.com/@kumaraniketn",
@@ -3130,7 +3130,7 @@
       "status": "queued",
       "mediumStoryId": null,
       "mediumUrl": null,
-      "lastAttemptedAt": "2026-10-23T20:41:44.760Z",
+      "lastAttemptedAt": "2026-10-23T20:47:41.702Z",
       "lastSuccessAt": null,
       "retryCount": 0,
       "error": null,
@@ -3150,7 +3150,7 @@
       "status": "queued",
       "mediumStoryId": null,
       "mediumUrl": null,
-      "lastAttemptedAt": "2026-10-23T20:41:44.879Z",
+      "lastAttemptedAt": "2026-10-23T20:47:41.844Z",
       "lastSuccessAt": null,
       "retryCount": 0,
       "error": null,
