@@ -205,11 +205,11 @@ test('RSS retirement removes owned output and links; crawler guide lists only pu
   } finally { f.clean(); }
 });
 
-function analyticsHarness({ production = true, id = 'G-SYNTHETIC', consent = false, requireConsent = false, preview = false } = {}) {
+function analyticsHarness({ production = true, id = 'G-SYNTHETIC', consent = false, requireConsent = false, preview = false, href = ORIGIN + '/?email=SYNTHETIC' } = {}) {
   const handlers = {}, scripts = [];
   const window = { PORTFOLIO_CONFIG: { measurementId: id, requireAnalyticsConsent: requireConsent }, portfolioAnalyticsConsent: consent, addEventListener: (n, fn) => { handlers[n] = fn; } };
   const document = { documentElement: { dataset: { preview: String(preview) } }, referrer: 'https://example.org/private?email=SYNTHETIC', querySelector: q => q.startsWith('link') ? { href: ORIGIN + '/blog/technology/test/' } : { dataset: { articleCategory: 'technology', articleSlug: 'test' } }, head: { appendChild: s => scripts.push(s) }, createElement: () => ({}), addEventListener: (n, fn) => { handlers[n] = fn; } };
-  vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'assets/js/analytics.js'), 'utf8'), { window, document, location: { origin: production ? ORIGIN : 'http://127.0.0.1:4173', pathname: '/', href: ORIGIN + '/?email=SYNTHETIC' }, URL, Date });
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'assets/js/analytics.js'), 'utf8'), { window, document, location: { origin: production ? ORIGIN : 'http://127.0.0.1:4173', pathname: '/', href }, URL, Date, URLSearchParams });
   const click = ({ href = '', dataset = {}, reference = false }) => handlers.click?.({ target: { closest: () => ({ dataset, getAttribute: () => href, closest: () => reference }) } });
   return { window, scripts, handlers, click };
 }
@@ -222,6 +222,16 @@ test('Analytics gates, one config/page-view, consent, events, and personal-infor
   const calls = () => Array.from(h.window.dataLayer, a => Array.from(a));
   assert.equal(calls().filter(a => a[0] === 'config').length, 1);
   assert.equal(calls().find(a => a[0] === 'config')[2].page_referrer, 'https://example.org');
+
+  // Verify campaign attribution parameters are preserved while PII is stripped
+  const hUtm = analyticsHarness({ href: ORIGIN + '/blog/technology/test/?utm_source=twitter&utm_medium=social&gclid=test1234&email=SECRET' });
+  const utmCalls = Array.from(hUtm.window.dataLayer, a => Array.from(a));
+  const pageLoc = utmCalls.find(a => a[0] === 'config')[2].page_location;
+  assert.ok(pageLoc.includes('utm_source=twitter'), 'Campaign utm_source must be preserved');
+  assert.ok(pageLoc.includes('utm_medium=social'), 'Campaign utm_medium must be preserved');
+  assert.ok(pageLoc.includes('gclid=test1234'), 'Ad tracking gclid must be preserved');
+  assert.ok(!pageLoc.includes('SECRET'), 'PII parameter email must be stripped');
+
   h.click({ href: 'mailto:synthetic-person@example.org?body=SECRET' });
   h.click({ href: 'tel:+000000' }); h.click({ href: 'https://wa.me/000000?text=SECRET' });
   h.click({ dataset: { share: 'copy' } });

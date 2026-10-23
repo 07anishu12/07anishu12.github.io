@@ -66,12 +66,19 @@ function sitemap(posts, root = ROOT) {
   // Preserve existing portfolio entries (and their lastmod), replacing only blog entries.
   const current = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   const preserved = (current.match(/<url>[\s\S]*?<\/url>/g) || []).filter(item => !/<loc>https:\/\/07anishu12\.github\.io\/blog\//.test(item));
-  const listingUrls = [...outputs(posts, { root }).keys()].filter(f => f.endsWith('index.html') && !posts.some(p => f === `${p.url.slice(1)}index.html`));
+  const listingUrls = [...outputs(posts, { root }).keys()].filter(f => {
+    if (!f.endsWith('index.html')) return false;
+    if (posts.some(p => f === `${p.url.slice(1)}index.html`)) return false;
+    const category = f.match(new RegExp(`^blog\\/(${Object.keys(CATEGORIES).join('|')})\\/`))?.[1];
+    if (category && !posts.some(p => p.category === category)) return false;
+    return true;
+  });
   const rows = listingUrls.map(file => {
     const url = '/' + file.replace(/index\.html$/, '');
     const category = url.match(new RegExp(`^\\/blog\\/(${Object.keys(CATEGORIES).join('|')})\\/`))?.[1];
     const dates = posts.filter(p => !category || p.category === category).map(p => p.dateModified || p.datePublished).sort();
-    return `<url><loc>${ORIGIN}${url}</loc>${dates.length ? `<lastmod>${dates.at(-1)}</lastmod>` : ''}</url>`;
+    const lastmod = dates.length ? dates.at(-1) : (posts.map(p => p.dateModified || p.datePublished).sort().at(-1) || '2026-09-30');
+    return `<url><loc>${ORIGIN}${url}</loc><lastmod>${lastmod}</lastmod></url>`;
   });
   for (const p of posts) rows.push(`<url><loc>${ORIGIN}${p.url}</loc><lastmod>${p.dateModified || p.datePublished}</lastmod></url>`);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...preserved, ...rows].map(row => '  ' + row).join('\n')}\n</urlset>\n`;

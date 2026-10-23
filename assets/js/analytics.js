@@ -13,11 +13,26 @@
     const canonical = document.querySelector('link[rel="canonical"]')?.href || `${location.origin}/404.html`;
     const article = document.querySelector('[data-article-slug]');
     const context = article ? { article_category: article.dataset.articleCategory, article_slug: article.dataset.articleSlug } : {};
+    let pageLocation = canonical;
+    try {
+      const allowed = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id', 'utm_source_platform', 'utm_creative_format', 'utm_marketing_tactic', 'gclid', 'dclid', 'fbclid', 'msclkid', 'ttclid'];
+      const current = new URL(location.href);
+      const params = new URLSearchParams();
+      for (const key of allowed) {
+        const val = current.searchParams.get(key);
+        if (val) params.set(key, val);
+      }
+      const qs = params.toString();
+      if (qs) pageLocation = `${canonical}${canonical.includes('?') ? '&' : '?'}${qs}`;
+    } catch { /* Fallback to canonical. */ }
     let referrer = '';
-    try { referrer = new URL(document.referrer).origin; } catch { /* No referrer. */ }
+    try {
+      const ref = new URL(document.referrer);
+      if (ref.origin !== location.origin) referrer = ref.origin;
+    } catch { /* No referrer. */ }
     window.gtag('js', new Date());
     window.gtag('config', config.measurementId, {
-      ...context, page_location: canonical, page_referrer: referrer,
+      ...context, page_location: pageLocation, page_referrer: referrer,
       allow_google_signals: false, allow_ad_personalization_signals: false
     });
     const script = document.createElement('script');

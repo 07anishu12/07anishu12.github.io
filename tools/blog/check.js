@@ -61,6 +61,12 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     const target = resolveUrl(url, '/');
     check(target && fs.existsSync(target.file), `Sitemap target missing: ${url}`);
   });
+  sitemap('url').each((_, el) => {
+    const loc = sitemap(el).find('loc').text();
+    const lastmod = sitemap(el).find('lastmod').text();
+    check(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap entry missing or invalid lastmod date: ${loc} (${lastmod})`);
+  });
+  check(!urls.includes(`${ORIGIN}/blog/product/`), 'Empty category listing /blog/product/ must not be in sitemap');
   check(!fs.existsSync(path.join(dir, 'blog/feed.xml')), 'Retired RSS feed must not deploy');
   const llms = fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8');
   check(llms.startsWith('# Aniket Thakur\n') && llms.includes('## Published articles'), 'llms.txt structure missing');
