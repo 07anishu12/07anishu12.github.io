@@ -753,6 +753,381 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/product/ab-testing-for-product-managers.md",
+      "url": "/blog/product/ab-testing-for-product-managers/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/agile-product-management-scrum-kanban.md",
+      "url": "/blog/product/agile-product-management-scrum-kanban/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/ai-product-management-llms-evaluation-costs-safety.md",
+      "url": "/blog/product/ai-product-management-llms-evaluation-costs-safety/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/best-product-management-tools.md",
+      "url": "/blog/product/best-product-management-tools/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/customer-discovery-for-product-managers.md",
+      "url": "/blog/product/customer-discovery-for-product-managers/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/go-to-market-strategy-for-product-managers.md",
+      "url": "/blog/product/go-to-market-strategy-for-product-managers/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/how-to-become-a-product-manager.md",
+      "url": "/blog/product/how-to-become-a-product-manager/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/how-to-build-a-product-roadmap.md",
+      "url": "/blog/product/how-to-build-a-product-roadmap/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/how-to-diagnose-a-drop-in-product-metrics.md",
+      "url": "/blog/product/how-to-diagnose-a-drop-in-product-metrics/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/how-to-write-a-product-requirements-document-prd.md",
+      "url": "/blog/product/how-to-write-a-product-requirements-document-prd/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing.md",
+      "url": "/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-management-okrs.md",
+      "url": "/blog/product/product-management-okrs/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-manager-interview-preparation.md",
+      "url": "/blog/product/product-manager-interview-preparation/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-manager-vs-project-manager-vs-business-analyst.md",
+      "url": "/blog/product/product-manager-vs-project-manager-vs-business-analyst/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-market-fit-meaning-metrics-examples.md",
+      "url": "/blog/product/product-market-fit-meaning-metrics-examples/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-metrics-explained-north-star-kpis-retention.md",
+      "url": "/blog/product/product-metrics-explained-north-star-kpis-retention/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-operations-explained.md",
+      "url": "/blog/product/product-operations-explained/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-strategy-explained.md",
+      "url": "/blog/product/product-strategy-explained/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/rice-moscow-ice-prioritization-frameworks.md",
+      "url": "/blog/product/rice-moscow-ice-prioritization-frameworks/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/stakeholder-management-for-product-managers.md",
+      "url": "/blog/product/stakeholder-management-for-product-managers/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping.md",
+      "url": "/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/what-does-a-product-manager-do.md",
+      "url": "/blog/product/what-does-a-product-manager-do/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/what-is-an-mvp-minimum-viable-product.md",
+      "url": "/blog/product/what-is-an-mvp-minimum-viable-product/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/what-is-product-management.md",
+      "url": "/blog/product/what-is-product-management/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/why-products-fail-root-cause-analysis-postmortems.md",
+      "url": "/blog/product/why-products-fail-root-cause-analysis-postmortems/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/125cc-vs-150cc-vs-160cc-bikes.md",
       "url": "/blog/auto/125cc-vs-150cc-vs-160cc-bikes/",
       "datePublished": "2026-10-22",
@@ -780,6 +1155,21 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/abs-vs-cbs-braking-systems-what-should-a-bike-buyer-know.md",
+      "url": "/blog/auto/abs-vs-cbs-braking-systems-what-should-a-bike-buyer-know/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -843,6 +1233,726 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/bajaj-pulsar-n125-price-features-and-who-should-buy-it.md",
+      "url": "/blog/auto/bajaj-pulsar-n125-price-features-and-who-should-buy-it/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-ns160-vs-tvs-apache-rtr-160-which-offers-better-value.md",
+      "url": "/blog/auto/bajaj-pulsar-ns160-vs-tvs-apache-rtr-160-which-offers-better-value/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-100cc-bikes-in-india-price-mileage-and-features.md",
+      "url": "/blog/auto/best-100cc-bikes-in-india-price-mileage-and-features/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-110cc-bikes-in-india-for-budget-conscious-buyers.md",
+      "url": "/blog/auto/best-110cc-bikes-in-india-for-budget-conscious-buyers/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-125cc-bikes-in-india-top-options-compared.md",
+      "url": "/blog/auto/best-125cc-bikes-in-india-top-options-compared/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-125cc-scooters-in-india.md",
+      "url": "/blog/auto/best-125cc-scooters-in-india/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-125cc-scooters-to-buy-this-diwali.md",
+      "url": "/blog/auto/best-125cc-scooters-to-buy-this-diwali/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-150cc-bikes-in-india-for-city-riding.md",
+      "url": "/blog/auto/best-150cc-bikes-in-india-for-city-riding/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-160cc-bikes-in-india-performance-mileage-and-price.md",
+      "url": "/blog/auto/best-160cc-bikes-in-india-performance-mileage-and-price/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-200cc-bikes-in-india-under-rs-2-lakh.md",
+      "url": "/blog/auto/best-200cc-bikes-in-india-under-rs-2-lakh/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-250cc-bikes-under-rs-3-lakh-in-india.md",
+      "url": "/blog/auto/best-250cc-bikes-under-rs-3-lakh-in-india/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-300-350cc-bikes-under-rs-3-lakh-in-india.md",
+      "url": "/blog/auto/best-300-350cc-bikes-under-rs-3-lakh-in-india/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-adventure-bikes-under-rs-3-lakh-in-india.md",
+      "url": "/blog/auto/best-adventure-bikes-under-rs-3-lakh-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-and-scooters-to-buy-before-the-end-of-2026.md",
+      "url": "/blog/auto/best-bikes-and-scooters-to-buy-before-the-end-of-2026/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-and-scooters-to-buy-in-january-2027-mileage-comfort-and-budget.md",
+      "url": "/blog/auto/best-bikes-and-scooters-to-buy-in-january-2027-mileage-comfort-and-budget/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-both-city-riding-and-highway-trips.md",
+      "url": "/blog/auto/best-bikes-for-both-city-riding-and-highway-trips/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-city-riding-in-india.md",
+      "url": "/blog/auto/best-bikes-for-city-riding-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-comfortable-pillion-riding.md",
+      "url": "/blog/auto/best-bikes-for-comfortable-pillion-riding/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-first-time-riders-in-india.md",
+      "url": "/blog/auto/best-bikes-for-first-time-riders-in-india/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-long-daily-commutes-with-low-running-costs.md",
+      "url": "/blog/auto/best-bikes-for-long-daily-commutes-with-low-running-costs/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-night-riding-headlight-performance-and-safety-features.md",
+      "url": "/blog/auto/best-bikes-for-night-riding-headlight-performance-and-safety-features/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-office-commutes-of-30-50-km-a-day.md",
+      "url": "/blog/auto/best-bikes-for-office-commutes-of-30-50-km-a-day/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-riders-who-want-to-minimise-daily-fuel-spending.md",
+      "url": "/blog/auto/best-bikes-for-riders-who-want-to-minimise-daily-fuel-spending/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-short-riders-in-india.md",
+      "url": "/blog/auto/best-bikes-for-short-riders-in-india/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-small-towns-and-rural-roads.md",
+      "url": "/blog/auto/best-bikes-for-small-towns-and-rural-roads/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-tall-riders-in-india.md",
+      "url": "/blog/auto/best-bikes-for-tall-riders-in-india/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-to-buy-on-diwali-2026-in-india.md",
+      "url": "/blog/auto/best-bikes-to-buy-on-diwali-2026-in-india/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-2-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-2-lakh-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-2-lakh-to-buy-before-chhath-puja.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-2-lakh-to-buy-before-chhath-puja/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-25-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-25-lakh-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-5-lakh-for-diwali.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-5-lakh-for-diwali/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-5-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-5-lakh-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-lakh-in-india/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-1-lakh-on-road-in-india-which-options-actually-fit.md",
+      "url": "/blog/auto/best-bikes-under-rs-1-lakh-on-road-in-india-which-options-actually-fit/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-2-5-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-2-5-lakh-in-india/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-2-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-2-lakh-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-3-lakh-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-3-lakh-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-70-000-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-70-000-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-80-000-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-80-000-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-under-rs-90-000-in-india.md",
+      "url": "/blog/auto/best-bikes-under-rs-90-000-in-india/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-with-digital-displays-and-bluetooth-under-rs-1-5-lakh.md",
+      "url": "/blog/auto/best-bikes-with-digital-displays-and-bluetooth-under-rs-1-5-lakh/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-with-dual-channel-abs-under-rs-2-5-lakh.md",
+      "url": "/blog/auto/best-bikes-with-dual-channel-abs-under-rs-2-5-lakh/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-with-long-seats-for-rider-and-pillion-comfort.md",
+      "url": "/blog/auto/best-bikes-with-long-seats-for-rider-and-pillion-comfort/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-with-low-seat-height-in-india.md",
+      "url": "/blog/auto/best-bikes-with-low-seat-height-in-india/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-commuter-bikes-in-india-for-everyday-use.md",
+      "url": "/blog/auto/best-commuter-bikes-in-india-for-everyday-use/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-cruiser-bikes-under-rs-2-lakh.md",
+      "url": "/blog/auto/best-cruiser-bikes-under-rs-2-lakh/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-cruiser-bikes-under-rs-3-lakh.md",
+      "url": "/blog/auto/best-cruiser-bikes-under-rs-3-lakh/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-for-a-daily-commute-of-around-30-km.md",
+      "url": "/blog/auto/best-electric-scooters-for-a-daily-commute-of-around-30-km/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/best-electric-scooters-for-commuting-india-guide.md",
       "url": "/blog/auto/best-electric-scooters-for-commuting-india-guide/",
       "datePublished": "2026-10-22",
@@ -855,6 +1965,651 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-for-families-seat-comfort-storage-and-range.md",
+      "url": "/blog/auto/best-electric-scooters-for-families-seat-comfort-storage-and-range/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-to-buy-during-diwali-2026.md",
+      "url": "/blog/auto/best-electric-scooters-to-buy-during-diwali-2026/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-under-rs-1-5-lakh-in-india.md",
+      "url": "/blog/auto/best-electric-scooters-under-rs-1-5-lakh-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-under-rs-1-lakh-in-india.md",
+      "url": "/blog/auto/best-electric-scooters-under-rs-1-lakh-in-india/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-family-scooters-in-india.md",
+      "url": "/blog/auto/best-family-scooters-in-india/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-family-scooters-to-buy-before-diwali-2026.md",
+      "url": "/blog/auto/best-family-scooters-to-buy-before-diwali-2026/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-first-bike-to-buy-after-college-in-india.md",
+      "url": "/blog/auto/best-first-bike-to-buy-after-college-in-india/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-fully-faired-sports-bikes-under-rs-3-lakh.md",
+      "url": "/blog/auto/best-fully-faired-sports-bikes-under-rs-3-lakh/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-highway-bikes-under-rs-2-lakh.md",
+      "url": "/blog/auto/best-highway-bikes-under-rs-2-lakh/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-lightweight-scooters-in-india.md",
+      "url": "/blog/auto/best-lightweight-scooters-in-india/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-low-maintenance-bikes-for-students.md",
+      "url": "/blog/auto/best-low-maintenance-bikes-for-students/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-low-service-cost-bikes-under-rs-1-lakh.md",
+      "url": "/blog/auto/best-low-service-cost-bikes-under-rs-1-lakh/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-mileage-bikes-in-india-for-daily-commuting.md",
+      "url": "/blog/auto/best-mileage-bikes-in-india-for-daily-commuting/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-mileage-bikes-to-buy-during-the-festive-season.md",
+      "url": "/blog/auto/best-mileage-bikes-to-buy-during-the-festive-season/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-mileage-scooters-in-india.md",
+      "url": "/blog/auto/best-mileage-scooters-in-india/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-motorcycles-for-weekend-long-distance-touring.md",
+      "url": "/blog/auto/best-motorcycles-for-weekend-long-distance-touring/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-naked-bikes-under-rs-2-lakh-in-india.md",
+      "url": "/blog/auto/best-naked-bikes-under-rs-2-lakh-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-premium-scooters-under-rs-1-5-lakh.md",
+      "url": "/blog/auto/best-premium-scooters-under-rs-1-5-lakh/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-retro-style-bikes-under-rs-2-lakh.md",
+      "url": "/blog/auto/best-retro-style-bikes-under-rs-2-lakh/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-and-bikes-for-riders-who-prefer-an-easy-low-seat-height-design.md",
+      "url": "/blog/auto/best-scooters-and-bikes-for-riders-who-prefer-an-easy-low-seat-height-design/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-for-college-students-in-india.md",
+      "url": "/blog/auto/best-scooters-for-college-students-in-india/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-for-daily-city-traffic.md",
+      "url": "/blog/auto/best-scooters-for-daily-city-traffic/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-to-buy-on-diwali-2026.md",
+      "url": "/blog/auto/best-scooters-to-buy-on-diwali-2026/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-under-rs-1-5-lakh-in-india.md",
+      "url": "/blog/auto/best-scooters-under-rs-1-5-lakh-in-india/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-under-rs-1-lakh-in-india.md",
+      "url": "/blog/auto/best-scooters-under-rs-1-lakh-in-india/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-with-bluetooth-navigation-and-smart-features.md",
+      "url": "/blog/auto/best-scooters-with-bluetooth-navigation-and-smart-features/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-with-comfortable-suspension-for-indian-roads.md",
+      "url": "/blog/auto/best-scooters-with-comfortable-suspension-for-indian-roads/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooters-with-large-boot-space.md",
+      "url": "/blog/auto/best-scooters-with-large-boot-space/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooty-for-women-riders-in-india-comfort-weight-and-features.md",
+      "url": "/blog/auto/best-scooty-for-women-riders-in-india-comfort-weight-and-features/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooty-under-rs-1-lakh-for-diwali-2026.md",
+      "url": "/blog/auto/best-scooty-under-rs-1-lakh-for-diwali-2026/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooty-under-rs-70-000-in-india.md",
+      "url": "/blog/auto/best-scooty-under-rs-70-000-in-india/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-scooty-under-rs-80-000-in-india.md",
+      "url": "/blog/auto/best-scooty-under-rs-80-000-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-sports-bikes-under-2-lakh-design-performance.md",
+      "url": "/blog/auto/best-sports-bikes-under-2-lakh-design-performance/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india.md",
+      "url": "/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-sporty-scooters-under-rs-1-5-lakh.md",
+      "url": "/blog/auto/best-sporty-scooters-under-rs-1-5-lakh/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-touring-bikes-under-rs-3-lakh.md",
+      "url": "/blog/auto/best-touring-bikes-under-rs-3-lakh/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-two-wheelers-for-daily-family-travel-during-chhath-puja.md",
+      "url": "/blog/auto/best-two-wheelers-for-daily-family-travel-during-chhath-puja/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-two-wheelers-for-delivery-and-other-working-professionals.md",
+      "url": "/blog/auto/best-two-wheelers-for-delivery-and-other-working-professionals/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-two-wheelers-for-everyday-family-use.md",
+      "url": "/blog/auto/best-two-wheelers-for-everyday-family-use/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-two-wheelers-for-grocery-runs-errands-and-everyday-family-needs.md",
+      "url": "/blog/auto/best-two-wheelers-for-grocery-runs-errands-and-everyday-family-needs/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-two-wheelers-for-short-city-trips-and-heavy-traffic.md",
+      "url": "/blog/auto/best-two-wheelers-for-short-city-trips-and-heavy-traffic/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-value-bikes-between-rs-1-lakh-and-rs-1-5-lakh.md",
+      "url": "/blog/auto/best-value-bikes-between-rs-1-lakh-and-rs-1-5-lakh/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-yamaha-scooty-in-india-rayzr-vs-fascino-and-other-options.md",
+      "url": "/blog/auto/best-yamaha-scooty-in-india-rayzr-vs-fascino-and-other-options/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -888,6 +2643,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/bike-emi-for-a-rs-1-lakh-loan-monthly-payments-for-different-tenures.md",
+      "url": "/blog/auto/bike-emi-for-a-rs-1-lakh-loan-monthly-payments-for-different-tenures/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-insurance-in-india-what-new-buyers-need-to-know.md",
+      "url": "/blog/auto/bike-insurance-in-india-what-new-buyers-need-to-know/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/bike-mileage-full-tank-method-and-accurate-averages.md",
       "url": "/blog/auto/bike-mileage-full-tank-method-and-accurate-averages/",
       "datePublished": "2026-10-22",
@@ -900,6 +2685,66 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-on-road-prices-in-delhi-ncr-ex-showroom-price-rto-and-insurance.md",
+      "url": "/blog/auto/bike-on-road-prices-in-delhi-ncr-ex-showroom-price-rto-and-insurance/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bikes-with-low-maintenance-costs-in-india.md",
+      "url": "/blog/auto/bikes-with-low-maintenance-costs-in-india/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bikes-with-strong-resale-value-in-india-what-should-buyers-compare.md",
+      "url": "/blog/auto/bikes-with-strong-resale-value-in-india-what-should-buyers-compare/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bikes-with-the-best-suspension-for-pothole-filled-indian-roads.md",
+      "url": "/blog/auto/bikes-with-the-best-suspension-for-pothole-filled-indian-roads/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -1008,6 +2853,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/dhanteras-bike-buying-checklist-2026-booking-payment-and-delivery.md",
+      "url": "/blog/auto/dhanteras-bike-buying-checklist-2026-booking-payment-and-delivery/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/drum-brakes-vs-disc-brakes-which-should-you-choose.md",
+      "url": "/blog/auto/drum-brakes-vs-disc-brakes-which-should-you-choose/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/dzire-vs-aura-choose-your-compact-sedan.md",
       "url": "/blog/auto/dzire-vs-aura-choose-your-compact-sedan/",
       "datePublished": "2026-10-22",
@@ -1023,6 +2898,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/electric-scooter-battery-warranty-and-charging-what-to-check-before-buying.md",
+      "url": "/blog/auto/electric-scooter-battery-warranty-and-charging-what-to-check-before-buying/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/electric-scooter-vs-petrol-scooter-which-is-better-for-indian-commuters.md",
+      "url": "/blog/auto/electric-scooter-vs-petrol-scooter-which-is-better-for-indian-commuters/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/electric-vs-petrol-cars-india-break-even-guide.md",
       "url": "/blog/auto/electric-vs-petrol-cars-india-break-even-guide/",
       "datePublished": "2026-10-22",
@@ -1035,6 +2940,21 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/electric-vs-petrol-scooter-a-five-year-ownership-cost-comparison.md",
+      "url": "/blog/auto/electric-vs-petrol-scooter-a-five-year-ownership-cost-comparison/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -1068,6 +2988,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/ex-showroom-vs-on-road-bike-price-the-difference-explained.md",
+      "url": "/blog/auto/ex-showroom-vs-on-road-bike-price-the-difference-explained/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/five-year-car-ownership-cost-a-practical-model.md",
       "url": "/blog/auto/five-year-car-ownership-cost-a-practical-model/",
       "datePublished": "2026-10-22",
@@ -1083,6 +3018,96 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/hero-hf-deluxe-is-it-a-good-budget-bike-for-daily-commuting.md",
+      "url": "/blog/auto/hero-hf-deluxe-is-it-a-good-budget-bike-for-daily-commuting/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-price-mileage-features-and-variants-in-2026.md",
+      "url": "/blog/auto/hero-splendor-plus-price-mileage-features-and-variants-in-2026/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-vs-hero-hf-deluxe-which-budget-bike-wins.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-hero-hf-deluxe-which-budget-bike-wins/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-110-vs-activa-125-which-one-is-worth-buying.md",
+      "url": "/blog/auto/honda-activa-110-vs-activa-125-which-one-is-worth-buying/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-on-road-price-in-delhi-noida-and-gurugram-what-changes.md",
+      "url": "/blog/auto/honda-activa-on-road-price-in-delhi-noida-and-gurugram-what-changes/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-vs-suzuki-access-which-is-better-for-daily-use.md",
+      "url": "/blog/auto/honda-activa-vs-suzuki-access-which-is-better-for-daily-use/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/honda-activa-vs-tvs-jupiter-daily-commuter-guide.md",
       "url": "/blog/auto/honda-activa-vs-tvs-jupiter-daily-commuter-guide/",
       "datePublished": "2026-10-22",
@@ -1095,6 +3120,111 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-vs-tvs-jupiter-which-scooter-should-you-buy.md",
+      "url": "/blog/auto/honda-activa-vs-tvs-jupiter-which-scooter-should-you-buy/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-which-variant-is-best-for-your-budget.md",
+      "url": "/blog/auto/honda-activa-which-variant-is-best-for-your-budget/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-shine-125-price-mileage-and-features.md",
+      "url": "/blog/auto/honda-shine-125-price-mileage-and-features/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-shine-125-vs-honda-sp-125-which-bike-is-better.md",
+      "url": "/blog/auto/honda-shine-125-vs-honda-sp-125-which-bike-is-better/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-sp-125-is-it-worth-buying-in-2026.md",
+      "url": "/blog/auto/honda-sp-125-is-it-worth-buying-in-2026/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/how-much-down-payment-do-you-need-to-buy-a-bike-in-india.md",
+      "url": "/blog/auto/how-much-down-payment-do-you-need-to-buy-a-bike-in-india/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/how-much-range-can-you-expect-from-an-electric-scooter-in-daily-use.md",
+      "url": "/blog/auto/how-much-range-can-you-expect-from-an-electric-scooter-in-daily-use/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -1173,6 +3303,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/is-diwali-a-good-time-to-buy-a-bike-in-india-price-delivery-and-booking-checklist.md",
+      "url": "/blog/auto/is-diwali-a-good-time-to-buy-a-bike-in-india-price-delivery-and-booking-checklist/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/jupiter-110-vs-activa-110-family-scooter-guide.md",
       "url": "/blog/auto/jupiter-110-vs-activa-110-family-scooter-guide/",
       "datePublished": "2026-10-22",
@@ -1203,6 +3348,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/monthly-cost-of-owning-a-bike-in-india-fuel-service-and-insurance.md",
+      "url": "/blog/auto/monthly-cost-of-owning-a-bike-in-india-fuel-service-and-insurance/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/motorcycle-maintenance-oil-chain-brakes-and-tyres.md",
       "url": "/blog/auto/motorcycle-maintenance-oil-chain-brakes-and-tyres/",
       "datePublished": "2026-10-22",
@@ -1215,6 +3375,36 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/naked-bike-vs-sports-bike-which-is-better-for-indian-roads.md",
+      "url": "/blog/auto/naked-bike-vs-sports-bike-which-is-better-for-indian-roads/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/new-bike-vs-used-bike-under-rs-1-lakh-which-is-better-value.md",
+      "url": "/blog/auto/new-bike-vs-used-bike-under-rs-1-lakh-which-is-better-value/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -1263,6 +3453,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/obd2-and-current-emission-standards-for-indian-two-wheelers-what-buyers-should-know.md",
+      "url": "/blog/auto/obd2-and-current-emission-standards-for-indian-two-wheelers-what-buyers-should-know/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/ola-electric-vs-ather-what-buyers-should-compare.md",
       "url": "/blog/auto/ola-electric-vs-ather-what-buyers-should-compare/",
       "datePublished": "2026-10-22",
@@ -1293,6 +3498,111 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/real-mileage-vs-claimed-mileage-what-should-bike-buyers-expect.md",
+      "url": "/blog/auto/real-mileage-vs-claimed-mileage-what-should-bike-buyers-expect/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-vs-bullet-350-differences-explained.md",
+      "url": "/blog/auto/royal-enfield-classic-350-vs-bullet-350-differences-explained/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-on-road-price-by-city-cost-breakdown.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-on-road-price-by-city-cost-breakdown/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-price-features-and-everyday-usability.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-price-features-and-everyday-usability/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-vs-classic-350-which-should-you-buy.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-vs-classic-350-which-should-you-buy/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/scooter-vs-bike-for-women-commuters-which-is-more-practical.md",
+      "url": "/blog/auto/scooter-vs-bike-for-women-commuters-which-is-more-practical/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/scooters-with-the-longest-seats-in-india.md",
+      "url": "/blog/auto/scooters-with-the-longest-seats-in-india/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/scorpio-n-vs-xuv700-model-year-buying-guide.md",
       "url": "/blog/auto/scorpio-n-vs-xuv700-model-year-buying-guide/",
       "datePublished": "2026-10-22",
@@ -1308,6 +3618,51 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/should-you-buy-a-bike-in-december-2026-or-wait-until-january-2027.md",
+      "url": "/blog/auto/should-you-buy-a-bike-in-december-2026-or-wait-until-january-2027/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/should-you-exchange-your-old-bike-or-buy-a-new-one-during-diwali.md",
+      "url": "/blog/auto/should-you-exchange-your-old-bike-or-buy-a-new-one-during-diwali/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/single-channel-vs-dual-channel-abs-is-the-upgrade-worth-it.md",
+      "url": "/blog/auto/single-channel-vs-dual-channel-abs-is-the-upgrade-worth-it/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/splendor-plus-vs-hf-deluxe-commuter-value-guide.md",
       "url": "/blog/auto/splendor-plus-vs-hf-deluxe-commuter-value-guide/",
       "datePublished": "2026-10-22",
@@ -1320,6 +3675,21 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-access-price-comfort-and-practicality-for-families.md",
+      "url": "/blog/auto/suzuki-access-price-comfort-and-practicality-for-families/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -1399,6 +3769,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/top-5-bikes-under-rs-1-lakh-to-buy-this-diwali.md",
+      "url": "/blog/auto/top-5-bikes-under-rs-1-lakh-to-buy-this-diwali/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/tubeless-vs-tube-motorcycle-tyres.md",
       "url": "/blog/auto/tubeless-vs-tube-motorcycle-tyres/",
       "datePublished": "2026-10-22",
@@ -1414,6 +3799,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/tubeless-vs-tube-type-tyres-which-is-better-for-indian-roads.md",
+      "url": "/blog/auto/tubeless-vs-tube-type-tyres-which-is-better-for-indian-roads/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-160-price-performance-and-features.md",
+      "url": "/blog/auto/tvs-apache-rtr-160-price-performance-and-features/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide.md",
       "url": "/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide/",
       "datePublished": "2026-10-22",
@@ -1426,6 +3841,96 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-on-road-prices-across-major-indian-cities.md",
+      "url": "/blog/auto/tvs-jupiter-on-road-prices-across-major-indian-cities/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-vs-suzuki-access-comfort-features-and-value.md",
+      "url": "/blog/auto/tvs-jupiter-vs-suzuki-access-comfort-features-and-value/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-which-variant-offers-the-best-value.md",
+      "url": "/blog/auto/tvs-jupiter-which-variant-offers-the-best-value/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-raider-125-price-features-and-everyday-practicality.md",
+      "url": "/blog/auto/tvs-raider-125-price-features-and-everyday-practicality/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-raider-125-vs-honda-sp-125-which-is-better-for-daily-commuting.md",
+      "url": "/blog/auto/tvs-raider-125-vs-honda-sp-125-which-is-better-for-daily-commuting/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-raider-vs-bajaj-pulsar-n125-which-125cc-bike-should-you-buy.md",
+      "url": "/blog/auto/tvs-raider-vs-bajaj-pulsar-n125-which-125cc-bike-should-you-buy/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -1489,6 +3994,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/what-to-check-before-buying-a-new-bike-from-a-showroom.md",
+      "url": "/blog/auto/what-to-check-before-buying-a-new-bike-from-a-showroom/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/why-does-the-on-road-price-of-a-bike-vary-by-city.md",
+      "url": "/blog/auto/why-does-the-on-road-price-of-a-bike-vary-by-city/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide.md",
       "url": "/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide/",
       "datePublished": "2026-10-22",
@@ -1516,6 +4051,96 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fz-series-which-model-is-best-for-city-riding.md",
+      "url": "/blog/auto/yamaha-fz-series-which-model-is-best-for-city-riding/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fz-vs-tvs-apache-rtr-160-which-is-better-for-the-city.md",
+      "url": "/blog/auto/yamaha-fz-vs-tvs-apache-rtr-160-which-is-better-for-the-city/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-mt-15-is-it-a-good-daily-use-naked-bike.md",
+      "url": "/blog/auto/yamaha-mt-15-is-it-a-good-daily-use-naked-bike/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-r15-price-features-and-practicality-for-indian-riders.md",
+      "url": "/blog/auto/yamaha-r15-price-features-and-practicality-for-indian-riders/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-r15-vs-yamaha-mt-15-sports-bike-or-naked-bike.md",
+      "url": "/blog/auto/yamaha-r15-vs-yamaha-mt-15-sports-bike-or-naked-bike/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-rayzr-vs-yamaha-fascino-which-scooty-is-better.md",
+      "url": "/blog/auto/yamaha-rayzr-vs-yamaha-fascino-which-scooty-is-better/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-24",
+        "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
+      },
+      "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
       "reviewRequired": false
     },
     {
@@ -2266,381 +4891,6 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/what-is-product-management.md",
-      "url": "/blog/product/what-is-product-management/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/what-does-a-product-manager-do.md",
-      "url": "/blog/product/what-does-a-product-manager-do/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-manager-vs-project-manager-vs-business-analyst.md",
-      "url": "/blog/product/product-manager-vs-project-manager-vs-business-analyst/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/how-to-become-a-product-manager.md",
-      "url": "/blog/product/how-to-become-a-product-manager/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/best-product-management-tools.md",
-      "url": "/blog/product/best-product-management-tools/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-strategy-explained.md",
-      "url": "/blog/product/product-strategy-explained/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/how-to-build-a-product-roadmap.md",
-      "url": "/blog/product/how-to-build-a-product-roadmap/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/rice-moscow-ice-prioritization-frameworks.md",
-      "url": "/blog/product/rice-moscow-ice-prioritization-frameworks/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/how-to-write-a-product-requirements-document-prd.md",
-      "url": "/blog/product/how-to-write-a-product-requirements-document-prd/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-management-okrs.md",
-      "url": "/blog/product/product-management-okrs/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/customer-discovery-for-product-managers.md",
-      "url": "/blog/product/customer-discovery-for-product-managers/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping.md",
-      "url": "/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-market-fit-meaning-metrics-examples.md",
-      "url": "/blog/product/product-market-fit-meaning-metrics-examples/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing.md",
-      "url": "/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/what-is-an-mvp-minimum-viable-product.md",
-      "url": "/blog/product/what-is-an-mvp-minimum-viable-product/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/agile-product-management-scrum-kanban.md",
-      "url": "/blog/product/agile-product-management-scrum-kanban/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-metrics-explained-north-star-kpis-retention.md",
-      "url": "/blog/product/product-metrics-explained-north-star-kpis-retention/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/ab-testing-for-product-managers.md",
-      "url": "/blog/product/ab-testing-for-product-managers/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/go-to-market-strategy-for-product-managers.md",
-      "url": "/blog/product/go-to-market-strategy-for-product-managers/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/stakeholder-management-for-product-managers.md",
-      "url": "/blog/product/stakeholder-management-for-product-managers/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/how-to-diagnose-a-drop-in-product-metrics.md",
-      "url": "/blog/product/how-to-diagnose-a-drop-in-product-metrics/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/why-products-fail-root-cause-analysis-postmortems.md",
-      "url": "/blog/product/why-products-fail-root-cause-analysis-postmortems/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/ai-product-management-llms-evaluation-costs-safety.md",
-      "url": "/blog/product/ai-product-management-llms-evaluation-costs-safety/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-manager-interview-preparation.md",
-      "url": "/blog/product/product-manager-interview-preparation/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
-      "reviewRequired": false
-    },
-    {
-      "source": "data/blog/product/product-operations-explained.md",
-      "url": "/blog/product/product-operations-explained/",
-      "datePublished": "2026-10-23",
-      "dateModified": "2026-10-23",
-      "status": "verified",
-      "confidence": "high",
-      "evidence": {
-        "kind": "site-owner-confirmation",
-        "confirmedOn": "2026-10-23",
-        "note": "Original author publication on 2026-10-23"
-      },
-      "rationale": "Author published new article on 2026-10-23.",
       "reviewRequired": false
     }
   ]

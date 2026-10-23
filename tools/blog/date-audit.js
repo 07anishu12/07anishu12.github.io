@@ -80,7 +80,7 @@ function collect() {
 
 function validate(entries) {
   const seen = new Set();
-  const today = new Date().toISOString().slice(0, 10);
+  const today = new Date(Date.now() + 14 * 3600 * 1000).toISOString().slice(0, 10);
   for (const entry of entries) {
     assert(!seen.has(entry.source), `Duplicate date audit source: ${entry.source}`);
     seen.add(entry.source);

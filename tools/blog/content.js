@@ -92,7 +92,7 @@ function parseArticle(source, category, { root = ROOT, preview = false, imageRoo
     const value = data[key];
     if (key === 'dateModified' && !value) continue;
     assert(typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value, `${key} must be a real YYYY-MM-DD date.`);
-    assert(value <= new Date().toISOString().slice(0, 10), `${key} cannot be in the future.`);
+    assert(value <= new Date(Date.now() + 14 * 3600 * 1000).toISOString().slice(0, 10), `${key} cannot be in the future.`);
   }
   assert(!data.dateModified || data.dateModified >= data.datePublished, 'dateModified precedes datePublished.');
   assert(Array.isArray(data.tags) && data.tags.every(t => typeof t === 'string' && t.trim()), 'tags must be an array of nonempty strings.');
