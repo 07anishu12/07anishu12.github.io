@@ -7,7 +7,7 @@ description: Learn how to combine Behavioral User Personas, Jobs to Be Done
   opportunities.
 category: product
 tags:
-  - Jobs To Be Done Vs User Personas`
+  - Jobs To Be Done Vs User Personas
   - Jobs To Be Done Framework
   - Customer Journey Mapping For Product Managers
   - User Personas Product Management

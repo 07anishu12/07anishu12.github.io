@@ -8,7 +8,7 @@ description: Ace your Product Manager interview across Product Sense (CIRCLES),
   worked case.
 category: product
 tags:
-  - Product Manager Interview Preparation`
+  - Product Manager Interview Preparation
   - Product Sense Interview Framework Circles
   - Product Manager Execution Metrics Questions
   - Product Strategy Interview Questions

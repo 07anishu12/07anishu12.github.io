@@ -7,7 +7,7 @@ description: Learn how to write effective Product Management OKRs that measure
   indicators, and scoring math.
 category: product
 tags:
-  - Product Management Okrs`
+  - Product Management Okrs
   - Okr Examples For Product Managers
   - Objectives And Key Results Product Management
   - Leading Vs Lagging Indicators Okr

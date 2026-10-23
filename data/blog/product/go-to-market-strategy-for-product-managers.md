@@ -7,7 +7,7 @@ description: "Master Go-to-Market (GTM) strategy for product managers: Tier 1–
   adoption math."
 category: product
 tags:
-  - Go To Market Strategy For Product Managers`
+  - Go To Market Strategy For Product Managers
   - Product Launch Checklist Template
   - Gtm Strategy Framework B2b Saas
   - Tier 1 Tier 2 Tier 3 Product Launch

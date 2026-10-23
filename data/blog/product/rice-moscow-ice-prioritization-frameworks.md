@@ -7,7 +7,7 @@ description: Master RICE, ICE, and MoSCoW feature prioritization with exact
   anti-gaming rules.
 category: product
 tags:
-  - Product Prioritization Frameworks`
+  - Product Prioritization Frameworks
   - Rice Scoring Model
   - Rice Vs Ice Vs Moscow
   - How To Prioritize Product Features

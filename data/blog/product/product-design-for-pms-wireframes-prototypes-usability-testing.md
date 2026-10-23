@@ -7,7 +7,7 @@ description: "Learn product design for product managers: wireframe vs prototype
   test scripts."
 category: product
 tags:
-  - Product Design For Product Managers`
+  - Product Design For Product Managers
   - Wireframe Vs Mockup Vs Prototype
   - Usability Testing 5 Users Nielsen
   - Ten Usability Heuristics Jakob Nielsen

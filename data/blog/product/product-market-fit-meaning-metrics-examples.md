@@ -7,7 +7,7 @@ description: Learn how to measure and validate Product-Market Fit using cohort
   economics.
 category: product
 tags:
-  - Product Market Fit`
+  - Product Market Fit
   - How To Measure Product Market Fit
   - Sean Ellis 40% Test Superhuman
   - Product Market Fit Metrics Retention Curve

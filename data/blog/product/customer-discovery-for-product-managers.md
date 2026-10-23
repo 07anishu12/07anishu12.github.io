@@ -7,7 +7,7 @@ description: Master customer discovery for product managers. Learn story-based
   Solution Trees.
 category: product
 tags:
-  - Customer Discovery For Product Managers`
+  - Customer Discovery For Product Managers
   - Customer Discovery Questions
   - User Interview Guide For Product Managers
   - Opportunity Solution Tree Teresa Torres

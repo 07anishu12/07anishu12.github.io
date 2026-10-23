@@ -7,7 +7,7 @@ description: "Master AI Product Management in 2026: RAG vs fine-tuning, LLM
   safety guardrails."
 category: product
 tags:
-  - Ai Product Management`
+  - Ai Product Management
   - Llm Evaluation Framework For Product Managers
   - Ai Unit Economics Token Cost Latency
   - Deterministic Guardrails Llm

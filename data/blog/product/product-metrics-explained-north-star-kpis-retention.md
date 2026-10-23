@@ -7,7 +7,7 @@ description: "Master product metrics with exact formulas: North Star Metric
   and NRR math."
 category: product
 tags:
-  - Product Metrics Explained`
+  - Product Metrics Explained
   - North Star Metric Examples
   - Dau Mau Ratio Stickiness Formula
   - N-day Vs Unbounded Retention

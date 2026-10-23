@@ -7,7 +7,7 @@ description: Learn how to write a clear, engineering-ready Product Requirements
   criteria, and a full worked example.
 category: product
 tags:
-  - How To Write A Product Requirements Document`
+  - How To Write A Product Requirements Document
   - Prd Template
   - Product Requirements Document Example
   - User Stories And Acceptance Criteria

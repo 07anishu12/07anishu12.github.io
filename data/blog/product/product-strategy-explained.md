@@ -7,7 +7,7 @@ description: Master product strategy from vision to execution. Learn how to
   avoid fake strategies.
 category: product
 tags:
-  - Product Strategy`
+  - Product Strategy
   - What Is Product Strategy
   - Product Vision Vs Product Strategy
   - Product Strategy Framework

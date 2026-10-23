@@ -7,7 +7,7 @@ description: Understand why products fail using CB Insights data, SVPG risk
   Blameless Postmortem template.
 category: product
 tags:
-  - Why Products Fail`
+  - Why Products Fail
   - Startup Failure Reasons Cb Insights
   - Product Postmortem Template
   - 5 Whys Root Cause Analysis Product Management

@@ -7,7 +7,7 @@ description: Learn what a Minimum Viable Product (MVP) really is, how it differs
   to cut scope.
 category: product
 tags:
-  - What Is An Mvp`
+  - What Is An Mvp
   - Minimum Viable Product Examples
   - Mvp Vs Prototype Vs Beta
   - How To Scope An Mvp

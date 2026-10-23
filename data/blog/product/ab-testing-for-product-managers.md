@@ -7,7 +7,7 @@ description: "Master A/B testing for product managers: falsifiable hypotheses,
   and p-value math."
 category: product
 tags:
-  - A/b Testing For Product Managers`
+  - A/b Testing For Product Managers
   - How To Calculate Sample Size For A/b Test
   - Minimum Detectable Effect Mde Formula
   - Guardrail Metrics Experimentation

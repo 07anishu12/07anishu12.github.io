@@ -7,7 +7,7 @@ description: "Master Agile product management: Scrum vs Kanban, 2020 Scrum Guide
   Law math."
 category: product
 tags:
-  - Agile Product Management`
+  - Agile Product Management
   - Scrum Vs Kanban For Product Managers
   - Backlog Refinement Best Practices
   - Sprint Goal Examples

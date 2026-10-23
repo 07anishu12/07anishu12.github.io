@@ -7,7 +7,7 @@ description: Learn how to diagnose a sudden drop in conversion, DAU, or
   Paradox mix-shift math.
 category: product
 tags:
-  - How To Diagnose A Drop In Product Metrics`
+  - How To Diagnose A Drop In Product Metrics
   - Metric Drop Interview Question
   - Root Cause Analysis Product Management
   - Conversion Rate Dropped Suddenly

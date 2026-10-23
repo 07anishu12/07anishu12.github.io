@@ -7,7 +7,7 @@ description: "Master stakeholder management for product managers: Power-Interest
   conflict resolution."
 category: product
 tags:
-  - Stakeholder Management For Product Managers`
+  - Stakeholder Management For Product Managers
   - Influence Without Authority Product Manager
   - Daci Vs Raci Decision Framework
   - How To Say No To Stakeholders

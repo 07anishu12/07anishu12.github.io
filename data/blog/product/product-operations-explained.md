@@ -8,7 +8,7 @@ description: Learn what Product Operations (Product Ops) is, its 3 core pillars
   Product Ops ROI.
 category: product
 tags:
-  - Product Operations Explained`
+  - Product Operations Explained
   - What Is Product Ops
   - Product Operations Responsibilities
   - When To Hire Product Ops
