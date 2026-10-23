@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const cheerio = require('cheerio');
-const { ROOT, ORIGIN, assert, readArticles } = require('./content');
+const { ROOT, ORIGIN, CATEGORIES, assert, readArticles } = require('./content');
 const { walk } = require('./build');
 
 function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
@@ -66,7 +66,15 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     const lastmod = sitemap(el).find('lastmod').text();
     check(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap entry missing or invalid lastmod date: ${loc} (${lastmod})`);
   });
-  check(!urls.includes(`${ORIGIN}/blog/product/`), 'Empty category listing /blog/product/ must not be in sitemap');
+  for (const cat of Object.keys(CATEGORIES)) {
+    const catUrl = `${ORIGIN}/blog/${cat}/`;
+    const hasPosts = posts.some(p => p.category === cat);
+    if (!hasPosts) {
+      check(!urls.includes(catUrl), `Empty category listing ${catUrl} must not be in sitemap`);
+    } else {
+      check(urls.includes(catUrl), `Populated category listing ${catUrl} must be in sitemap`);
+    }
+  }
   check(!fs.existsSync(path.join(dir, 'blog/feed.xml')), 'Retired RSS feed must not deploy');
   const llms = fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8');
   check(llms.startsWith('# Aniket Thakur\n') && llms.includes('## Published articles'), 'llms.txt structure missing');

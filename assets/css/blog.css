@@ -262,3 +262,54 @@ body[data-page="blog-article"] .blog-layout { padding-top: 40px; }
   /* Keep the portfolio guide available after the footer without covering text. */
   body[data-page="blog-article"] .assistant-launcher { position: static; display: flex; width: max-content; max-width: calc(100% - 32px); margin: 20px auto; }
 }
+
+/* Visual Architecture & Flowchart Diagrams */
+.blog-diagram {
+  margin-block: 32px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-main, #e5e2d9);
+  border-radius: var(--radius-md, 12px);
+  padding: 24px;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+.blog-diagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle, #f0eee6);
+}
+.blog-diagram-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #E0E7FF;
+  color: #3730A3;
+}
+.blog-diagram-label {
+  font-size: 0.8rem;
+  font-family: var(--font-mono, monospace);
+  color: var(--text-tertiary, #6b7280);
+}
+.blog-diagram .mermaid {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  min-height: 120px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9rem;
+}
+.blog-diagram .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

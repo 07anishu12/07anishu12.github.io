@@ -2267,6 +2267,66 @@
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
       "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/what-is-product-management.md",
+      "url": "/blog/product/what-is-product-management/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/what-does-a-product-manager-do.md",
+      "url": "/blog/product/what-does-a-product-manager-do/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/product-manager-vs-project-manager-vs-business-analyst.md",
+      "url": "/blog/product/product-manager-vs-project-manager-vs-business-analyst/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/product/how-to-become-a-product-manager.md",
+      "url": "/blog/product/how-to-become-a-product-manager/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "confidence": "high",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-23",
+        "note": "Original author publication on 2026-10-23"
+      },
+      "rationale": "Author published new article on 2026-10-23.",
+      "reviewRequired": false
     }
   ]
 }

@@ -107,4 +107,23 @@
     form.addEventListener('submit', e => e.preventDefault());
     query.addEventListener('input', update); tag.addEventListener('change', update); update();
   }).catch(() => { status.textContent = 'Search is unavailable. Browse the category and page links below.'; });
+
+  // Dynamic Mermaid diagram visualizer
+  const mermaids = document.querySelectorAll('.mermaid');
+  if (mermaids.length) {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
+    s.defer = true;
+    s.onload = () => {
+      if (window.mermaid) {
+        window.mermaid.initialize({
+          startOnLoad: true,
+          theme: 'neutral',
+          fontFamily: 'Plus Jakarta Sans, sans-serif'
+        });
+        window.mermaid.run();
+      }
+    };
+    document.head.appendChild(s);
+  }
 })();

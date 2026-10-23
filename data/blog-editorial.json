@@ -906,6 +906,30 @@
       "reviewer": "Aniket Thakur",
       "reviewedOn": "2026-10-23",
       "note": "Site owner confirmed the article was already published; existing publication date retained."
+    },
+    "/blog/product/what-is-product-management/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product management foundational guide."
+    },
+    "/blog/product/what-does-a-product-manager-do/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified complete product manager role and responsibilities guide."
+    },
+    "/blog/product/product-manager-vs-project-manager-vs-business-analyst/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified PM vs Project Manager vs Business Analyst comparison guide."
+    },
+    "/blog/product/how-to-become-a-product-manager/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-23",
+      "note": "Author-reviewed and verified career transition and portfolio guide."
     }
   }
 }

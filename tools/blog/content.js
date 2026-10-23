@@ -54,6 +54,9 @@ function renderMarkdown(body) {
   const fence = md.renderer.rules.fence;
   md.renderer.rules.fence = (ts, i, options, env, renderer) => {
     const label = ts[i].info.trim().split(/\s+/)[0] || 'text';
+    if (label.toLowerCase() === 'mermaid') {
+      return `<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">${escape(ts[i].content.trim())}</pre></div>\n`;
+    }
     return `<div class="blog-code"><div class="blog-code-label">${escape(label)}</div>${fence(ts, i, options, env, renderer).replace('<pre>', `<pre tabindex="0" aria-label="${escape(label)} code block">`)}</div>`;
   };
   const html = md.renderer.render(tokens, md.options, env);
