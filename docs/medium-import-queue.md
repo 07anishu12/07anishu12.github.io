@@ -1,14 +1,14 @@
 # Medium Story Import Queue
 
-> Generated: 2026-10-23T19:18:41.910Z  
+> Generated: 2026-10-23T19:56:55.034Z  
 > Medium Account: [kumaraniketn](https://medium.com/@kumaraniketn)  
 > Mode: Official Webpage Import Queue (Semi-Automated)
 
 ## Summary
 
-- **Total Tracked Articles:** 151
+- **Total Tracked Articles:** 155
 - **Published on Medium:** 0
-- **Queued for Import:** 151
+- **Queued for Import:** 155
 - **Modified (Review Required):** 0
 - **Failed / Errors:** 0
 
@@ -173,3 +173,7 @@ To import each story to Medium using Medium's official webpage importer:
 | Queued | 2026-10-22 | Hero Xtreme 125R vs TVS Raider 125: Compare Safety and Fit | [Portfolio Link](https://07anishu12.github.io/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide/) | [Import URL](https://medium.com/p/import) |
 | Queued | 2026-10-22 | Mahindra XUV 3XO vs Tata Nexon: Compare the Complete Package | [Portfolio Link](https://07anishu12.github.io/blog/auto/xuv-3xo-vs-tata-nexon-features-and-ownership-cost/) | [Import URL](https://medium.com/p/import) |
 | Queued | 2026-10-21 | Tata Aeris 2026: Should you buy it? | [Portfolio Link](https://07anishu12.github.io/blog/auto/tata-aeris-review/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | How to Become a Product Manager: Skills, Portfolio and Career Roadmap | [Portfolio Link](https://07anishu12.github.io/blog/product/how-to-become-a-product-manager/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | Product Manager vs Project Manager vs Business Analyst: Key Differences Explained | [Portfolio Link](https://07anishu12.github.io/blog/product/product-manager-vs-project-manager-vs-business-analyst/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | What Does a Product Manager Do? Roles, Responsibilities and Daily Tasks | [Portfolio Link](https://07anishu12.github.io/blog/product/what-does-a-product-manager-do/) | [Import URL](https://medium.com/p/import) |
+| Queued | 2026-10-23 | What Is Product Management? A Complete Beginner's Guide | [Portfolio Link](https://07anishu12.github.io/blog/product/what-is-product-management/) | [Import URL](https://medium.com/p/import) |
