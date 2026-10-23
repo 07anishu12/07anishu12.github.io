@@ -13,7 +13,11 @@
     "check": "node tools/blog/check.js",
     "audit:dates": "node tools/blog/date-audit.js",
     "audit:dates:write": "node tools/blog/date-audit.js --write",
-    "test": "node --test tools/blog/test.js",
+    "test": "node --test tools/blog/test.js tools/blog/sync-medium.test.js",
+    "sync:medium": "node scripts/sync-medium.mjs",
+    "sync:medium:dry-run": "node scripts/sync-medium.mjs --dry-run",
+    "sync:medium:report": "node scripts/sync-medium.mjs --report",
+    "migration:dashboard": "node tools/migration/server.js",
     "search-console": "node tools/blog/verification.js"
   },
   "devDependencies": {

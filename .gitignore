@@ -14,3 +14,7 @@ node_modules/
 _site/
 _preview/
 .validation/
+.env
+.env.local
+.env.*.local
+!.env.example
