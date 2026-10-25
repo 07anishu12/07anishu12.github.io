@@ -62,9 +62,10 @@ function page({ title, description, url, content, post, breadcrumbs = [], previe
   const canonical = `${ORIGIN}${url}`, image = post ? `${ORIGIN}${post.coverImage}` : `${ORIGIN}/assets/img/aniket-portrait.png`;
   const socialImage = post?.socialImage ? `${ORIGIN}${post.socialImage}` : image;
   const socialAlt = post?.socialImageAlt || post?.coverImageAlt || 'Portrait of Aniket Thakur';
-  const graph = [siteGraph({ url: canonical, title, description })];
+  const graph = [];
   if (post) graph.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', '@id': `${canonical}#article`, headline: post.title, description: post.description, ...(post.quickAnswer ? { abstract: post.quickAnswer.answer } : {}), url: canonical, mainEntityOfPage: { '@id': `${canonical}#webpage` }, author: AUTHOR, publisher: AUTHOR, image: { '@type': 'ImageObject', url: image, width: post.width, height: post.height, caption: post.coverImageAlt }, datePublished: post.datePublished, dateModified: post.dateModified || post.datePublished, articleSection: CATEGORIES[post.category].name, keywords: post.tags.join(', '), inLanguage: 'en', wordCount: post.body.trim().split(/\s+/).length });
   if (breadcrumbs.length) graph.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: `${ORIGIN}${b.url}` })) });
+  graph.push(siteGraph({ url: canonical, title, description }));
   const { header, footer } = chrome(root);
   return `<!doctype html>
 <html lang="en"${preview ? ' data-preview="true"' : ''}>
@@ -96,7 +97,7 @@ ${post ? `<meta property="article:published_time" content="${post.datePublished}
 <script src="${versionedAsset(root, 'assets/js/site-config.js')}" defer></script>
 <script src="${versionedAsset(root, 'assets/js/lead-capture.js')}" defer></script>
 <script src="/assets/js/analytics.js" defer></script>
-${graph.map((s, i) => `<script type="application/ld+json"${i === 0 ? ' data-seo-site-schema' : ''}>${json(s)}</script>`).join('\n')}
+${graph.map(s => `<script type="application/ld+json"${s['@graph'] ? ' data-seo-site-schema' : ''}>${json(s)}</script>`).join('\n')}
 </head>
 <body data-page="blog${post ? '-article' : ''}">
 <a class="skip-link" href="#main-content">Skip to content</a>

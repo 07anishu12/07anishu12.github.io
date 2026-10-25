@@ -33,7 +33,10 @@ export default function ContactPage() {
             form keeps the first follow-up focused.
           </p>
           <div style={{ marginTop: 16 }}>
-            <InquiryButton className="button button-primary" category="general" />
+            <InquiryButton
+              className="button button-primary"
+              category="general"
+            />
           </div>
         </div>
         <div className="lead-panel">
@@ -64,11 +67,11 @@ export default function ContactPage() {
           </a>{" "}
           or <a href="/assets/Aniket_Thakur_Resume.pdf">download my résumé</a>.
         </p>
-          <p style={{ marginTop: 12, color: "var(--muted)" }}>
-            Read the <Link href="/privacy/">privacy notice</Link> before
-            submitting. For a focused bike-finance comparison, visit the{" "}
-            <Link href="/finance/bikes/">bike buying enquiry page</Link>.
-          </p>
+        <p style={{ marginTop: 12, color: "var(--muted)" }}>
+          Read the <Link href="/privacy/">privacy notice</Link> before
+          submitting. For a focused bike-finance comparison, visit the{" "}
+          <Link href="/finance/bikes/">bike buying enquiry page</Link>.
+        </p>
       </div>
     </main>
   );

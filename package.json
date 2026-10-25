@@ -15,6 +15,8 @@
     "audit:dates": "node tools/blog/date-audit.js",
     "audit:dates:write": "node tools/blog/date-audit.js --write",
     "test": "node --test tools/blog/test.js tools/blog/sync-medium.test.js tools/seo/validate.test.mjs",
+    "test:web": "pnpm --filter @portfolio/web test",
+    "test:sheets-live": "node scripts/test-google-sheets-live.mjs",
     "seo:validate": "node tools/seo/validate.mjs apps/web/public",
     "sync:medium": "node scripts/sync-medium.mjs",
     "sync:medium:dry-run": "node scripts/sync-medium.mjs --dry-run",

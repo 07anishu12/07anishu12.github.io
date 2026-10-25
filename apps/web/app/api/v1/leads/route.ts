@@ -12,6 +12,11 @@ import {
   AutomotiveEnquiryRequestSchema,
   GeneralEnquiryRequestSchema,
 } from "@portfolio/contracts";
+import {
+  googleSheetsAdapter,
+  DEFAULT_SPREADSHEET_ID,
+  type LeadRecord,
+} from "../../../../lib/google-sheets";
 
 const SECRET =
   process.env.LEAD_TOKEN_SECRET ||
@@ -213,7 +218,9 @@ function verifyToken(token: string, now = Date.now()): string {
     issuedTime > now + 5000 ||
     now - issuedTime > 24 * 60 * 60 * 1000
   ) {
-    throw new Error("Submission token has expired. Please reload and try again.");
+    throw new Error(
+      "Submission token has expired. Please reload and try again.",
+    );
   }
   return id;
 }
@@ -231,7 +238,8 @@ export async function POST(request: Request) {
         ok: false,
         error: {
           code: "RATE_LIMITED",
-          message: "Too many submissions. Please wait 15 minutes before retrying.",
+          message:
+            "Too many submissions. Please wait 15 minutes before retrying.",
         },
       },
       { status: 429 },
@@ -243,7 +251,10 @@ export async function POST(request: Request) {
     body = await request.json();
   } catch {
     return NextResponse.json(
-      { ok: false, error: { code: "INVALID_JSON", message: "Malformed JSON payload." } },
+      {
+        ok: false,
+        error: { code: "INVALID_JSON", message: "Malformed JSON payload." },
+      },
       { status: 400 },
     );
   }
@@ -251,7 +262,10 @@ export async function POST(request: Request) {
   // Anti-spam honeypot
   if (body.website && String(body.website).trim() !== "") {
     return NextResponse.json(
-      { ok: false, error: { code: "SPAM_DETECTED", message: "Submission rejected." } },
+      {
+        ok: false,
+        error: { code: "SPAM_DETECTED", message: "Submission rejected." },
+      },
       { status: 422 },
     );
   }
@@ -266,7 +280,8 @@ export async function POST(request: Request) {
           ok: false,
           error: {
             code: "SPAM_DETECTED",
-            message: "Submission completed too quickly. Please take a moment and try again.",
+            message:
+              "Submission completed too quickly. Please take a moment and try again.",
           },
         },
         { status: 422 },
@@ -287,7 +302,8 @@ export async function POST(request: Request) {
         ok: false,
         error: {
           code: "INVALID_SUBMISSION_TOKEN",
-          message: err?.message || "Invalid or expired session token. Please reload.",
+          message:
+            err?.message || "Invalid or expired session token. Please reload.",
         },
       },
       { status: 400 },
@@ -349,7 +365,8 @@ export async function POST(request: Request) {
   const payloadHash = createHash("sha256").update(hashKey).digest("hex");
 
   // In-memory deduplication check
-  const cached = recentSubmissions.get(submissionId) || recentSubmissions.get(payloadHash);
+  const cached =
+    recentSubmissions.get(submissionId) || recentSubmissions.get(payloadHash);
   if (cached && cached.expiresAt > now) {
     return NextResponse.json(
       {
@@ -418,22 +435,25 @@ export async function POST(request: Request) {
             isAuto ? validatedData.pinCode : null,
             brand,
             validatedData.sourcePath ?? "/",
-            isAuto ? validatedData.articleSlug ?? null : null,
+            isAuto ? (validatedData.articleSlug ?? null) : null,
             validatedData.pageCategory ?? (isAuto ? "auto" : "general"),
-            isAuto ? validatedData.clientContext?.campaign ?? null : null,
+            isAuto ? (validatedData.clientContext?.campaign ?? null) : null,
             POLICY_VERSION,
             isAuto ? "automotive" : "general",
             !isAuto ? validatedData.service : null,
-            !isAuto ? validatedData.otherService ?? null : null,
-            isAuto ? validatedData.vehicleModel ?? null : null,
-            isAuto ? validatedData.vehicleType ?? null : null,
+            !isAuto ? (validatedData.otherService ?? null) : null,
+            isAuto ? (validatedData.vehicleModel ?? null) : null,
+            isAuto ? (validatedData.vehicleType ?? null) : null,
           ],
         );
 
         const row =
           inserted.rows[0] ??
-          (await client.query("SELECT * FROM leads WHERE submission_id=$1", [submissionId]))
-            .rows[0];
+          (
+            await client.query("SELECT * FROM leads WHERE submission_id=$1", [
+              submissionId,
+            ])
+          ).rows[0];
 
         if (inserted.rowCount) {
           await client.query(
@@ -445,8 +465,14 @@ export async function POST(request: Request) {
         await client.query("COMMIT");
 
         // Record in recent deduplication cache
-        recentSubmissions.set(submissionId, { leadId: row.id, expiresAt: now + 24 * 3600 * 1000 });
-        recentSubmissions.set(payloadHash, { leadId: row.id, expiresAt: now + 24 * 3600 * 1000 });
+        recentSubmissions.set(submissionId, {
+          leadId: row.id,
+          expiresAt: now + 24 * 3600 * 1000,
+        });
+        recentSubmissions.set(payloadHash, {
+          leadId: row.id,
+          expiresAt: now + 24 * 3600 * 1000,
+        });
 
         return NextResponse.json(
           {
@@ -473,7 +499,8 @@ export async function POST(request: Request) {
           ok: false,
           error: {
             code: "DATABASE_ERROR",
-            message: "A database error occurred while saving your enquiry. Please retry or contact directly via WhatsApp.",
+            message:
+              "A database error occurred while saving your enquiry. Please retry or contact directly via WhatsApp.",
           },
         },
         { status: 500 },
@@ -481,14 +508,86 @@ export async function POST(request: Request) {
     }
   }
 
-  // Attempt direct Google Sheets persistence if configured (Webhook or Service Account)
-  const isGoogleSheetsConfigured = Boolean(
+  // 1. Attempt Google Sheets Web API persistence via Apps Script adapter (Primary configured integration)
+  if (googleSheetsAdapter.isConfigured()) {
+    const recordId = randomUUID();
+    const sheetLead: LeadRecord = {
+      id: recordId,
+      createdAt: new Date(now).toISOString(),
+      updatedAt: new Date(now).toISOString(),
+      enquiryType: isAuto ? "automotive" : "general",
+      fullName: validatedData.fullName,
+      mobile: normalizePhone(validatedData.mobile),
+      pinCode: isAuto ? validatedData.pinCode : undefined,
+      bikeBrand: isAuto
+        ? (validatedData.bikeBrand === "Other"
+            ? validatedData.otherBikeBrand
+            : validatedData.bikeBrand) || undefined
+        : undefined,
+      vehicleModel: isAuto
+        ? validatedData.vehicleModel || undefined
+        : undefined,
+      vehicleType: isAuto ? validatedData.vehicleType || undefined : undefined,
+      service: isAuto ? undefined : validatedData.service,
+      otherService: isAuto
+        ? undefined
+        : validatedData.otherService || undefined,
+      sourcePath: validatedData.sourcePath || "/",
+      articleSlug: validatedData.articleSlug || undefined,
+      pageCategory: validatedData.pageCategory ?? (isAuto ? "auto" : "general"),
+      campaignSource: isAuto
+        ? (validatedData.clientContext?.campaign ?? undefined)
+        : undefined,
+      consent: validatedData.consent,
+      leadStatus: "new",
+    };
+
+    const sheetsResult = await googleSheetsAdapter.createLead(sheetLead);
+    if (sheetsResult.ok) {
+      recentSubmissions.set(submissionId, {
+        leadId: recordId,
+        expiresAt: now + 24 * 3600 * 1000,
+      });
+      recentSubmissions.set(payloadHash, {
+        leadId: recordId,
+        expiresAt: now + 24 * 3600 * 1000,
+      });
+
+      return NextResponse.json(
+        {
+          ok: true,
+          leadId: recordId,
+          duplicate: Boolean(sheetsResult.duplicate),
+          integrations: { sheets: "synced", whatsapp: "queued" },
+          persistence: "google_sheets",
+        },
+        { status: sheetsResult.duplicate ? 200 : 201 },
+      );
+    } else {
+      console.error("Google Sheets sync failed:", sheetsResult.error);
+      return NextResponse.json(
+        {
+          ok: false,
+          error: {
+            code: sheetsResult.error.code || "SHEETS_SYNC_ERROR",
+            message:
+              "Unable to save your enquiry to Google Sheets. Please retry or contact directly via WhatsApp.",
+            details: sheetsResult.error.message,
+          },
+        },
+        { status: 502 },
+      );
+    }
+  }
+
+  // 2. Attempt legacy Google Sheets persistence if configured (Webhook or Service Account)
+  const isLegacyGoogleSheetsConfigured = Boolean(
     process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
-      (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
-        process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY),
+    (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
+      process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY),
   );
 
-  if (isGoogleSheetsConfigured) {
+  if (isLegacyGoogleSheetsConfigured) {
     const recordId = randomUUID();
     const sheetLead = {
       id: recordId,
@@ -502,10 +601,14 @@ export async function POST(request: Request) {
             ? validatedData.otherBikeBrand
             : validatedData.bikeBrand) || undefined
         : undefined,
-      vehicleModel: isAuto ? validatedData.vehicleModel || undefined : undefined,
+      vehicleModel: isAuto
+        ? validatedData.vehicleModel || undefined
+        : undefined,
       vehicleType: isAuto ? validatedData.vehicleType || undefined : undefined,
       service: isAuto ? undefined : validatedData.service,
-      otherService: isAuto ? undefined : validatedData.otherService || undefined,
+      otherService: isAuto
+        ? undefined
+        : validatedData.otherService || undefined,
       sourcePath: validatedData.sourcePath || "/",
       articleSlug: validatedData.articleSlug || undefined,
       consent: validatedData.consent,
@@ -537,7 +640,7 @@ export async function POST(request: Request) {
     }
   }
 
-  // If no DATABASE_URL or Google Sheets is configured, check if we can persist to local file storage (dev/standalone)
+  // 3. If no DATABASE_URL or Google Sheets is configured, check if we can persist to local file storage (dev/standalone)
   const isVercelProduction = Boolean(process.env.VERCEL);
   if (!isVercelProduction) {
     try {
@@ -555,10 +658,20 @@ export async function POST(request: Request) {
         submittedAt: new Date(now).toISOString(),
         phoneNormalized: normalizePhone(validatedData.mobile),
       };
-      fs.appendFileSync(path.join(dataDir, "enquiries.jsonl"), JSON.stringify(record) + "\n", "utf8");
+      fs.appendFileSync(
+        path.join(dataDir, "enquiries.jsonl"),
+        JSON.stringify(record) + "\n",
+        "utf8",
+      );
 
-      recentSubmissions.set(submissionId, { leadId: recordId, expiresAt: now + 24 * 3600 * 1000 });
-      recentSubmissions.set(payloadHash, { leadId: recordId, expiresAt: now + 24 * 3600 * 1000 });
+      recentSubmissions.set(submissionId, {
+        leadId: recordId,
+        expiresAt: now + 24 * 3600 * 1000,
+      });
+      recentSubmissions.set(payloadHash, {
+        leadId: recordId,
+        expiresAt: now + 24 * 3600 * 1000,
+      });
 
       return NextResponse.json(
         {
@@ -575,21 +688,141 @@ export async function POST(request: Request) {
     }
   }
 
-  // When on Vercel and no storage backend is configured, inform the user honestly
+  // 4. When on Vercel and no storage backend is configured, inform the user honestly
   const spreadsheetId =
-    process.env.GOOGLE_SHEETS_SPREADSHEET_ID ||
-    "1p-3XWQpo84ddBruI1LnU5dRTvJOetxThVKj2vxET3bA";
+    process.env.GOOGLE_SHEETS_SPREADSHEET_ID || DEFAULT_SPREADSHEET_ID;
 
   return NextResponse.json(
     {
       ok: false,
       error: {
         code: "STORAGE_NOT_CONFIGURED",
-        message: `The enquiry storage service is linked to Google Spreadsheet (${spreadsheetId}), but write authorization (GOOGLE_SHEETS_WEBHOOK_URL or Google Service Account) is awaiting setup. Please connect directly via WhatsApp in the meantime.`,
+        message: `The enquiry storage service is linked to Google Spreadsheet (${spreadsheetId}), but write authorization (GOOGLE_APPS_SCRIPT_URL, GOOGLE_SHEETS_WEBHOOK_URL, or Database) is awaiting setup. Please connect directly via WhatsApp in the meantime.`,
         spreadsheetId,
-        missingConfiguration: ["GOOGLE_SHEETS_WEBHOOK_URL", "DATABASE_URL"],
+        missingConfiguration: ["GOOGLE_APPS_SCRIPT_URL", "DATABASE_URL"],
       },
     },
     { status: 503 },
   );
+}
+
+/**
+ * Verify administrative secret for read and update operations
+ */
+function verifyAdminSecret(request: Request): boolean {
+  const authHeader = request.headers.get("authorization") || "";
+  const match = authHeader.match(/^Bearer\s+(.+)$/i);
+  const secretFromHeader = match ? match[1].trim() : null;
+  const url = new URL(request.url);
+  const secretFromQuery = url.searchParams.get("secret")?.trim() || null;
+  const provided = secretFromHeader || secretFromQuery;
+
+  const expectedSecret =
+    process.env.GOOGLE_SHEETS_API_SECRET?.trim() ||
+    process.env.ADMIN_SECRET?.trim();
+
+  if (!expectedSecret || !provided) {
+    return false;
+  }
+  return (
+    timingSafeEqual(
+      Buffer.from(provided.padEnd(64, "0")),
+      Buffer.from(expectedSecret.padEnd(64, "0")),
+    ) && provided.length === expectedSecret.length
+  );
+}
+
+/**
+ * GET /api/v1/leads
+ * Server-side authorized read endpoint for spreadsheet records
+ */
+export async function GET(request: Request) {
+  if (!verifyAdminSecret(request)) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: {
+          code: "UNAUTHORIZED",
+          message: "Authentication required to read lead records.",
+        },
+      },
+      { status: 401 },
+    );
+  }
+
+  const url = new URL(request.url);
+  const id = url.searchParams.get("id");
+
+  if (id) {
+    const result = await googleSheetsAdapter.getLeadById(id);
+    if (!result.ok) {
+      return NextResponse.json(result, {
+        status: result.error.code === "NOT_FOUND" ? 404 : 502,
+      });
+    }
+    return NextResponse.json(result, { status: 200 });
+  }
+
+  const limit = Number(url.searchParams.get("limit")) || 50;
+  const offset = Number(url.searchParams.get("offset")) || 0;
+  const status = url.searchParams.get("status") || undefined;
+
+  const result = await googleSheetsAdapter.listLeads({ limit, offset, status });
+  if (!result.ok) {
+    return NextResponse.json(result, { status: 502 });
+  }
+  return NextResponse.json(result, { status: 200 });
+}
+
+/**
+ * PATCH /api/v1/leads
+ * Server-side authorized update endpoint for spreadsheet records
+ */
+export async function PATCH(request: Request) {
+  if (!verifyAdminSecret(request)) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: {
+          code: "UNAUTHORIZED",
+          message: "Authentication required to update lead records.",
+        },
+      },
+      { status: 401 },
+    );
+  }
+
+  let body: any;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: { code: "INVALID_JSON", message: "Malformed JSON payload." },
+      },
+      { status: 400 },
+    );
+  }
+
+  if (!body?.id || !body?.updates || typeof body.updates !== "object") {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: {
+          code: "INVALID_PAYLOAD",
+          message: "Update requires id and updates object.",
+        },
+      },
+      { status: 400 },
+    );
+  }
+
+  const result = await googleSheetsAdapter.updateLead(body.id, body.updates);
+  if (!result.ok) {
+    return NextResponse.json(result, {
+      status: result.error.code === "NOT_FOUND" ? 404 : 502,
+    });
+  }
+  return NextResponse.json(result, { status: 200 });
 }

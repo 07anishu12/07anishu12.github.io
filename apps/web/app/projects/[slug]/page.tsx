@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { projects } from "../../../lib/projects";
 import {
+  BreadcrumbStructuredData,
   CreativeWorkStructuredData,
   WebPageStructuredData,
 } from "../../../components/StructuredData";
@@ -34,8 +35,25 @@ export default async function Project({ params }: Props) {
         name={p.title}
         description={p.problem}
       />
+      <BreadcrumbStructuredData
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Projects", url: "/projects/" },
+          { name: p.title, url: `/projects/${slug}/` },
+        ]}
+      />
       <article className="container reading">
-        <a href="/projects/">← All projects</a>
+        <nav aria-label="Breadcrumb" className="prose">
+          <ol>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/projects/">Projects</a>
+            </li>
+            <li aria-current="page">{p.title}</li>
+          </ol>
+        </nav>
         <p className="eyebrow">Engineering case study</p>
         <h1 className="page-title">{p.title}</h1>
         <p className="intro">{p.problem}</p>

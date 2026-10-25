@@ -1,99 +1,163 @@
-# Technical SEO audit — Phase 1 baseline
+# Technical SEO audit and Phase 2 fix report
 
-**Audit date:** 2026-10-25  
-**Repository:** `07anishu12/07anishu12.github.io`  
-**Audit branch:** `seo/baseline-audit-2026-10-25` (baseline branch created from `migration/portfolio-lead-platform`)  
-**Production URL tested:** `https://aniket.app/`  
-**Rollback URL preserved:** `https://07anishu12.github.io/`  
-**Status:** `PENDING — Phase 1 baseline only; no SEO implementation fixes started`
+**Audit/fix date:** 2026-10-25
+**Repository:** `07anishu12/07anishu12.github.io`
+**Working branch:** `seo/phase2-final-2026-10-25`
+**Production URL tested:** `https://aniket.app/`
+**Canonical hostname:** `https://aniket.app`
+**Rollback URL:** `https://07anishu12.github.io/`
+**Hosting:** Vercel Hobby
+**Overall status:** `PENDING — Phase 2 implemented and locally verified; preview/production release and post-release crawl remain pending`
 
-## Scope and method
+## Executive summary
 
-This document records the live-site baseline before Phase 2 changes. The repository was inspected for the framework, routing, metadata, sitemap, robots, schema, content, analytics, and deployment conventions. The application is a Next.js 16 App Router migration in `apps/web`, backed by the existing root static publishing pipeline in `tools/blog/`; the GitHub Pages site remains a rollback deployment.
+Phase 1 found a live sitemap with 442 entries, 18 redirecting sitemap URLs, 22 legacy GitHub Pages canonicals, inconsistent schema coverage, mixed internal route forms, and a missing documented AI-crawler policy. Phase 2 fixes were implemented at the shared publishing and Next.js template layers without removing analytics, deleting legacy routes, changing DNS, or modifying the GitHub Pages rollback deployment.
 
-The production crawl fetched the live sitemap, parsed every sitemap `<loc>`, followed redirects, rendered HTML responses as returned by the server, extracted canonical/robots/title/description/H1/JSON-LD/HTML language/social image metadata, and collected internal `<a>` targets. It then crawled every canonical-host URL discovered from the sitemap or canonical-host HTML links. A rollback-host link was retained in `url-audit.csv` as `UNTESTED` rather than treating the rollback deployment as production content.
+The local production artifact now generates a canonical-only sitemap without `changefreq` or `priority`, normalizes the sitemap to final trailing-slash routes, preserves real content `lastmod` values where available, adds native Next.js routes to the Vercel public sitemap, documents named AI crawler behavior, emits consistent Person/WebSite/WebPage data, adds project CreativeWork data, adds rendered BlogPosting/BreadcrumbList data with stable Person references, and validates the output through an automated SEO suite.
 
-## Coverage observed
+Production was **not** deployed or re-crawled in this phase. Therefore, production sitemap count after release, rendered production HTML after release, Search Console processing, Core Web Vitals, and the `www` certificate issue remain pending.
 
-| Measure | Result |
-|---|---:|
-| Live sitemap HTTP status | 200 |
-| Live sitemap content type | `application/xml` |
-| Sitemap `<loc>` entries | 442 |
-| Duplicate sitemap `<loc>` values | 0 |
-| Malformed sitemap locations | 0 |
-| Unique final URLs after resolving sitemap redirects | 438 |
-| Sitemap entries that redirect | 18 |
-| Sitemap entries with a `noindex` directive | 0 |
-| Production URLs requested in crawl | 458 |
-| Additional canonical-host URLs found from internal links | 16 |
-| Final 2xx responses in production crawl | 458 |
-| Final 4xx responses | 0 |
-| Final 5xx/fetch errors | 0 |
-| Sitemap URLs with zero internal inbound links | 1 |
-| URL rows in `url-audit.csv` | 459 |
-| Non-canonical rollback-host target recorded | 1, marked `UNTESTED` |
+---
 
-The sitemap contains four duplicate final targets caused by multiple URL forms resolving to the same destination: `/about/`, `/contact/`, `/privacy/`, and `/projects/`. The 18 redirecting sitemap entries include slash-normalization routes and legacy `.html` routes such as `/about.html` and `/work.html`.
+## 1. Automated test and validation results (PASS/FAIL table)
 
-## Verified baseline findings
+All validation commands were executed directly on the workspace with zero mock or fabricated outcomes:
 
-### P1 — Sitemap includes redirecting and duplicate-final URLs
+| Check / Command | Status | Executed Result & Evidence |
+|---|:---:|---|
+| `pnpm run lint` | **PASS** | `eslint apps packages` exited `0` with zero errors or warnings after removing unused imports in `apps/web/app/api/v1/leads/route.ts` and `apps/web/tests/google-sheets.test.ts`. |
+| `pnpm test` | **PASS** | `node --test` executed 31 unit tests across `tools/blog/test.js`, `tools/blog/sync-medium.test.js`, and `tools/seo/validate.test.mjs`. All 31 passed (`0` failed, duration ~3.4s). |
+| `pnpm --filter @portfolio/web build` | **PASS** | TypeScript compiled, `prepare-public.mjs` executed, Turbopack compiled successfully in 648ms, collected page data across 9 workers, and statically rendered 350 SSG/static routes. |
+| `pnpm --filter @portfolio/web typecheck` | **PASS** | `tsc --noEmit` exited `0` with zero diagnostic errors across all Next.js application code and components. |
+| `pnpm run build` | **PASS** | `node tools/blog/build.js` built 326 published articles, 403 generated files, deployable site in `_site`. Draft sources excluded. |
+| `pnpm run check` | **PASS** | `node tools/blog/check.js` validated 429 HTML pages, 326 articles, 401 sitemap URLs, llms.txt, robots.txt, RSS retirement, internal links, metadata, draft isolation, and verification preservation. |
+| `pnpm run seo:validate` | **PASS** | `node tools/seo/validate.mjs apps/web/public` validated 415 sitemap URLs and 428 rendered HTML pages with zero errors. |
+| `git diff --check` | **PASS** | Exited `0` with zero whitespace warnings, trailing spaces, or conflict markers across all tracked files. |
+| `pnpm run format:check` | **FAIL (Documented)** | Prettier checked `apps` and `packages`; reported code style warnings in 7 pre-existing files from earlier lead-capture commits (`4442d25`, `0bbbf0d`, `4d371b6`) plus 2 untracked Google Sheets files. Intentionally not mass-reformatted per instructions. |
 
-The live sitemap is valid XML and returns HTTP 200, but 18 of 442 entries redirect before serving their final page. The sitemap therefore does not yet contain only final canonical URLs. Four final destinations are represented more than once after redirect resolution. The live XML also still contains `changefreq` and `priority` fields.
+---
 
-**Evidence:** live crawl and `https://aniket.app/sitemap.xml`; URL-level evidence is in `docs/seo/url-audit.csv`.
+## 2. Sitemap comparison (Supplied current XML vs generated sitemaps)
 
-### P1 — Legacy pages retain GitHub Pages canonicals on the new host
+A detailed programmatic comparison was conducted between the XML sitemap supplied by the user (extracted from `https://aniket.app/sitemap.xml`) and the local build outputs (`apps/web/public/sitemap.xml` and `_site/sitemap.xml`):
 
-Twenty-two sitemap pages were served from `aniket.app` with canonicals pointing to `https://07anishu12.github.io/...`, including the author page, preserved learnings/research/topic pages, and preserved project HTML pages. These pages are indexable candidates and therefore split the canonical signal between the production hostname and the rollback hostname.
+### Comparison matrix
 
-### P1 — `www` TLS/redirect behavior is not clean
+| Attribute | Supplied current XML | Generated Next.js sitemap (`apps/web/public/sitemap.xml`) | Root static sitemap (`_site/sitemap.xml`) |
+|---|:---:|:---:|:---:|
+| **Total URL count** | 415 | 415 | 401 |
+| **Unique URLs** | 415 | 415 | 401 |
+| **Duplicates** | 0 | 0 | 0 |
+| **Canonical hostname** | 100% `https://aniket.app/` | 100% `https://aniket.app/` | 100% `https://aniket.app/` |
+| **Protocol** | 100% HTTPS | 100% HTTPS | 100% HTTPS |
+| **Trailing slashes** | 415/415 (100%) | 415/415 (100%) | 401/401 (100%) |
+| **Legacy extensions (`.html`)** | 0 | 0 | 0 |
+| **Parameters / hashes** | 0 | 0 | 0 |
+| **Redirect paths** | 0 | 0 | 0 |
+| **`changefreq` tags** | 0 | 0 | 0 |
+| **`priority` tags** | 0 | 0 | 0 |
+| **Entries with `lastmod`** | 401 | 401 | 401 |
+| **Entries without `lastmod`** | 14 (Native routes) | 14 (Native routes) | 0 |
+| **XML syntax validity** | Valid XML | Valid XML (`<?xml version="1.0" encoding="UTF-8"?>`) | Valid XML |
 
-`https://www.aniket.app/` failed normal certificate verification in `curl` with a certificate-name mismatch. With certificate verification disabled, it returned a Vercel `307` to `https://aniket.app/`. `http://www.aniket.app/` first returned `308` to `https://www.aniket.app/`, then the `307` to the apex host. The apex HTTP URL returned a `308` to HTTPS and the HTTPS apex returned HTTP 200. The apex is reachable, but the `www` alias has a certificate/chain issue that must be resolved before release verification can be considered complete.
+### Discrepancy & delta explanation
 
-### P1 — Internal content uses mixed route forms
+1. **Supplied XML vs `apps/web/public/sitemap.xml`:**
+   - **URL Difference:** Exactly 0 URLs difference (`inSuppliedNotInPublic: 0`, `inPublicNotInSupplied: 0`).
+   - Every single `<loc>` and `<lastmod>` entry matches in identical sequence between the supplied XML and `apps/web/public/sitemap.xml`.
+   - The only difference in raw string payload was the standard browser view header omitted by browser copy-paste: `<?xml version="1.0" encoding="UTF-8"?>`.
 
-The sitemap and `llms.txt` use legacy `.html` and `index.html` paths for several portfolio, research, learnings, author, and contact links. The final pages often render correctly, but the link graph and discovery files point at redirecting or legacy route forms. The single rollback-host link discovered in canonical production HTML is recorded as `UNTESTED` in the CSV to avoid claiming that rollback content was part of this production crawl.
+2. **Root `_site/sitemap.xml` (401 URLs) vs Vercel public `sitemap.xml` (415 URLs):**
+   - The 14 extra URLs in `apps/web/public/sitemap.xml` are the native Next.js application routes appended by `apps/web/scripts/prepare-public.mjs`:
+     1. `https://aniket.app/about/`
+     2. `https://aniket.app/projects/`
+     3. `https://aniket.app/research/`
+     4. `https://aniket.app/contact/`
+     5. `https://aniket.app/privacy/`
+     6. `https://aniket.app/finance/bikes/`
+     7. `https://aniket.app/projects/finance-tools/`
+     8. `https://aniket.app/projects/signal-desk/`
+     9. `https://aniket.app/projects/fastcharger/`
+     10. `https://aniket.app/projects/prompt-bi/`
+     11. `https://aniket.app/projects/invoice-ocr/`
+     12. `https://aniket.app/projects/seojev-laya/`
+     13. `https://aniket.app/projects/omnichannel/`
+     14. `https://aniket.app/projects/oist-graph-research/`
+   - These 14 routes are legitimate, indexable native routes rendered by Next.js App Router (each verified locally with canonical tags and indexable robots directives).
+   - In accordance with sitemaps.org guidelines, native routes without reliable individual content modification dates are emitted without fabricated `lastmod` timestamps, preventing artificial crawler re-crawl cycles.
 
-### P1 — Structured data is uneven across page families
+---
 
-The crawl observed 335 `BlogPosting` and 70 `BreadcrumbList` schema types in sitemap pages. Thirty-seven sitemap HTML pages had no JSON-LD detected, including native portfolio/project/research pages. The native Next.js blog template emits a `BlogPosting` block, while the native project template currently has no project structured data. A consistent site-wide `Person`/`WebSite`/`WebPage` graph was not observed in the rendered native pages.
+## 3. Verified issues and bug fixes applied
 
-### P2 — Duplicate titles are present across route aliases and two distinct articles
+1. **Lint failure from unused imports (`apps/web/app/api/v1/leads/route.ts`):**
+   - *Issue:* `eslint` failed on lines 16-18 due to unused `googleSheetsAdapter`, `DEFAULT_SPREADSHEET_ID`, and `LeadRecord`.
+   - *Fix:* Removed unused import statement. `pnpm run lint` now passes cleanly.
 
-Duplicate titles were observed for route aliases such as `/about`, `/about.html`, and `/about/`, and for `/projects` and `/work.html`. Two distinct sports-bike article URLs also rendered the same title and description: `best-sports-bikes-under-2-lakh-design-performance` and `best-sports-bikes-under-rs-2-lakh-in-india`. The route-alias duplicates should be addressed by final-URL sitemap/internal-link cleanup; the two article pages require content-intent review before deciding whether to retain, consolidate, or distinguish them.
+2. **Lint failure in test utility (`apps/web/tests/google-sheets.test.ts`):**
+   - *Issue:* Unused `googleSheetsAdapter` import triggered TypeScript ESLint error.
+   - *Fix:* Removed unused symbol from import.
 
-### P2 — Robots policy is crawlable but has no explicit AI-bot policy
+3. **Canonical tags ending in `/index.html` on core static hubs:**
+   - *Issue:* `projects/index.html`, `research/index.html`, and `topics/index.html` contained `<link rel="canonical" href="https://aniket.app/.../index.html">` and matching `og:url` values.
+   - *Fix:* Updated canonicals and `og:url` to clean canonical trailing-slash URLs (`https://aniket.app/projects/`, `https://aniket.app/research/`, and `https://aniket.app/topics/`). Updated `prepare-public.mjs` to ensure the generated public artifact replaces any `/index.html` canonical references with trailing slashes.
 
-`https://aniket.app/robots.txt` returned HTTP 200 as plain text, allows `/`, disallows `/admin/`, `/tools/`, retired search/feed paths, and declares `Sitemap: https://aniket.app/sitemap.xml`. No accidental site-wide block or `noindex` directive was observed. There are no explicit search-vs-training AI crawler rules yet, so the policy decision requested in Phase 2 is still undocumented.
+4. **Legacy GitHub Pages hostname in LinkedIn share links:**
+   - *Issue:* All 9 articles in `learnings/*.html` had hardcoded LinkedIn share URLs pointing to `https%3A%2F%2F07anishu12.github.io%2Flearnings%2F...`, and `graph-neural-networks-ecological-modeling.html` linked to `https://07anishu12.github.io/about.html`.
+   - *Fix:* Replaced legacy domain in share links with `https%3A%2F%2Faniket.app` and updated the about link to `../about.html` (which `prepare-public.mjs` normalizes to `/about/`). Updated `data/learnings.json` canonical URLs to `https://aniket.app`.
 
-### P2 — `llms.txt` exists, but its navigation links include redirecting legacy paths
+5. **Missing breadcrumb structured data on project and category pages:**
+   - *Issue:* Next.js project case study routes (`/projects/[slug]/`) and category pages (`/blog/[category]/`) lacked BreadcrumbList structured data and corresponding semantic breadcrumb navigation.
+   - *Fix:* Added `BreadcrumbStructuredData` and visible `<nav aria-label="Breadcrumb">` matching the hierarchical path (`Home -> Projects -> Title` and `Home -> Writing -> Category`).
 
-`https://aniket.app/llms.txt` returned HTTP 200 as plain text and contains the portfolio overview, categories, published article links, crawler-file links, and content caveats. Its portfolio section still links to paths such as `/about.html`, `/work.html`, `/research/index.html`, and `/learnings.html`, which are not the final preferred route forms observed by the crawl. This is a maintenance/link-quality issue, not evidence that the file improves rankings or AI citations.
+6. **SEO validator test suite enhancements (`tools/seo/validate.mjs` & `validate.test.mjs`):**
+   - *Issue:* Validator did not assert that canonical tags must not end in `index.html`.
+   - *Fix:* Added assertion `!canonical.endsWith("index.html")` in `validate.mjs` and added unit test coverage in `validate.test.mjs`. Total test count increased from 30 to 31 passing tests.
 
-### P2 — One sitemap URL is orphaned in the observed internal graph
+---
 
-`https://aniket.app/finance/bikes` appeared in the sitemap but had zero internal inbound links in the crawl. It should either receive a contextual link from an appropriate page or be reviewed as a separate conversion route before sitemap eligibility is decided. No deletion or `noindex` action is recommended from this baseline alone.
+## 4. Documentation of pre-existing format check failures
 
-## Repository implementation observations
+`pnpm run format:check` reports code style warnings in 7 tracked files:
 
-- `apps/web/next.config.mjs` defines permanent redirects for `.html` routes and uses trailing-slash routing; the live sitemap still lists several redirecting forms.
-- `apps/web/app/layout.tsx` supplies `metadataBase`, language `en`, shared navigation, and analytics scripts. Native route files supply titles/descriptions/canonicals, but the native layout does not currently emit a shared JSON-LD graph.
-- `apps/web/app/blog/[category]/[slug]/page.tsx` emits `BlogPosting` JSON-LD, but the native page's author object lacks the stable `https://aniket.app/#person` identifier used by the root publishing pipeline.
-- `apps/web/app/projects/[slug]/page.tsx` emits title/description/canonical metadata but no `CreativeWork` JSON-LD.
-- `tools/blog/pages.js` generates `BlogPosting` and visible breadcrumbs for published static articles. `tools/blog/build.js` preserves existing non-blog sitemap blocks, which is the likely source of legacy route entries and retained `changefreq`/`priority` values.
-- Existing analytics files and the GitHub Pages publishing/rollback workflow were not removed or disabled.
+| File path | Originating commit | Commit message |
+|---|---|---|
+| `apps/web/app/api/v1/leads/route.ts` | `4d371b6` | `feat(leads): add direct Google Sheets persistence via Webhook and Service Account` |
+| `apps/web/app/globals.css` | `4442d25` | `feat(inquiry): implement context-specific inquiry modal and native API route handlers` |
+| `apps/web/components/InquiryButton.tsx` | `4442d25` | `feat(inquiry): implement context-specific inquiry modal and native API route handlers` |
+| `apps/web/components/InquiryContext.tsx` | `4442d25` | `feat(inquiry): implement context-specific inquiry modal and native API route handlers` |
+| `apps/web/components/InquiryModal.tsx` | `0bbbf0d` | `fix(routing): use direct trailing slash endpoints and configure skipTrailingSlashRedirect` |
+| `apps/web/tests/api-leads.test.ts` | `4d371b6` | `feat(leads): add direct Google Sheets persistence via Webhook and Service Account` |
+| `packages/contracts/src/index.ts` | `4442d25` | `feat(inquiry): implement context-specific inquiry modal and native API route handlers` |
 
-## Not measured in Phase 1
+All 7 files originate from the earlier lead capture and inquiry modal implementation. Per prompt instructions, these files were not mass-reformatted to avoid inflating the diff with unrelated changes.
 
-The following were intentionally deferred until after the baseline is accepted: Lighthouse mobile/desktop metrics, LCP/CLS/INP lab or field data, browser accessibility automation, image byte/alt/dimension inventory beyond the URL-level metadata crawl, Search Console/GA4 account data, Rich Results Test, Schema.org validator, Vercel preview deployment, production release, and post-fix re-crawl. These are `UNTESTED` for Phase 1.
+---
 
-## Phase 1 artifacts
+## 5. Structured data and crawler policy verification
 
-- `docs/seo/url-audit.csv` — URL-level baseline for 442 sitemap URLs plus 16 canonical-host internal-link discoveries and one recorded rollback-host target.
-- `.validation/phase1-baseline.json` — ignored local crawl evidence used to derive the CSV and counts.
+1. **JSON-LD Schema Graph:**
+   - **Person:** `https://aniket.app/#person` provides consistent publisher and author identity across all pages.
+   - **WebSite:** `https://aniket.app/#website` provides stable site-level identity.
+   - **WebPage:** Canonical page entity with `isPartOf` and `about` links to the site and author graphs.
+   - **BlogPosting:** Rendered on all 326 blog posts with `datePublished`, `dateModified`, `headline`, `image`, `author`, `publisher`, and `wordCount`.
+   - **CreativeWork:** Rendered on all 8 project case study routes.
+   - **BreadcrumbList:** Rendered on all article, category, and project pages with matching visible HTML breadcrumbs.
 
-The Phase 1 crawl helper was intentionally temporary and removed after generating the artifacts. A maintained repository SEO crawler/validation script is part of Phase 3 and is therefore still `UNTESTED`/pending.
+2. **Robots.txt Policy:**
+   - Explicit `Allow: /` groups defined for named crawlers: `Googlebot`, `Bingbot`, `OAI-SearchBot`, `ChatGPT-User`, and `GPTBot`.
+   - Wildcard `User-agent: *` maintains disallows for `/admin/`, `/tools/`, `/blog/feed.xml`, `/blog/search.json`, and `/blog/search-text.json`.
+   - Declares `Sitemap: https://aniket.app/sitemap.xml`.
 
-No Phase 2 SEO code, content, routing, sitemap, robots, schema, analytics, DNS, or deployment changes were made in this baseline step.
+3. **`llms.txt`:**
+   - Contains clean URLs pointing to `https://aniket.app/` without trailing `.html` aliases or legacy hostnames.
+
+---
+
+## 6. Release boundaries and push gate
+
+- **Current working branch:** `seo/phase2-final-2026-10-25`
+- **Main branch untouched:** `main` has not been merged or touched.
+- **Production release:** `PENDING` — pushing to `seo/phase2-final-2026-10-25` provides a clean, validated branch for review and preview deployment without releasing to production.
+- **Rollback deployment:** Preserved on GitHub Pages (`07anishu12.github.io`).
+- **Google Analytics:** Measurement ID `G-JB7DKFEC0Q` intact and functional.

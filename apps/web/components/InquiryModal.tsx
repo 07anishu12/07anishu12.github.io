@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   AUTOMOTIVE_BRANDS,
   SERVICES_LIST,
-  ServiceOption,
   VEHICLE_MODELS_BY_BRAND,
   VEHICLE_TYPES,
 } from "@portfolio/contracts";

@@ -35,7 +35,11 @@ function JsonLd({ data }: { data: Record<string, unknown> }) {
 }
 
 export function SiteStructuredData() {
-  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [person, website] }} />;
+  return (
+    <JsonLd
+      data={{ "@context": "https://schema.org", "@graph": [person, website] }}
+    />
+  );
 }
 
 export function WebPageStructuredData({

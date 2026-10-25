@@ -34,13 +34,13 @@ export async function generateMetadata({
           title: post.title,
           description: post.description,
           images: [
-              {
-                url: post.socialImage || post.coverImage,
-                alt: post.socialImageAlt || post.coverImageAlt,
-                width: post.socialWidth,
-                height: post.socialHeight,
-              },
-            ],
+            {
+              url: post.socialImage || post.coverImage,
+              alt: post.socialImageAlt || post.coverImageAlt,
+              width: post.socialWidth,
+              height: post.socialHeight,
+            },
+          ],
         },
         twitter: {
           card: "summary_large_image",
@@ -93,9 +93,15 @@ export default async function BlogPostPage({ params }: RouteProps) {
         />
         <nav aria-label="Breadcrumb" className="prose">
           <ol>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Writing</a></li>
-            <li><a href={`/blog/${post.category}/`}>{post.category}</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/blog/">Writing</a>
+            </li>
+            <li>
+              <a href={`/blog/${post.category}/`}>{post.category}</a>
+            </li>
             <li aria-current="page">{post.title}</li>
           </ol>
         </nav>

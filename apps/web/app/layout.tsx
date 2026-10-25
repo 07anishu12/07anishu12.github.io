@@ -55,7 +55,11 @@ export default function RootLayout({
           <div className="site-shell">
             <header className="site-header">
               <div className="container nav">
-                <Link className="brand" href="/" aria-label="Aniket Thakur home">
+                <Link
+                  className="brand"
+                  href="/"
+                  aria-label="Aniket Thakur home"
+                >
                   <strong>Aniket Thakur</strong>
                   <span>AI × Product × Finance</span>
                 </Link>
@@ -84,7 +88,10 @@ export default function RootLayout({
           <InquiryModal />
           <InquiryFloatingTrigger />
           <SiteStructuredData />
-          <Script src="/assets/js/site-config.js" strategy="beforeInteractive" />
+          <Script
+            src="/assets/js/site-config.js"
+            strategy="beforeInteractive"
+          />
           <Script src="/assets/js/analytics.js" strategy="afterInteractive" />
         </InquiryProvider>
       </body>
