@@ -93,4 +93,9 @@ Executed2026-10-25; detailed results in `docs/migration/acceptance-report.md`, l
   2. Fix: Added root-level `vercel.json` configuring `buildCommand: "pnpm --filter @portfolio/web build"`, `outputDirectory: "apps/web/.next"`, and `framework: "nextjs"`. Added `apps/web/vercel.json` to support direct dashboard rootDirectory setting.
   3. Symlink & Hygiene: Updated `apps/web/scripts/prepare-standalone.mjs` to create a root `.next` junction/symlink on build, and updated `.gitignore` to ignore `.next` as a symlink or directory.
   4. CI Verification: GitHub Actions workflow `Migration release checks` passed all 20 steps (including PostgreSQL container and Docker image build). Root publishing tests passed (27/27), API tests passed (11/11), Next.js build prerendered 348 pages. Standalone route verification confirmed 442 routes returning HTTP 200.
-  5. Latest Commit: `b910b5f` updated `acceptance-report.md` with full test evidence and Vercel diagnosis. Vercel dashboard action required: set Root Directory to `apps/web` in Project Settings.
+  5. Vercel Onboarding & Resolution: Followed `https://vercel.com/get-started.md`. Installed Vercel CLI 65.2.0, completed authentication, installed Vercel agent plugin across clients, configured Vercel MCP servers in `~/.gemini/settings.json`, and updated project `07anishu12.github.io` settings directly via CLI:
+     - `rootDirectory` set to `apps/web`
+     - `framework` preset set to `nextjs`
+     - `nodeVersion` set to `22.x`
+     - Auto-detected build and output directories
+  6. Verified Live Deployment: Vercel preview deployment `CJDxK5ZRxN8xWjFwo77W8YCJPKjk` succeeded in 54s. Pull request #1 status check rollup reported SUCCESS on all jobs. Live preview URL: `https://07anishu12githubio-git-migrati-194ed3-anikets-projects-b2dd8089.vercel.app`.

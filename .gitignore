@@ -30,3 +30,5 @@ _preview/
 .env.*
 !.env.example
 *.service-account.json
+.vercel
+.env*
