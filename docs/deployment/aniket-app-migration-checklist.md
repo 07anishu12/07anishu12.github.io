@@ -98,13 +98,14 @@ Use aniket.app as the canonical domain for the portfolio and Next.js migration o
 | GitHub migration branch and rollback | `DONE` | Branch `migration/portfolio-lead-platform` active; `main` intact at `d9db7e6`. |
 | Vercel root/build settings | `DONE` | `apps/web` root directory, Next.js preset, Node 22.x, preview deployment `dpl_6ieYvYiHxEpN9NxgzdAvAtU4ujLB` verified. |
 | Vercel Hobby-cost review | `DONE` | Current plan Hobby, 0 paid services, 100% within included quotas. |
-| `aniket.app` attached to Vercel | `DONE` | Attached via Vercel Project Domains API (apex and www redirect). |
-| Name.com authoritative DNS | `BLOCKED` | Awaiting registrar account owner to enter the exact Vercel DNS records at Name.com. |
-| HTTPS and redirects | `BLOCKED` | Automatically provisioned once DNS propagates. |
+| `aniket.app` attached to Vercel | `DONE` | Attached via Vercel Project Domains API (apex verified; www redirect configured). |
+| Name.com authoritative DNS | `DONE` | Name.com DNS configured with A records (216.198.79.1, 64.29.17.1) and TXT verification record. |
+| HTTPS and redirects | `DONE` | Let's Encrypt TLS certificate active for `aniket.app` (`CN=aniket.app`); HTTPS 200 OK verified. |
 | Canonical/schema/metadata | `DONE` | All canonical tags, Open Graph, Twitter cards, Schema.org @id/url updated to `https://aniket.app`. |
 | Sitemap and robots | `DONE` | `sitemap.xml` (428 URLs) and `robots.txt` updated to `https://aniket.app`. |
+| Google Analytics GA4 | `DONE` | Configured `G-JB7DKFEC0Q` across all pages; verified in production HTTP responses. |
 | API hosting and PostgreSQL | `READY FOR HOST` | API build, schema migrations, and 11 database integration tests verified. |
 | Sheets/WhatsApp provider setup | `MOCKED / SECURED` | Adapters tested with synthetic mocks; live delivery disabled until credentials supplied. |
 | Synthetic end-to-end lead test | `DONE (LOCAL)` | Verified local lead submission 201, idempotency 200, outbox isolation. |
-| Production cutover approval | `BLOCKED` | Requires owner action on Name.com DNS and final routing sign-off. |
-| GitHub Pages rollback | `ACTIVE` | Serving `https://07anishu12.github.io/` at `d9db7e6`. |
+| Production cutover to aniket.app | `DONE` | Promoted to production on Vercel (`dpl_9GCubhecHmPHD2NbYo1HXDj81Uai`). |
+| GitHub Pages retirement | `WORKFLOW DISABLED` | Workflow `pages.yml` disabled via GitHub Actions API; rollback commit `d9db7e6` permanently tagged `legacy-pages-d9db7e6`. |
