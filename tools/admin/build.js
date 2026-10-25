@@ -130,8 +130,8 @@ function buildStaticPages() {
     const contentType = article.contentType || 'Note';
     const title = article.title || 'Untitled';
     const description = article.shortDescription || '';
-    const canonical = `https://07anishu12.github.io/learnings/${slug}.html`;
-    const ogImg = article.heroImage ? (article.heroImage.startsWith('http') ? article.heroImage : `https://07anishu12.github.io/${article.heroImage}`) : 'https://07anishu12.github.io/assets/img/aniket-portrait.png';
+    const canonical = `https://aniket.app/learnings/${slug}.html`;
+    const ogImg = article.heroImage ? (article.heroImage.startsWith('http') ? article.heroImage : `https://aniket.app/${article.heroImage}`) : 'https://aniket.app/assets/img/aniket-portrait.png';
 
     // Source banner
     let sourceBanner = '';
@@ -220,9 +220,9 @@ function buildStaticPages() {
     "description": ${JSON.stringify(description)},
     "author": {
       "@type": "Person",
-      "@id": "https://07anishu12.github.io/#person",
+      "@id": "https://aniket.app/#person",
       "name": "Aniket Thakur",
-      "url": "https://07anishu12.github.io/author/aniket-thakur.html"
+      "url": "https://aniket.app/author/aniket-thakur.html"
     },
     "datePublished": "${article.publishedDate}",
     "dateModified": "${article.updatedDate || article.publishedDate}",
@@ -546,30 +546,30 @@ function generateSitemap(publishedArticles) {
   const today = '2026-09-30';
 
   const staticUrls = [
-    { loc: 'https://07anishu12.github.io/', priority: '1.0', changefreq: 'weekly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/about.html', priority: '0.8', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/work.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/learnings.html', priority: '0.8', changefreq: 'daily', lastmod: today },
-    { loc: 'https://07anishu12.github.io/contact.html', priority: '0.8', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/author/aniket-thakur.html', priority: '0.9', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/research/index.html', priority: '0.9', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/research/graph-neural-networks-ecological-modeling.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/projects/index.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/projects/seo-agent-laya.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/projects/prompt-based-bi.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/topics/index.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/topics/graph-neural-networks.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/topics/seo-automation.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/topics/artificial-intelligence.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/topics/fintech.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
-    { loc: 'https://07anishu12.github.io/topics/data-science.html', priority: '0.85', changefreq: 'monthly', lastmod: today }
+    { loc: 'https://aniket.app/', priority: '1.0', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://aniket.app/about.html', priority: '0.8', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/work.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://aniket.app/learnings.html', priority: '0.8', changefreq: 'daily', lastmod: today },
+    { loc: 'https://aniket.app/contact.html', priority: '0.8', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/author/aniket-thakur.html', priority: '0.9', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/research/index.html', priority: '0.9', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/research/graph-neural-networks-ecological-modeling.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/projects/index.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://aniket.app/projects/seo-agent-laya.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/projects/prompt-based-bi.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/topics/index.html', priority: '0.9', changefreq: 'weekly', lastmod: today },
+    { loc: 'https://aniket.app/topics/graph-neural-networks.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/topics/seo-automation.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/topics/artificial-intelligence.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/topics/fintech.html', priority: '0.85', changefreq: 'monthly', lastmod: today },
+    { loc: 'https://aniket.app/topics/data-science.html', priority: '0.85', changefreq: 'monthly', lastmod: today }
   ];
 
   const articleUrls = (publishedArticles || []).map(article => {
     const slug = article.slug || article.id;
     const lastmod = article.updatedDate || article.publishedDate || today;
     return {
-      loc: `https://07anishu12.github.io/learnings/${slug}.html`,
+      loc: `https://aniket.app/learnings/${slug}.html`,
       priority: '0.8',
       changefreq: 'monthly',
       lastmod: lastmod

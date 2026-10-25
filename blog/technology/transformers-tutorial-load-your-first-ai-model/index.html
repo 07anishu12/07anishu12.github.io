@@ -7,13 +7,13 @@
 <title>Transformers Tutorial: Load Your First AI Model</title>
 <meta name="description" content="Use a pretrained model, understand tokenisation and inspect a bounded generation.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://07anishu12.github.io/blog/technology/transformers-tutorial-load-your-first-ai-model/">
+<link rel="canonical" href="https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Aniket Thakur">
 <meta property="og:title" content="Transformers Tutorial: Load Your First AI Model">
 <meta property="og:description" content="Use a pretrained model, understand tokenisation and inspect a bounded generation.">
-<meta property="og:url" content="https://07anishu12.github.io/blog/technology/transformers-tutorial-load-your-first-ai-model/">
-<meta property="og:image" content="https://07anishu12.github.io/assets/images/blog/transformers-tutorial-load-your-first-ai-model/cover.svg">
+<meta property="og:url" content="https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/transformers-tutorial-load-your-first-ai-model/cover.svg">
 <meta property="og:image:alt" content="Diagram explaining Transformers tutorial">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="675">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Transformers Tutorial: Load Your First AI Model">
 <meta name="twitter:description" content="Use a pretrained model, understand tokenisation and inspect a bounded generation.">
-<meta name="twitter:image" content="https://07anishu12.github.io/assets/images/blog/transformers-tutorial-load-your-first-ai-model/cover.svg">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/transformers-tutorial-load-your-first-ai-model/cover.svg">
 <meta name="twitter:image:alt" content="Diagram explaining Transformers tutorial">
 <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
 <link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
@@ -30,8 +30,8 @@
 <script src="/assets/js/site-config.js?v=7b0c3eea4c1d" defer></script>
 <script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
 <script src="/assets/js/analytics.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hugging Face Transformers Tutorial: Load Your First Pretrained Model","description":"Use a pretrained model, understand tokenisation and inspect a bounded generation.","abstract":"Hugging Face Transformers lets you load supported pretrained models through a common Python interface.","url":"https://07anishu12.github.io/blog/technology/transformers-tutorial-load-your-first-ai-model/","mainEntityOfPage":"https://07anishu12.github.io/blog/technology/transformers-tutorial-load-your-first-ai-model/","author":{"@type":"Person","@id":"https://07anishu12.github.io/#person","name":"Aniket Thakur","url":"https://07anishu12.github.io/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://07anishu12.github.io/assets/images/blog/transformers-tutorial-load-your-first-ai-model/cover.svg","width":1200,"height":675,"caption":"Diagram explaining Transformers tutorial"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Technology","keywords":"Transformers tutorial, Hugging Face pipeline, pretrained models, tokenizer","inLanguage":"en","wordCount":777}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://07anishu12.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://07anishu12.github.io/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://07anishu12.github.io/blog/technology/"},{"@type":"ListItem","position":4,"name":"Hugging Face Transformers Tutorial: Load Your First Pretrained Model","item":"https://07anishu12.github.io/blog/technology/transformers-tutorial-load-your-first-ai-model/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hugging Face Transformers Tutorial: Load Your First Pretrained Model","description":"Use a pretrained model, understand tokenisation and inspect a bounded generation.","abstract":"Hugging Face Transformers lets you load supported pretrained models through a common Python interface.","url":"https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/","mainEntityOfPage":"https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/","author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/transformers-tutorial-load-your-first-ai-model/cover.svg","width":1200,"height":675,"caption":"Diagram explaining Transformers tutorial"},"datePublished":"2026-10-22","dateModified":"2026-10-22","articleSection":"Technology","keywords":"Transformers tutorial, Hugging Face pipeline, pretrained models, tokenizer","inLanguage":"en","wordCount":777}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"Hugging Face Transformers Tutorial: Load Your First Pretrained Model","item":"https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/"}]}</script>
 </head>
 <body data-page="blog-article">
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -144,7 +144,7 @@ print(result[0][&quot;generated_text&quot;])
 <section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/huggingface/transformers" rel="noopener">Transformers official repository</a></li><li><a href="https://huggingface.co/docs/transformers/main/en/chat_templating" rel="noopener">Transformers chat templates</a></li><li><a href="https://api.github.com/repos/huggingface/transformers/releases/latest" rel="noopener">huggingface/transformers official release metadata</a></li></ol></section>
 
 
-<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://07anishu12.github.io/blog/technology/transformers-tutorial-load-your-first-ai-model/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F07anishu12.github.io%2Fblog%2Ftechnology%2Ftransformers-tutorial-load-your-first-ai-model%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Ftransformers-tutorial-load-your-first-ai-model%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
 <section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
 <a class="blog-card-image" href="/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/" aria-label="Read AI Agents vs Workflow Automation: When Should You Use Each?"><img src="/assets/images/blog/ai-agents-vs-workflow-automation-choose-by-control/cover.svg" alt="Diagram explaining AI agents vs workflow automation" width="1200" height="675" loading="lazy" decoding="async"></a>
 <div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>

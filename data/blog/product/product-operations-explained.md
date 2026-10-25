@@ -32,7 +32,7 @@ sources:
   - title: Silicon Valley Product Group (SVPG)
     url: https://www.svpg.com/the-product-operating-model-an-introduction/
   - title: Topical Knowledge Hubs — Aniket Thakur
-    url: https://07anishu12.github.io/topics/index.html
+    url: https://aniket.app/topics/index.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -67,7 +67,7 @@ This scaling inflection point is why **Product Operations (Product Ops)** emerge
 Just as Sales Operations (RevOps) empowers Account Executives with CRM hygiene, territory routing, and pipeline analytics, and DevOps/Platform Engineering empowers developers with automated CI/CD pipelines, **Product Operations** serves the product organization across three distinct pillars:
 
 1. **Pillar 1 — Quantitative Data, Telemetry & Business Insights:**  
-   Instead of leaving 15 PMs to write conflicting SQL definitions of "Active Workspace" or "Net Revenue Retention" (**Article 17**), Product Ops partners with Data Engineering and BI ([Topical Knowledge Hubs — Data Science & BI](https://07anishu12.github.io/topics/index.html)) to govern a **Single Source of Truth Event Taxonomy**, maintain automated self-serve KPI and OKR dashboards, and standardize A/B test readout templates (**Article 18**).
+   Instead of leaving 15 PMs to write conflicting SQL definitions of "Active Workspace" or "Net Revenue Retention" (**Article 17**), Product Ops partners with Data Engineering and BI ([Topical Knowledge Hubs — Data Science & BI](https://aniket.app/topics/index.html)) to govern a **Single Source of Truth Event Taxonomy**, maintain automated self-serve KPI and OKR dashboards, and standardize A/B test readout templates (**Article 18**).
 2. **Pillar 2 — Qualitative Customer Research & Market Feedback Infrastructure (Research Ops):**  
    Recruiting B2B interview participants, managing incentive gift cards, ensuring GDPR/DPDP consent compliance, and aggregating thousands of support tickets from Zendesk/Intercom and sales loss notes from Salesforce takes hours of administrative effort. Product Ops builds the **automated customer research recruiting engine** and centralizes feedback repositories (e.g., via *Linear Asks* or [Notion](https://www.notion.com/pricing) databases, **Article 05**) so any Product Trio can schedule 3 qualified user interviews in 5 minutes without spamming key accounts.
 3. **Pillar 3 — Operating Cadences, Tooling Governance & Go-to-Market Alignment:**  
@@ -198,7 +198,7 @@ Product Operations should report directly to the **Chief Product Officer (CPO) o
 The highest-performing Product Ops leaders typically come from one of three backgrounds: (1) **Former Mid-to-Senior Product Managers** who discovered a passion for systems architecture, analytics standardization, and organizational scaling; (2) **Product Data Analysts / BI Engineers** who understand event taxonomies and want to bridge telemetry with strategy; or (3) **Go-to-Market / Revenue Operations or UX Research Ops leads** who have deep experience building cross-functional enablement pipelines.
 
 ### 4. Can AI and LLM automation replace parts of Product Operations in 2026?
-AI agents and programmatic pipelines dramatically **amplify** Product Operations! As demonstrated by Aniket Thakur's production systems on [Topical Knowledge Hubs](https://07anishu12.github.io/topics/index.html) and tools like *Linear Triage Intelligence*, *Notion Agent*, and *Atlassian Rovo* (**Article 05**), modern Product Ops teams use multi-LLM pipelines with deterministic schemas to **automatically cluster 5,000 incoming support tickets by Opportunity Tree node, transcribe and tag weekly user interviews, check PRDs for missing Gherkin/telemetry tables, and draft weekly changelog digests**—allowing a single Product Ops Manager to support 15–20 squads effortlessly.
+AI agents and programmatic pipelines dramatically **amplify** Product Operations! As demonstrated by Aniket Thakur's production systems on [Topical Knowledge Hubs](https://aniket.app/topics/index.html) and tools like *Linear Triage Intelligence*, *Notion Agent*, and *Atlassian Rovo* (**Article 05**), modern Product Ops teams use multi-LLM pipelines with deterministic schemas to **automatically cluster 5,000 incoming support tickets by Opportunity Tree node, transcribe and tag weekly user interviews, check PRDs for missing Gherkin/telemetry tables, and draft weekly changelog digests**—allowing a single Product Ops Manager to support 15–20 squads effortlessly.
 
 ### 5. How do you introduce Product Operations to a team of skeptical Senior Product Managers who fear losing autonomy?
 Never announce Product Ops by saying *"We are here to standardize how you work."* Start with a **30-Day "Pain-Killer" Listening Tour**: ask every PM *"What is the most annoying, repetitive 3-hour chore on your calendar every week that keeps you away from customers and strategy?"* When the Product Ops Manager eliminates their manual Friday status spreadsheet and hands them an automated user-interview booking link in Month 1, skeptical Senior PMs immediately become the function's biggest champions.

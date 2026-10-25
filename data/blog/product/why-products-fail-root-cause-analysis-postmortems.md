@@ -31,7 +31,7 @@ sources:
   - title: Silicon Valley Product Group (SVPG)
     url: https://www.svpg.com/product-management-start-here/
   - title: Knowledge Library & Technical Notes — Aniket Thakur
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -64,8 +64,8 @@ Yet even inside established technology companies, when a major feature or produc
 
 Cross-referencing [CB Insights' empirical postmortem dataset](https://s3-us-west-2.amazonaws.com/cbi-content/research-reports/The-20-Reasons-Startups-Fail.pdf) with Marty Cagan's [Four Risks at SVPG](https://www.svpg.com/product-management-start-here/) reveals that product failures cluster into five predictable root-cause categories:
 
-1. **Archetype 1 — Problem–Solution Mismatch / Zero Market Need (35%–42% of Failures — *Value Risk*):** Building a Vitamin instead of a Painkiller. The team skips story-based customer discovery (**Article 11**) and search-demand validation ([Why Market Validation Trumps Vibes](https://07anishu12.github.io/learnings.html)), building a solution for a problem that customers only encounter once a year or already solve effortlessly in Excel.
-2. **Archetype 2 — Broken Unit Economics & Cost Structure (18%–29% of Failures — *Business Viability Risk*):** The product attracts users, but Customer Acquisition Cost (CAC) exceeds Lifetime Value (LTV), or variable Cost of Goods Sold (such as unoptimized multi-LLM token inference or manual operations) results in negative gross margins (a dynamic examined in Aniket Thakur's [Public Market Listings as the Ultimate Stress Test for AI Valuations](https://07anishu12.github.io/learnings.html)).
+1. **Archetype 1 — Problem–Solution Mismatch / Zero Market Need (35%–42% of Failures — *Value Risk*):** Building a Vitamin instead of a Painkiller. The team skips story-based customer discovery (**Article 11**) and search-demand validation ([Why Market Validation Trumps Vibes](https://aniket.app/learnings.html)), building a solution for a problem that customers only encounter once a year or already solve effortlessly in Excel.
+2. **Archetype 2 — Broken Unit Economics & Cost Structure (18%–29% of Failures — *Business Viability Risk*):** The product attracts users, but Customer Acquisition Cost (CAC) exceeds Lifetime Value (LTV), or variable Cost of Goods Sold (such as unoptimized multi-LLM token inference or manual operations) results in negative gross margins (a dynamic examined in Aniket Thakur's [Public Market Listings as the Ultimate Stress Test for AI Valuations](https://aniket.app/learnings.html)).
 3. **Archetype 3 — Onboarding Friction & Excessive Cognitive Load (14%–17% of Failures — *Usability Risk*):** The underlying capability is valuable, but new users hit an empty state requiring a 4-hour manual data migration or complex configuration before seeing their first insight (**Time-to-Value > User Patience Threshold**).
 4. **Archetype 4 — Go-to-Market & Distribution Starvation (14%–20% of Failures — *GTM Execution Gap*):** "Build it and they will come" syndrome. The product works well, but the team has no repeatable distribution channel, prices it for the wrong buyer persona, or fails to enable sales and in-product discovery triggers (**Article 19**).
 5. **Archetype 5 — Reliability, Latency & Trust Collapse (7%–13% of Failures — *Feasibility & Safety Risk*):** In fintech, enterprise SaaS, or AI workflows, early bugs that corrupt data, exceed latency budgets (>5 seconds), or hallucinate unverified outputs destroy user trust permanently on Day 1.
@@ -92,7 +92,7 @@ Adapted from aviation safety and Site Reliability Engineering (SRE) culture, a *
 
 | Failure Archetype ([CB Insights](https://s3-us-west-2.amazonaws.com/cbi-content/research-reports/The-20-Reasons-Startups-Fail.pdf) / [SVPG](https://www.svpg.com/product-management-start-here/)) | Pre-Launch Red Flag (Ignored During Build) | Post-Launch Telemetry Signature | Preventive Process Guardrail |
 | :--- | :--- | :--- | :--- |
-| **1. No Market Need (35%–42%)** | Zero users in discovery interviews had an active workaround; idea came from an internal brainstorm | High landing-page views, **<2% trial initiation** and **<5% Day-30 retention** | Mandatory search-demand validation ([Query Framework](https://07anishu12.github.io/learnings.html)) + Fake-Door / Concierge MVP |
+| **1. No Market Need (35%–42%)** | Zero users in discovery interviews had an active workaround; idea came from an internal brainstorm | High landing-page views, **<2% trial initiation** and **<5% Day-30 retention** | Mandatory search-demand validation ([Query Framework](https://aniket.app/learnings.html)) + Fake-Door / Concierge MVP |
 | **2. Broken Unit Economics (18%–29%)** | No COGS / token inference or CAC payback spreadsheet modeled in the Strategy/PRD | High free usage, **<1% paid conversion** or negative gross margin per active user | Mandatory LTV:CAC ($\ge 3\times$) and Gross Margin ($\ge 70\%$) gate in Strategy (**Article 06**) |
 | **3. Onboarding / UX Complexity (14%–17%)** | Prototype usability tests skipped or moderator "helped" users complete the task | High signup rate, **>75% drop-off on Step 1 setup screen** within 5 minutes | Mandatory 2-round 5-user unassisted usability test ($\ge 80\%$ pass rate, **Article 14**) |
 | **4. Poor GTM & Distribution (14%–20%)** | Feature buried in settings menu; zero in-app trigger or sales enablement planned | **<5% of active accounts ever discover/click** the feature; high retention among the few who do | Mandatory Tier 1–3 GTM Readiness Gate + inline contextual trigger (**Article 19**) |

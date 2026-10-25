@@ -80,7 +80,7 @@ To make the North Star actionable for individual squads, decompose it mathematic
 
 ## 2. Exact Mathematical Formulas for Core Product Metrics
 
-Every Product Manager must know these exact definitions and formulas cold—both for building SQL/BI dashboards ([Topical Knowledge Hubs — Data Science & BI](https://07anishu12.github.io/topics/index.html)) and for answering analytical interview cases (**Article 21**, **Article 24**):
+Every Product Manager must know these exact definitions and formulas cold—both for building SQL/BI dashboards ([Topical Knowledge Hubs — Data Science & BI](https://aniket.app/topics/index.html)) and for answering analytical interview cases (**Article 21**, **Article 24**):
 
 1. **Active Users ($\text{DAU}$, $\text{WAU}$, $\text{MAU}$) & Stickiness Ratio:**  
    Crucially, "Active" must **never** be defined as *"logged in or loaded the homepage."* Define **Active User** as a unique user who completes at least one meaningful value event within the window (1 day, 7 days, or 30 days):

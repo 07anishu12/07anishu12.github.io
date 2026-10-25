@@ -6,4 +6,4 @@ Disallow: /blog/feed.xml
 Disallow: /blog/search.json
 Disallow: /blog/search-text.json
 
-Sitemap: https://07anishu12.github.io/sitemap.xml
+Sitemap: https://aniket.app/sitemap.xml

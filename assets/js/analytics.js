@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const config = window.PORTFOLIO_CONFIG || {};
-  if (location.origin !== 'https://07anishu12.github.io' || document.documentElement.dataset.preview === 'true' || !/^G-[A-Z0-9]+$/.test(config.measurementId || '')) return;
+  if (!['https://aniket.app', 'https://07anishu12.github.io'].includes(location.origin) || document.documentElement.dataset.preview === 'true' || !/^G-[A-Z0-9]+$/.test(config.measurementId || '')) return;
   // No consent system existed. If enabled in config, the site's consent UI must
   // set portfolioAnalyticsConsent=true and dispatch portfolio:analytics-consent.
   let started = false;

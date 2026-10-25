@@ -149,7 +149,7 @@ const server = http.createServer((req, res) => {
           status: payload.status || 'published',
           source: payload.source || 'Personal',
           sourceUrl: payload.sourceUrl || '',
-          canonicalUrl: `https://07anishu12.github.io/learnings/${slug}.html`,
+          canonicalUrl: `https://aniket.app/learnings/${slug}.html`,
           seoTitle: payload.seoTitle || `${payload.title.trim()} — Aniket Thakur`,
           seoDescription: payload.seoDescription || payload.shortDescription || '',
           ogImage: payload.heroImage || 'assets/img/aniket-portrait.png',

@@ -566,16 +566,16 @@ test('Three representative real articles (Auto, Tech, Finance) format faithfully
   const autoArt = articles.find(a => a.slug === 'tata-aeris-review');
   assert.ok(autoArt, 'Tata Aeris review must exist');
   const autoPayload = buildMediumPayload(autoArt.post);
-  assert.equal(autoPayload.canonicalUrl, 'https://07anishu12.github.io/blog/auto/tata-aeris-review/');
+  assert.equal(autoPayload.canonicalUrl, `${ORIGIN}/blog/auto/tata-aeris-review/`);
   assert.ok(autoPayload.content.includes('<blockquote class="quick-answer">'), 'Quick answer summary must be rendered');
-  assert.ok(autoPayload.content.includes('<figure><img src="https://07anishu12.github.io/assets/images/blog/'), 'Cover image must use absolute URL');
+  assert.ok(autoPayload.content.includes(`<figure><img src="${ORIGIN}/assets/images/blog/`), 'Cover image must use absolute URL');
   assert.ok(autoPayload.tags.length <= 5, 'Tags must not exceed 5');
 
   // 2. Technology representative: browser-use-guide-how-ai-agents-operate-websites (code blocks)
   const techArt = articles.find(a => a.slug === 'browser-use-guide-how-ai-agents-operate-websites');
   assert.ok(techArt, 'Browser Use guide must exist');
   const techPayload = buildMediumPayload(techArt.post);
-  assert.equal(techPayload.canonicalUrl, 'https://07anishu12.github.io/blog/technology/browser-use-guide-how-ai-agents-operate-websites/');
+  assert.equal(techPayload.canonicalUrl, `${ORIGIN}/blog/technology/browser-use-guide-how-ai-agents-operate-websites/`);
   assert.ok(techPayload.content.includes('<pre'), 'Code blocks must be preserved in <pre> tags');
   assert.ok(techPayload.content.includes('Originally published at'), 'Attribution footer must be present');
 
@@ -583,7 +583,7 @@ test('Three representative real articles (Auto, Tech, Finance) format faithfully
   const finArt = articles.find(a => a.slug === 'asset-allocation-equity-debt-gold-and-cash');
   assert.ok(finArt, 'Asset allocation guide must exist');
   const finPayload = buildMediumPayload(finArt.post);
-  assert.equal(finPayload.canonicalUrl, 'https://07anishu12.github.io/blog/finance/asset-allocation-equity-debt-gold-and-cash/');
+  assert.equal(finPayload.canonicalUrl, `${ORIGIN}/blog/finance/asset-allocation-equity-debt-gold-and-cash/`);
   assert.ok(finPayload.content.includes('<code>'), 'Calculations and formulas must be preserved in <code> tags');
   assert.ok(finPayload.content.includes('Originally published at'), 'Attribution footer must be present');
 });

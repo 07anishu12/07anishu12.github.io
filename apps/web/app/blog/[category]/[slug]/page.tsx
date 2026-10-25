@@ -85,8 +85,8 @@ export default async function BlogPostPage({ params }: RouteProps) {
               datePublished: post.datePublished,
               dateModified: post.dateModified || post.datePublished,
               author: { "@type": "Person", name: post.author },
-              image: `https://07anishu12.github.io${post.coverImage}`,
-              mainEntityOfPage: `https://07anishu12.github.io/blog/${post.category}/${post.slug}/`,
+              image: `https://aniket.app${post.coverImage}`,
+              mainEntityOfPage: `https://aniket.app/blog/${post.category}/${post.slug}/`,
             }).replace(/</g, "\\u003c"),
           }}
         />

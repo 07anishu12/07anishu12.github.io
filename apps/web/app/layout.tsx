@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   title: "Aniket Thakur — AI × Product × Finance",
   description:
     "AI engineering, backend systems, product development and financial engineering. Projects and writing by Aniket Thakur.",
-  metadataBase: new URL("https://07anishu12.github.io"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://aniket.app",
+  ),
 };
 
 export default function RootLayout({

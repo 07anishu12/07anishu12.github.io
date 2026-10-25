@@ -26,8 +26,9 @@ if (fs.existsSync(sitemapPath)) {
     "/finance/bikes",
     ...projects.map((p) => `/projects/${p.slug}`),
   ];
+  const origin = process.env.CANONICAL_ORIGIN || "https://aniket.app";
   for (const p of paths) {
-    const url = `https://07anishu12.github.io${p}`;
+    const url = `${origin}${p}`;
     if (!xml.includes(`<loc>${url}</loc>`))
       xml = xml.replace("</urlset>", `<url><loc>${url}</loc></url></urlset>`);
   }

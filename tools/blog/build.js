@@ -65,7 +65,9 @@ ${link('Crawler policy', '/robots.txt', 'Crawl rules; this navigation file does 
 function sitemap(posts, root = ROOT) {
   // Preserve existing portfolio entries (and their lastmod), replacing only blog entries.
   const current = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  const preserved = (current.match(/<url>[\s\S]*?<\/url>/g) || []).filter(item => !/<loc>https:\/\/07anishu12\.github\.io\/blog\//.test(item));
+  const preserved = (current.match(/<url>[\s\S]*?<\/url>/g) || [])
+    .filter(item => !/<loc>https?:\/\/[^/]+\/blog\//.test(item))
+    .map(item => item.replace(/<loc>https?:\/\/[^/]+/g, `<loc>${ORIGIN}`));
   const listingUrls = [...outputs(posts, { root }).keys()].filter(f => {
     if (!f.endsWith('index.html')) return false;
     if (posts.some(p => f === `${p.url.slice(1)}index.html`)) return false;

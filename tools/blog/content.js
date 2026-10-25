@@ -7,7 +7,7 @@ const { imageSize } = require('image-size');
 const { assertApproved } = require('./editorial');
 
 const ROOT = path.resolve(__dirname, '../..');
-const ORIGIN = 'https://07anishu12.github.io';
+const ORIGIN = process.env.CANONICAL_ORIGIN || 'https://aniket.app';
 const AUTHOR = { '@type': 'Person', '@id': `${ORIGIN}/#person`, name: 'Aniket Thakur', url: `${ORIGIN}/author/aniket-thakur.html` };
 const CATEGORIES = {
   technology: { name: 'Technology', description: 'AI, software, gadgets, tutorials, comparisons, and explainers.' },
