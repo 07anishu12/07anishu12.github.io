@@ -19,7 +19,7 @@ export function InquiryNavButton() {
       aria-label={`Open ${label} dialog`}
       data-inquiry-nav-trigger="true"
     >
-      {label}
+      <span className="nav-cta-text">{label}</span>
     </button>
   );
 }

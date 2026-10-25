@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/direct-vs-regular-mutual-funds-in-india-explaine
 coverImageAlt: Educational diagram explaining direct vs regular mutual funds
 imageCaption: Proposed explanatory diagram showing direct vs regular mutual
   funds with clearly labelled illustrative figures.
-draft: false
+draft: true
 featured: false
 sources:
   - title: SEBI direct and regular plans
@@ -26,22 +26,25 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "Direct vs Regular Mutual Funds in India: What Is the Difference?"
-  answer: Direct and regular plans of the same mutual fund scheme generally share
-    the investment portfolio and fund manager, but differ in distribution
-    arrangements and expenses.
+  question: "Direct vs Regular Mutual Funds: What is the real difference?"
+  answer: Direct plans have lower total expense ratios because no distributor
+    commissions are paid, resulting in higher compounded returns over long
+    investment horizons for the exact same underlying portfolio.
   facts:
-    - label: Category & Focus
-      value: Personal finance and investing
-    - label: Verified Word Count
-      value: 811 words
+    - label: Expense difference
+      value: 0.50% – 1.00% p.a.
+    - label: Portfolio difference
+      value: Identical holdings & manager
   goodFor:
-    - Readers evaluating Personal finance and investing.
-    - Practitioners needing verified benchmarks and calculations.
+    - Self-directed investors comfortable selecting and managing their funds
+      online.
+    - Maximising long-term wealth compounding over 10 to 20 years.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Tax and exit load implications when switching existing regular units to
+      direct.
+    - Loss of distributor support if you require bespoke financial planning
+      advice.
+  note: Both plans share identical portfolio managers, stocks, and risk mandates.
 ---
 
 Direct and regular plans of the same mutual fund scheme generally share the investment portfolio and fund manager, but differ in distribution arrangements and expenses. Direct plans exclude distributor commissions from the plan's expense structure. A lower cost helps returns, but investors still need to choose a suitable scheme and manage their decisions responsibly.

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProjectList } from "../../components/ProjectList";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 import {
   BreadcrumbStructuredData,
   CollectionPageStructuredData,
@@ -44,14 +45,12 @@ export default function ProjectsPage() {
 
       <div className="container">
         {/* Breadcrumb nav */}
-        <nav aria-label="Breadcrumb" className="page-breadcrumb">
-          <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li aria-current="page">Projects</li>
-          </ol>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Projects" },
+          ]}
+        />
 
         {/* Hero Section */}
         <header className="projects-hero">

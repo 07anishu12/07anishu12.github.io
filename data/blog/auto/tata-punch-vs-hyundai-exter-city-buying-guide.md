@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to Punch vs Exter
 imageCaption: "Proposed original explanatory illustration for Tata Punch vs
   Hyundai Exter: A Practical City-Car Comparison; label any vehicle illustration
   as illustrative."
-draft: false
+draft: true
 featured: false
 sources:
   - title: Hyundai India model catalogue
@@ -31,21 +31,27 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "Tata Punch vs Hyundai Exter: Which Budget SUV Is Better for City Driving?"
-  answer: Exter has the shorter, narrower documented body, while the current Punch
-    offers configurations including iCNG AMT and turbo-petrol manual.
+  question: "Tata Punch vs Hyundai Exter: Which micro-SUV suits city driving better?"
+  answer: The Tata Punch leads with rugged 187mm ground clearance, solid body
+    integrity (5-star GNCAP), and SUV stance; the Hyundai Exter excels with a
+    refined 4-cylinder engine, standard 6 airbags, and a standard factory
+    dashcam on top trims.
   facts:
-    - label: Category & Focus
-      value: Car comparisons and model-specific guides
-    - label: Verified Word Count
-      value: 867 words
+    - label: Engine cylinders
+      value: Punch 3-cyl vs Exter 4-cyl
+    - label: Standard safety
+      value: Exter offers 6 airbags standard
   goodFor:
-    - Readers evaluating Auto.
-    - Practitioners needing verified benchmarks and calculations.
+    - "Punch: Navigating broken urban roads, waterlogged streets, and highway
+      stability."
+    - "Exter: Ultra-smooth city commuting, quiet engine idle, and easier gear
+      shifts."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Punch 3-cylinder engine vibration at idle and audible cabin noise under
+      load.
+    - Exter compact rear bench width making 3 adult passengers tight over long
+      journeys.
+  note: Both offer factory-fitted CNG options with distinct boot space trade-offs.
 ---
 
 Exter has the shorter, narrower documented body, while the current Punch offers configurations including iCNG AMT and turbo-petrol manual. Choose around parking space, gearbox preference and fuel access, then test passenger fit. Exterior dimensions do not establish comfort, and exact trim availability and local prices require confirmation.

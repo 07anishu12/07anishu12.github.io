@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "../../../lib/projects";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import {
   BreadcrumbStructuredData,
   CreativeWorkStructuredData,
@@ -57,17 +58,13 @@ export default async function Project({ params }: Props) {
 
       <article className="container reading">
         {/* Breadcrumb nav */}
-        <nav aria-label="Breadcrumb" className="page-breadcrumb">
-          <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/projects/">Projects</Link>
-            </li>
-            <li aria-current="page">{p.title}</li>
-          </ol>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Projects", url: "/projects/" },
+            { name: p.title },
+          ]}
+        />
 
         {/* Case Study Header */}
         <header className="case-study-header">

@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to Swift vs i20
 imageCaption: "Proposed original explanatory illustration for Maruti Suzuki
   Swift vs Hyundai i20: What Your Budget Buys; label any vehicle illustration as
   illustrative."
-draft: false
+draft: true
 featured: false
 sources:
   - title: Maruti Suzuki configurator
@@ -33,22 +33,25 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "Maruti Suzuki Swift vs Hyundai i20: Mileage, Features and Running
-    Costs: Key Verdict & Summary"
-  answer: Swift offers the smaller documented exterior footprint; i20 is longer
-    and wider with a longer wheelbase.
+  question: "Maruti Suzuki Swift vs Hyundai i20: Which hatchback gives more value?"
+  answer: The Maruti Swift is a nimble, ultra-frugal commuter with low running
+    costs and high mileage; the Hyundai i20 is a larger, premium European-styled
+    hatchback with a wider cabin, superior high-speed poise, and premium tech
+    features.
   facts:
-    - label: Category & Focus
-      value: Car comparisons and model-specific guides
-    - label: Verified Word Count
-      value: 892 words
+    - label: Swift mileage
+      value: 24.8 – 25.75 km/l
+    - label: i20 segment
+      value: Premium B2 hatchback
   goodFor:
-    - Readers evaluating Auto.
-    - Practitioners needing verified benchmarks and calculations.
+    - "Swift: Daily office commutes, tight parking, and rock-bottom fuel bills."
+    - "i20: Long highway road trips, carrying 3 passengers on the rear bench
+      comfortably."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Swift cabin road noise insulation and lightweight feel at triple-digit
+      highway speeds.
+    - i20 higher initial price tag and lower fuel efficiency (16–20 km/l ARAI).
+  note: Swift uses Maruti’s new Z12E 3-cylinder engine optimized for low-end torque.
 ---
 
 Swift offers the smaller documented exterior footprint; i20 is longer and wider with a longer wheelbase. Their two-pedal choices also differ: Swift AGS versus regular i20 iVT. Choose around parking, passenger fit and gearbox behaviour, then calculate running costs without treating claimed mileage as guaranteed.

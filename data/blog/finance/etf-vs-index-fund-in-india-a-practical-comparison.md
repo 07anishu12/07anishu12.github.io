@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/etf-vs-index-fund-in-india-a-practical-compariso
 coverImageAlt: Educational diagram explaining ETF vs index fund India
 imageCaption: Proposed explanatory diagram showing ETF vs index fund India with
   clearly labelled illustrative figures.
-draft: false
+draft: true
 featured: false
 sources:
   - title: SEBI ETF guide
@@ -26,23 +26,22 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "ETF vs Index Fund in India: Trading, Liquidity, Costs and
-    Differences: Key Verdict & Summary"
-  answer: An ETF trades on an exchange during the market session, while a
-    conventional index mutual fund is subscribed to or redeemed through the fund
-    process at the applicable NAV.
+  question: "ETF vs Index Fund in India: Which should you choose?"
+  answer: ETFs trade intraday on exchanges with live prices requiring a demat
+    account and brokerage; Index funds trade at end-of-day NAV directly through
+    the AMC without demat requirements.
   facts:
-    - label: Category & Focus
-      value: Personal finance and investing
-    - label: Verified Word Count
-      value: 837 words
+    - label: ETF trading
+      value: Live exchange pricing
+    - label: Index fund trading
+      value: End-of-day AMC NAV
   goodFor:
-    - Readers evaluating Personal finance and investing.
-    - Practitioners needing verified benchmarks and calculations.
+    - "Index funds: Automated SIPs with zero bid-ask spread or demat hassle."
+    - "ETFs: Tactical investors trading specific intra-day market levels."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Illiquid ETF bid-ask spreads creating significant execution slippage.
+    - Brokerage, demat maintenance charges, and exchange transaction fees.
+  note: Always compare ETF market price with intraday indicative NAV (iNAV).
 ---
 
 An ETF trades on an exchange during the market session, while a conventional index mutual fund is subscribed to or redeemed through the fund process at the applicable NAV. Both can track an index. Choose between them by comparing transaction convenience, execution costs, liquidity and tracking quality, rather than assuming the lower quoted expense ratio always wins.

@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/cagr-vs-absolute-returns-excel-calculation-guide
 coverImageAlt: Educational diagram explaining CAGR vs absolute returns
 imageCaption: Proposed explanatory diagram showing CAGR vs absolute returns with
   clearly labelled illustrative figures.
-draft: false
+draft: true
 featured: true
 sources:
   - title: SEC introduction to investing
@@ -26,22 +26,22 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "CAGR vs Absolute Returns: How to Calculate Investment Returns in
-    Excel: Key Verdict & Summary"
-  answer: Absolute return measures the total gain or loss; CAGR converts the same
-    beginning and ending values into an equivalent annual compounded rate.
+  question: "CAGR vs Absolute Returns: Which formula should you use?"
+  answer: Absolute return measures total gain or loss over an entire period; CAGR
+    calculates the constant annual compounded growth rate that connects the
+    start and end values.
   facts:
-    - label: Category & Focus
-      value: Personal finance and investing
-    - label: Verified Word Count
-      value: 798 words
+    - label: Absolute return formula
+      value: (Ending / Beg) - 1
+    - label: CAGR formula
+      value: (Ending / Beg)^(1/n) - 1
   goodFor:
-    - Readers evaluating Personal finance and investing.
-    - Practitioners needing verified benchmarks and calculations.
+    - Lump-sum holdings with no intermediate cash flows.
+    - Comparing multi-year performance across unequal holding periods.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Intermediate cash inflows or outflows (use XIRR instead).
+    - Extrapolating short-term holding periods over a full year.
+  note: Assumes reinvested distributions and zero intermediate contributions.
 ---
 
 Absolute return measures the total gain or loss; CAGR converts the same beginning and ending values into an equivalent annual compounded rate. Use both for a single investment with no intervening contributions. If you added or withdrew money, a dated cash-flow calculation such as XIRR is usually more informative.

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { listPosts } from "../../lib/blog";
 import { BlogIndex } from "../../components/BlogIndex";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 import {
   BreadcrumbStructuredData,
   CollectionPageStructuredData,
@@ -47,14 +47,12 @@ export default function BlogPage() {
 
       <div className="container">
         {/* Breadcrumb nav */}
-        <nav aria-label="Breadcrumb" className="page-breadcrumb">
-          <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li aria-current="page">Writing</li>
-          </ol>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Writing" },
+          ]}
+        />
 
         {/* Hero Section */}
         <header className="blog-hero">

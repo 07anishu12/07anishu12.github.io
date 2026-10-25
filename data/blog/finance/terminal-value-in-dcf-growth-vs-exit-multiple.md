@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/terminal-value-in-dcf-growth-vs-exit-multiple/co
 coverImageAlt: Educational diagram explaining terminal value DCF
 imageCaption: Proposed explanatory diagram showing terminal value DCF with
   clearly labelled illustrative figures.
-draft: false
+draft: true
 featured: false
 sources:
   - title: Damodaran terminal value discussion
@@ -26,21 +26,26 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "Terminal Value in DCF: Perpetuity Growth vs Exit Multiple Method: Key
-    Verdict & Summary"
-  answer: Terminal value estimates cash flows beyond the explicit forecast in a DCF.
+  question: "Terminal Value in DCF: Perpetuity growth or exit multiple?"
+  answer: Perpetuity growth values cash flows assuming a constant long-term growth
+    rate below GDP; exit multiple applies a market valuation multiple (e.g.,
+    EV/EBITDA) to the final forecast year. Triangulating both provides the
+    soundest valuation.
   facts:
-    - label: Category & Focus
-      value: Excel and financial modelling
-    - label: Verified Word Count
-      value: 838 words
+    - label: Perpetuity formula
+      value: FCF_(n+1) / (WACC - g)
+    - label: Typical share of EV
+      value: 60% – 85% of total value
   goodFor:
-    - Readers evaluating Excel and financial modelling.
-    - Practitioners needing verified benchmarks and calculations.
+    - Mature businesses with stable cash-flow generation and sustainable
+      reinvestment.
+    - Stress-testing acquisition models against prevailing transaction multiples.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Setting long-term perpetual growth higher than sovereign economic GDP
+      growth.
+    - Mismatched exit multiples that do not reflect normalized industry cycles.
+  note: "Reinvestment rate must be linked to perpetual growth: g = Reinvestment
+    Rate × ROIC."
 ---
 
 Terminal value estimates cash flows beyond the explicit forecast in a DCF. The perpetuity-growth method extends a sustainable cash flow; the exit-multiple method applies a market-based valuation multiple to a terminal metric. Both require economic consistency. A large terminal value is not automatically wrong, but it makes the valuation particularly sensitive to assumptions about the distant future.

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { listPosts, categoryDescriptions } from "../../../lib/blog";
 import { BlogIndex } from "../../../components/BlogIndex";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import {
   BreadcrumbStructuredData,
   CollectionPageStructuredData,
@@ -81,17 +81,13 @@ export default async function CategoryPage({
 
       <div className="container">
         {/* Breadcrumb nav */}
-        <nav aria-label="Breadcrumb" className="page-breadcrumb">
-          <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/blog/">Writing</Link>
-            </li>
-            <li aria-current="page">{name}</li>
-          </ol>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Writing", url: "/blog/" },
+            { name },
+          ]}
+        />
 
         {/* Hero Section */}
         <header className="blog-hero">

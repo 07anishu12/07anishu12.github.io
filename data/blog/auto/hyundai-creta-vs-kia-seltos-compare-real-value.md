@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to Creta vs Seltos
 imageCaption: "Proposed original explanatory illustration for Hyundai Creta vs
   Kia Seltos: A Variant-Level Value Comparison; label any vehicle illustration
   as illustrative."
-draft: false
+draft: true
 featured: false
 sources:
   - title: Hyundai India model catalogue
@@ -35,21 +35,26 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "Hyundai Creta vs Kia Seltos: Which SUV Offers Better Value in India?"
-  answer: Creta has the shorter, narrower documented footprint; the current Seltos
-    is longer and has a longer wheelbase.
+  question: "Hyundai Creta vs Kia Seltos: Which compact SUV offers better value?"
+  answer: Both SUVs share platforms and powertrains (1.5L NA, 1.5L Turbo, 1.5L
+    Diesel). The Creta provides a more supple, family-friendly suspension and
+    established resale; the Seltos offers sharper steering, sporty aesthetics,
+    and dual-zone climate.
   facts:
-    - label: Category & Focus
-      value: Car comparisons and model-specific guides
-    - label: Verified Word Count
-      value: 870 words
+    - label: Engine choices
+      value: 1.5L Petrol, Turbo-Petrol, Diesel
+    - label: Warranty & network
+      value: Hyundai has wider service footprint
   goodFor:
-    - Readers evaluating Auto.
-    - Practitioners needing verified benchmarks and calculations.
+    - "Creta: Families prioritizing plush ride quality and rear-seat suspension
+      comfort."
+    - "Seltos: Enthusiast drivers wanting flatter cornering and modern
+      dual-screen cockpits."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Seltos firmer damping on 18-inch wheels transferring road ripples to
+      passengers.
+    - Delivery waiting periods and dealer accessory markups on popular mid-trims.
+  note: Shared mechanical underpinnings mean servicing costs are virtually identical.
 ---
 
 Creta has the shorter, narrower documented footprint; the current Seltos is longer and has a longer wheelbase. Start with parking constraints and passenger fit, then compare equivalent powertrains and trims. A larger body does not prove better comfort or value, and this guide contains no comparative road test.

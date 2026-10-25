@@ -4,7 +4,7 @@ import Script from "next/script";
 
 import "./globals.css";
 import { InquiryProvider } from "../components/InquiryContext";
-import { InquiryNavButton } from "../components/InquiryNavButton";
+import { SiteHeader } from "../components/SiteHeader";
 import { InquiryModal } from "../components/InquiryModal";
 import { InquiryFloatingTrigger } from "../components/InquiryFloatingTrigger";
 import { SiteStructuredData } from "../components/StructuredData";
@@ -53,28 +53,7 @@ export default function RootLayout({
             Skip to content
           </a>
           <div className="site-shell">
-            <header className="site-header">
-              <div className="container nav">
-                <Link
-                  className="brand"
-                  href="/"
-                  aria-label="Aniket Thakur home"
-                >
-                  <strong>Aniket Thakur</strong>
-                  <span>AI × Product × Finance</span>
-                </Link>
-                <nav className="nav-links" aria-label="Primary navigation">
-                  <Link href="/">Home</Link>
-                  <Link href="/about/">About</Link>
-                  <Link href="/work/">Work</Link>
-                  <Link href="/projects/">Projects</Link>
-                  <Link href="/research/">Research</Link>
-                  <Link href="/blog/">Writing</Link>
-                  <Link href="/contact/">Contact</Link>
-                </nav>
-                <InquiryNavButton />
-              </div>
-            </header>
+            <SiteHeader />
             <div id="content">{children}</div>
             <footer className="site-footer">
               <div className="container footer-row">
