@@ -30,5 +30,7 @@ _preview/
 .env.*
 !.env.example
 *.service-account.json
+.google-oauth-tokens.json
+client_secret*.json
 .vercel
 .env*
