@@ -35,6 +35,8 @@ export interface BlogPost {
   };
   html: string;
   body: string;
+  readingTime?: number;
+  featured?: boolean;
 }
 
 export const categoryDescriptions: Record<string, string> = {

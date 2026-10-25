@@ -66,6 +66,7 @@ export default function RootLayout({
                 <nav className="nav-links" aria-label="Primary navigation">
                   <Link href="/">Home</Link>
                   <Link href="/about/">About</Link>
+                  <Link href="/work/">Work</Link>
                   <Link href="/projects/">Projects</Link>
                   <Link href="/research/">Research</Link>
                   <Link href="/blog/">Writing</Link>

@@ -172,3 +172,46 @@ export function BreadcrumbStructuredData({
     />
   );
 }
+
+export function CollectionPageStructuredData({
+  url,
+  name,
+  description,
+  items,
+}: {
+  url: string;
+  name: string;
+  description: string;
+  items?: { name: string; url: string; description?: string }[];
+}) {
+  const canonical = `${ORIGIN}${url}`;
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${canonical}#collection`,
+        url: canonical,
+        name,
+        description,
+        inLanguage: "en",
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": PERSON_ID },
+        ...(items?.length
+          ? {
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: items.map((item, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  name: item.name,
+                  url: `${ORIGIN}${item.url}`,
+                  description: item.description,
+                })),
+              },
+            }
+          : {}),
+      }}
+    />
+  );
+}

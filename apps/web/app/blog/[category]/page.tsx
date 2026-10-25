@@ -1,16 +1,18 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { listPosts } from "../../../lib/blog";
+import { listPosts, categoryDescriptions } from "../../../lib/blog";
 import { BlogIndex } from "../../../components/BlogIndex";
 import {
   BreadcrumbStructuredData,
-  WebPageStructuredData,
+  CollectionPageStructuredData,
 } from "../../../components/StructuredData";
-import { categoryDescriptions } from "../../../lib/blog";
+
 export function generateStaticParams() {
   return [...new Set(listPosts().map((p) => p.category))].map((category) => ({
     category,
   }));
 }
+
 export async function generateMetadata({
   params,
 }: {
@@ -19,65 +21,123 @@ export async function generateMetadata({
   const { category } = await params;
   const name = `${category.charAt(0).toUpperCase()}${category.slice(1)}`;
   return {
-    title: `${name} articles — Aniket Thakur`,
+    title: `${name} Articles & Guides — Aniket Thakur`,
     description:
       categoryDescriptions[category] ||
-      `Published ${category} articles by Aniket Thakur.`,
+      `Published ${category} articles, implementation guides, and analyses by Aniket Thakur.`,
     alternates: { canonical: `/blog/${category}/` },
+    openGraph: {
+      title: `${name} Articles & Guides — Aniket Thakur`,
+      description:
+        categoryDescriptions[category] ||
+        `Published ${category} articles, implementation guides, and analyses by Aniket Thakur.`,
+      url: `/blog/${category}/`,
+      images: ["/assets/img/aniket-portrait.png"],
+    },
   };
 }
-export default async function Category({
+
+export default async function CategoryPage({
   params,
 }: {
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  const all = listPosts();
-  const posts = all.filter((p) => p.category === category);
-  if (!posts.length) notFound();
+  const allPosts = listPosts();
+  const categoryPosts = allPosts.filter(
+    (p) => p.category.toLowerCase() === category.toLowerCase(),
+  );
+
+  if (!categoryPosts.length) notFound();
+
   const name = `${category.charAt(0).toUpperCase()}${category.slice(1)}`;
   const description =
     categoryDescriptions[category] ||
-    `Published ${category} articles by Aniket Thakur.`;
+    `Published ${category} articles and deep dives by Aniket Thakur.`;
+
+  const structuredItems = categoryPosts.slice(0, 30).map((p) => ({
+    name: p.title,
+    url: `/blog/${p.category}/${p.slug}/`,
+    description: p.description,
+  }));
+
+  const allCategories = [...new Set(allPosts.map((p) => p.category))];
+
   return (
-    <main className="section">
-      <WebPageStructuredData
+    <main className="section blog-category-page">
+      <CollectionPageStructuredData
         url={`/blog/${category}/`}
-        name={`${name} articles — Aniket Thakur`}
+        name={`${name} Articles — Aniket Thakur`}
         description={description}
+        items={structuredItems}
       />
       <BreadcrumbStructuredData
         items={[
           { name: "Home", url: "/" },
           { name: "Writing", url: "/blog/" },
-          { name: name, url: `/blog/${category}/` },
+          { name, url: `/blog/${category}/` },
         ]}
       />
-      <div className="container reading">
-        <nav aria-label="Breadcrumb" className="prose">
+
+      <div className="container">
+        {/* Breadcrumb nav */}
+        <nav aria-label="Breadcrumb" className="page-breadcrumb">
           <ol>
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/blog/">Writing</a>
+              <Link href="/blog/">Writing</Link>
             </li>
             <li aria-current="page">{name}</li>
           </ol>
         </nav>
-        <p className="eyebrow">Writing / {category}</p>
-        <h1 className="page-title">Explore {category}.</h1>
+
+        {/* Hero Section */}
+        <header className="blog-hero">
+          <p className="eyebrow">Writing / {name} Pillar</p>
+          <h1 className="page-title">
+            Explore <em className="serif">{name}.</em>
+          </h1>
+          <p className="intro">{description}</p>
+
+          <div className="blog-library-stats">
+            <div className="stat-pill">
+              <strong>{categoryPosts.length}</strong> {name} Articles
+            </div>
+            <div className="stat-pill">
+              Part of the <strong>326-article</strong> Technical Library
+            </div>
+          </div>
+        </header>
+
+        {/* Interactive Library Filtered to Category */}
         <BlogIndex
-          posts={posts.map(
-            ({ title, description, category, slug, datePublished }) => ({
+          posts={allPosts.map(
+            ({
               title,
               description,
-              category,
+              category: c,
               slug,
               datePublished,
+              coverImage,
+              coverImageAlt,
+              readingTime,
+              featured,
+            }) => ({
+              title,
+              description,
+              category: c,
+              slug,
+              datePublished,
+              coverImage,
+              coverImageAlt,
+              readingTime,
+              featured,
             }),
           )}
-          categories={[...new Set(all.map((p) => p.category))]}
+          categories={allCategories}
+          activeCategory={category}
         />
       </div>
     </main>
