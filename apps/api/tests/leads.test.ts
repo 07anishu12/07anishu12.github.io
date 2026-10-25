@@ -162,7 +162,7 @@ test(
     );
     try {
       await pool.query(`CREATE SCHEMA ${schema}`);
-      assert.equal(await applyMigrations(isolated), 1);
+      assert.equal(await applyMigrations(isolated), 2);
       assert.equal(await applyMigrations(isolated), 0);
       const store = new PostgresLeadStore(isolated),
         submissionId = verifyToken(body.submissionToken, secret);

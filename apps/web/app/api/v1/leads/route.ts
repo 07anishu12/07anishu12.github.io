@@ -1,0 +1,398 @@
+import {
+  createHash,
+  createHmac,
+  randomUUID,
+  timingSafeEqual,
+} from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
+import { NextResponse } from "next/server";
+import { Pool } from "pg";
+import {
+  AutomotiveEnquiryRequestSchema,
+  GeneralEnquiryRequestSchema,
+} from "@portfolio/contracts";
+
+const SECRET =
+  process.env.LEAD_TOKEN_SECRET ||
+  process.env.VERCEL_OIDC_TOKEN?.slice(0, 64) ||
+  "aniket-portfolio-secure-lead-token-secret-2026-v1";
+
+const POLICY_VERSION = "2026-10-25";
+
+// Shared connection pool if DATABASE_URL is provided
+let pool: Pool | null = null;
+function getPool(): Pool | null {
+  if (!process.env.DATABASE_URL) return null;
+  if (!pool) {
+    pool = new Pool({
+      connectionString: process.env.DATABASE_URL,
+      max: 5,
+      connectionTimeoutMillis: 5000,
+      statement_timeout: 10000,
+    });
+  }
+  return pool;
+}
+
+// In-memory rate limiting and deduplication store
+const leadIpMap = new Map<string, { count: number; resetAt: number }>();
+const recentSubmissions = new Map<
+  string,
+  { leadId: string; expiresAt: number }
+>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const record = leadIpMap.get(ip);
+  if (!record || record.resetAt <= now) {
+    leadIpMap.set(ip, { count: 1, resetAt: now + 15 * 60 * 1000 });
+    return false;
+  }
+  if (record.count >= 15) {
+    return true;
+  }
+  record.count++;
+  return false;
+}
+
+function verifyToken(token: string, now = Date.now()): string {
+  const [id, issued, signature, extra] = token.split(".");
+  if (!id || !issued || !signature || extra) {
+    throw new Error("Invalid submission token format.");
+  }
+  const expected = createHmac("sha256", SECRET)
+    .update(`${id}.${issued}`)
+    .digest("base64url");
+  if (
+    signature.length !== expected.length ||
+    !timingSafeEqual(Buffer.from(signature), Buffer.from(expected))
+  ) {
+    throw new Error("Invalid token signature.");
+  }
+  const issuedTime = Number(issued);
+  if (
+    !Number.isFinite(issuedTime) ||
+    issuedTime > now + 5000 ||
+    now - issuedTime > 24 * 60 * 60 * 1000
+  ) {
+    throw new Error("Submission token has expired. Please reload and try again.");
+  }
+  return id;
+}
+
+const normalizePhone = (phone: string): string =>
+  `+91${phone.replace(/\D/g, "").slice(-10)}`;
+
+export async function POST(request: Request) {
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  const ip = forwardedFor ? forwardedFor.split(",")[0].trim() : "127.0.0.1";
+
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: {
+          code: "RATE_LIMITED",
+          message: "Too many submissions. Please wait 15 minutes before retrying.",
+        },
+      },
+      { status: 429 },
+    );
+  }
+
+  let body: any;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      { ok: false, error: { code: "INVALID_JSON", message: "Malformed JSON payload." } },
+      { status: 400 },
+    );
+  }
+
+  // Anti-spam honeypot
+  if (body.website && String(body.website).trim() !== "") {
+    return NextResponse.json(
+      { ok: false, error: { code: "SPAM_DETECTED", message: "Submission rejected." } },
+      { status: 422 },
+    );
+  }
+
+  // Anti-spam minimum form interaction time
+  const now = Date.now();
+  if (body.formStartedAt) {
+    const elapsed = now - Number(body.formStartedAt);
+    if (elapsed < 1200) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: {
+            code: "SPAM_DETECTED",
+            message: "Submission completed too quickly. Please take a moment and try again.",
+          },
+        },
+        { status: 422 },
+      );
+    }
+  }
+
+  // Verify submission token
+  let submissionId: string;
+  try {
+    if (!body.submissionToken || typeof body.submissionToken !== "string") {
+      throw new Error("Missing submission token.");
+    }
+    submissionId = verifyToken(body.submissionToken, now);
+  } catch (err: any) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: {
+          code: "INVALID_SUBMISSION_TOKEN",
+          message: err?.message || "Invalid or expired session token. Please reload.",
+        },
+      },
+      { status: 400 },
+    );
+  }
+
+  // Determine enquiry category & validate schema
+  const isAuto =
+    body.enquiryType === "automotive" ||
+    Boolean(body.pinCode) ||
+    body.pageCategory === "auto" ||
+    Boolean(body.bikeBrand);
+
+  let validatedData: any;
+  if (isAuto) {
+    const result = AutomotiveEnquiryRequestSchema.safeParse(body);
+    if (!result.success) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: {
+            code: "VALIDATION_ERROR",
+            message: "Please correct the highlighted fields.",
+            details: result.error.flatten().fieldErrors,
+          },
+        },
+        { status: 400 },
+      );
+    }
+    validatedData = result.data;
+  } else {
+    const result = GeneralEnquiryRequestSchema.safeParse(body);
+    if (!result.success) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: {
+            code: "VALIDATION_ERROR",
+            message: "Please correct the highlighted fields.",
+            details: result.error.flatten().fieldErrors,
+          },
+        },
+        { status: 400 },
+      );
+    }
+    validatedData = result.data;
+  }
+
+  // Compute deduplication / payload hash
+  const hashKey = [
+    isAuto ? "auto" : "general",
+    validatedData.fullName,
+    normalizePhone(validatedData.mobile),
+    isAuto ? validatedData.pinCode : validatedData.service,
+    isAuto ? validatedData.bikeBrand || "" : validatedData.otherService || "",
+    validatedData.sourcePath || "/",
+  ].join("|");
+
+  const payloadHash = createHash("sha256").update(hashKey).digest("hex");
+
+  // In-memory deduplication check
+  const cached = recentSubmissions.get(submissionId) || recentSubmissions.get(payloadHash);
+  if (cached && cached.expiresAt > now) {
+    return NextResponse.json(
+      {
+        ok: true,
+        leadId: cached.leadId,
+        duplicate: true,
+        integrations: { sheets: "queued", whatsapp: "queued" },
+      },
+      { status: 200 },
+    );
+  }
+
+  // Attempt database persistence if configured
+  const db = getPool();
+  if (db) {
+    try {
+      const client = await db.connect();
+      try {
+        await client.query("BEGIN");
+        // Ensure table support
+        await client.query(`
+          CREATE TABLE IF NOT EXISTS leads (
+            id uuid PRIMARY KEY, submission_id uuid NOT NULL UNIQUE, payload_hash text NOT NULL,
+            full_name text NOT NULL, phone_normalized text NOT NULL,
+            pincode text, locality text, district text, state text,
+            location_status text NOT NULL DEFAULT 'unresolved', bike_brand text,
+            source_path text NOT NULL, article_slug text, page_category text, campaign_source text,
+            consent_given boolean NOT NULL CHECK(consent_given), consent_policy_version text NOT NULL,
+            submitted_at timestamptz NOT NULL DEFAULT now(), lead_status text NOT NULL DEFAULT 'new',
+            sheets_sync_status text NOT NULL DEFAULT 'queued', sheets_synced_at timestamptz,
+            whatsapp_notification_status text NOT NULL DEFAULT 'queued', whatsapp_notified_at timestamptz,
+            whatsapp_message_id text, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now(),
+            enquiry_type text DEFAULT 'automotive', service_required text, other_service text,
+            vehicle_model text, vehicle_type text
+          )
+        `);
+        await client.query(`
+          CREATE TABLE IF NOT EXISTS lead_outbox (
+            id bigserial PRIMARY KEY, lead_id uuid NOT NULL REFERENCES leads(id) ON DELETE CASCADE,
+            channel text NOT NULL, status text NOT NULL DEFAULT 'queued',
+            attempts integer NOT NULL DEFAULT 0, available_at timestamptz NOT NULL DEFAULT now(),
+            last_error_class text, updated_at timestamptz NOT NULL DEFAULT now(), UNIQUE(lead_id,channel)
+          )
+        `);
+
+        const leadId = randomUUID();
+        const brand = isAuto
+          ? validatedData.bikeBrand === "Other"
+            ? validatedData.otherBikeBrand || "Other"
+            : validatedData.bikeBrand || "Not specified"
+          : null;
+
+        const inserted = await client.query(
+          `INSERT INTO leads (
+            id, submission_id, payload_hash, full_name, phone_normalized, pincode, bike_brand,
+            source_path, article_slug, page_category, campaign_source, consent_policy_version,
+            consent_given, enquiry_type, service_required, other_service, vehicle_model, vehicle_type
+          ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,true,$13,$14,$15,$16,$17)
+          ON CONFLICT(submission_id) DO NOTHING RETURNING *`,
+          [
+            leadId,
+            submissionId,
+            payloadHash,
+            validatedData.fullName,
+            normalizePhone(validatedData.mobile),
+            isAuto ? validatedData.pinCode : null,
+            brand,
+            validatedData.sourcePath ?? "/",
+            isAuto ? validatedData.articleSlug ?? null : null,
+            validatedData.pageCategory ?? (isAuto ? "auto" : "general"),
+            isAuto ? validatedData.clientContext?.campaign ?? null : null,
+            POLICY_VERSION,
+            isAuto ? "automotive" : "general",
+            !isAuto ? validatedData.service : null,
+            !isAuto ? validatedData.otherService ?? null : null,
+            isAuto ? validatedData.vehicleModel ?? null : null,
+            isAuto ? validatedData.vehicleType ?? null : null,
+          ],
+        );
+
+        const row =
+          inserted.rows[0] ??
+          (await client.query("SELECT * FROM leads WHERE submission_id=$1", [submissionId]))
+            .rows[0];
+
+        if (inserted.rowCount) {
+          await client.query(
+            "INSERT INTO lead_outbox(lead_id,channel) VALUES($1,'sheets'),($1,'whatsapp') ON CONFLICT DO NOTHING",
+            [row.id],
+          );
+        }
+
+        await client.query("COMMIT");
+
+        // Record in recent deduplication cache
+        recentSubmissions.set(submissionId, { leadId: row.id, expiresAt: now + 24 * 3600 * 1000 });
+        recentSubmissions.set(payloadHash, { leadId: row.id, expiresAt: now + 24 * 3600 * 1000 });
+
+        return NextResponse.json(
+          {
+            ok: true,
+            leadId: row.id,
+            duplicate: !inserted.rowCount,
+            integrations: {
+              sheets: row.sheets_sync_status,
+              whatsapp: row.whatsapp_notification_status,
+            },
+          },
+          { status: inserted.rowCount ? 201 : 200 },
+        );
+      } catch (dbError) {
+        await client.query("ROLLBACK");
+        throw dbError;
+      } finally {
+        client.release();
+      }
+    } catch (err: any) {
+      console.error("Database persistence error:", err);
+      return NextResponse.json(
+        {
+          ok: false,
+          error: {
+            code: "DATABASE_ERROR",
+            message: "A database error occurred while saving your enquiry. Please retry or contact directly via WhatsApp.",
+          },
+        },
+        { status: 500 },
+      );
+    }
+  }
+
+  // If no DATABASE_URL is configured, check if we can persist to local file storage (dev/standalone)
+  const isVercelProduction = Boolean(process.env.VERCEL);
+  if (!isVercelProduction) {
+    try {
+      const dataDir = path.resolve(process.cwd(), ".data");
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+      const recordId = randomUUID();
+      const record = {
+        id: recordId,
+        submissionId,
+        payloadHash,
+        type: isAuto ? "automotive" : "general",
+        data: validatedData,
+        submittedAt: new Date(now).toISOString(),
+        phoneNormalized: normalizePhone(validatedData.mobile),
+      };
+      fs.appendFileSync(path.join(dataDir, "enquiries.jsonl"), JSON.stringify(record) + "\n", "utf8");
+
+      recentSubmissions.set(submissionId, { leadId: recordId, expiresAt: now + 24 * 3600 * 1000 });
+      recentSubmissions.set(payloadHash, { leadId: recordId, expiresAt: now + 24 * 3600 * 1000 });
+
+      return NextResponse.json(
+        {
+          ok: true,
+          leadId: recordId,
+          duplicate: false,
+          integrations: { sheets: "queued", whatsapp: "queued" },
+          persistence: "local_store",
+        },
+        { status: 201 },
+      );
+    } catch (fsErr) {
+      console.error("Local file storage fallback failed:", fsErr);
+    }
+  }
+
+  // When on Vercel and DATABASE_URL is not configured, inform the user honestly per Section 5 requirements
+  return NextResponse.json(
+    {
+      ok: false,
+      error: {
+        code: "DATABASE_NOT_CONFIGURED",
+        message:
+          "The enquiry storage service is not configured with DATABASE_URL yet. Please connect directly via WhatsApp while database provisioning is completed.",
+        missingDependency: "DATABASE_URL",
+      },
+    },
+    { status: 503 },
+  );
+}

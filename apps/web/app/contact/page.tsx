@@ -1,15 +1,24 @@
 import Link from "next/link";
 
 import { LeadCaptureForm } from "../../components/LeadCaptureForm";
+import { InquiryButton } from "../../components/InquiryButton";
 import { WHATSAPP_DISPLAY, whatsappHref } from "../../lib/contact";
+import { WebPageStructuredData } from "../../components/StructuredData";
 
 export const metadata = {
   title: "Contact \u2014 Aniket Thakur",
+  description:
+    "Contact Aniket Thakur for AI engineering, product, research, finance and bike-buying conversations.",
   alternates: { canonical: "/contact/" },
 };
 export default function ContactPage() {
   return (
     <main className="section">
+      <WebPageStructuredData
+        url="/contact/"
+        name={metadata.title}
+        description={metadata.description}
+      />
       <div className="container">
         <div className="section-heading">
           <div>
@@ -23,6 +32,9 @@ export default function ContactPage() {
             existing direct channels. For bike-buying questions, the structured
             form keeps the first follow-up focused.
           </p>
+          <div style={{ marginTop: 16 }}>
+            <InquiryButton className="button button-primary" category="general" />
+          </div>
         </div>
         <div className="lead-panel">
           <div>
@@ -52,10 +64,11 @@ export default function ContactPage() {
           </a>{" "}
           or <a href="/assets/Aniket_Thakur_Resume.pdf">download my résumé</a>.
         </p>
-        <p style={{ marginTop: 12, color: "var(--muted)" }}>
-          Read the <Link href="/privacy">privacy notice</Link> before
-          submitting.
-        </p>
+          <p style={{ marginTop: 12, color: "var(--muted)" }}>
+            Read the <Link href="/privacy/">privacy notice</Link> before
+            submitting. For a focused bike-finance comparison, visit the{" "}
+            <Link href="/finance/bikes/">bike buying enquiry page</Link>.
+          </p>
       </div>
     </main>
   );

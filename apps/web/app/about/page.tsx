@@ -1,6 +1,9 @@
 import { Background } from "../../components/Background";
+import { WebPageStructuredData } from "../../components/StructuredData";
 export const metadata = {
   title: "About — Aniket Thakur",
+  description:
+    "About Aniket Thakur: AI engineering, backend systems, product delivery, financial workflows and ecological graph research.",
   alternates: { canonical: "/about/" },
 };
 const skills = {
@@ -39,6 +42,11 @@ const skills = {
 export default function About() {
   return (
     <main>
+      <WebPageStructuredData
+        url="/about/"
+        name={metadata.title}
+        description={metadata.description}
+      />
       <section className="section">
         <div className="container">
           <p className="eyebrow">About Aniket</p>

@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { LeadCaptureForm } from "../../../../components/LeadCaptureForm";
+import { InquiryButton } from "../../../../components/InquiryButton";
+import {
+  BlogPostingStructuredData,
+  BreadcrumbStructuredData,
+  WebPageStructuredData,
+} from "../../../../components/StructuredData";
 import { getPost, isLeadCapturePost, listPosts } from "../../../../lib/blog";
 
 type RouteProps = { params: Promise<{ category: string; slug: string }> };
@@ -28,14 +34,18 @@ export async function generateMetadata({
           title: post.title,
           description: post.description,
           images: [
-            {
-              url: post.socialImage || post.coverImage,
-              alt: post.socialImageAlt || post.coverImageAlt,
-            },
-          ],
+              {
+                url: post.socialImage || post.coverImage,
+                alt: post.socialImageAlt || post.coverImageAlt,
+                width: post.socialWidth,
+                height: post.socialHeight,
+              },
+            ],
         },
         twitter: {
           card: "summary_large_image",
+          title: post.title,
+          description: post.description,
           images: [post.socialImage || post.coverImage],
         },
       }
@@ -55,6 +65,40 @@ export default async function BlogPostPage({ params }: RouteProps) {
         className="container"
         style={{ maxWidth: 860 }}
       >
+        <WebPageStructuredData
+          url={`/blog/${category}/${slug}/`}
+          name={post.title}
+          description={post.description}
+        />
+        <BlogPostingStructuredData
+          url={`/blog/${category}/${slug}/`}
+          title={post.title}
+          description={post.description}
+          datePublished={post.datePublished}
+          dateModified={post.dateModified || post.datePublished}
+          category={post.category}
+          image={post.coverImage}
+          imageWidth={post.width}
+          imageHeight={post.height}
+          wordCount={post.body.trim().split(/\s+/).length}
+          keywords={post.tags.join(", ")}
+        />
+        <BreadcrumbStructuredData
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Writing", url: "/blog/" },
+            { name: post.category, url: `/blog/${post.category}/` },
+            { name: post.title, url: `/blog/${category}/${slug}/` },
+          ]}
+        />
+        <nav aria-label="Breadcrumb" className="prose">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Writing</a></li>
+            <li><a href={`/blog/${post.category}/`}>{post.category}</a></li>
+            <li aria-current="page">{post.title}</li>
+          </ol>
+        </nav>
         <p className="eyebrow">
           {post.category} · {post.datePublished}
         </p>
@@ -74,22 +118,6 @@ export default async function BlogPostPage({ params }: RouteProps) {
         >
           {post.description}
         </p>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              headline: post.title,
-              description: post.description,
-              datePublished: post.datePublished,
-              dateModified: post.dateModified || post.datePublished,
-              author: { "@type": "Person", name: post.author },
-              image: `https://aniket.app${post.coverImage}`,
-              mainEntityOfPage: `https://aniket.app/blog/${post.category}/${post.slug}/`,
-            }).replace(/</g, "\\u003c"),
-          }}
-        />
         <img
           src={post.coverImage}
           alt={post.coverImageAlt}
@@ -214,13 +242,11 @@ export default async function BlogPostPage({ params }: RouteProps) {
         )}
         {post.enquiry && (
           <p style={{ marginTop: 36 }}>
-            <a
-              className="button button-secondary"
-              href="/contact"
-              rel="noreferrer"
-            >
-              Contact Aniket ↗
-            </a>
+            <InquiryButton
+              className="button button-primary"
+              category={post.category}
+              sourceSlug={post.slug}
+            />
           </p>
         )}
       </article>

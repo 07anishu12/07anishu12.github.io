@@ -1,15 +1,24 @@
 import Link from "next/link";
 import { ProjectList } from "../components/ProjectList";
 import { Background } from "../components/Background";
+import { InquiryButton } from "../components/InquiryButton";
+import { WebPageStructuredData } from "../components/StructuredData";
 import { listPosts } from "../lib/blog";
 export const metadata = {
   title: "Aniket Thakur \u2014 AI \u00d7 Product \u00d7 Finance",
+  description:
+    "AI engineering, backend systems and product thinking applied to useful tools, research and financial workflows.",
   alternates: { canonical: "/" },
 };
 export default function Home() {
   const recent = listPosts().slice(0, 3);
   return (
     <main>
+      <WebPageStructuredData
+        url="/"
+        name="Aniket Thakur — AI × Product × Finance"
+        description={metadata.description}
+      />
       <section className="hero">
         <div className="container hero-grid">
           <div>
@@ -24,12 +33,10 @@ export default function Home() {
               turn complex problems into tools people can use.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/projects">
+              <Link className="button button-primary" href="/projects/">
                 Explore my work →
               </Link>
-              <Link className="button button-secondary" href="/contact">
-                Let’s talk ↗
-              </Link>
+              <InquiryButton className="button button-secondary" />
             </div>
             <p className="hero-note">
               Product delivery at Drivio · Graph research at OIST · Financial
@@ -68,7 +75,7 @@ export default function Home() {
             </p>
           </div>
           <ProjectList limit={3} />
-          <Link href="/projects">View all projects →</Link>
+          <Link href="/projects/">View all projects →</Link>
         </div>
       </section>
       <section className="section">
@@ -83,7 +90,7 @@ export default function Home() {
             food webs—a different setting for the same question: how do we turn
             complexity into understanding?
           </p>
-          <Link href="/research">Explore the research →</Link>
+          <Link href="/research/">Explore the research →</Link>
         </div>
       </section>
       <Background />
@@ -102,7 +109,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <Link href="/blog">Visit the writing library →</Link>
+          <Link href="/blog/">Visit the writing library →</Link>
         </div>
       </section>
       <section className="section section-muted">
@@ -111,9 +118,12 @@ export default function Home() {
           <h2 className="section-title">
             Have a useful problem <em className="serif">to solve?</em>
           </h2>
-          <Link className="button button-primary" href="/contact">
-            Start a conversation →
-          </Link>
+          <div style={{ marginTop: 24, display: "flex", gap: 12 }}>
+            <InquiryButton className="button button-primary" />
+            <Link className="button button-secondary" href="/contact/">
+              Contact options ↗
+            </Link>
+          </div>
         </div>
       </section>
     </main>

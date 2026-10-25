@@ -1,14 +1,23 @@
 import Link from "next/link";
 
 import { LeadCaptureForm } from "../../../components/LeadCaptureForm";
+import { InquiryButton } from "../../../components/InquiryButton";
+import { WebPageStructuredData } from "../../../components/StructuredData";
 
 export const metadata = {
   title: "Bike buying enquiries \u2014 Aniket Thakur",
+  description:
+    "Bike buying enquiries: compare affordability, ownership cost and on-road pricing before a follow-up.",
   alternates: { canonical: "/finance/bikes/" },
 };
 export default function BikeFinancePage() {
   return (
     <main className="section">
+      <WebPageStructuredData
+        url="/finance/bikes/"
+        name={metadata.title}
+        description={metadata.description}
+      />
       <div className="container">
         <div className="section-heading">
           <div>
@@ -22,6 +31,9 @@ export default function BikeFinancePage() {
             Start with affordability, total ownership cost, and the exact
             on-road quote—not a headline EMI.
           </p>
+          <div style={{ marginTop: 16 }}>
+            <InquiryButton className="button button-primary" category="auto" />
+          </div>
         </div>
         <div className="lead-panel">
           <div>
@@ -64,7 +76,7 @@ export default function BikeFinancePage() {
             </li>
           </ul>
           <p>
-            <Link href="/privacy">Read the privacy notice →</Link>
+            <Link href="/privacy/">Read the privacy notice →</Link>
           </p>
         </div>
       </div>

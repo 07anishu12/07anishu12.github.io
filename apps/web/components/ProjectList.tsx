@@ -8,11 +8,11 @@ export function ProjectList({ limit }: { limit?: number }) {
           <div>
             <small>{String(i + 1).padStart(2, "0")} / Engineering study</small>
             <h3>
-              <Link href={`/projects/${p.slug}`}>{p.title}</Link>
+              <Link href={`/projects/${p.slug}/`}>{p.title}</Link>
             </h3>
             <p>{p.problem}</p>
           </div>
-          <Link href={`/projects/${p.slug}`}>Explore the system →</Link>
+          <Link href={`/projects/${p.slug}/`}>Explore the system →</Link>
         </article>
       ))}
     </div>

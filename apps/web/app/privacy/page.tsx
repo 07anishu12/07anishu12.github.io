@@ -1,12 +1,20 @@
 import Link from "next/link";
+import { WebPageStructuredData } from "../../components/StructuredData";
 
 export const metadata = {
   title: "Privacy \u2014 Aniket Thakur",
+  description:
+    "Privacy notice for the portfolio's bike enquiry form, analytics, retention and contact channels.",
   alternates: { canonical: "/privacy/" },
 };
 export default function PrivacyPage() {
   return (
     <main className="section">
+      <WebPageStructuredData
+        url="/privacy/"
+        name={metadata.title}
+        description={metadata.description}
+      />
       <div className="container" style={{ maxWidth: 820 }}>
         <p className="eyebrow">Privacy notice</p>
         <h1>A short, plain-language explanation.</h1>
@@ -53,7 +61,7 @@ export default function PrivacyPage() {
           <h2>Questions</h2>
           <p>
             For questions about an enquiry, use the{" "}
-            <Link href="/contact">contact page</Link> or the existing{" "}
+            <Link href="/contact/">contact page</Link> or the existing{" "}
             <a href="mailto:kumaraniketn@gmail.com">email address</a>.
           </p>
         </div>

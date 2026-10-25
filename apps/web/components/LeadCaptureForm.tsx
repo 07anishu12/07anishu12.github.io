@@ -93,32 +93,31 @@ export function LeadCaptureForm({
     setSubmitting(true);
     setStatus("Sending your enquiry…");
     try {
-      if (!API_URL)
-        throw new Error(
-          "The enquiry service is not configured yet. Please use WhatsApp.",
-        );
+      const endpoint = API_URL ? API_URL.replace(/\/$/, "") : "";
       if (!token.current) {
-        const result = await fetch(`${API_URL}/api/v1/leads/token`, {
+        const result = await fetch(`${endpoint}/api/v1/leads/token`, {
           cache: "no-store",
         });
         const data = await result.json();
         if (!result.ok || typeof data.submissionToken !== "string")
           throw new Error(
-            "The enquiry service is unavailable. Please try again.",
+            data?.error?.message ||
+              "The enquiry service is unavailable. Please try again or use WhatsApp.",
           );
         token.current = data.submissionToken;
       }
-      const response = await fetch(`${API_URL}/api/v1/leads`, {
+      const response = await fetch(`${endpoint}/api/v1/leads`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
+          enquiryType: "automotive",
           submissionToken: token.current,
           sourcePath: window.location.pathname,
           articleSlug:
             source && !["contact", "bike-finance"].includes(source)
               ? source
               : undefined,
-          pageCategory: campaign,
+          pageCategory: campaign || "auto",
           fullName: values.fullName.trim(),
           pinCode: values.pinCode.trim(),
           mobile: values.mobile.trim(),
@@ -308,10 +307,10 @@ export function LeadCaptureForm({
           disabled={submitting || received}
         >
           {received
-            ? "Enquiry received"
+            ? "Inquiry received"
             : submitting
-              ? "Sending…"
-              : "Request a follow-up →"}
+              ? "Submitting…"
+              : "Submit Inquiry"}
         </button>
         {received && (
           <button

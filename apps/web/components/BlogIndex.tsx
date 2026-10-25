@@ -23,7 +23,7 @@ export function BlogIndex({
   return (
     <>
       <nav className="category-nav" aria-label="Article categories">
-        <a href="/blog">All writing</a>
+        <a href="/blog/">All writing</a>
         {categories.map((c) => (
           <a key={c} href={`/blog/${c}/`}>
             {c}

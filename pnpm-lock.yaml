@@ -230,6 +230,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@portfolio/contracts':
+        specifier: workspace:*
+        version: link:../../packages/contracts
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -242,6 +245,9 @@ importers:
       next:
         specifier: 16.4.1
         version: 16.4.1(@types/node@22.20.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      pg:
+        specifier: ^8.23.1
+        version: 8.23.1
       react:
         specifier: 19.2.4
         version: 19.2.4
@@ -255,6 +261,9 @@ importers:
       '@types/node':
         specifier: ^22.18.8
         version: 22.20.5
+      '@types/pg':
+        specifier: ^8.23.1
+        version: 8.23.1
       '@types/react':
         specifier: ^19.0.0
         version: 19.3.0
@@ -264,6 +273,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.0
         version: 4.3.3
+      tsx:
+        specifier: ^4.23.15
+        version: 4.23.15
       typescript:
         specifier: ^5.9.3
         version: 5.9.3

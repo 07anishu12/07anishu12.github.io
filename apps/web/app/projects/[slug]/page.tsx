@@ -1,5 +1,9 @@
 import { notFound } from "next/navigation";
 import { projects } from "../../../lib/projects";
+import {
+  CreativeWorkStructuredData,
+  WebPageStructuredData,
+} from "../../../components/StructuredData";
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -7,10 +11,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const p = projects.find((p) => p.slug === slug);
+  if (!p) return {};
   return {
-    title: p?.title,
-    description: p?.problem,
-    alternates: { canonical: `/projects/${slug}` },
+    title: p.title,
+    description: p.problem,
+    alternates: { canonical: `/projects/${slug}/` },
   };
 }
 export default async function Project({ params }: Props) {
@@ -19,8 +24,18 @@ export default async function Project({ params }: Props) {
   if (!p) notFound();
   return (
     <main className="section">
+      <WebPageStructuredData
+        url={`/projects/${slug}/`}
+        name={p.title}
+        description={p.problem}
+      />
+      <CreativeWorkStructuredData
+        url={`/projects/${slug}/`}
+        name={p.title}
+        description={p.problem}
+      />
       <article className="container reading">
-        <a href="/projects">← All projects</a>
+        <a href="/projects/">← All projects</a>
         <p className="eyebrow">Engineering case study</p>
         <h1 className="page-title">{p.title}</h1>
         <p className="intro">{p.problem}</p>

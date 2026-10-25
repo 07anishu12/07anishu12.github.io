@@ -20,6 +20,8 @@ export interface BlogPost {
   imageSourceUrl?: string;
   width: number;
   height: number;
+  socialWidth: number;
+  socialHeight: number;
   socialImage?: string;
   socialImageAlt?: string;
   headings: { id: string; text: string; level: string }[];
@@ -34,6 +36,14 @@ export interface BlogPost {
   html: string;
   body: string;
 }
+
+export const categoryDescriptions: Record<string, string> = {
+  technology: "AI, software, gadgets, tutorials, comparisons, and explainers.",
+  product:
+    "Product discovery, experimentation, AI product execution, and product operations.",
+  auto: "Cars, bikes, EVs, ownership costs, and automotive technology.",
+  finance: "Personal finance, markets, fintech, and financial explainers.",
+};
 
 export const listPosts = (): BlogPost[] => posts as BlogPost[];
 

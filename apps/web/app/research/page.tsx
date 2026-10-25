@@ -1,10 +1,19 @@
+import { WebPageStructuredData } from "../../components/StructuredData";
+
 export const metadata = {
   title: "Research — Aniket Thakur",
+  description:
+    "Research perspective on graph neural networks, ecological food webs and scientific-literature synthesis at OIST.",
   alternates: { canonical: "/research/" },
 };
 export default function Research() {
   return (
     <main className="section">
+      <WebPageStructuredData
+        url="/research/"
+        name={metadata.title}
+        description={metadata.description}
+      />
       <article className="container reading">
         <p className="eyebrow">OIST · Ecological modelling</p>
         <h1 className="page-title">
