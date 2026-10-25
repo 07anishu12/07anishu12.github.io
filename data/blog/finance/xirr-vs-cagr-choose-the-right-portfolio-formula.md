@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/xirr-vs-cagr-choose-the-right-portfolio-formula/
 coverImageAlt: Educational diagram explaining XIRR vs CAGR
 imageCaption: Proposed explanatory diagram showing XIRR vs CAGR with clearly
   labelled illustrative figures.
-draft: false
+draft: true
 featured: false
 sources:
   - title: Microsoft XIRR
@@ -24,21 +24,24 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "XIRR vs CAGR: Which Formula Should You Use for Your Portfolio?"
-  answer: Use CAGR when one initial investment becomes one final value without
-    intervening cash flows.
+  question: "XIRR vs CAGR: Which formula should you use for your portfolio?"
+  answer: CAGR calculates geometric annualised returns for a single lump-sum
+    period; XIRR calculates annualised returns for multiple, irregular, dated
+    cash inflows and outflows such as SIPs and withdrawals.
   facts:
-    - label: Category & Focus
-      value: Personal finance and investing
-    - label: Verified Word Count
-      value: 847 words
+    - label: CAGR input
+      value: Start date & end date only
+    - label: XIRR input
+      value: Dated cash flow schedule
   goodFor:
-    - Readers evaluating Personal finance and investing.
-    - Practitioners needing verified benchmarks and calculations.
+    - "XIRR: Evaluating SIP investments, multiple equity tranches, and dividend
+      flows."
+    - "CAGR: Assessing point-to-point index returns or a single fixed deposit."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - XIRR numerical approximation errors when cash flows switch signs rapidly.
+    - Annualising short holding periods under 12 months with XIRR or CAGR.
+  note: Excel and Sheets require positive values for inflows and negative for
+    outflows.
 ---
 
 Use CAGR when one initial investment becomes one final value without intervening cash flows. Use XIRR when money enters or leaves on different dates. CAGR measures an endpoint growth rate; XIRR measures a money-weighted annual return. Neither by itself describes volatility, liquidity or whether your investment decisions were appropriate.

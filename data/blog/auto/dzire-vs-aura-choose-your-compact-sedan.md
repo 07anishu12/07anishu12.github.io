@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to Dzire vs Aura
 imageCaption: "Proposed original explanatory illustration for Maruti Suzuki
   Dzire vs Hyundai Aura: Compact Sedan Buying Guide; label any vehicle
   illustration as illustrative."
-draft: false
+draft: true
 featured: false
 sources:
   - title: Maruti Suzuki configurator
@@ -35,21 +35,27 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "Maruti Suzuki Dzire vs Hyundai Aura: Which Compact Sedan Should You Buy?"
-  answer: Dzire is wider than Aura on the checked manufacturer figures, while both
-    have the same listed length and wheelbase.
+  question: "Maruti Suzuki Dzire vs Hyundai Aura: Which compact sedan should you buy?"
+  answer: The Maruti Suzuki Dzire is the efficiency benchmark with proven
+    reliability and exceptional resale; the Hyundai Aura provides a plush,
+    feature-laden interior, quieter 4-cylinder engine, and well-integrated
+    twin-cylinder CNG packaging.
   facts:
-    - label: Category & Focus
-      value: Car comparisons and model-specific guides
-    - label: Verified Word Count
-      value: 895 words
+    - label: Dzire fuel economy
+      value: Up to 25.7 km/l (Petrol MT)
+    - label: Boot capacity
+      value: Aura 402L vs Dzire 382L
   goodFor:
-    - Readers evaluating Auto.
-    - Practitioners needing verified benchmarks and calculations.
+    - "Dzire: Maximum fuel savings, low maintenance costs, and robust resale
+      value."
+    - "Aura: Urban buyers prioritizing cabin fit-and-finish, warranty options,
+      and rear legroom."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Dzire 3-cylinder Z-series engine having slightly more vibration than
+      Aura’s 4-cylinder.
+    - Aura slightly lower fuel economy in dense bumper-to-bumper city traffic.
+  note: Both sedans dominate the commercial fleet and private family compact
+    segments.
 ---
 
 Dzire is wider than Aura on the checked manufacturer figures, while both have the same listed length and wheelbase. Aura merits attention where narrow access matters; Dzire warrants a rear-seat fit check. Compare equivalent petrol automatics or CNG manuals, then confirm equipment and total cost.

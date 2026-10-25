@@ -161,7 +161,7 @@ $$\text{New B2B PMF Score} = \frac{50 + 24}{150} = \frac{74}{150} = \mathbf{49.3
 
 ## Practical Implementation Checklist
 
-- [ ] **Pre-Build Demand Verification:** Before writing code, did we validate active buyer search intent using a structured query framework ([Why Market Validation Trumps Vibes](https://07anishu12.github.io/learnings.html))?
+- [ ] **Pre-Build Demand Verification:** Before writing code, did we validate active buyer search intent using a structured query framework ([Why Market Validation Trumps Vibes](https://aniket.app/learnings.html))?
 - [ ] **Cohort Asymptote Check:** Does our Day-30 / Day-90 / Month-6 cohort retention curve flatten into a stable horizontal plateau rather than sloping continuously toward zero?
 - [ ] **Sean Ellis Survey ($n \ge 40$):** Have we surveyed at least 40 active users (who completed the core loop $\ge 2\times$ in the past 2 weeks) and segmented the **Very Disappointed** percentage by persona?
 - [ ] **Filtered Objection Roadmap:** Are we prioritizing the Q4 objections of **Somewhat Disappointed users who love our core benefit** while ignoring feature requests from *Not Disappointed* users?

@@ -29,7 +29,7 @@ sources:
   - title: Atlassian Team Playbook
     url: https://www.atlassian.com/team-playbook/plays/daci
   - title: Knowledge Library & Technical Notes — Aniket Thakur
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -189,7 +189,7 @@ Aim for **800 to 2,000 words (roughly 2 to 4 pages)** depending on architectural
 The **PRD** (owned by the Product Manager) defines **what** problem is being solved, **who** it is for, **what** observable system behaviors and acceptance criteria are required, and **how** success will be measured. The **Engineering RFC / TDD** (owned by the Tech Lead or Staff Engineer) defines the internal **technical architecture**—such as Kafka topic partitioning, PostgreSQL indexing, class hierarchies, and microservice schemas. The two documents link to each other at the top header.
 
 ### 4. How do you write a PRD for an AI or LLM-powered feature where outputs are probabilistic rather than deterministic?
-For AI/LLM features (**Article 23**), deterministic `Given / When / Then` rules alone are insufficient for model text quality. Your PRD must include two additional sections: (1) an **Evaluation Dataset & Quality Rubric** (e.g., *"Must achieve $\ge 94\%$ factual grounding accuracy and $<1\%$ schema validation failure across our 500-prompt golden eval dataset"*), and (2) **Deterministic Fallback & Guardrail Rules** (as detailed in Aniket Thakur's [Designing Deterministic Validation Schemas for Multi-LLM Pipelines](https://07anishu12.github.io/learnings.html)).
+For AI/LLM features (**Article 23**), deterministic `Given / When / Then` rules alone are insufficient for model text quality. Your PRD must include two additional sections: (1) an **Evaluation Dataset & Quality Rubric** (e.g., *"Must achieve $\ge 94\%$ factual grounding accuracy and $<1\%$ schema validation failure across our 500-prompt golden eval dataset"*), and (2) **Deterministic Fallback & Guardrail Rules** (as detailed in Aniket Thakur's [Designing Deterministic Validation Schemas for Multi-LLM Pipelines](https://aniket.app/learnings.html)).
 
 ### 5. Who signs off on a PRD before engineering starts coding?
 In an empowered Product Trio, sign-off requires alignment across three peers: the **Product Manager** (verifies value, viability, and metric instrumentation), the **Product Designer** (verifies UX states and accessibility), and the **Tech Lead** (verifies technical feasibility and estimability)—plus domain reviewers (Legal/Security) if regulated data is touched.

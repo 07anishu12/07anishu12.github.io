@@ -17,7 +17,7 @@ coverImage: /assets/images/blog/sip-vs-lump-sum-compare-timing-risk-and-cash-flo
 coverImageAlt: Educational diagram explaining SIP vs lump sum
 imageCaption: Proposed explanatory diagram showing SIP vs lump sum with clearly
   labelled illustrative figures.
-draft: false
+draft: true
 featured: false
 sources:
   - title: SEBI considerations before investing
@@ -27,22 +27,22 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "SIP vs Lump Sum Investment: Which Works Better in Different Market
-    Conditions?"
-  answer: A SIP invests money gradually; a lump sum puts available money to work
-    immediately.
+  question: "SIP vs Lump Sum: Which investment method works better?"
+  answer: Lump-sum investing mathematically outperforms in consistently rising
+    markets because capital is deployed early; SIP reduces drawdown risk and
+    regret in volatile or declining markets through rupee cost averaging.
   facts:
-    - label: Category & Focus
-      value: Personal finance and investing
-    - label: Verified Word Count
-      value: 818 words
+    - label: SIP key mechanism
+      value: Rupee Cost Averaging
+    - label: Lump sum advantage
+      value: Maximum Time in Market
   goodFor:
-    - Readers evaluating Personal finance and investing.
-    - Practitioners needing verified benchmarks and calculations.
+    - "SIP: Salaried investors matching monthly cash flow to savings."
+    - "Lump sum: Long investment horizons with clear risk tolerance."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Holding excess cash in low-yield accounts while waiting to time the market.
+    - Stopping SIPs during market downturns when accumulation value is highest.
+  note: Historical index trends show time in market generally trumps market timing.
 ---
 
 A SIP invests money gradually; a lump sum puts available money to work immediately. Neither method guarantees a superior result. The outcome depends on the market path, when the cash becomes available, the return on uninvested cash, and whether the investment matches the goal. Monthly salary investing and staging an existing corpus are different decisions.

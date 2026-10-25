@@ -31,7 +31,7 @@ sources:
   - title: Nielsen Norman Group (NN/g)
     url: https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/
   - title: Knowledge Library & Technical Notes — Aniket Thakur
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -57,7 +57,7 @@ quickAnswer:
 
 The single greatest waste in software engineering is building a technically flawless product that nobody bothers to adopt. Yet when many teams attempt to "do customer discovery," they inadvertently run validation theater: they show five friendly customers a mockup, ask *"Would you use a feature like this if we built it?"*, collect five polite nods, and commit six months of engineering capital—only to watch post-launch usage flatline near zero. Polite compliments in an interview room are not market demand.
 
-As Aniket Thakur emphasizes in his portfolio note [*Why Market Validation Trumps Vibes: A Three-Step Query Framework*](https://07anishu12.github.io/learnings.html), teams must verify active behavioral intent before committing production engineering capital. Grounded in Marty Cagan's foundational discovery principles at the [Silicon Valley Product Group (SVPG)](https://www.svpg.com/the-origin-of-product-discovery/) and Teresa Torres's [*Continuous Discovery Habits* / Opportunity Solution Trees](https://www.producttalk.org/opportunity-solution-trees/), genuine **customer discovery** separates the **Problem Space** (understanding the user's current context, pain points, and costly workarounds) from the **Solution Space** (testing specific prototypes and willingness to pay). This article teaches you how to replace biased hypothetical questions with story-based behavioral prompts, design statistically clean surveys, rank evidence strength, and synthesize raw transcripts into an actionable Opportunity Solution Tree.
+As Aniket Thakur emphasizes in his portfolio note [*Why Market Validation Trumps Vibes: A Three-Step Query Framework*](https://aniket.app/learnings.html), teams must verify active behavioral intent before committing production engineering capital. Grounded in Marty Cagan's foundational discovery principles at the [Silicon Valley Product Group (SVPG)](https://www.svpg.com/the-origin-of-product-discovery/) and Teresa Torres's [*Continuous Discovery Habits* / Opportunity Solution Trees](https://www.producttalk.org/opportunity-solution-trees/), genuine **customer discovery** separates the **Problem Space** (understanding the user's current context, pain points, and costly workarounds) from the **Solution Space** (testing specific prototypes and willingness to pay). This article teaches you how to replace biased hypothetical questions with story-based behavioral prompts, design statistically clean surveys, rank evidence strength, and synthesize raw transcripts into an actionable Opportunity Solution Tree.
 
 ## 1. Why Asking Users "What They Want" Fails (And How Story-Based Interviews Work)
 
@@ -105,7 +105,7 @@ Qualitative interviews tell you **why** a behavior happens and reveal mental mod
 | **Tier 1 (Weakest)** | Internal executive opinion or single anecdotal sales comment | **Very Low (1/10)** | Use only as an initial hypothesis generator; never commit sprint capacity |
 | **Tier 2** | Hypothetical survey responses (*"I would probably buy this"*) | **Low (3/10)** | Useful for top-level market segmentation, not for feature validation |
 | **Tier 3** | Past-behavior story interviews ($n = 8\text{–}15$) showing costly manual workarounds | **Medium-High (6/10)** | Justifies building a clickable prototype and running usability/smoke tests |
-| **Tier 4** | Unassisted task completion in prototype usability test ([NN/g](https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/)) + Search Demand ([Query Framework](https://07anishu12.github.io/learnings.html)) | **High (8/10)** | Justifies scoping an MVP (**Article 15**) or writing an engineering PRD |
+| **Tier 4** | Unassisted task completion in prototype usability test ([NN/g](https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/)) + Search Demand ([Query Framework](https://aniket.app/learnings.html)) | **High (8/10)** | Justifies scoping an MVP (**Article 15**) or writing an engineering PRD |
 | **Tier 5 (Strongest)** | Behavioral skin-in-the-game: Paid pilot LOI, live pre-order deposit, or production A/B test lift | **Very High (10/10)** | Justifies full multi-sprint engineering investment and GA scale |
 
 ## Visualizing the Framework
@@ -173,7 +173,7 @@ Yes—always ask for explicit verbal consent at the start of the call (*"Do you 
 **Generative / Exploratory Research** happens *before* you have a solution: its goal is to map the problem space, mental models, and unmet opportunities (using story-based interviews, contextual inquiry, and search query validation). **Evaluative Research** happens *after* you have generated candidate solutions: its goal is to test whether a specific wireframe, prototype, or value proposition is usable and desirable (using usability testing, smoke tests, and A/B experiments).
 
 ### 5. How can AI / LLMs safely accelerate customer discovery synthesis without hallucinating insights?
-LLMs are outstanding at clustering verbatim transcript chunks, extracting timestamped quotes, and tagging recurring pain points—provided you enforce **strict citation grounding** (requiring every synthesized theme to link to exact transcript IDs and speaker quotes, as detailed in [Designing Deterministic Validation Schemas for Multi-LLM Pipelines](https://07anishu12.github.io/learnings.html)). Never use synthetic AI personas as a replacement for talking to real humans; LLMs reflect average internet training data, not the specific edge-case friction of your actual customers.
+LLMs are outstanding at clustering verbatim transcript chunks, extracting timestamped quotes, and tagging recurring pain points—provided you enforce **strict citation grounding** (requiring every synthesized theme to link to exact transcript IDs and speaker quotes, as detailed in [Designing Deterministic Validation Schemas for Multi-LLM Pipelines](https://aniket.app/learnings.html)). Never use synthetic AI personas as a replacement for talking to real humans; LLMs reflect average internet training data, not the specific edge-case friction of your actual customers.
 
 ### 6. What should I do when customers in interviews ask for a specific feature ("Add an Excel export button")?
 Never take a customer's feature request literally, and never dismiss it rudely. Use the **"Five Whys" pivot**: *"That's really helpful—if you had that Excel export button right now, what is the very first thing you would do with the downloaded file?"* Nine times out of ten, you will discover they only wanted the CSV export because your in-app dashboard lacked a simple filter or shareable link that you can solve in a fraction of the time.

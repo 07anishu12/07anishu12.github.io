@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to Nexon vs Venue
 imageCaption: "Proposed original explanatory illustration for Tata Nexon vs
   Hyundai Venue: Choosing the Right Variant; label any vehicle illustration as
   illustrative."
-draft: false
+draft: true
 featured: true
 sources:
   - title: Hyundai India model catalogue
@@ -31,21 +31,26 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "Tata Nexon vs Hyundai Venue: Price, Mileage, Safety and Which SUV
-    Should You Buy?"
-  answer: Shortlist Nexon iCNG when factory CNG and a manual gearbox meet your needs.
+  question: "Tata Nexon vs Hyundai Venue: Which sub-compact SUV should you buy?"
+  answer: Choose the Tata Nexon for proven 5-star crash safety, superior
+    rough-road suspension, and punchy diesel/turbo-petrol options; choose the
+    Hyundai Venue for smoother DCT automatic refinement, lighter city steering,
+    and intuitive tech.
   facts:
-    - label: Category & Focus
-      value: Car comparisons and model-specific guides
-    - label: Verified Word Count
-      value: 843 words
+    - label: Tata Nexon BNCAP
+      value: 5 Stars (Adult & Child)
+    - label: Ground clearance
+      value: Nexon 208mm vs Venue 195mm
   goodFor:
-    - Readers evaluating Auto.
-    - Practitioners needing verified benchmarks and calculations.
+    - "Nexon: Highway commuters, rough rural roads, and safety-conscious
+      families."
+    - "Venue: Urban city drivers, tight traffic commutes, and DCT automatic
+      buyers."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Nexon AMT transmission hesitation in stop-and-go city gridlock.
+    - Venue firmer rear suspension over sharp city potholes and speed breakers.
+  note: Always compare equivalent ex-showroom and on-road prices for matching
+    gearboxes.
 ---
 
 Shortlist Nexon iCNG when factory CNG and a manual gearbox meet your needs. For petrol or diesel, compare the exact transmissions and complete quotes: Nexon and Venue have equal documented overall length. Neither brand establishes a universal mileage, safety or ownership-cost winner, and current prices need local verification.

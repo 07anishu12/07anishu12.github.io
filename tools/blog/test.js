@@ -50,6 +50,27 @@ test('Rich formatting, safe links, headings, and accessible single-cover HTML', 
   } finally { f.clean(); }
 });
 
+test('Bike lead capture markup is reusable, labelled, and truthful', () => {
+  const f = fixture();
+  try {
+    const source = example
+      .replace('category: "technology"', 'category: "auto"')
+      .replace('slug: "formatting-example"', 'slug: "bike-emi-calculator-test"')
+      .replace('coverImage: /assets/images/blog/formatting-example/cover.svg', 'coverImage: /assets/images/blog/formatting-example/cover.svg');
+    const post = parseArticle(source, 'auto', { root: f.root, preview: true });
+    const html = outputs([post], { root: f.root, preview: true }).get('blog/auto/bike-emi-calculator-test/index.html');
+    const $ = cheerio.load(html);
+    assert.equal($('.lead-capture').length, 1);
+    assert.equal($('[data-lead-form]').length, 1);
+    for (const name of ['fullName', 'pinCode', 'mobile', 'bikeBrand', 'consent']) assert.equal($(`[name="${name}"]`).length, 1, name);
+    assert.equal($('[name="consent"][required]').length, 1);
+    assert.equal($('label[for="lead-bike-emi-calculator-test-consent"] a[href="/privacy.html"]').length, 1);
+    assert.equal($('[data-lead-form] [role="status"][aria-live="polite"]').length, 1);
+    assert.match(html, /assets\/js\/lead-capture\.js/);
+    assert.match(html, /data-article-slug="bike-emi-calculator-test"/);
+  } finally { f.clean(); }
+});
+
 test('Reject invalid metadata and collisions before generating output', () => {
   const f = fixture();
   try {
@@ -312,4 +333,55 @@ test('Answer-first summary, contextual references, and car enquiry stay in stati
     assert.throws(() => parseArticle(source.replace('featured: false', 'showSources: "false"'), 'technology', { root: f.root }), /boolean/);
     assert.throws(() => parseArticle(source.replace('featured: false', 'quickAnswer: {answer: "incomplete"}'), 'technology', { root: f.root }), /question/);
   } finally { f.clean(); }
+});
+
+test('Static lead capture retries the same token and requires a persistence receipt', async () => {
+  // Synthetic data; fetch is mocked and no messages or provider requests are sent.
+  const listeners = {}, calls = [];
+  const values = { fullName: 'Synthetic Test', pinCode: '110001', mobile: '9000000000', bikeBrand: 'Hero', website: '', formStartedAt: 1 };
+  const element = () => ({ setAttribute() {}, removeAttribute() {}, addEventListener() {} });
+  const elements = Object.fromEntries([...Object.keys(values), 'otherBikeBrand', 'consent'].map(k => [k, { ...element(), value: values[k], checked: true }]));
+  const status = {}, submit = element(), other = {}, whatsapp = { href: 'https://wa.me/817012905081' };
+  const form = {
+    elements,
+    querySelector(q) { return ({ '[data-lead-status]': status, '[data-lead-submit]': submit, '[data-lead-whatsapp]': whatsapp })[q] || element(); },
+    addEventListener(n, fn) { listeners[n] = fn; },
+    reset() {},
+  };
+  const section = { dataset: { articleSlug: 'synthetic-bike', articleCategory: 'auto' }, querySelector(q) { return q === '[data-lead-form]' ? form : other; } };
+  let onReady, attempt = 0;
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'assets/js/lead-capture.js'), 'utf8'), {
+    document: { addEventListener(n, fn) { onReady = fn; }, querySelectorAll() { return [section]; } },
+    window: { PORTFOLIO_CONFIG: {}, location: { pathname: '/blog/auto/synthetic-bike/' } },
+    FormData: class { entries() { return Object.entries(values); } },
+    Date, Error,
+    fetch: async (url, options) => {
+      calls.push({ url, body: options?.body && JSON.parse(options.body) });
+      if (url.endsWith('/token')) return { ok: true, json: async () => ({ submissionToken: 'synthetic-signed-token' }) };
+      attempt++;
+      return { ok: true, json: async () => attempt === 1 ? { ok: true } : { ok: true, leadId: 'synthetic-receipt' } };
+    },
+  });
+  onReady();
+  await listeners.submit({ preventDefault() {} });
+  assert.ok(!status.textContent.includes('has been saved'));
+  await listeners.submit({ preventDefault() {} });
+  assert.ok(status.textContent.includes('has been saved'));
+  assert.equal(calls.filter(c => c.url.endsWith('/token')).length, 1);
+  assert.equal(calls[1].body.submissionToken, calls[2].body.submissionToken);
+  assert.equal(calls[1].body.sourcePath, '/blog/auto/synthetic-bike/');
+  assert.equal(whatsapp.href, 'https://wa.me/817012905081');
+  assert.ok(calls.every(c => !c.url.includes(values.mobile) && !c.url.includes(values.pinCode)));
+});
+
+test('enhancePortfolio idempotency, single-tag injection, and whitespace hygiene', () => {
+  const { enhancePortfolio } = require('./pages');
+  const sample = '<!doctype html>\n<html lang="en">\n<head>\n<title>Test</title>\n</head>\n<body>\n<main></main>\n</body>\n</html>';
+  const once = enhancePortfolio(sample);
+  const twice = enhancePortfolio(once);
+  assert.equal(once, twice, 'enhancePortfolio must be strictly idempotent on repeated passes');
+  assert.equal((twice.match(/\/assets\/js\/lead-capture\.js/g) || []).length, 1);
+  assert.equal((twice.match(/\/assets\/js\/site-config\.js/g) || []).length, 1);
+  assert.equal((twice.match(/\/assets\/css\/blog\.css/g) || []).length, 1);
+  assert.doesNotMatch(twice, /[ \t]+$/m, 'enhancePortfolio must never introduce trailing whitespace');
 });

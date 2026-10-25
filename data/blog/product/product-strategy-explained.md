@@ -31,7 +31,7 @@ sources:
   - title: Product Institute
     url: https://productinstitute.com/resources/books/escaping-the-build-trap
   - title: Knowledge Library & Technical Notes — Aniket Thakur
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -78,7 +78,7 @@ Whether you use Roger Martin and A.G. Lafley's classic *Playing to Win* cascade 
 1. **Where Will We Play (Beachhead Segment & ICP)?** Who is our Ideal Customer Profile (ICP) for the next 12–18 months, and who is explicitly **out of scope**? Trying to build simultaneously for solo freelancers and Fortune 500 procurement teams breaks both your UX simplicity and your sales motion.
 2. **What Problem Do We Uniquely Solve (Value Proposition & Positioning)?** What high-frequency, high-pain job (**Article 12**) are we solving, and what is the customer's current alternative (competitor software, Excel spreadsheets, or manual agency labor)?
 3. **How Will We Win (Defensibility & Hard-to-Copy Advantage)?** Once competitors see our traction, what stops them from copying our UI in two sprints? Durable product moats come from **proprietary data loops**, **high switching costs / workflow embedding**, **two-sided network effects**, or **economies of scale**—never from surface UI polish alone.
-4. **How Do We Make Money (Business Model & Unit Economics)?** How does our pricing metric align with customer value (per-seat, usage-based token/API consumption, or transaction take-rate), and does it sustain healthy gross margins after cloud compute and LLM inference costs? (See Aniket Thakur's analysis in [Public Market Listings as the Ultimate Stress Test for AI Valuations](https://07anishu12.github.io/learnings.html) on why gross margin discipline separates durable software businesses from narrative bubbles.)
+4. **How Do We Make Money (Business Model & Unit Economics)?** How does our pricing metric align with customer value (per-seat, usage-based token/API consumption, or transaction take-rate), and does it sustain healthy gross margins after cloud compute and LLM inference costs? (See Aniket Thakur's analysis in [Public Market Listings as the Ultimate Stress Test for AI Valuations](https://aniket.app/learnings.html) on why gross margin discipline separates durable software businesses from narrative bubbles.)
 5. **What Capabilities & Systems Must We Build (Strategic Pillars)?** Which 3 to 4 foundational capabilities (e.g., deterministic validation pipelines, self-serve onboarding, automated compliance engines) must our engineering squads construct over the next four quarters to make this strategy real?
 
 ## 3. Applying the "Opposite Test" to Detect Fake Strategies
@@ -146,7 +146,7 @@ flowchart TD
 ## Practical Worked Example
 
 **Scenario (Hypothetical AI Document Intelligence Startup — *DocuVerify AI*):**  
-*DocuVerify AI* has built a multi-LLM document extraction engine with deterministic JSON validation schemas (similar in technical principle to [Designing Deterministic Validation Schemas for Multi-LLM Pipelines](https://07anishu12.github.io/learnings.html)). The company has **\$1.8M in seed runway (18 months)** and an 8-person engineering team. Leadership must choose **one beachhead product strategy** for the next 12 months from three competing segments:
+*DocuVerify AI* has built a multi-LLM document extraction engine with deterministic JSON validation schemas (similar in technical principle to [Designing Deterministic Validation Schemas for Multi-LLM Pipelines](https://aniket.app/learnings.html)). The company has **\$1.8M in seed runway (18 months)** and an 8-person engineering team. Leadership must choose **one beachhead product strategy** for the next 12 months from three competing segments:
 
 - **Strategic Option A — Consumer Tax Receipt Scanner App (B2C):** Target freelance gig workers at \$9/month (\$108/year ACV). High volume, but heavy mobile ad Customer Acquisition Cost (CAC = \$85/user) and 6% monthly churn (average lifetime = 16.7 months). LLM OCR inference + cloud storage costs \$2.70/user/month.
 - **Strategic Option B — Horizontal "Chat With Any PDF" Prosumer Tool:** Target general knowledge workers at \$15/month (\$180/year ACV). Extremely crowded market (competing directly with bundled features inside Notion, ChatGPT, and Adobe); CAC = \$140/user; 7% monthly churn (14.3 months lifetime); inference cost = \$4.50/user/month.

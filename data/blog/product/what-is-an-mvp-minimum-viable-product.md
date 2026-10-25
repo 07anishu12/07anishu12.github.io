@@ -31,7 +31,7 @@ sources:
   - title: Strategyzer Library
     url: https://www.strategyzer.com/library/dont-build-when-you-build-measure-learn
   - title: Knowledge Library & Technical Notes — Aniket Thakur
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -74,7 +74,7 @@ Before scoping your next initiative, align your engineering and executive teams 
 
 A huge misconception is that every MVP requires three months of full-stack Kubernetes engineering. Depending on which hypothesis is riskiest, choose from six escalating MVP archetypes:
 
-1. **The Search Demand & Smoke-Test / Fake-Door MVP (Pre-Build Demand Validation):** Before writing application logic, verify active buyer intent using search-demand telemetry (as detailed in Aniket Thakur's [*Why Market Validation Trumps Vibes: A Three-Step Query Framework*](https://07anishu12.github.io/learnings.html)) paired with a dedicated landing page or an in-app "Fake Door" button that measures actual click-to-signup or pre-order intent rate.
+1. **The Search Demand & Smoke-Test / Fake-Door MVP (Pre-Build Demand Validation):** Before writing application logic, verify active buyer intent using search-demand telemetry (as detailed in Aniket Thakur's [*Why Market Validation Trumps Vibes: A Three-Step Query Framework*](https://aniket.app/learnings.html)) paired with a dedicated landing page or an in-app "Fake Door" button that measures actual click-to-signup or pre-order intent rate.
 2. **The Concierge MVP (Visible Manual Service):** You deliver the exact end-to-end outcome to your first 10 customers **manually and visibly** before automating the software. For example, before building an automated B2B cloud-cost optimization SaaS, you log into 5 clients' AWS consoles manually every Friday, generate the savings report by hand, and charge \$500/month. This proves both willingness to pay and the exact rules your algorithm actually needs.
 3. **The Wizard of Oz / "Flintstone" MVP (Front-End Automated UI, Back-End Human-in-the-Loop):** To the customer, the front-end web app looks like an automated self-serve product; behind the curtain, a founder or operations specialist fulfills the request manually (famously used by Zappos founder Nick Swinmurn, who photographed shoes at local malls and bought them at retail only when a user placed an online order).
 4. **The Single-Feature / "Piecemeal" No-Code MVP:** Combines off-the-shelf APIs, Typeform, Stripe Checkout, Zapier, and a lightweight front-end to deliver **one razor-sharp workflow** rather than building custom billing, auth, and admin portals from scratch.
@@ -105,7 +105,7 @@ To ruthlessly cut a 6-month specification down to a 4-week MVP without sacrifici
 
 | MVP Archetype | Engineering Time to Launch | Best Risk Tested | Real-World / Domain Use Case | When It Fails (Limitation) |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. Search Query & Smoke-Test Page** | 1–3 Days | **Value / Demand Risk** (Do buyers actively search and click?) | Validating B2B SaaS keyword demand & signup intent before coding ([Query Framework](https://07anishu12.github.io/learnings.html)) | Tests initial curiosity/intent, not long-term product retention |
+| **1. Search Query & Smoke-Test Page** | 1–3 Days | **Value / Demand Risk** (Do buyers actively search and click?) | Validating B2B SaaS keyword demand & signup intent before coding ([Query Framework](https://aniket.app/learnings.html)) | Tests initial curiosity/intent, not long-term product retention |
 | **2. Concierge MVP** | 3–7 Days | **Solution Workflow Risk** (What exact steps deliver value?) | Manually auditing 10 clients' cloud bills or loan files for a monthly fee | Cannot scale past 10–20 accounts; high human labor cost |
 | **3. Wizard of Oz MVP** | 1–2 Weeks | **Behavioral Usage Risk** (Will users submit tasks & trust outputs?) | Front-end upload portal where analysts verify complex PDF extractions behind the scenes | Latency is limited by human turnaround speed (hours vs seconds) |
 | **4. Scoped Vertical-Slice Code MVP** | 3–6 Weeks | **End-to-End Self-Serve Activation & Retention** | Shipping 1-click GitHub PR bug checks for Python only before adding 12 other languages | Requires real engineering commitment; wasteful if demand was never tested first |
@@ -167,7 +167,7 @@ flowchart TD
 - [ ] **Falsifiable Metric Threshold:** Have we committed in writing to the exact quantitative conversion or retention number that defines **Persevere vs. Pivot** *before* launching?
 - [ ] **Vertical Slice Audit:** Does our MVP deliver one complete, end-to-end Job to Be Done for a single target persona rather than half-built horizontal infrastructure?
 - [ ] **80% Scope Subtraction:** Have we deferred admin settings, secondary integrations, automated billing upgrades, and multi-role permissions until *after* core usage is proven?
-- [ ] **Non-Code Alternative Check:** Could we validate this exact hypothesis in 5 days using a Search Query Audit ([Why Market Validation Trumps Vibes](https://07anishu12.github.io/learnings.html)), Smoke Test, or Concierge/Wizard of Oz workflow before writing production code?
+- [ ] **Non-Code Alternative Check:** Could we validate this exact hypothesis in 5 days using a Search Query Audit ([Why Market Validation Trumps Vibes](https://aniket.app/learnings.html)), Smoke Test, or Concierge/Wizard of Oz workflow before writing production code?
 
 ## Frequently Asked Questions
 

@@ -1,0 +1,37 @@
+{
+  "name": "@portfolio/web",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @portfolio/contracts build && pnpm -w build && node scripts/prepare-public.mjs && next dev",
+    "build": "pnpm --filter @portfolio/contracts build && pnpm -w build && node scripts/prepare-public.mjs && next build && node scripts/prepare-standalone.mjs",
+    "start": "node .next/standalone/apps/web/server.js",
+    "test": "tsx --test tests/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "pnpm -w lint"
+  },
+  "dependencies": {
+    "@portfolio/contracts": "workspace:*",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^15.0.3",
+    "markdown-it-footnote": "^4.0.0",
+    "next": "16.4.1",
+    "pg": "^8.23.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.18.8",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "type": "module"
+}

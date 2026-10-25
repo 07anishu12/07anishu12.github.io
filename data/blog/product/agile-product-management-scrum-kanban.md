@@ -28,7 +28,7 @@ sources:
   - title: Learnsignal 2020 Scrum Guide Summary
     url: https://www.learnsignal.com/blog/scrum-guide-roles-events-artifacts-explained-guide/
   - title: Knowledge Library & Technical Notes — Aniket Thakur
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -187,7 +187,7 @@ Separate bugs into two buckets: (1) **In-Sprint Defects** discovered on a story 
 In Scrum, **partially done work receives zero velocity credit** for the closing Sprint because it does not meet the [Definition of Done](https://scrumguides.org/scrum-guide.html). Do not artificially split a story into "Part A (Code written — 3 pts)" and "Part B (Tested — 2 pts)" just to make a burndown chart look pretty. Move the unfinished story into the next Sprint, re-estimate the remaining effort, and use the **Sprint Retrospective** to diagnose why it spilled over (usually because the story was too large or started on Day 8 of the sprint).
 
 ### 6. How does Agile Product Management work when building hardware or AI models with long training cycles?
-When working with long-duration physical validation cycles (as discussed in Aniket Thakur's [Physical AI & Heavy Industry note](https://07anishu12.github.io/learnings.html)) or multi-day foundation model training runs, **decouple the research/hardware cadence from the software integration cadence**: run evaluation dataset creation, prompt/guardrail engineering, and simulation testing in rapid 1-to-2 week Agile iterations while long-lead hardware or base-model training milestones are governed on a synchronized program timeline.
+When working with long-duration physical validation cycles (as discussed in Aniket Thakur's [Physical AI & Heavy Industry note](https://aniket.app/learnings.html)) or multi-day foundation model training runs, **decouple the research/hardware cadence from the software integration cadence**: run evaluation dataset creation, prompt/guardrail engineering, and simulation testing in rapid 1-to-2 week Agile iterations while long-lead hardware or base-model training milestones are governed on a synchronized program timeline.
 
 ## Next Steps and Recommended Reading
 

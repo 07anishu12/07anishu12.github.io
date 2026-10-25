@@ -1,0 +1,5 @@
+.next/
+public/
+*.tsbuildinfo
+generated/
+.data/

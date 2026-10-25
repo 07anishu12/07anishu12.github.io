@@ -37,9 +37,9 @@ sources:
   - title: Arize AI Blog
     url: https://arize.com/blog/llm-guardrails-jev/
   - title: Blog — Aniket Thakur
-    url: https://07anishu12.github.io/blog/
+    url: https://aniket.app/blog/
   - title: Knowledge Library & Technical Notes
-    url: https://07anishu12.github.io/learnings.html
+    url: https://aniket.app/learnings.html
 showSources: true
 enquiry: false
 quickAnswer:
@@ -68,11 +68,11 @@ quickAnswer:
 
 Anyone can wrap a foundation model API inside a chat textbox in an afternoon and call it an "AI feature." Yet why do so many flashy generative AI demos collapse the moment they encounter 10,000 production users? Because traditional software is **deterministic, near-zero marginal cost, and low-latency** (`2 + 2` always returns `4` in under a millisecond for \$0.0000001), whereas Large Language Models (LLMs) are **probabilistic, non-zero marginal cost per token, and latency-bound**. Without rigorous engineering and product discipline, an LLM feature can hallucinate ungrounded financial advice, fail downstream JSON parsing 8% of the time, stall a user interface for 9 seconds, and silently burn \$18 of API token compute on a customer paying a \$15/month subscription!
 
-Building directly on the production AI architectures documented across Aniket Thakur's portfolio—specifically [*Designing Deterministic Validation Schemas for Multi-LLM Pipelines*](https://07anishu12.github.io/learnings.html), [*AI Agents vs Workflow Automation: When Should You Use Each?*](https://07anishu12.github.io/blog/), [*AI Memory Explained: Context Windows, Conversation History and Persistent Storage*](https://07anishu12.github.io/blog/), and [*Distilled Video Models & Regional AI Production Economics*](https://07anishu12.github.io/learnings.html)—alongside official technical guidance from [OpenAI Evaluation Best Practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices), [OpenAI Latency Optimization](https://developers.openai.com/api/docs/guides/latency-optimization), and [Anthropic's Research on Building Effective Agents & Evals](https://www.anthropic.com/research/demystifying-evals-for-ai-agents), this guide defines the core competencies of an **AI Product Manager**: architectural selection (Workflows vs. Agents, Prompting vs. RAG vs. Fine-Tuning), evaluation-driven development (Evals as the new PRD), latency & token unit economics, and multi-layered safety guardrails.
+Building directly on the production AI architectures documented across Aniket Thakur's portfolio—specifically [*Designing Deterministic Validation Schemas for Multi-LLM Pipelines*](https://aniket.app/learnings.html), [*AI Agents vs Workflow Automation: When Should You Use Each?*](https://aniket.app/blog/), [*AI Memory Explained: Context Windows, Conversation History and Persistent Storage*](https://aniket.app/blog/), and [*Distilled Video Models & Regional AI Production Economics*](https://aniket.app/learnings.html)—alongside official technical guidance from [OpenAI Evaluation Best Practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices), [OpenAI Latency Optimization](https://developers.openai.com/api/docs/guides/latency-optimization), and [Anthropic's Research on Building Effective Agents & Evals](https://www.anthropic.com/research/demystifying-evals-for-ai-agents), this guide defines the core competencies of an **AI Product Manager**: architectural selection (Workflows vs. Agents, Prompting vs. RAG vs. Fine-Tuning), evaluation-driven development (Evals as the new PRD), latency & token unit economics, and multi-layered safety guardrails.
 
 ## 1. Architectural Decision 1: Fixed Workflow Automation vs. Autonomous AI Agents
 
-The first mistake novice AI PMs make is throwing an unconstrained, multi-step autonomous agent at a task that should be a deterministic state machine. As both [Anthropic's *Building Effective Agents* research](https://www.anthropic.com/research/building-effective-agents) and Aniket Thakur's [*AI Agents vs Workflow Automation* explainer](https://07anishu12.github.io/blog/) emphasize:
+The first mistake novice AI PMs make is throwing an unconstrained, multi-step autonomous agent at a task that should be a deterministic state machine. As both [Anthropic's *Building Effective Agents* research](https://www.anthropic.com/research/building-effective-agents) and Aniket Thakur's [*AI Agents vs Workflow Automation* explainer](https://aniket.app/blog/) emphasize:
 - **Workflow Automation / Prompt Chaining:** Systems where LLMs and tools are orchestrated through **pre-defined, deterministic code paths** (Step A $\rightarrow$ Schema Check $\rightarrow$ Step B). Use workflows whenever the sequence of steps is known ahead of time—they deliver vastly lower latency, predictable token cost, and auditability.
 - **Autonomous AI Agents:** Systems where an LLM **dynamically directs its own control flow and tool usage** across open-ended loops to achieve a goal. Agents trade higher latency and compounding token costs for flexibility on unstructured problems (such as coding agents or open-ended research). Even when deploying agents, bound consequential mutations (like issuing refunds or deleting records) behind deterministic confirmation gates.
 
@@ -80,9 +80,9 @@ The first mistake novice AI PMs make is throwing an unconstrained, multi-step au
 
 When an off-the-shelf foundation model lacks domain accuracy or style consistency, AI PMs choose across four escalating levers:
 1. **System Prompting & Structured Few-Shot Examples:** Fastest iteration cycle (minutes); zero training cost; ideal for formatting and reasoning scaffolding, though long few-shot prompts increase input token cost on every call.
-2. **Retrieval-Augmented Generation (RAG) & Memory Architecture:** Injects fresh, permission-scoped external documents or user records dynamically into the model's context window at runtime, separating ephemeral context-window state from persistent vector/relational storage (as detailed in [*AI Memory Explained: Context Windows, Conversation History and Persistent Storage*](https://07anishu12.github.io/blog/)). RAG is mandatory when facts change daily, when **strict source citations** are required, or when row-level access permissions apply.
-3. **Fine-Tuning / Model Distillation:** Trains a smaller, specialized open-weight or hosted model on thousands of curated input-output pairs produced by a frontier teacher model. Fine-tuning is **not** for injecting rapidly changing facts; it is for teaching a small, fast model a specialized domain syntax, classification schema, or latency/cost profile ([*Distilled Video Models & Regional AI Production Economics*](https://07anishu12.github.io/learnings.html)).
-4. **Multi-Model Tiering & Routing:** Rather than routing 100% of user traffic to the largest, slowest frontier reasoning model, route 75%–85% of routine classification, extraction, and summarization calls to a **fast, low-cost flash/mini/distilled model**, and escalate only the 15%–25% complex edge cases to the frontier model ([Topical Knowledge Hubs — Multi-Model Tiering](https://07anishu12.github.io/topics/index.html)).
+2. **Retrieval-Augmented Generation (RAG) & Memory Architecture:** Injects fresh, permission-scoped external documents or user records dynamically into the model's context window at runtime, separating ephemeral context-window state from persistent vector/relational storage (as detailed in [*AI Memory Explained: Context Windows, Conversation History and Persistent Storage*](https://aniket.app/blog/)). RAG is mandatory when facts change daily, when **strict source citations** are required, or when row-level access permissions apply.
+3. **Fine-Tuning / Model Distillation:** Trains a smaller, specialized open-weight or hosted model on thousands of curated input-output pairs produced by a frontier teacher model. Fine-tuning is **not** for injecting rapidly changing facts; it is for teaching a small, fast model a specialized domain syntax, classification schema, or latency/cost profile ([*Distilled Video Models & Regional AI Production Economics*](https://aniket.app/learnings.html)).
+4. **Multi-Model Tiering & Routing:** Rather than routing 100% of user traffic to the largest, slowest frontier reasoning model, route 75%–85% of routine classification, extraction, and summarization calls to a **fast, low-cost flash/mini/distilled model**, and escalate only the 15%–25% complex edge cases to the frontier model ([Topical Knowledge Hubs — Multi-Model Tiering](https://aniket.app/topics/index.html)).
 
 ## 3. Evals Are the New PRD: Offline Golden Datasets, LLM-as-a-Judge & Online Telemetry
 
@@ -100,7 +100,7 @@ Users abandon synchronous UI workflows when screens freeze. Manage two distinct 
 
 Finally, wrap every production LLM call in a **3-Layer Guardrail Sandwich**:
 1. **Input Guardrails:** Prompt-injection / jailbreak detection, PII redaction, and topic-scope filtering *before* calling the expensive model.
-2. **Deterministic Output Schema Validation:** Strict Pydantic / Zod JSON schema enforcement with programmatic retry backoff and model fallback if malformed output occurs ([*Designing Deterministic Validation Schemas for Multi-LLM Pipelines*](https://07anishu12.github.io/learnings.html)).
+2. **Deterministic Output Schema Validation:** Strict Pydantic / Zod JSON schema enforcement with programmatic retry backoff and model fallback if malformed output occurs ([*Designing Deterministic Validation Schemas for Multi-LLM Pipelines*](https://aniket.app/learnings.html)).
 3. **Graceful Degradation / Fallback UX:** If the primary LLM API times out or fails validation twice, fall back seamlessly to a secondary model provider or a deterministic non-AI search/template experience rather than throwing an unhandled `500 Internal Server Error`.
 
 ## Frameworks and Comparison Tables
@@ -119,7 +119,7 @@ Finally, wrap every production LLM call in a **3-Layer Guardrail Sandwich**:
 
 | Layer | Evaluation / Guardrail Dimension | Core Metrics Tracked | Production SLA / Pass Gate |
 | :--- | :--- | :--- | :--- |
-| **1. Deterministic Reliability** | Schema validity & API availability | JSON/Pydantic parse success rate (1st attempt vs. post-retry), fallback rate | $\ge 99.8\%$ post-retry schema validity ([Multi-LLM Schemas](https://07anishu12.github.io/learnings.html)) |
+| **1. Deterministic Reliability** | Schema validity & API availability | JSON/Pydantic parse success rate (1st attempt vs. post-retry), fallback rate | $\ge 99.8\%$ post-retry schema validity ([Multi-LLM Schemas](https://aniket.app/learnings.html)) |
 | **2. Quality & Groundedness** | Faithfulness, relevance & task accuracy | Context faithfulness % (zero unsupported claims), Golden Eval pass rate, User Acceptance % | $\ge 95\%$ faithfulness; $\ge 85\%$ Golden Eval pass before deploy |
 | **3. Latency & Performance** | Responsiveness under load | Time to First Token (TTFT), p50/p95 End-to-End Latency, tokens/sec | p95 TTFT $\le 800\text{ms}$; p95 total response $\le 3.5\text{s}$ (streaming) |
 | **4. Safety, Privacy & Cost** | Security & unit economics | Prompt-injection block rate, PII leak rate ($0.0\%$), Token Cost per Resolved Task | $0\%$ PII leak; AI COGS $\le 15\%\text{–}25\%$ of subscription revenue |
@@ -158,7 +158,7 @@ Suppose the engineering team routes 100% of all 1,000 monthly calls per seat to 
    $$\text{Total Monthly COGS per Seat} = \$21.06 + \$2.00 = \mathbf{\$23.06/\text{seat/month}}$$
 3. **Resulting Gross Margin on the \$40/Seat Plan:**
    $$\text{Gross Margin}_A = \frac{\$40.00 - \$23.06}{\$40.00} = \frac{\$16.94}{\$40.00} = \mathbf{42.35\%}$$
-   *Crisis:* A **$42.35\%$ gross margin** (down from the company's $82\%$ SaaS baseline) destroys enterprise valuation multiples (see [*Public Market Listings as the Ultimate Stress Test for AI Valuations*](https://07anishu12.github.io/learnings.html)), and heavy power users processing 2,500 tickets/month become **gross-margin negative (losing \$10.70/month per seat)**!
+   *Crisis:* A **$42.35\%$ gross margin** (down from the company's $82\%$ SaaS baseline) destroys enterprise valuation multiples (see [*Public Market Listings as the Ultimate Stress Test for AI Valuations*](https://aniket.app/learnings.html)), and heavy power users processing 2,500 tickets/month become **gross-margin negative (losing \$10.70/month per seat)**!
 
 ## Architecture B (AI PM Optimization — Multi-Model Tiering + Prompt Caching + Constrained Schema Decoding)
 Using your offline 500-ticket Golden Evaluation Dataset, you verify three architectural optimizations that maintain **identical $96.2\%$ resolution accuracy** while slashing p95 latency from $4.8\text{s}$ to **$1.1\text{s}$**:
@@ -182,9 +182,9 @@ Using your offline 500-ticket Golden Evaluation Dataset, you verify three archit
 
 ## Practical Implementation Checklist
 
-- [ ] **Right Architecture Chosen:** Did we verify whether a deterministic workflow or RAG pipeline solves this better than an open-ended autonomous agent ([AI Agents vs Workflow Automation](https://07anishu12.github.io/blog/))?
+- [ ] **Right Architecture Chosen:** Did we verify whether a deterministic workflow or RAG pipeline solves this better than an open-ended autonomous agent ([AI Agents vs Workflow Automation](https://aniket.app/blog/))?
 - [ ] **Golden Evaluation Dataset ($N \ge 100$):** Do we have a version-controlled evaluation dataset covering happy paths, noisy inputs, and adversarial prompt injections?
-- [ ] **Deterministic Schema Guardrails:** Are model outputs validated against a strict JSON/Pydantic/Zod schema with exponential retry backoff and fallback handling ([Multi-LLM Validation Schemas](https://07anishu12.github.io/learnings.html))?
+- [ ] **Deterministic Schema Guardrails:** Are model outputs validated against a strict JSON/Pydantic/Zod schema with exponential retry backoff and fallback handling ([Multi-LLM Validation Schemas](https://aniket.app/learnings.html))?
 - [ ] **Token & Margin Unit Economics Modeled:** Have we calculated the p50 and p95 monthly token cost per active user and verified that gross margin remains $\ge 75\%\text{–}80\%$?
 - [ ] **Human Control & Citation Transparency:** Does the UI display verifiable source citations for factual claims and provide a 1-click `Edit / Undo / Revert` escape hatch?
 
@@ -194,7 +194,7 @@ Using your offline 500-ticket Golden Evaluation Dataset, you verify three archit
 While core discovery (**Article 11**) and prioritization (**Article 08**) remain foundational, an **AI Product Manager** manages three non-traditional realities: (1) **Probabilistic Quality** (defining accuracy thresholds, precision/recall trade-offs, and evaluation datasets rather than purely binary `Given / When / Then` logic); (2) **Dynamic Variable COGS** (optimizing input/output token budgets, prompt caching, and model routing to protect gross margins); and (3) **Trust & Safety UX** (designing confidence indicators, citation grounding, and human-in-the-loop review flows).
 
 ### 2. When should an AI PM choose RAG (Retrieval-Augmented Generation) vs. Long-Context Windows (e.g., 1M+ tokens)?
-Even when a model supports a 1-million-token context window, stuffing 800,000 tokens of raw documentation into every single user prompt is ruinously expensive and slow: at \$2.00 per 1M input tokens, **a single un-cached 800k-token query costs \$1.60 and adds several seconds of prefill TTFT latency**! Use **RAG** ([*AI Memory Explained*](https://07anishu12.github.io/blog/)) to retrieve the top 5–10 relevant chunks (3,000 tokens = \$0.006, $250\times$ cheaper and $10\times$ faster), and reserve massive long-context calls for deep, whole-repository or whole-book synthesis tasks where caching amortizes the prefill cost.
+Even when a model supports a 1-million-token context window, stuffing 800,000 tokens of raw documentation into every single user prompt is ruinously expensive and slow: at \$2.00 per 1M input tokens, **a single un-cached 800k-token query costs \$1.60 and adds several seconds of prefill TTFT latency**! Use **RAG** ([*AI Memory Explained*](https://aniket.app/blog/)) to retrieve the top 5–10 relevant chunks (3,000 tokens = \$0.006, $250\times$ cheaper and $10\times$ faster), and reserve massive long-context calls for deep, whole-repository or whole-book synthesis tasks where caching amortizes the prefill cost.
 
 ### 3. How do you prevent LLM hallucinations in high-stakes enterprise domains like Fintech, Healthcare, or Legal?
 Combine four engineering controls: (1) **Strict RAG Context Grounding** (system prompt and post-generation verifier enforce that every claim maps to a retrieved source document ID); (2) **Structured Citation Extraction** (requiring the JSON output schema to return `{"claim": "...", "exact_source_quote": "...", "doc_id": "..."}` so the backend can verify substring match deterministically); (3) **Deterministic Tool / Code Execution** (never ask an LLM to calculate compound interest or NSFR ratios in raw text—have the LLM call a deterministic Python/SQL calculator function); and (4) **Calibrated Abstention** (explicitly instructing and rewarding the model to reply *"Insufficient information in provided records"* rather than guessing).

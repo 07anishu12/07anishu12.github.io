@@ -1,3 +1,22 @@
+# Search engines and AI search/retrieval crawlers may access public content.
+# AI training crawlers currently follow the same public policy; this file is
+# not access control. Change a named crawler rule only after an intentional
+# owner decision and review of the effect on search/retrieval discovery.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
 User-agent: *
 Allow: /
 Disallow: /admin/
@@ -6,4 +25,4 @@ Disallow: /blog/feed.xml
 Disallow: /blog/search.json
 Disallow: /blog/search-text.json
 
-Sitemap: https://07anishu12.github.io/sitemap.xml
+Sitemap: https://aniket.app/sitemap.xml

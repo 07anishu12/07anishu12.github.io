@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/index-vs-active-mutual-funds-costs-and-tracking/
 coverImageAlt: Educational diagram explaining index vs active funds
 imageCaption: Proposed explanatory diagram showing index vs active funds with
   clearly labelled illustrative figures.
-draft: false
+draft: true
 featured: false
 sources:
   - title: AMFI scheme classifications
@@ -26,22 +26,23 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "Index Funds vs Active Mutual Funds: Costs, Returns and Tracking
-    Error: Key Verdict & Summary"
-  answer: Index funds aim to follow a specified index; active funds give managers
-    discretion to select investments within a mandate.
+  question: "Index Funds vs Active Mutual Funds: How do they compare?"
+  answer: Index funds replicate a benchmark with low fees and minimal manager
+    risk; active funds charge higher expense ratios aiming to generate alpha,
+    though many fail to consistently beat their benchmarks after fees.
   facts:
-    - label: Category & Focus
-      value: Personal finance and investing
-    - label: Verified Word Count
-      value: 809 words
+    - label: Index fund TER
+      value: 0.10% – 0.40%
+    - label: Active fund TER
+      value: 1.25% – 2.25%
   goodFor:
-    - Readers evaluating Personal finance and investing.
-    - Practitioners needing verified benchmarks and calculations.
+    - Core equity exposure in broad, highly efficient market segments.
+    - Investors seeking predictable market-matching returns at rock-bottom cost.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Tracking error and cash drag in illiquid or synthetic index products.
+    - Manager drift or persistent benchmark underperformance in active funds.
+  note: Tracking error measures the standard deviation of return differences from
+    the benchmark.
 ---
 
 Index funds aim to follow a specified index; active funds give managers discretion to select investments within a mandate. Compare the exposure you need, total costs and performance against an appropriate benchmark. There is no reliable promise that either approach will outperform in every category or period, and a lower fee alone does not describe every risk.

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>MCP Server Development Tutorial (2026 Guide) | Aniket.app</title>
+<meta name="description" content="Step-by-step tutorial on building, validating, securing, and testing a Model Context Protocol (MCP) server in 2026 using the official Python SDK and MCP Inspector.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="MCP Server Development Tutorial (2026 Guide) | Aniket.app">
+<meta property="og:description" content="Step-by-step tutorial on building, validating, securing, and testing a Model Context Protocol (MCP) server in 2026 using the official Python SDK and MCP Inspector.">
+<meta property="og:url" content="https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/mcp-development-skills-connecting-ai-models-to-tools/cover.svg">
+<meta property="og:image:alt" content="MCP Development Skills: Connecting AI Models to Tools architecture diagram">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MCP Server Development Tutorial (2026 Guide) | Aniket.app">
+<meta name="twitter:description" content="Step-by-step tutorial on building, validating, securing, and testing a Model Context Protocol (MCP) server in 2026 using the official Python SDK and MCP Inspector.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/mcp-development-skills-connecting-ai-models-to-tools/cover.svg">
+<meta name="twitter:image:alt" content="MCP Development Skills: Connecting AI Models to Tools architecture diagram">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/#article","headline":"MCP Development Skills: Connecting AI Models to Tools","description":"Step-by-step tutorial on building, validating, securing, and testing a Model Context Protocol (MCP) server in 2026 using the official Python SDK and MCP Inspector.","abstract":"Building a production-grade Model Context Protocol (MCP) server in 2026 using `modelcontextprotocol/python-sdk` (`FastMCP`) or the TypeScript SDK requires mastering five engineering rules: (1) **Separate Read-Only `@mcp.resource` URIs from Executa...","url":"https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/mcp-development-skills-connecting-ai-models-to-tools/cover.svg","width":1200,"height":675,"caption":"MCP Development Skills: Connecting AI Models to Tools architecture diagram"},"datePublished":"2026-10-25","dateModified":"2026-10-25","articleSection":"Technology","keywords":"MCP Development, Model Context Protocol, Python SDK, AI Tools, Developer Tutorial","inLanguage":"en","wordCount":1429}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"MCP Development Skills: Connecting AI Models to Tools","item":"https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/#webpage","url":"https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/","name":"MCP Server Development Tutorial (2026 Guide) | Aniket.app","description":"Step-by-step tutorial on building, validating, securing, and testing a Model Context Protocol (MCP) server in 2026 using the official Python SDK and MCP Inspector.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="mcp-development-skills-connecting-ai-models-to-tools">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">MCP Development Skills: Connecting AI Models to Tools</h1>
+<p class="blog-description">Step-by-step tutorial on building, validating, securing, and testing a Model Context Protocol (MCP) server in 2026 using the official Python SDK and MCP Inspector.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-25">25 Oct 2026</time></span><span>8 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">MCP Development Skills: Connecting AI Models to Tools: Key Architecture &amp; Implementation Summary</h2>
+<p class="blog-answer-verdict">Building a production-grade Model Context Protocol (MCP) server in 2026 using `modelcontextprotocol/python-sdk` (`FastMCP`) or the TypeScript SDK requires mastering five engineering rules: (1) **Separate Read-Only `@mcp.resource` URIs from Executa...</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category</dt><dd>Technology &amp; AI</dd></div><div><dt>Publication</dt><dd>October 2026 Edition</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">October 2026 Edition · Verified Primary Technical References</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Engineers and developers working with MCP Development.</li><li>Teams needing verifiable implementation references.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Review repository licenses and deployment boundaries before production use.</li><li>Check hardware and context constraints for your workload.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/mcp-development-skills-connecting-ai-models-to-tools/cover.svg" alt="MCP Development Skills: Connecting AI Models to Tools architecture diagram" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for MCP Development Skills: Connecting AI Models to Tools.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=MCP%20Development">MCP Development</a><a href="/blog/?tag=Model%20Context%20Protocol">Model Context Protocol</a><a href="/blog/?tag=Python%20SDK">Python SDK</a><a href="/blog/?tag=AI%20Tools">AI Tools</a><a href="/blog/?tag=Developer%20Tutorial">Developer Tutorial</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>14 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-introduction-and-current-context">1. Introduction and Current Context</a></li><li class="toc-h2"><a href="#section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</a></li><li class="toc-h2"><a href="#section-3-definitions-and-technical-background">3. Definitions and Technical Background</a></li><li class="toc-h2"><a href="#section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</a></li><li class="toc-h2"><a href="#section-5-comparative-analysis-mcp-server-engineering-checklist-common-bugs-vs-production-best-practices">5. Comparative Analysis: MCP Server Engineering Checklist: Common Bugs vs. Production Best Practices</a></li><li class="toc-h2"><a href="#section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</a></li><li class="toc-h2"><a href="#section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</a></li><li class="toc-h2"><a href="#section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</a></li><li class="toc-h2"><a href="#section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-why-does-my-mcp-server-work-when-i-run-it-in-the-terminal-but-fail-immediately-inside-claude-code-or-codex-cli">Why does my MCP server work when I run it in the terminal, but fail immediately inside Claude Code or Codex CLI?</a></li><li class="toc-h3"><a href="#section-when-should-i-use-mcp-resource-vs-mcp-tool-in-fastmcp">When should I use @mcp.resource vs @mcp.tool in FastMCP?</a></li><li class="toc-h3"><a href="#section-how-do-i-test-an-mcp-server-without-connecting-it-to-an-llm-first">How do I test an MCP server without connecting it to an LLM first?</a></li><li class="toc-h2"><a href="#section-10-conclusion">10. Conclusion</a></li><li class="toc-h3"><a href="#section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-1-introduction-and-current-context">1. Introduction and Current Context</h2>
+<p>In Article 18, we explored the high-level architecture of the Model Context Protocol (<code>modelcontextprotocol/modelcontextprotocol</code>). In this practical skill tutorial, we shift to hands-on implementation: how to write, secure, test, and debug your own custom MCP server from scratch so it plugs cleanly into Claude Code, OpenAI Codex CLI, Gemini CLI, or your custom <code>pydantic-ai</code>/<code>langgraph</code> backend.</p>
+<h2 id="section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</h2>
+<blockquote>
+<p><strong>Key Takeaway:</strong> Building a production-grade Model Context Protocol (MCP) server in 2026 using <code>modelcontextprotocol/python-sdk</code> (<code>FastMCP</code>) or the TypeScript SDK requires mastering five engineering rules: (1) <strong>Separate Read-Only <code>@mcp.resource</code> URIs from Executable <code>@mcp.tool</code> Functions</strong>, (2) <strong>Enforce Strict Pydantic/JSON Schema Constraints</strong> on every parameter, (3) <strong>Never Write Debug Logs to <code>stdout</code> in <code>stdio</code> Mode</strong> (route all logging to <code>stderr</code> so JSON-RPC 2.0 wire frames are never corrupted), (4) <strong>Validate Path Traversal &amp; SQL Injection Inside the Server</strong>, and (5) <strong>Test Standalone with <code>modelcontextprotocol/inspector</code></strong> before connecting to any LLM host.</p>
+</blockquote>
+<h2 id="section-3-definitions-and-technical-background">3. Definitions and Technical Background</h2>
+<p>Before evaluating architectural trade-offs or writing production code for <strong>MCP development</strong>, it is essential to establish precise engineering definitions for the core components involved:</p>
+<ul>
+<li><strong><code>FastMCP</code> High-Level Server API:</strong> The ergonomic decorator-based server interface in the official <code>modelcontextprotocol/python-sdk</code> that automatically inspects Python type hints and docstrings to generate MCP JSON Schemas.</li>
+<li><strong><code>stdio</code> Wire Purity Invariant:</strong> The strict protocol rule that when an MCP server runs over standard input/output (<code>stdio</code>), <code>sys.stdout</code> carries <em>exclusively</em> newline-delimited JSON-RPC 2.0 frames; any diagnostic log must be written to <code>sys.stderr</code>.</li>
+<li><strong>Path Canonicalization &amp; Root Jail (<code>Path.resolve()</code>):</strong> Resolving symlinks and relative <code>../</code> segments on any file path argument and verifying <code>resolved_path.is_relative_to</code> before reading or writing files inside an MCP server.</li>
+</ul>
+<h2 id="section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</h2>
+<p><strong>Prerequisites &amp; Required Tools:</strong> Python $\ge 3.11$, the official MCP Python SDK, and Node.js $\ge 20$ to run <code>npx @modelcontextprotocol/inspector</code>.</p>
+<p><strong>Step-by-Step Learning Path:</strong></p>
+<ol>
+<li><strong>Beginner — First <code>FastMCP</code> Server &amp; Inspector Test:</strong> Create a server with <code>@mcp.resource()</code> for static/URI data and <code>@mcp.tool()</code> with strict Pydantic <code>Field</code> constraints, route <code>logging</code> to <code>sys.stderr</code>, and test it visually with <code>mcp dev server.py</code>.</li>
+<li></li>
+</ol>
+<p><strong>Minimal Production Code Example (Hardened Python MCP Server Using <code>modelcontextprotocol/python-sdk</code>):</strong></p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python"># File: release_notes_mcp_server.py
+# Prerequisites: pip install &quot;mcp[cli]&quot; pydantic
+import logging
+import sys
+from pathlib import Path
+from typing import Literal
+from pydantic import Field
+from mcp.server.fastmcp import FastMCP
+
+# CRITICAL: Configure all logging to sys.stderr so stdout remains pure JSON-RPC 2.0
+logging.basicConfig(
+    level=logging.INFO,
+    format=&quot;%(asctime)s [%(levelname)s] %(message)s&quot;,
+    stream=sys.stderr,
+)
+logger = logging.getLogger(&quot;release-notes-mcp&quot;)
+
+ALLOWED_DOCS_ROOT = Path(&quot;/tmp/safe_release_docs&quot;).resolve()
+ALLOWED_DOCS_ROOT.mkdir(parents=True, exist_ok=True)
+
+mcp = FastMCP(&quot;AniketReleaseNotesServer&quot;)
+
+@mcp.resource(&quot;releases://manifest/{environment}&quot;)
+def get_release_manifest(environment: str) -&gt; str:
+    &quot;&quot;&quot;Read-only resource returning the current deployment manifest for an environment.&quot;&quot;&quot;
+    if environment not in {&quot;staging&quot;, &quot;production&quot;}:
+        return &quot;Error: environment must be 'staging' or 'production'.&quot;
+    logger.info(&quot;Reading manifest resource for env=%s&quot;, environment)
+    return f&quot;Environment: {environment}\nActive Version: v2026.10.25\nStatus: Healthy&quot;
+
+@mcp.tool()
+def read_release_note(
+    filename: str = Field(..., description=&quot;Markdown filename inside release docs (e.g. 'v2.4.md')&quot;, pattern=r&quot;^[a-zA-Z0-9._-]+\.md$&quot;),
+    max_chars: int = Field(default=2000, ge=200, le=8000, description=&quot;Maximum characters to return&quot;),
+    severity_filter: Literal[&quot;all&quot;, &quot;breaking&quot;, &quot;security&quot;] = &quot;all&quot;,
+) -&gt; str:
+    &quot;&quot;&quot;Safely read a release note markdown file within the approved directory jail.&quot;&quot;&quot;
+    candidate = (ALLOWED_DOCS_ROOT / filename).resolve()
+    # Enforce strict directory jail against ../ or symlink traversal
+    if not candidate.is_relative_to(ALLOWED_DOCS_ROOT):
+        logger.warning(&quot;Blocked path traversal attempt: %s&quot;, filename)
+        return &quot;Error: Access denied. Path is outside the allowed release documentation root.&quot;
+
+    if not candidate.is_file():
+        return f&quot;No release note found named '{filename}'. Available files: {[p.name for p in ALLOWED_DOCS_ROOT.glob('*.md')]}&quot;
+
+    content = candidate.read_text(encoding=&quot;utf-8&quot;)[:max_chars]
+    return f&quot;[Filter: {severity_filter}]\n{content}&quot;
+
+if __name__ == &quot;__main__&quot;:
+    mcp.run(transport=&quot;stdio&quot;)
+</code></pre>
+</div><p><strong>Testing &amp; Verification Steps:</strong></p>
+<ol>
+<li><strong>Interactive Inspector Verification:</strong> Run <code>npx @modelcontextprotocol/inspector python3 release_notes_mcp_server.py</code>. In the Inspector UI, click <strong>Connect</strong>, inspect the generated JSON Schema under the <strong>Tools</strong> tab, and test calling <code>read_release_note</code> with <code>filename: &quot;../../etc/passwd&quot;</code>—verifying that the regex pattern and <code>is_relative_to</code> jail block the call cleanly.</li>
+<li></li>
+</ol>
+<h2 id="section-5-comparative-analysis-mcp-server-engineering-checklist-common-bugs-vs-production-best-practices">5. Comparative Analysis: MCP Server Engineering Checklist: Common Bugs vs. Production Best Practices</h2>
+<p>The following table compares the key engineering trade-offs, operational boundaries, and implementation choices for <strong>MCP development</strong>:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">MCP Server Layer</th>
+<th scope="col">Common Developer Bug</th>
+<th scope="col">Symptom in Host / Agent</th>
+<th scope="col">Production Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logging in <code>stdio</code> Mode</td>
+<td>Using <code>print('Starting...')</code> or default <code>stdout</code> logger</td>
+<td>Client fails handshake with <code>SyntaxError: Unexpected token</code></td>
+<td>Always pass <code>stream=sys.stderr</code> to <code>logging.basicConfig</code></td>
+</tr>
+<tr>
+<td>Parameter Schemas</td>
+<td>Untyped args <code>def query(q)</code> with no docstring</td>
+<td>LLM guesses wrong arg formats or never selects the tool</td>
+<td>Use <code>Field(description=..., pattern=..., ge=..., le=...)</code> &amp; <code>Literal</code></td>
+</tr>
+<tr>
+<td>Filesystem / DB Access</td>
+<td>Doing <code>open(base_dir + '/' + filename)</code> directly</td>
+<td>Prompt injection reads <code>~/.ssh/id_rsa</code> via <code>../../</code></td>
+<td>Use <code>Path.resolve()</code> + <code>candidate.is_relative_to(ALLOWED_ROOT)</code></td>
+</tr>
+<tr>
+<td>Error Handling</td>
+<td>Raising unhandled internal traceback on missing record</td>
+<td>Cryptic stack trace wastes tokens; agent retries blindly</td>
+<td>Return concise actionable string listing valid options</td>
+</tr>
+<tr>
+<td>Payload Size</td>
+<td>Returning a 10MB log file or 5,000 DB rows</td>
+<td>Host context window overflows or crashes UI</td>
+<td>Enforce <code>max_chars</code> / <code>limit</code> parameter with pagination metadata</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</h2>
+<p>The diagram below illustrates the end-to-end control flow, verification boundaries, and state transitions for <strong>MCP development</strong> in a production environment:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    A[Develop FastMCP Server in Python / TypeScript] --&gt; B[Enforce sys.stderr Logging &amp; Strict Pydantic Field Schemas]
+    B --&gt; C[Add Security Guards: Path.is_relative_to Jail &amp; Read-Only DB Role]
+    C --&gt; D[Stage 1 Test: Launch modelcontextprotocol/inspector]
+    D --&gt; E{Verify Schema, Valid Calls &amp; Adversarial Path/SQL Inputs}
+    E --&gt;|Fails Check| B
+    E --&gt;|Passes Inspector Audit| F[Stage 2 Register in Claude Code / Codex / Gemini CLI .mcp.json]</pre></div>
+<p><em>Figure 59.1: End-to-end development, security hardening, and <code>modelcontextprotocol/inspector</code> verification workflow for custom MCP servers.</em></p>
+<h2 id="section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</h2>
+<p>To implement <strong>MCP development</strong> reliably in production systems, follow these sequential engineering steps:</p>
+<ol>
+<li>Make <code>stream=sys.stderr</code> the very first line of your logging configuration in every Python <code>stdio</code> MCP server, and set environment variables if imported packages print startup banners to <code>stdout</code>.</li>
+<li>Include available valid options inside 'not found' tool responses so the LLM succeeds on its very next turn without guessing.</li>
+<li>Always bound tool output sizes by adding a <code>limit: int = Field</code> or <code>max_chars</code> parameter and appending <code>&quot;... [Truncated, use offset=20 for more]&quot;</code> when results exceed the cap.</li>
+<li>Separate read-only tools from write/destructive tools into distinct MCP servers so developers can attach the read-only mode safely during exploratory debugging.</li>
+</ol>
+<h2 id="section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</h2>
+<p>Even well-architected deployments of <strong>MCP development</strong> face concrete engineering constraints that teams must mitigate proactively:</p>
+<ul>
+<li>Exposing a generic <code>run_arbitrary_sql(sql: str)</code> or <code>run_bash(cmd: str)</code> tool over a remote HTTP MCP server: never expose raw arbitrary query/command execution over a shared network MCP server; expose parameterized, domain-specific tools backed by a read-only database user.</li>
+<li>Hardcoding machine-specific paths in committed <code>.mcp.json</code> files: committing <code>/Users/aniket/venv/bin/python</code> breaks for every teammate—use relative workspace variables or <code>uv run</code> / <code>npx</code> commands.</li>
+<li>Long-running synchronous calls blocking the MCP server event loop: if an <code>async def</code> tool inside <code>FastMCP</code> calls a synchronous blocking HTTP or database driver, concurrent resource reads and heartbeats stall.</li>
+</ul>
+<h2 id="section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-why-does-my-mcp-server-work-when-i-run-it-in-the-terminal-but-fail-immediately-inside-claude-code-or-codex-cli">Why does my MCP server work when I run it in the terminal, but fail immediately inside Claude Code or Codex CLI?</h3>
+<p>Because when you run it manually in a terminal, you don't notice a 1-line startup message printed to <code>stdout</code>. When an MCP client connects over <code>stdio</code>, it parses every line of <code>stdout</code> as JSON-RPC 2.0.</p>
+<h3 id="section-when-should-i-use-mcp-resource-vs-mcp-tool-in-fastmcp">When should I use <code>@mcp.resource</code> vs <code>@mcp.tool</code> in FastMCP?</h3>
+<p>Use <code>@mcp.resource</code> for static or URI-addressable read-only context (like configuration manifests, database schemas, or style guides) that the host application or user can attach directly.</p>
+<h3 id="section-how-do-i-test-an-mcp-server-without-connecting-it-to-an-llm-first">How do I test an MCP server without connecting it to an LLM first?</h3>
+<p>Run <code>npx @modelcontextprotocol/inspector python3 your_server.py</code> (from <code>modelcontextprotocol/inspector</code>).</p>
+<h2 id="section-10-conclusion">10. Conclusion</h2>
+<p>Developing custom Model Context Protocol servers is one of the highest-leverage skills in modern software engineering—allowing you to connect internal databases, test runners, and documentation to every AI agent in your organization through a single clean interface. By enforcing <code>stderr</code> logging purity, strict Pydantic schemas, directory jails, and <code>modelcontextprotocol/inspector</code> verification, your MCP servers will run reliably everywhere.</p>
+<h3 id="section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</h3>
+<ul>
+<li><strong>modelcontextprotocol/python-sdk</strong> — Official Python SDK for the Model Context Protocol, providing the <code>FastMCP</code> server decorator framework and client libraries. Verified GitHub URL: https://github.com/modelcontextprotocol/python-sdk</li>
+<li><strong>modelcontextprotocol/inspector</strong> — Official visual testing and debugging tool for inspecting and invoking MCP servers locally. Verified GitHub URL: https://github.com/modelcontextprotocol/inspector</li>
+<li><strong>modelcontextprotocol/servers</strong> — Official collection of reference MCP server implementations demonstrating security and schema best practices. Verified GitHub URL: https://github.com/modelcontextprotocol/servers</li>
+<li><strong>modelcontextprotocol/modelcontextprotocol</strong> — Official specification and protocol documentation for the Model Context Protocol. Verified GitHub URL: https://github.com/modelcontextprotocol/modelcontextprotocol</li>
+</ul>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/modelcontextprotocol/python-sdk" rel="noopener">modelcontextprotocol/python-sdk</a></li><li><a href="https://github.com/modelcontextprotocol/inspector" rel="noopener">modelcontextprotocol/inspector</a></li><li><a href="https://github.com/modelcontextprotocol/servers" rel="noopener">modelcontextprotocol/servers</a></li><li><a href="https://github.com/modelcontextprotocol/modelcontextprotocol" rel="noopener">modelcontextprotocol/modelcontextprotocol</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fmcp-development-skills-connecting-ai-models-to-tools%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/mcp-explained-model-context-protocol-external-tools/" aria-label="Read MCP Explained: How the Model Context Protocol Connects AI to External Tools"><img src="/assets/images/blog/mcp-explained-model-context-protocol-external-tools/cover.svg" alt="MCP Explained: How the Model Context Protocol Connects AI to External Tools architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/mcp-explained-model-context-protocol-external-tools/">MCP Explained: How the Model Context Protocol Connects AI to External Tools</a></h3>
+<p>Learn how the Model Context Protocol (MCP) connects AI models and agents to external tools, databases, and resources: architecture, JSON-RPC, transports, and security.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/mcp-explained-how-ai-apps-connect-to-external-tools/" aria-label="Read Model Context Protocol (MCP) Explained: How AI Applications Connect to External Tools"><img src="/assets/images/blog/mcp-explained-how-ai-apps-connect-to-external-tools/cover.svg" alt="Diagram explaining Model Context Protocol" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/mcp-explained-how-ai-apps-connect-to-external-tools/">Model Context Protocol (MCP) Explained: How AI Applications Connect to External Tools</a></h3>
+<p>Understand hosts, clients, servers and the permissions around useful AI integrations.</p>
+<div class="blog-meta"><time datetime="2026-10-22">22 Oct 2026</time><span>5 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/agentic-coding-build-test-deploy-applications/" aria-label="Read Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?"><img src="/assets/images/blog/agentic-coding-build-test-deploy-applications/cover.svg" alt="Agentic Coding: Can AI Build, Test, and Deploy an Entire Application? architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/agentic-coding-build-test-deploy-applications/">Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?</a></h3>
+<p>Compare inline AI autocomplete with autonomous coding agents in 2026. Learn how terminal agents build, test, debug, and open PRs safely under CI/CD controls.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

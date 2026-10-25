@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Deployment &amp; DevOps Skills for AI Apps (2026) | Aniket.app</title>
+<meta name="description" content="Master DevOps, Docker, CI/CD, and GPU deployment skills for AI applications in 2026: vLLM containers, readiness probes, blue/green prompt rollouts, and secret management.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Deployment &amp; DevOps Skills for AI Apps (2026) | Aniket.app">
+<meta property="og:description" content="Master DevOps, Docker, CI/CD, and GPU deployment skills for AI applications in 2026: vLLM containers, readiness probes, blue/green prompt rollouts, and secret management.">
+<meta property="og:url" content="https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/deployment-devops-skills-ai-applications/cover.svg">
+<meta property="og:image:alt" content="Deployment and DevOps Skills for AI Applications architecture diagram">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deployment &amp; DevOps Skills for AI Apps (2026) | Aniket.app">
+<meta name="twitter:description" content="Master DevOps, Docker, CI/CD, and GPU deployment skills for AI applications in 2026: vLLM containers, readiness probes, blue/green prompt rollouts, and secret management.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/deployment-devops-skills-ai-applications/cover.svg">
+<meta name="twitter:image:alt" content="Deployment and DevOps Skills for AI Applications architecture diagram">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/#article","headline":"Deployment and DevOps Skills for AI Applications","description":"Master DevOps, Docker, CI/CD, and GPU deployment skills for AI applications in 2026: vLLM containers, readiness probes, blue/green prompt rollouts, and secret management.","abstract":"Deploying and operating AI applications in 2026 requires extending classic DevOps with four AI-specific infrastructure skills: (1) **Decoupling Model Weights from Container Images** (mounting pre-warmed read-only weight volumes so Docker images st...","url":"https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/deployment-devops-skills-ai-applications/cover.svg","width":1200,"height":675,"caption":"Deployment and DevOps Skills for AI Applications architecture diagram"},"datePublished":"2026-10-25","dateModified":"2026-10-25","articleSection":"Technology","keywords":"AI Deployment, DevOps, CI/CD, Docker, vLLM","inLanguage":"en","wordCount":1414}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"Deployment and DevOps Skills for AI Applications","item":"https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/#webpage","url":"https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/","name":"Deployment & DevOps Skills for AI Apps (2026) | Aniket.app","description":"Master DevOps, Docker, CI/CD, and GPU deployment skills for AI applications in 2026: vLLM containers, readiness probes, blue/green prompt rollouts, and secret management.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="deployment-devops-skills-ai-applications">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">Deployment and DevOps Skills for AI Applications</h1>
+<p class="blog-description">Master DevOps, Docker, CI/CD, and GPU deployment skills for AI applications in 2026: vLLM containers, readiness probes, blue/green prompt rollouts, and secret management.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-25">25 Oct 2026</time></span><span>8 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Deployment and DevOps Skills for AI Applications: Key Architecture &amp; Implementation Summary</h2>
+<p class="blog-answer-verdict">Deploying and operating AI applications in 2026 requires extending classic DevOps with four AI-specific infrastructure skills: (1) **Decoupling Model Weights from Container Images** (mounting pre-warmed read-only weight volumes so Docker images st...</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category</dt><dd>Technology &amp; AI</dd></div><div><dt>Publication</dt><dd>October 2026 Edition</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">October 2026 Edition · Verified Primary Technical References</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Engineers and developers working with AI Deployment.</li><li>Teams needing verifiable implementation references.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Review repository licenses and deployment boundaries before production use.</li><li>Check hardware and context constraints for your workload.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/deployment-devops-skills-ai-applications/cover.svg" alt="Deployment and DevOps Skills for AI Applications architecture diagram" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for Deployment and DevOps Skills for AI Applications.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=AI%20Deployment">AI Deployment</a><a href="/blog/?tag=DevOps">DevOps</a><a href="/blog/?tag=CI%2FCD">CI/CD</a><a href="/blog/?tag=Docker">Docker</a><a href="/blog/?tag=vLLM">vLLM</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>14 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-introduction-and-current-context">1. Introduction and Current Context</a></li><li class="toc-h2"><a href="#section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</a></li><li class="toc-h2"><a href="#section-3-definitions-and-technical-background">3. Definitions and Technical Background</a></li><li class="toc-h2"><a href="#section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</a></li><li class="toc-h2"><a href="#section-5-comparative-analysis-devops-infrastructure-differences-standard-web-services-vs-production-ai-gpu-services">5. Comparative Analysis: DevOps &amp; Infrastructure Differences: Standard Web Services vs. Production AI &amp; GPU Services</a></li><li class="toc-h2"><a href="#section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</a></li><li class="toc-h2"><a href="#section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</a></li><li class="toc-h2"><a href="#section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</a></li><li class="toc-h2"><a href="#section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-why-does-my-vllm-kubernetes-pod-keep-restarting-every-30-seconds-during-startup">Why does my vLLM Kubernetes pod keep restarting every 30 seconds during startup?</a></li><li class="toc-h3"><a href="#section-why-did-my-multi-gpu-docker-container-crash-with-a-bus-error-core-dumped-in-pytorch-nccl">Why did my multi-GPU Docker container crash with a Bus error (core dumped) in PyTorch/NCCL?</a></li><li class="toc-h3"><a href="#section-why-doesn-t-cpu-based-kubernetes-horizontal-pod-autoscaling-hpa-work-for-llm-services">Why doesn&#39;t CPU-based Kubernetes Horizontal Pod Autoscaling (HPA) work for LLM services?</a></li><li class="toc-h2"><a href="#section-10-conclusion">10. Conclusion</a></li><li class="toc-h3"><a href="#section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-1-introduction-and-current-context">1. Introduction and Current Context</h2>
+<p>A standard stateless Node.js or Go container weighs 80MB, boots in 400 milliseconds, and autoscales cleanly when CPU utilization crosses 70%. When a DevOps engineer applies that exact same Kubernetes configuration to an AI inference service (<code>vllm-project/vllm</code>) or a stateful streaming agent backend (<code>fastapi/fastapi</code>), everything breaks: baking 20GB of model weights into the Dockerfile crashes CI runners; a 10-second <code>livenessProbe</code> kills the pod repeatedly while <code>vllm</code> is still compiling CUDA graphs; CPU-based autoscaling never triggers because the CPU sits at 8% while GPU KV-cache memory is 100% full; and a rolling deploy severs 200 active user SSE streams mid-sentence.</p>
+<h2 id="section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</h2>
+<blockquote>
+<p><strong>Key Takeaway:</strong> Deploying and operating AI applications in 2026 requires extending classic DevOps with four AI-specific infrastructure skills: (1) <strong>Decoupling Model Weights from Container Images</strong> (mounting pre-warmed read-only weight volumes so Docker images stay 2GB instead of 45GB), (2) <strong>Split Startup/Readiness/Liveness Probes</strong> that account for 60-to-180-second GPU model loading and CUDA graph compilation in <code>vllm-project/vllm</code>, (3) <strong>Queue-Depth &amp; KV-Cache Utilization Autoscaling</strong> (rather than naive CPU%), and (4) <strong>Versioned Prompt/Model Canary Rollouts</strong> with instant rollback and zero-downtime graceful stream draining (<code>SIGTERM</code>).</p>
+</blockquote>
+<h2 id="section-3-definitions-and-technical-background">3. Definitions and Technical Background</h2>
+<p>Before evaluating architectural trade-offs or writing production code for <strong>AI deployment</strong>, it is essential to establish precise engineering definitions for the core components involved:</p>
+<ul>
+<li><strong>Startup Probe vs. Readiness Probe (<code>startupProbe</code> / <code>readinessProbe</code>):</strong> Kubernetes health-check primitives where <code>startupProbe</code> gives a GPU container up to 3–5 minutes to load multi-gigabyte weights and compile CUDA graphs without being killed by <code>livenessProbe</code>, while <code>readinessProbe</code> withholds live user traffic until <code>/health</code> returns <code>200 OK</code>.</li>
+<li><strong>Graceful Stream Draining (<code>SIGTERM</code> + <code>preStop</code> Hook):</strong> Allowing an AI backend pod receiving a termination signal during a deployment to stop accepting <em>new</em> requests immediately while giving already-streaming SSE connections 30–60 seconds to finish generating cleanly.</li>
+<li><strong>KV-Cache &amp; Queue-Depth Autoscaling:</strong> Triggering horizontal pod autoscaling based on inference metrics exported by <code>vllm</code> rather than host CPU utilization.</li>
+</ul>
+<h2 id="section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</h2>
+<p><strong>Prerequisites &amp; Required Tools:</strong> Docker, GitHub Actions, <code>vllm-project/vllm</code>, <code>fastapi/fastapi</code>, and <code>langfuse/langfuse</code> or Prometheus/OpenTelemetry.</p>
+<p><strong>Step-by-Step Learning Path:</strong></p>
+<ol>
+<li><strong>Beginner — Multi-Stage Non-Root Containers &amp; Secret Isolation:</strong> Package your Python/TypeScript AI backend in a lean multi-stage <code>Dockerfile</code> running as a non-root UID, inject API keys exclusively via runtime secret stores, and configure <code>terminationGracePeriodSeconds: 60</code>.</li>
+<li><strong>Intermediate — CI/CD Eval Gates &amp; Self-Hosted GPU Serving (<code>vLLM</code>):</strong> Add a GitHub Actions gate that blocks deployment if <code>promptfoo</code> or <code>pytest</code> evals fail; deploy <code>vllm-project/vllm</code> mounting model weights from a shared read-only volume with proper <code>startupProbe</code> timeouts.</li>
+<li></li>
+</ol>
+<p><strong>Minimal Production Code Example (Production Multi-Stage Dockerfile &amp; vLLM Compose Service with Health Probes):</strong></p>
+<div class="blog-code"><div class="blog-code-label">dockerfile</div><pre tabindex="0" aria-label="dockerfile code block"><code class="language-dockerfile"># File: Dockerfile.ai-backend
+# Multi-stage non-root build for FastAPI AI Orchestrator
+FROM python:3.12-slim AS builder
+WORKDIR /build
+COPY requirements.txt .
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+
+FROM python:3.12-slim AS runtime
+RUN groupadd -g 10001 appgroup &amp;&amp; useradd -u 10001 -g appgroup -m appuser
+WORKDIR /app
+COPY --from=builder /install /usr/local
+COPY --chown=appuser:appgroup ./app ./app
+USER 10001:10001
+EXPOSE 8000
+# Graceful timeout (--timeout-graceful-shutdown 45) allows active SSE streams to finish on deploy
+CMD [&quot;uvicorn&quot;, &quot;app.main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8000&quot;, &quot;--timeout-graceful-shutdown&quot;, &quot;45&quot;]
+</code></pre>
+</div><div class="blog-code"><div class="blog-code-label">yaml</div><pre tabindex="0" aria-label="yaml code block"><code class="language-yaml"># File: docker-compose.vllm-prod.yml
+# Production vLLM service mounting weights from host volume (never baked into image)
+services:
+  vllm-engine:
+    image: vllm/vllm-openai:latest
+    ipc: host
+    restart: unless-stopped
+    volumes:
+      - /mnt/nvme-models-cache:/root/.cache/huggingface:ro
+    environment:
+      - HF_HUB_OFFLINE=1
+    command: &gt;
+      --model Qwen/Qwen3-8B
+      --quantization fp8
+      --max-model-len 16384
+      --enable-prefix-caching
+      --enable-chunked-prefill
+      --gpu-memory-utilization 0.90
+      --port 8001
+    healthcheck:
+      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;-f&quot;, &quot;http://localhost:8001/health&quot;]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 180s
+</code></pre>
+</div><h2 id="section-5-comparative-analysis-devops-infrastructure-differences-standard-web-services-vs-production-ai-gpu-services">5. Comparative Analysis: DevOps &amp; Infrastructure Differences: Standard Web Services vs. Production AI &amp; GPU Services</h2>
+<p>The following table compares the key engineering trade-offs, operational boundaries, and implementation choices for <strong>AI deployment</strong>:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Infrastructure Layer</th>
+<th scope="col">Standard Stateless Web App</th>
+<th scope="col">Production AI / GPU Service (2026)</th>
+<th scope="col">Critical DevOps Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container Artifacts</td>
+<td>50–200 MB code binary</td>
+<td>Code image (2GB) + External Model Weights (10–80GB)</td>
+<td>Mount weights via read-only PVC / NVMe cache (<code>HF_HUB_OFFLINE=1</code>)</td>
+</tr>
+<tr>
+<td>Startup &amp; Health Probes</td>
+<td>Boots in &lt; 2s; simple 10s liveness check</td>
+<td>Weight load + CUDA graph compile takes 45–180s</td>
+<td>Configure <code>start_period: 180s</code> / <code>startupProbe</code> so pod isn't crash-looped</td>
+</tr>
+<tr>
+<td>Autoscaling Signal</td>
+<td>Host CPU % or RAM %</td>
+<td>GPU KV-cache usage % &amp; waiting request queue depth</td>
+<td>Autoscale on Prometheus <code>vllm:num_requests_waiting</code> &amp; <code>gpu_cache_usage_perc</code></td>
+</tr>
+<tr>
+<td>Rolling Deployment</td>
+<td>Instant connection drain (&lt; 5s)</td>
+<td>Long-lived SSE streams &amp; agent runs (10–45s)</td>
+<td>Set <code>terminationGracePeriodSeconds: 60</code> + <code>--timeout-graceful-shutdown 45</code></td>
+</tr>
+<tr>
+<td>Release Verification</td>
+<td>Unit tests + HTTP 200 smoke test</td>
+<td>Deterministic + semantic eval gate (<code>promptfoo</code>) + shadow canary</td>
+<td>Block CI/CD deploy if golden eval suite regresses</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</h2>
+<p>The diagram below illustrates the end-to-end control flow, verification boundaries, and state transitions for <strong>AI deployment</strong> in a production environment:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart LR
+    A[Git Push: Code or Prompt Config Change] --&gt; B[GitHub Actions CI: Lint, Unit Tests &amp; promptfoo Eval Gate]
+    B --&gt;|Evals Pass| C[Build Lean Non-Root Container Image]
+    C --&gt; D[Canary Rollout 10% Traffic with Mounted Read-Only Model Volume]
+    D --&gt; E[Wait for 180s startupProbe &amp; CUDA Graph Warmup]
+    E --&gt; F{Monitor Langfuse Error Rate, P95 TTFT &amp; vLLM KV Cache Metrics}
+    F --&gt;|Healthy| G[Promote to 100% &amp; Gracefully Drain Old Pods via SIGTERM]
+    F --&gt;|Regression / Latency Spike| H[Instant Automated Rollback to Previous Revision]</pre></div>
+<p><em>Figure 57.1: AI CI/CD and zero-downtime deployment pipeline incorporating <code>promptfoo</code> eval gates, externalized model volumes, startup probes, and graceful SSE draining.</em></p>
+<h2 id="section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</h2>
+<p>To implement <strong>AI deployment</strong> reliably in production systems, follow these sequential engineering steps:</p>
+<ol>
+<li>Never bake multi-gigabyte <code>.safetensors</code> or <code>.gguf</code> model weights inside your application <code>Dockerfile</code>; pre-populate weights onto a shared read-only cloud disk or host NVMe cache and start inference containers with <code>HF_HUB_OFFLINE=1</code> so pod startups do not depend on external Hugging Face downloads.</li>
+<li>Set <code>ipc: host</code> on multi-GPU <code>vllm-project/vllm</code> and PyTorch containers so NCCL shared-memory tensor communication does not crash with <code>bus error</code> inside Docker's default 64MB <code>/dev/shm</code>.</li>
+<li>Configure <code>start_period: 180s</code> or a generous <code>startupProbe</code> on GPU inference containers so the orchestrator waits for weight loading and CUDA graph compilation before enforcing liveness checks.</li>
+<li>Pass <code>--timeout-graceful-shutdown 45</code> to Uvicorn and <code>terminationGracePeriodSeconds: 60</code> to Kubernetes pods so rolling deployments never chop off active customer streaming responses.</li>
+</ol>
+<h2 id="section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</h2>
+<p>Even well-architected deployments of <strong>AI deployment</strong> face concrete engineering constraints that teams must mitigate proactively:</p>
+<ul>
+<li>Downloading weights from the internet on every pod scale-up: if an autoscaler spins up 4 new GPU nodes during a traffic spike and each node tries to download 30GB over the public internet simultaneously, startup takes 15 minutes and fails if the upstream hub rate-limits your IP.</li>
+<li>Default 64MB <code>/dev/shm</code> crashing multi-GPU inference: forgetting <code>ipc: host</code> or <code>--shm-size</code> in Docker/Kubernetes causes sudden <code>SIGBUS</code> crashes when PyTorch/NCCL allocates shared memory for tensor parallelism.</li>
+<li>Hardcoding prompts inside compiled frontend bundles: keeping prompts only in client code forces a full frontend rebuild to fix a prompt issue—manage prompt versions on the backend or via versioned configs in <code>langfuse/langfuse</code>.</li>
+</ul>
+<h2 id="section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-why-does-my-vllm-kubernetes-pod-keep-restarting-every-30-seconds-during-startup">Why does my vLLM Kubernetes pod keep restarting every 30 seconds during startup?</h3>
+<p>Because loading a 16GB–40GB model into VRAM and capturing CUDA graphs takes 60 to 150 seconds.</p>
+<h3 id="section-why-did-my-multi-gpu-docker-container-crash-with-a-bus-error-core-dumped-in-pytorch-nccl">Why did my multi-GPU Docker container crash with a <code>Bus error (core dumped)</code> in PyTorch/NCCL?</h3>
+<p>Docker allocates only 64MB to <code>/dev/shm</code> (shared memory) by default.</p>
+<h3 id="section-why-doesn-t-cpu-based-kubernetes-horizontal-pod-autoscaling-hpa-work-for-llm-services">Why doesn't CPU-based Kubernetes Horizontal Pod Autoscaling (HPA) work for LLM services?</h3>
+<p>An AI orchestrator or GPU inference server is I/O and GPU-memory bound, not host-CPU bound.</p>
+<h2 id="section-10-conclusion">10. Conclusion</h2>
+<p>DevOps for AI applications bridges cloud-native container engineering with the physical realities of GPU memory and long-lived token streams. By externalizing model weights, sizing <code>/dev/shm</code> and <code>startupProbe</code> windows accurately, autoscaling on KV-cache metrics in <code>vllm</code>, and draining streams gracefully, engineers achieve rock-solid production uptime.</p>
+<h3 id="section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</h3>
+<ul>
+<li><strong>vllm-project/vllm</strong> — Production LLM inference engine exposing OpenAI-compatible HTTP servers and Prometheus <code>/metrics</code> for Kubernetes autoscaling. Verified GitHub URL: https://github.com/vllm-project/vllm</li>
+<li><strong>fastapi/fastapi</strong> — High-performance async Python framework for building containerized AI orchestrators with graceful shutdown support. Verified GitHub URL: https://github.com/fastapi/fastapi</li>
+<li><strong>langfuse/langfuse</strong> — Self-hostable Docker/Kubernetes observability and prompt-version management platform for AI deployments. Verified GitHub URL: https://github.com/langfuse/langfuse</li>
+<li><strong>promptfoo/promptfoo</strong> — CLI evaluation runner that integrates into GitHub Actions CI/CD pipelines to gate deployments. Verified GitHub URL: https://github.com/promptfoo/promptfoo</li>
+</ul>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/vllm-project/vllm" rel="noopener">vllm-project/vllm</a></li><li><a href="https://github.com/fastapi/fastapi" rel="noopener">fastapi/fastapi</a></li><li><a href="https://github.com/langfuse/langfuse" rel="noopener">langfuse/langfuse</a></li><li><a href="https://github.com/promptfoo/promptfoo" rel="noopener">promptfoo/promptfoo</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fdeployment-devops-skills-ai-applications%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/agentic-coding-build-test-deploy-applications/" aria-label="Read Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?"><img src="/assets/images/blog/agentic-coding-build-test-deploy-applications/cover.svg" alt="Agentic Coding: Can AI Build, Test, and Deploy an Entire Application? architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/agentic-coding-build-test-deploy-applications/">Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?</a></h3>
+<p>Compare inline AI autocomplete with autonomous coding agents in 2026. Learn how terminal agents build, test, debug, and open PRs safely under CI/CD controls.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper/" aria-label="Read AI Inference Is the New Bottleneck: How to Serve LLMs Faster and Cheaper"><img src="/assets/images/blog/ai-inference-bottleneck-serve-llms-faster-cheaper/cover.svg" alt="AI Inference Is the New Bottleneck: How to Serve LLMs Faster and Cheaper architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper/">AI Inference Is the New Bottleneck: How to Serve LLMs Faster and Cheaper</a></h3>
+<p>Master LLM inference optimization in 2026: continuous batching, PagedAttention, RadixAttention prefix caching, FP8/INT4 quantization, and speculative decoding.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>7 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/" aria-label="Read AI Agent Development Skills: Tools, Memory, and Orchestration"><img src="/assets/images/blog/ai-agent-development-skills-tools-memory-orchestration/cover.svg" alt="AI Agent Development Skills: Tools, Memory, and Orchestration architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/">AI Agent Development Skills: Tools, Memory, and Orchestration</a></h3>
+<p>Learn practical AI agent development skills in 2026 using Pydantic AI and LangGraph: typed tool schemas, dependency injection, state reducers, and loop bounds.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

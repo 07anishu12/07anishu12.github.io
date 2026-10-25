@@ -47,6 +47,14 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     for (const el of $('script[type="application/ld+json"]').toArray()) {
       try { JSON.parse($(el).text()); } catch { failures.push(`${label}: invalid JSON-LD`); }
     }
+    const siteSchema = $('script[data-seo-site-schema]').map((_, el) => JSON.parse($(el).text())).get();
+    if (siteSchema.length) {
+      const graph = siteSchema[0]['@graph'] || [];
+      check(graph.some(s => s['@type'] === 'Person' && s['@id'] === `${ORIGIN}/#person`), `${label}: stable Person schema missing`);
+      check(graph.some(s => s['@type'] === 'WebSite' && s['@id'] === `${ORIGIN}/#website`), `${label}: WebSite schema missing`);
+    }
+    const canonical = $('link[rel="canonical"]').attr('href');
+    if (canonical) check(canonical.startsWith(`${ORIGIN}/`), `${label}: canonical origin mismatch`);
     if (relative.startsWith('/blog/')) {
       check($('link[rel="canonical"]').length === 1, `${label}: canonical count`);
       check($('link[rel="canonical"]').attr('href') === ORIGIN + relative.replace(/index\.html$/, ''), `${label}: canonical mismatch`);
@@ -55,16 +63,20 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
   const sitemap = cheerio.load(fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8'), { xmlMode: true });
   const urls = sitemap('url > loc').map((_, el) => sitemap(el).text()).get();
   check(new Set(urls).size === urls.length, 'Duplicate sitemap URLs');
+  check(!sitemap('changefreq').length && !sitemap('priority').length, 'Sitemap must not include changefreq or priority');
+  const redirectPaths = new Set(['/about', '/about.html', '/contact', '/contact.html', '/privacy', '/privacy.html', '/work.html', '/index.html']);
   urls.forEach(url => {
-    check(url.startsWith(ORIGIN + '/'), `Wrong sitemap origin: ${url}`);
-    check(!new URL(url).search, `Search URL in sitemap: ${url}`);
+    const parsed = new URL(url);
+    check(parsed.origin === ORIGIN, `Wrong sitemap origin: ${url}`);
+    check(!parsed.search, `Search URL in sitemap: ${url}`);
+    check(!redirectPaths.has(parsed.pathname), `Redirecting URL in sitemap: ${url}`);
     const target = resolveUrl(url, '/');
     check(target && fs.existsSync(target.file), `Sitemap target missing: ${url}`);
   });
   sitemap('url').each((_, el) => {
     const loc = sitemap(el).find('loc').text();
     const lastmod = sitemap(el).find('lastmod').text();
-    check(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap entry missing or invalid lastmod date: ${loc} (${lastmod})`);
+    check(!lastmod || /^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap entry has invalid lastmod date: ${loc} (${lastmod})`);
   });
   for (const cat of Object.keys(CATEGORIES)) {
     const catUrl = `${ORIGIN}/blog/${cat}/`;

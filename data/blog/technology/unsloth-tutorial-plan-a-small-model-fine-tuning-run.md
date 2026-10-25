@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/unsloth-tutorial-plan-a-small-model-fine-tuning-
 coverImageAlt: Diagram explaining Unsloth tutorial
 imageCaption: Original explanatory diagram showing Unsloth tutorial and its main
   decision points.
-draft: false
+draft: true
 featured: false
 sources:
   - title: Unsloth fine-tuning guide
@@ -28,22 +28,28 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "Unsloth Tutorial: Fine-Tune Open Models with Less Memory: Key Verdict
-    & Summary"
-  answer: Unsloth provides tooling for running and fine-tuning supported models,
-    including memory-conscious training workflows.
+  question: How does Unsloth make LLM fine-tuning faster with less memory?
+  answer: Unsloth manually rewrites PyTorch backward pass autograd operations and
+    attention kernels in OpenAI Triton, cutting fine-tuning memory usage by up
+    to 80% and accelerating training speed by 2x to 5x with zero loss in
+    accuracy.
   facts:
-    - label: Category & Focus
-      value: Free and open-weight LLMs
-    - label: Verified Word Count
-      value: 795 words
+    - label: Memory savings
+      value: Up to 80% lower VRAM
+    - label: Training speed
+      value: 2x – 5x faster than standard HF
   goodFor:
-    - Readers evaluating Unsloth tutorial.
-    - Practitioners needing verified benchmarks and calculations.
+    - Fine-tuning 8B models (Llama 3.1, Qwen 2.5) on free Google Colab or 16GB
+      GPUs.
+    - Training parameter-efficient LoRA / QLoRA adapters on custom enterprise
+      datasets.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Dataset formatting errors and prompt template mismatch leading to degraded
+      inference.
+    - Overfitting small datasets by training for too many epochs without
+      validation holdouts.
+  note: Exports directly to 16-bit, GGUF, or Ollama Modelfile formats upon
+    completion.
 ---
 
 Unsloth provides tooling for running and fine-tuning supported models, including memory-conscious training workflows. Begin with a small, controlled supervised fine-tuning experiment and a held-out test set. “Less memory” is a relative claim: your required capacity still depends on the exact model, sequence length, training method and software stack.
