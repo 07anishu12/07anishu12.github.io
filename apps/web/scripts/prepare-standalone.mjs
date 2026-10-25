@@ -7,3 +7,12 @@ if (fs.existsSync(destination)) {
     recursive: true,
   });
 }
+
+const rootNext = path.resolve("../..", ".next");
+try {
+  if (!fs.existsSync(rootNext)) {
+    fs.symlinkSync(path.resolve(".next"), rootNext, "junction");
+  }
+} catch {
+  // Ignore fallback if linking fails
+}

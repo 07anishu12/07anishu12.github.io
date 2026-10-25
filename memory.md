@@ -86,3 +86,10 @@ Executed2026-10-25; detailed results in `docs/migration/acceptance-report.md`, l
 - Added regression test `enhancePortfolio idempotency, single-tag injection, and whitespace hygiene` to `tools/blog/test.js`.
 - All 27 root publishing tests passed (`pnpm test`), 11 API/database integration tests passed with real PostgreSQL (`TEST_DATABASE_URL=postgresql:///postgres pnpm api:test`), Next.js 16.4.1 web build (348 pages) and API build succeeded, ESLint, Prettier, and TypeScript strict checks passed.
 - `git diff --check` now exits with code 0 on clean and post-build working directories.
+
+## Vercel Preview Deployment Diagnosis & Configuration — 2026-10-25
+- Diagnosed repeated Vercel preview deployment failures on PR #1 (deployment ID `52eFMeQ73QA6iSo677cYdkzJBGJA`, target project `07anishu12.github.io`):
+  1. Root Cause: Vercel project was imported from the pre-migration static repository with `rootDirectory: null`. In this mode, Vercel ran root `package.json`'s `"build": "node tools/blog/build.js"`, generating static files into `_site/` without running Next.js build or creating `.next`. Vercel's Next.js preset expected `.next` output at the root and failed.
+  2. Fix: Added root-level `vercel.json` configuring `buildCommand: "pnpm --filter @portfolio/web build"`, `outputDirectory: "apps/web/.next"`, and `framework: "nextjs"`. Added `apps/web/vercel.json` to support direct dashboard rootDirectory setting.
+  3. Symlink & Hygiene: Updated `apps/web/scripts/prepare-standalone.mjs` to create a root `.next` junction/symlink on build, and updated `.gitignore` to ignore `.next` as a symlink or directory.
+  4. CI Verification: GitHub Actions workflow `Migration release checks` passed all 20 steps (including PostgreSQL container and Docker image build). Root publishing tests passed (27/27), API tests passed (11/11), Next.js build prerendered 348 pages. Standalone route verification confirmed 442 routes returning HTTP 200.
