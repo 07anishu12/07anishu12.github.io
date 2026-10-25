@@ -189,9 +189,74 @@ test("POST /api/v1/leads returns transparent 503 in Vercel production if DATABAS
     assert.equal(res.status, 503);
     const json = await res.json();
     assert.equal(json.ok, false);
-    assert.equal(json.error.code, "DATABASE_NOT_CONFIGURED");
+    assert.equal(json.error.code, "STORAGE_NOT_CONFIGURED");
   } finally {
     process.env.VERCEL = origVercel;
+    process.env.DATABASE_URL = origDb;
+  }
+});
+
+test("POST /api/v1/leads persists via Google Sheets Webhook when GOOGLE_SHEETS_WEBHOOK_URL is set", async () => {
+  const origWebhook = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  const origDb = process.env.DATABASE_URL;
+  delete process.env.DATABASE_URL;
+
+  // Mock global fetch for webhook
+  const origFetch = globalThis.fetch;
+  let receivedWebhookPayload: any = null;
+  globalThis.fetch = async (url: any, init: any) => {
+    if (String(url) === "https://script.google.com/macros/s/test-script/exec") {
+      receivedWebhookPayload = JSON.parse(init.body);
+      return new Response(JSON.stringify({ ok: true, leadId: receivedWebhookPayload.id }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+    return origFetch(url, init);
+  };
+
+  try {
+    process.env.GOOGLE_SHEETS_WEBHOOK_URL =
+      "https://script.google.com/macros/s/test-script/exec";
+
+    const tokenReq = new Request("http://localhost:3000/api/v1/leads/token", {
+      method: "GET",
+    });
+    const tokenRes = await getToken(tokenReq);
+    const { submissionToken } = await tokenRes.json();
+
+    const req = new Request("http://localhost:3000/api/v1/leads", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        enquiryType: "automotive",
+        submissionToken,
+        sourcePath: "/blog/auto/best-150cc-bikes",
+        articleSlug: "best-150cc-bikes",
+        pageCategory: "auto",
+        fullName: "Sheets Test Customer",
+        mobile: "+91 9876543210",
+        pinCode: "110001",
+        bikeBrand: "Yamaha",
+        vehicleModel: "FZS-FI V4",
+        vehicleType: "Commuter Motorcycle",
+        consent: true,
+        website: "",
+        formStartedAt: Date.now() - 3000,
+      }),
+    });
+
+    const res = await postLead(req);
+    assert.equal(res.status, 201);
+    const json = await res.json();
+    assert.equal(json.ok, true);
+    assert.equal(json.persistence, "google_sheets");
+    assert.ok(receivedWebhookPayload);
+    assert.equal(receivedWebhookPayload.fullName, "Sheets Test Customer");
+    assert.equal(receivedWebhookPayload.vehicleModel, "FZS-FI V4");
+  } finally {
+    globalThis.fetch = origFetch;
+    process.env.GOOGLE_SHEETS_WEBHOOK_URL = origWebhook;
     process.env.DATABASE_URL = origDb;
   }
 });

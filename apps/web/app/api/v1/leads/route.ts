@@ -42,6 +42,143 @@ const recentSubmissions = new Map<
   { leadId: string; expiresAt: number }
 >();
 
+async function syncToGoogleSheets(
+  lead: {
+    id: string;
+    submittedAt: string;
+    enquiryType: string;
+    fullName: string;
+    mobile: string;
+    pinCode?: string;
+    bikeBrand?: string;
+    vehicleModel?: string;
+    vehicleType?: string;
+    service?: string;
+    otherService?: string;
+    sourcePath?: string;
+    articleSlug?: string;
+    consent: boolean;
+  },
+  env = process.env,
+): Promise<{ ok: boolean; error?: string }> {
+  // Option 1: Google Apps Script Webhook
+  if (env.GOOGLE_SHEETS_WEBHOOK_URL) {
+    try {
+      const res = await fetch(env.GOOGLE_SHEETS_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(lead),
+      });
+      if (res.ok) {
+        return { ok: true };
+      }
+      const errText = await res.text().catch(() => "");
+      return {
+        ok: false,
+        error: `Webhook returned status ${res.status}: ${errText.slice(0, 100)}`,
+      };
+    } catch (e: any) {
+      return { ok: false, error: e?.message || "Webhook fetch failed" };
+    }
+  }
+
+  // Option 2: Google Sheets API v4 using Service Account
+  if (
+    env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
+    env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY
+  ) {
+    const spreadsheetId =
+      env.GOOGLE_SHEETS_SPREADSHEET_ID ||
+      "1p-3XWQpo84ddBruI1LnU5dRTvJOetxThVKj2vxET3bA";
+    const sheetName = env.GOOGLE_SHEETS_SHEET_NAME || "Sheet1";
+    try {
+      const nowSec = Math.floor(Date.now() / 1000);
+      const encode = (v: unknown) =>
+        Buffer.from(JSON.stringify(v)).toString("base64url");
+      const unsigned = `${encode({ alg: "RS256", typ: "JWT" })}.${encode({
+        iss: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+        scope: "https://www.googleapis.com/auth/spreadsheets",
+        aud: "https://oauth2.googleapis.com/token",
+        iat: nowSec,
+        exp: nowSec + 3600,
+      })}`;
+
+      const { createSign } = await import("node:crypto");
+      const signature = createSign("RSA-SHA256")
+        .update(unsigned)
+        .sign(
+          env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(/\\n/g, "\n"),
+          "base64url",
+        );
+
+      const authRes = await fetch("https://oauth2.googleapis.com/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+          assertion: `${unsigned}.${signature}`,
+        }),
+      });
+
+      const authData = await authRes.json();
+      if (!authRes.ok || !authData.access_token) {
+        return {
+          ok: false,
+          error: `Google OAuth failed: ${authData?.error_description || authRes.status}`,
+        };
+      }
+
+      const row = [
+        lead.id,
+        new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        lead.enquiryType,
+        lead.fullName,
+        lead.mobile,
+        lead.pinCode || "",
+        lead.bikeBrand || "",
+        lead.vehicleModel || "",
+        lead.vehicleType || "",
+        lead.service || "",
+        lead.otherService || "",
+        lead.sourcePath || "",
+        lead.articleSlug || "",
+        lead.consent ? "Yes" : "No",
+      ];
+
+      const appendUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(
+        spreadsheetId,
+      )}/values/${encodeURIComponent(
+        `${sheetName}!A:N`,
+      )}:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`;
+      const appendRes = await fetch(appendUrl, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${authData.access_token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ values: [row] }),
+      });
+
+      if (!appendRes.ok) {
+        const errText = await appendRes.text().catch(() => "");
+        return {
+          ok: false,
+          error: `Sheets append failed (${appendRes.status}): ${errText.slice(
+            0,
+            100,
+          )}`,
+        };
+      }
+
+      return { ok: true };
+    } catch (e: any) {
+      return { ok: false, error: e?.message || "Service account sync failed" };
+    }
+  }
+
+  return { ok: false, error: "NOT_CONFIGURED" };
+}
+
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const record = leadIpMap.get(ip);
@@ -344,7 +481,63 @@ export async function POST(request: Request) {
     }
   }
 
-  // If no DATABASE_URL is configured, check if we can persist to local file storage (dev/standalone)
+  // Attempt direct Google Sheets persistence if configured (Webhook or Service Account)
+  const isGoogleSheetsConfigured = Boolean(
+    process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
+      (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
+        process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY),
+  );
+
+  if (isGoogleSheetsConfigured) {
+    const recordId = randomUUID();
+    const sheetLead = {
+      id: recordId,
+      submittedAt: new Date(now).toISOString(),
+      enquiryType: isAuto ? "automotive" : "general",
+      fullName: validatedData.fullName,
+      mobile: validatedData.mobile,
+      pinCode: isAuto ? validatedData.pinCode : undefined,
+      bikeBrand: isAuto
+        ? (validatedData.bikeBrand === "Other"
+            ? validatedData.otherBikeBrand
+            : validatedData.bikeBrand) || undefined
+        : undefined,
+      vehicleModel: isAuto ? validatedData.vehicleModel || undefined : undefined,
+      vehicleType: isAuto ? validatedData.vehicleType || undefined : undefined,
+      service: isAuto ? undefined : validatedData.service,
+      otherService: isAuto ? undefined : validatedData.otherService || undefined,
+      sourcePath: validatedData.sourcePath || "/",
+      articleSlug: validatedData.articleSlug || undefined,
+      consent: validatedData.consent,
+    };
+
+    const sheetsResult = await syncToGoogleSheets(sheetLead);
+    if (sheetsResult.ok) {
+      recentSubmissions.set(submissionId, {
+        leadId: recordId,
+        expiresAt: now + 24 * 3600 * 1000,
+      });
+      recentSubmissions.set(payloadHash, {
+        leadId: recordId,
+        expiresAt: now + 24 * 3600 * 1000,
+      });
+
+      return NextResponse.json(
+        {
+          ok: true,
+          leadId: recordId,
+          duplicate: false,
+          integrations: { sheets: "synced", whatsapp: "queued" },
+          persistence: "google_sheets",
+        },
+        { status: 201 },
+      );
+    } else {
+      console.error("Google Sheets sync failed:", sheetsResult.error);
+    }
+  }
+
+  // If no DATABASE_URL or Google Sheets is configured, check if we can persist to local file storage (dev/standalone)
   const isVercelProduction = Boolean(process.env.VERCEL);
   if (!isVercelProduction) {
     try {
@@ -382,15 +575,19 @@ export async function POST(request: Request) {
     }
   }
 
-  // When on Vercel and DATABASE_URL is not configured, inform the user honestly per Section 5 requirements
+  // When on Vercel and no storage backend is configured, inform the user honestly
+  const spreadsheetId =
+    process.env.GOOGLE_SHEETS_SPREADSHEET_ID ||
+    "1p-3XWQpo84ddBruI1LnU5dRTvJOetxThVKj2vxET3bA";
+
   return NextResponse.json(
     {
       ok: false,
       error: {
-        code: "DATABASE_NOT_CONFIGURED",
-        message:
-          "The enquiry storage service is not configured with DATABASE_URL yet. Please connect directly via WhatsApp while database provisioning is completed.",
-        missingDependency: "DATABASE_URL",
+        code: "STORAGE_NOT_CONFIGURED",
+        message: `The enquiry storage service is linked to Google Spreadsheet (${spreadsheetId}), but write authorization (GOOGLE_SHEETS_WEBHOOK_URL or Google Service Account) is awaiting setup. Please connect directly via WhatsApp in the meantime.`,
+        spreadsheetId,
+        missingConfiguration: ["GOOGLE_SHEETS_WEBHOOK_URL", "DATABASE_URL"],
       },
     },
     { status: 503 },
