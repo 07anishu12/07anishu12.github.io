@@ -15,6 +15,7 @@ import {
 import {
   googleSheetsAdapter,
   DEFAULT_SPREADSHEET_ID,
+  sanitizeForSheets,
   type LeadRecord,
 } from "../../../../lib/google-sheets";
 
@@ -178,6 +179,84 @@ async function syncToGoogleSheets(
       return { ok: true };
     } catch (e: any) {
       return { ok: false, error: e?.message || "Service account sync failed" };
+    }
+  }
+
+  // Option 3: Google Sheets API v4 using OAuth 2.0 Refresh Token
+  if (
+    env.GOOGLE_REFRESH_TOKEN &&
+    env.GOOGLE_CLIENT_ID &&
+    env.GOOGLE_CLIENT_SECRET
+  ) {
+    const spreadsheetId =
+      env.GOOGLE_SHEETS_SPREADSHEET_ID || DEFAULT_SPREADSHEET_ID;
+    const sheetName = env.GOOGLE_SHEETS_SHEET_NAME || "Sheet1";
+    try {
+      const authRes = await fetch("https://oauth2.googleapis.com/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          client_id: env.GOOGLE_CLIENT_ID,
+          client_secret: env.GOOGLE_CLIENT_SECRET,
+          refresh_token: env.GOOGLE_REFRESH_TOKEN,
+          grant_type: "refresh_token",
+        }),
+      });
+
+      const authData = await authRes.json();
+      if (!authRes.ok || !authData.access_token) {
+        return {
+          ok: false,
+          error: `Google OAuth refresh failed: ${authData?.error_description || authRes.status}`,
+        };
+      }
+
+      const row = [
+        sanitizeForSheets(lead.id),
+        new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        sanitizeForSheets(lead.enquiryType),
+        sanitizeForSheets(lead.fullName),
+        sanitizeForSheets(lead.mobile),
+        sanitizeForSheets(lead.pinCode || ""),
+        sanitizeForSheets(lead.bikeBrand || ""),
+        sanitizeForSheets(lead.vehicleModel || ""),
+        sanitizeForSheets(lead.vehicleType || ""),
+        sanitizeForSheets(lead.service || ""),
+        sanitizeForSheets(lead.otherService || ""),
+        sanitizeForSheets(lead.sourcePath || ""),
+        sanitizeForSheets(lead.articleSlug || ""),
+        lead.consent ? "Yes" : "No",
+      ];
+
+      const appendUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(
+        spreadsheetId,
+      )}/values/${encodeURIComponent(
+        `${sheetName}!A:N`,
+      )}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
+
+      const appendRes = await fetch(appendUrl, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${authData.access_token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ values: [row] }),
+      });
+
+      if (!appendRes.ok) {
+        const errText = await appendRes.text().catch(() => "");
+        return {
+          ok: false,
+          error: `Sheets append failed (${appendRes.status}): ${errText.slice(
+            0,
+            100,
+          )}`,
+        };
+      }
+
+      return { ok: true };
+    } catch (e: any) {
+      return { ok: false, error: e?.message || "OAuth refresh sync failed" };
     }
   }
 
@@ -580,14 +659,17 @@ export async function POST(request: Request) {
     }
   }
 
-  // 2. Attempt legacy Google Sheets persistence if configured (Webhook or Service Account)
-  const isLegacyGoogleSheetsConfigured = Boolean(
+  // 2. Attempt Google Sheets persistence if configured (OAuth2 Refresh Token, Service Account, or Webhook)
+  const isDirectGoogleSheetsConfigured = Boolean(
     process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
-    (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
-      process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY),
+      (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
+        process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY) ||
+      (process.env.GOOGLE_REFRESH_TOKEN &&
+        process.env.GOOGLE_CLIENT_ID &&
+        process.env.GOOGLE_CLIENT_SECRET),
   );
 
-  if (isLegacyGoogleSheetsConfigured) {
+  if (isDirectGoogleSheetsConfigured) {
     const recordId = randomUUID();
     const sheetLead = {
       id: recordId,

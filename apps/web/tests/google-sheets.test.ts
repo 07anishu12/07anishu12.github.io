@@ -521,3 +521,88 @@ test("End-to-End API Route Integration: GET and PATCH /api/v1/leads with valid a
     process.env.GOOGLE_SHEETS_API_SECRET = origSecret;
   }
 });
+
+test("POST /api/v1/leads persists via Google Sheets OAuth 2.0 Refresh Token", async () => {
+  const origRefreshToken = process.env.GOOGLE_REFRESH_TOKEN;
+  const origClientId = process.env.GOOGLE_CLIENT_ID;
+  const origClientSecret = process.env.GOOGLE_CLIENT_SECRET;
+  const origDatabaseUrl = process.env.DATABASE_URL;
+  const origAppsScriptUrl = process.env.GOOGLE_APPS_SCRIPT_URL;
+
+  delete process.env.DATABASE_URL;
+  delete process.env.GOOGLE_APPS_SCRIPT_URL;
+  process.env.GOOGLE_REFRESH_TOKEN = "mock-refresh-token-12345";
+  process.env.GOOGLE_CLIENT_ID = "mock-client-id.apps.googleusercontent.com";
+  process.env.GOOGLE_CLIENT_SECRET = "mock-client-secret";
+
+  let oauthExchanged = false;
+  let appendedRow: any[] | null = null;
+
+  const origFetch = globalThis.fetch;
+  globalThis.fetch = async (url, init) => {
+    const urlStr = String(url);
+    if (urlStr === "https://oauth2.googleapis.com/token") {
+      oauthExchanged = true;
+      return new Response(
+        JSON.stringify({
+          access_token: "mock-access-token-xyz",
+          expires_in: 3600,
+          token_type: "Bearer",
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } },
+      );
+    }
+    if (urlStr.includes("sheets.googleapis.com/v4/spreadsheets")) {
+      const body = JSON.parse(init?.body as string);
+      appendedRow = body.values[0];
+      return new Response(
+        JSON.stringify({
+          updates: { updatedRange: "Sheet1!A2:N2", updatedRows: 1 },
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } },
+      );
+    }
+    return origFetch(url, init);
+  };
+
+  try {
+    const tokenRes = await getToken(
+      new Request("http://localhost:3000/api/v1/leads/token"),
+    );
+    const { submissionToken } = await tokenRes.json();
+
+    const postReq = new Request("http://localhost:3000/api/v1/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        enquiryType: "general",
+        submissionToken,
+        fullName: "Aarav Sharma",
+        mobile: "9876543210",
+        service: "Financial analysis and modelling",
+        sourcePath: "/work",
+        pageCategory: "general",
+        consent: true,
+        website: "",
+        formStartedAt: Date.now() - 3000,
+      }),
+    });
+
+    const postRes = await postLead(postReq);
+    assert.equal(postRes.status, 201);
+    const postJson = await postRes.json();
+    assert.equal(postJson.ok, true);
+    assert.equal(postJson.persistence, "google_sheets");
+    assert.equal(oauthExchanged, true);
+    assert.ok(appendedRow);
+    assert.equal(appendedRow[3], "Aarav Sharma");
+    assert.equal(appendedRow[9], "Financial analysis and modelling");
+  } finally {
+    globalThis.fetch = origFetch;
+    process.env.GOOGLE_REFRESH_TOKEN = origRefreshToken;
+    process.env.GOOGLE_CLIENT_ID = origClientId;
+    process.env.GOOGLE_CLIENT_SECRET = origClientSecret;
+    process.env.DATABASE_URL = origDatabaseUrl;
+    process.env.GOOGLE_APPS_SCRIPT_URL = origAppsScriptUrl;
+  }
+});
