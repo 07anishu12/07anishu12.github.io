@@ -1,6 +1,7 @@
 import path from "node:path";
 const nextConfig = {
   output: "standalone",
+  transpilePackages: ["@portfolio/contracts"],
   trailingSlash: true,
   outputFileTracingRoot: path.join(process.cwd(), "../.."),
   poweredByHeader: false,

@@ -6,8 +6,8 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "pnpm -w build && node scripts/prepare-public.mjs && next dev",
-    "build": "pnpm -w build && node scripts/prepare-public.mjs && next build && node scripts/prepare-standalone.mjs",
+    "dev": "pnpm --filter @portfolio/contracts build && pnpm -w build && node scripts/prepare-public.mjs && next dev",
+    "build": "pnpm --filter @portfolio/contracts build && pnpm -w build && node scripts/prepare-public.mjs && next build && node scripts/prepare-standalone.mjs",
     "start": "node .next/standalone/apps/web/server.js",
     "test": "tsx --test tests/**/*.test.ts",
     "typecheck": "tsc --noEmit",
