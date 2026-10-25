@@ -74,3 +74,9 @@ Executed2026-10-25; detailed results in `docs/migration/acceptance-report.md`, l
 - Frontend/content agent: primary pages, project source inspection, legacy route strategy, shared form implementation. Backend/integrations agent: PostgreSQL/outbox/providers/tests/migrations. QA/release agent: capability checks, dependency findings, CI/deployment/security draft. Frontend/QA agents stopped at usage limits; orchestrator completed their remaining verification and fixes.
 - Orchestrator final fixes: frontend campaign contract, existing publishing pipeline reuse, article anchors/credits/quick answers, precise pagination rewrites, generated public allowlist, standalone assets, metadata, eighth research case study, static token retry test, genuine lint/format gates, dependency remediation, privacy/access disclosure and final local QA.
 - External mutations: none to production deployment, DNS, spreadsheet data/sharing, or provider messaging. Migration branch `migration/portfolio-lead-platform` committed at `4c6174c` (527 files changed). CI workflow `.github/workflows/migration-checks.yml` established for pull requests and branch pushes.
+
+
+## Follow-up fix — 2026-10-25
+- Fixed duplicate lead-capture script tags across the 28 legacy HTML pages identified during PR review. Updated `tools/blog/pages.js` to remove existing lead-capture script tags before injecting the current versioned script, preventing duplicates on regenerated legacy pages.
+- These changes are committed on `migration/portfolio-lead-platform`. Re-run CI after the final update and verify the generated output before merge.
+- Production is still not cut over: hosted preview, managed PostgreSQL, Google Sheets service-account access/header alignment, WhatsApp provider credentials/template/webhook, and custom-domain configuration remain pending.
