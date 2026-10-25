@@ -34,3 +34,4 @@ _preview/
 client_secret*.json
 .vercel
 .env*
+scripts/google-oauth-connect.mjs
