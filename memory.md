@@ -8,7 +8,7 @@ Continue the portfolio migration to a professional Next.js frontend and independ
 - Branch: `migration/portfolio-lead-platform`, based on `e780634`. Candidate `aniket.app` inspected at `71add3d`; its default homepage and small sample library did not supersede this repository's completed work.
 - Entry state included436 modified tracked files and existing untracked apps/contracts/memory work. All related migration work was preserved and extended. No production branch was replaced.
 - Current stack: Next.js16.4.1, React19.2.4, TypeScript5.9, Tailwind4, Hono4, PostgreSQL via pg; pnpm12.15.0 workspace.
-- Final application builds, typechecks, lint, formatting, and local validation passed. Git commits/push are recorded in Session Log below after execution.
+- Final application builds, typechecks, lint, formatting, and local validation passed. Staged and committed to `migration/portfolio-lead-platform` as commit `4c6174c`. Origin main remains untouched at `e780634`.
 
 ## Architecture Decisions
 - `apps/web`: App Router, server-rendered/static primary pages and326 articles, client components only for search/forms/interactions. Native eight-project catalogue and research page; legacy public HTML preserved.
@@ -73,4 +73,4 @@ Executed2026-10-25; detailed results in `docs/migration/acceptance-report.md`, l
 - Current orchestrator: audited both repositories, created migration branch, preserved existing work, defined contracts/ownership and maintained this file.
 - Frontend/content agent: primary pages, project source inspection, legacy route strategy, shared form implementation. Backend/integrations agent: PostgreSQL/outbox/providers/tests/migrations. QA/release agent: capability checks, dependency findings, CI/deployment/security draft. Frontend/QA agents stopped at usage limits; orchestrator completed their remaining verification and fixes.
 - Orchestrator final fixes: frontend campaign contract, existing publishing pipeline reuse, article anchors/credits/quick answers, precise pagination rewrites, generated public allowlist, standalone assets, metadata, eighth research case study, static token retry test, genuine lint/format gates, dependency remediation, privacy/access disclosure and final local QA.
-- External mutations: none to production deployment, DNS, spreadsheet data/sharing, or provider messaging. Branch publication/commit evidence follows after execution.
+- External mutations: none to production deployment, DNS, spreadsheet data/sharing, or provider messaging. Migration branch `migration/portfolio-lead-platform` committed at `4c6174c` (527 files changed). CI workflow `.github/workflows/migration-checks.yml` established for pull requests and branch pushes.
