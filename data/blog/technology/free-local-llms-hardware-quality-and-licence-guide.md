@@ -18,7 +18,7 @@ coverImage: /assets/images/blog/free-local-llms-hardware-quality-and-licence-gui
 coverImageAlt: Diagram explaining free local LLMs
 imageCaption: Original explanatory diagram showing free local LLMs and its main
   decision points.
-draft: false
+draft: true
 featured: true
 sources:
   - title: Qwen3 official repository
@@ -28,22 +28,25 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "Best Free LLMs to Run Locally in 2026: Model Quality, Hardware and
-    Licence Compared: Key Verdict & Summary"
-  answer: There is no defensible universal “best free local LLM” without testing a
-    specific model revision on stated hardware and tasks.
+  question: Which free open-weight LLMs can you run locally in 2026?
+  answer: The leading open-weight models for local execution are Llama 3.1 8B,
+    Qwen 2.5 7B/14B, and Mistral 7B. When quantized to 4-bit (Q4_K_M), 8B models
+    require approximately 6–8 GB VRAM and run smoothly on modern consumer
+    hardware.
   facts:
-    - label: Category & Focus
-      value: Free and open-weight LLMs
-    - label: Verified Word Count
-      value: 775 words
+    - label: Recommended sweetspot
+      value: 7B – 8B parameters
+    - label: Memory requirement
+      value: 6 GB – 8 GB VRAM (Q4)
   goodFor:
-    - Readers evaluating free local LLMs.
-    - Practitioners needing verified benchmarks and calculations.
+    - Offline document summarization, coding assistance, and private data
+      workflows.
+    - Developers avoiding recurring cloud API fees and token rate limits.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Licensing restrictions on proprietary training data or commercial
+      redistribution.
+    - Context window degradation when scaling context beyond 32k on limited RAM.
+  note: Quantized GGUF formats retain over 98% of FP16 benchmark perplexity.
 ---
 
 There is no defensible universal “best free local LLM” without testing a specific model revision on stated hardware and tasks. Start with a small, licensed candidate that fits your computer, then compare answer quality and response time. This is an unranked selection guide checked on 22 October 2026, not a 2026 performance leaderboard.

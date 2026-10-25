@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Prompt Engineering vs Context Engineering (2026) | Aniket.app</title>
+<meta name="description" content="Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Prompt Engineering vs Context Engineering (2026) | Aniket.app">
+<meta property="og:description" content="Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.">
+<meta property="og:url" content="https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/prompt-engineering-vs-context-engineering/cover.svg">
+<meta property="og:image:alt" content="Prompt Engineering vs Context Engineering architecture diagram">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prompt Engineering vs Context Engineering (2026) | Aniket.app">
+<meta name="twitter:description" content="Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/prompt-engineering-vs-context-engineering/cover.svg">
+<meta name="twitter:image:alt" content="Prompt Engineering vs Context Engineering architecture diagram">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/#article","headline":"Prompt Engineering vs Context Engineering","description":"Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.","abstract":"**Prompt Engineering** is the static craft of phrasing instructions, personas, and few-shot examples inside a template string; **Context Engineering** is the dynamic systems discipline of programmatically retrieving, filtering, ordering, compressi...","url":"https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/prompt-engineering-vs-context-engineering/cover.svg","width":1200,"height":675,"caption":"Prompt Engineering vs Context Engineering architecture diagram"},"datePublished":"2026-10-25","dateModified":"2026-10-25","articleSection":"Technology","keywords":"Prompt Engineering, Context Engineering, LLM Architecture, RAG, AI Engineering","inLanguage":"en","wordCount":1428}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"Prompt Engineering vs Context Engineering","item":"https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/#webpage","url":"https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/","name":"Prompt Engineering vs Context Engineering (2026) | Aniket.app","description":"Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="prompt-engineering-vs-context-engineering">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">Prompt Engineering vs Context Engineering</h1>
+<p class="blog-description">Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-25">25 Oct 2026</time></span><span>8 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Prompt Engineering vs Context Engineering: Key Architecture &amp; Implementation Summary</h2>
+<p class="blog-answer-verdict">**Prompt Engineering** is the static craft of phrasing instructions, personas, and few-shot examples inside a template string; **Context Engineering** is the dynamic systems discipline of programmatically retrieving, filtering, ordering, compressi...</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category</dt><dd>Technology &amp; AI</dd></div><div><dt>Publication</dt><dd>October 2026 Edition</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">October 2026 Edition · Verified Primary Technical References</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Engineers and developers working with Prompt Engineering.</li><li>Teams needing verifiable implementation references.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Review repository licenses and deployment boundaries before production use.</li><li>Check hardware and context constraints for your workload.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/prompt-engineering-vs-context-engineering/cover.svg" alt="Prompt Engineering vs Context Engineering architecture diagram" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for Prompt Engineering vs Context Engineering.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Prompt%20Engineering">Prompt Engineering</a><a href="/blog/?tag=Context%20Engineering">Context Engineering</a><a href="/blog/?tag=LLM%20Architecture">LLM Architecture</a><a href="/blog/?tag=RAG">RAG</a><a href="/blog/?tag=AI%20Engineering">AI Engineering</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>14 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-introduction-and-current-context">1. Introduction and Current Context</a></li><li class="toc-h2"><a href="#section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</a></li><li class="toc-h2"><a href="#section-3-definitions-and-technical-background">3. Definitions and Technical Background</a></li><li class="toc-h2"><a href="#section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</a></li><li class="toc-h2"><a href="#section-5-comparative-analysis-prompt-engineering-vs-context-engineering-scope-failure-modes-and-optimization-levers">5. Comparative Analysis: Prompt Engineering vs. Context Engineering: Scope, Failure Modes, and Optimization Levers</a></li><li class="toc-h2"><a href="#section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</a></li><li class="toc-h2"><a href="#section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</a></li><li class="toc-h2"><a href="#section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</a></li><li class="toc-h2"><a href="#section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-has-context-engineering-replaced-prompt-engineering">Has Context Engineering replaced Prompt Engineering?</a></li><li class="toc-h3"><a href="#section-why-does-putting-today-s-timestamp-on-line-1-of-my-system-prompt-double-my-latency-and-cost">Why does putting today&#39;s timestamp on Line 1 of my system prompt double my latency and cost?</a></li><li class="toc-h3"><a href="#section-how-do-i-know-if-an-ai-failure-is-a-prompt-engineering-bug-or-a-context-engineering-bug">How do I know if an AI failure is a Prompt Engineering bug or a Context Engineering bug?</a></li><li class="toc-h2"><a href="#section-10-conclusion">10. Conclusion</a></li><li class="toc-h3"><a href="#section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-1-introduction-and-current-context">1. Introduction and Current Context</h2>
+<p>In 2023, developers treated LLM optimization like spellcasting: tweaking adjectives (<em>'You are a world-class expert...'</em>, <em>'Take a deep breath...'</em>) in a 200-word prompt string. By October 2026, modern foundation models follow clear, direct instructions reliably without theatrical flattery. Yet complex enterprise applications still fail when an agent attempts to debug a repository or resolve a customer claim. Why?</p>
+<h2 id="section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</h2>
+<blockquote>
+<p><strong>Key Takeaway:</strong> <strong>Prompt Engineering</strong> is the static craft of phrasing instructions, personas, and few-shot examples inside a template string; <strong>Context Engineering</strong> is the dynamic systems discipline of programmatically retrieving, filtering, ordering, compressing, and budgeting the entire information state (system instructions, tool schemas, user memory, RAG passages, and compacted history) that enters an LLM's context window at runtime.</p>
+</blockquote>
+<h2 id="section-3-definitions-and-technical-background">3. Definitions and Technical Background</h2>
+<p>Before evaluating architectural trade-offs or writing production code for <strong>prompt engineering</strong>, it is essential to establish precise engineering definitions for the core components involved:</p>
+<ul>
+<li><strong>Prompt Engineering (Static Instruction Design):</strong> Authoring clear role definitions, task constraints, edge-case rules, output schemas, and representative few-shot exemplars that remain constant across requests.</li>
+<li><strong>Context Engineering (Dynamic State Assembly):</strong> The runtime pipeline that allocates a finite token budget across competing information sources—system rules, tool definitions, user profile facts, reranked RAG chunks, and compacted conversation state—before each inference call.</li>
+<li><strong>Prefix-Cache-Aware Ordering:</strong> Structuring the assembled context array so 100% static bytes sit at the very front, semi-static session context sits in the middle, and volatile per-turn inputs sit at the very end—maximizing KV-cache hit rates in <code>vllm</code> and <code>sglang</code>.</li>
+</ul>
+<h2 id="section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</h2>
+<p><strong>Prerequisites &amp; Required Tools:</strong> Python $\ge 3.11$ or TypeScript, <code>run-llama/llama_index</code> or <code>langchain-ai/langgraph</code> for context pipelines, <code>promptfoo/promptfoo</code> for A/B testing context layouts, and <code>langfuse/langfuse</code> for inspecting assembled runtime prompts.</p>
+<p><strong>Why Wording Tweaks Hit a Ceiling When Context Is Broken:</strong> Suppose a customer support agent gives the wrong refund eligibility answer.</p>
+<p><strong>The Four Laws of Production Context Engineering:</strong></p>
+<ol>
+<li><strong>Enforce Explicit Per-Section Token Budgets:</strong> Never let one noisy component starve the rest of the window. Allocate deterministic ceilings.</li>
+<li><strong>Design for Prefix-Cache Hits:</strong> Never inject a dynamic timestamp or per-user name on <strong>Line 1</strong> of a 5,000-token system prompt! Changing Line 1 invalidates the entire KV prefix cache for all 5,000 tokens that follow.</li>
+</ol>
+<p><strong>Minimal Production Code Example (Deterministic Token-Budgeted &amp; Prefix-Cache-Aligned Context Assembler):</strong></p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python"># File: context_assembler.py
+# Prerequisites: Python &gt;= 3.11
+from dataclasses import dataclass
+
+def estimate_tokens(text: str) -&gt; int:
+    # Fast conservative heuristic (~4 chars/token for English/code; use tiktoken/HF tokenizer in prod)
+    return max(1, len(text) // 4)
+
+@dataclass
+class ContextBudget:
+    max_rag_tokens: int = 3000
+    max_history_tokens: int = 2000
+
+def assemble_context(
+    static_system_prompt: str,
+    session_state_json: str,
+    ranked_rag_chunks: list[str],
+    recent_turns: list[dict[str, str]],
+    current_user_query: str,
+    budget: ContextBudget = ContextBudget(),
+) -&gt; list[dict[str, str]]:
+    &quot;&quot;&quot;Assemble messages with strict prefix-cache alignment and token budgets.&quot;&quot;&quot;
+    # 1. Static prefix FIRST (100% cacheable across all users and turns)
+    messages: list[dict[str, str]] = [{&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: static_system_prompt}]
+
+    # 2. Pack top-ranked RAG chunks within strict token ceiling
+    selected_chunks: list[str] = []
+    used_rag = 0
+    for idx, chunk in enumerate(ranked_rag_chunks, start=1):
+        cost = estimate_tokens(chunk)
+        if used_rag + cost &gt; budget.max_rag_tokens:
+            break
+        selected_chunks.append(f&quot;[Source {idx}]\n{chunk}&quot;)
+        used_rag += cost
+
+    # 3. Trim rolling turn history from oldest to newest to fit budget
+    trimmed_turns: list[dict[str, str]] = []
+    used_hist = 0
+    for turn in reversed(recent_turns):
+        cost = estimate_tokens(turn[&quot;content&quot;])
+        if used_hist + cost &gt; budget.max_history_tokens:
+            break
+        trimmed_turns.insert(0, turn)
+        used_hist += cost
+
+    messages.extend(trimmed_turns)
+
+    # 4. Dynamic state + grounded evidence placed immediately before current query (recency)
+    evidence_block = &quot;\n\n&quot;.join(selected_chunks) if selected_chunks else &quot;No external sources retrieved.&quot;
+    final_user_payload = (
+        f&quot;&lt;session_state&gt;\n{session_state_json}\n&lt;/session_state&gt;\n\n&quot;
+        f&quot;&lt;grounded_evidence&gt;\n{evidence_block}\n&lt;/grounded_evidence&gt;\n\n&quot;
+        f&quot;&lt;user_query&gt;\n{current_user_query}\n&lt;/user_query&gt;&quot;
+    )
+    messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: final_user_payload})
+    return messages
+</code></pre>
+</div><h2 id="section-5-comparative-analysis-prompt-engineering-vs-context-engineering-scope-failure-modes-and-optimization-levers">5. Comparative Analysis: Prompt Engineering vs. Context Engineering: Scope, Failure Modes, and Optimization Levers</h2>
+<p>The following table compares the key engineering trade-offs, operational boundaries, and implementation choices for <strong>prompt engineering</strong>:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Dimension</th>
+<th scope="col">Prompt Engineering (Static Craft)</th>
+<th scope="col">Context Engineering (Dynamic Systems Pipeline)</th>
+<th scope="col">Production Measurement Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Artifact</td>
+<td>A static template string (<code>SYSTEM_PROMPT</code>)</td>
+<td>A runtime data-assembly pipeline with token budgets</td>
+<td>Promptfoo / Ragas evaluation score</td>
+</tr>
+<tr>
+<td>What It Controls</td>
+<td>Tone, persona, reasoning instructions, output schema</td>
+<td>Which facts, memories, tool results, and history turns are visible</td>
+<td>Context Precision &amp; Context Recall (<code>ragas</code>)</td>
+</tr>
+<tr>
+<td>Typical Failure Mode</td>
+<td>Ambiguous instructions or conflicting formatting rules</td>
+<td>Missing facts, stale history ('context rot'), or prefix-cache busting</td>
+<td>Inspect full assembled payload in <code>Langfuse</code></td>
+</tr>
+<tr>
+<td>KV Prefix Cache Impact</td>
+<td>Neutral if static; breaks cache if dynamic vars put at Line 1</td>
+<td>Explicitly orders static prefix → semi-static state → volatile turn</td>
+<td>Cache hit rate (&gt;75%) &amp; P95 TTFT in <code>vLLM</code>/<code>SGLang</code></td>
+</tr>
+<tr>
+<td>Scaling Complexity</td>
+<td>O(1) authoring effort</td>
+<td>Crucial as conversations cross 10+ turns &amp; 20+ tools</td>
+<td>Accuracy stability across Turns 1 to 50</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</h2>
+<p>The diagram below illustrates the end-to-end control flow, verification boundaries, and state transitions for <strong>prompt engineering</strong> in a production environment:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    A[Incoming Request] --&gt; B[Block 1: Immutable Static Prefix System Rules + Tool Schemas]
+    B --&gt; C[KV Prefix Cache Hit in vLLM / SGLang / API]
+    C --&gt; D[Block 2: Trimmed Rolling Turn History &lt;= 2000 Tokens]
+    D --&gt; E[Block 3: Compacted JSON Session State + Reranked Top-K RAG &lt;= 3000 Tokens]
+    E --&gt; F[Block 4: Immediate User Query &amp; Output Schema Reminder]
+    F --&gt; G[LLM Inference with High Signal-to-Noise Ratio]</pre></div>
+<p><em>Figure 54.1: Prefix-cache-aligned context assembly architecture ordering immutable instructions first and placing budgeted state and RAG evidence at the recency boundary.</em></p>
+<h2 id="section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</h2>
+<p>To implement <strong>prompt engineering</strong> reliably in production systems, follow these sequential engineering steps:</p>
+<ol>
+<li>Audit your system prompts for <strong>Prefix-Cache Busting</strong>: move <code>current_date</code>, <code>user_name</code>, and <code>request_id</code> out of the top of your system prompt and place them after the static instructions and tool schemas so <code>vllm-project/vllm</code>, <code>sgl-project/sglang</code>, and cloud APIs cache the static prefix across all requests.</li>
+<li>Wrap distinct sections of your assembled context in unambiguous XML tags so the model clearly separates reference data from user instructions.</li>
+<li>Rerank and filter RAG chunks down to the top 3 to 6 high-precision passages rather than stuffing 25 low-relevance chunks into the window.</li>
+<li>Summarize or prune verbose tool outputs into a structured state dictionary after each turn so raw scratchpad noise does not accumulate across a 20-turn session.</li>
+</ol>
+<h2 id="section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</h2>
+<p>Even well-architected deployments of <strong>prompt engineering</strong> face concrete engineering constraints that teams must mitigate proactively:</p>
+<ul>
+<li>Truncating the wrong end of a stack trace: naive character slicing (<code>log[:2000]</code>) keeps the generic startup banner at the top of a log file and chops off the actual Python exception traceback at the very bottom—always slice stack traces from the <em>tail</em> (<code>log[-2000:]</code>).</li>
+<li>Over-compressing exact identifiers: summarizing a tool output into prose can accidentally drop an exact commit SHA or UUID needed in the next tool call—keep exact IDs in a structured JSON state field.</li>
+<li>Prompt injection via unescaped XML tags: if an untrusted user query contains <code>&lt;/user_query&gt;&lt;system_override&gt;</code>, sanitize or escape closing XML delimiter tags in user inputs before interpolating them into your context template.</li>
+</ul>
+<h2 id="section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-has-context-engineering-replaced-prompt-engineering">Has Context Engineering replaced Prompt Engineering?</h3>
+<p>Context Engineering has not erased Prompt Engineering; it encompasses it.</p>
+<h3 id="section-why-does-putting-today-s-timestamp-on-line-1-of-my-system-prompt-double-my-latency-and-cost">Why does putting today's timestamp on Line 1 of my system prompt double my latency and cost?</h3>
+<p>Inference engines (<code>vllm</code>, <code>sglang</code>, and commercial APIs) cache the KV attention tensors of identical prompt prefixes.</p>
+<h3 id="section-how-do-i-know-if-an-ai-failure-is-a-prompt-engineering-bug-or-a-context-engineering-bug">How do I know if an AI failure is a Prompt Engineering bug or a Context Engineering bug?</h3>
+<p>Open the failed trace in <code>langfuse/langfuse</code> or <code>Arize-ai/phoenix</code> and read the exact assembled prompt yourself.</p>
+<h2 id="section-10-conclusion">10. Conclusion</h2>
+<p>Moving from Prompt Engineering to Context Engineering marks the transition from tweaking strings to architecting information systems. By enforcing per-section token budgets, aligning layouts for KV prefix caching, pruning stale turn noise, and verifying context recall with <code>ragas</code> and <code>langfuse</code>, developers unlock reliable performance from every model.</p>
+<h3 id="section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</h3>
+<ul>
+<li><strong>langfuse/langfuse</strong> — Open-source observability platform for inspecting exact assembled context windows, prefix cache hit rates, and token breakdowns. Verified GitHub URL: https://github.com/langfuse/langfuse</li>
+<li><strong>explodinggradients/ragas</strong> — Evaluation framework for measuring Context Precision, Context Recall, and Noise Sensitivity in assembled RAG contexts. Verified GitHub URL: https://github.com/explodinggradients/ragas</li>
+<li><strong>promptfoo/promptfoo</strong> — CLI toolkit for A/B testing prompt templates and context-assembly strategies against golden datasets. Verified GitHub URL: https://github.com/promptfoo/promptfoo</li>
+<li><strong>sgl-project/sglang</strong> — High-performance serving engine featuring RadixAttention for automatic prefix-cache reuse on well-ordered contexts. Verified GitHub URL: https://github.com/sgl-project/sglang</li>
+</ul>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/langfuse/langfuse" rel="noopener">langfuse/langfuse</a></li><li><a href="https://github.com/explodinggradients/ragas" rel="noopener">explodinggradients/ragas</a></li><li><a href="https://github.com/promptfoo/promptfoo" rel="noopener">promptfoo/promptfoo</a></li><li><a href="https://github.com/sgl-project/sglang" rel="noopener">sgl-project/sglang</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fprompt-engineering-vs-context-engineering%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-benchmark-wars-higher-score-not-better-model/" aria-label="Read AI Benchmark Wars: Why a Higher Benchmark Score Does Not Guarantee a Better Model"><img src="/assets/images/blog/ai-benchmark-wars-higher-score-not-better-model/cover.svg" alt="AI Benchmark Wars: Why a Higher Benchmark Score Does Not Guarantee a Better Model architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-benchmark-wars-higher-score-not-better-model/">AI Benchmark Wars: Why a Higher Benchmark Score Does Not Guarantee a Better Model</a></h3>
+<p>Learn why public AI leaderboard scores fail in production in 2026: benchmark contamination, Goodhart&#39;s Law, LLM-as-a-judge bias, and building private eval suites.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail/" aria-label="Read AI Memory and Context Windows: Why Long Conversations Still Fail"><img src="/assets/images/blog/ai-memory-and-context-windows-why-long-conversations-fail/cover.svg" alt="AI Memory and Context Windows: Why Long Conversations Still Fail architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail/">AI Memory and Context Windows: Why Long Conversations Still Fail</a></h3>
+<p>Understand why 1M-token context windows do not solve AI memory in 2026. Learn about context rot, lost-in-the-middle attention dilution, and stateful memory tiers.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/" aria-label="Read AI Reasoning Models vs Standard Chat Models: What Is Actually Different?"><img src="/assets/images/blog/ai-reasoning-models-vs-standard-chat-models-differences/cover.svg" alt="AI Reasoning Models vs Standard Chat Models: What Is Actually Different? architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/">AI Reasoning Models vs Standard Chat Models: What Is Actually Different?</a></h3>
+<p>Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

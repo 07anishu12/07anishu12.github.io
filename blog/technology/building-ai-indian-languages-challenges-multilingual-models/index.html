@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Building AI for Indian Languages: Indic LLMs (2026) | Aniket.app</title>
+<meta name="description" content="Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Building AI for Indian Languages: Indic LLMs (2026) | Aniket.app">
+<meta property="og:description" content="Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.">
+<meta property="og:url" content="https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/building-ai-indian-languages-challenges-multilingual-models/cover.svg">
+<meta property="og:image:alt" content="Building AI for Indian Languages: The Challenges of Multilingual Models architecture diagram">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building AI for Indian Languages: Indic LLMs (2026) | Aniket.app">
+<meta name="twitter:description" content="Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/building-ai-indian-languages-challenges-multilingual-models/cover.svg">
+<meta name="twitter:image:alt" content="Building AI for Indian Languages: The Challenges of Multilingual Models architecture diagram">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/#article","headline":"Building AI for Indian Languages: The Challenges of Multilingual Models","description":"Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.","abstract":"Building production AI for India's 22 scheduled languages and hundreds of dialects requires solving four deep technical bottlenecks that English-centric models overlook: (1) the **Tokenizer Fertility Tax** (where poorly trained Byte-Pair Encoding ...","url":"https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/building-ai-indian-languages-challenges-multilingual-models/cover.svg","width":1200,"height":675,"caption":"Building AI for Indian Languages: The Challenges of Multilingual Models architecture diagram"},"datePublished":"2026-10-25","dateModified":"2026-10-25","articleSection":"Technology","keywords":"Indic LLMs, Indian Languages, NLP, AI4Bharat, Multilingual AI","inLanguage":"en","wordCount":1436}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"Building AI for Indian Languages: The Challenges of Multilingual Models","item":"https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/#webpage","url":"https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/","name":"Building AI for Indian Languages: Indic LLMs (2026) | Aniket.app","description":"Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="building-ai-indian-languages-challenges-multilingual-models">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">Building AI for Indian Languages: The Challenges of Multilingual Models</h1>
+<p class="blog-description">Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-25">25 Oct 2026</time></span><span>8 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Building AI for Indian Languages: The Challenges of Multilingual Models: Key Architecture &amp; Implementation Summary</h2>
+<p class="blog-answer-verdict">Building production AI for India&#39;s 22 scheduled languages and hundreds of dialects requires solving four deep technical bottlenecks that English-centric models overlook: (1) the **Tokenizer Fertility Tax** (where poorly trained Byte-Pair Encoding ...</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category</dt><dd>Technology &amp; AI</dd></div><div><dt>Publication</dt><dd>October 2026 Edition</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">October 2026 Edition · Verified Primary Technical References</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Engineers and developers working with Indic LLMs.</li><li>Teams needing verifiable implementation references.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Review repository licenses and deployment boundaries before production use.</li><li>Check hardware and context constraints for your workload.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/building-ai-indian-languages-challenges-multilingual-models/cover.svg" alt="Building AI for Indian Languages: The Challenges of Multilingual Models architecture diagram" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for Building AI for Indian Languages: The Challenges of Multilingual Models.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Indic%20LLMs">Indic LLMs</a><a href="/blog/?tag=Indian%20Languages">Indian Languages</a><a href="/blog/?tag=NLP">NLP</a><a href="/blog/?tag=AI4Bharat">AI4Bharat</a><a href="/blog/?tag=Multilingual%20AI">Multilingual AI</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>14 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-introduction-and-current-context">1. Introduction and Current Context</a></li><li class="toc-h2"><a href="#section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</a></li><li class="toc-h2"><a href="#section-3-definitions-and-technical-background">3. Definitions and Technical Background</a></li><li class="toc-h2"><a href="#section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</a></li><li class="toc-h2"><a href="#section-5-comparative-analysis-engineering-challenges-across-indian-language-modalities-and-verified-open-source-solutions">5. Comparative Analysis: Engineering Challenges Across Indian Language Modalities and Verified Open-Source Solutions</a></li><li class="toc-h2"><a href="#section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</a></li><li class="toc-h2"><a href="#section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</a></li><li class="toc-h2"><a href="#section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</a></li><li class="toc-h2"><a href="#section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-what-is-tokenizer-fertility-and-why-does-it-matter-so-much-for-indian-languages">What is &#39;tokenizer fertility&#39; and why does it matter so much for Indian languages?</a></li><li class="toc-h3"><a href="#section-should-an-indic-ai-assistant-translate-english-technical-nouns-like-otp-or-bank-statement-into-pure-hindi-tamil">Should an Indic AI assistant translate English Technical nouns like &#39;OTP&#39; or &#39;Bank Statement&#39; into pure Hindi/Tamil?</a></li><li class="toc-h3"><a href="#section-how-can-i-build-rag-over-english-company-pdfs-when-my-users-ask-questions-in-hindi-telugu-or-bengali">How can I build RAG over English company PDFs when my users ask questions in Hindi, Telugu, or Bengali?</a></li><li class="toc-h2"><a href="#section-10-conclusion">10. Conclusion</a></li><li class="toc-h3"><a href="#section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-1-introduction-and-current-context">1. Introduction and Current Context</h2>
+<p>India does not speak a single language or write in a single script: its linguistic landscape spans Indo-Aryan (Hindi, Bengali, Marathi, Gujarati, Punjabi, Odia, Assamese), Dravidian (Tamil, Telugu, Kannada, Malayalam), Austroasiatic (Santali), and Sino-Tibetan (Manipuri/Bodo) families across Devanagari, Bengali-Assamese, Tamil, Telugu, Kannada, Malayalam, Odia, Gurmukhi, Gujarati, Perso-Arabic, and Ol Chiki scripts.</p>
+<h2 id="section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</h2>
+<blockquote>
+<p><strong>Key Takeaway:</strong> Building production AI for India's 22 scheduled languages and hundreds of dialects requires solving four deep technical bottlenecks that English-centric models overlook: (1) the <strong>Tokenizer Fertility Tax</strong> (where poorly trained Byte-Pair Encoding tokenizers split Indic scripts like Tamil, Malayalam, or Odia into 3x–6x more tokens per word, multiplying latency and cost), (2) <strong>Romanized Code-Switching</strong> (users typing Hindi, Tamil, or Telugu in Latin script mixed with English), (3) <strong>Cultural vs. Literal Translation Bias</strong>, and (4) <strong>Low-Resource Script Hallucination</strong>.</p>
+</blockquote>
+<h2 id="section-3-definitions-and-technical-background">3. Definitions and Technical Background</h2>
+<p>Before evaluating architectural trade-offs or writing production code for <strong>Indic LLMs</strong>, it is essential to establish precise engineering definitions for the core components involved:</p>
+<ul>
+<li><strong>Tokenizer Fertility (Tokens per Word Ratio):</strong> The average number of subword tokens required by a model's tokenizer to represent a single word in a given language. A fertility of ~1.2–1.4 is typical for English; poorly balanced tokenizers exhibit fertilities of 4.0–8.0+ on Indic scripts, decomposing words into individual UTF-8 bytes.</li>
+<li><strong>Code-Switching &amp; Romanized Transliteration:</strong> The ubiquitous Indian digital communication pattern where speakers blend an Indic language with English in the same sentence and type the Indic words phonetically using the Latin alphabet.</li>
+<li><strong>MILU (Multi-Task Indic Language Understanding Benchmark):</strong> An open-source evaluation benchmark designed specifically to test cultural, historical, regional, and subject-matter reasoning across Indian languages rather than merely translating US-centric MMLU trivia.</li>
+</ul>
+<h2 id="section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</h2>
+<p><strong>The Hidden Economics of the Tokenizer Fertility Tax:</strong> Why does an English-centric LLM run so slowly and expensively on Tamil, Telugu, Kannada, or Hindi? In a Transformer, both inference latency and API billing scale with the number of <em>tokens</em>, not the number of human words. If a model's BPE vocabulary was trained on 92% English and Western European text, an English word like <code>'infrastructure'</code> is encoded as <strong>1 token</strong>. An equivalent word in Tamil or Malayalam—composed of complex agglutinative morphology and UTF-8 multi-byte Unicode codepoints—may be shattered into <strong>6 to 12 subword or byte tokens</strong>. That means a 500-word Malayalam customer query consumes the context window and decoding time of a 3,000-word English essay!</p>
+<p><strong>The Romanized Code-Switching Gap:</strong> Academic Indic datasets historically consisted of formal government gazettes, Wikipedia pages, and classic literature written in pure native script. Real users on WhatsApp, UPI apps, and e-commerce support chats rarely write like a textbook: they use colloquial, spoken phrasing mixed with English domain nouns, often typed in Roman script.</p>
+<p><strong>Why Translated English Benchmarks Mislead:</strong> For years, labs evaluated Indic capability by taking English MMLU questions and machine-translating them into Hindi or Bengali. A model that fails a question about US tax law translated into Gujarati is not failing at Gujarati; conversely, a model that passes translated trivia may still hallucinate wildly regarding Indian agricultural seasons, RBI banking terminology, or regional legal frameworks.</p>
+<p><strong>Practical Architecture Patterns for Indic AI:</strong> In 2026, engineers deploy two complementary patterns depending on the task: (1) <strong>Native Indic / Multilingual LLM Generation</strong> for direct conversational interaction, and (2) <strong>Translate-Retrieve-Translate / Hybrid Pipelines</strong> using <code>AI4Bharat/IndicTrans2</code> when querying English-heavy enterprise documentation databases while serving answers in 22 scheduled languages.</p>
+<h2 id="section-5-comparative-analysis-engineering-challenges-across-indian-language-modalities-and-verified-open-source-solutions">5. Comparative Analysis: Engineering Challenges Across Indian Language Modalities and Verified Open-Source Solutions</h2>
+<p>The following table compares the key engineering trade-offs, operational boundaries, and implementation choices for <strong>Indic LLMs</strong>:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Technical Bottleneck</th>
+<th scope="col">Impact on Production System</th>
+<th scope="col">Root Cause</th>
+<th scope="col">Verified Engineering Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High Tokenizer Fertility (3x–6x tokens/word)</td>
+<td>3x–6x higher latency, rapid context exhaustion, and inflated API cost</td>
+<td>UTF-8 byte fallback in English-skewed BPE tokenizers</td>
+<td>Measure fertility; select Indic-expanded vocab models or sovereign Indic LLMs</td>
+</tr>
+<tr>
+<td>Romanized &amp; Code-Switched Input (Hinglish/Tanglish)</td>
+<td>Intent misclassification and garbled script switching in replies</td>
+<td>Pretraining limited to formal native-script Wikipedia/news</td>
+<td>Fine-tune with <code>AI4Bharat/IndicLLMSuite</code> transliterated &amp; code-switched splits</td>
+</tr>
+<tr>
+<td>Overly Formal / Unnatural Output Tone</td>
+<td>Users reject robotic 'textbook' translations in support chats</td>
+<td>Literal translation from English synthetic instruction data</td>
+<td>Include colloquial style exemplars &amp; evaluate with native speakers</td>
+</tr>
+<tr>
+<td>Cross-Lingual RAG Retrieval Failure</td>
+<td>Query in Marathi fails to match English technical policy PDF</td>
+<td>Weak cross-lingual alignment in monolingual embedding models</td>
+<td>Use <code>AI4Bharat/IndicTrans2</code> query translation or multilingual embeddings + BM25</td>
+</tr>
+<tr>
+<td>Misleading Benchmark Scores</td>
+<td>Model scores well on translated MMLU but fails Indian domain tasks</td>
+<td>Western-centric evaluation sets</td>
+<td>Benchmark on <code>AI4Bharat/MILU</code> and <code>AI4Bharat/indic-llm-eval-suite</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</h2>
+<p>The diagram below illustrates the end-to-end control flow, verification boundaries, and state transitions for <strong>Indic LLMs</strong> in a production environment:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    A[User Input: Native Script, Romanized Indic, or Code-Switched Audio/Text] --&gt; B[Language, Script &amp; Transliteration Detector]
+    B --&gt; C{Target Knowledge Base Language?}
+    C --&gt;|Native Multilingual / Indic KB| D[Indic-Expanded Tokenizer &amp; Fine-Tuned Indic LLM]
+    C --&gt;|English Enterprise Technical Docs| E[AI4Bharat IndicTrans2 Query Translation + Multilingual Vector Search]
+    E --&gt; F[Retrieve Grounded Passages &amp; Synthesize in Target Indic Language]
+    D --&gt; G[Colloquial Register &amp; Script Consistency Validator]
+    F --&gt; G
+    G --&gt; H[Optional AI4Bharat Indic-TTS Streaming Speech Output]</pre></div>
+<p><em>Figure 39.1: Production multilingual Indic AI pipeline handling Romanized code-switching, cross-lingual RAG via IndicTrans2, and script-consistent synthesis.</em></p>
+<h2 id="section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</h2>
+<p>To implement <strong>Indic LLMs</strong> reliably in production systems, follow these sequential engineering steps:</p>
+<ol>
+<li>Run a <strong>Tokenizer Fertility Audit</strong> before picking a model: tokenize 1,000 representative sentences in your target Indian languages and compute <code>total_tokens / total_words</code>; reject models that fall back to raw byte encoding.</li>
+<li>Include <strong>Romanized and code-switched</strong> test cases in your evaluation suite alongside native Unicode scripts, explicitly instructing the system prompt whether to reply in native script or match the user's Romanized script.</li>
+<li>Enforce Unicode Normalization`) across all text ingestion and search pipelines so composed vs. decomposed Indic vowel matras and nuktas do not break string matching or BM25 tokenization.</li>
+<li>Use <code>AI4Bharat/IndicTrans2</code> for high-throughput, low-cost deterministic translation across all 22 scheduled Indian languages when bridging vernacular user queries to English backend databases.</li>
+</ol>
+<h2 id="section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</h2>
+<p>Even well-architected deployments of <strong>Indic LLMs</strong> face concrete engineering constraints that teams must mitigate proactively:</p>
+<ul>
+<li>Agglutinative morphology breaking keyword search: Dravidian languages (such as Malayalam, Tamil, and Telugu) fuse roots and multiple suffixes into single long words; standard whitespace BM25 tokenizers fail unless paired with subword/morphological analyzers or dense embeddings.</li>
+<li>Script-mixing hallucinations: mid-sized multilingual models occasionally slip Chinese, Cyrillic, or wrong Indic script characters (e.g., inserting a Devanagari word inside a Gujarati sentence) during high-temperature generation—add a deterministic Unicode character-range regex validator on outputs.</li>
+<li>Domain terminology over-translation: translating technical terms like <code>'UPI ID'</code>, <code>'IFSC Code'</code>, or <code>'Router'</code> into archaic literary equivalents confuses Indian users; keep established English technical nouns intact via glossary constraints.</li>
+</ul>
+<h2 id="section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-what-is-tokenizer-fertility-and-why-does-it-matter-so-much-for-indian-languages">What is 'tokenizer fertility' and why does it matter so much for Indian languages?</h3>
+<p>Tokenizer fertility is the average number of tokens needed to encode a single word.</p>
+<h3 id="section-should-an-indic-ai-assistant-translate-english-technical-nouns-like-otp-or-bank-statement-into-pure-hindi-tamil">Should an Indic AI assistant translate English Technical nouns like 'OTP' or 'Bank Statement' into pure Hindi/Tamil?</h3>
+<p>No.</p>
+<h3 id="section-how-can-i-build-rag-over-english-company-pdfs-when-my-users-ask-questions-in-hindi-telugu-or-bengali">How can I build RAG over English company PDFs when my users ask questions in Hindi, Telugu, or Bengali?</h3>
+<p>Pair a fast translation stage (<code>AI4Bharat/IndicTrans2</code>) or a strong multilingual embedding model with <code>qdrant/qdrant</code> so the user's regional query retrieves the exact English policy chunks, and then synthesize the grounded answer in the user's language.</p>
+<h2 id="section-10-conclusion">10. Conclusion</h2>
+<p>Building AI for Indian languages requires moving beyond surface-level translation prompts to address tokenization efficiency, Unicode normalization, code-switching, and native evaluation. By leveraging open-source foundations like <code>AI4Bharat/IndicLLMSuite</code>, <code>IndicTrans2</code>, and <code>MILU</code>, developers can build fast, natural, and inclusive AI systems for a billion users.</p>
+<h3 id="section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</h3>
+<ul>
+<li><strong>AI4Bharat/IndicLLMSuite</strong> — Official blueprint and curated dataset collection from AI4Bharat (IIT Madras) for pretraining and fine-tuning Indic LLMs. Verified GitHub URL: https://github.com/AI4Bharat/IndicLLMSuite</li>
+<li><strong>AI4Bharat/IndicTrans2</strong> — Official open-source transformer translation models supporting all 22 scheduled Indian languages. Verified GitHub URL: https://github.com/ai4bharat/IndicTrans2</li>
+<li><strong>AI4Bharat/MILU</strong> — Multi-task Indic Language Understanding Benchmark evaluating language comprehension and India-specific domain knowledge. Verified GitHub URL: https://github.com/AI4Bharat/MILU</li>
+<li><strong>AI4Bharat/indic-llm-eval-suite</strong> — Evaluation harness from AI4Bharat for standardized benchmarking of language models on Indic tasks. Verified GitHub URL: https://github.com/AI4Bharat/indic-llm-eval-suite</li>
+<li><strong>AI4Bharat/Indic-TTS</strong> — Open-source Text-to-Speech models and synthesis tools for Indian languages. Verified GitHub URL: https://github.com/AI4Bharat/Indic-TTS</li>
+</ul>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/AI4Bharat/IndicLLMSuite" rel="noopener">AI4Bharat/IndicLLMSuite</a></li><li><a href="https://github.com/ai4bharat/IndicTrans2" rel="noopener">AI4Bharat/IndicTrans2</a></li><li><a href="https://github.com/AI4Bharat/MILU" rel="noopener">AI4Bharat/MILU</a></li><li><a href="https://github.com/AI4Bharat/indic-llm-eval-suite" rel="noopener">AI4Bharat/indic-llm-eval-suite</a></li><li><a href="https://github.com/AI4Bharat/Indic-TTS" rel="noopener">AI4Bharat/Indic-TTS</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fbuilding-ai-indian-languages-challenges-multilingual-models%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/agentic-coding-build-test-deploy-applications/" aria-label="Read Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?"><img src="/assets/images/blog/agentic-coding-build-test-deploy-applications/cover.svg" alt="Agentic Coding: Can AI Build, Test, and Deploy an Entire Application? architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/agentic-coding-build-test-deploy-applications/">Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?</a></h3>
+<p>Compare inline AI autocomplete with autonomous coding agents in 2026. Learn how terminal agents build, test, debug, and open PRs safely under CI/CD controls.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/" aria-label="Read AI Agent Development Skills: Tools, Memory, and Orchestration"><img src="/assets/images/blog/ai-agent-development-skills-tools-memory-orchestration/cover.svg" alt="AI Agent Development Skills: Tools, Memory, and Orchestration architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/">AI Agent Development Skills: Tools, Memory, and Orchestration</a></h3>
+<p>Learn practical AI agent development skills in 2026 using Pydantic AI and LangGraph: typed tool schemas, dependency injection, state reducers, and loop bounds.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-app-builders-vs-traditional-development-startups/" aria-label="Read AI App Builders vs Traditional Development: What Should Startups Use?"><img src="/assets/images/blog/ai-app-builders-vs-traditional-development-startups/cover.svg" alt="AI App Builders vs Traditional Development: What Should Startups Use? architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-app-builders-vs-traditional-development-startups/">AI App Builders vs Traditional Development: What Should Startups Use?</a></h3>
+<p>Compare AI app builders (&#39;vibe coding&#39;) with traditional software engineering Using Next.js and Payload/Strapi in 2026: speed, technical debt, security, and ownership.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

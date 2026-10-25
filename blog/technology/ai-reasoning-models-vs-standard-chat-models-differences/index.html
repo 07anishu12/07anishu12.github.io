@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>AI Reasoning Models vs Standard Chat Models | Aniket.app</title>
+<meta name="description" content="Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="AI Reasoning Models vs Standard Chat Models | Aniket.app">
+<meta property="og:description" content="Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.">
+<meta property="og:url" content="https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/ai-reasoning-models-vs-standard-chat-models-differences/cover.svg">
+<meta property="og:image:alt" content="AI Reasoning Models vs Standard Chat Models: What Is Actually Different? architecture diagram">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Reasoning Models vs Standard Chat Models | Aniket.app">
+<meta name="twitter:description" content="Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/ai-reasoning-models-vs-standard-chat-models-differences/cover.svg">
+<meta name="twitter:image:alt" content="AI Reasoning Models vs Standard Chat Models: What Is Actually Different? architecture diagram">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/#article","headline":"AI Reasoning Models vs Standard Chat Models: What Is Actually Different?","description":"Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.","abstract":"AI reasoning models do not use a fundamentally different neural network block than standard Transformer chat models; what differs is their post-training regime and inference-time compute allocation. Trained via large-scale Reinforcement Learning w...","url":"https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/ai-reasoning-models-vs-standard-chat-models-differences/cover.svg","width":1200,"height":675,"caption":"AI Reasoning Models vs Standard Chat Models: What Is Actually Different? architecture diagram"},"datePublished":"2026-10-25","dateModified":"2026-10-25","articleSection":"Technology","keywords":"Reasoning Models, Inference-Time Compute, DeepSeek-R1, RLVR, LLM Architecture","inLanguage":"en","wordCount":1408}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"AI Reasoning Models vs Standard Chat Models: What Is Actually Different?","item":"https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/#webpage","url":"https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/","name":"AI Reasoning Models vs Standard Chat Models | Aniket.app","description":"Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="ai-reasoning-models-vs-standard-chat-models-differences">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">AI Reasoning Models vs Standard Chat Models: What Is Actually Different?</h1>
+<p class="blog-description">Understand how AI reasoning models (like DeepSeek-R1 and Qwen3 thinking modes) differ from standard chat models: RLVR training, inference-time compute, and costs.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-25">25 Oct 2026</time></span><span>8 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">AI Reasoning Models vs Standard Chat Models: What Is Actually Different?: Key Architecture &amp; Implementation Summary</h2>
+<p class="blog-answer-verdict">AI reasoning models do not use a fundamentally different neural network block than standard Transformer chat models; what differs is their post-training regime and inference-time compute allocation. Trained via large-scale Reinforcement Learning w...</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category</dt><dd>Technology &amp; AI</dd></div><div><dt>Publication</dt><dd>October 2026 Edition</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">October 2026 Edition · Verified Primary Technical References</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Engineers and developers working with Reasoning Models.</li><li>Teams needing verifiable implementation references.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Review repository licenses and deployment boundaries before production use.</li><li>Check hardware and context constraints for your workload.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/ai-reasoning-models-vs-standard-chat-models-differences/cover.svg" alt="AI Reasoning Models vs Standard Chat Models: What Is Actually Different? architecture diagram" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for AI Reasoning Models vs Standard Chat Models: What Is Actually Different?.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Reasoning%20Models">Reasoning Models</a><a href="/blog/?tag=Inference-Time%20Compute">Inference-Time Compute</a><a href="/blog/?tag=DeepSeek-R1">DeepSeek-R1</a><a href="/blog/?tag=RLVR">RLVR</a><a href="/blog/?tag=LLM%20Architecture">LLM Architecture</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>14 sections</span></summary><ol><li class="toc-h2"><a href="#section-1-introduction-and-current-context">1. Introduction and Current Context</a></li><li class="toc-h2"><a href="#section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</a></li><li class="toc-h2"><a href="#section-3-definitions-and-technical-background">3. Definitions and Technical Background</a></li><li class="toc-h2"><a href="#section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</a></li><li class="toc-h2"><a href="#section-5-comparative-analysis-engineering-comparison-standard-instruct-chat-models-vs-inference-time-reasoning-models">5. Comparative Analysis: Engineering Comparison: Standard Instruct/Chat Models vs. Inference-Time Reasoning Models</a></li><li class="toc-h2"><a href="#section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</a></li><li class="toc-h2"><a href="#section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</a></li><li class="toc-h2"><a href="#section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</a></li><li class="toc-h2"><a href="#section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-do-reasoning-models-like-deepseek-r1-use-a-different-neural-architecture-than-standard-llms">Do reasoning models like DeepSeek-R1 use a different neural architecture than standard LLMs?</a></li><li class="toc-h3"><a href="#section-should-i-include-previous-think-tokens-when-sending-multi-turn-chat-history-back-to-the-model">Should I include previous &lt;think&gt; tokens when sending multi-turn chat history back to the model?</a></li><li class="toc-h3"><a href="#section-why-can-an-ai-reasoning-model-perform-worse-on-simple-classification-tasks">Why can an AI reasoning model perform worse on simple classification tasks?</a></li><li class="toc-h2"><a href="#section-10-conclusion">10. Conclusion</a></li><li class="toc-h3"><a href="#section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-1-introduction-and-current-context">1. Introduction and Current Context</h2>
+<p>For years, scaling AI performance meant scaling pretraining compute: training larger models on more trillions of tokens so they could answer questions immediately in a single instinctive pass. Beginning with OpenAI's o-series and democratized globally by the open-source release of <code>deepseek-ai/DeepSeek-R1</code> and hybrid thinking models like <code>QwenLM/Qwen3</code>, a second scaling axis emerged: <strong>inference-time compute</strong> (test-time scaling). By October 2026, developers must routinely decide whether a request warrants a standard zero-thinking completion or an extended reasoning budget.</p>
+<h2 id="section-2-direct-answer-and-key-takeaway">2. Direct Answer and Key Takeaway</h2>
+<blockquote>
+<p><strong>Key Takeaway:</strong> AI reasoning models do not use a fundamentally different neural network block than standard Transformer chat models; what differs is their post-training regime and inference-time compute allocation. Trained via large-scale Reinforcement Learning with Verifiable Rewards (RLVR—as open-sourced in <code>deepseek-ai/DeepSeek-R1</code>), reasoning models learn to generate hundreds or thousands of internal 'thinking' tokens before emitting a final answer, enabling hypothesis testing, backtracking, and self-verification at the cost of higher latency and 3x-to-15x higher output token consumption.</p>
+</blockquote>
+<h2 id="section-3-definitions-and-technical-background">3. Definitions and Technical Background</h2>
+<p>Before evaluating architectural trade-offs or writing production code for <strong>reasoning models</strong>, it is essential to establish precise engineering definitions for the core components involved:</p>
+<ul>
+<li><strong>Inference-Time Compute (Test-Time Scaling):</strong> Allocating additional sequential generation tokens (<code>&lt;think&gt;...&lt;/think&gt;</code>) or parallel sampling passes at inference time so the model can decompose a complex problem, verify intermediate calculations, and backtrack from dead ends before committing to a final response.</li>
+<li><strong>Reinforcement Learning with Verifiable Rewards (RLVR / GRPO):</strong> A post-training methodology (such as Group Relative Policy Optimization used in DeepSeek-R1) where a model is rewarded based on deterministic, objective verifiers—such as whether generated code passes a unit test suite or a mathematical proof yields the exact ground-truth answer—rather than human preference aesthetics alone.</li>
+<li><strong>Hybrid Thinking / Reasoning Budget:</strong> A model capability allowing developers to toggle thinking mode on or off or specify a maximum thinking-token budget per API call.</li>
+<li><strong>Overthinking (Reasoning Loops):</strong> A failure mode where a reasoning model spends thousands of thinking tokens second-guessing a straightforward question, driving up latency and cost without improving—and sometimes degrading—final answer accuracy.</li>
+</ul>
+<h2 id="section-4-technical-architecture-and-deep-dive">4. Technical Architecture and Deep Dive</h2>
+<p>Why can't a standard chat model solve a complex 10-step algorithmic puzzle in a single immediate response? In an autoregressive Transformer, the amount of computation (FLOPs) performed per generated token is fixed by the model's layer depth and parameter count. If a standard chat model is instructed to 'state the final answer immediately,' it must compress the entire multi-step deduction into the forward pass of the very first output token.</p>
+<p>Reasoning models—such as <code>deepseek-ai/DeepSeek-R1</code>—solve this by externalizing intermediate computation into the token stream inside a dedicated reasoning block (<code>&lt;think&gt;...&lt;/think&gt;</code>). Crucially, this is not merely a prompt-engineered 'let's think step by step' instruction. During large-scale Reinforcement Learning with Verifiable Rewards (RLVR) using algorithms like Group Relative Policy Optimization (<code>GRPO</code>, supported in <code>huggingface/trl</code>), the model explores multiple solution paths against executable code sandboxes and symbolic math verifiers.</p>
+<p>In 2026, the distinction between 'reasoning model' and 'standard chat model' has increasingly merged into <strong>hybrid reasoning models</strong> such as <code>QwenLM/Qwen3</code>.</p>
+<p>However, reasoning tokens are not a magic wand. Because every thinking token is billed as an output token and generated sequentially during the memory-bound decode phase, a reasoning call that emits 4,000 internal thinking tokens before producing a 200-token JSON response costs 21x more output tokens and adds seconds of Time-to-Visible-Answer latency.</p>
+<h2 id="section-5-comparative-analysis-engineering-comparison-standard-instruct-chat-models-vs-inference-time-reasoning-models">5. Comparative Analysis: Engineering Comparison: Standard Instruct/Chat Models vs. Inference-Time Reasoning Models</h2>
+<p>The following table compares the key engineering trade-offs, operational boundaries, and implementation choices for <strong>reasoning models</strong>:</p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Dimension</th>
+<th scope="col">Standard Chat / Instruct Model</th>
+<th scope="col">Inference-Time Reasoning Model (RLVR)</th>
+<th scope="col">Hybrid Budget-Controlled Model (2026 Pattern)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training Objective</td>
+<td>SFT + RLHF/DPO for helpfulness &amp; style</td>
+<td>RLVR (GRPO) against code/math/logic verifiers</td>
+<td>Unified SFT + RLVR with mode-switching control tokens</td>
+</tr>
+<tr>
+<td>Time to Visible Response</td>
+<td>Low (200 ms – 600 ms TTFT)</td>
+<td>High (2 s – 60+ s while <code>&lt;think&gt;</code> tokens generate)</td>
+<td>Dynamic: 250 ms in <code>/no_think</code> mode; scaled in <code>/think</code> mode</td>
+</tr>
+<tr>
+<td>Output Token Consumption</td>
+<td>1x (only visible response tokens)</td>
+<td>4x – 20x (hidden/visible thinking tokens + response)</td>
+<td>Capped by developer-configured <code>reasoning_effort</code> / budget</td>
+</tr>
+<tr>
+<td>Ideal Workloads</td>
+<td>Summarization, translation, classification, simple RAG</td>
+<td>Algorithmic coding, root-cause debugging, system planning</td>
+<td>Agentic loops that think on planning turns &amp; act fast on routine turns</td>
+</tr>
+<tr>
+<td>Failure Mode</td>
+<td>Commits to an early wrong token and rationalizes it</td>
+<td>Overthinking simple queries; latency timeouts</td>
+<td>Requires accurate routing to set appropriate token budget</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-6-system-architecture-and-execution-flow">6. System Architecture and Execution Flow</h2>
+<p>The diagram below illustrates the end-to-end control flow, verification boundaries, and state transitions for <strong>reasoning models</strong> in a production environment:</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    A[Incoming Task Prompt] --&gt; B{Task Requires Multi-Step Deduction or Code/Math Verification?}
+    B --&gt;|No: Summarization / Extraction / Lookup| C[Standard Chat Mode /no_think]
+    C --&gt; D[Immediate Output Stream TTFT ~250ms]
+    B --&gt;|Yes: Architecture / Debugging / Planning| E[Reasoning Mode /think with Token Budget Cap]
+    E --&gt; F[Generate Internal Reasoning Stream &lt;think&gt;...&lt;/think&gt;]
+    F --&gt; G[Self-Verification &amp; Backtracking Step]
+    G --&gt; H[Strip &lt;think&gt; Block from History &amp; Emit Final Answer]</pre></div>
+<p><em>Figure 14.1: Execution comparison and context management between standard chat mode and RLVR reasoning mode.</em></p>
+<h2 id="section-7-practical-implementation-steps-and-engineering-checklist">7. Practical Implementation Steps and Engineering Checklist</h2>
+<p>To implement <strong>reasoning models</strong> reliably in production systems, follow these sequential engineering steps:</p>
+<ol>
+<li>Never preserve raw <code>&lt;think&gt;...&lt;/think&gt;</code> blocks from previous turns in your multi-turn conversation history array: as documented in the official <code>deepseek-ai/DeepSeek-R1</code> and <code>QwenLM/Qwen3</code> guidelines, only the visible final assistant responses should be retained in subsequent turn histories to avoid context bloat and reasoning contamination.</li>
+<li>Set explicit thinking-token caps (<code>max_thinking_tokens</code> or <code>reasoning_effort</code>) in production API calls so an ambiguous prompt cannot trigger a 32,000-token runaway reasoning loop.</li>
+<li>Stream progress indicators or summarized reasoning status updates to the frontend UI (using <code>vercel/ai</code> reasoning stream parts) whenever a call takes more than 1.5 seconds so users know the application has not frozen.</li>
+<li>Avoid using heavy system-prompt few-shot chain-of-thought templates with RLVR reasoning models: official DeepSeek-R1 benchmarks show that forcing rigid human-written step templates onto an RL-trained reasoning model actually degrades its accuracy compared to clear zero-shot problem specifications.</li>
+<li>In agentic workflows, enable reasoning mode on the initial planning or error-recovery step, and switch to fast non-reasoning mode for routine schema formatting and tool summarization steps.</li>
+</ol>
+<h2 id="section-8-limitations-operational-risks-and-trade-offs">8. Limitations, Operational Risks, and Trade-Offs</h2>
+<p>Even well-architected deployments of <strong>reasoning models</strong> face concrete engineering constraints that teams must mitigate proactively:</p>
+<ul>
+<li>Severe latency mismatch for synchronous UX: making a user wait 18 seconds of thinking time for a simple customer-support greeting or FAQ lookup destroys conversion rates.</li>
+<li>Unfaithful reasoning traces: while <code>&lt;think&gt;</code> blocks provide helpful debugging signal for engineers, research shows that a model's verbalized chain of thought does not always faithfully reflect every internal weight activation that caused the final output.</li>
+<li>Hallucinated deduction when facts are missing: reasoning models can construct internally consistent, multi-paragraph logical chains built on a false premise if they are not grounded in RAG or search tools.</li>
+</ul>
+<h2 id="section-9-frequently-asked-questions-faqs">9. Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-do-reasoning-models-like-deepseek-r1-use-a-different-neural-architecture-than-standard-llms">Do reasoning models like DeepSeek-R1 use a different neural architecture than standard LLMs?</h3>
+<p>No. Under the hood, DeepSeek-R1 uses the exact same Transformer Mixture-of-Experts architecture as DeepSeek-V3.</p>
+<h3 id="section-should-i-include-previous-think-tokens-when-sending-multi-turn-chat-history-back-to-the-model">Should I include previous <code>&lt;think&gt;</code> tokens when sending multi-turn chat history back to the model?</h3>
+<p>No.</p>
+<h3 id="section-why-can-an-ai-reasoning-model-perform-worse-on-simple-classification-tasks">Why can an AI reasoning model perform worse on simple classification tasks?</h3>
+<p>On simple intuitive classification or creative writing tasks, extended step-by-step deliberation ('overthinking') can cause the model to second-guess obvious patterns or over-complicate straightforward instructions, while costing 10x more tokens.</p>
+<h2 id="section-10-conclusion">10. Conclusion</h2>
+<p>AI reasoning models have unlocked a powerful new dimension of compute scaling: trading inference time and output tokens for deeper verification on hard problems. By stripping historical thinking blocks from context, enforcing token budgets, and selectively enabling reasoning only where multi-step deduction is required, engineers get the best of both worlds.</p>
+<h3 id="section-github-repositories-technical-references">GitHub Repositories &amp; Technical References</h3>
+<ul>
+<li><strong>deepseek-ai/DeepSeek-R1</strong> — Official repository for DeepSeek-R1 and DeepSeek-R1-Zero, detailing large-scale reinforcement learning (GRPO) for emergent reasoning and distilled checkpoints. Verified GitHub URL: https://github.com/deepseek-ai/deepseek-r1</li>
+<li><strong>QwenLM/Qwen3</strong> — Official repository for Qwen3, featuring hybrid thinking and non-thinking execution modes with configurable reasoning token budgets. Verified GitHub URL: https://github.com/qwenLM/qwen3</li>
+<li><strong>huggingface/trl</strong> — Official Hugging Face library implementing <code>GRPOTrainer</code> for training reasoning models with verifiable reward functions. Verified GitHub URL: https://github.com/huggingface/trl</li>
+</ul>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/deepseek-ai/deepseek-r1" rel="noopener">deepseek-ai/DeepSeek-R1</a></li><li><a href="https://github.com/qwenLM/qwen3" rel="noopener">QwenLM/Qwen3</a></li><li><a href="https://github.com/huggingface/trl" rel="noopener">huggingface/trl</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fai-reasoning-models-vs-standard-chat-models-differences%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/prompt-engineering-vs-context-engineering/" aria-label="Read Prompt Engineering vs Context Engineering"><img src="/assets/images/blog/prompt-engineering-vs-context-engineering/cover.svg" alt="Prompt Engineering vs Context Engineering architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/prompt-engineering-vs-context-engineering/">Prompt Engineering vs Context Engineering</a></h3>
+<p>Understand the shift from Prompt Engineering to Context Engineering in 2026: dynamic context assembly, token budgeting, prefix-cache layout, and failure attribution.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/agentic-coding-build-test-deploy-applications/" aria-label="Read Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?"><img src="/assets/images/blog/agentic-coding-build-test-deploy-applications/cover.svg" alt="Agentic Coding: Can AI Build, Test, and Deploy an Entire Application? architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/agentic-coding-build-test-deploy-applications/">Agentic Coding: Can AI Build, Test, and Deploy an Entire Application?</a></h3>
+<p>Compare inline AI autocomplete with autonomous coding agents in 2026. Learn how terminal agents build, test, debug, and open PRs safely under CI/CD controls.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/" aria-label="Read AI Agent Development Skills: Tools, Memory, and Orchestration"><img src="/assets/images/blog/ai-agent-development-skills-tools-memory-orchestration/cover.svg" alt="AI Agent Development Skills: Tools, Memory, and Orchestration architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/">AI Agent Development Skills: Tools, Memory, and Orchestration</a></h3>
+<p>Learn practical AI agent development skills in 2026 using Pydantic AI and LangGraph: typed tool schemas, dependency injection, state reducers, and loop bounds.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

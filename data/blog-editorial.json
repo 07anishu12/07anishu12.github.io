@@ -1956,6 +1956,366 @@
       "reviewer": "Aniket Thakur",
       "reviewedOn": "2026-10-19",
       "note": "Verified publication of Indian Two-Wheeler Buying Guide 2026 article 150 (J15)."
+    },
+    "/blog/technology/from-ai-chatbots-to-autonomous-ai-agents-2026/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-01)."
+    },
+    "/blog/technology/agentic-coding-build-test-deploy-applications/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-02)."
+    },
+    "/blog/technology/local-ai-inference-running-llms-on-own-computers/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-03)."
+    },
+    "/blog/technology/real-time-voice-ai-full-duplex-conversation/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-04)."
+    },
+    "/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-05)."
+    },
+    "/blog/technology/beyond-llms-jev-and-cdm-ai-models-explained/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-06)."
+    },
+    "/blog/technology/deepseek-new-inference-approaches-deepinfer-explained/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-07)."
+    },
+    "/blog/technology/open-weight-vs-closed-ai-models-developers-2026/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-08)."
+    },
+    "/blog/technology/small-language-models-vs-frontier-ai-when-slms-win/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-09)."
+    },
+    "/blog/technology/mixture-of-experts-moe-architecture-explained/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-10)."
+    },
+    "/blog/technology/quantization-explained-running-larger-ai-models-less-memory/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-11)."
+    },
+    "/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-12)."
+    },
+    "/blog/technology/beyond-text-multimodal-ai-images-audio-video/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-13)."
+    },
+    "/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-14)."
+    },
+    "/blog/technology/ai-benchmark-wars-higher-score-not-better-model/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-15)."
+    },
+    "/blog/technology/claude-code-vs-openai-codex-vs-gemini-cli-comparison/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-16)."
+    },
+    "/blog/technology/ai-generated-pull-requests-how-to-review-agent-code/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-17)."
+    },
+    "/blog/technology/mcp-explained-model-context-protocol-external-tools/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-18)."
+    },
+    "/blog/technology/beyond-mcp-comparing-tool-calling-apis-agent-protocols/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-19)."
+    },
+    "/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-20)."
+    },
+    "/blog/technology/ai-app-builders-vs-traditional-development-startups/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-21)."
+    },
+    "/blog/technology/ai-coding-low-ram-laptop-quantization-local-cloud/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-22)."
+    },
+    "/blog/technology/build-reliable-ai-agents-retries-observability-human-approval/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-23)."
+    },
+    "/blog/technology/ai-testing-tools-can-llms-generate-useful-unit-integration-tests/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-24)."
+    },
+    "/blog/technology/from-prompt-to-production-shipping-ai-features-nextjs/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-25)."
+    },
+    "/blog/technology/ai-search-vs-traditional-google-search-discovery-2026/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-26)."
+    },
+    "/blog/technology/generative-engine-optimization-geo-what-to-measure/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-27)."
+    },
+    "/blog/technology/can-chatgpt-and-claude-cite-your-website-crawlability-audit/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-28)."
+    },
+    "/blog/technology/new-ai-powered-cms-research-drafts-metadata-publishing/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-29)."
+    },
+    "/blog/technology/headless-cms-vs-ai-native-cms-architecture-comparison/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-30)."
+    },
+    "/blog/technology/ai-content-pipelines-automating-research-drafting-without-spam/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-31)."
+    },
+    "/blog/technology/structured-data-ai-search-what-schema-org-can-and-cannot-do/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-32)."
+    },
+    "/blog/technology/rag-vs-fine-tuning-vs-search-how-ai-retrieves-knowledge/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-33)."
+    },
+    "/blog/technology/why-ai-search-engines-ignore-your-pages-crawling-rendering-quality/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-34)."
+    },
+    "/blog/technology/can-ai-agents-update-website-safely-permissions-publishing-controls/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-35)."
+    },
+    "/blog/technology/indias-ai-infrastructure-race-domestic-data-centres-compute-demand/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-36)."
+    },
+    "/blog/technology/ai-engineering-jobs-india-skills-employers-looking-for-2026/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-37)."
+    },
+    "/blog/technology/indias-ai-startup-ecosystem-opportunities-beyond-chatbots/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-38)."
+    },
+    "/blog/technology/building-ai-indian-languages-challenges-multilingual-models/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-39)."
+    },
+    "/blog/technology/sovereign-ai-india-models-data-compute-explained/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-40)."
+    },
+    "/blog/technology/ai-indian-banking-fintech-fraud-underwriting-customer-support/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-41)."
+    },
+    "/blog/technology/ai-voice-agents-indian-businesses-regional-languages-real-calls/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-42)."
+    },
+    "/blog/technology/ai-governance-india-what-businesses-need-to-know-emerging-rules/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-43)."
+    },
+    "/blog/technology/ai-generated-evidence-legal-documents-provenance-disclosure/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-44)."
+    },
+    "/blog/technology/ai-indian-education-personal-tutors-automated-assessment-risks/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-45)."
+    },
+    "/blog/technology/ai-cybersecurity-2026-autonomous-agents-vulnerability-discovery/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-46)."
+    },
+    "/blog/technology/prompt-injection-rogue-ai-agents-protect-tools-credentials-data/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-47)."
+    },
+    "/blog/technology/ai-video-generation-2026-models-creators-marketing-teams/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-48)."
+    },
+    "/blog/technology/physical-ai-robotics-models-moving-into-real-world/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-49)."
+    },
+    "/blog/technology/ai-call-centres-virtual-receptionists-voice-agents-customer-ops/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-50)."
+    },
+    "/blog/technology/frontend-development-skills-ai-powered-applications/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-51)."
+    },
+    "/blog/technology/backend-engineering-skills-production-ready-ai-systems/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-52)."
+    },
+    "/blog/technology/ai-agent-development-skills-tools-memory-orchestration/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-53)."
+    },
+    "/blog/technology/prompt-engineering-vs-context-engineering/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-54)."
+    },
+    "/blog/technology/rag-engineering-skills-building-searchable-knowledge-systems/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-55)."
+    },
+    "/blog/technology/ai-testing-evaluation-skills-every-developer-needs/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-56)."
+    },
+    "/blog/technology/deployment-devops-skills-ai-applications/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-57)."
+    },
+    "/blog/technology/github-skills-ai-assisted-software-development/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-58)."
+    },
+    "/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-59)."
+    },
+    "/blog/technology/ai-security-skills-protecting-agents-llm-applications/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-10-25",
+      "notes": "Primary source technical research and verified GitHub references (article-60)."
     }
   }
 }

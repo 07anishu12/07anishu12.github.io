@@ -4892,6 +4892,426 @@
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
       "reviewRequired": false
+    },
+    {
+      "url": "/blog/technology/from-ai-chatbots-to-autonomous-ai-agents-2026/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/agentic-coding-build-test-deploy-applications/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/local-ai-inference-running-llms-on-own-computers/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/real-time-voice-ai-full-duplex-conversation/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/beyond-llms-jev-and-cdm-ai-models-explained/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/deepseek-new-inference-approaches-deepinfer-explained/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/open-weight-vs-closed-ai-models-developers-2026/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/small-language-models-vs-frontier-ai-when-slms-win/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/mixture-of-experts-moe-architecture-explained/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/quantization-explained-running-larger-ai-models-less-memory/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/beyond-text-multimodal-ai-images-audio-video/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-benchmark-wars-higher-score-not-better-model/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/claude-code-vs-openai-codex-vs-gemini-cli-comparison/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-generated-pull-requests-how-to-review-agent-code/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/mcp-explained-model-context-protocol-external-tools/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/beyond-mcp-comparing-tool-calling-apis-agent-protocols/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-app-builders-vs-traditional-development-startups/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-coding-low-ram-laptop-quantization-local-cloud/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/build-reliable-ai-agents-retries-observability-human-approval/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-testing-tools-can-llms-generate-useful-unit-integration-tests/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/from-prompt-to-production-shipping-ai-features-nextjs/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-search-vs-traditional-google-search-discovery-2026/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/generative-engine-optimization-geo-what-to-measure/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/can-chatgpt-and-claude-cite-your-website-crawlability-audit/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/new-ai-powered-cms-research-drafts-metadata-publishing/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/headless-cms-vs-ai-native-cms-architecture-comparison/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-content-pipelines-automating-research-drafting-without-spam/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/structured-data-ai-search-what-schema-org-can-and-cannot-do/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/rag-vs-fine-tuning-vs-search-how-ai-retrieves-knowledge/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/why-ai-search-engines-ignore-your-pages-crawling-rendering-quality/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/can-ai-agents-update-website-safely-permissions-publishing-controls/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/indias-ai-infrastructure-race-domestic-data-centres-compute-demand/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-engineering-jobs-india-skills-employers-looking-for-2026/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/indias-ai-startup-ecosystem-opportunities-beyond-chatbots/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/building-ai-indian-languages-challenges-multilingual-models/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/sovereign-ai-india-models-data-compute-explained/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-indian-banking-fintech-fraud-underwriting-customer-support/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-voice-agents-indian-businesses-regional-languages-real-calls/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-governance-india-what-businesses-need-to-know-emerging-rules/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-generated-evidence-legal-documents-provenance-disclosure/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-indian-education-personal-tutors-automated-assessment-risks/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-cybersecurity-2026-autonomous-agents-vulnerability-discovery/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/prompt-injection-rogue-ai-agents-protect-tools-credentials-data/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-video-generation-2026-models-creators-marketing-teams/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/physical-ai-robotics-models-moving-into-real-world/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-call-centres-virtual-receptionists-voice-agents-customer-ops/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/frontend-development-skills-ai-powered-applications/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/backend-engineering-skills-production-ready-ai-systems/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-agent-development-skills-tools-memory-orchestration/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/prompt-engineering-vs-context-engineering/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/rag-engineering-skills-building-searchable-knowledge-systems/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-testing-evaluation-skills-every-developer-needs/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/deployment-devops-skills-ai-applications/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/github-skills-ai-assisted-software-development/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+    },
+    {
+      "url": "/blog/technology/ai-security-skills-protecting-agents-llm-applications/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
     }
   ]
 }

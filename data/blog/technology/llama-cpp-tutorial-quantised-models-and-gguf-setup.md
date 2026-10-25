@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/llama-cpp-tutorial-quantised-models-and-gguf-set
 coverImageAlt: Diagram explaining llama.cpp tutorial
 imageCaption: Original explanatory diagram showing llama.cpp tutorial and its
   main decision points.
-draft: false
+draft: true
 featured: false
 sources:
   - title: llama.cpp official repository
@@ -26,22 +26,24 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "llama.cpp Tutorial: Run Quantized LLMs with Lower Memory
-    Requirements: Key Verdict & Summary"
-  answer: llama.cpp runs supported language models through a native inference
-    engine and supports quantised weights that can reduce memory demand.
+  question: What is llama.cpp and how do quantized GGUF models work?
+  answer: llama.cpp is a high-performance C/C++ inference engine without external
+    dependencies; it pioneered GGUF quantization, reducing 16-bit float model
+    weights to 4-bit integers with minimal perplexity degradation.
   facts:
-    - label: Category & Focus
-      value: Free and open-weight LLMs
-    - label: Verified Word Count
-      value: 801 words
+    - label: Quantization savings
+      value: ~70% memory reduction
+    - label: Inference speedup
+      value: 2x – 4x on CPU/Metal
   goodFor:
-    - Readers evaluating llama.cpp tutorial.
-    - Practitioners needing verified benchmarks and calculations.
+    - Apple Silicon (Metal acceleration) and memory-constrained PCs.
+    - Fine-grained control over GPU layer offloading and thread allocation.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Selecting overly compressed quants (Q2_K) which produce noticeable quality
+      degradation.
+    - Mismatch between compiler flags and CPU vector instruction sets
+      (AVX2/AVX512).
+  note: GGUF files store both model architecture hyperparameters and tensor weights.
 ---
 
 llama.cpp runs supported language models through a native inference engine and supports quantised weights that can reduce memory demand. Choose a compatible build and model before tuning performance. Quantisation helps a model fit, but file size alone cannot guarantee usable speed, answer quality or sufficient memory for a long conversation.

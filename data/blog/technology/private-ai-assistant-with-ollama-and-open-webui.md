@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/private-ai-assistant-with-ollama-and-open-webui/
 coverImageAlt: Diagram explaining private AI assistant
 imageCaption: Original explanatory diagram showing private AI assistant and its
   main decision points.
-draft: false
+draft: true
 featured: false
 sources:
   - title: Ollama FAQ
@@ -26,22 +26,27 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: "How to Build a Private AI Assistant Using Ollama and Open WebUI: Key
-    Verdict & Summary"
-  answer: A private assistant using Ollama and Open WebUI needs more than a local
-    model.
+  question: How do you build a private local AI assistant with Ollama and Open WebUI?
+  answer: By pairing Ollama (running an 8B open model on local hardware) with Open
+    WebUI in Docker, you get an air-gapped ChatGPT clone with local document RAG
+    and web search—keeping 100% of your data on your machine.
   facts:
-    - label: Category & Focus
-      value: Local AI and hardware
-    - label: Verified Word Count
-      value: 784 words
+    - label: Data privacy
+      value: 100% offline & local
+    - label: RAG capabilities
+      value: PDF, DOCX, TXT document search
   goodFor:
-    - Readers evaluating private AI assistant.
-    - Practitioners needing verified benchmarks and calculations.
+    - Confidential document analysis, sensitive code review, and private
+      journaling.
+    - Zero monthly subscription costs for high-volume conversational AI
+      assistance.
   watchFor:
-    - Verify dated prices and regional specifications before committing.
-    - Review primary source disclosures and product documentation.
-  note: 2026 Reference Edition · Verified Secondary Research
+    - Ensuring web search features are disabled if strict offline compliance is
+      required.
+    - Setting up automated database backups for conversation history and indexed
+      embeddings.
+  note: Can run completely disconnected from the public internet once models are
+    pulled.
 ---
 
 A private assistant using Ollama and Open WebUI needs more than a local model. Keep generation, document processing and embeddings on approved infrastructure, restrict access, and understand saved data. Start with one local model and harmless documents; add external integrations only after their data paths are clear.
