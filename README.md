@@ -290,7 +290,7 @@ git push origin main
 GA4 is configured with the owner-supplied Measurement ID in **one location**, `assets/js/site-config.js`:
 
 ```javascript
-measurementId: 'G-R1WX270J0D' // Empty string disables the Google tag.
+measurementId: 'G-JB7DKFEC0Q' // Empty string disables the Google tag.
 ```
 
 Find it in Google Analytics → Admin → Data streams → select the website stream → Measurement ID. Check that the stream Website URL is `https://07anishu12.github.io/`. Rebuild and deploy after changing it. Never add a second gtag/GTM snippet. No service-account key or private credential is needed.
@@ -382,6 +382,6 @@ The validator checks every llms.txt link, published article inclusion, RSS absen
 
 ### GA4 activation
 
-The owner supplied `G-R1WX270J0D` on 21 October 2026. The shared loader initialises this ID once on the exact production origin and sends the default page view. All 32 public HTML pages include one versioned configuration script followed by one Analytics loader. Configuration URLs use a content hash so an older cached empty ID does not delay activation after deployment. Local and draft-preview tracking stays disabled.
+The owner supplied `G-JB7DKFEC0Q` on 25 October 2026. The shared loader initialises this ID once on the exact production origin and sends the default page view. All 32 public HTML pages include one versioned configuration script followed by one Analytics loader. Configuration URLs use a content hash so an older cached empty ID does not delay activation after deployment. Local and draft-preview tracking stays disabled.
 
 The implementation includes `share`, `contact_click`, and `outbound_reference` events and article category/slug context. Resume downloads rely on Enhanced measurement `file_download`. Complete the stream settings described above: Page views/File downloads on, Outbound clicks/Site search/Form interactions off. Those Google account settings and actual event collection must be confirmed in Tag Assistant or Realtime; installed code and passing local tests alone do not prove receipt. Chrome computer-use access was unavailable during implementation, so no account setting, Search Console link, custom dimension, or Realtime result is claimed as configured or confirmed.
