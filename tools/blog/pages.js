@@ -15,6 +15,7 @@ function enhancePortfolio(html, root = ROOT) {
   const config = versionedAsset(root, 'assets/js/site-config.js');
   const leadScript = versionedAsset(root, 'assets/js/lead-capture.js');
   html = html.replace(/\s*<link\b[^>]*type="application\/rss\+xml"[^>]*>/g, '');
+  html = html.replace(/<script\b[^>]*src=["']\/assets\/js\/lead-capture\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>/g, '');
   html = html.replace(/href="\/assets\/css\/blog\.css(?:\?[^\"]*)?"/g, `href="${style}"`);
   html = html.replace(/src="\/assets\/js\/site-config\.js(?:\?[^\"]*)?"/g, `src="${config}"`);
   html = html.replace(/(<nav\b[^>]*class="(?:desktop-nav|mobile-nav[^\"]*)"[^>]*>)([\s\S]*?)(<\/nav>)/g, (_, open, body, close) => {
