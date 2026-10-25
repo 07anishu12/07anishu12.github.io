@@ -63,11 +63,25 @@ ${link('Crawler policy', '/robots.txt', 'Crawl rules; this navigation file does 
 }
 
 function sitemap(posts, root = ROOT) {
-  // Preserve existing portfolio entries (and their lastmod), replacing only blog entries.
+  // Preserve existing portfolio entries and real lastmod values, replacing only blog entries.
   const current = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  const preserved = (current.match(/<url>[\s\S]*?<\/url>/g) || [])
-    .filter(item => !/<loc>https?:\/\/[^/]+\/blog\//.test(item))
-    .map(item => item.replace(/<loc>https?:\/\/[^/]+/g, `<loc>${ORIGIN}`));
+  const removedPaths = new Set(['/about', '/about.html', '/contact', '/contact.html', '/privacy', '/privacy.html', '/work.html', '/index.html']);
+  const normalizePath = value => {
+    const url = new URL(value);
+    if (url.pathname !== '/' && !url.pathname.endsWith('/') && !path.extname(url.pathname)) url.pathname += '/';
+    return `${ORIGIN}${url.pathname}`;
+  };
+  const seen = new Set();
+  const preserved = [];
+  for (const item of current.match(/<url>[\s\S]*?<\/url>/g) || []) {
+    const source = item.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
+    if (!source || /https?:\/\/[^/]+\/blog\//.test(item)) continue;
+    const loc = normalizePath(source);
+    if (removedPaths.has(new URL(loc).pathname) || seen.has(loc)) continue;
+    seen.add(loc);
+    const lastmod = item.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/)?.[1];
+    preserved.push(`<url><loc>${loc}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`);
+  }
   const listingUrls = [...outputs(posts, { root }).keys()].filter(f => {
     if (!f.endsWith('index.html')) return false;
     if (posts.some(p => f === `${p.url.slice(1)}index.html`)) return false;
@@ -79,11 +93,17 @@ function sitemap(posts, root = ROOT) {
     const url = '/' + file.replace(/index\.html$/, '');
     const category = url.match(new RegExp(`^\\/blog\\/(${Object.keys(CATEGORIES).join('|')})\\/`))?.[1];
     const dates = posts.filter(p => !category || p.category === category).map(p => p.dateModified || p.datePublished).sort();
-    const lastmod = dates.length ? dates.at(-1) : (posts.map(p => p.dateModified || p.datePublished).sort().at(-1) || '2026-09-30');
-    return `<url><loc>${ORIGIN}${url}</loc><lastmod>${lastmod}</lastmod></url>`;
+    const lastmod = dates.length ? dates.at(-1) : '';
+    return `<url><loc>${ORIGIN}${url}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`;
   });
   for (const p of posts) rows.push(`<url><loc>${ORIGIN}${p.url}</loc><lastmod>${p.dateModified || p.datePublished}</lastmod></url>`);
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...preserved, ...rows].map(row => '  ' + row).join('\n')}\n</urlset>\n`;
+  const entries = [...preserved, ...rows].filter(row => {
+    const loc = row.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
+    if (!loc || seen.has(loc)) return false;
+    seen.add(loc);
+    return true;
+  });
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.map(row => '  ' + row).join('\n')}\n</urlset>\n`;
 }
 
 function updateHome(html, posts) {

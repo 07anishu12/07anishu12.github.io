@@ -8,6 +8,10 @@ fs.mkdirSync("generated", { recursive: true });
 fs.writeFileSync("generated/posts.json", JSON.stringify(readArticles()));
 const root = path.resolve("../.."),
   out = path.resolve("public");
+const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+  const file = path.join(directory, entry.name);
+  return entry.isDirectory() ? walk(file) : [file];
+});
 // This directory contains only generated, gitignored public artifacts.
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
@@ -53,6 +57,31 @@ if (fs.existsSync(sitemapPath)) {
   }
   xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${normalized.map((entry) => `  ${entry}`).join("\n")}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, xml);
+}
+
+const publicRouteReplacements = [
+  ['/about.html', '/about/'],
+  ['/contact.html', '/contact/'],
+  ['/privacy.html', '/privacy/'],
+  ['/work.html', '/projects/'],
+];
+for (const file of walk(out).filter((value) => value.endsWith('.html'))) {
+  let html = fs.readFileSync(file, "utf8");
+  for (const [from, to] of publicRouteReplacements) html = html.replaceAll(`href="${from}"`, `href="${to}"`);
+  fs.writeFileSync(file, html);
+}
+
+const llmsPath = path.join(out, "llms.txt");
+if (fs.existsSync(llmsPath)) {
+  let llms = fs.readFileSync(llmsPath, "utf8");
+  for (const [from, to] of [
+    ['/about.html', '/about/'],
+    ['/work.html', '/projects/'],
+    ['/research/index.html', '/research/'],
+    ['/contact.html', '/contact/'],
+    ['/privacy.html', '/privacy/'],
+  ]) llms = llms.replaceAll(from, to);
+  fs.writeFileSync(llmsPath, llms);
 }
 
 const configPath = path.join(out, "assets/js/site-config.js");

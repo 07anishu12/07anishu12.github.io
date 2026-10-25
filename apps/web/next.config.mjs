@@ -3,6 +3,7 @@ const nextConfig = {
   output: "standalone",
   transpilePackages: ["@portfolio/contracts"],
   trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   outputFileTracingRoot: path.join(process.cwd(), "../.."),
   poweredByHeader: false,
   outputFileTracingIncludes: { "/*": ["../../data/blog/**/*.md"] },

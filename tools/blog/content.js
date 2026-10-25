@@ -19,6 +19,9 @@ const escape = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&l
 const json = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const assert = (ok, message) => { if (!ok) throw new Error(message); };
 const httpUrl = s => { try { const u = new URL(s); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password; } catch { return false; } };
+const personEntity = () => ({ '@type': 'Person', '@id': `${ORIGIN}/#person`, name: 'Aniket Thakur', url: `${ORIGIN}/author/aniket-thakur.html`, image: `${ORIGIN}/assets/img/aniket-portrait.png`, description: 'AI engineering, backend systems, product development and financial engineering.' });
+const websiteEntity = () => ({ '@type': 'WebSite', '@id': `${ORIGIN}/#website`, url: `${ORIGIN}/`, name: 'Aniket Thakur', description: 'Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.', publisher: { '@id': `${ORIGIN}/#person` }, inLanguage: 'en' });
+const siteGraph = ({ url, title, description }) => ({ '@context': 'https://schema.org', '@graph': [personEntity(), websiteEntity(), { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en', isPartOf: { '@id': `${ORIGIN}/#website` }, about: { '@id': `${ORIGIN}/#person` } }] });
 
 function renderMarkdown(body) {
   const md = new MarkdownIt({ html: false, linkify: false, typographer: false }).use(footnote);
@@ -134,4 +137,4 @@ function readArticles(options = {}) {
   }
   return posts.sort((a, b) => b.datePublished.localeCompare(a.datePublished) || a.slug.localeCompare(b.slug));
 }
-module.exports = { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape, json, assert, renderMarkdown, parseArticle, readArticles };
+module.exports = { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape, json, assert, renderMarkdown, parseArticle, readArticles, siteGraph };

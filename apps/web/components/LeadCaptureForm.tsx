@@ -95,7 +95,7 @@ export function LeadCaptureForm({
     try {
       const endpoint = API_URL ? API_URL.replace(/\/$/, "") : "";
       if (!token.current) {
-        const result = await fetch(`${endpoint}/api/v1/leads/token`, {
+        const result = await fetch(`${endpoint}/api/v1/leads/token/`, {
           cache: "no-store",
         });
         const data = await result.json();
@@ -106,7 +106,7 @@ export function LeadCaptureForm({
           );
         token.current = data.submissionToken;
       }
-      const response = await fetch(`${endpoint}/api/v1/leads`, {
+      const response = await fetch(`${endpoint}/api/v1/leads/`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({

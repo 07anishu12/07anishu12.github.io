@@ -245,7 +245,7 @@ export function InquiryModal() {
     try {
       // Step 1: Obtain or reuse session submission token
       if (!tokenRef.current) {
-        const tokenRes = await fetch("/api/v1/leads/token", { cache: "no-store" });
+        const tokenRes = await fetch("/api/v1/leads/token/", { cache: "no-store" });
         const tokenData = await tokenRes.json().catch(() => ({}));
         if (!tokenRes.ok || typeof tokenData.submissionToken !== "string") {
           throw new Error(
@@ -298,7 +298,7 @@ export function InquiryModal() {
             };
 
       // Step 3: POST submission
-      const response = await fetch("/api/v1/leads", {
+      const response = await fetch("/api/v1/leads/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
