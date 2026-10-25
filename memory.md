@@ -80,3 +80,9 @@ Executed2026-10-25; detailed results in `docs/migration/acceptance-report.md`, l
 - Fixed duplicate lead-capture script tags across the 28 legacy HTML pages identified during PR review. Updated `tools/blog/pages.js` to remove existing lead-capture script tags before injecting the current versioned script, preventing duplicates on regenerated legacy pages.
 - These changes are committed on `migration/portfolio-lead-platform`. Re-run CI after the final update and verify the generated output before merge.
 - Production is still not cut over: hosted preview, managed PostgreSQL, Google Sheets service-account access/header alignment, WhatsApp provider credentials/template/webhook, and custom-domain configuration remain pending.
+
+## End-to-End Audit & Clean Re-build Verification — 2026-10-25
+- Resolved CI runner failure (`git diff --check` whitespace violation): `tools/blog/pages.js` updated to update `leadScript` in-place and cleanly deduplicate duplicate tags without leaving orphaned indentation spaces (`  \n`).
+- Added regression test `enhancePortfolio idempotency, single-tag injection, and whitespace hygiene` to `tools/blog/test.js`.
+- All 27 root publishing tests passed (`pnpm test`), 11 API/database integration tests passed with real PostgreSQL (`TEST_DATABASE_URL=postgresql:///postgres pnpm api:test`), Next.js 16.4.1 web build (348 pages) and API build succeeded, ESLint, Prettier, and TypeScript strict checks passed.
+- `git diff --check` now exits with code 0 on clean and post-build working directories.

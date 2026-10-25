@@ -15,9 +15,14 @@ function enhancePortfolio(html, root = ROOT) {
   const config = versionedAsset(root, 'assets/js/site-config.js');
   const leadScript = versionedAsset(root, 'assets/js/lead-capture.js');
   html = html.replace(/\s*<link\b[^>]*type="application\/rss\+xml"[^>]*>/g, '');
-  html = html.replace(/<script\b[^>]*src=["']\/assets\/js\/lead-capture\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>/g, '');
   html = html.replace(/href="\/assets\/css\/blog\.css(?:\?[^\"]*)?"/g, `href="${style}"`);
   html = html.replace(/src="\/assets\/js\/site-config\.js(?:\?[^\"]*)?"/g, `src="${config}"`);
+  html = html.replace(/src=["']\/assets\/js\/lead-capture\.js(?:\?[^"']*)?["']/g, `src="${leadScript}"`);
+  let firstLeadScript = true;
+  html = html.replace(/[ \t]*<script\b[^>]*src=["']\/assets\/js\/lead-capture\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>\r?\n?/g, match => {
+    if (firstLeadScript) { firstLeadScript = false; return match; }
+    return '';
+  });
   html = html.replace(/(<nav\b[^>]*class="(?:desktop-nav|mobile-nav[^\"]*)"[^>]*>)([\s\S]*?)(<\/nav>)/g, (_, open, body, close) => {
     if (!body.includes('href="/blog/"')) body = body.replace(/(<a\b[^>]*>Contact<\/a>)/, '<a href="/blog/">Blog</a>\n      $1');
     return open + body + close;

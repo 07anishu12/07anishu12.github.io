@@ -373,3 +373,15 @@ test('Static lead capture retries the same token and requires a persistence rece
   assert.equal(whatsapp.href, 'https://wa.me/817012905081');
   assert.ok(calls.every(c => !c.url.includes(values.mobile) && !c.url.includes(values.pinCode)));
 });
+
+test('enhancePortfolio idempotency, single-tag injection, and whitespace hygiene', () => {
+  const { enhancePortfolio } = require('./pages');
+  const sample = '<!doctype html>\n<html lang="en">\n<head>\n<title>Test</title>\n</head>\n<body>\n<main></main>\n</body>\n</html>';
+  const once = enhancePortfolio(sample);
+  const twice = enhancePortfolio(once);
+  assert.equal(once, twice, 'enhancePortfolio must be strictly idempotent on repeated passes');
+  assert.equal((twice.match(/\/assets\/js\/lead-capture\.js/g) || []).length, 1);
+  assert.equal((twice.match(/\/assets\/js\/site-config\.js/g) || []).length, 1);
+  assert.equal((twice.match(/\/assets\/css\/blog\.css/g) || []).length, 1);
+  assert.doesNotMatch(twice, /[ \t]+$/m, 'enhancePortfolio must never introduce trailing whitespace');
+});
