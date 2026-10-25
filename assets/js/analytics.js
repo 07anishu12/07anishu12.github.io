@@ -44,8 +44,11 @@
       const a = event.target.closest('a, button');
       if (!a) return;
       const href = a.getAttribute('href') || '';
-      let name, params = { ...context };
-      if (a.dataset.share) { name = 'share'; params.method = a.dataset.share; params.content_type = 'article'; params.item_id = canonical; }
+      const currentCanonical = document.querySelector('link[rel="canonical"]')?.href || canonical;
+      const currentArticle = document.querySelector('[data-article-slug]');
+      const currentContext = currentArticle ? { article_category: currentArticle.dataset.articleCategory, article_slug: currentArticle.dataset.articleSlug } : context;
+      let name, params = { ...currentContext };
+      if (a.dataset.share) { name = 'share'; params.method = a.dataset.share; params.content_type = 'article'; params.item_id = currentCanonical; }
       else if (href.startsWith('mailto:')) { name = 'contact_click'; params.contact_method = 'email'; }
       else if (href.startsWith('tel:')) { name = 'contact_click'; params.contact_method = 'phone'; }
       else if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) { name = 'contact_click'; params.contact_method = 'whatsapp'; }
