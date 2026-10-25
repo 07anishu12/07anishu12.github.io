@@ -11,6 +11,7 @@ test_debug.html
 
 # Dependencies and generated artifacts (sources and ownership manifest are tracked)
 node_modules/
+**/dist/
 _site/
 _preview/
 .validation/
@@ -18,3 +19,11 @@ _preview/
 .env.local
 .env.*.local
 !.env.example
+
+# Migration build outputs and server credentials
+**/.next/
+**/*.tsbuildinfo
+.vercel/
+.env.*
+!.env.example
+*.service-account.json

@@ -13,6 +13,38 @@ This is the personal portfolio website of **Aniket Thakur**, based in New Delhi,
 
 Aniket is an Associate Product Manager at Drivio Technologies (previously Business Analyst), conducted AI research on Graph Neural Networks and multi-LLM data synthesis at Okinawa Institute of Science and Technology (OIST) in Japan, and consulted on startup GTM and financial analysis at Analy Assist. He is an M.Sc. Financial Engineering candidate at WorldQuant University and graduated with a B.Sc. in Data Analytics from DSEU Shakarpur-2 (GPA 3.82/4.0, Rank 2).
 
+## Next.js migration and lead platform
+
+The migration continues in this repository on `migration/portfolio-lead-platform`.
+Read [memory.md](memory.md) before making changes. The current GitHub Pages site
+remains the rollback deployment; this branch does not authorize production cutover.
+
+- `apps/web`: Next.js frontend, independently deployable to Vercel.
+- `apps/api`: Hono API and PostgreSQL-backed lead processing worker.
+- `packages/contracts`: shared validation and response contracts.
+- `data/blog` and `tools/blog`: preserved Markdown publishing workflow.
+
+Use Node.js 22 or newer and the pinned pnpm version in `package.json`:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm test
+pnpm build
+pnpm check
+pnpm --filter @portfolio/api typecheck
+pnpm --filter @portfolio/api test
+pnpm --filter @portfolio/api build
+pnpm --filter @portfolio/web build
+```
+
+Copy each application's `.env.example` into an ignored local environment file and
+supply credentials through the hosting provider for deployment. Never expose database,
+Google, or WhatsApp credentials through `NEXT_PUBLIC_*` variables. See the API README
+for migrations and worker commands, [architecture](docs/architecture/overview.md),
+[deployment](docs/deployment/vercel.md), and the
+[acceptance report](docs/migration/acceptance-report.md) for executed checks and blockers.
+Provider code is not proof of live delivery.
+
 ## Live Site
 
 **[https://07anishu12.github.io](https://07anishu12.github.io)**
@@ -23,7 +55,7 @@ Source pages remain at the repository root. The new Pages workflow builds and de
 
 - **Home (`index.html`)** — Asymmetric editorial hero with full-resolution portrait, clean proof statistics, 3-pillar focus (AI, Product, Finance), featured Laya case study, secondary systems, career progression, OIST research monograph, education, and direct contact.
 - **About (`about.html`)** — Comprehensive personal profile, current focus at Drivio, trajectory from New Delhi to Okinawa, categorized technical toolkit, and academic background.
-- **Work (`work.html`)** — Case-study index highlighting Laya (70% cycle reduction), Prompt-Based Business Intelligence, osTicket AI automation, and Multi-LLM Orchestration with structured problem, approach, tech, and verified outcome cells.
+- **Work (`work.html`)** — Case-study index highlighting Laya (historical outcome claims require supporting evidence), Prompt-Based Business Intelligence, osTicket AI automation, and Multi-LLM Orchestration with structured problem, approach, tech, and verified outcome cells.
 - **Learnings (`learnings.html`)** — Clean editorial state with categorized topics (AI Engineering, Fintech, Product, Research) and dynamic data rendering.
 - **Contact (`contact.html`)** — Direct contact information (email, phone, international WhatsApp, socials) paired with a static WhatsApp enquiry workflow and prefilled email fallback.
 

@@ -2,6 +2,7 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@12.15.0",
   "description": "Aniket Thakur personal portfolio and knowledge library",
   "scripts": {
     "admin": "node tools/admin/server.js",
@@ -18,14 +19,22 @@
     "sync:medium:dry-run": "node scripts/sync-medium.mjs --dry-run",
     "sync:medium:report": "node scripts/sync-medium.mjs --report",
     "migration:dashboard": "node tools/migration/server.js",
-    "search-console": "node tools/blog/verification.js"
+    "search-console": "node tools/blog/verification.js",
+    "api:build": "pnpm --filter @portfolio/api build",
+    "api:test": "pnpm --filter @portfolio/api test",
+    "lint": "eslint apps packages",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,mjs,css}\" \"packages/**/*.ts\""
   },
   "devDependencies": {
     "axe-core": "^4.14.0",
     "cheerio": "^1.2.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
     "image-size": "^2.0.4",
     "markdown-it": "^15.0.3",
     "markdown-it-footnote": "^4.0.0",
+    "prettier": "^3.9.10",
+    "typescript-eslint": "^8.72.0",
     "yaml": "^2.9.1"
   },
   "engines": {

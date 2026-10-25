@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const { createHash } = require('node:crypto');
 const { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape: e, json, assert } = require('./content');
+const { renderLeadCapture } = require('./lead-capture');
 const date = value => new Date(`${value}T00:00:00Z`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 function versionedAsset(root, file) {
@@ -12,6 +13,7 @@ const stylesheet = root => versionedAsset(root, 'assets/css/blog.css');
 function enhancePortfolio(html, root = ROOT) {
   const style = stylesheet(root);
   const config = versionedAsset(root, 'assets/js/site-config.js');
+  const leadScript = versionedAsset(root, 'assets/js/lead-capture.js');
   html = html.replace(/\s*<link\b[^>]*type="application\/rss\+xml"[^>]*>/g, '');
   html = html.replace(/href="\/assets\/css\/blog\.css(?:\?[^\"]*)?"/g, `href="${style}"`);
   html = html.replace(/src="\/assets\/js\/site-config\.js(?:\?[^\"]*)?"/g, `src="${config}"`);
@@ -24,6 +26,7 @@ function enhancePortfolio(html, root = ROOT) {
     [`href="${style}"`, `<link rel="stylesheet" href="${style}">`],
     ['href="/assets/favicon.svg"', '<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">'],
     [`src="${config}"`, `<script src="${config}" defer></script>`],
+    [`src="${leadScript}"`, `<script src="${leadScript}" defer></script>`],
     ['src="/assets/js/analytics.js"', '<script src="/assets/js/analytics.js" defer></script>'],
     ['name="robots"', '<meta name="robots" content="index, follow, max-image-preview:large">']
   ];
@@ -76,6 +79,7 @@ ${post ? `<meta property="article:published_time" content="${post.datePublished}
 <link rel="stylesheet" href="${stylesheet(root)}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script src="${versionedAsset(root, 'assets/js/site-config.js')}" defer></script>
+<script src="${versionedAsset(root, 'assets/js/lead-capture.js')}" defer></script>
 <script src="/assets/js/analytics.js" defer></script>
 ${graph.map(s => `<script type="application/ld+json">${json(s)}</script>`).join('\n')}
 </head>
@@ -160,6 +164,7 @@ ${post.headings.length >= 3 ? `<nav class="blog-toc" aria-labelledby="article-to
 <div class="blog-body" id="article-details">${post.html}</div>
 ${post.category === 'finance' ? '<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>' : ''}
 ${post.sources.length && post.showSources !== false ? `<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol>${post.sources.map(s => `<li><a href="${e(s.url)}" rel="noopener">${e(s.title)}</a></li>`).join('')}</ol></section>` : ''}
+${renderLeadCapture(post)}
 ${enquiry(post, options.root || ROOT)}
 <div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="${ORIGIN}${post.url}">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(ORIGIN + post.url)}" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
 ${related.length ? `<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid">${related.map(p => card(p, 'h3')).join('')}</div></section>` : ''}
