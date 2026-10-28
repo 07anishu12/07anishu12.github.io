@@ -137,13 +137,17 @@ test('Publishing lifecycle, safe cleanup, draft exclusion, sitemap, llms.txt, an
   try {
     const valid = example.replace('draft: true', 'draft: false');
     fs.writeFileSync(f.file, valid);
+    const sitemapFile = path.join(f.root, 'sitemap.xml');
+    fs.writeFileSync(sitemapFile, fs.readFileSync(sitemapFile, 'utf8').replace(/\s*<url><loc>https:\/\/aniket\.app\/<\/loc><\/url>/, ''));
     // Synthetic filename/content exclusively in the temporary test workspace.
     fs.writeFileSync(path.join(f.root, 'googleSYNTHETIC.html'), 'google-site-verification: googleSYNTHETIC.html\n');
     let dir = buildSite({ root: f.root });
     checkSite(dir, f.root);
     const originalSitemap = fs.readFileSync(path.join(f.root, 'sitemap.xml'), 'utf8');
+    assert.ok(originalSitemap.includes('<loc>https://aniket.app/</loc>'), 'canonical homepage is missing');
+    assert.equal((originalSitemap.match(/<loc>https:\/\/aniket\.app\/<\/loc>/g) || []).length, 1, 'canonical homepage should occur exactly once');
     buildSite({ root: f.root });
-    assert.equal(fs.readFileSync(path.join(f.root, 'sitemap.xml'), 'utf8'), originalSitemap, 'lastmod changes on an unchanged build');
+    assert.equal(fs.readFileSync(sitemapFile, 'utf8'), originalSitemap, 'sitemap changes on an unchanged build');
     const oldFile = path.join(f.root, 'blog/technology/formatting-example/index.html');
     fs.writeFileSync(f.file, valid.replace('slug: "formatting-example"', 'slug: "renamed-example"'));
     dir = buildSite({ root: f.root });

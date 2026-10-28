@@ -22,6 +22,12 @@ test("validates sitemap, robots, metadata, social image, and JSON-LD", () => {
   assert.deepEqual(validateSite(root), { urls: 1, htmlPages: 1, schemaTypes: { Person: 1, WebSite: 1 } });
 });
 
+test("rejects a sitemap missing the canonical homepage", () => {
+  const root = fixture();
+  fs.writeFileSync(path.join(root, "sitemap.xml"), `<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://aniket.app/about/</loc></url></urlset>`);
+  assert.throws(() => validateSite(root), /missing the canonical homepage/);
+});
+
 test("rejects redirecting sitemap entries and obsolete priority fields", () => {
   const root = fixture();
   fs.writeFileSync(path.join(root, "sitemap.xml"), `<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://aniket.app/about.html</loc><priority>1</priority></url></urlset>`);

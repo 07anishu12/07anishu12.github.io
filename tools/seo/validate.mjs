@@ -58,6 +58,7 @@ export function validateSite(root) {
   const sitemap = load(fs.readFileSync(sitemapPath, "utf8"), { xmlMode: true });
   const urls = sitemap("url > loc").map((_, element) => sitemap(element).text()).get();
   check(urls.length > 0, "sitemap.xml contains no URLs");
+  check(urls.includes(`${ORIGIN}/`), "sitemap.xml is missing the canonical homepage");
   check(new Set(urls).size === urls.length, "sitemap.xml contains duplicate URLs");
   check(!sitemap("changefreq").length && !sitemap("priority").length, "sitemap.xml contains changefreq or priority");
   for (const url of urls) {

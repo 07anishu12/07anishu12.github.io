@@ -97,12 +97,14 @@ function sitemap(posts, root = ROOT) {
     return `<url><loc>${ORIGIN}${url}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`;
   });
   for (const p of posts) rows.push(`<url><loc>${ORIGIN}${p.url}</loc><lastmod>${p.dateModified || p.datePublished}</lastmod></url>`);
-  const entries = [...preserved, ...rows].filter(row => {
+  const entries = [...preserved];
+  for (const row of rows) {
     const loc = row.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
-    if (!loc || seen.has(loc)) return false;
+    if (!loc || seen.has(loc)) continue;
     seen.add(loc);
-    return true;
-  });
+    entries.push(row);
+  }
+  if (!seen.has(`${ORIGIN}/`)) entries.unshift(`<url><loc>${ORIGIN}/</loc></url>`);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.map(row => '  ' + row).join('\n')}\n</urlset>\n`;
 }
 

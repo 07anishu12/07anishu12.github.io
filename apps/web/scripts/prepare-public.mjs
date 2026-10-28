@@ -59,6 +59,7 @@ if (fs.existsSync(sitemapPath)) {
     })
     .filter(Boolean);
   const paths = [
+    "/",
     "/about/",
     "/work/",
     "/projects/",
