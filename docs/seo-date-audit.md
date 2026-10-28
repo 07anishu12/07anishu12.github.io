@@ -7,10 +7,10 @@ This is an internal editorial control file. It is not copied into the public Git
 ## Summary
 
 - Evidence-backed article dates: **26**.
-- Owner-confirmed publication records: **300**.
+- Owner-confirmed publication records: **400**.
 - Retained but unresolved article dates: **0**.
 - Draft article records: **0**.
-- Source records audited: **326**.
+- Source records audited: **426**.
 
 The Tata Aeris article is supported by its original publication commit and successful Pages deployment. The other batch-generated records retain their existing source dates and are marked owner-confirmed because the site owner confirmed that they were already published. Their dates are not independently reconstructed from a random range.
 
@@ -101,16 +101,35 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/abs-vs-cbs-bikes/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/abs-vs-cbs-braking-systems-what-should-a-bike-buyer-know/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/access-125-vs-activa-125-daily-scooter-comparison/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/activa-125-vs-jupiter-125-vs-access-125/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/adas-in-indian-cars-acc-aeb-and-lane-assistance/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/apache-rtr-160-4v-vs-pulsar-n160-value-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/ather-450x-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/ather-450x-vs-tvs-iqube/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/ather-rizta-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/ather-rizta-vs-tvs-iqube-family-ev-comparison/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/ather-rizta-vs-tvs-iqube/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-chetak-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-chetak-vs-ather-rizta/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-platina-100-vs-hero-splendor-plus/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-platina-110-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-150-vs-pulsar-n160-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-150-vs-tvs-apache-rtr-160/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-220f-mileage-and-top-speed/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-n125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/bajaj-pulsar-n125-price-features-and-who-should-buy-it/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/bajaj-pulsar-n160-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-ns125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bajaj-pulsar-ns160-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/bajaj-pulsar-ns160-vs-tvs-apache-rtr-160-which-offers-better-value/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-100-to-125cc-bikes-for-daily-commuting/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-100cc-bikes-in-india-price-mileage-and-features/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-110cc-bikes-in-india-for-budget-conscious-buyers/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-125cc-bikes-in-india-top-options-compared/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-125cc-scooters-in-india/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-125cc-scooters-to-buy-this-diwali/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-150-to-160cc-bikes-for-daily-use/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-150cc-bikes-in-india-for-city-riding/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-160cc-bikes-in-india-performance-mileage-and-price/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-200cc-bikes-in-india-under-rs-2-lakh/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -119,6 +138,7 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/best-adventure-bikes-under-rs-3-lakh-in-india/` | 2026-10-17 | 2026-10-17 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-and-scooters-to-buy-before-the-end-of-2026/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-and-scooters-to-buy-in-january-2027-mileage-comfort-and-budget/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-bikes-for-50-km-daily-commute/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-bikes-for-both-city-riding-and-highway-trips/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-for-city-riding-in-india/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-for-comfortable-pillion-riding/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -126,6 +146,7 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/best-bikes-for-long-daily-commutes-with-low-running-costs/` | 2026-10-18 | 2026-10-18 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-for-night-riding-headlight-performance-and-safety-features/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-for-office-commutes-of-30-50-km-a-day/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-bikes-for-office-commuting-in-heavy-traffic/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-bikes-for-riders-who-want-to-minimise-daily-fuel-spending/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-for-short-riders-in-india/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-bikes-for-small-towns-and-rural-roads/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -151,6 +172,8 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/best-commuter-bikes-in-india-for-everyday-use/` | 2026-10-17 | 2026-10-17 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-cruiser-bikes-under-rs-2-lakh/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-cruiser-bikes-under-rs-3-lakh/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-electric-scooters-for-100-km-daily-commute/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/best-electric-scooters-for-40-km-daily-commute/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-electric-scooters-for-a-daily-commute-of-around-30-km/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-electric-scooters-for-commuting-india-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-electric-scooters-for-families-seat-comfort-storage-and-range/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -165,8 +188,10 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/best-lightweight-scooters-in-india/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-low-maintenance-bikes-for-students/` | 2026-10-18 | 2026-10-18 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-low-service-cost-bikes-under-rs-1-lakh/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-mileage-bikes-in-india-2026/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-mileage-bikes-in-india-for-daily-commuting/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-mileage-bikes-to-buy-during-the-festive-season/` | 2026-10-18 | 2026-10-18 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-mileage-scooters-in-india-2026/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-mileage-scooters-in-india/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-motorcycles-for-weekend-long-distance-touring/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-naked-bikes-under-rs-2-lakh-in-india/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -185,6 +210,7 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/best-scooty-under-rs-1-lakh-for-diwali-2026/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-scooty-under-rs-70-000-in-india/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-scooty-under-rs-80-000-in-india/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/best-speed-for-bike-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/best-sports-bikes-under-2-lakh-design-performance/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/best-sporty-scooters-under-rs-1-5-lakh/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -200,8 +226,11 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/bike-emi-calculator-down-payment-and-loan-tenure/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/bike-emi-for-a-rs-1-lakh-loan-monthly-payments-for-different-tenures/` | 2026-10-18 | 2026-10-18 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/bike-insurance-in-india-what-new-buyers-need-to-know/` | 2026-10-17 | 2026-10-17 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/bike-mileage-calculator-petrol-cost/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/bike-mileage-full-tank-method-and-accurate-averages/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/bike-on-road-prices-in-delhi-ncr-ex-showroom-price-rto-and-insurance/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/bike-petrol-consumption-at-40-60-80-100-kmph/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/bike-vs-scooter-for-daily-commuting-in-india/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/bikes-with-low-maintenance-costs-in-india/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/bikes-with-strong-resale-value-in-india-what-should-buyers-compare/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/bikes-with-the-best-suspension-for-pothole-filled-indian-roads/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -210,12 +239,17 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/car-loan-emi-calculator-payments-and-total-interest/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/car-on-road-price-in-india-calculate-the-full-cost/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/choose-touring-motorcycle-indian-highways/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/city-vs-highway-mileage-bike/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/claimed-mileage-vs-real-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/classic-350-vs-honda-cb350-retro-buying-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/cng-vs-petrol-cars-running-costs-and-trade-offs/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/cost-to-ride-a-bike-for-1000-km-in-india/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/dhanteras-bike-buying-checklist-2026-booking-payment-and-delivery/` | 2026-10-17 | 2026-10-17 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/does-bike-mileage-improve-after-first-service/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/drum-brakes-vs-disc-brakes-which-should-you-choose/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/dzire-vs-aura-choose-your-compact-sedan/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/electric-scooter-battery-warranty-and-charging-what-to-check-before-buying/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/electric-scooter-vs-petrol-scooter-running-cost/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/electric-scooter-vs-petrol-scooter-which-is-better-for-indian-commuters/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/electric-vs-petrol-cars-india-break-even-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/electric-vs-petrol-scooter-a-five-year-ownership-cost-comparison/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -223,20 +257,46 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/ertiga-vs-kia-carens-family-mpv-buying-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/ex-showroom-vs-on-road-bike-price-the-difference-explained/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/five-year-car-ownership-cost-a-practical-model/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/hero-glamour-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/hero-hf-deluxe-is-it-a-good-budget-bike-for-daily-commuting/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/hero-hf-deluxe-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-passion-plus-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-splendor-plus-mileage-after-5-years/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-splendor-plus-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/hero-splendor-plus-price-mileage-features-and-variants-in-2026/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/hero-splendor-plus-top-speed/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/hero-splendor-plus-vs-hero-hf-deluxe-which-budget-bike-wins/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/hero-splendor-plus-vs-hf-deluxe-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-splendor-plus-vs-honda-shine-100-vs-bajaj-platina-100/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-splendor-plus-vs-honda-shine-125/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-vida-vx2-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-vida-vx2-vs-tvs-iqube/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-xtreme-125r-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/hero-xtreme-125r-vs-tvs-raider-125/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/honda-activa-110-vs-activa-125-which-one-is-worth-buying/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/honda-activa-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-activa-6g-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-activa-e-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/honda-activa-on-road-price-in-delhi-noida-and-gurugram-what-changes/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/honda-activa-vs-suzuki-access-which-is-better-for-daily-use/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/honda-activa-vs-tvs-jupiter-daily-commuter-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/honda-activa-vs-tvs-jupiter-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/honda-activa-vs-tvs-jupiter-which-scooter-should-you-buy/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/honda-activa-which-variant-is-best-for-your-budget/` | 2026-10-17 | 2026-10-17 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/honda-dio-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-hornet-2-0-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-shine-100-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-shine-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/honda-shine-125-price-mileage-and-features/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/honda-shine-125-vs-honda-sp-125-which-bike-is-better/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/honda-sp-125-is-it-worth-buying-in-2026/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/honda-sp-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-sp-125-vs-bajaj-pulsar-125/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/honda-unicorn-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/how-much-down-payment-do-you-need-to-buy-a-bike-in-india/` | 2026-10-17 | 2026-10-17 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/how-much-petrol-does-a-bike-use-in-10-20-30-50-km/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/how-much-range-can-you-expect-from-an-electric-scooter-in-daily-use/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/how-to-calculate-bike-mileage-in-kmpl/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/hunter-350-vs-tvs-ronin-city-motorcycle-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/hybrid-vs-electric-vs-petrol-cars-india-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/hyundai-creta-vs-kia-seltos-compare-real-value/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -254,12 +314,28 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/nexon-ev-vs-punch-ev-range-charging-and-space/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/obd2-and-current-emission-standards-for-indian-two-wheelers-what-buyers-should-know/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/ola-electric-vs-ather-what-buyers-should-compare/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/ola-s1-pro-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/ola-s1-pro-vs-ather-450x/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/ola-s1-x-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/ola-s1-x-vs-tvs-iqube/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/petrol-vs-electric-two-wheeler-3-year-ownership-cost/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/pulsar-n125-vs-tvs-raider-125-commuter-comparison/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/real-mileage-vs-claimed-mileage-what-should-bike-buyers-expect/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/river-indie-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-bullet-350-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-classic-350-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/royal-enfield-classic-350-vs-bullet-350-differences-explained/` | 2026-10-18 | 2026-10-18 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/royal-enfield-classic-350-vs-honda-cb350/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-classic-350-vs-hunter-350-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-guerrilla-450-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-himalayan-450-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-himalayan-450-vs-ktm-390-adventure/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-hunter-350-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/royal-enfield-hunter-350-on-road-price-by-city-cost-breakdown/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/royal-enfield-hunter-350-price-features-and-everyday-usability/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/royal-enfield-hunter-350-vs-classic-350-which-should-you-buy/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/royal-enfield-hunter-350-vs-tvs-ronin/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/royal-enfield-meteor-350-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/scooter-vs-bike-for-women-commuters-which-is-more-practical/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/scooters-with-the-longest-seats-in-india/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/scorpio-n-vs-xuv700-model-year-buying-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -267,7 +343,11 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/should-you-exchange-your-old-bike-or-buy-a-new-one-during-diwali/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/single-channel-vs-dual-channel-abs-is-the-upgrade-worth-it/` | 2026-10-16 | 2026-10-16 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/splendor-plus-vs-hf-deluxe-commuter-value-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/suzuki-access-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/suzuki-access-125-vs-honda-activa-125/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/suzuki-access-price-comfort-and-practicality-for-families/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/suzuki-avenis-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/suzuki-burgman-street-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/swift-vs-hyundai-i20-mileage-features-and-costs/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tata-aeris-review/` | 2026-10-21 | 2026-10-21 | verified | high | source-commit-and-pages-deployment; commit 9785a14; Pages run 39584081663 |
 | `/blog/auto/tata-nexon-vs-hyundai-venue-india-buying-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
@@ -276,27 +356,47 @@ A Git commit, file creation time, or batch-generation timestamp is not automatic
 | `/blog/auto/top-5-bikes-under-rs-1-lakh-to-buy-this-diwali/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tubeless-vs-tube-motorcycle-tyres/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tubeless-vs-tube-type-tyres-which-is-better-for-indian-roads/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/tvs-apache-rtr-160-2v-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-apache-rtr-160-4v-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/tvs-apache-rtr-160-price-performance-and-features/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/tvs-apache-rtr-180-vs-rtr-160-4v/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-apache-rtr-200-4v-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-iqube-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-iqube-st-range/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/tvs-iqube-vs-bajaj-chetak/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-jupiter-110-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-jupiter-125-vs-suzuki-access-125/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/tvs-jupiter-on-road-prices-across-major-indian-cities/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tvs-jupiter-vs-suzuki-access-comfort-features-and-value/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tvs-jupiter-which-variant-offers-the-best-value/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/tvs-ntorq-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-radeon-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/tvs-raider-125-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/tvs-raider-125-price-features-and-everyday-practicality/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tvs-raider-125-vs-honda-sp-125-which-is-better-for-daily-commuting/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/tvs-raider-vs-bajaj-pulsar-n125-which-125cc-bike-should-you-buy/` | 2026-10-20 | 2026-10-20 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/tvs-sport-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/two-wheeler-insurance-cover-add-ons/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/two-wheeler-loan-eligibility-in-india-documents-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/used-car-buying-checklist-in-india-before-you-pay/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/used-electric-car-battery-health-india-checklist/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/what-to-check-before-buying-a-new-bike-from-a-showroom/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/why-does-the-on-road-price-of-a-bike-vary-by-city/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/why-has-my-bike-mileage-decreased/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/xuv-3xo-vs-tata-nexon-features-and-ownership-cost/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/yamaha-fascino-125-fi-hybrid-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/yamaha-fz-s-fi-hybrid-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
+| `/blog/auto/yamaha-fz-s-vs-tvs-apache-rtr-160-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/yamaha-fz-series-which-model-is-best-for-city-riding/` | 2026-10-15 | 2026-10-15 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/yamaha-fz-vs-tvs-apache-rtr-160-which-is-better-for-the-city/` | 2026-10-24 | 2026-10-24 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/auto/yamaha-mt-15-is-it-a-good-daily-use-naked-bike/` | 2026-10-21 | 2026-10-21 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/yamaha-mt-15-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/yamaha-r15-price-features-and-practicality-for-indian-riders/` | 2026-10-14 | 2026-10-14 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/yamaha-r15-v4-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/yamaha-r15-vs-yamaha-mt-15-sports-bike-or-naked-bike/` | 2026-10-23 | 2026-10-23 | owner-confirmed | owner-confirmed | site-owner-confirmation |
+| `/blog/auto/yamaha-rayzr-125-fi-hybrid-mileage/` | 2026-10-29 | — | owner-confirmed | owner-directed | explicit-immediate-publication-instruction |
 | `/blog/auto/yamaha-rayzr-vs-yamaha-fascino-which-scooty-is-better/` | 2026-10-19 | 2026-10-19 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/finance/asset-allocation-equity-debt-gold-and-cash/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |
 | `/blog/finance/bond-duration-vs-maturity-understand-rate-risk/` | 2026-10-22 | 2026-10-22 | owner-confirmed | owner-confirmed | site-owner-confirmation |

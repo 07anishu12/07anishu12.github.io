@@ -46,6 +46,7 @@ function page({ title, description, url, content, post, breadcrumbs = [], previe
   const socialAlt = post?.socialImageAlt || post?.coverImageAlt || 'Portrait of Aniket Thakur';
   const graph = [];
   if (post) graph.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.title, description: post.description, ...(post.quickAnswer ? { abstract: post.quickAnswer.answer } : {}), url: canonical, mainEntityOfPage: canonical, author: AUTHOR, image: { '@type': 'ImageObject', url: image, width: post.width, height: post.height, caption: post.coverImageAlt }, datePublished: post.datePublished, dateModified: post.dateModified || post.datePublished, articleSection: CATEGORIES[post.category].name, keywords: post.tags.join(', '), inLanguage: 'en', wordCount: post.body.trim().split(/\s+/).length });
+  if (post?.faqItems?.length) graph.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: post.faqItems.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) });
   if (breadcrumbs.length) graph.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: `${ORIGIN}${b.url}` })) });
   const { header, footer } = chrome(root);
   return `<!doctype html>
@@ -56,6 +57,7 @@ function page({ title, description, url, content, post, breadcrumbs = [], previe
 <meta name="theme-color" content="#FAF9F6">
 <title>${e(title)}${post?.seoTitle ? '' : ' — Aniket Thakur'}</title>
 <meta name="description" content="${e(description)}">
+${post?.seoKeywords ? `<meta name="keywords" content="${e(post.seoKeywords)}">` : ''}
 ${preview ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="robots" content="index, follow, max-image-preview:large">'}
 <link rel="canonical" href="${e(canonical)}">
 <meta property="og:type" content="${post ? 'article' : 'website'}">

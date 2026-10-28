@@ -1188,6 +1188,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/activa-125-vs-jupiter-125-vs-access-125.md",
+      "url": "/blog/auto/activa-125-vs-jupiter-125-vs-access-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/adas-in-indian-cars-acc-aeb-and-lane-assistance.md",
       "url": "/blog/auto/adas-in-indian-cars-acc-aeb-and-lane-assistance/",
       "datePublished": "2026-10-22",
@@ -1218,6 +1233,51 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/ather-450x-range.md",
+      "url": "/blog/auto/ather-450x-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-450x-vs-tvs-iqube.md",
+      "url": "/blog/auto/ather-450x-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-rizta-range.md",
+      "url": "/blog/auto/ather-rizta-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/ather-rizta-vs-tvs-iqube-family-ev-comparison.md",
       "url": "/blog/auto/ather-rizta-vs-tvs-iqube-family-ev-comparison/",
       "datePublished": "2026-10-22",
@@ -1230,6 +1290,156 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-rizta-vs-tvs-iqube.md",
+      "url": "/blog/auto/ather-rizta-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-chetak-range.md",
+      "url": "/blog/auto/bajaj-chetak-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-chetak-vs-ather-rizta.md",
+      "url": "/blog/auto/bajaj-chetak-vs-ather-rizta/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-platina-100-vs-hero-splendor-plus.md",
+      "url": "/blog/auto/bajaj-platina-100-vs-hero-splendor-plus/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-platina-110-mileage.md",
+      "url": "/blog/auto/bajaj-platina-110-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-125-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-150-vs-pulsar-n160-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-150-vs-pulsar-n160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-150-vs-tvs-apache-rtr-160.md",
+      "url": "/blog/auto/bajaj-pulsar-150-vs-tvs-apache-rtr-160/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-220f-mileage-and-top-speed.md",
+      "url": "/blog/auto/bajaj-pulsar-220f-mileage-and-top-speed/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-n125-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-n125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -1248,6 +1458,51 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/bajaj-pulsar-n160-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-n160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-ns125-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-ns125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-ns160-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-ns160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/bajaj-pulsar-ns160-vs-tvs-apache-rtr-160-which-offers-better-value.md",
       "url": "/blog/auto/bajaj-pulsar-ns160-vs-tvs-apache-rtr-160-which-offers-better-value/",
       "datePublished": "2026-10-14",
@@ -1260,6 +1515,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-100-to-125cc-bikes-for-daily-commuting.md",
+      "url": "/blog/auto/best-100-to-125cc-bikes-for-daily-commuting/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -1335,6 +1605,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-150-to-160cc-bikes-for-daily-use.md",
+      "url": "/blog/auto/best-150-to-160cc-bikes-for-daily-use/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -1458,6 +1743,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/best-bikes-for-50-km-daily-commute.md",
+      "url": "/blog/auto/best-bikes-for-50-km-daily-commute/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/best-bikes-for-both-city-riding-and-highway-trips.md",
       "url": "/blog/auto/best-bikes-for-both-city-riding-and-highway-trips/",
       "datePublished": "2026-10-24",
@@ -1560,6 +1860,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-office-commuting-in-heavy-traffic.md",
+      "url": "/blog/auto/best-bikes-for-office-commuting-in-heavy-traffic/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -1938,6 +2253,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/best-electric-scooters-for-100-km-daily-commute.md",
+      "url": "/blog/auto/best-electric-scooters-for-100-km-daily-commute/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-for-40-km-daily-commute.md",
+      "url": "/blog/auto/best-electric-scooters-for-40-km-daily-commute/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/best-electric-scooters-for-a-daily-commute-of-around-30-km.md",
       "url": "/blog/auto/best-electric-scooters-for-a-daily-commute-of-around-30-km/",
       "datePublished": "2026-10-15",
@@ -2148,6 +2493,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/best-mileage-bikes-in-india-2026.md",
+      "url": "/blog/auto/best-mileage-bikes-in-india-2026/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/best-mileage-bikes-in-india-for-daily-commuting.md",
       "url": "/blog/auto/best-mileage-bikes-in-india-for-daily-commuting/",
       "datePublished": "2026-10-16",
@@ -2175,6 +2535,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-mileage-scooters-in-india-2026.md",
+      "url": "/blog/auto/best-mileage-scooters-in-india-2026/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -2448,6 +2823,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/best-speed-for-bike-mileage.md",
+      "url": "/blog/auto/best-speed-for-bike-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/best-sports-bikes-under-2-lakh-design-performance.md",
       "url": "/blog/auto/best-sports-bikes-under-2-lakh-design-performance/",
       "datePublished": "2026-10-14",
@@ -2673,6 +3063,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/bike-mileage-calculator-petrol-cost.md",
+      "url": "/blog/auto/bike-mileage-calculator-petrol-cost/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/bike-mileage-full-tank-method-and-accurate-averages.md",
       "url": "/blog/auto/bike-mileage-full-tank-method-and-accurate-averages/",
       "datePublished": "2026-10-22",
@@ -2700,6 +3105,36 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-petrol-consumption-at-40-60-80-100-kmph.md",
+      "url": "/blog/auto/bike-petrol-consumption-at-40-60-80-100-kmph/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-vs-scooter-for-daily-commuting-in-india.md",
+      "url": "/blog/auto/bike-vs-scooter-for-daily-commuting-in-india/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -2823,6 +3258,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/city-vs-highway-mileage-bike.md",
+      "url": "/blog/auto/city-vs-highway-mileage-bike/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/claimed-mileage-vs-real-mileage.md",
+      "url": "/blog/auto/claimed-mileage-vs-real-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/classic-350-vs-honda-cb350-retro-buying-guide.md",
       "url": "/blog/auto/classic-350-vs-honda-cb350-retro-buying-guide/",
       "datePublished": "2026-10-22",
@@ -2853,6 +3318,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/cost-to-ride-a-bike-for-1000-km-in-india.md",
+      "url": "/blog/auto/cost-to-ride-a-bike-for-1000-km-in-india/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/dhanteras-bike-buying-checklist-2026-booking-payment-and-delivery.md",
       "url": "/blog/auto/dhanteras-bike-buying-checklist-2026-booking-payment-and-delivery/",
       "datePublished": "2026-10-17",
@@ -2865,6 +3345,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/does-bike-mileage-improve-after-first-service.md",
+      "url": "/blog/auto/does-bike-mileage-improve-after-first-service/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -2910,6 +3405,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/electric-scooter-vs-petrol-scooter-running-cost.md",
+      "url": "/blog/auto/electric-scooter-vs-petrol-scooter-running-cost/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3018,6 +3528,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/hero-glamour-125-mileage.md",
+      "url": "/blog/auto/hero-glamour-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/hero-hf-deluxe-is-it-a-good-budget-bike-for-daily-commuting.md",
       "url": "/blog/auto/hero-hf-deluxe-is-it-a-good-budget-bike-for-daily-commuting/",
       "datePublished": "2026-10-24",
@@ -3030,6 +3555,66 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-hf-deluxe-mileage.md",
+      "url": "/blog/auto/hero-hf-deluxe-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-passion-plus-mileage.md",
+      "url": "/blog/auto/hero-passion-plus-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-mileage-after-5-years.md",
+      "url": "/blog/auto/hero-splendor-plus-mileage-after-5-years/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-mileage.md",
+      "url": "/blog/auto/hero-splendor-plus-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3048,6 +3633,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/hero-splendor-plus-top-speed.md",
+      "url": "/blog/auto/hero-splendor-plus-top-speed/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/hero-splendor-plus-vs-hero-hf-deluxe-which-budget-bike-wins.md",
       "url": "/blog/auto/hero-splendor-plus-vs-hero-hf-deluxe-which-budget-bike-wins/",
       "datePublished": "2026-10-20",
@@ -3063,6 +3663,111 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/hero-splendor-plus-vs-hf-deluxe-mileage.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-hf-deluxe-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-vs-honda-shine-100-vs-bajaj-platina-100.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-honda-shine-100-vs-bajaj-platina-100/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-vs-honda-shine-125.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-honda-shine-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-vida-vx2-range.md",
+      "url": "/blog/auto/hero-vida-vx2-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-vida-vx2-vs-tvs-iqube.md",
+      "url": "/blog/auto/hero-vida-vx2-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-xtreme-125r-mileage.md",
+      "url": "/blog/auto/hero-xtreme-125r-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-xtreme-125r-vs-tvs-raider-125.md",
+      "url": "/blog/auto/hero-xtreme-125r-vs-tvs-raider-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/honda-activa-110-vs-activa-125-which-one-is-worth-buying.md",
       "url": "/blog/auto/honda-activa-110-vs-activa-125-which-one-is-worth-buying/",
       "datePublished": "2026-10-21",
@@ -3075,6 +3780,51 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-125-mileage.md",
+      "url": "/blog/auto/honda-activa-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-6g-mileage.md",
+      "url": "/blog/auto/honda-activa-6g-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-e-range.md",
+      "url": "/blog/auto/honda-activa-e-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3123,6 +3873,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/honda-activa-vs-tvs-jupiter-mileage.md",
+      "url": "/blog/auto/honda-activa-vs-tvs-jupiter-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/honda-activa-vs-tvs-jupiter-which-scooter-should-you-buy.md",
       "url": "/blog/auto/honda-activa-vs-tvs-jupiter-which-scooter-should-you-buy/",
       "datePublished": "2026-10-14",
@@ -3150,6 +3915,66 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-dio-mileage.md",
+      "url": "/blog/auto/honda-dio-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-hornet-2-0-mileage.md",
+      "url": "/blog/auto/honda-hornet-2-0-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-shine-100-mileage.md",
+      "url": "/blog/auto/honda-shine-100-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-shine-125-mileage.md",
+      "url": "/blog/auto/honda-shine-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3198,6 +4023,51 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/honda-sp-125-mileage.md",
+      "url": "/blog/auto/honda-sp-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-sp-125-vs-bajaj-pulsar-125.md",
+      "url": "/blog/auto/honda-sp-125-vs-bajaj-pulsar-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-unicorn-mileage.md",
+      "url": "/blog/auto/honda-unicorn-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/how-much-down-payment-do-you-need-to-buy-a-bike-in-india.md",
       "url": "/blog/auto/how-much-down-payment-do-you-need-to-buy-a-bike-in-india/",
       "datePublished": "2026-10-17",
@@ -3213,6 +4083,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/how-much-petrol-does-a-bike-use-in-10-20-30-50-km.md",
+      "url": "/blog/auto/how-much-petrol-does-a-bike-use-in-10-20-30-50-km/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/how-much-range-can-you-expect-from-an-electric-scooter-in-daily-use.md",
       "url": "/blog/auto/how-much-range-can-you-expect-from-an-electric-scooter-in-daily-use/",
       "datePublished": "2026-10-20",
@@ -3225,6 +4110,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/how-to-calculate-bike-mileage-in-kmpl.md",
+      "url": "/blog/auto/how-to-calculate-bike-mileage-in-kmpl/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3483,6 +4383,81 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/ola-s1-pro-range.md",
+      "url": "/blog/auto/ola-s1-pro-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-pro-vs-ather-450x.md",
+      "url": "/blog/auto/ola-s1-pro-vs-ather-450x/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-x-range.md",
+      "url": "/blog/auto/ola-s1-x-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-x-vs-tvs-iqube.md",
+      "url": "/blog/auto/ola-s1-x-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/petrol-vs-electric-two-wheeler-3-year-ownership-cost.md",
+      "url": "/blog/auto/petrol-vs-electric-two-wheeler-3-year-ownership-cost/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/pulsar-n125-vs-tvs-raider-125-commuter-comparison.md",
       "url": "/blog/auto/pulsar-n125-vs-tvs-raider-125-commuter-comparison/",
       "datePublished": "2026-10-22",
@@ -3513,6 +4488,51 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/river-indie-range.md",
+      "url": "/blog/auto/river-indie-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-bullet-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-bullet-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-classic-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/royal-enfield-classic-350-vs-bullet-350-differences-explained.md",
       "url": "/blog/auto/royal-enfield-classic-350-vs-bullet-350-differences-explained/",
       "datePublished": "2026-10-18",
@@ -3525,6 +4545,96 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-vs-honda-cb350.md",
+      "url": "/blog/auto/royal-enfield-classic-350-vs-honda-cb350/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-vs-hunter-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-classic-350-vs-hunter-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-guerrilla-450-mileage.md",
+      "url": "/blog/auto/royal-enfield-guerrilla-450-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-himalayan-450-mileage.md",
+      "url": "/blog/auto/royal-enfield-himalayan-450-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-himalayan-450-vs-ktm-390-adventure.md",
+      "url": "/blog/auto/royal-enfield-himalayan-450-vs-ktm-390-adventure/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3570,6 +4680,36 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-vs-tvs-ronin.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-vs-tvs-ronin/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-meteor-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-meteor-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3678,6 +4818,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/suzuki-access-125-mileage.md",
+      "url": "/blog/auto/suzuki-access-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-access-125-vs-honda-activa-125.md",
+      "url": "/blog/auto/suzuki-access-125-vs-honda-activa-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/suzuki-access-price-comfort-and-practicality-for-families.md",
       "url": "/blog/auto/suzuki-access-price-comfort-and-practicality-for-families/",
       "datePublished": "2026-10-23",
@@ -3690,6 +4860,36 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-avenis-125-mileage.md",
+      "url": "/blog/auto/suzuki-avenis-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-burgman-street-125-mileage.md",
+      "url": "/blog/auto/suzuki-burgman-street-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3814,6 +5014,36 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/tvs-apache-rtr-160-2v-mileage.md",
+      "url": "/blog/auto/tvs-apache-rtr-160-2v-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-160-4v-mileage.md",
+      "url": "/blog/auto/tvs-apache-rtr-160-4v-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/tvs-apache-rtr-160-price-performance-and-features.md",
       "url": "/blog/auto/tvs-apache-rtr-160-price-performance-and-features/",
       "datePublished": "2026-10-20",
@@ -3829,6 +5059,66 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/tvs-apache-rtr-180-vs-rtr-160-4v.md",
+      "url": "/blog/auto/tvs-apache-rtr-180-vs-rtr-160-4v/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-200-4v-mileage.md",
+      "url": "/blog/auto/tvs-apache-rtr-200-4v-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-range.md",
+      "url": "/blog/auto/tvs-iqube-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-st-range.md",
+      "url": "/blog/auto/tvs-iqube-st-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide.md",
       "url": "/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide/",
       "datePublished": "2026-10-22",
@@ -3841,6 +5131,51 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-vs-bajaj-chetak.md",
+      "url": "/blog/auto/tvs-iqube-vs-bajaj-chetak/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-110-mileage.md",
+      "url": "/blog/auto/tvs-jupiter-110-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-125-vs-suzuki-access-125.md",
+      "url": "/blog/auto/tvs-jupiter-125-vs-suzuki-access-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -3889,6 +5224,51 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/tvs-ntorq-125-mileage.md",
+      "url": "/blog/auto/tvs-ntorq-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-radeon-mileage.md",
+      "url": "/blog/auto/tvs-radeon-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-raider-125-mileage.md",
+      "url": "/blog/auto/tvs-raider-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/tvs-raider-125-price-features-and-everyday-practicality.md",
       "url": "/blog/auto/tvs-raider-125-price-features-and-everyday-practicality/",
       "datePublished": "2026-10-20",
@@ -3931,6 +5311,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-sport-mileage.md",
+      "url": "/blog/auto/tvs-sport-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -4024,6 +5419,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/why-has-my-bike-mileage-decreased.md",
+      "url": "/blog/auto/why-has-my-bike-mileage-decreased/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide.md",
       "url": "/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide/",
       "datePublished": "2026-10-22",
@@ -4051,6 +5461,51 @@
         "note": "The site owner confirmed that this article was already published; the existing source date was retained."
       },
       "rationale": "Owner-confirmed existing publication; date retained from source front matter rather than randomized.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fascino-125-fi-hybrid-mileage.md",
+      "url": "/blog/auto/yamaha-fascino-125-fi-hybrid-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fz-s-fi-hybrid-mileage.md",
+      "url": "/blog/auto/yamaha-fz-s-fi-hybrid-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fz-s-vs-tvs-apache-rtr-160-mileage.md",
+      "url": "/blog/auto/yamaha-fz-s-vs-tvs-apache-rtr-160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
@@ -4099,6 +5554,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/yamaha-mt-15-mileage.md",
+      "url": "/blog/auto/yamaha-mt-15-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/yamaha-r15-price-features-and-practicality-for-indian-riders.md",
       "url": "/blog/auto/yamaha-r15-price-features-and-practicality-for-indian-riders/",
       "datePublished": "2026-10-14",
@@ -4114,6 +5584,21 @@
       "reviewRequired": false
     },
     {
+      "source": "data/blog/auto/yamaha-r15-v4-mileage.md",
+      "url": "/blog/auto/yamaha-r15-v4-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
       "source": "data/blog/auto/yamaha-r15-vs-yamaha-mt-15-sports-bike-or-naked-bike.md",
       "url": "/blog/auto/yamaha-r15-vs-yamaha-mt-15-sports-bike-or-naked-bike/",
       "datePublished": "2026-10-23",
@@ -4126,6 +5611,21 @@
         "note": "The site owner provided the Indian Two-Wheeler Buying Guide 150 article compendium with publication dates distributed between 14-24 October 2026."
       },
       "rationale": "Owner-confirmed publication date from Indian Two-Wheeler Buying Guide 2026 compendium.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-rayzr-125-fi-hybrid-mileage.md",
+      "url": "/blog/auto/yamaha-rayzr-125-fi-hybrid-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
       "reviewRequired": false
     },
     {
