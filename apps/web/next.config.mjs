@@ -3,16 +3,28 @@ const nextConfig = {
   output: "standalone",
   transpilePackages: ["@portfolio/contracts"],
   trailingSlash: true,
-  skipTrailingSlashRedirect: true,
   outputFileTracingRoot: path.join(process.cwd(), "../.."),
   poweredByHeader: false,
   outputFileTracingIncludes: { "/*": ["../../data/blog/**/*.md"] },
   async redirects() {
-    return ["about", "contact", "privacy", "work"].map((name) => ({
-      source: `/${name}.html`,
-      destination: name === "work" ? "/projects" : `/${name}`,
-      permanent: true,
-    }));
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.aniket.app" }],
+        destination: "https://aniket.app/:path*",
+        permanent: true,
+      },
+      ...["about", "contact", "privacy", "work"].map((name) => ({
+        source: `/${name}.html`,
+        destination: name === "work" ? "/projects/" : `/${name}/`,
+        permanent: true,
+      })),
+      {
+        source: "/author/aniket-thakur.html",
+        destination: "/author/aniket-thakur/",
+        permanent: true,
+      },
+    ];
   },
   async rewrites() {
     return {
@@ -24,6 +36,10 @@ const nextConfig = {
         {
           source: "/blog/:category/page/:page(\\d+)",
           destination: "/blog/:category/page/:page/index.html",
+        },
+        {
+          source: "/author/aniket-thakur/",
+          destination: "/author/aniket-thakur.html",
         },
       ],
       fallback: [{ source: "/:path*", destination: "/:path*/index.html" }],

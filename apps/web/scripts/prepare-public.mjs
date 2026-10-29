@@ -50,6 +50,8 @@ if (fs.existsSync(sitemapPath)) {
       const source = block.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
       if (!source) return null;
       const loc = normalizePath(source);
+      // Exclude paginated archive views from XML sitemap to preserve crawl budget
+      if (/\/page\/\d+\/$/.test(new URL(loc).pathname)) return null;
       if (removed.has(new URL(loc).pathname) || seen.has(loc)) return null;
       seen.add(loc);
       const lastmod = block.match(
@@ -67,6 +69,7 @@ if (fs.existsSync(sitemapPath)) {
     "/contact/",
     "/privacy/",
     "/finance/bikes/",
+    "/author/aniket-thakur/",
     ...projects.map((p) => `/projects/${p.slug}/`),
   ];
   for (const p of paths) {
@@ -85,6 +88,7 @@ const publicRouteReplacements = [
   ["/contact.html", "/contact/"],
   ["/privacy.html", "/privacy/"],
   ["/work.html", "/projects/"],
+  ["/author/aniket-thakur.html", "/author/aniket-thakur/"],
 ];
 for (const file of walk(out).filter((value) => value.endsWith(".html"))) {
   let html = fs.readFileSync(file, "utf8");
@@ -104,11 +108,22 @@ for (const file of walk(out).filter((value) => value.endsWith(".html"))) {
       "https://aniket.app/topics/",
     )
     .replaceAll(
+      "https://aniket.app/author/aniket-thakur.html",
+      "https://aniket.app/author/aniket-thakur/",
+    )
+    .replaceAll(
       "https%3A%2F%2F07anishu12.github.io",
       "https%3A%2F%2Faniket.app",
     )
     .replaceAll("https://07anishu12.github.io/about.html", "/about/");
   fs.writeFileSync(file, html);
+}
+
+const authorSource = path.join(out, "author/aniket-thakur.html");
+const authorDir = path.join(out, "author/aniket-thakur");
+if (fs.existsSync(authorSource)) {
+  fs.mkdirSync(authorDir, { recursive: true });
+  fs.copyFileSync(authorSource, path.join(authorDir, "index.html"));
 }
 
 const llmsPath = path.join(out, "llms.txt");

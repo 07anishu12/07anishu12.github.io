@@ -6,10 +6,14 @@ const person = {
   "@type": "Person",
   "@id": PERSON_ID,
   name: "Aniket Thakur",
-  url: `${ORIGIN}/author/aniket-thakur.html`,
+  url: `${ORIGIN}/author/aniket-thakur/`,
   image: `${ORIGIN}/assets/img/aniket-portrait.png`,
   description:
     "AI engineering, backend systems, product development and financial engineering.",
+  sameAs: [
+    "https://github.com/07anishu12",
+    "https://www.linkedin.com/in/aniket-thakur-a23a9b372",
+  ],
 };
 
 const website = {

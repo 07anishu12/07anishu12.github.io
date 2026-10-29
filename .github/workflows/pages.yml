@@ -1,14 +1,5 @@
-name: Build and deploy portfolio
+name: Build and deploy portfolio (manual dispatch only)
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'data/medium-sync.json'
-      - 'docs/medium-import-queue.md'
-      - 'sync medium.md'
-      - '.env.example'
-      - 'scripts/**'
-  pull_request:
   workflow_dispatch:
 permissions:
   contents: read

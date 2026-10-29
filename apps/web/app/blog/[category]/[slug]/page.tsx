@@ -263,20 +263,64 @@ export default async function BlogPostPage({ params }: RouteProps) {
           </section>
         )}
 
-        {/* 11. Continue reading */}
+        {/* 11. Contextual Architecture Bridge */}
+        {post.category === "technology" && (
+          <aside className="article-project-bridge" style={{ marginTop: 32, padding: "16px 20px", background: "rgba(0, 0, 0, 0.02)", borderRadius: 8, border: "1px solid rgba(0, 0, 0, 0.08)" }}>
+            <p style={{ margin: 0, fontSize: "0.95rem" }}>
+              <strong>Verified Engineering Systems:</strong> Explore production architectures in{" "}
+              <Link href="/projects/" style={{ textDecoration: "underline" }}>Projects</Link>, including the{" "}
+              <Link href="/projects/finance-tools/" style={{ textDecoration: "underline" }}>Finance Tools DCF Engine</Link>,{" "}
+              <Link href="/projects/invoice-ocr/" style={{ textDecoration: "underline" }}>Invoice Document Parser</Link>, and{" "}
+              <Link href="/projects/seojev-laya/" style={{ textDecoration: "underline" }}>SEOJEV / Laya Agent</Link>.
+            </p>
+          </aside>
+        )}
+        {post.category === "auto" && (
+          <aside className="article-project-bridge" style={{ marginTop: 32, padding: "16px 20px", background: "rgba(0, 0, 0, 0.02)", borderRadius: 8, border: "1px solid rgba(0, 0, 0, 0.08)" }}>
+            <p style={{ margin: 0, fontSize: "0.95rem" }}>
+              <strong>Finance &amp; Affordability Review:</strong> Planning a two-wheeler purchase? Check out the{" "}
+              <Link href="/finance/bikes/" style={{ textDecoration: "underline" }}>Bike Finance, Ownership Cost &amp; On-Road Price Calculator</Link>{" "}
+              to calculate real monthly commitments before dealership visits.
+            </p>
+          </aside>
+        )}
+        {post.category === "finance" && (
+          <aside className="article-project-bridge" style={{ marginTop: 32, padding: "16px 20px", background: "rgba(0, 0, 0, 0.02)", borderRadius: 8, border: "1px solid rgba(0, 0, 0, 0.08)" }}>
+            <p style={{ margin: 0, fontSize: "0.95rem" }}>
+              <strong>Quantitative Modeling:</strong> Review our deterministic DCF valuation tool in{" "}
+              <Link href="/projects/finance-tools/" style={{ textDecoration: "underline" }}>Finance Tools Case Study</Link>{" "}
+              or plan vehicle budgets with the <Link href="/finance/bikes/" style={{ textDecoration: "underline" }}>Bike Finance Calculator</Link>.
+            </p>
+          </aside>
+        )}
+
+        {/* 12. Continue reading with dynamic contextual selection */}
         <nav className="article-related-nav" aria-label="Related articles">
           <h2 className="article-subheading">Continue reading</h2>
           <ul className="article-related-list">
-            {listPosts()
-              .filter(
+            {(() => {
+              const allCategoryPosts = listPosts().filter(
                 (p) => p.category === post.category && p.slug !== post.slug,
-              )
-              .slice(0, 3)
-              .map((p) => (
+              );
+              const currentPostIndex = allCategoryPosts.findIndex(
+                (p) => p.slug === post.slug,
+              );
+              const scored = allCategoryPosts.map((p, idx) => {
+                let score = 0;
+                if (post.tags && p.tags) {
+                  score += p.tags.filter((t) => post.tags.includes(t)).length * 5;
+                }
+                const offset = Math.abs(idx - (currentPostIndex >= 0 ? currentPostIndex : 0));
+                score += Math.max(0, 10 - offset);
+                return { post: p, score };
+              });
+              scored.sort((a, b) => b.score - a.score);
+              return scored.slice(0, 4).map(({ post: p }) => (
                 <li key={p.slug}>
                   <Link href={`/blog/${p.category}/${p.slug}/`}>{p.title}</Link>
                 </li>
-              ))}
+              ));
+            })()}
           </ul>
           <Link
             href={`/blog/${post.category}/`}
