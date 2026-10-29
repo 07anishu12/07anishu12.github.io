@@ -40,6 +40,101 @@ interface CaseStudy {
 
 const primaryCaseStudies: CaseStudy[] = [
   {
+    id: "fundflow-sentinel",
+    badge: "Quantitative Finance & Time-Series Modeling",
+    title: "Mutual Fund Flow Forecasting, Redemption Alerting & Stress Lab",
+    problem:
+      "Asset management allocators and institutional analysts struggle to model macro category-level net flow shifts and redemption stress, often relying on laggy trailing AUM metrics or unverified point-in-time assumptions without temporal leakage controls.",
+    whyItMatters:
+      "Mutual fund redemption shocks can trigger portfolio liquidity strains and forced asset liquidations. Allocators require disciplined, reproducible econometric models with walk-forward validation and strict mathematical risk bounds.",
+    role: "Quantitative System Architect & Developer — modeled the time-series pipeline, designed the expanding-window walk-forward evaluation, and implemented the isolated 5-factor NAV ranking engine.",
+    flowSteps: [
+      {
+        label: "1. Data Acquisition",
+        detail: "AMFI category flows, market indicators, and daily scheme NAV time-series",
+      },
+      {
+        label: "2. Temporal Matrix",
+        detail: "Strict temporal non-leakage pipeline fitting features inside training folds",
+      },
+      {
+        label: "3. Walk-Forward Engine",
+        detail: "Ridge regression expanding-window model benchmarked against persistence baseline",
+        isCore: true,
+      },
+      {
+        label: "4. Stress Lab & Alerts",
+        detail: "3-tier redemption alert scorer and AUM shock simulation capped at 100% outflow",
+      },
+    ],
+    implementation:
+      "Engineered in Python 3.11 with Streamlit, Scikit-learn, and Pandas. Enforces zero temporal leakage by fitting scalers strictly inside training folds. The NAV scheme ranking module is completely isolated from macro flow forecasting, and stress simulations mathematically cap outflows at 100% of reference AUM.",
+    validation:
+      "Validated with 287 automated unit and integration tests ('make test'). Verified via transactional CLI orchestration ('python -m fundflow.cli --offline all') with SHA-256 digest receipts.",
+    limitations:
+      "Macro category-level flow forecasts represent econometric approximations, not guaranteed investor redemption behavior. Evaluated on monthly historical AMFI/NSE datasets; requires dated local disclosures before production institutional allocation.",
+    tech: [
+      "Python 3.11",
+      "Quantitative Finance",
+      "Time-Series Modeling",
+      "Streamlit",
+      "Scikit-learn",
+      "Pytest",
+    ],
+    projectSlug: "fundflow-sentinel",
+    repoUrl: "https://github.com/07anishu12/FundFlow-Sentinel",
+    articleUrl: "/blog/finance/direct-vs-regular-mutual-funds-in-india-explained/",
+    articleLabel: "Read the Mutual Fund Investment Guide →",
+  },
+  {
+    id: "classevidence-ai",
+    badge: "Multimodal AI & Evidence Grounding",
+    title: "Humaniti AI — Evidence-Grounded Instructional Practice Analysis",
+    problem:
+      "Automated educational assessment tools routinely hallucinate subjective judgments, penalize missing data as incompetence, and utilize biased demographic proxies such as vocal cadence, accent, or facial emotion.",
+    whyItMatters:
+      "Educator feedback must be respectful, auditable, and actionable. Trust in automated coaching collapses when systems hallucinate feedback or penalize teachers for camera production quality rather than pedagogy.",
+    role: "Full-Stack & AI Systems Architect — designed the Next.js App Router client, PostgreSQL schema via Prisma, ephemeral media staging, and deterministic 4-tier rubric scorer.",
+    flowSteps: [
+      {
+        label: "1. Media Intake",
+        detail: "Private ephemeral media ingestion (.private/media/) with automated scrubbers",
+      },
+      {
+        label: "2. Evidence Grounding",
+        detail: "Whisper transcript and audio diagnostic locator with exact startSec/endSec offsets",
+        isCore: true,
+      },
+      {
+        label: "3. Bias Gate",
+        detail: "Strict rejection of accent, vocal cadence, and facial emotion proxies",
+      },
+      {
+        label: "4. Rubric Classifier",
+        detail: "Deterministic 4-tier rating (Poor -> Excellent) with fail-safe grade withholding",
+      },
+    ],
+    implementation:
+      "Built with Next.js 16.4, TypeScript, PostgreSQL, Prisma ORM, and Python 3.12 media worker. Enforces strict invariants: every finding links to verifiable timestamp offsets, missing evidence is marked not_assessable rather than zero, and grades are withheld if under 70% of rubric weight is observable.",
+    validation:
+      "Full test suite with mock audio and transcript fixtures; automated ephemeral cleanup tests confirm zero child PII or media retention.",
+    limitations:
+      "Does not claim objective measurement of lifelong educator quality. Designed exclusively for structured coaching feedback on observable classroom practices; cloud LLM provider calls remain blocked by default.",
+    tech: [
+      "Next.js 16.4",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Multimodal AI",
+      "AI Ethics",
+      "Python 3.12",
+    ],
+    projectSlug: "classevidence-ai",
+    repoUrl: "https://github.com/07anishu12/ClassEvidence-AI",
+    articleUrl: "/blog/technology/reduce-llm-hallucinations-with-schemas-and-evidence/",
+    articleLabel: "Read the Grounded AI & Evidence Guide →",
+  },
+  {
     id: "finance-tools",
     badge: "Finance & Quantitative Systems",
     title: "Deterministic DCF Valuation Engine with Dual-Format Reconciliation",
@@ -236,6 +331,33 @@ const primaryCaseStudies: CaseStudy[] = [
 
 const secondaryCaseStudies = [
   {
+    title: "Document Intelligence & Form Processing Platform",
+    slug: "india-document-tools",
+    domain: "Full-Stack & Document AI",
+    description:
+      "Full-stack platform combining client-side image/PDF presets for Indian application constraints with a queue-backed Python PaddleOCR microservice for confidence-aware extraction.",
+    tech: ["Next.js", "Fastify", "TypeScript", "Redis", "PaddleOCR", "Docker"],
+    projectSlug: "india-document-tools",
+  },
+  {
+    title: "Vehicle Catalogue Normalization & Multi-City Pricing Pipeline",
+    slug: "vehicle-catalogue-pipeline",
+    domain: "Data Engineering & Automotive Analytics",
+    description:
+      "Async Python ETL pipeline ingesting 1,940+ vehicle models across 2,230+ cities, running referential data-quality checks, and generating an immutable 10-sheet master Excel workbook with automated change detection.",
+    tech: ["Python", "Asyncio", "OpenPyXL", "Pytest", "ETL Pipelines"],
+    projectSlug: "vehicle-catalogue-pipeline",
+  },
+  {
+    title: "Autonomous Content Pipeline & Headless Infographic Compiler",
+    slug: "content-automation",
+    domain: "Workflow Automation & LLM Synthesis",
+    description:
+      "Autonomous operational pipeline harvesting tech signals, synthesizing platform-tailored copy via Gemini and Claude, compiling dynamic HTML into carousels via headless Chrome, and gating dispatches with Slack approvals.",
+    tech: ["Node.js", "Python", "Puppeteer", "Gemini API", "Claude API", "Slack Webhooks"],
+    projectSlug: "content-automation",
+  },
+  {
     title: "Autonomous Site Graph Analysis & On-Device MLX Inference",
     slug: "seojev-laya",
     domain: "Technical SEO & Graph Signal Analysis",
@@ -251,7 +373,7 @@ const secondaryCaseStudies = [
     description:
       "Engineered an automated data extraction and validation pipeline using a 4-model ensemble (Gemini, DeepSeek, Anthropic, OpenAI) to extract structured JSON ecological edge lists from unstructured PDF monographs.",
     tech: ["Python", "Multi-LLM Ensemble", "PyTorch Geometric", "Schema Enforcement"],
-    projectSlug: "finance-tools", // links to research
+    projectSlug: "oist-graph-research",
     customLink: "/research/",
     customLinkLabel: "Explore OIST Research →",
   },

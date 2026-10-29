@@ -18,14 +18,22 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const p = projects.find((p) => p.slug === slug);
   if (!p) return {};
+  const description = p.tagline || p.problem;
   return {
-    title: `${p.title} — Aniket Thakur`,
-    description: p.tagline || p.problem,
+    title: `${p.title} — Case Study & Architecture | Aniket Thakur`,
+    description,
     alternates: { canonical: `/projects/${slug}/` },
     openGraph: {
       title: `${p.title} — Aniket Thakur`,
-      description: p.tagline || p.problem,
+      description,
       url: `/projects/${slug}/`,
+      images: ["/assets/img/aniket-portrait.png"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${p.title} — Aniket Thakur`,
+      description,
       images: ["/assets/img/aniket-portrait.png"],
     },
   };
@@ -91,19 +99,19 @@ export default async function Project({ params }: Props) {
         {/* Structured Case Study Sections */}
         <div className="prose case-study-body">
           <section className="case-section">
-            <h2>The Problem</h2>
+            <h2>The Problem &amp; Target Context</h2>
             <p>{p.problem}</p>
           </section>
 
           {p.approach && (
             <section className="case-section">
-              <h2>Engineering Approach</h2>
+              <h2>Engineering Approach &amp; Core Principles</h2>
               <p>{p.approach}</p>
             </section>
           )}
 
           <section className="case-section">
-            <h2>What I Built &amp; My Contribution</h2>
+            <h2>What I Built &amp; Individual Contributions</h2>
             <p>{p.contribution}</p>
           </section>
 
@@ -121,6 +129,20 @@ export default async function Project({ params }: Props) {
               )}
             </div>
           </section>
+
+          {p.keyDecisions && (
+            <section className="case-section">
+              <h2>Key Engineering Decisions &amp; Trade-Offs</h2>
+              <p>{p.keyDecisions}</p>
+            </section>
+          )}
+
+          {p.testsAndReproducibility && (
+            <section className="case-section">
+              <h2>Testing, Verification &amp; Reproducibility</h2>
+              <p>{p.testsAndReproducibility}</p>
+            </section>
+          )}
 
           {p.metricsOrOutcomes && (
             <section className="case-section">
@@ -159,6 +181,72 @@ export default async function Project({ params }: Props) {
               </p>
             </section>
           )}
+
+          {p.relatedProjects && p.relatedProjects.length > 0 && (
+            <section className="case-section">
+              <h2>Related Portfolio Projects</h2>
+              <p>
+                Explore companion systems in similar domains across AI
+                engineering, quantitative finance, and developer infrastructure:
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "12px",
+                  marginTop: "12px",
+                }}
+              >
+                {p.relatedProjects.map((rel) => (
+                  <Link
+                    key={rel.slug}
+                    href={`/projects/${rel.slug}/`}
+                    style={{
+                      display: "inline-block",
+                      padding: "8px 14px",
+                      background: "rgba(0, 0, 0, 0.04)",
+                      borderRadius: "6px",
+                      border: "1px solid rgba(0, 0, 0, 0.08)",
+                      fontSize: "0.95rem",
+                      fontWeight: 500,
+                      textDecoration: "none",
+                    }}
+                  >
+                    {rel.title} →
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Collaboration Call to Action */}
+          <section
+            className="case-section cta-section"
+            style={{
+              marginTop: "40px",
+              padding: "24px",
+              background: "rgba(0, 0, 0, 0.02)",
+              borderRadius: "8px",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
+            }}
+          >
+            <h3 style={{ marginTop: 0 }}>
+              Collaborating on AI Engineering or Quantitative Systems?
+            </h3>
+            <p style={{ margin: "8px 0 16px" }}>
+              I design and build end-to-end production software, quantitative
+              models, and reliable AI architectures. Let’s discuss technical
+              challenges or product collaboration.
+            </p>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              <Link className="button button-primary" href="/contact/">
+                Start an Inquiry →
+              </Link>
+              <Link className="button button-secondary" href="/about/">
+                Review Background &amp; Capabilities →
+              </Link>
+            </div>
+          </section>
         </div>
 
         {/* Actions Footer */}

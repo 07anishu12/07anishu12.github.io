@@ -10,12 +10,12 @@ import { projects } from "../../lib/projects";
 export const metadata = {
   title: "Projects & Systems — Aniket Thakur",
   description:
-    "Production engineering case studies covering financial tools, operational workflows, AI products, geospatial search, and research systems by Aniket Thakur.",
+    "Production engineering case studies covering quantitative finance, multimodal AI, operational outbox workflows, geospatial search, and research systems by Aniket Thakur.",
   alternates: { canonical: "/projects/" },
   openGraph: {
     title: "Projects & Systems — Aniket Thakur",
     description:
-      "Production engineering case studies covering financial tools, operational workflows, AI products, and research systems.",
+      "Production engineering case studies covering quantitative finance, multimodal AI, operational outbox workflows, geospatial search, and research systems.",
     url: "/projects/",
     images: ["/assets/img/aniket-portrait.png"],
   },
@@ -62,15 +62,15 @@ export default function ProjectsPage() {
             <em className="serif">Problems I have solved.</em>
           </h1>
           <p className="intro">
-            A portfolio of production architectures, financial models,
-            event-driven outbox pipelines, and local-first AI tools. Each study
-            distinguishes verified implemented features from external
-            dependencies and prototypes.
+            A portfolio of production architectures, quantitative financial models,
+            multimodal AI engines, event-driven outbox pipelines, and local-first tools.
+            Each case study distinguishes verified implemented features from external
+            cloud dependencies and prototypes.
           </p>
 
           <div className="projects-stats-strip">
             <div className="stat-item">
-              <span className="stat-number">8</span>
+              <span className="stat-number">{projects.length}</span>
               <span className="stat-label">Verified Systems</span>
             </div>
             <div className="stat-item">
@@ -88,10 +88,57 @@ export default function ProjectsPage() {
           </div>
         </header>
 
-        {/* Project List Component with Filter Tabs */}
+        {/* Project List Component with Filter Tabs & Search */}
         <section aria-label="Projects directory">
           <ProjectList />
         </section>
+
+        {/* Semantic Crawlable Directory for Answer Engines & Search Spiders */}
+        <nav
+          aria-label="Index of all engineering case studies"
+          style={{
+            marginTop: "48px",
+            paddingTop: "24px",
+            borderTop: "1px solid rgba(0, 0, 0, 0.08)",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1rem",
+              fontWeight: 600,
+              marginBottom: "12px",
+              color: "inherit",
+              opacity: 0.8,
+            }}
+          >
+            All Case Studies &amp; Architectural Specifications
+          </h2>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "grid",
+              gridTemplateColumns:
+                "repeat(auto-fill, minmax(280px, 1fr))",
+              gap: "10px",
+            }}
+          >
+            {projects.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={`/projects/${p.slug}/`}
+                  style={{
+                    fontSize: "0.92rem",
+                    textDecoration: "underline",
+                  }}
+                >
+                  {p.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         {/* Bridge to Work & Capabilities */}
         <aside className="projects-bridge-card">
