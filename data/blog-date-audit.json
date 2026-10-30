@@ -4898,420 +4898,3040 @@
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/from-ai-chatbots-to-autonomous-ai-agents-2026.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/agentic-coding-build-test-deploy-applications/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/agentic-coding-build-test-deploy-applications.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/local-ai-inference-running-llms-on-own-computers/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/local-ai-inference-running-llms-on-own-computers.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/real-time-voice-ai-full-duplex-conversation/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/real-time-voice-ai-full-duplex-conversation.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/beyond-llms-jev-and-cdm-ai-models-explained/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/beyond-llms-jev-and-cdm-ai-models-explained.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/deepseek-new-inference-approaches-deepinfer-explained/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/deepseek-new-inference-approaches-deepinfer-explained.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/open-weight-vs-closed-ai-models-developers-2026/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/open-weight-vs-closed-ai-models-developers-2026.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/small-language-models-vs-frontier-ai-when-slms-win/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/small-language-models-vs-frontier-ai-when-slms-win.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/mixture-of-experts-moe-architecture-explained/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/mixture-of-experts-moe-architecture-explained.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/quantization-explained-running-larger-ai-models-less-memory/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/quantization-explained-running-larger-ai-models-less-memory.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/beyond-text-multimodal-ai-images-audio-video/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/beyond-text-multimodal-ai-images-audio-video.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-benchmark-wars-higher-score-not-better-model/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-benchmark-wars-higher-score-not-better-model.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/claude-code-vs-openai-codex-vs-gemini-cli-comparison/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/claude-code-vs-openai-codex-vs-gemini-cli-comparison.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-generated-pull-requests-how-to-review-agent-code/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-generated-pull-requests-how-to-review-agent-code.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/mcp-explained-model-context-protocol-external-tools/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/mcp-explained-model-context-protocol-external-tools.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/beyond-mcp-comparing-tool-calling-apis-agent-protocols/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/beyond-mcp-comparing-tool-calling-apis-agent-protocols.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-app-builders-vs-traditional-development-startups/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-app-builders-vs-traditional-development-startups.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-coding-low-ram-laptop-quantization-local-cloud/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-coding-low-ram-laptop-quantization-local-cloud.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/build-reliable-ai-agents-retries-observability-human-approval/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/build-reliable-ai-agents-retries-observability-human-approval.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-testing-tools-can-llms-generate-useful-unit-integration-tests/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-testing-tools-can-llms-generate-useful-unit-integration-tests.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/from-prompt-to-production-shipping-ai-features-nextjs/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/from-prompt-to-production-shipping-ai-features-nextjs.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-search-vs-traditional-google-search-discovery-2026/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-search-vs-traditional-google-search-discovery-2026.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/generative-engine-optimization-geo-what-to-measure/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/generative-engine-optimization-geo-what-to-measure.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/can-chatgpt-and-claude-cite-your-website-crawlability-audit/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/can-chatgpt-and-claude-cite-your-website-crawlability-audit.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/new-ai-powered-cms-research-drafts-metadata-publishing/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/new-ai-powered-cms-research-drafts-metadata-publishing.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/headless-cms-vs-ai-native-cms-architecture-comparison/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/headless-cms-vs-ai-native-cms-architecture-comparison.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-content-pipelines-automating-research-drafting-without-spam/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-content-pipelines-automating-research-drafting-without-spam.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/structured-data-ai-search-what-schema-org-can-and-cannot-do/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/structured-data-ai-search-what-schema-org-can-and-cannot-do.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/rag-vs-fine-tuning-vs-search-how-ai-retrieves-knowledge/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/rag-vs-fine-tuning-vs-search-how-ai-retrieves-knowledge.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/why-ai-search-engines-ignore-your-pages-crawling-rendering-quality/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/why-ai-search-engines-ignore-your-pages-crawling-rendering-quality.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/can-ai-agents-update-website-safely-permissions-publishing-controls/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/can-ai-agents-update-website-safely-permissions-publishing-controls.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/indias-ai-infrastructure-race-domestic-data-centres-compute-demand/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/indias-ai-infrastructure-race-domestic-data-centres-compute-demand.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-engineering-jobs-india-skills-employers-looking-for-2026/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-engineering-jobs-india-skills-employers-looking-for-2026.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/indias-ai-startup-ecosystem-opportunities-beyond-chatbots/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/indias-ai-startup-ecosystem-opportunities-beyond-chatbots.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/building-ai-indian-languages-challenges-multilingual-models/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/building-ai-indian-languages-challenges-multilingual-models.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/sovereign-ai-india-models-data-compute-explained/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/sovereign-ai-india-models-data-compute-explained.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-indian-banking-fintech-fraud-underwriting-customer-support/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-indian-banking-fintech-fraud-underwriting-customer-support.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-voice-agents-indian-businesses-regional-languages-real-calls/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-voice-agents-indian-businesses-regional-languages-real-calls.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-governance-india-what-businesses-need-to-know-emerging-rules/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-governance-india-what-businesses-need-to-know-emerging-rules.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-generated-evidence-legal-documents-provenance-disclosure/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-generated-evidence-legal-documents-provenance-disclosure.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-indian-education-personal-tutors-automated-assessment-risks/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-indian-education-personal-tutors-automated-assessment-risks.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-cybersecurity-2026-autonomous-agents-vulnerability-discovery/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-cybersecurity-2026-autonomous-agents-vulnerability-discovery.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/prompt-injection-rogue-ai-agents-protect-tools-credentials-data/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/prompt-injection-rogue-ai-agents-protect-tools-credentials-data.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-video-generation-2026-models-creators-marketing-teams/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-video-generation-2026-models-creators-marketing-teams.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/physical-ai-robotics-models-moving-into-real-world/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/physical-ai-robotics-models-moving-into-real-world.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-call-centres-virtual-receptionists-voice-agents-customer-ops/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-call-centres-virtual-receptionists-voice-agents-customer-ops.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/frontend-development-skills-ai-powered-applications/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/frontend-development-skills-ai-powered-applications.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/backend-engineering-skills-production-ready-ai-systems/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/backend-engineering-skills-production-ready-ai-systems.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-agent-development-skills-tools-memory-orchestration/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-agent-development-skills-tools-memory-orchestration.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/prompt-engineering-vs-context-engineering/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/prompt-engineering-vs-context-engineering.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/rag-engineering-skills-building-searchable-knowledge-systems/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/rag-engineering-skills-building-searchable-knowledge-systems.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-testing-evaluation-skills-every-developer-needs/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-testing-evaluation-skills-every-developer-needs.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/deployment-devops-skills-ai-applications/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/deployment-devops-skills-ai-applications.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/github-skills-ai-assisted-software-development/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/github-skills-ai-assisted-software-development.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/mcp-development-skills-connecting-ai-models-to-tools.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
     },
     {
       "url": "/blog/technology/ai-security-skills-protecting-agents-llm-applications/",
       "datePublished": "2026-10-25",
       "dateModified": "2026-10-25",
       "status": "verified",
-      "evidence": "Published on 2026-10-25 with primary source technical research and repository verification."
+      "evidence": {
+        "kind": "legacy-verification-record",
+        "note": "Published on 2026-10-25 with primary source technical research and repository verification."
+      },
+      "source": "data/blog/technology/ai-security-skills-protecting-agents-llm-applications.md",
+      "confidence": "verified",
+      "rationale": "Existing date verification retained while converting the record to the current audit schema.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-mileage.md",
+      "url": "/blog/auto/hero-splendor-plus-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-hf-deluxe-mileage.md",
+      "url": "/blog/auto/hero-hf-deluxe-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-xtreme-125r-mileage.md",
+      "url": "/blog/auto/hero-xtreme-125r-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-vs-hf-deluxe-mileage.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-hf-deluxe-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-vs-honda-shine-125.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-honda-shine-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-xtreme-125r-vs-tvs-raider-125.md",
+      "url": "/blog/auto/hero-xtreme-125r-vs-tvs-raider-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-125-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-n125-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-n125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-n160-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-n160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-platina-100-vs-hero-splendor-plus.md",
+      "url": "/blog/auto/bajaj-platina-100-vs-hero-splendor-plus/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-shine-100-mileage.md",
+      "url": "/blog/auto/honda-shine-100-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-shine-125-mileage.md",
+      "url": "/blog/auto/honda-shine-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-sp-125-mileage.md",
+      "url": "/blog/auto/honda-sp-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-6g-mileage.md",
+      "url": "/blog/auto/honda-activa-6g-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-125-mileage.md",
+      "url": "/blog/auto/honda-activa-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-vs-tvs-jupiter-mileage.md",
+      "url": "/blog/auto/honda-activa-vs-tvs-jupiter-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-sp-125-vs-bajaj-pulsar-125.md",
+      "url": "/blog/auto/honda-sp-125-vs-bajaj-pulsar-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-raider-125-mileage.md",
+      "url": "/blog/auto/tvs-raider-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-160-4v-mileage.md",
+      "url": "/blog/auto/tvs-apache-rtr-160-4v-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-110-mileage.md",
+      "url": "/blog/auto/tvs-jupiter-110-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-access-125-mileage.md",
+      "url": "/blog/auto/suzuki-access-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-rayzr-125-fi-hybrid-mileage.md",
+      "url": "/blog/auto/yamaha-rayzr-125-fi-hybrid-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/how-to-calculate-bike-mileage-in-kmpl.md",
+      "url": "/blog/auto/how-to-calculate-bike-mileage-in-kmpl/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-mileage-bikes-in-india-2026.md",
+      "url": "/blog/auto/best-mileage-bikes-in-india-2026/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-mileage-scooters-in-india-2026.md",
+      "url": "/blog/auto/best-mileage-scooters-in-india-2026/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-classic-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-himalayan-450-mileage.md",
+      "url": "/blog/auto/royal-enfield-himalayan-450-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-vs-hunter-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-classic-350-vs-hunter-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-hunter-350-vs-tvs-ronin.md",
+      "url": "/blog/auto/royal-enfield-hunter-350-vs-tvs-ronin/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-classic-350-vs-honda-cb350.md",
+      "url": "/blog/auto/royal-enfield-classic-350-vs-honda-cb350/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-range.md",
+      "url": "/blog/auto/tvs-iqube-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-st-range.md",
+      "url": "/blog/auto/tvs-iqube-st-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-chetak-range.md",
+      "url": "/blog/auto/bajaj-chetak-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-450x-range.md",
+      "url": "/blog/auto/ather-450x-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-rizta-range.md",
+      "url": "/blog/auto/ather-rizta-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-pro-range.md",
+      "url": "/blog/auto/ola-s1-pro-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-x-range.md",
+      "url": "/blog/auto/ola-s1-x-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-activa-e-range.md",
+      "url": "/blog/auto/honda-activa-e-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-iqube-vs-bajaj-chetak.md",
+      "url": "/blog/auto/tvs-iqube-vs-bajaj-chetak/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-450x-vs-tvs-iqube.md",
+      "url": "/blog/auto/ather-450x-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ather-rizta-vs-tvs-iqube.md",
+      "url": "/blog/auto/ather-rizta-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-pro-vs-ather-450x.md",
+      "url": "/blog/auto/ola-s1-pro-vs-ather-450x/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-chetak-vs-ather-rizta.md",
+      "url": "/blog/auto/bajaj-chetak-vs-ather-rizta/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/electric-scooter-vs-petrol-scooter-running-cost.md",
+      "url": "/blog/auto/electric-scooter-vs-petrol-scooter-running-cost/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-for-40-km-daily-commute.md",
+      "url": "/blog/auto/best-electric-scooters-for-40-km-daily-commute/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-100-to-125cc-bikes-for-daily-commuting.md",
+      "url": "/blog/auto/best-100-to-125cc-bikes-for-daily-commuting/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-150-to-160cc-bikes-for-daily-use.md",
+      "url": "/blog/auto/best-150-to-160cc-bikes-for-daily-use/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-vs-honda-shine-100-vs-bajaj-platina-100.md",
+      "url": "/blog/auto/hero-splendor-plus-vs-honda-shine-100-vs-bajaj-platina-100/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/activa-125-vs-jupiter-125-vs-access-125.md",
+      "url": "/blog/auto/activa-125-vs-jupiter-125-vs-access-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-passion-plus-mileage.md",
+      "url": "/blog/auto/hero-passion-plus-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-glamour-125-mileage.md",
+      "url": "/blog/auto/hero-glamour-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-ns125-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-ns125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-ns160-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-ns160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-150-vs-pulsar-n160-mileage.md",
+      "url": "/blog/auto/bajaj-pulsar-150-vs-pulsar-n160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-150-vs-tvs-apache-rtr-160.md",
+      "url": "/blog/auto/bajaj-pulsar-150-vs-tvs-apache-rtr-160/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-platina-110-mileage.md",
+      "url": "/blog/auto/bajaj-platina-110-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bajaj-pulsar-220f-mileage-and-top-speed.md",
+      "url": "/blog/auto/bajaj-pulsar-220f-mileage-and-top-speed/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-unicorn-mileage.md",
+      "url": "/blog/auto/honda-unicorn-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-hornet-2-0-mileage.md",
+      "url": "/blog/auto/honda-hornet-2-0-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/honda-dio-mileage.md",
+      "url": "/blog/auto/honda-dio-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-sport-mileage.md",
+      "url": "/blog/auto/tvs-sport-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-radeon-mileage.md",
+      "url": "/blog/auto/tvs-radeon-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-160-2v-mileage.md",
+      "url": "/blog/auto/tvs-apache-rtr-160-2v-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-180-vs-rtr-160-4v.md",
+      "url": "/blog/auto/tvs-apache-rtr-180-vs-rtr-160-4v/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-apache-rtr-200-4v-mileage.md",
+      "url": "/blog/auto/tvs-apache-rtr-200-4v-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-jupiter-125-vs-suzuki-access-125.md",
+      "url": "/blog/auto/tvs-jupiter-125-vs-suzuki-access-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/tvs-ntorq-125-mileage.md",
+      "url": "/blog/auto/tvs-ntorq-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-burgman-street-125-mileage.md",
+      "url": "/blog/auto/suzuki-burgman-street-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-avenis-125-mileage.md",
+      "url": "/blog/auto/suzuki-avenis-125-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fascino-125-fi-hybrid-mileage.md",
+      "url": "/blog/auto/yamaha-fascino-125-fi-hybrid-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fz-s-fi-hybrid-mileage.md",
+      "url": "/blog/auto/yamaha-fz-s-fi-hybrid-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-mt-15-mileage.md",
+      "url": "/blog/auto/yamaha-mt-15-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-r15-v4-mileage.md",
+      "url": "/blog/auto/yamaha-r15-v4-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/yamaha-fz-s-vs-tvs-apache-rtr-160-mileage.md",
+      "url": "/blog/auto/yamaha-fz-s-vs-tvs-apache-rtr-160-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-top-speed.md",
+      "url": "/blog/auto/hero-splendor-plus-top-speed/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-splendor-plus-mileage-after-5-years.md",
+      "url": "/blog/auto/hero-splendor-plus-mileage-after-5-years/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/suzuki-access-125-vs-honda-activa-125.md",
+      "url": "/blog/auto/suzuki-access-125-vs-honda-activa-125/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-bullet-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-bullet-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-meteor-350-mileage.md",
+      "url": "/blog/auto/royal-enfield-meteor-350-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-guerrilla-450-mileage.md",
+      "url": "/blog/auto/royal-enfield-guerrilla-450-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/royal-enfield-himalayan-450-vs-ktm-390-adventure.md",
+      "url": "/blog/auto/royal-enfield-himalayan-450-vs-ktm-390-adventure/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-vida-vx2-range.md",
+      "url": "/blog/auto/hero-vida-vx2-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/river-indie-range.md",
+      "url": "/blog/auto/river-indie-range/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/ola-s1-x-vs-tvs-iqube.md",
+      "url": "/blog/auto/ola-s1-x-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/hero-vida-vx2-vs-tvs-iqube.md",
+      "url": "/blog/auto/hero-vida-vx2-vs-tvs-iqube/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-electric-scooters-for-100-km-daily-commute.md",
+      "url": "/blog/auto/best-electric-scooters-for-100-km-daily-commute/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/claimed-mileage-vs-real-mileage.md",
+      "url": "/blog/auto/claimed-mileage-vs-real-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/city-vs-highway-mileage-bike.md",
+      "url": "/blog/auto/city-vs-highway-mileage-bike/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-speed-for-bike-mileage.md",
+      "url": "/blog/auto/best-speed-for-bike-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/how-much-petrol-does-a-bike-use-in-10-20-30-50-km.md",
+      "url": "/blog/auto/how-much-petrol-does-a-bike-use-in-10-20-30-50-km/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/cost-to-ride-a-bike-for-1000-km-in-india.md",
+      "url": "/blog/auto/cost-to-ride-a-bike-for-1000-km-in-india/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-petrol-consumption-at-40-60-80-100-kmph.md",
+      "url": "/blog/auto/bike-petrol-consumption-at-40-60-80-100-kmph/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/why-has-my-bike-mileage-decreased.md",
+      "url": "/blog/auto/why-has-my-bike-mileage-decreased/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/does-bike-mileage-improve-after-first-service.md",
+      "url": "/blog/auto/does-bike-mileage-improve-after-first-service/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-mileage-calculator-petrol-cost.md",
+      "url": "/blog/auto/bike-mileage-calculator-petrol-cost/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-50-km-daily-commute.md",
+      "url": "/blog/auto/best-bikes-for-50-km-daily-commute/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/best-bikes-for-office-commuting-in-heavy-traffic.md",
+      "url": "/blog/auto/best-bikes-for-office-commuting-in-heavy-traffic/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/petrol-vs-electric-two-wheeler-3-year-ownership-cost.md",
+      "url": "/blog/auto/petrol-vs-electric-two-wheeler-3-year-ownership-cost/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/auto/bike-vs-scooter-for-daily-commuting-in-india.md",
+      "url": "/blog/auto/bike-vs-scooter-for-daily-commuting-in-india/",
+      "datePublished": "2026-10-29",
+      "dateModified": null,
+      "status": "owner-confirmed",
+      "confidence": "owner-directed",
+      "evidence": {
+        "kind": "explicit-immediate-publication-instruction",
+        "date": "2026-10-29",
+        "note": "The user instructed immediate publication on 2026-10-29; this publication date reflects the actual release date."
+      },
+      "rationale": "Date records the actual instructed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "url": "/blog/auto/best-cars-under-5-lakh-in-india-what-your-budget-actually-buys-on-the-road/",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "status": "verified",
+      "evidence": "Published on 2026-10-10 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-under-7-lakh-for-first-time-buyers-low-stress-ownership-guide/",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "status": "verified",
+      "evidence": "Published on 2026-10-10 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-under-10-lakh-in-india-hatchback-vs-compact-suv-vs-sedan/",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "status": "verified",
+      "evidence": "Published on 2026-10-10 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-family-cars-under-8-lakh-in-india-space-boot-ac-and-child-seat-guide/",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "status": "verified",
+      "evidence": "Published on 2026-10-10 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-small-cars-for-crowded-indian-cities-dimensions-turning-radius-traffic-ease/",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "status": "verified",
+      "evidence": "Published on 2026-10-10 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-automatic-cars-under-10-lakh-in-india-amt-vs-cvt-smoothness-mileage-compared/",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "status": "verified",
+      "evidence": "Published on 2026-10-10 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cng-cars-under-10-lakh-in-india-boot-space-real-mileage-twin-cylinder-guide/",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11",
+      "status": "verified",
+      "evidence": "Published on 2026-10-11 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/petrol-vs-cng-under-10-lakh-honest-break-even-distance-cost-calculation/",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11",
+      "status": "verified",
+      "evidence": "Published on 2026-10-11 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/is-the-base-variant-worth-buying-in-india-factory-safety-vs-aftermarket-risks/",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11",
+      "status": "verified",
+      "evidence": "Published on 2026-10-11 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-new-car-on-road-price-is-calculated-in-india-line-by-line-invoice-audit/",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11",
+      "status": "verified",
+      "evidence": "Published on 2026-10-11 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/maruti-swift-vs-hyundai-grand-i10-nios-city-drivability-mileage-ownership-cost-compared/",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11",
+      "status": "verified",
+      "evidence": "Published on 2026-10-11 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/maruti-baleno-vs-hyundai-i20-cabin-luxury-automatic-gearboxes-real-mileage-compared/",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11",
+      "status": "verified",
+      "evidence": "Published on 2026-10-11 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/maruti-wagonr-vs-tata-tiago-space-mileage-vs-crash-safety-highway-poise/",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-12",
+      "status": "verified",
+      "evidence": "Published on 2026-10-12 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/maruti-dzire-vs-honda-amaze-rear-seat-comfort-cvt-vs-ags-safety-mileage-compared/",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-12",
+      "status": "verified",
+      "evidence": "Published on 2026-10-12 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/maruti-brezza-vs-tata-nexon-safety-engines-automatics-ownership-compared/",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-12",
+      "status": "verified",
+      "evidence": "Published on 2026-10-12 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/hyundai-venue-vs-kia-sonet-5-real-differences-between-these-mechanical-twins/",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "status": "verified",
+      "evidence": "Published on 2026-10-13 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/maruti-fronx-vs-toyota-taisor-variant-mapping-warranty-price-differences-explained/",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "status": "verified",
+      "evidence": "Published on 2026-10-13 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/hyundai-creta-vs-kia-seltos-ride-comfort-engines-variants-family-value-compared/",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "status": "verified",
+      "evidence": "Published on 2026-10-13 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/mahindra-xuv-3xo-vs-tata-nexon-rear-space-boot-reality-automatics-safety-compared/",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "status": "verified",
+      "evidence": "Published on 2026-10-13 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/toyota-innova-crysta-vs-innova-hycross-diesel-manual-toughness-vs-hybrid-automatic-comfort/",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "status": "verified",
+      "evidence": "Published on 2026-10-13 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-suvs-under-12-lakh-in-india-exact-mid-variants-that-fit-your-on-road-budget/",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "status": "verified",
+      "evidence": "Published on 2026-10-13 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-suvs-under-15-lakh-in-india-exact-value-for-money-variants-to-buy/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "verified",
+      "evidence": "Published on 2026-10-14 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-under-20-lakh-for-a-family-of-five-true-3-across-rear-seat-boot-guide/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "verified",
+      "evidence": "Published on 2026-10-14 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-under-25-lakh-for-highway-trips-high-speed-stability-range-comfort/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "verified",
+      "evidence": "Published on 2026-10-14 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-suvs-under-30-lakh-in-india-top-spec-performance-comfort-safety-compared/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "verified",
+      "evidence": "Published on 2026-10-14 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-7-seater-cars-under-20-lakh-in-india-real-third-row-space-boot-audit/",
+      "datePublished": "2026-10-14",
+      "dateModified": "2026-10-14",
+      "status": "verified",
+      "evidence": "Published on 2026-10-14 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-7-seater-cars-under-30-lakh-in-india-third-row-comfort-safety-fuel-economy/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "verified",
+      "evidence": "Published on 2026-10-15 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/compact-suv-vs-mid-size-suv-in-india-does-the-extra-4-lakh-buy-real-space/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "verified",
+      "evidence": "Published on 2026-10-15 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/suv-vs-sedan-in-india-ground-clearance-reality-comfort-boot-space-value-compared/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "verified",
+      "evidence": "Published on 2026-10-15 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/cars-with-high-ground-clearance-for-indian-roads-unladen-vs-full-load-reality/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "verified",
+      "evidence": "Published on 2026-10-15 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-under-35-lakh-in-india-what-actually-feels-premium-on-the-road/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "verified",
+      "evidence": "Published on 2026-10-15 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-family-cars-under-40-lakh-in-india-comfort-quietness-safety-over-badge-hype/",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "status": "verified",
+      "evidence": "Published on 2026-10-15 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-suvs-under-50-lakh-in-india-rugged-dominance-vs-european-luxury-space/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "verified",
+      "evidence": "Published on 2026-10-16 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-under-60-lakh-for-highway-touring-fatigue-free-seats-stability-range/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "verified",
+      "evidence": "Published on 2026-10-16 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-suvs-under-70-lakh-in-india-real-engineering-vs-badge-only-markups/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "verified",
+      "evidence": "Published on 2026-10-16 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/toyota-fortuner-vs-mg-gloster-rugged-resale-king-vs-full-size-luxury-cruiser/",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "status": "verified",
+      "evidence": "Published on 2026-10-16 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/jeep-meridian-vs-toyota-fortuner-urban-monocoque-comfort-vs-ladder-frame-toughness/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "verified",
+      "evidence": "Published on 2026-10-17 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/skoda-kodiaq-vs-toyota-fortuner-european-luxury-pace-vs-rugged-resale-dominance/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "verified",
+      "evidence": "Published on 2026-10-17 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/toyota-innova-hycross-vs-kia-carnival-does-the-carnival-justify-twice-the-price/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "verified",
+      "evidence": "Published on 2026-10-17 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/luxury-badge-vs-fully-loaded-mainstream-suv-in-india-5-year-cost-reality-check/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "verified",
+      "evidence": "Published on 2026-10-17 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-mileage-cars-in-india-arai-claimed-figures-vs-real-world-traffic-reality/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "verified",
+      "evidence": "Published on 2026-10-17 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/petrol-vs-diesel-break-even-distance-in-india-compact-vs-heavy-suv-math/",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "status": "verified",
+      "evidence": "Published on 2026-10-17 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/cng-vs-petrol-monthly-savings-trade-offs-net-cashflow-after-emi-explained/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "verified",
+      "evidence": "Published on 2026-10-18 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/strong-hybrid-vs-petrol-in-india-exact-break-even-calculation-for-city-highway-drivers/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "verified",
+      "evidence": "Published on 2026-10-18 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/cost-of-driving-1000-km-in-india-petrol-diesel-cng-strong-hybrid-ev-compared/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "verified",
+      "evidence": "Published on 2026-10-18 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/city-mileage-vs-highway-mileage-explained-why-traffic-ac-gear-ratios-change-everything/",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "status": "verified",
+      "evidence": "Published on 2026-10-18 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-to-calculate-car-mileage-using-the-full-tank-method-auto-cut-off-guide/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "verified",
+      "evidence": "Published on 2026-10-19 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/why-is-my-car-giving-low-mileage-a-prioritized-diagnostic-checklist/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "verified",
+      "evidence": "Published on 2026-10-19 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/automatic-vs-manual-mileage-in-india-amt-cvt-torque-converter-dct-compared/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "status": "verified",
+      "evidence": "Published on 2026-10-19 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/annual-car-maintenance-cost-in-india-by-segment-5-year-service-tyres-battery-reserve/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "verified",
+      "evidence": "Published on 2026-10-20 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-to-choose-a-safe-car-in-india-crash-tests-body-shells-active-safety-explained/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "verified",
+      "evidence": "Published on 2026-10-20 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-many-airbags-do-you-really-need-in-india-where-all-6-airbags-sit-who-they-protect/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "verified",
+      "evidence": "Published on 2026-10-20 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/adas-in-indian-cars-which-features-actually-help-where-you-must-take-over/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "verified",
+      "evidence": "Published on 2026-10-20 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/6-airbags-vs-2-airbags-in-india-why-airbag-count-alone-doesnt-equal-a-safe-car/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "verified",
+      "evidence": "Published on 2026-10-20 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/is-a-sunroof-worth-paying-extra-for-in-india-heat-maintenance-safety-reality/",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "status": "verified",
+      "evidence": "Published on 2026-10-20 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/360-degree-camera-vs-rear-camera-in-india-tight-parking-help-vs-real-costs/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "verified",
+      "evidence": "Published on 2026-10-21 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/automatic-climate-control-vs-manual-ac-in-india-does-it-cool-better-or-just-smarter/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "verified",
+      "evidence": "Published on 2026-10-21 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/ventilated-seats-rear-ac-vents-powered-seats-which-comfort-features-actually-matter-in-india/",
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21",
+      "status": "verified",
+      "evidence": "Published on 2026-10-21 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/base-vs-mid-vs-top-variant-in-india-how-to-pick-the-exact-sweet-spot-trim/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "verified",
+      "evidence": "Published on 2026-10-22 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/alloy-wheels-vs-steel-wheels-for-indian-roads-pothole-survival-ride-comfort-cost/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "verified",
+      "evidence": "Published on 2026-10-22 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/new-car-vs-used-car-in-india-5-year-cost-loan-interest-risk-comparison/",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "status": "verified",
+      "evidence": "Published on 2026-10-22 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/three-year-old-used-car-vs-new-entry-level-car-in-india-the-65-lakh-showdown/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "evidence": "Published on 2026-10-23 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-used-cars-under-3-lakh-in-india-an-inspection-first-survival-guide/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "evidence": "Published on 2026-10-23 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-used-cars-under-5-lakh-for-first-time-buyers-dependable-picks-budget-breakdown/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "evidence": "Published on 2026-10-23 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-used-suvs-under-10-lakh-in-india-reliable-picks-vs-high-maintenance-traps/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "evidence": "Published on 2026-10-23 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/used-toyota-innova-crysta-or-fortuner-is-it-worth-buying-at-1-lakh-kilometres/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "evidence": "Published on 2026-10-23 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-many-kilometres-are-too-many-for-a-used-car-in-india-odometer-vs-condition-guide/",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "status": "verified",
+      "evidence": "Published on 2026-10-23 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-to-inspect-a-used-car-before-buying-in-india-accident-flood-mechanical-checklist/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "verified",
+      "evidence": "Published on 2026-10-24 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/used-car-dealer-vs-direct-owner-in-india-price-savings-risks-safe-payment-guide/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "verified",
+      "evidence": "Published on 2026-10-24 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/certified-pre-owned-vs-regular-used-car-in-india-what-the-warranty-actually-covers/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "verified",
+      "evidence": "Published on 2026-10-24 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-to-calculate-a-used-cars-fair-price-in-india-the-4-step-valuation-formula/",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "status": "verified",
+      "evidence": "Published on 2026-10-24 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/car-depreciation-in-3-5-and-7-years-in-india-market-reality-vs-insurance-idv/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/which-cars-have-better-resale-value-in-india-segment-leaders-what-drives-liquidity/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/used-car-loan-vs-personal-loan-in-india-interest-rates-hidden-fees-total-repayment/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-much-down-payment-should-you-make-on-a-car-in-india-new-vs-used-math/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/used-car-emi-calculator-in-india-monthly-payments-total-interest-the-flat-rate-trap/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/are-cheap-used-luxury-cars-expensive-to-maintain-in-india-the-12-lakh-bmwmercedes-reality/",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "status": "verified",
+      "evidence": "Published on 2026-10-25 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/buying-an-older-diesel-car-in-delhi-ncr-10-year-elv-rule-grap-bans-noc-reality/",
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "status": "verified",
+      "evidence": "Published on 2026-10-26 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-to-transfer-car-rc-insurance-ownership-in-india-step-by-step-parivahan-guide/",
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "status": "verified",
+      "evidence": "Published on 2026-10-26 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/how-to-check-challans-hypothecation-documents-before-buying-a-used-car-in-india/",
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "status": "verified",
+      "evidence": "Published on 2026-10-26 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/electric-vs-petrol-in-india-honest-5-year-total-ownership-cost-calculation/",
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "status": "verified",
+      "evidence": "Published on 2026-10-26 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-electric-cars-under-15-lakh-in-india-real-range-battery-sizes-variant-guide/",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "status": "verified",
+      "evidence": "Published on 2026-10-27 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-electric-cars-under-20-lakh-in-india-350-km-real-range-primary-family-evs/",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "status": "verified",
+      "evidence": "Published on 2026-10-27 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-electric-suvs-under-30-lakh-in-india-450530-km-real-range-road-trip-guide/",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "status": "verified",
+      "evidence": "Published on 2026-10-27 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/home-ev-charging-cost-in-india-exact-monthly-bill-tariffs-charging-loss-math/",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "status": "verified",
+      "evidence": "Published on 2026-10-28 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/real-world-ev-range-vs-claimed-range-in-india-speed-ac-hills-the-15-buffer-rule/",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "status": "verified",
+      "evidence": "Published on 2026-10-28 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/can-you-own-an-ev-without-home-charging-in-india-an-honest-apartment-buyers-guide/",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "status": "verified",
+      "evidence": "Published on 2026-10-28 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/ev-battery-warranty-replacement-cost-in-india-coverage-terms-exclusions-insurance-rules/",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "status": "verified",
+      "evidence": "Published on 2026-10-28 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/strong-hybrid-vs-ev-in-india-which-fits-apartment-residents-highway-drivers-best/",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "status": "verified",
+      "evidence": "Published on 2026-10-28 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/used-ev-vs-used-petrol-car-in-india-battery-health-warranty-transfer-inspection-guide/",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "status": "verified",
+      "evidence": "Published on 2026-10-29 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/salary-needed-for-a-10-lakh-15-lakh-or-20-lakh-car-in-india-realistic-scenarios/",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "status": "verified",
+      "evidence": "Published on 2026-10-29 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/car-emi-as-a-share-of-monthly-income-in-india-the-safe-1015-household-framework/",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "status": "verified",
+      "evidence": "Published on 2026-10-29 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/on-road-price-vs-emi-in-india-8-ongoing-costs-first-time-car-buyers-forget/",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "status": "verified",
+      "evidence": "Published on 2026-10-29 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/buy-a-car-in-cash-or-on-loan-in-india-post-tax-math-for-salaried-business-buyers/",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "status": "verified",
+      "evidence": "Published on 2026-10-29 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-for-daily-office-commutes-in-heavy-indian-traffic-smoothness-ac-mileage/",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "status": "verified",
+      "evidence": "Published on 2026-10-29 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-for-a-50-km-daily-commute-in-india-per-day-cost-seat-comfort-90000-km-math/",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "status": "verified",
+      "evidence": "Published on 2026-10-30 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-in-india-for-a-small-family-with-a-child-seat-stroller-luggage/",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "status": "verified",
+      "evidence": "Published on 2026-10-30 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-for-senior-citizens-in-india-easy-knee-friendly-entry-visibility-comfort/",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "status": "verified",
+      "evidence": "Published on 2026-10-30 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/best-cars-for-new-drivers-in-india-bonnet-visibility-hill-hold-scratch-friendly-picks/",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "status": "verified",
+      "evidence": "Published on 2026-10-30 per authoritative 100-article editorial schedule."
+    },
+    {
+      "url": "/blog/auto/buy-a-car-now-or-wait-for-a-facelift-or-festive-offer-in-india-the-complete-timing-guide/",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "status": "verified",
+      "evidence": "Published on 2026-10-30 per authoritative 100-article editorial schedule."
     }
   ]
 }
