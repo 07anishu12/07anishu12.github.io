@@ -89,6 +89,9 @@ function parseArticle(source, category, { root = ROOT, preview = false, imageRoo
     for (const key of ['goodFor', 'watchFor']) assert(Array.isArray(q[key]) && q[key].length > 0 && q[key].length <= 3 && q[key].every(text), `quickAnswer.${key} needs 1–3 short strings.`);
     assert(q.note === undefined || text(q.note), 'quickAnswer.note must be a nonempty string when supplied.');
   }
+  assert(data.faqItems === undefined || (Array.isArray(data.faqItems) && data.faqItems.length > 0 && data.faqItems.every(item => item && typeof item.question === 'string' && item.question.trim() && typeof item.answer === 'string' && item.answer.trim())), 'faqItems must contain question and answer strings.');
+  assert(data.seoKeywords === undefined || (typeof data.seoKeywords === 'string' && data.seoKeywords.trim()), 'seoKeywords must be a nonempty string when supplied.');
+  assert(data.publishOrder === undefined || (Number.isInteger(data.publishOrder) && data.publishOrder > 0), 'publishOrder must be a positive integer when supplied.');
   assert(data.author === AUTHOR.name, `author must be ${AUTHOR.name}.`);
   assert(data.featured === undefined || typeof data.featured === 'boolean', 'featured must be a boolean.');
   for (const key of ['datePublished', 'dateModified']) {
@@ -135,6 +138,6 @@ function readArticles(options = {}) {
       } catch (e) { throw new Error(`data/blog/${category}/${file}: ${e.message}`); }
     }
   }
-  return posts.sort((a, b) => b.datePublished.localeCompare(a.datePublished) || a.slug.localeCompare(b.slug));
+  return posts.sort((a, b) => b.datePublished.localeCompare(a.datePublished) || (a.publishOrder ?? Number.MAX_SAFE_INTEGER) - (b.publishOrder ?? Number.MAX_SAFE_INTEGER) || a.slug.localeCompare(b.slug));
 }
 module.exports = { ROOT, ORIGIN, AUTHOR, CATEGORIES, escape, json, assert, renderMarkdown, parseArticle, readArticles, siteGraph };
