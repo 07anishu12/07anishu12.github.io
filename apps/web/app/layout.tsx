@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import dynamic from "next/dynamic";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
 import { InquiryProvider } from "../components/InquiryContext";
 import { SiteHeader } from "../components/SiteHeader";
-import { InquiryModal } from "../components/InquiryModal";
+import { InquiryModalLazy } from "../components/InquiryModalLazy";
 import { InquiryFloatingTrigger } from "../components/InquiryFloatingTrigger";
 import { SiteStructuredData } from "../components/StructuredData";
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Aniket Thakur — AI × Product × Finance",
@@ -37,7 +46,7 @@ export const metadata: Metadata = {
       "AI engineering, backend systems, product development and financial engineering. Projects and writing by Aniket Thakur.",
     images: [
       {
-        url: "/assets/img/aniket-portrait.png",
+        url: "/assets/img/aniket-portrait.webp",
         width: 1086,
         height: 1448,
         alt: "Aniket Thakur",
@@ -49,15 +58,26 @@ export const metadata: Metadata = {
     title: "Aniket Thakur — AI × Product × Finance",
     description:
       "AI engineering, backend systems, product development and financial engineering. Projects and writing by Aniket Thakur.",
-    images: ["/assets/img/aniket-portrait.png"],
+    images: ["/assets/img/aniket-portrait.webp"],
   },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const publicApiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+
   return (
-    <html lang="en">
+    <html lang="en" className={plusJakarta.variable}>
+      <head>
+        {/* Synchronous inline configuration eliminates render-blocking network request */}
+        <script
+          id="site-config"
+          dangerouslySetInnerHTML={{
+            __html: `window.PORTFOLIO_CONFIG=Object.freeze({measurementId:'G-JB7DKFEC0Q',requireAnalyticsConsent:false,apiBaseUrl:${JSON.stringify(publicApiUrl)},whatsapp:'817012905081'});`,
+          }}
+        />
+      </head>
       <body>
         <InquiryProvider>
           <a className="skip-link" href="#content">
@@ -76,13 +96,9 @@ export default function RootLayout({
               </div>
             </footer>
           </div>
-          <InquiryModal />
+          <InquiryModalLazy />
           <InquiryFloatingTrigger />
           <SiteStructuredData />
-          <Script
-            src="/assets/js/site-config.js"
-            strategy="beforeInteractive"
-          />
           <Script src="/assets/js/analytics.js" strategy="afterInteractive" />
         </InquiryProvider>
       </body>

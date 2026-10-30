@@ -137,13 +137,25 @@ export default async function BlogPostPage({ params }: RouteProps) {
         {/* 4. Publication date, modified date, author */}
         <div className="article-header-meta">
           <div className="article-author-info">
-            <img
-              src="/assets/img/aniket-portrait.png"
-              alt="Aniket Thakur"
-              width={40}
-              height={40}
-              className="article-author-avatar"
-            />
+            <picture>
+              <source
+                srcSet="/assets/img/aniket-author-avatar.avif"
+                type="image/avif"
+              />
+              <source
+                srcSet="/assets/img/aniket-author-avatar.webp"
+                type="image/webp"
+              />
+              <img
+                src="/assets/img/aniket-author-avatar.webp"
+                alt="Aniket Thakur"
+                width={40}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                className="article-author-avatar"
+              />
+            </picture>
             <div className="article-author-text">
               <span className="article-author-name">Aniket Thakur</span>
               <div className="article-date-row">
@@ -185,6 +197,8 @@ export default async function BlogPostPage({ params }: RouteProps) {
                 alt={post.coverImageAlt || post.title}
                 width={post.width || 1200}
                 height={post.height || 675}
+                fetchPriority="high"
+                decoding="async"
                 className="article-cover-image"
               />
             </div>

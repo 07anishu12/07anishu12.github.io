@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export interface PostItem {
@@ -36,104 +36,178 @@ function formatDate(dateStr: string): string {
   }
 }
 
+export interface BlogIndexProps {
+  posts?: PostItem[];
+  initialPosts?: PostItem[];
+  totalPosts?: number;
+  currentPage?: number;
+  totalPages?: number;
+  pageSize?: number;
+  categories: string[];
+  categoryCounts?: Record<string, number>;
+  activeCategory?: string;
+  basePath?: string;
+}
+
 export function BlogIndex({
   posts,
+  initialPosts,
+  totalPosts: initialTotalPosts,
+  currentPage: initialCurrentPage = 1,
+  totalPages: initialTotalPages,
+  pageSize = 12,
   categories,
-  activeCategory: initialActiveCategory,
-}: {
-  posts: PostItem[];
-  categories: string[];
-  activeCategory?: string;
-}) {
+  categoryCounts = {},
+  activeCategory = "all",
+  basePath = "/blog/",
+}: BlogIndexProps) {
+  // If legacy full posts array was passed, slice it
+  const resolvedInitialPosts = useMemo(() => {
+    if (initialPosts) return initialPosts;
+    if (posts) {
+      const filtered =
+        activeCategory === "all"
+          ? posts
+          : posts.filter(
+              (p) =>
+                p.category.toLowerCase() === activeCategory.toLowerCase(),
+            );
+      const start = (initialCurrentPage - 1) * pageSize;
+      return filtered.slice(start, start + pageSize);
+    }
+    return [];
+  }, [initialPosts, posts, activeCategory, initialCurrentPage, pageSize]);
+
+  const resolvedTotalPosts =
+    initialTotalPosts ??
+    (posts
+      ? activeCategory === "all"
+        ? posts.length
+        : posts.filter(
+            (p) => p.category.toLowerCase() === activeCategory.toLowerCase(),
+          ).length
+      : resolvedInitialPosts.length);
+
+  const resolvedTotalPages =
+    initialTotalPages ?? Math.max(1, Math.ceil(resolvedTotalPosts / pageSize));
+
   const [query, setQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>(
-    initialActiveCategory || "all",
-  );
-  const [page, setPage] = useState(1);
-  const PAGE_SIZE = 12;
+  const [searchIndex, setSearchIndex] = useState<PostItem[] | null>(null);
+  const [isSearching, setIsSearching] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Filter posts based on query and category
-  const filteredPosts = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return posts.filter((p) => {
-      const matchesCategory =
-        selectedCategory === "all" ||
-        p.category.toLowerCase() === selectedCategory.toLowerCase();
-      if (!matchesCategory) return false;
-      if (!q) return true;
-      return (
-        p.title.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q)
-      );
-    });
-  }, [posts, query, selectedCategory]);
+  // Lazy-load compact search index only when user focuses search bar or starts typing
+  const loadSearchIndex = async () => {
+    if (searchIndex !== null || isSearching) return;
+    setIsSearching(true);
+    try {
+      const res = await fetch("/generated/search-index.json");
+      if (res.ok) {
+        const data = await res.json();
+        setSearchIndex(data);
+      }
+    } catch (e) {
+      console.warn("[Search] Could not load search index:", e);
+    } finally {
+      setIsSearching(false);
+    }
+  };
 
-  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / PAGE_SIZE));
-  const currentPage = Math.min(page, totalPages);
+  // Compute displayed articles: search results if query present, else server-rendered initialPosts
+  const { displayedArticles, isSearchActive, searchResultsCount } =
+    useMemo(() => {
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        return {
+          displayedArticles: resolvedInitialPosts,
+          isSearchActive: false,
+          searchResultsCount: 0,
+        };
+      }
 
-  // Identify featured article (first post when on page 1 and no search query)
+      const sourceList = searchIndex || posts || resolvedInitialPosts;
+      const filtered = sourceList.filter((p) => {
+        const matchesCat =
+          activeCategory === "all" ||
+          p.category.toLowerCase() === activeCategory.toLowerCase();
+        if (!matchesCat) return false;
+        return (
+          p.title.toLowerCase().includes(q) ||
+          p.description.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q)
+        );
+      });
+
+      return {
+        displayedArticles: filtered,
+        isSearchActive: true,
+        searchResultsCount: filtered.length,
+      };
+    }, [query, resolvedInitialPosts, searchIndex, posts, activeCategory]);
+
+  // Spotlight article for page 1 without search
   const showFeaturedHero =
-    currentPage === 1 && !query.trim() && filteredPosts.length > 0;
-  const featuredPost = showFeaturedHero ? filteredPosts[0] : null;
+    initialCurrentPage === 1 && !isSearchActive && displayedArticles.length > 0;
+  const featuredPost = showFeaturedHero ? displayedArticles[0] : null;
 
-  // Remaining articles for the grid
+  // Grid articles (exclude featured post if shown as hero)
   const gridArticles = useMemo(() => {
     if (showFeaturedHero) {
-      // Exclude featured article from the first page grid
-      const start = 1;
-      const end = 1 + PAGE_SIZE;
-      return filteredPosts.slice(start, end);
+      return displayedArticles.slice(1);
     }
-    const start = (currentPage - 1) * PAGE_SIZE;
-    const end = start + PAGE_SIZE;
-    return filteredPosts.slice(start, end);
-  }, [filteredPosts, showFeaturedHero, currentPage]);
-
-  const handleCategoryChange = (cat: string) => {
-    setSelectedCategory(cat);
-    setPage(1);
-  };
+    return displayedArticles;
+  }, [displayedArticles, showFeaturedHero]);
 
   const handleClearSearch = () => {
     setQuery("");
-    setPage(1);
+  };
+
+  // Helper to generate crawlable pagination href
+  const getPageHref = (pageNum: number) => {
+    const cleanBase = basePath.endsWith("/") ? basePath : `${basePath}/`;
+    if (pageNum <= 1) return cleanBase;
+    return `${cleanBase}?page=${pageNum}`;
   };
 
   return (
     <div className="blog-library-wrapper">
-      {/* Category Navigation Pills */}
+      {/* Category Navigation Pills (Semantic Links for Instant Crawlability) */}
       <nav
         className="blog-category-pills"
         aria-label="Filter articles by category"
       >
-        <button
-          type="button"
-          className={`category-pill ${selectedCategory === "all" ? "category-pill-active" : ""}`}
-          onClick={() => handleCategoryChange("all")}
+        <Link
+          href="/blog/"
+          className={`category-pill ${activeCategory === "all" ? "category-pill-active" : ""}`}
         >
-          All Writing <span className="pill-badge">{posts.length}</span>
-        </button>
+          All Writing{" "}
+          <span className="pill-badge">
+            {categoryCounts.all || resolvedTotalPosts}
+          </span>
+        </Link>
         {categories.map((c) => {
-          const count = posts.filter(
-            (p) => p.category.toLowerCase() === c.toLowerCase(),
-          ).length;
-          const isActive = selectedCategory.toLowerCase() === c.toLowerCase();
+          const count =
+            categoryCounts[c.toLowerCase()] ??
+            (posts
+              ? posts.filter(
+                  (p) => p.category.toLowerCase() === c.toLowerCase(),
+                ).length
+              : 0);
+          const isActive = activeCategory.toLowerCase() === c.toLowerCase();
           return (
-            <button
+            <Link
               key={c}
-              type="button"
+              href={`/blog/${c.toLowerCase()}/`}
               className={`category-pill ${isActive ? "category-pill-active" : ""}`}
-              onClick={() => handleCategoryChange(c)}
             >
               {c.charAt(0).toUpperCase() + c.slice(1)}{" "}
               <span className="pill-badge">{count}</span>
-            </button>
+            </Link>
           );
         })}
       </nav>
 
-      {/* Search Input Bar */}
+      {/* On-Demand Search Bar */}
       <div className="blog-search-container">
         <div className="search-input-wrapper">
           <svg
@@ -152,94 +226,113 @@ export function BlogIndex({
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
           <input
+            ref={searchInputRef}
             className="blog-search-input"
             id="article-search"
             type="search"
             value={query}
+            onFocus={loadSearchIndex}
             onChange={(e) => {
+              loadSearchIndex();
               setQuery(e.target.value);
-              setPage(1);
             }}
-            placeholder="Search 326 guides, models, and deep dives…"
-            aria-label="Search articles"
+            placeholder={`Search ${resolvedTotalPosts} guides, models, and systems...`}
+            aria-label="Search technical library"
           />
           {query && (
             <button
               type="button"
-              className="clear-search-btn"
+              className="search-clear-btn"
               onClick={handleClearSearch}
-              aria-label="Clear search query"
+              aria-label="Clear search"
             >
               ✕
             </button>
           )}
         </div>
-        <div className="search-status-row" role="status" aria-live="polite">
-          <span>
-            {filteredPosts.length}{" "}
-            {filteredPosts.length === 1 ? "article" : "articles"} found
-            {selectedCategory !== "all" ? ` in ${selectedCategory}` : ""}
-            {query ? ` for "${query}"` : ""}
-          </span>
-          {query && (
-            <button
-              type="button"
-              className="reset-filter-link"
-              onClick={handleClearSearch}
-            >
-              Reset search
-            </button>
-          )}
-        </div>
       </div>
 
-      {/* Featured Spotlight Card */}
-      {featuredPost && (
+      {/* Active Search Results Indicator */}
+      {isSearchActive && (
+        <div className="blog-search-results-bar">
+          <span>
+            Found <strong>{searchResultsCount}</strong>{" "}
+            {searchResultsCount === 1 ? "article" : "articles"} matching "
+            <em>{query}</em>"
+          </span>
+          <button
+            type="button"
+            className="search-results-clear"
+            onClick={handleClearSearch}
+          >
+            Reset to Page View
+          </button>
+        </div>
+      )}
+
+      {/* Spotlight / Featured Article (Page 1 Only) */}
+      {showFeaturedHero && featuredPost && (
         <section
-          className="featured-spotlight-card"
+          className="blog-spotlight"
           aria-label="Featured technical guide"
         >
-          <div className="spotlight-visual">
-            {featuredPost.coverImage ? (
-              <img
-                src={featuredPost.coverImage}
-                alt={featuredPost.coverImageAlt || featuredPost.title}
-                className="spotlight-img"
-                loading="eager"
-              />
-            ) : (
-              <div className="spotlight-placeholder-art" aria-hidden="true">
-                <span className="spotlight-category-glyph">
-                  {featuredPost.category.toUpperCase().slice(0, 3)}
-                </span>
-              </div>
-            )}
-          </div>
-          <div className="spotlight-content">
-            <div className="spotlight-meta-top">
-              <span
-                className="article-badge"
-                style={{
-                  color:
-                    CATEGORY_COLORS[featuredPost.category.toLowerCase()] ||
-                    "var(--blue)",
-                }}
-              >
-                {featuredPost.category.toUpperCase()}
-              </span>
-              <span className="spotlight-flag">Featured Deep Dive</span>
+          <div className="spotlight-card">
+            <div className="spotlight-image-col">
+              {featuredPost.coverImage ? (
+                <img
+                  src={featuredPost.coverImage}
+                  alt={featuredPost.coverImageAlt || featuredPost.title}
+                  className="spotlight-img"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              ) : (
+                <div
+                  className="spotlight-placeholder"
+                  style={{
+                    backgroundColor:
+                      CATEGORY_COLORS[featuredPost.category.toLowerCase()] ||
+                      "var(--blue)",
+                  }}
+                >
+                  <span>{featuredPost.category}</span>
+                </div>
+              )}
             </div>
-            <h2 className="spotlight-title">
-              <Link
-                href={`/blog/${featuredPost.category}/${featuredPost.slug}/`}
-              >
-                {featuredPost.title}
-              </Link>
-            </h2>
-            <p className="spotlight-excerpt">{featuredPost.description}</p>
-            <div className="spotlight-footer">
-              <div className="spotlight-meta-info">
-                <span>{formatDate(featuredPost.datePublished)}</span>
+            <div className="spotlight-content-col">
+              <div className="spotlight-badge-row">
+                <span
+                  className="spotlight-category"
+                  style={{
+                    color:
+                      CATEGORY_COLORS[featuredPost.category.toLowerCase()] ||
+                      "var(--blue)",
+                  }}
+                >
+                  <span
+                    className="category-bullet"
+                    style={{
+                      background:
+                        CATEGORY_COLORS[featuredPost.category.toLowerCase()] ||
+                        "var(--blue)",
+                    }}
+                  ></span>
+                  {featuredPost.category}
+                </span>
+                <span className="spotlight-tag">Featured Analysis</span>
+              </div>
+              <h2 className="spotlight-title">
+                <Link
+                  href={`/blog/${featuredPost.category}/${featuredPost.slug}/`}
+                >
+                  {featuredPost.title}
+                </Link>
+              </h2>
+              <p className="spotlight-desc">{featuredPost.description}</p>
+              <div className="spotlight-meta">
+                <time dateTime={featuredPost.datePublished}>
+                  {formatDate(featuredPost.datePublished)}
+                </time>
                 {featuredPost.readingTime && (
                   <>
                     <span className="meta-dot">·</span>
@@ -278,6 +371,7 @@ export function BlogIndex({
                       alt={p.coverImageAlt || p.title}
                       className="article-card-cover"
                       loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="article-card-placeholder">
@@ -339,7 +433,7 @@ export function BlogIndex({
           <h3>No articles found</h3>
           <p>
             No articles match your search query <strong>"{query}"</strong> in
-            this category.
+            this view.
           </p>
           <button
             type="button"
@@ -351,39 +445,50 @@ export function BlogIndex({
         </div>
       )}
 
-      {/* Crawlable Pagination Controls */}
-      {totalPages > 1 && (
+      {/* Crawlable Pagination Controls (Using Real Links for Search Engines) */}
+      {!isSearchActive && resolvedTotalPages > 1 && (
         <nav
           className="blog-pagination"
           aria-label="Article library pagination"
         >
-          <button
-            type="button"
-            className="button button-secondary pagination-btn"
-            disabled={currentPage === 1}
-            onClick={() => {
-              setPage((prev) => Math.max(1, prev - 1));
-              window.scrollTo({ top: 300, behavior: "smooth" });
-            }}
-          >
-            ← Previous
-          </button>
+          {initialCurrentPage > 1 ? (
+            <Link
+              href={getPageHref(initialCurrentPage - 1)}
+              className="button button-secondary pagination-btn"
+              rel="prev"
+            >
+              ← Previous
+            </Link>
+          ) : (
+            <span
+              className="button button-secondary pagination-btn disabled"
+              aria-disabled="true"
+            >
+              ← Previous
+            </span>
+          )}
 
           <span className="pagination-status">
-            Page <strong>{currentPage}</strong> of <strong>{totalPages}</strong>
+            Page <strong>{initialCurrentPage}</strong> of{" "}
+            <strong>{resolvedTotalPages}</strong>
           </span>
 
-          <button
-            type="button"
-            className="button button-secondary pagination-btn"
-            disabled={currentPage >= totalPages}
-            onClick={() => {
-              setPage((prev) => Math.min(totalPages, prev + 1));
-              window.scrollTo({ top: 300, behavior: "smooth" });
-            }}
-          >
-            Next →
-          </button>
+          {initialCurrentPage < resolvedTotalPages ? (
+            <Link
+              href={getPageHref(initialCurrentPage + 1)}
+              className="button button-secondary pagination-btn"
+              rel="next"
+            >
+              Next →
+            </Link>
+          ) : (
+            <span
+              className="button button-secondary pagination-btn disabled"
+              aria-disabled="true"
+            >
+              Next →
+            </span>
+          )}
         </nav>
       )}
     </div>

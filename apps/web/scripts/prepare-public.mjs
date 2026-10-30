@@ -4,8 +4,50 @@ import { projects } from "../lib/projects.ts";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const { readArticles } = require("../../../tools/blog/content.js");
-fs.mkdirSync("generated", { recursive: true });
-fs.writeFileSync("generated/posts.json", JSON.stringify(readArticles()));
+fs.mkdirSync("generated/articles", { recursive: true });
+const rawArticles = readArticles();
+fs.writeFileSync("generated/posts.json", JSON.stringify(rawArticles));
+
+const catalog = rawArticles.map((p) => ({
+  title: p.title,
+  seoTitle: p.seoTitle,
+  slug: p.slug,
+  description: p.description,
+  category: p.category,
+  tags: p.tags || [],
+  author: p.author,
+  datePublished: p.datePublished,
+  dateModified: p.dateModified,
+  coverImage: p.coverImage,
+  coverImageAlt: p.coverImageAlt,
+  draft: Boolean(p.draft),
+  enquiry: Boolean(p.enquiry),
+  width: p.width || 1200,
+  height: p.height || 675,
+  readingTime: p.readingTime || 5,
+  featured: Boolean(p.featured),
+  publishOrder: p.publishOrder,
+  hasFaq: Boolean(p.faqItems?.length),
+  hasQuickAnswer: Boolean(p.quickAnswer),
+}));
+fs.writeFileSync("generated/posts-catalog.json", JSON.stringify(catalog));
+
+const searchIndex = rawArticles.map((p) => ({
+  title: p.title,
+  slug: p.slug,
+  category: p.category,
+  description: p.description,
+  tags: p.tags || [],
+  datePublished: p.datePublished,
+  readingTime: p.readingTime || 5,
+}));
+fs.writeFileSync("generated/search-index.json", JSON.stringify(searchIndex));
+
+for (const p of rawArticles) {
+  const catDir = path.join("generated/articles", p.category);
+  fs.mkdirSync(catDir, { recursive: true });
+  fs.writeFileSync(path.join(catDir, `${p.slug}.json`), JSON.stringify(p));
+}
 const root = path.resolve("../.."),
   out = path.resolve("public");
 const walk = (directory) =>

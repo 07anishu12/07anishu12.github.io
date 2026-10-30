@@ -1,4 +1,5 @@
-import { listPosts } from "../../lib/blog";
+export const revalidate = 600;
+import { listPosts, getPaginatedPosts } from "../../lib/blog";
 import { BlogIndex } from "../../components/BlogIndex";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import {
@@ -20,11 +21,30 @@ export const metadata = {
   },
 };
 
-export default function BlogPage() {
-  const posts = listPosts();
-  const categories = [...new Set(posts.map((p) => p.category))];
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ page?: string; q?: string }>;
+}) {
+  const resolvedParams = searchParams ? await searchParams : {};
+  const page = Math.max(1, parseInt(resolvedParams.page || "1", 10) || 1);
+  const query = resolvedParams.q || "";
 
-  const structuredItems = posts.slice(0, 30).map((p) => ({
+  const {
+    posts: pagePosts,
+    total,
+    totalPages,
+    pageSize,
+    categories,
+    categoryCounts,
+  } = getPaginatedPosts({
+    category: "all",
+    page,
+    pageSize: 12,
+    query,
+  });
+
+  const structuredItems = pagePosts.slice(0, 30).map((p) => ({
     name: p.title,
     url: `/blog/${p.category}/${p.slug}/`,
     description: p.description,
@@ -56,7 +76,7 @@ export default function BlogPage() {
 
         {/* Hero Section */}
         <header className="blog-hero">
-          <p className="eyebrow">The Technical Library · 326 Publications</p>
+          <p className="eyebrow">The Technical Library · {total} Publications</p>
           <h1 className="page-title">
             Ideas, tested &amp; <em className="serif">explained with care.</em>
           </h1>
@@ -69,11 +89,11 @@ export default function BlogPage() {
 
           <div className="blog-library-stats">
             <div className="stat-pill">
-              <strong>326</strong> Published Guides
+              <strong>{total}</strong> Published Guides
             </div>
             <div className="stat-pill">
-              <strong>4</strong> Core Pillars (Technology, Finance, Auto,
-              Product)
+              <strong>{categories.length}</strong> Core Pillars (Technology,
+              Finance, Auto, Product)
             </div>
             <div className="stat-pill">
               <strong>100%</strong> Original Analysis &amp; Implementations
@@ -83,30 +103,15 @@ export default function BlogPage() {
 
         {/* Interactive Library & Grid */}
         <BlogIndex
-          posts={posts.map(
-            ({
-              title,
-              description,
-              category,
-              slug,
-              datePublished,
-              coverImage,
-              coverImageAlt,
-              readingTime,
-              featured,
-            }) => ({
-              title,
-              description,
-              category,
-              slug,
-              datePublished,
-              coverImage,
-              coverImageAlt,
-              readingTime,
-              featured,
-            }),
-          )}
+          initialPosts={pagePosts}
+          totalPosts={total}
+          currentPage={page}
+          totalPages={totalPages}
+          pageSize={pageSize}
           categories={categories}
+          categoryCounts={categoryCounts}
+          activeCategory="all"
+          basePath="/blog/"
         />
       </div>
     </main>

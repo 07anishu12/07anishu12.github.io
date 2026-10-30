@@ -189,13 +189,27 @@ export default function Home() {
           </div>
 
           <figure className="portrait-card">
-            <img
-              src="/assets/img/aniket-portrait.png"
-              alt="Aniket Thakur portrait"
-              width="1086"
-              height="1448"
-              fetchPriority="high"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/assets/img/aniket-portrait-280.avif 280w, /assets/img/aniket-portrait-400.avif 400w, /assets/img/aniket-portrait-560.avif 560w, /assets/img/aniket-portrait-680.avif 680w, /assets/img/aniket-portrait-800.avif 800w, /assets/img/aniket-portrait-1086.avif 1086w"
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/assets/img/aniket-portrait-280.webp 280w, /assets/img/aniket-portrait-400.webp 400w, /assets/img/aniket-portrait-560.webp 560w, /assets/img/aniket-portrait-680.webp 680w, /assets/img/aniket-portrait-800.webp 800w, /assets/img/aniket-portrait-1086.webp 1086w"
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
+              />
+              <img
+                src="/assets/img/aniket-portrait.webp"
+                alt="Aniket Thakur portrait"
+                width={1086}
+                height={1448}
+                fetchPriority="high"
+                decoding="async"
+                style={{ width: "100%", height: "auto", aspectRatio: "3 / 4" }}
+              />
+            </picture>
             <figcaption>
               <span>New Delhi / Okinawa</span>
               <span>AI · Product · Research</span>

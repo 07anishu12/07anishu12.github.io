@@ -73,5 +73,9 @@
     }
     start();
   });
-  start();
+  if (typeof window !== 'undefined' && typeof window.requestIdleCallback === 'function') {
+    window.requestIdleCallback(start, { timeout: 2000 });
+  } else {
+    start();
+  }
 })();

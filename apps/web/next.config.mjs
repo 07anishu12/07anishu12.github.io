@@ -5,7 +5,9 @@ const nextConfig = {
   trailingSlash: true,
   outputFileTracingRoot: path.join(process.cwd(), "../.."),
   poweredByHeader: false,
-  outputFileTracingIncludes: { "/*": ["../../data/blog/**/*.md"] },
+  outputFileTracingIncludes: {
+    "/*": ["../../data/blog/**/*.md", "./generated/**/*.json"],
+  },
   async redirects() {
     return [
       {

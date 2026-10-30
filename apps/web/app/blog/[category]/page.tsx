@@ -1,5 +1,10 @@
+export const revalidate = 600;
 import { notFound } from "next/navigation";
-import { listPosts, categoryDescriptions } from "../../../lib/blog";
+import {
+  listPosts,
+  getPaginatedPosts,
+  categoryDescriptions,
+} from "../../../lib/blog";
 import { BlogIndex } from "../../../components/BlogIndex";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import {
@@ -39,16 +44,31 @@ export async function generateMetadata({
 
 export default async function CategoryPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams?: Promise<{ page?: string; q?: string }>;
 }) {
   const { category } = await params;
-  const allPosts = listPosts();
-  const categoryPosts = allPosts.filter(
-    (p) => p.category.toLowerCase() === category.toLowerCase(),
-  );
+  const resolvedParams = searchParams ? await searchParams : {};
+  const page = Math.max(1, parseInt(resolvedParams.page || "1", 10) || 1);
+  const query = resolvedParams.q || "";
 
-  if (!categoryPosts.length) notFound();
+  const {
+    posts: categoryPosts,
+    total,
+    totalPages,
+    pageSize,
+    categories,
+    categoryCounts,
+  } = getPaginatedPosts({
+    category,
+    page,
+    pageSize: 12,
+    query,
+  });
+
+  if (!total && !query) notFound();
 
   const name = `${category.charAt(0).toUpperCase()}${category.slice(1)}`;
   const description =
@@ -60,8 +80,6 @@ export default async function CategoryPage({
     url: `/blog/${p.category}/${p.slug}/`,
     description: p.description,
   }));
-
-  const allCategories = [...new Set(allPosts.map((p) => p.category))];
 
   return (
     <main className="section blog-category-page">
@@ -99,41 +117,26 @@ export default async function CategoryPage({
 
           <div className="blog-library-stats">
             <div className="stat-pill">
-              <strong>{categoryPosts.length}</strong> {name} Articles
+              <strong>{total}</strong> {name} Articles
             </div>
             <div className="stat-pill">
-              Part of the <strong>326-article</strong> Technical Library
+              Part of the <strong>{categoryCounts.all || 562}-article</strong>{" "}
+              Technical Library
             </div>
           </div>
         </header>
 
         {/* Interactive Library Filtered to Category */}
         <BlogIndex
-          posts={allPosts.map(
-            ({
-              title,
-              description,
-              category: c,
-              slug,
-              datePublished,
-              coverImage,
-              coverImageAlt,
-              readingTime,
-              featured,
-            }) => ({
-              title,
-              description,
-              category: c,
-              slug,
-              datePublished,
-              coverImage,
-              coverImageAlt,
-              readingTime,
-              featured,
-            }),
-          )}
-          categories={allCategories}
+          initialPosts={categoryPosts}
+          totalPosts={total}
+          currentPage={page}
+          totalPages={totalPages}
+          pageSize={pageSize}
+          categories={categories}
+          categoryCounts={categoryCounts}
           activeCategory={category}
+          basePath={`/blog/${category}/`}
         />
       </div>
     </main>
