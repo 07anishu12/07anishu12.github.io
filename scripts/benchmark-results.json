@@ -1,0 +1,362 @@
+[
+  {
+    "route": "Homepage",
+    "url": "https://aniket.app/",
+    "mobileCold": {
+      "ttfb": 30.199999999254942,
+      "fcp": 508,
+      "lcp": 508,
+      "cls": 0,
+      "tbt": 9,
+      "domContentLoaded": 433.19999999925494,
+      "loadEvent": 763.5,
+      "totalBytes": 1098640,
+      "requestCount": 23,
+      "heroImage": {
+        "tagName": "H1",
+        "currentSrc": null,
+        "width": 354,
+        "height": 99
+      }
+    },
+    "desktopCold": {
+      "ttfb": 30.600000001490116,
+      "fcp": 200,
+      "lcp": 200,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1209742,
+      "requestCount": 32
+    },
+    "desktopWarm": {
+      "ttfb": 34.100000001490116,
+      "fcp": 104,
+      "lcp": 104,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Projects Index",
+    "url": "https://aniket.app/projects/",
+    "mobileCold": {
+      "ttfb": 29.700000002980232,
+      "fcp": 496,
+      "lcp": 496,
+      "cls": 0,
+      "tbt": 12,
+      "domContentLoaded": 425.19999999925494,
+      "loadEvent": 757.5999999977648,
+      "totalBytes": 946354,
+      "requestCount": 18,
+      "heroImage": {
+        "tagName": "P",
+        "currentSrc": null,
+        "width": 354,
+        "height": 246
+      }
+    },
+    "desktopCold": {
+      "ttfb": 29.899999998509884,
+      "fcp": 212,
+      "lcp": 212,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1127638,
+      "requestCount": 33
+    },
+    "desktopWarm": {
+      "ttfb": 35.5,
+      "fcp": 108,
+      "lcp": 108,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Work",
+    "url": "https://aniket.app/work/",
+    "mobileCold": {
+      "ttfb": 33.19999999925494,
+      "fcp": 480,
+      "lcp": 480,
+      "cls": 0,
+      "tbt": 8,
+      "domContentLoaded": 419.69999999925494,
+      "loadEvent": 741,
+      "totalBytes": 944429,
+      "requestCount": 17,
+      "heroImage": {
+        "tagName": "P",
+        "currentSrc": null,
+        "width": 354,
+        "height": 184
+      }
+    },
+    "desktopCold": {
+      "ttfb": 31.699999999254942,
+      "fcp": 204,
+      "lcp": 204,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1153849,
+      "requestCount": 31
+    },
+    "desktopWarm": {
+      "ttfb": 28.299999997019768,
+      "fcp": 96,
+      "lcp": 96,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Project Case Study",
+    "url": "https://aniket.app/projects/finance-tools/",
+    "mobileCold": {
+      "ttfb": 28.899999998509884,
+      "fcp": 472,
+      "lcp": 472,
+      "cls": 0,
+      "tbt": 10,
+      "domContentLoaded": 422,
+      "loadEvent": 744.1999999992549,
+      "totalBytes": 933789,
+      "requestCount": 20,
+      "heroImage": {
+        "tagName": "P",
+        "currentSrc": null,
+        "width": 354,
+        "height": 151
+      }
+    },
+    "desktopCold": {
+      "ttfb": 31.400000002235174,
+      "fcp": 196,
+      "lcp": 196,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1076039,
+      "requestCount": 31
+    },
+    "desktopWarm": {
+      "ttfb": 26.800000000745058,
+      "fcp": 88,
+      "lcp": 88,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Blog Index",
+    "url": "https://aniket.app/blog/",
+    "mobileCold": {
+      "ttfb": 30,
+      "fcp": 964,
+      "lcp": 964,
+      "cls": 0,
+      "tbt": 12,
+      "domContentLoaded": 949.5,
+      "loadEvent": 1248.6000000014901,
+      "totalBytes": 915031,
+      "requestCount": 25,
+      "heroImage": {
+        "tagName": "P",
+        "currentSrc": null,
+        "width": 354,
+        "height": 215
+      }
+    },
+    "desktopCold": {
+      "ttfb": 29.300000000745058,
+      "fcp": 696,
+      "lcp": 696,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1139567,
+      "requestCount": 50
+    },
+    "desktopWarm": {
+      "ttfb": 26.5,
+      "fcp": 308,
+      "lcp": 308,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Blog Category (Auto)",
+    "url": "https://aniket.app/blog/auto/",
+    "mobileCold": {
+      "ttfb": 34.30000000074506,
+      "fcp": 676,
+      "lcp": 676,
+      "cls": 0,
+      "tbt": 13,
+      "domContentLoaded": 678,
+      "loadEvent": 1267.1000000014901,
+      "totalBytes": 958997,
+      "requestCount": 19,
+      "heroImage": {
+        "tagName": "IMG",
+        "currentSrc": "https://aniket.app/assets/images/blog/best-cars-for-a-50-km-daily-commute-in-india-per-day-cost-seat-comfort-90000-km-math/cover.svg",
+        "width": 358,
+        "height": 224
+      }
+    },
+    "desktopCold": {
+      "ttfb": 29.5,
+      "fcp": 292,
+      "lcp": 292,
+      "cls": 0.04168257599504887,
+      "tbt": 0,
+      "totalBytes": 972731,
+      "requestCount": 25
+    },
+    "desktopWarm": {
+      "ttfb": 28.900000002235174,
+      "fcp": 116,
+      "lcp": 132,
+      "cls": 0.031126322177211934
+    }
+  },
+  {
+    "route": "Blog Article",
+    "url": "https://aniket.app/blog/auto/best-cars-under-5-lakh-in-india-what-your-budget-actually-buys-on-the-road/",
+    "mobileCold": {
+      "ttfb": 29.800000000745058,
+      "fcp": 504,
+      "lcp": 504,
+      "cls": 0,
+      "tbt": 16,
+      "domContentLoaded": 426.9000000022352,
+      "loadEvent": 786,
+      "totalBytes": 940337,
+      "requestCount": 25,
+      "heroImage": {
+        "tagName": "IMG",
+        "currentSrc": "https://aniket.app/assets/images/blog/best-cars-under-5-lakh-in-india-what-your-budget-actually-buys-on-the-road/cover.svg",
+        "width": 352,
+        "height": 197
+      }
+    },
+    "desktopCold": {
+      "ttfb": 31.699999999254942,
+      "fcp": 216,
+      "lcp": 216,
+      "cls": 0.001312294908479081,
+      "tbt": 0,
+      "totalBytes": 1144968,
+      "requestCount": 37
+    },
+    "desktopWarm": {
+      "ttfb": 37.400000002235174,
+      "fcp": 96,
+      "lcp": 108,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Research",
+    "url": "https://aniket.app/research/",
+    "mobileCold": {
+      "ttfb": 31.100000001490116,
+      "fcp": 560,
+      "lcp": 560,
+      "cls": 0,
+      "tbt": 9,
+      "domContentLoaded": 494.5,
+      "loadEvent": 817.7000000029802,
+      "totalBytes": 890866,
+      "requestCount": 17,
+      "heroImage": {
+        "tagName": "P",
+        "currentSrc": null,
+        "width": 354,
+        "height": 246
+      }
+    },
+    "desktopCold": {
+      "ttfb": 30.800000000745058,
+      "fcp": 204,
+      "lcp": 204,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1098031,
+      "requestCount": 31
+    },
+    "desktopWarm": {
+      "ttfb": 29.600000001490116,
+      "fcp": 96,
+      "lcp": 96,
+      "cls": 0
+    }
+  },
+  {
+    "route": "About",
+    "url": "https://aniket.app/about/",
+    "mobileCold": {
+      "ttfb": 30.600000001490116,
+      "fcp": 476,
+      "lcp": 476,
+      "cls": 0,
+      "tbt": 16,
+      "domContentLoaded": 424,
+      "loadEvent": 747.4000000022352,
+      "totalBytes": 879243,
+      "requestCount": 17,
+      "heroImage": {
+        "tagName": "H1",
+        "currentSrc": null,
+        "width": 354,
+        "height": 192
+      }
+    },
+    "desktopCold": {
+      "ttfb": 32.19999999925494,
+      "fcp": 204,
+      "lcp": 204,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1088889,
+      "requestCount": 31
+    },
+    "desktopWarm": {
+      "ttfb": 26.5,
+      "fcp": 76,
+      "lcp": 76,
+      "cls": 0
+    }
+  },
+  {
+    "route": "Contact",
+    "url": "https://aniket.app/contact/",
+    "mobileCold": {
+      "ttfb": 30.5,
+      "fcp": 640,
+      "lcp": 640,
+      "cls": 0,
+      "tbt": 23,
+      "domContentLoaded": 555.8000000007451,
+      "loadEvent": 888.1000000014901,
+      "totalBytes": 871607,
+      "requestCount": 18,
+      "heroImage": {
+        "tagName": "P",
+        "currentSrc": null,
+        "width": 354,
+        "height": 184
+      }
+    },
+    "desktopCold": {
+      "ttfb": 31.100000001490116,
+      "fcp": 224,
+      "lcp": 224,
+      "cls": 0,
+      "tbt": 0,
+      "totalBytes": 1073582,
+      "requestCount": 31
+    },
+    "desktopWarm": {
+      "ttfb": 28.199999999254942,
+      "fcp": 84,
+      "lcp": 84,
+      "cls": 0
+    }
+  }
+]

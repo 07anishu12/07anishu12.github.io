@@ -48,6 +48,9 @@ for (const p of rawArticles) {
   fs.mkdirSync(catDir, { recursive: true });
   fs.writeFileSync(path.join(catDir, `${p.slug}.json`), JSON.stringify(p));
 }
+if (fs.existsSync("../../data/articles_manifest.json")) {
+  fs.copyFileSync("../../data/articles_manifest.json", "generated/articles_manifest.json");
+}
 const root = path.resolve("../.."),
   out = path.resolve("public");
 const walk = (directory) =>

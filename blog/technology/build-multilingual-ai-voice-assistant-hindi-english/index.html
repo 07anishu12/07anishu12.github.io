@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Build a Hindi-English (Hinglish) AI Voice Assistant</title>
+<meta name="description" content="Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation.">
+<meta name="keywords" content="multilingual AI voice assistant, Hinglish speech recognition AI, Hindi English code-switching voice bot, Indian accent ASR Whisper IndicConformer, Devanagari Roman script normalisation, multilingual TTS Hindi">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Build a Hindi-English (Hinglish) AI Voice Assistant">
+<meta property="og:description" content="Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation.">
+<meta property="og:url" content="https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/build-multilingual-ai-voice-assistant-hindi-english/cover.svg">
+<meta property="og:image:alt" content="Technical architecture diagram for How to Build a Multilingual AI Voice Assistant That Understands Hindi and English">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-31">
+<meta property="article:modified_time" content="2026-10-31">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build a Hindi-English (Hinglish) AI Voice Assistant">
+<meta name="twitter:description" content="Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/build-multilingual-ai-voice-assistant-hindi-english/cover.svg">
+<meta name="twitter:image:alt" content="Technical architecture diagram for How to Build a Multilingual AI Voice Assistant That Understands Hindi and English">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/#article","headline":"How to Build a Multilingual AI Voice Assistant That Understands Hindi and English","description":"Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation.","abstract":"Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.","url":"https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/build-multilingual-ai-voice-assistant-hindi-english/cover.svg","width":1200,"height":675,"caption":"Technical architecture diagram for How to Build a Multilingual AI Voice Assistant That Understands Hindi and English"},"datePublished":"2026-10-31","dateModified":"2026-10-31","articleSection":"Technology","keywords":"Multilingual AI, Hinglish, Voice Assistant, Whisper, Indian Languages","inLanguage":"en","wordCount":1648}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Whisper sometimes transcribe Hindi speech into Urdu (Perso-Arabic) script instead of Devanagari?","acceptedAnswer":{"@type":"Answer","text":"Because spoken conversational Hindi and Urdu share similar phonology (Hindustani), Whisper's language token may pick ur if no script hint is provided. Passing a short Devanagari initial_prompt (\"नमस्ते, आप कैसे हैं?\") to model.transcribe(..., initial_prompt=...) anchors Whisper to Devanagari + Latin script without restricting vocabulary."}},{"@type":"Question","name":"How should the LLM respond when a user speaks Hinglish?","acceptedAnswer":{"@type":"Answer","text":"Instruct the LLM in the system prompt: *\"Match the user's language register. If the user speaks conversational Hinglish, reply in natural conversational Hinglish using simple Hindi grammar with familiar English nouns (like 'order', 'payment', 'refund') rather than overly formal Sanskritised Hindi.\"*"}},{"@type":"Question","name":"Why should I evaluate both Character Error Rate (CER) and Word Error Rate (WER) for Hindi?","acceptedAnswer":{"@type":"Answer","text":"In agglutinative or postpositional Indian languages and mixed-script Hinglish, a single matra (vowel sign) difference or compound word split (\"ईमेल\" vs \"ई मेल\") counts as a full 100% word error in WER even when 90% of characters are right. CER captures sub-word accuracy faithfully."}},{"@type":"Question","name":"How do I improve recognition of Indian proper nouns, city names, and brand names?","acceptedAnswer":{"@type":"Answer","text":"Use keyterm prompting in Deepgram Nova-3 (\\$0.0013/min add-on) or pass domain vocabulary in Whisper's initial_prompt."}},{"@type":"Question","name":"Can [Pipecat](https://github.com/pipecat-ai/pipecat) connect directly to Indian telephony providers like Exotel or Plivo?","acceptedAnswer":{"@type":"Answer","text":"Yes! As verified in the Pipecat repository (https://github.com/pipecat-ai/pipecat), Pipecat includes built-in transport serializers for Exotel, Plivo, Twilio, Telnyx, Genesys, and Vonage."}},{"@type":"Question","name":"What open-source TTS models support natural Hindi and Indian English?","acceptedAnswer":{"@type":"Answer","text":"AI4Bharat's Indic-Parler-TTS (Apache-2.0) generates natural Hindi and Indian-accented English speech with controllable speaker descriptions."}},{"@type":"Question","name":"How do I prevent the voice assistant from switching to Spanish or Welsh on short 1-second utterances like \"Haan\" or \"Okay\"?","acceptedAnswer":{"@type":"Answer","text":"Constrain automatic language detection to an allowlist of expected languages ([\"hi\", \"en\"]) rather than letting the detector search across all 99 languages on a 0.5-second audio clip."}},{"@type":"Question","name":"How much VRAM is needed to self-host `faster-whisper` `large-v3` for Hindi-English?","acceptedAnswer":{"@type":"Answer","text":"Per Faster-Whisper's official benchmarks (https://github.com/SYSTRAN/faster-whisper), large-v2/large-v3 with int8 quantization uses only \\~2,926 MB to 4,500 MB of VRAM, fitting easily on an 8GB GPU."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"How to Build a Multilingual AI Voice Assistant That Understands Hindi and English","item":"https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/#webpage","url":"https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/","name":"Build a Hindi-English (Hinglish) AI Voice Assistant","description":"Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="build-multilingual-ai-voice-assistant-hindi-english">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">How to Build a Multilingual AI Voice Assistant That Understands Hindi and English</h1>
+<p class="blog-description">Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-31">31 Oct 2026</time></span><span>9 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How to Build: How to Build a Multilingual AI Voice Assistant That Understands Hindi and English (Summary &amp; Mechanics)</h2>
+<p class="blog-answer-verdict">Learn how to build a multilingual AI voice assistant in Python that handles Hindi, English, Hinglish code-switching, Indian accents, and WER/CER evaluation. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.</p>
+<dl class="blog-answer-facts"><div><dt>Architecture</dt><dd>Deterministic Agent Graph</dd></div><div><dt>Primary Stack</dt><dd>Python 3.12 / FastAPI / Pydantic</dd></div><div><dt>Part Series</dt><dd>Part II: Voice AI and Multimodal Applications</dd></div><div><dt>Verified As Of</dt><dd>October 2026</dd></div></dl>
+
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Production automation requiring verifiable citation &amp; error boundaries</li><li>Self-hosted privacy-first deployments with open-source alternatives</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Enforce hard recursion limits to prevent cyclic execution drift</li><li>Sanitize untrusted inputs to prevent indirect prompt injection</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/build-multilingual-ai-voice-assistant-hindi-english/cover.svg" alt="Technical architecture diagram for How to Build a Multilingual AI Voice Assistant That Understands Hindi and English" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for How to Build a Multilingual AI Voice Assistant That Understands Hindi and English.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Multilingual%20AI">Multilingual AI</a><a href="/blog/?tag=Hinglish">Hinglish</a><a href="/blog/?tag=Voice%20Assistant">Voice Assistant</a><a href="/blog/?tag=Whisper">Whisper</a><a href="/blog/?tag=Indian%20Languages">Indian Languages</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>24 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-bilingual-code-switching-voice-architecture">Bilingual &amp; Code-Switching Voice Architecture</a></li><li class="toc-h3"><a href="#section-solving-code-switching-and-indian-accent-challenges">Solving Code-Switching and Indian Accent Challenges</a></li><li class="toc-h2"><a href="#section-technology-comparison-paid-vs-open-source-multilingual-stack">Technology Comparison: Paid vs. Open-Source Multilingual Stack</a></li><li class="toc-h3"><a href="#section-recommended-implementation-options">Recommended Implementation Options</a></li><li class="toc-h3"><a href="#section-option-a-best-practical-implementation-recommended-livekit-agents-https-github-com-livekit-agents-deepgram-nova-3-language-multi-gpt-4o-mini-or-gemma-4-cartesia-indic-accent-multilingual-tts">Option A: Best Practical Implementation (Recommended): LiveKit Agents (https://github.com/livekit/agents) + Deepgram Nova-3 (language=&quot;multi&quot;) + gpt-4o-mini (or Gemma 4) + Cartesia/Indic-accent multilingual TTS.</a></li><li class="toc-h3"><a href="#section-option-b-fully-open-source-self-hosted-stack-faster-whisper-https-github-com-systran-faster-whisper-large-v3-or-ai4bharat-indicwhisper-local-ollama-https-github-com-ollama-ollama-gemma4-ai4bharat-indic-parler-tts">Option B: Fully Open-Source Self-Hosted Stack: Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (large-v3) or AI4Bharat IndicWhisper + local Ollama (https://github.com/ollama/ollama) (gemma4) + AI4Bharat Indic-Parler-TTS.</a></li><li class="toc-h3"><a href="#section-option-c-production-enterprise-contact-center-india-pipecat-https-github-com-pipecat-ai-pipecat-regional-telephony-serializer-exotel-plivo-twilio-streaming-bilingual-stt-tts-wer-evaluation-harness">Option C: Production Enterprise Contact Center (India): Pipecat (https://github.com/pipecat-ai/pipecat) + regional telephony serializer (Exotel/Plivo/Twilio) + streaming bilingual STT/TTS + WER evaluation harness.</a></li><li class="toc-h2"><a href="#section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</a></li><li class="toc-h3"><a href="#section-step-1-project-structure">Step 1: Project Structure</a></li><li class="toc-h3"><a href="#section-step-2-implement-script-detection-bilingual-prompting-tts-text-normaliser-app-hinglish-normalizer-py">Step 2: Implement Script Detection, Bilingual Prompting &amp; TTS Text Normaliser (app/hinglish_normalizer.py)</a></li><li class="toc-h3"><a href="#section-step-3-implement-dynamic-programming-word-error-rate-wer-cer-evaluator-app-wer-evaluator-py">Step 3: Implement Dynamic Programming Word Error Rate (WER) &amp; CER Evaluator (app/wer_evaluator.py)</a></li><li class="toc-h2"><a href="#section-testing-the-multilingual-voice-assistant-tests-test-multilingual-assistant-py">Testing the Multilingual Voice Assistant (tests/test_multilingual_assistant.py)</a></li><li class="toc-h2"><a href="#section-cost-considerations-production-tuning">Cost Considerations &amp; Production Tuning</a></li><li class="toc-h2"><a href="#section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-why-does-whisper-sometimes-transcribe-hindi-speech-into-urdu-perso-arabic-script-instead-of-devanagari">Why does Whisper sometimes transcribe Hindi speech into Urdu (Perso-Arabic) script instead of Devanagari?</a></li><li class="toc-h3"><a href="#section-how-should-the-llm-respond-when-a-user-speaks-hinglish">How should the LLM respond when a user speaks Hinglish?</a></li><li class="toc-h3"><a href="#section-why-should-i-evaluate-both-character-error-rate-cer-and-word-error-rate-wer-for-hindi">Why should I evaluate both Character Error Rate (CER) and Word Error Rate (WER) for Hindi?</a></li><li class="toc-h3"><a href="#section-how-do-i-improve-recognition-of-indian-proper-nouns-city-names-and-brand-names">How do I improve recognition of Indian proper nouns, city names, and brand names?</a></li><li class="toc-h3"><a href="#section-can-pipecat-connect-directly-to-indian-telephony-providers-like-exotel-or-plivo">Can Pipecat connect directly to Indian telephony providers like Exotel or Plivo?</a></li><li class="toc-h3"><a href="#section-what-open-source-tts-models-support-natural-hindi-and-indian-english">What open-source TTS models support natural Hindi and Indian English?</a></li><li class="toc-h3"><a href="#section-how-do-i-prevent-the-voice-assistant-from-switching-to-spanish-or-welsh-on-short-1-second-utterances-like-haan-or-okay">How do I prevent the voice assistant from switching to Spanish or Welsh on short 1-second utterances like &quot;Haan&quot; or &quot;Okay&quot;?</a></li><li class="toc-h3"><a href="#section-how-much-vram-is-needed-to-self-host-faster-whisper-large-v3-for-hindi-english">How much VRAM is needed to self-host faster-whisper large-v3 for Hindi-English?</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>To build a multilingual AI voice assistant for Indian users who naturally blend Hindi and English within the same sentence (Hinglish code-switching, e.g., <em>&quot;Mera order status check karo aur delivery address update karna hai&quot;</em>), you cannot force the user to select a rigid &quot;Hindi&quot; or &quot;English&quot; language toggle at the start of the conversation. Standard monolingual ASR models garble English technical nouns (<em>&quot;EMI&quot;</em>, <em>&quot;refund&quot;</em>, <em>&quot;account statement&quot;</em>) when forced into pure Hindi mode, or transcribe Hindi verbs as nonsense English homophones when locked to en-US. To build a fluent Hindi-English voice assistant, you must configure code-switch-aware multilingual Speech Recognition, Devanagari/Roman script and numeric normalisation, bilingual system prompt grounding, and Indic-accent neural Text-to-Speech.</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Architecture Reference:</strong> Internal Link Suggestion: Combine this bilingual pipeline with [Article 17: How to Build an AI Phone Receptionist and <a href="/writing/build-ai-phone-receptionist-twilio-voice-calls/%5D(/writing/build-real-time-ai-translation-voice-conversations/)">Article 19: How to Build a Real-Time AI Translation System </a>.</p>
+</blockquote>
+<h2 id="section-bilingual-code-switching-voice-architecture">Bilingual &amp; Code-Switching Voice Architecture</h2>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    Audio([User Speech: Hindi / English / Hinglish]) --&gt; VAD[Silero VAD Endpointing]
+    VAD --&gt; ASR[Multilingual ASR: Deepgram Nova-3 Multi / Faster-Whisper large-v3]
+    ASR --&gt; Normalizer[Hinglish &amp; Devanagari Normaliser + Keyterm Booster]
+    Normalizer --&gt; LangDetect[Utterance Script &amp; Language Ratio Detector]
+    LangDetect --&gt; LLM[Bilingual LLM: Replies Matching User&#39;s Language/Register]
+    LLM --&gt; TTSRouter{Select TTS Voice Profile}
+    TTSRouter -- &quot;Devanagari / Hindi Dominant&quot; --&gt; HindiTTS[Hindi/Indic Neural TTS]
+    TTSRouter -- &quot;English / Hinglish Conversational&quot; --&gt; BilingualTTS[Multilingual Indian-Accent TTS]</pre></div>
+<h3 id="section-solving-code-switching-and-indian-accent-challenges">Solving Code-Switching and Indian Accent Challenges</h3>
+<ol>
+<li>Never Force <code>language=&quot;en&quot;</code> on Code-Switched Audio: In Deepgram Nova-3 (https://deepgram.com/pricing), set language=&quot;multi&quot; ($0.0092/min on Pay-as-you-go). In Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (large-v3 or turbo), leave language=None (or provide a bilingual initial_prompt containing both Devanagari and English domain terms: &quot;नमस्ते, मेरा order status और payment receipt check कीजिए।&quot;). That bilingual initial_prompt primes Whisper's decoder to emit Devanagari for Hindi words and Latin script for English technical terms rather than transliterating everything phonetically.</li>
+<li>Script &amp; Number Normalisation before TTS: If the LLM outputs &quot;आपका रिफंड ₹1,250.00 कल तक आ जाएगा&quot;, verify that your TTS engine expands ₹1,250 naturally; otherwise normalise currency symbols and abbreviations in Python before synthesis.</li>
+</ol>
+<h4 id="section-evaluating-transcription-quality-wer-cer-because-hinglish-utterances-often-mix-scripts-e-g-म-र-order-vs-म-र-आर-डर-standard-case-sensitive-word-error-rate-wer-over-penalises-valid-transcriptions-always-normalise-unicode-nfkc-strip-punctuation-and-compute-both-word-error-rate-wer-and-character-error-rate-cer">Evaluating Transcription Quality (WER &amp; CER): Because Hinglish utterances often mix scripts (e.g., &quot;मेरा order&quot; vs &quot;मेरा आर्डर&quot;), standard case-sensitive Word Error Rate (WER) over-penalises valid transcriptions. Always normalise Unicode (NFKC), strip punctuation, and compute both Word Error Rate (WER) and Character Error Rate (CER).</h4>
+<h2 id="section-technology-comparison-paid-vs-open-source-multilingual-stack">Technology Comparison: Paid vs. Open-Source Multilingual Stack</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Commercial API</th>
+<th scope="col">Open-Source / Open-Weight Alternative</th>
+<th scope="col">Self-Hosting Possible?</th>
+<th scope="col">Hindi/Hinglish Technical Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multilingual Speech-to-Text</td>
+<td>Deepgram Nova-3 Multilingual (https://deepgram.com/pricing) ($0.0092/min) / Sarvam AI / Google Chirp</td>
+<td>Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (large-v3, MIT) / AI4Bharat IndicConformer / IndicWhisper (MIT)</td>
+<td>Yes</td>
+<td>AI4Bharat's Indic models achieve low WER on regional Indian accents; Whisper large-v3 with a bilingual initial_prompt handles Hinglish code-switching well.</td>
+</tr>
+<tr>
+<td>Bilingual LLM</td>
+<td>OpenAI (gpt-4o-mini / gpt-4.1) / Gemini</td>
+<td>Ollama (https://github.com/ollama/ollama) (Gemma 4 / Qwen2.5-32B / Llama-3.3-70B)</td>
+<td>Yes</td>
+<td>Instruct the LLM to mirror the user's language mix (pure Hindi, conversational Hinglish, or English).</td>
+</tr>
+<tr>
+<td>Hindi &amp; Indian-English TTS</td>
+<td>Cartesia Sonic Multilingual / ElevenLabs / Azure hi-IN-SwaraNeural</td>
+<td>AI4Bharat Indic-Parler-TTS (Apache-2.0) / OHF-Voice/piper1-gpl (https://github.com/OHF-Voice/piper1-gpl) (hi_IN voices)</td>
+<td>Yes</td>
+<td>Ensure TTS supports both Devanagari (\u0900-\u097F) and embedded English words.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-recommended-implementation-options">Recommended Implementation Options</h3>
+<h3 id="section-option-a-best-practical-implementation-recommended-livekit-agents-https-github-com-livekit-agents-deepgram-nova-3-language-multi-gpt-4o-mini-or-gemma-4-cartesia-indic-accent-multilingual-tts">Option A: Best Practical Implementation (Recommended): LiveKit Agents (https://github.com/livekit/agents) + Deepgram Nova-3 (language=&quot;multi&quot;) + gpt-4o-mini (or Gemma 4) + Cartesia/Indic-accent multilingual TTS.</h3>
+<h3 id="section-option-b-fully-open-source-self-hosted-stack-faster-whisper-https-github-com-systran-faster-whisper-large-v3-or-ai4bharat-indicwhisper-local-ollama-https-github-com-ollama-ollama-gemma4-ai4bharat-indic-parler-tts">Option B: Fully Open-Source Self-Hosted Stack: Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (large-v3) or AI4Bharat IndicWhisper + local Ollama (https://github.com/ollama/ollama) (gemma4) + AI4Bharat Indic-Parler-TTS.</h3>
+<h3 id="section-option-c-production-enterprise-contact-center-india-pipecat-https-github-com-pipecat-ai-pipecat-regional-telephony-serializer-exotel-plivo-twilio-streaming-bilingual-stt-tts-wer-evaluation-harness">Option C: Production Enterprise Contact Center (India): Pipecat (https://github.com/pipecat-ai/pipecat) + regional telephony serializer (Exotel/Plivo/Twilio) + streaming bilingual STT/TTS + WER evaluation harness.</h3>
+<h2 id="section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</h2>
+<h3 id="section-step-1-project-structure">Step 1: Project Structure</h3>
+<div class="blog-code"><div class="blog-code-label">text</div><pre tabindex="0" aria-label="text code block"><code class="language-text">multilingual-voice-assistant/
+├── app/
+│   ├── __init__.py
+│   ├── hinglish_normalizer.py
+│   └── wer_evaluator.py
+├── tests/
+│   └── test_multilingual_assistant.py
+└── requirements.txt
+</code></pre>
+</div><h3 id="section-step-2-implement-script-detection-bilingual-prompting-tts-text-normaliser-app-hinglish-normalizer-py">Step 2: Implement Script Detection, Bilingual Prompting &amp; TTS Text Normaliser (app/hinglish_normalizer.py)</h3>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import re
+import unicodedata
+from enum import Enum
+from pydantic import BaseModel
+
+DEVANAGARI_RANGE = re.compile(r&quot;[\u0900-\u097F]&quot;)
+LATIN_WORD_RANGE = re.compile(r&quot;[a-zA-Z]+&quot;)
+COMMON_ROMAN_HINDI_TOKENS = {
+    &quot;mera&quot;, &quot;meri&quot;, &quot;kya&quot;, &quot;hai&quot;, &quot;nahi&quot;, &quot;karo&quot;, &quot;karna&quot;, &quot;kab&quot;,
+    &quot;aayega&quot;, &quot;paisa&quot;, &quot;bhaiya&quot;, &quot;kripya&quot;, &quot;batao&quot;, &quot;mujhe&quot;, &quot;chahiye&quot;,
+}
+
+class UtteranceLanguageMode(str, Enum):
+    HINDI_DEVANAGARI = &quot;HINDI_DEVANAGARI&quot;
+    HINGLISH_CODE_SWITCH = &quot;HINGLISH_CODE_SWITCH&quot;
+    ENGLISH_INDIAN = &quot;ENGLISH_INDIAN&quot;
+
+class LanguageAnalysis(BaseModel):
+    mode: UtteranceLanguageMode
+    devanagari_char_count: int
+    latin_word_count: int
+    normalized_tts_text: str
+
+def detect_and_normalize_utterance(text: str) -&gt; LanguageAnalysis:
+    &quot;&quot;&quot;Detects Hindi/English/Hinglish mode and normalizes symbols for clean TTS pronunciation.&quot;&quot;&quot;
+    norm = unicodedata.normalize(&quot;NFKC&quot;, text).strip()
+    dev_chars = len(DEVANAGARI_RANGE.findall(norm))
+    latin_words = [w.lower() for w in LATIN_WORD_RANGE.findall(norm)]
+    roman_hindi_hits = sum(1 for w in latin_words if w in COMMON_ROMAN_HINDI_TOKENS)
+
+    if dev_chars &gt; 0 and len(latin_words) &gt; 0:
+        mode = UtteranceLanguageMode.HINGLISH_CODE_SWITCH
+    elif dev_chars &gt; 0:
+        mode = UtteranceLanguageMode.HINDI_DEVANAGARI
+    elif roman_hindi_hits &gt;= 1:
+        mode = UtteranceLanguageMode.HINGLISH_CODE_SWITCH
+    else:
+        mode = UtteranceLanguageMode.ENGLISH_INDIAN
+
+    # Expand ₹ currency symbol so TTS reads it naturally in the target register
+    if mode in (UtteranceLanguageMode.HINDI_DEVANAGARI, UtteranceLanguageMode.HINGLISH_CODE_SWITCH):
+        tts_text = re.sub(r&quot;₹\s*([0-9,]+)&quot;, r&quot;\1 रुपये&quot;, norm)
+    else:
+        tts_text = re.sub(r&quot;₹\s*([0-9,]+)&quot;, r&quot;\1 rupees&quot;, norm)
+
+    return LanguageAnalysis(
+        mode=mode,
+        devanagari_char_count=dev_chars,
+        latin_word_count=len(latin_words),
+        normalized_tts_text=tts_text,
+    )
+</code></pre>
+</div><h3 id="section-step-3-implement-dynamic-programming-word-error-rate-wer-cer-evaluator-app-wer-evaluator-py">Step 3: Implement Dynamic Programming Word Error Rate (WER) &amp; CER Evaluator (app/wer_evaluator.py)</h3>
+<p>To benchmark Whisper vs. Deepgram vs. IndicConformer on your own Hindi-English audio test set, use exact Levenshtein edit distance at both word and character levels:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import re
+import unicodedata
+from typing import List
+
+def normalize_for_asr_eval(text: str) -&gt; str:
+    &quot;&quot;&quot;Normalizes Unicode, lowercases Latin characters, and strips punctuation for fair WER/CER.&quot;&quot;&quot;
+    norm = unicodedata.normalize(&quot;NFKC&quot;, text).lower()
+    norm = re.sub(r&quot;[^\w\s\u0900-\u097F]&quot;, &quot;&quot;, norm)
+    return &quot; &quot;.join(norm.split())
+
+def _edit_distance(ref_seq: List[str], hyp_seq: List[str]) -&gt; int:
+    n, m = len(ref_seq), len(hyp_seq)
+    dp = [[0] * (m + 1) for _ in range(n + 1)]
+    for i in range(n + 1):
+        dp[i][0] = i
+    for j in range(m + 1):
+        dp[0][j] = j
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            cost = 0 if ref_seq[i - 1] == hyp_seq[j - 1] else 1
+            dp[i][j] = min(
+                dp[i - 1][j] + 1,      # deletion
+                dp[i][j - 1] + 1,      # insertion
+                dp[i - 1][j - 1] + cost # substitution
+            )
+    return dp[n][m]
+
+def compute_wer_and_cer(reference: str, hypothesis: str) -&gt; dict:
+    &quot;&quot;&quot;Computes normalized Word Error Rate (WER) and Character Error Rate (CER).&quot;&quot;&quot;
+    clean_ref = normalize_for_asr_eval(reference)
+    clean_hyp = normalize_for_asr_eval(hypothesis)
+
+    ref_words = clean_ref.split()
+    hyp_words = clean_hyp.split()
+    word_edits = _edit_distance(ref_words, hyp_words)
+    wer = round(word_edits / max(1, len(ref_words)), 4)
+
+    ref_chars = list(clean_ref.replace(&quot; &quot;, &quot;&quot;))
+    hyp_chars = list(clean_hyp.replace(&quot; &quot;, &quot;&quot;))
+    char_edits = _edit_distance(ref_chars, hyp_chars)
+    cer = round(char_edits / max(1, len(ref_chars)), 4)
+
+    return {&quot;wer&quot;: wer, &quot;cer&quot;: cer, &quot;word_edits&quot;: word_edits, &quot;ref_word_count&quot;: len(ref_words)}
+</code></pre>
+</div><h2 id="section-testing-the-multilingual-voice-assistant-tests-test-multilingual-assistant-py">Testing the Multilingual Voice Assistant (tests/test_multilingual_assistant.py)</h2>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from app.hinglish_normalizer import detect_and_normalize_utterance, UtteranceLanguageMode
+from app.wer_evaluator import compute_wer_and_cer
+
+def test_hinglish_detection_and_rupee_expansion():
+    mixed = detect_and_normalize_utterance(&quot;मेरा refund ₹1,500 कब आएगा?&quot;)
+    assert mixed.mode == UtteranceLanguageMode.HINGLISH_CODE_SWITCH
+    assert &quot;1,500 रुपये&quot; in mixed.normalized_tts_text
+
+    roman_hinglish = detect_and_normalize_utterance(&quot;Bhaiya mera order status kya hai?&quot;)
+    assert roman_hinglish.mode == UtteranceLanguageMode.HINGLISH_CODE_SWITCH
+
+    english = detect_and_normalize_utterance(&quot;Please send the invoice for ₹2,000.&quot;)
+    assert english.mode == UtteranceLanguageMode.ENGLISH_INDIAN
+    assert &quot;2,000 rupees&quot; in english.normalized_tts_text
+
+def test_wer_and_cer_calculation_on_bilingual_transcript():
+    ref = &quot;नमस्ते मेरा order status बताइए&quot;
+    hyp = &quot;नमस्ते मेरा order स्टेटस बताइए&quot;
+    metrics = compute_wer_and_cer(ref, hyp)
+    assert metrics[&quot;wer&quot;] == 0.2  # 1 word script difference out of 5 words
+    assert metrics[&quot;cer&quot;] &lt; 0.35
+</code></pre>
+</div><h2 id="section-cost-considerations-production-tuning">Cost Considerations &amp; Production Tuning</h2>
+<ul>
+<li>Cost Breakdown (Checked October 30, 2026 via <a href="https://deepgram.com/pricing">Deepgram Pricing</a>): Deepgram Nova-3 Multilingual streaming STT costs $0.0092/min ($0.55/hour) on Pay-as-you-go or $0.0078/min ($0.47/hour) on Growth, while self-hosted Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (large-v3) or AI4Bharat IndicConformer has $0 per-minute API cost.</li>
+</ul>
+<h2 id="section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Purpose</th>
+<th scope="col">Type</th>
+<th scope="col">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faster-Whisper</td>
+<td>Multilingual Whisper inference supporting 90+ languages</td>
+<td>Open-Source (MIT)</td>
+<td>https://github.com/SYSTRAN/faster-whisper</td>
+</tr>
+<tr>
+<td>Pipecat</td>
+<td>Real-time voice framework with Sarvam, Deepgram &amp; Whisper plugins</td>
+<td>Open-Source (BSD-2)</td>
+<td>https://github.com/pipecat-ai/pipecat</td>
+</tr>
+<tr>
+<td>LiveKit Agents</td>
+<td>Voice agent framework supporting language=&quot;multi&quot;</td>
+<td>Open-Source (Apache-2.0)</td>
+<td>https://github.com/livekit/agents</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-why-does-whisper-sometimes-transcribe-hindi-speech-into-urdu-perso-arabic-script-instead-of-devanagari">Why does Whisper sometimes transcribe Hindi speech into Urdu (Perso-Arabic) script instead of Devanagari?</h3>
+<p>Because spoken conversational Hindi and Urdu share similar phonology (Hindustani), Whisper's language token may pick ur if no script hint is provided. Passing a short Devanagari initial_prompt (&quot;नमस्ते, आप कैसे हैं?&quot;) to model.transcribe(..., initial_prompt=...) anchors Whisper to Devanagari + Latin script without restricting vocabulary.</p>
+<h3 id="section-how-should-the-llm-respond-when-a-user-speaks-hinglish">How should the LLM respond when a user speaks Hinglish?</h3>
+<p>Instruct the LLM in the system prompt: <em>&quot;Match the user's language register. If the user speaks conversational Hinglish, reply in natural conversational Hinglish using simple Hindi grammar with familiar English nouns (like 'order', 'payment', 'refund') rather than overly formal Sanskritised Hindi.&quot;</em></p>
+<h3 id="section-why-should-i-evaluate-both-character-error-rate-cer-and-word-error-rate-wer-for-hindi">Why should I evaluate both Character Error Rate (CER) and Word Error Rate (WER) for Hindi?</h3>
+<p>In agglutinative or postpositional Indian languages and mixed-script Hinglish, a single matra (vowel sign) difference or compound word split (&quot;ईमेल&quot; vs &quot;ई मेल&quot;) counts as a full 100% word error in WER even when 90% of characters are right. CER captures sub-word accuracy faithfully.</p>
+<h3 id="section-how-do-i-improve-recognition-of-indian-proper-nouns-city-names-and-brand-names">How do I improve recognition of Indian proper nouns, city names, and brand names?</h3>
+<p>Use keyterm prompting in Deepgram Nova-3 ($0.0013/min add-on) or pass domain vocabulary in Whisper's initial_prompt.</p>
+<h3 id="section-can-pipecat-connect-directly-to-indian-telephony-providers-like-exotel-or-plivo">Can <a href="https://github.com/pipecat-ai/pipecat">Pipecat</a> connect directly to Indian telephony providers like Exotel or Plivo?</h3>
+<p>Yes! As verified in the Pipecat repository (https://github.com/pipecat-ai/pipecat), Pipecat includes built-in transport serializers for Exotel, Plivo, Twilio, Telnyx, Genesys, and Vonage.</p>
+<h3 id="section-what-open-source-tts-models-support-natural-hindi-and-indian-english">What open-source TTS models support natural Hindi and Indian English?</h3>
+<p>AI4Bharat's Indic-Parler-TTS (Apache-2.0) generates natural Hindi and Indian-accented English speech with controllable speaker descriptions.</p>
+<h3 id="section-how-do-i-prevent-the-voice-assistant-from-switching-to-spanish-or-welsh-on-short-1-second-utterances-like-haan-or-okay">How do I prevent the voice assistant from switching to Spanish or Welsh on short 1-second utterances like &quot;Haan&quot; or &quot;Okay&quot;?</h3>
+<p>Constrain automatic language detection to an allowlist of expected languages ([&quot;hi&quot;, &quot;en&quot;]) rather than letting the detector search across all 99 languages on a 0.5-second audio clip.</p>
+<h3 id="section-how-much-vram-is-needed-to-self-host-faster-whisper-large-v3-for-hindi-english">How much VRAM is needed to self-host <code>faster-whisper</code> <code>large-v3</code> for Hindi-English?</h3>
+<p>Per Faster-Whisper's official benchmarks (https://github.com/SYSTRAN/faster-whisper), large-v2/large-v3 with int8 quantization uses only ~2,926 MB to 4,500 MB of VRAM, fitting easily on an 8GB GPU.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/SYSTRAN/faster-whisper" rel="noopener">Faster-Whisper (Multilingual Whisper inference supporting 90+ languages)</a></li><li><a href="https://github.com/pipecat-ai/pipecat" rel="noopener">Pipecat (Real-time voice framework with Sarvam, Deepgram &amp; Whisper plugins)</a></li><li><a href="https://github.com/livekit/agents" rel="noopener">LiveKit Agents (Voice agent framework supporting language=&quot;multi&quot;)</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fbuild-multilingual-ai-voice-assistant-hindi-english%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/building-ai-indian-languages-challenges-multilingual-models/" aria-label="Read Building AI for Indian Languages: The Challenges of Multilingual Models"><img src="/assets/images/blog/building-ai-indian-languages-challenges-multilingual-models/cover.svg" alt="Building AI for Indian Languages: The Challenges of Multilingual Models architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/building-ai-indian-languages-challenges-multilingual-models/">Building AI for Indian Languages: The Challenges of Multilingual Models</a></h3>
+<p>Master the engineering challenges of building Indic LLMs and multilingual AI in 2026: tokenizer fertility penalty, Romanized code-switching, and AI4Bharat benchmarks.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-research-agent-web-search-reports/" aria-label="Read How to Build an AI Research Agent That Searches the Web and Writes Reports"><img src="/assets/images/blog/build-ai-research-agent-web-search-reports/cover.svg" alt="Technical architecture diagram for How to Build an AI Research Agent That Searches the Web and Writes Reports" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a><span class="tag">Featured</span></div>
+<h3><a href="/blog/technology/build-ai-research-agent-web-search-reports/">How to Build an AI Research Agent That Searches the Web and Writes Reports</a></h3>
+<p>Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>18 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-excel-agent-spreadsheets-analysis/" aria-label="Read How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets"><img src="/assets/images/blog/build-ai-excel-agent-spreadsheets-analysis/cover.svg" alt="Technical architecture diagram for How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a><span class="tag">Featured</span></div>
+<h3><a href="/blog/technology/build-ai-excel-agent-spreadsheets-analysis/">How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets</a></h3>
+<p>Step-by-step guide to building an AI agent for Excel using Python, Pandas, and OpenPyXL that analyses data, writes formulas, generates charts, and prevents corruption.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>12 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

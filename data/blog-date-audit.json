@@ -7932,6 +7932,351 @@
       "dateModified": "2026-10-30",
       "status": "verified",
       "evidence": "Published on 2026-10-30 per authoritative 100-article editorial schedule."
+    },
+    {
+      "source": "data/blog/technology/build-ai-research-agent-web-search-reports.md",
+      "url": "/blog/technology/build-ai-research-agent-web-search-reports/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-excel-agent-spreadsheets-analysis.md",
+      "url": "/blog/technology/build-ai-excel-agent-spreadsheets-analysis/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-email-assistant-replies-inbox-automation.md",
+      "url": "/blog/technology/build-ai-email-assistant-replies-inbox-automation/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-meeting-assistant-transcription-action-items.md",
+      "url": "/blog/technology/build-ai-meeting-assistant-transcription-action-items/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-recruitment-agent-resume-screening.md",
+      "url": "/blog/technology/build-ai-recruitment-agent-resume-screening/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-customer-support-agent-ticket-resolution.md",
+      "url": "/blog/technology/build-ai-customer-support-agent-ticket-resolution/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-sales-agent-lead-qualification-outreach.md",
+      "url": "/blog/technology/build-ai-sales-agent-lead-qualification-outreach/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-financial-analyst-annual-reports-sec.md",
+      "url": "/blog/technology/build-ai-financial-analyst-annual-reports-sec/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-sql-agent-natural-language-database-queries.md",
+      "url": "/blog/technology/build-ai-sql-agent-natural-language-database-queries/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-data-analyst-csv-charts-pandas.md",
+      "url": "/blog/technology/build-ai-data-analyst-csv-charts-pandas/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-browser-agent-web-navigation-tasks.md",
+      "url": "/blog/technology/build-ai-browser-agent-web-navigation-tasks/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-academic-research-assistant-paper-summaries.md",
+      "url": "/blog/technology/build-ai-academic-research-assistant-paper-summaries/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-invoice-processing-agent-financial-extraction.md",
+      "url": "/blog/technology/build-ai-invoice-processing-agent-financial-extraction/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-project-management-assistant-task-tracking.md",
+      "url": "/blog/technology/build-ai-project-management-assistant-task-tracking/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-personal-assistant-daily-digital-work.md",
+      "url": "/blog/technology/build-ai-personal-assistant-daily-digital-work/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-whatsapp-ai-customer-support-bot-business-api.md",
+      "url": "/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-phone-receptionist-twilio-voice-calls.md",
+      "url": "/blog/technology/build-ai-phone-receptionist-twilio-voice-calls/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-multilingual-ai-voice-assistant-hindi-english.md",
+      "url": "/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-real-time-ai-translation-voice-conversations.md",
+      "url": "/blog/technology/build-real-time-ai-translation-voice-conversations/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-video-assistant-recordings-question-answering.md",
+      "url": "/blog/technology/build-ai-video-assistant-recordings-question-answering/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-interviewer-technical-screening-scoring.md",
+      "url": "/blog/technology/build-ai-interviewer-technical-screening-scoring/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-tutor-interactive-conversations-learning.md",
+      "url": "/blog/technology/build-ai-tutor-interactive-conversations-learning/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/build-ai-accessibility-assistant-image-description-reading.md",
+      "url": "/blog/technology/build-ai-accessibility-assistant-image-description-reading/",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-10-31",
+        "note": "Practical AI Engineering series published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
     }
   ]
 }

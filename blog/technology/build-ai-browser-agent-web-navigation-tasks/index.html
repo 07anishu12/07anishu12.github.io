@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Build an AI Browser Agent: Playwright, DOM &amp; Browser-Use</title>
+<meta name="description" content="Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval.">
+<meta name="keywords" content="AI browser agent, build Playwright AI agent, Browser-Use Python tutorial, DOM bounding box grounding, autonomous web automation AI, headless Chromium stealth agent, human-in-the-loop web actions">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Build an AI Browser Agent: Playwright, DOM &amp; Browser-Use">
+<meta property="og:description" content="Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval.">
+<meta property="og:url" content="https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/build-ai-browser-agent-web-navigation-tasks/cover.svg">
+<meta property="og:image:alt" content="Technical architecture diagram for How to Build an AI Browser Agent That Navigates Websites and Completes Tasks">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-31">
+<meta property="article:modified_time" content="2026-10-31">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build an AI Browser Agent: Playwright, DOM &amp; Browser-Use">
+<meta name="twitter:description" content="Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/build-ai-browser-agent-web-navigation-tasks/cover.svg">
+<meta name="twitter:image:alt" content="Technical architecture diagram for How to Build an AI Browser Agent That Navigates Websites and Completes Tasks">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/#article","headline":"How to Build an AI Browser Agent That Navigates Websites and Completes Tasks","description":"Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval.","abstract":"Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.","url":"https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/build-ai-browser-agent-web-navigation-tasks/cover.svg","width":1200,"height":675,"caption":"Technical architecture diagram for How to Build an AI Browser Agent That Navigates Websites and Completes Tasks"},"datePublished":"2026-10-31","dateModified":"2026-10-31","articleSection":"Technology","keywords":"AI Browser Agent, Playwright, Browser Automation, DOM Extraction, Python","inLanguage":"en","wordCount":1656}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should I use raw Playwright vs. an AI browser agent like Browser-Use?","acceptedAnswer":{"@type":"Answer","text":"Use deterministic Playwright scripts when automating a single known website that you control (such as your own E2E test suite). Use an AI browser agent when navigating dozens of external vendor portals whose DOM structures vary or change unpredictably."}},{"@type":"Question","name":"How do I prevent an AI browser agent from making accidental purchases or deleting data?","acceptedAnswer":{"@type":"Answer","text":"Classify every button or form submission against sensitive keywords (pay, checkout, delete, wire, remove) and HTTP methods (POST/DELETE to billing endpoints) in deterministic middleware (verify_action_safety), pausing execution until the user approves the action."}},{"@type":"Question","name":"Why shouldn't I put user passwords inside the browser agent prompt?","acceptedAnswer":{"@type":"Answer","text":"Anything placed in the prompt is sent to the LLM API and saved in execution trace logs. Inject credentials via Playwright storage state cookies or sensitive_data secret placeholders."}},{"@type":"Question","name":"How do I handle Single-Page Applications (React/Next.js) that load content asynchronously?","acceptedAnswer":{"@type":"Answer","text":"After every click or navigation action, wait for network activity to settle (await page.wait_for_load_state(\"networkidle\")) and re-run the DOM indexer before planning the next step."}},{"@type":"Question","name":"How much does it cost to run a cloud stealth browser in production?","acceptedAnswer":{"@type":"Answer","text":"Per Browser-Use official pricing (https://github.com/browser-use/browser-use) (checked October 30, 2026), cloud stealth browsers cost \\$0.02 per browser-hour plus network traffic, or \\$0 if running headless Chromium on your own server."}},{"@type":"Question","name":"Can I rerun a successful browser workflow without paying for LLM tokens on every step?","acceptedAnswer":{"@type":"Answer","text":"Yes; record the action trajectory (save_history) and replay parameterized form fills deterministically, invoking the LLM only if a selector fails due to a site redesign."}},{"@type":"Question","name":"How do I defend against prompt injection hidden inside a webpage's text?","acceptedAnswer":{"@type":"Answer","text":"Restrict the action planner's view to the structured interactive element list (format_indexed_dom_for_llm) when navigating, and prohibit the agent from navigating to arbitrary external domains outside the task's allowlisted domain scope."}},{"@type":"Question","name":"What happens if an element is inside an `\u003ciframe>` or Shadow DOM?","acceptedAnswer":{"@type":"Answer","text":"Use Playwright's page.frames and built-in shadow-piercing locators to traverse open shadow roots when building the interactive element map."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"How to Build an AI Browser Agent That Navigates Websites and Completes Tasks","item":"https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/#webpage","url":"https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/","name":"Build an AI Browser Agent: Playwright, DOM & Browser-Use","description":"Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="build-ai-browser-agent-web-navigation-tasks">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">How to Build an AI Browser Agent That Navigates Websites and Completes Tasks</h1>
+<p class="blog-description">Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-31">31 Oct 2026</time></span><span>9 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How to Build: How to Build an AI Browser Agent That Navigates Websites and Completes Tasks (Summary &amp; Mechanics)</h2>
+<p class="blog-answer-verdict">Learn how to build an AI browser agent in Python using Playwright and Browser-Use that maps interactive DOM elements, handles SPAs, and enforces human approval. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.</p>
+<dl class="blog-answer-facts"><div><dt>Architecture</dt><dd>Deterministic Agent Graph</dd></div><div><dt>Primary Stack</dt><dd>Python 3.12 / FastAPI / Pydantic</dd></div><div><dt>Part Series</dt><dd>Part I: Practical AI Agents</dd></div><div><dt>Verified As Of</dt><dd>October 2026</dd></div></dl>
+
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Production automation requiring verifiable citation &amp; error boundaries</li><li>Self-hosted privacy-first deployments with open-source alternatives</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Enforce hard recursion limits to prevent cyclic execution drift</li><li>Sanitize untrusted inputs to prevent indirect prompt injection</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/build-ai-browser-agent-web-navigation-tasks/cover.svg" alt="Technical architecture diagram for How to Build an AI Browser Agent That Navigates Websites and Completes Tasks" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for How to Build an AI Browser Agent That Navigates Websites and Completes Tasks.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=AI%20Browser%20Agent">AI Browser Agent</a><a href="/blog/?tag=Playwright">Playwright</a><a href="/blog/?tag=Browser%20Automation">Browser Automation</a><a href="/blog/?tag=DOM%20Extraction">DOM Extraction</a><a href="/blog/?tag=Python">Python</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>24 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-browser-automation-architecture-dom-indexing-grounding-action-safety">Browser Automation Architecture: DOM Indexing, Grounding &amp; Action Safety</a></li><li class="toc-h3"><a href="#section-dom-understanding-vs-screenshot-based-interaction">DOM Understanding vs. Screenshot-Based Interaction</a></li><li class="toc-h2"><a href="#section-technology-comparison-paid-vs-open-source-stack">Technology Comparison: Paid vs. Open-Source Stack</a></li><li class="toc-h3"><a href="#section-recommended-implementation-options">Recommended Implementation Options</a></li><li class="toc-h3"><a href="#section-option-a-best-practical-implementation-recommended-python-3-12-browser-use-https-github-com-browser-use-browser-use-or-custom-playwright-https-github-com-microsoft-playwright-python-dom-indexer-openai-claude-structured-action-loop-human-approval-middleware-for-form-submissions">Option A: Best Practical Implementation (Recommended): Python 3.12 + Browser-Use (https://github.com/browser-use/browser-use) or custom Playwright (https://github.com/microsoft/playwright-python) DOM indexer + OpenAI/Claude structured action loop + human approval middleware for form submissions.</a></li><li class="toc-h3"><a href="#section-option-b-fully-open-source-local-implementation-browser-use-https-github-com-browser-use-browser-use-local-chromium-ollama-https-github-com-ollama-ollama-qwen2-5-32b">Option B: Fully Open-Source Local Implementation: Browser-Use (https://github.com/browser-use/browser-use) + local Chromium + Ollama (https://github.com/ollama/ollama) (qwen2.5:32b).</a></li><li class="toc-h3"><a href="#section-option-c-production-cloud-browser-pool-python-agent-connected-over-chrome-devtools-protocol-cdp-to-browser-use-cloud-https-github-com-browser-use-browser-use-0-02-hour-stealth-browsers-with-profile-sync-and-session-recordings">Option C: Production Cloud Browser Pool: Python agent connected over Chrome DevTools Protocol (CDP) to Browser Use Cloud (https://github.com/browser-use/browser-use) ($0.02/hour stealth browsers with profile sync and session recordings).</a></li><li class="toc-h2"><a href="#section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</a></li><li class="toc-h3"><a href="#section-step-1-project-structure">Step 1: Project Structure</a></li><li class="toc-h3"><a href="#section-step-2-implement-the-interactive-dom-element-indexer-app-dom-indexer-py">Step 2: Implement the Interactive DOM Element Indexer (app/dom_indexer.py)</a></li><li class="toc-h3"><a href="#section-step-3-define-browser-action-schemas-and-human-approval-gate-app-schemas-py-app-navigator-py">Step 3: Define Browser Action Schemas and Human Approval Gate (app/schemas.py &amp; app/navigator.py)</a></li><li class="toc-h2"><a href="#section-testing-the-browser-agent-tests-test-browser-agent-py">Testing the Browser Agent (tests/test_browser_agent.py)</a></li><li class="toc-h2"><a href="#section-authentication-session-security-cost-considerations">Authentication, Session Security &amp; Cost Considerations</a></li><li class="toc-h2"><a href="#section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-when-should-i-use-raw-playwright-vs-an-ai-browser-agent-like-browser-use">When should I use raw Playwright vs. an AI browser agent like Browser-Use?</a></li><li class="toc-h3"><a href="#section-how-do-i-prevent-an-ai-browser-agent-from-making-accidental-purchases-or-deleting-data">How do I prevent an AI browser agent from making accidental purchases or deleting data?</a></li><li class="toc-h3"><a href="#section-why-shouldn-t-i-put-user-passwords-inside-the-browser-agent-prompt">Why shouldn&#39;t I put user passwords inside the browser agent prompt?</a></li><li class="toc-h3"><a href="#section-how-do-i-handle-single-page-applications-react-next-js-that-load-content-asynchronously">How do I handle Single-Page Applications (React/Next.js) that load content asynchronously?</a></li><li class="toc-h3"><a href="#section-how-much-does-it-cost-to-run-a-cloud-stealth-browser-in-production">How much does it cost to run a cloud stealth browser in production?</a></li><li class="toc-h3"><a href="#section-can-i-rerun-a-successful-browser-workflow-without-paying-for-llm-tokens-on-every-step">Can I rerun a successful browser workflow without paying for LLM tokens on every step?</a></li><li class="toc-h3"><a href="#section-how-do-i-defend-against-prompt-injection-hidden-inside-a-webpage-s-text">How do I defend against prompt injection hidden inside a webpage&#39;s text?</a></li><li class="toc-h3"><a href="#section-what-happens-if-an-element-is-inside-an-iframe-or-shadow-dom">What happens if an element is inside an &lt;iframe&gt; or Shadow DOM?</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>To build an AI browser agent that reliably navigates dynamic websites, fills multi-step forms, and executes workflows without breaking whenever a CSS class name changes, you must combine DOM Accessibility Tree indexing with visual Set-of-Marks (SoM) screenshot grounding and mandatory human approval gates for state-mutating actions. Traditional Selenium or Playwright scripts hardcode brittle XPath or CSS selectors (div.btn-primary-v2 &gt; span) that break on every frontend deployment. Conversely, sending a raw 5MB HTML string to an LLM overflows the context window. By injecting a lightweight JavaScript script that assigns sequential numeric IDs ([1], [2], [3]) to visible, interactive DOM elements (&lt;button&gt;, &lt;input&gt;, &lt;a&gt;, &lt;select&gt;) and pairing them with Playwright for Python (https://github.com/microsoft/playwright-python) or Browser-Use (https://github.com/browser-use/browser-use), your agent can navigate complex web applications using compact numeric element indices.</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Architecture Reference:</strong> Internal Link Suggestion: For read-only web research and report synthesis, see <a href="/writing/build-ai-research-agent-web-search-reports/">Article 1: How to Build an AI Research Agent That Searches the Web and Writes Reports </a>.</p>
+</blockquote>
+<h2 id="section-browser-automation-architecture-dom-indexing-grounding-action-safety">Browser Automation Architecture: DOM Indexing, Grounding &amp; Action Safety</h2>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    Goal([User Task Goal]) --&gt; Browser[Playwright Chromium Context]
+    Browser --&gt; DOMIndexer[JS Interactive Element Indexer + Accessibility Tree]
+    DOMIndexer --&gt; StateView[Compact Indexed Element List + Optional Screenshot]
+    StateView --&gt; Planner[LLM Action Planner: Click, Type, Select, Scroll, Done]
+    Planner --&gt; SafetyGate{Is Action High-Risk? Checkout / Delete / Submit}
+    SafetyGate -- &quot;Yes: High-Risk Action&quot; --&gt; HumanApprove[Pause for Human Confirmation]
+    SafetyGate -- &quot;No: Safe Navigation/Input&quot; --&gt; Executor[Playwright Action Executor]
+    HumanApprove -- &quot;Approved&quot; --&gt; Executor
+    Executor --&gt; Wait[Wait for Network Idle / DOM Settled]
+    Wait --&gt; DOMIndexer</pre></div>
+<h3 id="section-dom-understanding-vs-screenshot-based-interaction">DOM Understanding vs. Screenshot-Based Interaction</h3>
+<ol>
+<li>Indexed DOM Extraction (Fast, Low Token Cost): A JavaScript snippet queries all interactive elements (button, a, input, select, textarea, [role=&quot;button&quot;]), filters out elements with width == 0, height == 0, or visibility == &quot;hidden&quot;, assigns a data-ai-id=&quot;12&quot; attribute, and returns a clean list: [12] &lt;input type=&quot;text&quot; placeholder=&quot;Search flights...&quot;&gt;.</li>
+<li>Visual Set-of-Marks (Fallback for Canvas &amp; Custom Widgets): When a site renders controls inside custom &lt;canvas&gt; elements or unlabeled &lt;div&gt; tags, overlay numbered bounding boxes onto a viewport screenshot and pass both the image and the DOM index list to a multimodal model.</li>
+</ol>
+<h2 id="section-technology-comparison-paid-vs-open-source-stack">Technology Comparison: Paid vs. Open-Source Stack</h2>
+<p><em>(Verified October 30, 2026 via browser-use/browser-use (https://github.com/browser-use/browser-use) and microsoft/playwright-python (https://github.com/microsoft/playwright-python)).</em></p>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Commercial / Hosted Solution</th>
+<th scope="col">Open-Source Alternative</th>
+<th scope="col">Self-Hosting Possible?</th>
+<th scope="col">Technical &amp; Pricing Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser Agent Framework</td>
+<td>Browser Use Cloud API / MultiOn</td>
+<td>Browser-Use (https://github.com/browser-use/browser-use) (MIT License, v0.13.14, 119.6k stars)</td>
+<td>Yes (Python &gt;= 3.11)</td>
+<td>Supports local Chromium, CDP connections, and deterministic action replay (load_and_rerun).</td>
+</tr>
+<tr>
+<td>Browser Automation Driver</td>
+<td>Browserbase / Browser Use Cloud ($0.02/browser-hr)</td>
+<td>Playwright for Python (https://github.com/microsoft/playwright-python) (Apache-2.0, v1.64.1)</td>
+<td>Yes</td>
+<td>Built-in auto-waiting and real mouse/keyboard event dispatch across Chromium, Firefox, and WebKit.</td>
+</tr>
+<tr>
+<td>Action Planning LLM</td>
+<td>OpenAI (gpt-4o / gpt-4.1) / Claude Sonnet</td>
+<td>Ollama (https://github.com/ollama/ollama) (Qwen2.5-VL-32B / Llama-3.3-70B)</td>
+<td>Yes</td>
+<td>Vision-language models require ~1,000 image tokens per viewport screenshot.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-recommended-implementation-options">Recommended Implementation Options</h3>
+<h3 id="section-option-a-best-practical-implementation-recommended-python-3-12-browser-use-https-github-com-browser-use-browser-use-or-custom-playwright-https-github-com-microsoft-playwright-python-dom-indexer-openai-claude-structured-action-loop-human-approval-middleware-for-form-submissions">Option A: Best Practical Implementation (Recommended): Python 3.12 + Browser-Use (https://github.com/browser-use/browser-use) or custom Playwright (https://github.com/microsoft/playwright-python) DOM indexer + OpenAI/Claude structured action loop + human approval middleware for form submissions.</h3>
+<h3 id="section-option-b-fully-open-source-local-implementation-browser-use-https-github-com-browser-use-browser-use-local-chromium-ollama-https-github-com-ollama-ollama-qwen2-5-32b">Option B: Fully Open-Source Local Implementation: Browser-Use (https://github.com/browser-use/browser-use) + local Chromium + Ollama (https://github.com/ollama/ollama) (qwen2.5:32b).</h3>
+<h3 id="section-option-c-production-cloud-browser-pool-python-agent-connected-over-chrome-devtools-protocol-cdp-to-browser-use-cloud-https-github-com-browser-use-browser-use-0-02-hour-stealth-browsers-with-profile-sync-and-session-recordings">Option C: Production Cloud Browser Pool: Python agent connected over Chrome DevTools Protocol (CDP) to Browser Use Cloud (https://github.com/browser-use/browser-use) ($0.02/hour stealth browsers with profile sync and session recordings).</h3>
+<h2 id="section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</h2>
+<h3 id="section-step-1-project-structure">Step 1: Project Structure</h3>
+<div class="blog-code"><div class="blog-code-label">text</div><pre tabindex="0" aria-label="text code block"><code class="language-text">ai-browser-agent/
+├── app/
+│   ├── __init__.py
+│   ├── dom_indexer.py
+│   ├── schemas.py
+│   └── navigator.py
+├── tests/
+│   └── test_browser_agent.py
+└── requirements.txt
+</code></pre>
+</div><h3 id="section-step-2-implement-the-interactive-dom-element-indexer-app-dom-indexer-py">Step 2: Implement the Interactive DOM Element Indexer (app/dom_indexer.py)</h3>
+<p>Rather than sending raw HTML to the LLM, this parser extracts only visible interactive controls and assigns deterministic integer indices ([1], [2], ...) mapped to unique CSS selectors:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from typing import List, Dict
+from bs4 import BeautifulSoup
+from pydantic import BaseModel
+
+INTERACTIVE_TAGS = {&quot;a&quot;, &quot;button&quot;, &quot;input&quot;, &quot;select&quot;, &quot;textarea&quot;}
+
+class IndexedElement(BaseModel):
+    index: int
+    tag: str
+    element_type: str
+    text_or_label: str
+    selector: str
+    is_sensitive_submit: bool = False
+
+SENSITIVE_KEYWORDS = (&quot;pay&quot;, &quot;purchase&quot;, &quot;buy now&quot;, &quot;checkout&quot;, &quot;delete&quot;, &quot;transfer&quot;, &quot;confirm order&quot;, &quot;wire&quot;)
+
+def index_interactive_dom_from_html(html: str) -&gt; List[IndexedElement]:
+    &quot;&quot;&quot;Parses HTML and assigns sequential 1-based indices to interactive elements.&quot;&quot;&quot;
+    soup = BeautifulSoup(html, &quot;html.parser&quot;)
+    elements: List[IndexedElement] = []
+    idx = 1
+
+    for tag in soup.find_all(lambda t: t.name in INTERACTIVE_TAGS or t.get(&quot;role&quot;) == &quot;button&quot;):
+        if tag.get(&quot;type&quot;) == &quot;hidden&quot; or &quot;display:none&quot; in str(tag.get(&quot;style&quot;, &quot;&quot;)).replace(&quot; &quot;, &quot;&quot;).lower():
+            continue
+
+        el_type = str(tag.get(&quot;type&quot;, tag.name))
+        label = (
+            tag.get_text(strip=True)
+            or str(tag.get(&quot;placeholder&quot;, &quot;&quot;))
+            or str(tag.get(&quot;aria-label&quot;, &quot;&quot;))
+            or str(tag.get(&quot;name&quot;, &quot;&quot;))
+            or str(tag.get(&quot;value&quot;, &quot;&quot;))
+        )[:80]
+
+        el_id = tag.get(&quot;id&quot;)
+        el_name = tag.get(&quot;name&quot;)
+        if el_id:
+            selector = f&quot;#{el_id}&quot;
+        elif el_name:
+            selector = f&quot;{tag.name}[name='{el_name}']&quot;
+        else:
+            selector = f&quot;{tag.name}:nth-of-type({idx})&quot;
+
+        combined_text = f&quot;{label} {el_id or ''} {el_name or ''}&quot;.lower()
+        is_sensitive = any(k in combined_text for k in SENSITIVE_KEYWORDS)
+
+        elements.append(
+            IndexedElement(
+                index=idx,
+                tag=tag.name,
+                element_type=el_type,
+                text_or_label=label,
+                selector=selector,
+                is_sensitive_submit=is_sensitive,
+            )
+        )
+        idx += 1
+
+    return elements
+
+def format_indexed_dom_for_llm(elements: List[IndexedElement]) -&gt; str:
+    &quot;&quot;&quot;Formats the interactive element map into a compact token representation for the LLM.&quot;&quot;&quot;
+    lines = []
+    for el in elements:
+        flag = &quot; [SENSITIVE_ACTION_REQUIRES_APPROVAL]&quot; if el.is_sensitive_submit else &quot;&quot;
+        lines.append(f&quot;[{el.index}] &lt;{el.tag} type='{el.element_type}'&gt; \&quot;{el.text_or_label}\&quot;{flag}&quot;)
+    return &quot;\n&quot;.join(lines)
+</code></pre>
+</div><h3 id="section-step-3-define-browser-action-schemas-and-human-approval-gate-app-schemas-py-app-navigator-py">Step 3: Define Browser Action Schemas and Human Approval Gate (app/schemas.py &amp; app/navigator.py)</h3>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from enum import Enum
+from typing import Optional, List
+from pydantic import BaseModel, Field
+from app.dom_indexer import IndexedElement
+
+class ActionType(str, Enum):
+    CLICK = &quot;CLICK&quot;
+    FILL_TEXT = &quot;FILL_TEXT&quot;
+    GOTO_URL = &quot;GOTO_URL&quot;
+    ASK_HUMAN_APPROVAL = &quot;ASK_HUMAN_APPROVAL&quot;
+    COMPLETE = &quot;COMPLETE&quot;
+
+class BrowserStepAction(BaseModel):
+    action_type: ActionType
+    target_element_index: Optional[int] = Field(None, ge=1)
+    text_input: Optional[str] = None
+    reasoning: str
+
+def verify_action_safety(
+    action: BrowserStepAction,
+    indexed_elements: List[IndexedElement],
+    human_approved: bool = False,
+) -&gt; BrowserStepAction:
+    &quot;&quot;&quot;Intercepts clicks on sensitive checkout/delete/payment buttons if human_approved is False.&quot;&quot;&quot;
+    if action.action_type == ActionType.CLICK and action.target_element_index is not None:
+        matched = next((e for e in indexed_elements if e.index == action.target_element_index), None)
+        if matched is None:
+            raise ValueError(f&quot;Element index [{action.target_element_index}] does not exist on page.&quot;)
+        if matched.is_sensitive_submit and not human_approved:
+            return BrowserStepAction(
+                action_type=ActionType.ASK_HUMAN_APPROVAL,
+                target_element_index=matched.index,
+                reasoning=f&quot;Intercepted sensitive action on [{matched.index}] '{matched.text_or_label}'. Waiting for human confirmation.&quot;,
+            )
+    return action
+</code></pre>
+</div><h2 id="section-testing-the-browser-agent-tests-test-browser-agent-py">Testing the Browser Agent (tests/test_browser_agent.py)</h2>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from app.dom_indexer import index_interactive_dom_from_html, format_indexed_dom_for_llm
+from app.schemas import BrowserStepAction, ActionType, verify_action_safety
+
+SAMPLE_CHECKOUT_HTML = &quot;&quot;&quot;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;input id=&quot;search-box&quot; type=&quot;text&quot; placeholder=&quot;Search products&quot; /&gt;
+    &lt;input id=&quot;csrf-token&quot; type=&quot;hidden&quot; value=&quot;secret123&quot; /&gt;
+    &lt;button id=&quot;filter-btn&quot;&gt;Apply Filter&lt;/button&gt;
+    &lt;button id=&quot;pay-btn&quot;&gt;Pay Now $499&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+
+def test_dom_indexer_skips_hidden_inputs_and_flags_sensitive_buttons():
+    elements = index_interactive_dom_from_html(SAMPLE_CHECKOUT_HTML)
+    assert len(elements) == 3  # hidden input skipped
+    assert elements[0].selector == &quot;#search-box&quot;
+    assert elements[1].is_sensitive_submit is False
+    assert elements[2].text_or_label == &quot;Pay Now $499&quot;
+    assert elements[2].is_sensitive_submit is True
+
+    prompt_view = format_indexed_dom_for_llm(elements)
+    assert &quot;[3] &lt;button type='button'&gt; \&quot;Pay Now $499\&quot; [SENSITIVE_ACTION_REQUIRES_APPROVAL]&quot; in prompt_view
+
+def test_safety_gate_intercepts_unapproved_payment_click():
+    elements = index_interactive_dom_from_html(SAMPLE_CHECKOUT_HTML)
+    proposed_click = BrowserStepAction(
+        action_type=ActionType.CLICK,
+        target_element_index=3,
+        reasoning=&quot;Click the Pay Now button to complete purchase.&quot;,
+    )
+    gated = verify_action_safety(proposed_click, elements, human_approved=False)
+    assert gated.action_type == ActionType.ASK_HUMAN_APPROVAL
+
+    approved = verify_action_safety(proposed_click, elements, human_approved=True)
+    assert approved.action_type == ActionType.CLICK
+</code></pre>
+</div><h2 id="section-authentication-session-security-cost-considerations">Authentication, Session Security &amp; Cost Considerations</h2>
+<ul>
+<li>Handling Authentication Safely: Never hardcode plaintext passwords into LLM prompts (where they leak into model provider logs or trace snapshots). In Browser-Use (https://github.com/browser-use/browser-use), pass credentials via the sensitive_data={&quot;x_password&quot;: &quot;...&quot;} dictionary so the LLM only sees placeholder tokens (&lt;secret&gt;x_password&lt;/secret&gt;), or authenticate once in a persistent Playwright browser context (storage_state=&quot;auth_state.json&quot;) and reuse session cookies.</li>
+<li>Zero-LLM Replay for Recurring Tasks: As documented in Browser-Use v0.13.14 (https://github.com/browser-use/browser-use), once an agent completes a workflow (such as downloading a monthly vendor invoice), save the run history (agent.save_history(&quot;run.json&quot;)) and replay it with new variables (load_and_rerun) without calling the LLM on every click.</li>
+</ul>
+<h2 id="section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Purpose</th>
+<th scope="col">Type</th>
+<th scope="col">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser-Use</td>
+<td>Open-source AI browser agent library &amp; cloud stealth browsers</td>
+<td>Open-Source (MIT)</td>
+<td>https://github.com/browser-use/browser-use</td>
+</tr>
+<tr>
+<td>Playwright for Python</td>
+<td>Deterministic cross-browser automation engine</td>
+<td>Open-Source (Apache-2.0)</td>
+<td>https://github.com/microsoft/playwright-python</td>
+</tr>
+<tr>
+<td>Playwright Docs</td>
+<td>Official Python async API and locator documentation</td>
+<td>Documentation</td>
+<td>https://playwright.dev/python/docs/intro</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-when-should-i-use-raw-playwright-vs-an-ai-browser-agent-like-browser-use">When should I use raw Playwright vs. an AI browser agent like Browser-Use?</h3>
+<p>Use deterministic Playwright scripts when automating a single known website that you control (such as your own E2E test suite). Use an AI browser agent when navigating dozens of external vendor portals whose DOM structures vary or change unpredictably.</p>
+<h3 id="section-how-do-i-prevent-an-ai-browser-agent-from-making-accidental-purchases-or-deleting-data">How do I prevent an AI browser agent from making accidental purchases or deleting data?</h3>
+<p>Classify every button or form submission against sensitive keywords (pay, checkout, delete, wire, remove) and HTTP methods (POST/DELETE to billing endpoints) in deterministic middleware (verify_action_safety), pausing execution until the user approves the action.</p>
+<h3 id="section-why-shouldn-t-i-put-user-passwords-inside-the-browser-agent-prompt">Why shouldn't I put user passwords inside the browser agent prompt?</h3>
+<p>Anything placed in the prompt is sent to the LLM API and saved in execution trace logs. Inject credentials via Playwright storage state cookies or sensitive_data secret placeholders.</p>
+<h3 id="section-how-do-i-handle-single-page-applications-react-next-js-that-load-content-asynchronously">How do I handle Single-Page Applications (React/Next.js) that load content asynchronously?</h3>
+<p>After every click or navigation action, wait for network activity to settle (await page.wait_for_load_state(&quot;networkidle&quot;)) and re-run the DOM indexer before planning the next step.</p>
+<h3 id="section-how-much-does-it-cost-to-run-a-cloud-stealth-browser-in-production">How much does it cost to run a cloud stealth browser in production?</h3>
+<p>Per Browser-Use official pricing (https://github.com/browser-use/browser-use) (checked October 30, 2026), cloud stealth browsers cost $0.02 per browser-hour plus network traffic, or $0 if running headless Chromium on your own server.</p>
+<h3 id="section-can-i-rerun-a-successful-browser-workflow-without-paying-for-llm-tokens-on-every-step">Can I rerun a successful browser workflow without paying for LLM tokens on every step?</h3>
+<p>Yes; record the action trajectory (save_history) and replay parameterized form fills deterministically, invoking the LLM only if a selector fails due to a site redesign.</p>
+<h3 id="section-how-do-i-defend-against-prompt-injection-hidden-inside-a-webpage-s-text">How do I defend against prompt injection hidden inside a webpage's text?</h3>
+<p>Restrict the action planner's view to the structured interactive element list (format_indexed_dom_for_llm) when navigating, and prohibit the agent from navigating to arbitrary external domains outside the task's allowlisted domain scope.</p>
+<h3 id="section-what-happens-if-an-element-is-inside-an-iframe-or-shadow-dom">What happens if an element is inside an <code>&lt;iframe&gt;</code> or Shadow DOM?</h3>
+<p>Use Playwright's page.frames and built-in shadow-piercing locators to traverse open shadow roots when building the interactive element map.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/browser-use/browser-use" rel="noopener">Browser-Use (Open-source AI browser agent library &amp; cloud stealth browsers)</a></li><li><a href="https://github.com/microsoft/playwright-python" rel="noopener">Playwright for Python (Deterministic cross-browser automation engine)</a></li><li><a href="https://playwright.dev/python/docs/intro" rel="noopener">Playwright Docs (Official Python async API and locator documentation)</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fbuild-ai-browser-agent-web-navigation-tasks%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-excel-agent-spreadsheets-analysis/" aria-label="Read How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets"><img src="/assets/images/blog/build-ai-excel-agent-spreadsheets-analysis/cover.svg" alt="Technical architecture diagram for How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a><span class="tag">Featured</span></div>
+<h3><a href="/blog/technology/build-ai-excel-agent-spreadsheets-analysis/">How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets</a></h3>
+<p>Step-by-step guide to building an AI agent for Excel using Python, Pandas, and OpenPyXL that analyses data, writes formulas, generates charts, and prevents corruption.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>12 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-recruitment-agent-resume-screening/" aria-label="Read How to Build an AI Recruitment Agent That Screens Resumes and Shortlists Candidates"><img src="/assets/images/blog/build-ai-recruitment-agent-resume-screening/cover.svg" alt="Technical architecture diagram for How to Build an AI Recruitment Agent That Screens Resumes and Shortlists Candidates" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/build-ai-recruitment-agent-resume-screening/">How to Build an AI Recruitment Agent That Screens Resumes and Shortlists Candidates</a></h3>
+<p>Learn how to build a fair, explainable AI recruitment agent in Python using Docling, Presidio PII masking, and hybrid skill matching to screen resumes.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-financial-analyst-annual-reports-sec/" aria-label="Read How to Build an AI Financial Analyst That Reads Annual Reports and Financial Statements"><img src="/assets/images/blog/build-ai-financial-analyst-annual-reports-sec/cover.svg" alt="Technical architecture diagram for How to Build an AI Financial Analyst That Reads Annual Reports and Financial Statements" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a><span class="tag">Featured</span></div>
+<h3><a href="/blog/technology/build-ai-financial-analyst-annual-reports-sec/">How to Build an AI Financial Analyst That Reads Annual Reports and Financial Statements</a></h3>
+<p>Learn how to build an AI financial analyst in Python that parses 10-K annual reports, extracts financial statements, validates accounting identities, and runs DCF scenarios.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>10 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

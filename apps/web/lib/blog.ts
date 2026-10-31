@@ -105,6 +105,14 @@ export function getPost(category: string, slug: string): BlogPost | undefined {
   }
 }
 
+export function getWritingPost(slug: string): BlogPost | undefined {
+  const item = (catalog as BlogPostSummary[]).find(
+    (p) => p.slug === slug,
+  );
+  if (!item) return undefined;
+  return getPost(item.category, slug);
+}
+
 export async function getPostCached(
   category: string,
   slug: string,

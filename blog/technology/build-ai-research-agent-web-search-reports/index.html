@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Build an AI Research Agent: Web Search &amp; Report Guide</title>
+<meta name="description" content="Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.">
+<meta name="keywords" content="build AI research agent, autonomous web research agent, LangGraph research agent, Playwright web extraction, SearXNG AI search, citation verification LLM, multi-agent research assistant, Python AI report generator">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Build an AI Research Agent: Web Search &amp; Report Guide">
+<meta property="og:description" content="Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.">
+<meta property="og:url" content="https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/build-ai-research-agent-web-search-reports/cover.svg">
+<meta property="og:image:alt" content="Technical architecture diagram for How to Build an AI Research Agent That Searches the Web and Writes Reports">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-31">
+<meta property="article:modified_time" content="2026-10-31">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build an AI Research Agent: Web Search &amp; Report Guide">
+<meta name="twitter:description" content="Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/build-ai-research-agent-web-search-reports/cover.svg">
+<meta name="twitter:image:alt" content="Technical architecture diagram for How to Build an AI Research Agent That Searches the Web and Writes Reports">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/#article","headline":"How to Build an AI Research Agent That Searches the Web and Writes Reports","description":"Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.","abstract":"Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.","url":"https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/build-ai-research-agent-web-search-reports/cover.svg","width":1200,"height":675,"caption":"Technical architecture diagram for How to Build an AI Research Agent That Searches the Web and Writes Reports"},"datePublished":"2026-10-31","dateModified":"2026-10-31","articleSection":"Technology","keywords":"AI Agents, Autonomous Research, LangGraph, Web Scraping, SearXNG","inLanguage":"en","wordCount":3476}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I build this AI research agent entirely with open-source tools and zero API fees?","acceptedAnswer":{"@type":"Answer","text":"Yes. By running SearXNG (https://github.com/searxng/searxng) for search, Playwright for Python (https://github.com/microsoft/playwright-python) for extraction, LangGraph (https://github.com/langchain-ai/langgraph) for orchestration, and Ollama (https://github.com/ollama/ollama) serving an open-weight model like qwen2.5:32b or gemma4, you eliminate all per-token and per-search API charges. You only pay for your local hardware or cloud GPU server."}},{"@type":"Question","name":"How do I stop the research agent from hallucinating fake URLs or citations?","acceptedAnswer":{"@type":"Answer","text":"Never rely on prompt instructions alone. Store every scraped URL in a dictionary inside ResearchState[\"sources\"] and run a deterministic regex post-processor (verify_citations_deterministic) that strips or flags any Markdown link whose URL is not present in the retrieved dictionary."}},{"@type":"Question","name":"Why use Playwright instead of `requests` or `httpx` for web extraction?","acceptedAnswer":{"@type":"Answer","text":"Modern documentation portals, financial dashboards, and Single-Page Applications (SPAs) render their main body content via client-side JavaScript. Plain HTTP clients only see an empty \u003cdiv id=\"root\">\u003c/div> shell, whereas Playwright executes the DOM and waits for content to load."}},{"@type":"Question","name":"How many iterations should a research agent run before writing the report?","acceptedAnswer":{"@type":"Answer","text":"For most technical queries, 2 to 3 iterations (MAX_RESEARCH_ITERATIONS=3) capture 95% of available public facts. Allowing more than 4 iterations increases latency beyond 90 seconds and bloats context tokens with diminishing returns."}},{"@type":"Question","name":"Should I use a single-agent graph or a multi-agent crew for web research?","acceptedAnswer":{"@type":"Answer","text":"Use a single-agent state graph when researching a single cohesive question so all nodes share a unified state registry. Use parallel worker subgraphs only when comparing multiple independent entities (e.g., 5 separate companies) so each worker's raw HTML scraping stays isolated."}},{"@type":"Question","name":"How do I protect my research agent from indirect prompt injection on malicious websites?","acceptedAnswer":{"@type":"Answer","text":"Strip hidden HTML elements (display:none), truncate page extracts to relevant text blocks, wrap extracted text in \u003cuntrusted_web_content> delimiters, and separate the data-extraction step from any tool that has write permissions or internal network access."}},{"@type":"Question","name":"What hardware is required to run the LLM locally for research synthesis?","acceptedAnswer":{"@type":"Answer","text":"Because a research agent ingests 15,000 to 32,000 tokens of scraped web text per run, you need a GPU with at least 24GB of VRAM (such as an NVIDIA RTX 3090, RTX 4090, or cloud L4/A10G) to hold both the 4-bit quantized model weights (14B–32B parameters) and the large KV cache."}},{"@type":"Question","name":"Does SearXNG's AGPL-3.0 licence affect my commercial SaaS application?","acceptedAnswer":{"@type":"Answer","text":"SearXNG is licensed under AGPL-3.0 (searxng/searxng (https://github.com/searxng/searxng)). If you run unmodified SearXNG as an internal backend microservice that your proprietary application queries over HTTP—and you do not expose SearXNG directly to external users or modify its source code—consult your legal counsel regarding AGPL network interaction clauses, or use a commercial search API (like Brave Search or Tavily) if strict licence isolation is required."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"How to Build an AI Research Agent That Searches the Web and Writes Reports","item":"https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/#webpage","url":"https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/","name":"Build an AI Research Agent: Web Search & Report Guide","description":"Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="build-ai-research-agent-web-search-reports">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">How to Build an AI Research Agent That Searches the Web and Writes Reports</h1>
+<p class="blog-description">Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-31">31 Oct 2026</time></span><span>18 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How to Build: How to Build an AI Research Agent That Searches the Web and Writes Reports (Summary &amp; Mechanics)</h2>
+<p class="blog-answer-verdict">Learn how to build an AI research agent in Python using LangGraph, Playwright, and SearXNG that plans queries, verifies web sources, and writes cited reports. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.</p>
+<dl class="blog-answer-facts"><div><dt>Architecture</dt><dd>Deterministic Agent Graph</dd></div><div><dt>Primary Stack</dt><dd>Python 3.12 / FastAPI / Pydantic</dd></div><div><dt>Part Series</dt><dd>Part I: Practical AI Agents</dd></div><div><dt>Verified As Of</dt><dd>October 2026</dd></div></dl>
+
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Production automation requiring verifiable citation &amp; error boundaries</li><li>Self-hosted privacy-first deployments with open-source alternatives</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Enforce hard recursion limits to prevent cyclic execution drift</li><li>Sanitize untrusted inputs to prevent indirect prompt injection</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/build-ai-research-agent-web-search-reports/cover.svg" alt="Technical architecture diagram for How to Build an AI Research Agent That Searches the Web and Writes Reports" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for How to Build an AI Research Agent That Searches the Web and Writes Reports.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=AI%20Agents">AI Agents</a><a href="/blog/?tag=Autonomous%20Research">Autonomous Research</a><a href="/blog/?tag=LangGraph">LangGraph</a><a href="/blog/?tag=Web%20Scraping">Web Scraping</a><a href="/blog/?tag=SearXNG">SearXNG</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>34 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-what-an-ai-research-agent-is-and-why-engineers-build-it">What an AI Research Agent Is and Why Engineers Build It</a></li><li class="toc-h2"><a href="#section-how-it-works-autonomous-research-planning-and-multi-agent-vs-single-agent-architecture">How It Works: Autonomous Research Planning and Multi-Agent vs. Single-Agent Architecture</a></li><li class="toc-h3"><a href="#section-single-agent-state-machine-vs-multi-agent-architecture">Single-Agent State Machine vs. Multi-Agent Architecture</a></li><li class="toc-h2"><a href="#section-system-architecture">System Architecture</a></li><li class="toc-h3"><a href="#section-key-architectural-boundaries">Key Architectural Boundaries</a></li><li class="toc-h2"><a href="#section-technology-stack-selection-paid-vs-open-source-comparison">Technology Stack Selection &amp; Paid vs. Open-Source Comparison</a></li><li class="toc-h3"><a href="#section-recommended-implementation-options">Recommended Implementation Options</a></li><li class="toc-h3"><a href="#section-option-a-best-practical-implementation-recommended-python-3-12-fastapi-langgraph-https-github-com-langchain-ai-langgraph-openai-api-or-claude-for-structured-synthesis-self-hosted-searxng-https-github-com-searxng-searxng-or-tavily-api-playwright-https-playwright-dev-python-docs-intro-postgresql-this-stack-minimizes-search-api-costs-while-ensuring-high-synthesis-accuracy-and-strict-citation-grounding">Option A: Best Practical Implementation (Recommended): Python 3.12 + FastAPI + LangGraph (https://github.com/langchain-ai/langgraph) + OpenAI API (or Claude) for structured synthesis + self-hosted SearXNG (https://github.com/searxng/searxng) (or Tavily API) + Playwright (https://playwright.dev/python/docs/intro) + PostgreSQL. This stack minimizes search API costs while ensuring high synthesis accuracy and strict citation grounding.</a></li><li class="toc-h3"><a href="#section-option-b-fully-open-source-self-hosted-implementation-langgraph-https-github-com-langchain-ai-langgraph-ollama-https-github-com-ollama-ollama-qwen2-5-32b-searxng-https-github-com-searxng-searxng-playwright-https-github-com-microsoft-playwright-python-pgvector-https-github-com-pgvector-pgvector-zero-proprietary-api-dependencies-requires-a-workstation-or-server-with-at-least-24gb-vram-e-g-nvidia-rtx-3090-4090-or-a10g">Option B: Fully Open-Source / Self-Hosted Implementation: LangGraph (https://github.com/langchain-ai/langgraph) + Ollama (https://github.com/ollama/ollama) (qwen2.5:32b) + SearXNG (https://github.com/searxng/searxng) + Playwright (https://github.com/microsoft/playwright-python) + pgvector (https://github.com/pgvector/pgvector). Zero proprietary API dependencies; requires a workstation or server with at least 24GB VRAM (e.g., NVIDIA RTX 3090/4090 or A10G).</a></li><li class="toc-h3"><a href="#section-option-c-production-scale-implementation-fastapi-celery-redis-task-workers-langgraph-with-asyncpostgressaver-pooled-headless-chromium-cluster-prometheus-opentelemetry-observability">Option C: Production-Scale Implementation: FastAPI + Celery/Redis task workers + LangGraph with AsyncPostgresSaver + pooled headless Chromium cluster + Prometheus/OpenTelemetry observability.</a></li><li class="toc-h2"><a href="#section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</a></li><li class="toc-h3"><a href="#section-step-1-understand-the-project-requirements">Step 1: Understand the Project Requirements</a></li><li class="toc-h3"><a href="#section-step-2-set-up-the-development-environment-and-project-structure">Step 2: Set Up the Development Environment and Project Structure</a></li><li class="toc-h3"><a href="#section-step-3-install-dependencies">Step 3: Install Dependencies</a></li><li class="toc-h3"><a href="#section-step-4-configure-the-application-app-config-py-and-env-example">Step 4: Configure the Application (app/config.py and .env.example)</a></li><li class="toc-h3"><a href="#section-step-5-define-typed-data-contracts-app-schemas-py">Step 5: Define Typed Data Contracts (app/schemas.py)</a></li><li class="toc-h3"><a href="#section-step-6-implement-ssrf-safe-web-scraping-and-search-app-scraper-py-app-search-tool-py">Step 6: Implement SSRF-Safe Web Scraping and Search (app/scraper.py &amp; app/search_tool.py)</a></li><li class="toc-h3"><a href="#section-step-7-build-the-langgraph-state-machine-and-citation-validator-app-agent-graph-py">Step 7: Build the LangGraph State Machine and Citation Validator (app/agent_graph.py)</a></li><li class="toc-h3"><a href="#section-step-8-expose-the-fastapi-service-app-main-py">Step 8: Expose the FastAPI Service (app/main.py)</a></li><li class="toc-h2"><a href="#section-testing-and-verification-tests-test-research-agent-py">Testing and Verification (tests/test_research_agent.py)</a></li><li class="toc-h2"><a href="#section-troubleshooting-common-errors">Troubleshooting Common Errors</a></li><li class="toc-h2"><a href="#section-cost-breakdown-production-considerations">Cost Breakdown &amp; Production Considerations</a></li><li class="toc-h2"><a href="#section-production-readiness-checklist">Production Readiness Checklist</a></li><li class="toc-h2"><a href="#section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-can-i-build-this-ai-research-agent-entirely-with-open-source-tools-and-zero-api-fees">Can I build this AI research agent entirely with open-source tools and zero API fees?</a></li><li class="toc-h3"><a href="#section-how-do-i-stop-the-research-agent-from-hallucinating-fake-urls-or-citations">How do I stop the research agent from hallucinating fake URLs or citations?</a></li><li class="toc-h3"><a href="#section-why-use-playwright-instead-of-requests-or-httpx-for-web-extraction">Why use Playwright instead of requests or httpx for web extraction?</a></li><li class="toc-h3"><a href="#section-how-many-iterations-should-a-research-agent-run-before-writing-the-report">How many iterations should a research agent run before writing the report?</a></li><li class="toc-h3"><a href="#section-should-i-use-a-single-agent-graph-or-a-multi-agent-crew-for-web-research">Should I use a single-agent graph or a multi-agent crew for web research?</a></li><li class="toc-h3"><a href="#section-how-do-i-protect-my-research-agent-from-indirect-prompt-injection-on-malicious-websites">How do I protect my research agent from indirect prompt injection on malicious websites?</a></li><li class="toc-h3"><a href="#section-what-hardware-is-required-to-run-the-llm-locally-for-research-synthesis">What hardware is required to run the LLM locally for research synthesis?</a></li><li class="toc-h3"><a href="#section-does-searxng-s-agpl-3-0-licence-affect-my-commercial-saas-application">Does SearXNG&#39;s AGPL-3.0 licence affect my commercial SaaS application?</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>To build an AI research agent that produces reliable, citation-backed technical reports, you must combine a stateful query-planning loop, programmatic web search, headless browser extraction, and deterministic citation verification. Unlike a standard chat prompt that relies on static training weights or a single top-k search snippet, an autonomous AI research agent decomposes a complex topic into targeted sub-queries, fetches primary web pages, strips boilerplate HTML, cross-checks factual claims across independent domains, and compiles a structured report where every claim links to a verified source URL.</p>
+<p>This guide walks through the complete engineering lifecycle of a production-grade AI research agent—covering single-agent vs. multi-agent orchestration, open-source search alternatives like SearXNG (https://github.com/searxng/searxng), headless DOM extraction with Playwright for Python (https://github.com/microsoft/playwright-python), and stateful cyclic execution using LangGraph (https://github.com/langchain-ai/langgraph).</p>
+<h2 id="section-what-an-ai-research-agent-is-and-why-engineers-build-it">What an AI Research Agent Is and Why Engineers Build It</h2>
+<p>An AI research agent is an autonomous software system that iteratively gathers, filters, and synthesizes external information to answer open-ended questions. Standard Retrieval-Augmented Generation (RAG) systems only search a fixed internal corpus in a single pass. When a query requires live market data, regulatory filings, or multi-hop technical synthesis, single-pass RAG fails if the initial search query misses key terminology.</p>
+<p>Engineers and organizations build custom AI research agents for:</p>
+<ul>
+<li>Technical Due Diligence and Competitive Intelligence: Automatically gathering product documentation, GitHub commit velocity, licence changes, and pricing tiers across puluhan competitors.</li>
+<li>Market and Policy Synthesis: Tracking regulatory updates, tender announcements, and regional compliance rules with verifiable inline links.</li>
+<li>Automated Literature and Security Briefings: Aggregating CVE advisories, engineering blog postmortems, and benchmark comparisons into daily engineering digests.</li>
+</ul>
+<h2 id="section-how-it-works-autonomous-research-planning-and-multi-agent-vs-single-agent-architecture">How It Works: Autonomous Research Planning and Multi-Agent vs. Single-Agent Architecture</h2>
+<p>A robust research agent operates in five distinct phases:</p>
+<ol>
+<li>Autonomous Query Planning: Given a user topic, the planner generates 3–5 orthogonal search queries using structured output schemas (Pydantic).</li>
+<li>Search API Dispatch: The agent queries a search engine API (such as Tavily, Brave Search, or a self-hosted SearXNG (https://github.com/searxng/searxng) instance) to obtain candidate URLs and snippets.</li>
+<li>Browser Automation &amp; Extraction: Because search snippets truncate technical details and tables, the agent uses Playwright (https://playwright.dev/python/docs/intro) and trafilatura or BeautifulSoup to render JavaScript-heavy pages and extract clean Markdown text.</li>
+</ol>
+<h4 id="section-source-verification-reflection-loop-a-critic-node-evaluates-whether-the-extracted-evidence-answers-all-sub-questions-and-checks-whether-claims-are-corroborated-if-gaps-remain-and-the-loop-count-is-below-a-hard-ceiling-e-g-max-iterations-3-the-agent-formulates-follow-up-queries">Source Verification &amp; Reflection Loop: A critic node evaluates whether the extracted evidence answers all sub-questions and checks whether claims are corroborated. If gaps remain—and the loop count is below a hard ceiling (e.g., max_iterations = 3)—the agent formulates follow-up queries.</h4>
+<ol>
+<li>Report Synthesis &amp; Citation Management: The writer node synthesizes the verified passages into a structured report and validates that every inline <a href="URL">Title</a> link maps to an actually retrieved source in the state registry, eliminating hallucinated URLs.</li>
+</ol>
+<h3 id="section-single-agent-state-machine-vs-multi-agent-architecture">Single-Agent State Machine vs. Multi-Agent Architecture</h3>
+<p>Many developers prematurely reach for multi-agent role-playing frameworks where three or four conversational agents chat back and forth. In practice:</p>
+<ul>
+<li>Single-Agent Stateful Graph (Recommended for 80% of workloads): A single state machine in LangGraph (https://github.com/langchain-ai/langgraph) with typed nodes (plan_queries → execute_search → extract_pages → verify_and_reflect → write_report) keeps token overhead low, prevents context drift, and enforces deterministic loop bounds.</li>
+<li>Parallel Multi-Agent Subgraphs (For broad multi-entity research): When researching 10 distinct companies simultaneously, spawning parallel worker subgraphs via LangGraph's Send API or orchestrating specialized crews via CrewAI (https://github.com/crewaiinc/crewai) isolates each company's raw HTML scraping tokens from the main synthesis context window.</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Architecture Reference:</strong> Internal Link Suggestion: For a deeper dive into state reducers and loop bounds in LangGraph and Pydantic AI, see our guide on [<a href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/">AI Agent Development Skills: Tools, Memory, and Orchestration</a>](/blog/technology/ai-agent-development-skills-tools-memory-orchestration/) on Aniket.app, as well as [Article 11: How to Build an AI Browser Agent and <a href="/writing/build-ai-browser-agent-web-navigation-tasks/%5D(/writing/build-ai-academic-research-assistant-paper-summaries/)">Article 12: How to Build an AI Academic Research Assistant </a>.</p>
+</blockquote>
+<h2 id="section-system-architecture">System Architecture</h2>
+<p>The following Mermaid diagram illustrates the complete execution flow, state checkpoints, and verification boundaries of the AI Research Agent.</p>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    User([User Research Prompt]) --&gt; API[FastAPI Endpoint /research]
+    API --&gt; Planner[Planner Node: Generate Sub-Queries]
+    Planner --&gt; Search[Search Node: SearXNG / Search API]
+    Search --&gt; Dedupe[URL Deduplication &amp; Domain Filter]
+    Dedupe --&gt; Scraper[Playwright Headless Extractor]
+    Scraper --&gt; Parser[HTML-to-Markdown &amp; Citation Registry]
+    Parser --&gt; Critic{Critic Node: Evidence Sufficient?}
+    Critic -- &quot;Missing Data &amp; iter &lt; 3&quot; --&gt; Planner
+    Critic -- &quot;Verified or iter == 3&quot; --&gt; Synthesizer[Report Writer Node]
+    Synthesizer --&gt; CitationValidator[Deterministic URL &amp; Citation Validator]
+    CitationValidator --&gt; DB[(PostgreSQL + pgvector Cache)]
+    CitationValidator --&gt; Output([Final Verified Markdown Report])</pre></div>
+<h3 id="section-key-architectural-boundaries">Key Architectural Boundaries</h3>
+<ul>
+<li>Request &amp; Data Flow: Incoming HTTP POST /api/v1/research requests validate the topic and depth parameters via Pydantic, initialize a persistent ResearchState checkpoint in PostgreSQL, and stream node progress events via Server-Sent Events (SSE).</li>
+<li>Security Boundaries &amp; SSRF Prevention: When scraping arbitrary URLs returned by search engines, the Playwright extractor must block private IP ranges (127.0.0.0/8, 10.0.0.0/8, 169.254.169.254 AWS/GCP metadata endpoints, 172.16.0.0/12, 192.168.0.0/16) to prevent Server-Side Request Forgery (SSRF).</li>
+<li>Rate Limiting &amp; Retry Strategy: Outbound page fetches use httpx and Playwright contexts with per-domain semaphores (max 2 concurrent requests per host) and exponential backoff via tenacity.</li>
+</ul>
+<h2 id="section-technology-stack-selection-paid-vs-open-source-comparison">Technology Stack Selection &amp; Paid vs. Open-Source Comparison</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Paid / Commercial Solution</th>
+<th scope="col">Open-Source / Open-Weight Alternative</th>
+<th scope="col">Self-Hosting Possible?</th>
+<th scope="col">Technical &amp; Production Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM (Planning &amp; Synthesis)</td>
+<td>OpenAI API (gpt-4o-mini / gpt-4.1) or Anthropic Claude</td>
+<td>Ollama (https://github.com/ollama/ollama) running Qwen2.5-32B-Instruct or Llama-3.3-70B (Open-Weight)</td>
+<td>Yes (requires GPU: 24GB–48GB VRAM)</td>
+<td>Smaller local models (&lt;14B) struggle with strict inline citation formatting across 30k+ context tokens.</td>
+</tr>
+<tr>
+<td>Agent Orchestration</td>
+<td>LangSmith Deployment (Commercial Control Plane)</td>
+<td>LangGraph (https://github.com/langchain-ai/langgraph) (MIT License) or CrewAI (https://github.com/crewaiinc/crewai) (MIT License)</td>
+<td>Yes (Python library runs anywhere)</td>
+<td>Self-hosted state persistence requires managing your own PostgreSQL checkpointer.</td>
+</tr>
+<tr>
+<td>Web Search Engine</td>
+<td>Tavily Search API / Serper.dev / Brave Search API</td>
+<td>SearXNG (https://github.com/searxng/searxng) (AGPL-3.0 License)</td>
+<td>Yes (Docker container)</td>
+<td>Self-hosted SearXNG instances can hit upstream Google/Bing CAPTCHAs if querying at high volume without rotating proxies.</td>
+</tr>
+<tr>
+<td>Browser Automation</td>
+<td>Browser Use Cloud (https://github.com/browser-use/browser-use) ($0.02/hr stealth browser)</td>
+<td>Playwright for Python (https://github.com/microsoft/playwright-python) (Apache-2.0)</td>
+<td>Yes (Headless Chromium in Docker)</td>
+<td>Each headless Chromium instance consumes ~250–400MB RAM; requires --disable-dev-shm-usage in Docker.</td>
+</tr>
+<tr>
+<td>Vector &amp; State Storage</td>
+<td>Qdrant Cloud / Managed Postgres</td>
+<td>PostgreSQL (https://www.postgresql.org/docs/) + pgvector (https://github.com/pgvector/pgvector) (PostgreSQL License)</td>
+<td>Yes</td>
+<td>HNSW index builds require tuning maintenance_work_mem above 100k vectors.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-recommended-implementation-options">Recommended Implementation Options</h3>
+<h3 id="section-option-a-best-practical-implementation-recommended-python-3-12-fastapi-langgraph-https-github-com-langchain-ai-langgraph-openai-api-or-claude-for-structured-synthesis-self-hosted-searxng-https-github-com-searxng-searxng-or-tavily-api-playwright-https-playwright-dev-python-docs-intro-postgresql-this-stack-minimizes-search-api-costs-while-ensuring-high-synthesis-accuracy-and-strict-citation-grounding">Option A: Best Practical Implementation (Recommended): Python 3.12 + FastAPI + LangGraph (https://github.com/langchain-ai/langgraph) + OpenAI API (or Claude) for structured synthesis + self-hosted SearXNG (https://github.com/searxng/searxng) (or Tavily API) + Playwright (https://playwright.dev/python/docs/intro) + PostgreSQL. This stack minimizes search API costs while ensuring high synthesis accuracy and strict citation grounding.</h3>
+<h3 id="section-option-b-fully-open-source-self-hosted-implementation-langgraph-https-github-com-langchain-ai-langgraph-ollama-https-github-com-ollama-ollama-qwen2-5-32b-searxng-https-github-com-searxng-searxng-playwright-https-github-com-microsoft-playwright-python-pgvector-https-github-com-pgvector-pgvector-zero-proprietary-api-dependencies-requires-a-workstation-or-server-with-at-least-24gb-vram-e-g-nvidia-rtx-3090-4090-or-a10g">Option B: Fully Open-Source / Self-Hosted Implementation: LangGraph (https://github.com/langchain-ai/langgraph) + Ollama (https://github.com/ollama/ollama) (qwen2.5:32b) + SearXNG (https://github.com/searxng/searxng) + Playwright (https://github.com/microsoft/playwright-python) + pgvector (https://github.com/pgvector/pgvector). Zero proprietary API dependencies; requires a workstation or server with at least 24GB VRAM (e.g., NVIDIA RTX 3090/4090 or A10G).</h3>
+<h3 id="section-option-c-production-scale-implementation-fastapi-celery-redis-task-workers-langgraph-with-asyncpostgressaver-pooled-headless-chromium-cluster-prometheus-opentelemetry-observability">Option C: Production-Scale Implementation: FastAPI + Celery/Redis task workers + LangGraph with AsyncPostgresSaver + pooled headless Chromium cluster + Prometheus/OpenTelemetry observability.</h3>
+<h2 id="section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</h2>
+<h3 id="section-step-1-understand-the-project-requirements">Step 1: Understand the Project Requirements</h3>
+<p>We will build a modular Python application that accepts a research question, generates targeted search queries, queries a JSON search endpoint (compatible with SearXNG), fetches and sanitizes web page content with SSRF protection, runs an iterative verification loop in LangGraph, and outputs a Markdown report with verified citations.</p>
+<h3 id="section-step-2-set-up-the-development-environment-and-project-structure">Step 2: Set Up the Development Environment and Project Structure</h3>
+<p>Ensure you have Python 3.11 or 3.12 and Docker installed. Create the following project structure:</p>
+<div class="blog-code"><div class="blog-code-label">text</div><pre tabindex="0" aria-label="text code block"><code class="language-text">ai-research-agent/
+├── app/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── schemas.py
+│   ├── search_tool.py
+│   ├── scraper.py
+│   ├── agent_graph.py
+│   └── main.py
+├── tests/
+│   └── test_research_agent.py
+├── .env.example
+├── docker-compose.yml
+└── requirements.txt
+</code></pre>
+</div><h3 id="section-step-3-install-dependencies">Step 3: Install Dependencies</h3>
+<p>Create and activate a virtual environment, then install the verified packages:</p>
+<div class="blog-code"><div class="blog-code-label">bash</div><pre tabindex="0" aria-label="bash code block"><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate
+pip install fastapi==0.115.0 uvicorn==0.30.6 langgraph==1.2.18 openai==1.51.0 pydantic==2.9.2 httpx==0.27.2 beautifulsoup4==4.12.3 playwright==1.48.0 tenacity==9.0.0 pytest==8.3.3 pytest-asyncio==0.24.0 python-dotenv==1.0.1
+playwright install chromium
+</code></pre>
+</div><h3 id="section-step-4-configure-the-application-app-config-py-and-env-example">Step 4: Configure the Application (app/config.py and .env.example)</h3>
+<p>Create .env.example (never commit real API keys to version control):</p>
+<div class="blog-code"><div class="blog-code-label">bash</div><pre tabindex="0" aria-label="bash code block"><code class="language-bash">OPENAI_API_KEY=sk-proj-your-api-key-here
+OPENAI_MODEL=gpt-4o-mini
+SEARXNG_BASE_URL=http://localhost:8080
+MAX_RESEARCH_ITERATIONS=3
+REQUEST_TIMEOUT_SECONDS=15
+</code></pre>
+</div><p>Create app/config.py:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Settings:
+    OPENAI_API_KEY: str = os.getenv(&quot;OPENAI_API_KEY&quot;, &quot;&quot;)
+    OPENAI_MODEL: str = os.getenv(&quot;OPENAI_MODEL&quot;, &quot;gpt-4o-mini&quot;)
+    SEARXNG_BASE_URL: str = os.getenv(&quot;SEARXNG_BASE_URL&quot;, &quot;http://localhost:8080&quot;)
+    MAX_ITERATIONS: int = int(os.getenv(&quot;MAX_RESEARCH_ITERATIONS&quot;, &quot;3&quot;))
+    TIMEOUT_SECONDS: int = int(os.getenv(&quot;REQUEST_TIMEOUT_SECONDS&quot;, &quot;15&quot;))
+
+settings = Settings()
+</code></pre>
+</div><h3 id="section-step-5-define-typed-data-contracts-app-schemas-py">Step 5: Define Typed Data Contracts (app/schemas.py)</h3>
+<p>We use Pydantic models to enforce structured LLM outputs for query planning, reflection, and citation verification.</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from typing import List, Dict, TypedDict, Annotated
+import operator
+from pydantic import BaseModel, Field
+
+class SearchQueryPlan(BaseModel):
+    queries: List[str] = Field(
+        description=&quot;3 to 4 specific, non-overlapping technical web search queries.&quot;,
+        min_length=1,
+        max_length=4,
+    )
+    rationale: str = Field(description=&quot;Why these queries cover the topic.&quot;)
+
+class ReflectionEvaluation(BaseModel):
+    is_sufficient: bool = Field(
+        description=&quot;True if gathered sources contain sufficient factual detail to write the full report.&quot;
+    )
+    missing_aspects: List[str] = Field(
+        default_factory=list,
+        description=&quot;Specific technical gaps requiring follow-up search queries.&quot;,
+    )
+    follow_up_queries: List[str] = Field(
+        default_factory=list,
+        description=&quot;Up to 2 targeted follow-up queries if is_sufficient is False.&quot;,
+    )
+
+class SourceDocument(BaseModel):
+    url: str
+    title: str
+    snippet: str
+    extracted_content: str
+
+class ResearchState(TypedDict):
+    topic: str
+    iteration: int
+    queries: Annotated[List[str], operator.add]
+    sources: Dict[str, SourceDocument]
+    is_sufficient: bool
+    draft_report: str
+    verified_report: str
+    validation_warnings: List[str]
+</code></pre>
+</div><h3 id="section-step-6-implement-ssrf-safe-web-scraping-and-search-app-scraper-py-app-search-tool-py">Step 6: Implement SSRF-Safe Web Scraping and Search (app/scraper.py &amp; app/search_tool.py)</h3>
+<p>First, write app/scraper.py with explicit private IP blocking and Playwright headless extraction:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import ipaddress
+import socket
+from urllib.parse import urlparse
+from bs4 import BeautifulSoup
+from playwright.async_api import async_playwright
+from app.config import settings
+
+def is_safe_public_url(url: str) -&gt; bool:
+    &quot;&quot;&quot;Prevents Server-Side Request Forgery (SSRF) by blocking private/loopback IPs.&quot;&quot;&quot;
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme not in (&quot;http&quot;, &quot;https&quot;) or not parsed.hostname:
+            return False
+        addr_info = socket.getaddrinfo(parsed.hostname, None)
+        for item in addr_info:
+            ip_str = item[4][0]
+            ip_obj = ipaddress.ip_address(ip_str)
+            if (
+                ip_obj.is_private
+                or ip_obj.is_loopback
+                or ip_obj.is_link_local
+                or ip_obj.is_multicast
+                or ip_obj.is_reserved
+            ):
+                return False
+        return True
+    except Exception:
+        return False
+
+def clean_html_to_text(html: str, max_chars: int = 6000) -&gt; str:
+    &quot;&quot;&quot;Strips scripts, styles, navbars, and compresses whitespace.&quot;&quot;&quot;
+    soup = BeautifulSoup(html, &quot;html.parser&quot;)
+    for tag in soup([&quot;script&quot;, &quot;style&quot;, &quot;nav&quot;, &quot;footer&quot;, &quot;header&quot;, &quot;noscript&quot;, &quot;svg&quot;]):
+        tag.decompose()
+    lines = [line.strip() for line in soup.get_text(separator=&quot;\n&quot;).splitlines() if line.strip()]
+    return &quot;\n&quot;.join(lines)[:max_chars]
+
+async def extract_page_with_playwright(url: str) -&gt; str:
+    &quot;&quot;&quot;Fetches and renders a public webpage using headless Chromium.&quot;&quot;&quot;
+    if not is_safe_public_url(url):
+        raise ValueError(f&quot;Blocked unsafe or private URL: {url}&quot;)
+
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True, args=[&quot;--disable-dev-shm-usage&quot;])
+        context = await browser.new_context(
+            user_agent=&quot;AniketResearchBot/1.0 (+https://aniket.app)&quot;
+        )
+        page = await context.new_page()
+        try:
+            await page.goto(url, timeout=settings.TIMEOUT_SECONDS * 1000, wait_until=&quot;domcontentloaded&quot;)
+            html_content = await page.content()
+            return clean_html_to_text(html_content)
+        finally:
+            await context.close()
+            await browser.close()
+</code></pre>
+</div><p>Next, implement app/search_tool.py to query SearXNG's JSON API:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import httpx
+from typing import List, Dict
+from tenacity import retry, stop_after_attempt, wait_exponential
+from app.config import settings
+
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=1, max=6))
+async def search_searxng(query: str, max_results: int = 4) -&gt; List[Dict[str, str]]:
+    &quot;&quot;&quot;Queries a SearXNG instance with JSON output enabled.&quot;&quot;&quot;
+    params = {&quot;q&quot;: query, &quot;format&quot;: &quot;json&quot;, &quot;language&quot;: &quot;en&quot;}
+    async with httpx.AsyncClient(timeout=settings.TIMEOUT_SECONDS) as client:
+        response = await client.get(f&quot;{settings.SEARXNG_BASE_URL}/search&quot;, params=params)
+        response.raise_for_status()
+        payload = response.json()
+        results = []
+        for item in payload.get(&quot;results&quot;, [])[:max_results]:
+            url = item.get(&quot;url&quot;)
+            if url:
+                results.append({
+                    &quot;url&quot;: url,
+                    &quot;title&quot;: item.get(&quot;title&quot;, &quot;Untitled Source&quot;),
+                    &quot;snippet&quot;: item.get(&quot;content&quot;, &quot;&quot;),
+                })
+        return results
+</code></pre>
+</div><h3 id="section-step-7-build-the-langgraph-state-machine-and-citation-validator-app-agent-graph-py">Step 7: Build the LangGraph State Machine and Citation Validator (app/agent_graph.py)</h3>
+<p>Here we connect the OpenAI structured output calls, web scraping, reflection loop, and deterministic citation verifier:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import re
+from typing import Dict
+from openai import AsyncOpenAI
+from langgraph.graph import StateGraph, START, END
+from app.config import settings
+from app.schemas import (
+    ResearchState,
+    SearchQueryPlan,
+    ReflectionEvaluation,
+    SourceDocument,
+)
+from app.search_tool import search_searxng
+from app.scraper import extract_page_with_playwright
+
+client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+
+async def plan_queries_node(state: ResearchState) -&gt; dict:
+    if state.get(&quot;iteration&quot;, 0) == 0:
+        completion = await client.beta.chat.completions.parse(
+            model=settings.OPENAI_MODEL,
+            messages=[
+                {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are a senior technical research planner.&quot;},
+                {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: f&quot;Generate initial search queries for: {state['topic']}&quot;},
+            ],
+            response_format=SearchQueryPlan,
+        )
+        new_queries = completion.choices[0].message.parsed.queries
+    else:
+        new_queries = state.get(&quot;queries&quot;, [])[-2:]
+    return {&quot;queries&quot;: new_queries, &quot;iteration&quot;: state.get(&quot;iteration&quot;, 0) + 1}
+
+async def execute_search_and_extract_node(state: ResearchState) -&gt; dict:
+    sources: Dict[str, SourceDocument] = dict(state.get(&quot;sources&quot;, {}))
+    recent_queries = state[&quot;queries&quot;][-4:]
+
+    for query in recent_queries:
+        hits = await search_searxng(query, max_results=3)
+        for hit in hits:
+            url = hit[&quot;url&quot;]
+            if url in sources:
+                continue
+            try:
+                extracted = await extract_page_with_playwright(url)
+            except Exception:
+                extracted = hit[&quot;snippet&quot;]
+            if extracted:
+                sources[url] = SourceDocument(
+                    url=url,
+                    title=hit[&quot;title&quot;],
+                    snippet=hit[&quot;snippet&quot;],
+                    extracted_content=extracted,
+                )
+    return {&quot;sources&quot;: sources}
+
+async def reflect_on_evidence_node(state: ResearchState) -&gt; dict:
+    evidence_summary = &quot;\n\n&quot;.join(
+        [f&quot;Source: {doc.title} ({doc.url})\n{doc.extracted_content[:1200]}&quot; for doc in state[&quot;sources&quot;].values()]
+    )
+    completion = await client.beta.chat.completions.parse(
+        model=settings.OPENAI_MODEL,
+        messages=[
+            {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;Evaluate whether the gathered evidence is sufficient to answer the research topic thoroughly.&quot;},
+            {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: f&quot;Topic: {state['topic']}\n\nEvidence:\n{evidence_summary}&quot;},
+        ],
+        response_format=ReflectionEvaluation,
+    )
+    parsed = completion.choices[0].message.parsed
+    return {
+        &quot;is_sufficient&quot;: parsed.is_sufficient,
+        &quot;queries&quot;: parsed.follow_up_queries if not parsed.is_sufficient else [],
+    }
+
+def route_after_reflection(state: ResearchState) -&gt; str:
+    if state[&quot;is_sufficient&quot;] or state[&quot;iteration&quot;] &gt;= settings.MAX_ITERATIONS:
+        return &quot;synthesize_report&quot;
+    return &quot;execute_search&quot;
+
+async def synthesize_report_node(state: ResearchState) -&gt; dict:
+    allowed_sources_block = &quot;\n\n&quot;.join(
+        [f&quot;[{doc.title}]({doc.url}):\n{doc.extracted_content[:2000]}&quot; for doc in state[&quot;sources&quot;].values()]
+    )
+    prompt = (
+        f&quot;Write a comprehensive technical report on: {state['topic']}.\n&quot;
+        &quot;CRITICAL RULE: Every factual claim MUST include an inline markdown link [Source Title](URL) &quot;
+        &quot;chosen ONLY from the provided sources below. Never invent URLs.\n\n&quot;
+        f&quot;Allowed Sources:\n{allowed_sources_block}&quot;
+    )
+    response = await client.chat.completions.create(
+        model=settings.OPENAI_MODEL,
+        messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: prompt}],
+        temperature=0.1,
+    )
+    draft = response.choices[0].message.content or &quot;&quot;
+    return {&quot;draft_report&quot;: draft}
+
+def verify_citations_deterministic(draft: str, allowed_urls: set) -&gt; tuple[str, list[str]]:
+    &quot;&quot;&quot;Deterministically verifies all markdown URLs against the retrieved source registry.&quot;&quot;&quot;
+    pattern = re.compile(r&quot;\[([^\]]+)\]\((https?://[^\)]+)\)&quot;)
+    warnings = []
+
+    def replace_unverified(match: re.Match) -&gt; str:
+        label, url = match.group(1), match.group(2)
+        if url not in allowed_urls:
+            warnings.append(f&quot;Stripped unverified hallucinated URL: {url}&quot;)
+            return f&quot;{label} [Unverified Citation Removed]&quot;
+        return match.group(0)
+
+    cleaned_report = pattern.sub(replace_unverified, draft)
+    return cleaned_report, warnings
+
+async def validate_citations_node(state: ResearchState) -&gt; dict:
+    allowed_urls = set(state[&quot;sources&quot;].keys())
+    verified_text, warnings = verify_citations_deterministic(state[&quot;draft_report&quot;], allowed_urls)
+    return {&quot;verified_report&quot;: verified_text, &quot;validation_warnings&quot;: warnings}
+
+def build_research_graph():
+    builder = StateGraph(ResearchState)
+    builder.add_node(&quot;plan_queries&quot;, plan_queries_node)
+    builder.add_node(&quot;execute_search&quot;, execute_search_and_extract_node)
+    builder.add_node(&quot;reflect&quot;, reflect_on_evidence_node)
+    builder.add_node(&quot;synthesize_report&quot;, synthesize_report_node)
+    builder.add_node(&quot;validate_citations&quot;, validate_citations_node)
+
+    builder.add_edge(START, &quot;plan_queries&quot;)
+    builder.add_edge(&quot;plan_queries&quot;, &quot;execute_search&quot;)
+    builder.add_edge(&quot;execute_search&quot;, &quot;reflect&quot;)
+    builder.add_conditional_edges(
+        &quot;reflect&quot;,
+        route_after_reflection,
+        {&quot;execute_search&quot;: &quot;execute_search&quot;, &quot;synthesize_report&quot;: &quot;synthesize_report&quot;},
+    )
+    builder.add_edge(&quot;synthesize_report&quot;, &quot;validate_citations&quot;)
+    builder.add_edge(&quot;validate_citations&quot;, END)
+    return builder.compile()
+</code></pre>
+</div><h3 id="section-step-8-expose-the-fastapi-service-app-main-py">Step 8: Expose the FastAPI Service (app/main.py)</h3>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
+from app.agent_graph import build_research_graph
+
+app = FastAPI(title=&quot;AI Research Agent API&quot;, version=&quot;1.0.0&quot;)
+research_graph = build_research_graph()
+
+class ResearchRequest(BaseModel):
+    topic: str = Field(..., min_length=10, max_length=500)
+
+@app.post(&quot;/api/v1/research&quot;)
+async def run_research(req: ResearchRequest):
+    initial_state = {
+        &quot;topic&quot;: req.topic,
+        &quot;iteration&quot;: 0,
+        &quot;queries&quot;: [],
+        &quot;sources&quot;: {},
+        &quot;is_sufficient&quot;: False,
+        &quot;draft_report&quot;: &quot;&quot;,
+        &quot;verified_report&quot;: &quot;&quot;,
+        &quot;validation_warnings&quot;: [],
+    }
+    try:
+        final_state = await research_graph.ainvoke(initial_state)
+        return {
+            &quot;topic&quot;: req.topic,
+            &quot;iterations_executed&quot;: final_state[&quot;iteration&quot;],
+            &quot;sources_count&quot;: len(final_state[&quot;sources&quot;]),
+            &quot;report&quot;: final_state[&quot;verified_report&quot;],
+            &quot;validation_warnings&quot;: final_state[&quot;validation_warnings&quot;],
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+</code></pre>
+</div><h2 id="section-testing-and-verification-tests-test-research-agent-py">Testing and Verification (tests/test_research_agent.py)</h2>
+<p>Create tests/test_research_agent.py to test SSRF protection, HTML cleaning, and deterministic citation validation without making live paid API calls:</p>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import pytest
+from app.scraper import is_safe_public_url, clean_html_to_text
+from app.agent_graph import verify_citations_deterministic
+
+def test_ssrf_protection_blocks_private_ips():
+    assert is_safe_public_url(&quot;http://127.0.0.1:8080/admin&quot;) is False
+    assert is_safe_public_url(&quot;http://169.254.169.254/latest/meta-data/&quot;) is False
+    assert is_safe_public_url(&quot;ftp://example.com/file&quot;) is False
+
+def test_clean_html_strips_scripts_and_nav():
+    raw_html = &quot;&lt;html&gt;&lt;head&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;nav&gt;Menu&lt;/nav&gt;&lt;main&gt;&lt;h1&gt;Benchmark&lt;/h1&gt;&lt;p&gt;Latency is 42ms.&lt;/p&gt;&lt;/main&gt;&lt;/body&gt;&lt;/html&gt;&quot;
+    cleaned = clean_html_to_text(raw_html)
+    assert &quot;alert(1)&quot; not in cleaned
+    assert &quot;Menu&quot; not in cleaned
+    assert &quot;Latency is 42ms.&quot; in cleaned
+
+def test_citation_validator_strips_hallucinated_links():
+    allowed = {&quot;https://docs.langchain.com/oss/python/langgraph/&quot;}
+    draft = (
+        &quot;LangGraph supports durable execution ([LangGraph Docs](https://docs.langchain.com/oss/python/langgraph/)). &quot;
+        &quot;It also has a fake benchmark ([Fake Study](https://fake-domain.example.com/study)).&quot;
+    )
+    verified, warnings = verify_citations_deterministic(draft, allowed)
+    assert &quot;https://docs.langchain.com/oss/python/langgraph/&quot; in verified
+    assert &quot;https://fake-domain.example.com/study&quot; not in verified
+    assert len(warnings) == 1
+</code></pre>
+</div><p>Execute the test suite:</p>
+<div class="blog-code"><div class="blog-code-label">bash</div><pre tabindex="0" aria-label="bash code block"><code class="language-bash">pytest tests/test_research_agent.py -v
+</code></pre>
+</div><p>Expected Output:</p>
+<div class="blog-code"><div class="blog-code-label">text</div><pre tabindex="0" aria-label="text code block"><code class="language-text">========================= test session starts ==========================
+collected 3 items
+
+tests/test_research_agent.py::test_ssrf_protection_blocks_private_ips PASSED [ 33%]
+tests/test_research_agent.py::test_clean_html_strips_scripts_and_nav PASSED  [ 66%]
+tests/test_research_agent.py::test_citation_validator_strips_hallucinated_links PASSED [100%]
+========================== 3 passed in 0.18s ===========================
+</code></pre>
+</div><h2 id="section-troubleshooting-common-errors">Troubleshooting Common Errors</h2>
+<h4 id="section-playwright-container-crash-targetclosederror-page-crashed-in-docker">Playwright Container Crash (<code>TargetClosedError: Page crashed</code> in Docker):</h4>
+<ul>
+<li>Cause: Docker allocates only 64MB to /dev/shm by default, causing Chromium to run out of shared memory on complex pages.</li>
+<li>Solution: Pass args=[&quot;--disable-dev-shm-usage&quot;] to p.chromium.launch() (as shown in app/scraper.py) or mount shm_size: '2gb' in docker-compose.yml.</li>
+</ul>
+<h4 id="section-searxng-returns-403-forbidden-on-json-queries">SearXNG Returns <code>403 Forbidden</code> on JSON Queries:</h4>
+<ul>
+<li>Cause: SearXNG disables the json output format by default in settings.yml to prevent public scraping abuse.</li>
+<li>Solution: In your self-hosted /etc/searxng/settings.yml, add json under search.formats:</li>
+</ul>
+<div class="blog-code"><div class="blog-code-label">yaml</div><pre tabindex="0" aria-label="yaml code block"><code class="language-yaml">search:
+       formats:
+         - html
+         - json
+</code></pre>
+</div><h4 id="section-infinite-agent-reflection-loops">Infinite Agent Reflection Loops:</h4>
+<ul>
+<li>Cause: The reflection LLM repeatedly requests marginally better data when no public data exists on the web.</li>
+<li>Solution: Always enforce a hard iteration &gt;= settings.MAX_ITERATIONS guard in the conditional edge router (route_after_reflection).</li>
+</ul>
+<h2 id="section-cost-breakdown-production-considerations">Cost Breakdown &amp; Production Considerations</h2>
+<p><em>(Pricing checked October 30, 2026 via OpenAI Pricing (https://openai.com/api/pricing/) and Browser Use (https://github.com/browser-use/browser-use)).</em></p>
+<ul>
+<li>Small-Scale Prototype (100 reports/month):</li>
+<li>Search: Self-hosted SearXNG (https://github.com/searxng/searxng) on a $6/month VPS (2 vCPU, 4GB RAM).</li>
+<li>Browser Extraction: Local headless Playwright ($0 API cost).</li>
+<li>LLM Inference: Assuming ~40,000 input tokens and ~4,000 output tokens per report across 2 iterations using a lightweight model tier (~$0.01–$0.03 per report), 100 reports cost ~$1.50–$3.00/month.</li>
+<li>Total Prototype Cost: ~$7.50 – $9.00 / month.</li>
+<li>Production Scale (10,000 reports/month):</li>
+<li>Compute &amp; Browser Pool: 2x 8GB RAM worker nodes for concurrent Playwright contexts (~$80/month) or Browser Use Cloud (https://github.com/browser-use/browser-use) stealth browsers at $0.02 per browser-hour (~$10–$20/month for 500–1,000 browser-hours).</li>
+<li>LLM &amp; Managed Search API: ~$150–$350/month depending on reasoning model tier and search API volume.</li>
+<li>Total Production Cost: ~$250 – $450 / month.</li>
+</ul>
+<h2 id="section-production-readiness-checklist">Production Readiness Checklist</h2>
+<ul>
+<li>[ ] Enforce SSRF IP filtering before passing any search-returned URL to Playwright or httpx.</li>
+<li>[ ] Sanitize scraped web text against indirect prompt injection by wrapping untrusted page text in XML tags (&lt;untrusted_source&gt;...&lt;/untrusted_source&gt;) and instructing the synthesizer never to follow instructions found inside source documents.</li>
+<li>[ ] Persist LangGraph state checkpoints in PostgreSQL (langgraph-checkpoint-postgres) so interrupted long-running research jobs can resume without re-scraping.</li>
+</ul>
+<h2 id="section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Purpose</th>
+<th scope="col">Type</th>
+<th scope="col">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LangGraph</td>
+<td>Stateful cyclic orchestration for multi-step research loops</td>
+<td>Open-Source (MIT)</td>
+<td>https://github.com/langchain-ai/langgraph</td>
+</tr>
+<tr>
+<td>LangGraph Docs</td>
+<td>Official documentation for state graphs and checkpointers</td>
+<td>Documentation</td>
+<td>https://docs.langchain.com/oss/python/langgraph/</td>
+</tr>
+<tr>
+<td>Playwright Python</td>
+<td>Headless Chromium/Firefox/WebKit browser extraction</td>
+<td>Open-Source (Apache-2.0)</td>
+<td>https://github.com/microsoft/playwright-python</td>
+</tr>
+<tr>
+<td>SearXNG</td>
+<td>Self-hosted privacy-respecting metasearch engine</td>
+<td>Open-Source (AGPL-3.0)</td>
+<td>https://github.com/searxng/searxng</td>
+</tr>
+<tr>
+<td>Browser-Use</td>
+<td>Open-source AI browser agent &amp; cloud stealth browsers</td>
+<td>Open-Source (MIT)</td>
+<td>https://github.com/browser-use/browser-use</td>
+</tr>
+<tr>
+<td>Ollama</td>
+<td>Local runner for open-weight LLMs (Qwen, Gemma, Llama)</td>
+<td>Open-Source (MIT)</td>
+<td>https://github.com/ollama/ollama</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-can-i-build-this-ai-research-agent-entirely-with-open-source-tools-and-zero-api-fees">Can I build this AI research agent entirely with open-source tools and zero API fees?</h3>
+<p>Yes. By running SearXNG (https://github.com/searxng/searxng) for search, Playwright for Python (https://github.com/microsoft/playwright-python) for extraction, LangGraph (https://github.com/langchain-ai/langgraph) for orchestration, and Ollama (https://github.com/ollama/ollama) serving an open-weight model like qwen2.5:32b or gemma4, you eliminate all per-token and per-search API charges. You only pay for your local hardware or cloud GPU server.</p>
+<h3 id="section-how-do-i-stop-the-research-agent-from-hallucinating-fake-urls-or-citations">How do I stop the research agent from hallucinating fake URLs or citations?</h3>
+<p>Never rely on prompt instructions alone. Store every scraped URL in a dictionary inside ResearchState[&quot;sources&quot;] and run a deterministic regex post-processor (verify_citations_deterministic) that strips or flags any Markdown link whose URL is not present in the retrieved dictionary.</p>
+<h3 id="section-why-use-playwright-instead-of-requests-or-httpx-for-web-extraction">Why use Playwright instead of <code>requests</code> or <code>httpx</code> for web extraction?</h3>
+<p>Modern documentation portals, financial dashboards, and Single-Page Applications (SPAs) render their main body content via client-side JavaScript. Plain HTTP clients only see an empty &lt;div id=&quot;root&quot;&gt;&lt;/div&gt; shell, whereas Playwright executes the DOM and waits for content to load.</p>
+<h3 id="section-how-many-iterations-should-a-research-agent-run-before-writing-the-report">How many iterations should a research agent run before writing the report?</h3>
+<p>For most technical queries, 2 to 3 iterations (MAX_RESEARCH_ITERATIONS=3) capture 95% of available public facts. Allowing more than 4 iterations increases latency beyond 90 seconds and bloats context tokens with diminishing returns.</p>
+<h3 id="section-should-i-use-a-single-agent-graph-or-a-multi-agent-crew-for-web-research">Should I use a single-agent graph or a multi-agent crew for web research?</h3>
+<p>Use a single-agent state graph when researching a single cohesive question so all nodes share a unified state registry. Use parallel worker subgraphs only when comparing multiple independent entities (e.g., 5 separate companies) so each worker's raw HTML scraping stays isolated.</p>
+<h3 id="section-how-do-i-protect-my-research-agent-from-indirect-prompt-injection-on-malicious-websites">How do I protect my research agent from indirect prompt injection on malicious websites?</h3>
+<p>Strip hidden HTML elements (display:none), truncate page extracts to relevant text blocks, wrap extracted text in &lt;untrusted_web_content&gt; delimiters, and separate the data-extraction step from any tool that has write permissions or internal network access.</p>
+<h3 id="section-what-hardware-is-required-to-run-the-llm-locally-for-research-synthesis">What hardware is required to run the LLM locally for research synthesis?</h3>
+<p>Because a research agent ingests 15,000 to 32,000 tokens of scraped web text per run, you need a GPU with at least 24GB of VRAM (such as an NVIDIA RTX 3090, RTX 4090, or cloud L4/A10G) to hold both the 4-bit quantized model weights (14B–32B parameters) and the large KV cache.</p>
+<h3 id="section-does-searxng-s-agpl-3-0-licence-affect-my-commercial-saas-application">Does SearXNG's AGPL-3.0 licence affect my commercial SaaS application?</h3>
+<p>SearXNG is licensed under AGPL-3.0 (searxng/searxng (https://github.com/searxng/searxng)). If you run unmodified SearXNG as an internal backend microservice that your proprietary application queries over HTTP—and you do not expose SearXNG directly to external users or modify its source code—consult your legal counsel regarding AGPL network interaction clauses, or use a commercial search API (like Brave Search or Tavily) if strict licence isolation is required.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://github.com/langchain-ai/langgraph" rel="noopener">LangGraph (Stateful cyclic orchestration for multi-step research loops)</a></li><li><a href="https://docs.langchain.com/oss/python/langgraph/" rel="noopener">LangGraph Docs (Official documentation for state graphs and checkpointers)</a></li><li><a href="https://github.com/microsoft/playwright-python" rel="noopener">Playwright Python (Headless Chromium/Firefox/WebKit browser extraction)</a></li><li><a href="https://github.com/searxng/searxng" rel="noopener">SearXNG (Self-hosted privacy-respecting metasearch engine)</a></li><li><a href="https://github.com/browser-use/browser-use" rel="noopener">Browser-Use (Open-source AI browser agent &amp; cloud stealth browsers)</a></li><li><a href="https://github.com/ollama/ollama" rel="noopener">Ollama (Local runner for open-weight LLMs (Qwen, Gemma, Llama))</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fbuild-ai-research-agent-web-search-reports%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-excel-agent-spreadsheets-analysis/" aria-label="Read How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets"><img src="/assets/images/blog/build-ai-excel-agent-spreadsheets-analysis/cover.svg" alt="Technical architecture diagram for How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a><span class="tag">Featured</span></div>
+<h3><a href="/blog/technology/build-ai-excel-agent-spreadsheets-analysis/">How to Build an AI Excel Agent That Reads, Analyses and Updates Spreadsheets</a></h3>
+<p>Step-by-step guide to building an AI agent for Excel using Python, Pandas, and OpenPyXL that analyses data, writes formulas, generates charts, and prevents corruption.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>12 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/" aria-label="Read AI Agent Development Skills: Tools, Memory, and Orchestration"><img src="/assets/images/blog/ai-agent-development-skills-tools-memory-orchestration/cover.svg" alt="AI Agent Development Skills: Tools, Memory, and Orchestration architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/ai-agent-development-skills-tools-memory-orchestration/">AI Agent Development Skills: Tools, Memory, and Orchestration</a></h3>
+<p>Learn practical AI agent development skills in 2026 using Pydantic AI and LangGraph: typed tool schemas, dependency injection, state reducers, and loop bounds.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use/" aria-label="Read Building a Production-Ready AI Agent with Persistent Memory and Tool Use"><img src="/assets/images/blog/building-production-ready-ai-agent-persistent-memory-tool-use/cover.svg" alt="Building a Production-Ready AI Agent with Persistent Memory and Tool Use architecture diagram" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a><span class="tag">Featured</span></div>
+<h3><a href="/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use/">Building a Production-Ready AI Agent with Persistent Memory and Tool Use</a></h3>
+<p>Architectural blueprint for building a production-ready AI agent in 2026 using LangGraph and Pydantic AI: state schemas, Postgres checkpointing, and safe tools.</p>
+<div class="blog-meta"><time datetime="2026-10-25">25 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

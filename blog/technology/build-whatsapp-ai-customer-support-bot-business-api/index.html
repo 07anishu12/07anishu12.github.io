@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Build a WhatsApp AI Chatbot: Meta Cloud API &amp; Webhooks</title>
+<meta name="description" content="Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG.">
+<meta name="keywords" content="WhatsApp AI chatbot, WhatsApp Business Cloud API Python, Meta webhook HMAC verification, WhatsApp 24-hour customer service window, WhatsApp voice note Whisper transcription, human handoff WhatsApp bot">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Build a WhatsApp AI Chatbot: Meta Cloud API &amp; Webhooks">
+<meta property="og:description" content="Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG.">
+<meta property="og:url" content="https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/build-whatsapp-ai-customer-support-bot-business-api/cover.svg">
+<meta property="og:image:alt" content="Technical architecture diagram for How to Build a WhatsApp AI Customer Support Bot with Business API Integration">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-10-31">
+<meta property="article:modified_time" content="2026-10-31">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build a WhatsApp AI Chatbot: Meta Cloud API &amp; Webhooks">
+<meta name="twitter:description" content="Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/build-whatsapp-ai-customer-support-bot-business-api/cover.svg">
+<meta name="twitter:image:alt" content="Technical architecture diagram for How to Build a WhatsApp AI Customer Support Bot with Business API Integration">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/#article","headline":"How to Build a WhatsApp AI Customer Support Bot with Business API Integration","description":"Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG.","abstract":"Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.","url":"https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/","mainEntityOfPage":{"@id":"https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/build-whatsapp-ai-customer-support-bot-business-api/cover.svg","width":1200,"height":675,"caption":"Technical architecture diagram for How to Build a WhatsApp AI Customer Support Bot with Business API Integration"},"datePublished":"2026-10-31","dateModified":"2026-10-31","articleSection":"Technology","keywords":"WhatsApp AI, Cloud API, Customer Support, Webhooks, FastAPI","inLanguage":"en","wordCount":1728}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Meta keep sending the same WhatsApp message to my webhook multiple times?","acceptedAnswer":{"@type":"Answer","text":"If your webhook endpoint waits for a slow LLM call (5–10 seconds) before returning HTTP 200 OK, Meta's webhook dispatcher times out and retries delivery exponentially. Always validate the HMAC signature, enqueue the job to a background task or outbox table, and return 200 OK within 200ms."}},{"@type":"Question","name":"Why does my bot trigger on its own outbound messages?","acceptedAnswer":{"@type":"Answer","text":"Meta sends statuses (sent, delivered, read) to the exact same /webhook URL as inbound user messages. Check if \"messages\" not in value: (as shown in extract_inbound_message) to ignore status receipts."}},{"@type":"Question","name":"How do I handle a human agent taking over a WhatsApp conversation?","acceptedAnswer":{"@type":"Answer","text":"Add a mode column (AI_ACTIVE vs HUMAN_HANDOFF) on your whatsapp_sessions table. When the user asks for a human or sentiment is negative, set mode = \"HUMAN_HANDOFF\" and forward subsequent webhook messages strictly to your helpdesk UI without triggering LLM replies."}},{"@type":"Question","name":"How do I download an image, PDF, or voice note sent by a user on WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"The webhook only gives you a media_id. Make a GET request to https://graph.facebook.com/v21.0/{media_id} to retrieve the temporary url, then make a second GET request to that url with Authorization: Bearer {WHATSAPP_TOKEN} to download the binary file."}},{"@type":"Question","name":"What is the maximum character length of a WhatsApp text message?","acceptedAnswer":{"@type":"Answer","text":"4,096 characters. In practice, keep AI support replies under 600 characters formatted with bullet points so they are easy to read on a mobile screen."}},{"@type":"Question","name":"When do I need a pre-approved Meta Template Message?","acceptedAnswer":{"@type":"Answer","text":"Whenever you initiate a message to a user first (such as a shipping alert) or reply more than 24 hours after the user's last inbound message."}},{"@type":"Question","name":"Can I use interactive buttons (`Reply Buttons` and `List Messages`) with an AI bot?","acceptedAnswer":{"@type":"Answer","text":"Yes; when the agent needs the user to pick from 2–3 structured options (e.g., *\"1. Track Order, 2. Return Item, 3. Talk to Human\"*), send an \"interactive\" button payload so the user can tap once instead of typing."}},{"@type":"Question","name":"How do I protect customer PII in WhatsApp logs?","acceptedAnswer":{"@type":"Answer","text":"Mask phone numbers and redact credit card or government ID numbers using Presidio (https://github.com/microsoft/presidio) before storing transcripts or sending text to external LLM APIs."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://aniket.app/blog/technology/"},{"@type":"ListItem","position":4,"name":"How to Build a WhatsApp AI Customer Support Bot with Business API Integration","item":"https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/#webpage","url":"https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/","name":"Build a WhatsApp AI Chatbot: Meta Cloud API & Webhooks","description":"Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="technology" data-article-slug="build-whatsapp-ai-customer-support-bot-business-api">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/technology/">Technology</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h1 id="article-title">How to Build a WhatsApp AI Customer Support Bot with Business API Integration</h1>
+<p class="blog-description">Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-10-31">31 Oct 2026</time></span><span>9 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">How to Build: How to Build a WhatsApp AI Customer Support Bot with Business API Integration (Summary &amp; Mechanics)</h2>
+<p class="blog-answer-verdict">Learn how to build a production WhatsApp AI customer support bot in Python using Meta WhatsApp Cloud API, HMAC-SHA256 webhooks, 24-hour window rules, and RAG. This system couples deterministic validation loops with modern AI orchestration to eliminate hallucinations, enforce type contracts, and guarantee enterprise production stability.</p>
+<dl class="blog-answer-facts"><div><dt>Architecture</dt><dd>Deterministic Agent Graph</dd></div><div><dt>Primary Stack</dt><dd>Python 3.12 / FastAPI / Pydantic</dd></div><div><dt>Part Series</dt><dd>Part II: Voice AI and Multimodal Applications</dd></div><div><dt>Verified As Of</dt><dd>October 2026</dd></div></dl>
+
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Production automation requiring verifiable citation &amp; error boundaries</li><li>Self-hosted privacy-first deployments with open-source alternatives</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Enforce hard recursion limits to prevent cyclic execution drift</li><li>Sanitize untrusted inputs to prevent indirect prompt injection</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full technical guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/build-whatsapp-ai-customer-support-bot-business-api/cover.svg" alt="Technical architecture diagram for How to Build a WhatsApp AI Customer Support Bot with Business API Integration" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Architectural flowchart and technical breakdown for How to Build a WhatsApp AI Customer Support Bot with Business API Integration.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=WhatsApp%20AI">WhatsApp AI</a><a href="/blog/?tag=Cloud%20API">Cloud API</a><a href="/blog/?tag=Customer%20Support">Customer Support</a><a href="/blog/?tag=Webhooks">Webhooks</a><a href="/blog/?tag=FastAPI">FastAPI</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>24 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-whatsapp-business-platform-cloud-api-architecture">WhatsApp Business Platform &amp; Cloud API Architecture</a></li><li class="toc-h3"><a href="#section-critical-whatsapp-engineering-nuances">Critical WhatsApp Engineering Nuances</a></li><li class="toc-h2"><a href="#section-technology-comparison-paid-vs-open-source-stack">Technology Comparison: Paid vs. Open-Source Stack</a></li><li class="toc-h3"><a href="#section-recommended-implementation-options">Recommended Implementation Options</a></li><li class="toc-h3"><a href="#section-option-a-best-practical-implementation-recommended-direct-meta-whatsapp-cloud-api-python-3-12-fastapi-webhook-server-postgresql-wamid-deduplication-24h-window-tracker-faster-whisper-https-github-com-systran-faster-whisper-for-voice-notes-openai-claude-with-qdrant-https-github-com-qdrant-qdrant-rag">Option A: Best Practical Implementation (Recommended): Direct Meta WhatsApp Cloud API + Python 3.12 FastAPI webhook server + PostgreSQL (wamid deduplication + 24h window tracker) + Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) for voice notes + OpenAI/Claude with Qdrant (https://github.com/qdrant/qdrant) RAG.</a></li><li class="toc-h3"><a href="#section-option-b-open-source-helpdesk-integration-direct-meta-cloud-api-self-hosted-chatwoot-fastapi-agent-bot-local-ollama-https-github-com-ollama-ollama">Option B: Open-Source Helpdesk Integration: Direct Meta Cloud API + self-hosted Chatwoot + FastAPI agent bot + local Ollama (https://github.com/ollama/ollama).</a></li><li class="toc-h3"><a href="#section-option-c-high-throughput-enterprise-architecture-fastapi-postgresql-transactional-outbox-redis-rate-limiter-respecting-meta-s-80-1-000-messages-sec-tier-limits">Option C: High-Throughput Enterprise Architecture: FastAPI + PostgreSQL Transactional Outbox + Redis rate-limiter (respecting Meta&#39;s 80–1,000 messages/sec tier limits).</a></li><li class="toc-h2"><a href="#section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</a></li><li class="toc-h3"><a href="#section-step-1-project-structure">Step 1: Project Structure</a></li><li class="toc-h3"><a href="#section-step-2-implement-meta-webhook-verification-x-hub-signature-256-hmac-validation-app-webhook-security-py">Step 2: Implement Meta Webhook Verification &amp; X-Hub-Signature-256 HMAC Validation (app/webhook_security.py)</a></li><li class="toc-h3"><a href="#section-step-3-implement-idempotent-webhook-parsing-24-hour-window-payload-builder-app-parser-dispatcher-py">Step 3: Implement Idempotent Webhook Parsing &amp; 24-Hour Window Payload Builder (app/parser_dispatcher.py)</a></li><li class="toc-h2"><a href="#section-testing-the-whatsapp-bot-tests-test-whatsapp-bot-py">Testing the WhatsApp Bot (tests/test_whatsapp_bot.py)</a></li><li class="toc-h2"><a href="#section-deployment-monitoring-cost-considerations">Deployment, Monitoring &amp; Cost Considerations</a></li><li class="toc-h2"><a href="#section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-why-does-meta-keep-sending-the-same-whatsapp-message-to-my-webhook-multiple-times">Why does Meta keep sending the same WhatsApp message to my webhook multiple times?</a></li><li class="toc-h3"><a href="#section-why-does-my-bot-trigger-on-its-own-outbound-messages">Why does my bot trigger on its own outbound messages?</a></li><li class="toc-h3"><a href="#section-how-do-i-handle-a-human-agent-taking-over-a-whatsapp-conversation">How do I handle a human agent taking over a WhatsApp conversation?</a></li><li class="toc-h3"><a href="#section-how-do-i-download-an-image-pdf-or-voice-note-sent-by-a-user-on-whatsapp">How do I download an image, PDF, or voice note sent by a user on WhatsApp?</a></li><li class="toc-h3"><a href="#section-what-is-the-maximum-character-length-of-a-whatsapp-text-message">What is the maximum character length of a WhatsApp text message?</a></li><li class="toc-h3"><a href="#section-when-do-i-need-a-pre-approved-meta-template-message">When do I need a pre-approved Meta Template Message?</a></li><li class="toc-h3"><a href="#section-can-i-use-interactive-buttons-reply-buttons-and-list-messages-with-an-ai-bot">Can I use interactive buttons (Reply Buttons and List Messages) with an AI bot?</a></li><li class="toc-h3"><a href="#section-how-do-i-protect-customer-pii-in-whatsapp-logs">How do I protect customer PII in WhatsApp logs?</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>To build a WhatsApp AI chatbot for customer support that passes Meta's production review and handles real customer traffic reliably, you must engineer around three WhatsApp Business Platform constraints: (1) Webhook verification and <code>X-Hub-Signature-256</code> HMAC-SHA256 payload authentication, (2) immediate <code>&lt;2.5s</code> HTTP <code>200 OK</code> acknowledgement with asynchronous message deduplication (since Meta retries unacknowledged webhooks and delivers status receipts on the same endpoint), and (3) strict enforcement of Meta's 24-hour Customer Service Window (switching automatically from free-form text replies to pre-approved Template Messages when more than 24 hours have elapsed since the user's last inbound message).</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Architecture Reference:</strong> Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the <a href="/projects/signal-desk/">Signal Desk — Lead Agent</a> case study for how an event-driven WhatsApp state machine with HMAC token authentication and PostgreSQL transactional outbox queues guarantees zero dropped messages, and cross-reference <a href="/writing/build-ai-customer-support-agent-ticket-resolution/">Article 6: How to Build an AI Customer Support Agent </a>.</p>
+</blockquote>
+<h2 id="section-whatsapp-business-platform-cloud-api-architecture">WhatsApp Business Platform &amp; Cloud API Architecture</h2>
+<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">flowchart TD
+    Meta([Meta WhatsApp Cloud API Webhook]) --&gt; HMAC{Verify X-Hub-Signature-256 HMAC}
+    HMAC -- &quot;Invalid Signature&quot; --&gt; Reject401([HTTP 401 Unauthorized])
+    HMAC -- &quot;Valid Signature&quot; --&gt; FastAck[Return HTTP 200 OK &amp; Enqueue Background Task]
+    FastAck --&gt; Dedupe{Check wamid in PostgreSQL Dedupe Table}
+    Dedupe -- &quot;Duplicate / Status Update&quot; --&gt; Ignore([Skip Processing])
+    Dedupe -- &quot;New Inbound Message&quot; --&gt; MediaCheck{Text, Audio Voice Note, or PDF?}
+    MediaCheck -- &quot;Audio .ogg&quot; --&gt; Whisper[Faster-Whisper Voice-Note Transcriber]
+    MediaCheck -- &quot;Text / Document&quot; --&gt; Context[(Load Session State &amp; 24h Window Timestamp)]
+    Whisper --&gt; Context
+    Context --&gt; SupportAgent[Hybrid RAG + Order Tool Support Agent]
+    SupportAgent --&gt; WindowGate{Within 24h Customer Service Window?}
+    WindowGate -- &quot;Yes (&lt; 24h)&quot; --&gt; SendFreeform[POST /v21.0/PHONE_ID/messages Free-Form Text]
+    WindowGate -- &quot;No (&gt;= 24h)&quot; --&gt; SendTemplate[POST /v21.0/PHONE_ID/messages Approved Template]</pre></div>
+<h3 id="section-critical-whatsapp-engineering-nuances">Critical WhatsApp Engineering Nuances</h3>
+<ol>
+<li>Handling Inbound Voice Notes (<code>audio/ogg; codecs=opus</code>): In markets like India, Brazil, and Europe, a high percentage of WhatsApp support inquiries arrive as voice notes rather than typed text. When message[&quot;type&quot;] == &quot;audio&quot;, fetch the temporary media download URL using GET https://graph.facebook.com/v21.0/{media_id} with your Bearer token, transcribe the .ogg buffer using Faster-Whisper (https://github.com/SYSTRAN/faster-whisper), and pass the transcript into the support agent.</li>
+<li>Enforcing the 24-Hour Service Window: Meta allows free-form text/media replies only within 24 hours (86,400 seconds) of the customer's last inbound message timestamp. Outside that window, sending a &quot;type&quot;: &quot;text&quot; payload fails with an API error; your dispatcher must automatically switch to &quot;type&quot;: &quot;template&quot;.</li>
+</ol>
+<h2 id="section-technology-comparison-paid-vs-open-source-stack">Technology Comparison: Paid vs. Open-Source Stack</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Commercial / BSP Solution</th>
+<th scope="col">Direct / Open-Source Alternative</th>
+<th scope="col">Self-Hosting Possible?</th>
+<th scope="col">Pricing &amp; Technical Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WhatsApp API Access</td>
+<td>Twilio WhatsApp / Wati / Interakt (adds per-message markup)</td>
+<td>Direct Meta WhatsApp Cloud API (graph.facebook.com)</td>
+<td>Cloud API hosted by Meta; webhook server self-hosted</td>
+<td>Service conversations (user-initiated within 24h window) have $0 Meta per-conversation fee in most tiers; template utility/marketing messages are billed per country rate card.</td>
+</tr>
+<tr>
+<td>Inbox &amp; Human Handoff UI</td>
+<td>Zendesk / Intercom</td>
+<td>Chatwoot (MIT License, native WhatsApp Cloud API channel)</td>
+<td>Yes</td>
+<td>Allows human agents to take over a conversation thread seamlessly when session_mode == &quot;HUMAN_HANDOFF&quot;.</td>
+</tr>
+<tr>
+<td>Voice Note Transcription</td>
+<td>OpenAI Audio API / Deepgram Nova-3 (https://deepgram.com/pricing)</td>
+<td>Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (MIT)</td>
+<td>Yes</td>
+<td>Decodes WhatsApp .ogg Opus audio natively via bundled PyAV.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-recommended-implementation-options">Recommended Implementation Options</h3>
+<h3 id="section-option-a-best-practical-implementation-recommended-direct-meta-whatsapp-cloud-api-python-3-12-fastapi-webhook-server-postgresql-wamid-deduplication-24h-window-tracker-faster-whisper-https-github-com-systran-faster-whisper-for-voice-notes-openai-claude-with-qdrant-https-github-com-qdrant-qdrant-rag">Option A: Best Practical Implementation (Recommended): Direct Meta WhatsApp Cloud API + Python 3.12 FastAPI webhook server + PostgreSQL (wamid deduplication + 24h window tracker) + Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) for voice notes + OpenAI/Claude with Qdrant (https://github.com/qdrant/qdrant) RAG.</h3>
+<h3 id="section-option-b-open-source-helpdesk-integration-direct-meta-cloud-api-self-hosted-chatwoot-fastapi-agent-bot-local-ollama-https-github-com-ollama-ollama">Option B: Open-Source Helpdesk Integration: Direct Meta Cloud API + self-hosted Chatwoot + FastAPI agent bot + local Ollama (https://github.com/ollama/ollama).</h3>
+<h3 id="section-option-c-high-throughput-enterprise-architecture-fastapi-postgresql-transactional-outbox-redis-rate-limiter-respecting-meta-s-80-1-000-messages-sec-tier-limits">Option C: High-Throughput Enterprise Architecture: FastAPI + PostgreSQL Transactional Outbox + Redis rate-limiter (respecting Meta's 80–1,000 messages/sec tier limits).</h3>
+<h2 id="section-step-by-step-implementation-guide">Step-by-Step Implementation Guide</h2>
+<h3 id="section-step-1-project-structure">Step 1: Project Structure</h3>
+<div class="blog-code"><div class="blog-code-label">text</div><pre tabindex="0" aria-label="text code block"><code class="language-text">whatsapp-support-bot/
+├── app/
+│   ├── __init__.py
+│   ├── webhook_security.py
+│   ├── parser_dispatcher.py
+│   └── main.py
+├── tests/
+│   └── test_whatsapp_bot.py
+└── requirements.txt
+</code></pre>
+</div><h3 id="section-step-2-implement-meta-webhook-verification-x-hub-signature-256-hmac-validation-app-webhook-security-py">Step 2: Implement Meta Webhook Verification &amp; X-Hub-Signature-256 HMAC Validation (app/webhook_security.py)</h3>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import hmac
+import hashlib
+
+def verify_meta_webhook_challenge(
+    mode: str | None,
+    token: str | None,
+    challenge: str | None,
+    expected_verify_token: str,
+) -&gt; str:
+    &quot;&quot;&quot;Validates Meta's GET /webhook subscription verification challenge.&quot;&quot;&quot;
+    if mode == &quot;subscribe&quot; and token and hmac.compare_digest(token, expected_verify_token):
+        if challenge is None:
+            raise ValueError(&quot;Missing hub.challenge parameter.&quot;)
+        return challenge
+    raise PermissionError(&quot;Webhook verification token mismatch.&quot;)
+
+def verify_meta_hmac_signature(
+    raw_body: bytes,
+    signature_header: str | None,
+    app_secret: str,
+) -&gt; bool:
+    &quot;&quot;&quot;Verifies X-Hub-Signature-256 header using constant-time HMAC-SHA256 comparison.&quot;&quot;&quot;
+    if not signature_header or not signature_header.startswith(&quot;sha256=&quot;):
+        return False
+    expected_sig = hmac.new(
+        key=app_secret.encode(&quot;utf-8&quot;),
+        msg=raw_body,
+        digestmod=hashlib.sha256,
+    ).hexdigest()
+    received_sig = signature_header.split(&quot;sha256=&quot;, 1)[1]
+    return hmac.compare_digest(expected_sig, received_sig)
+</code></pre>
+</div><h3 id="section-step-3-implement-idempotent-webhook-parsing-24-hour-window-payload-builder-app-parser-dispatcher-py">Step 3: Implement Idempotent Webhook Parsing &amp; 24-Hour Window Payload Builder (app/parser_dispatcher.py)</h3>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">from typing import Dict, Any, Optional, Set
+from pydantic import BaseModel
+
+class InboundWhatsAppMessage(BaseModel):
+    wamid: str
+    sender_phone: str
+    timestamp_unix: int
+    message_type: str
+    text_body: Optional[str] = None
+    media_id: Optional[str] = None
+
+def extract_inbound_message(
+    webhook_payload: Dict[str, Any],
+    processed_wamids: Set[str],
+) -&gt; Optional[InboundWhatsAppMessage]:
+    &quot;&quot;&quot;Extracts a new user message while ignoring delivery/read status updates and duplicate wamids.&quot;&quot;&quot;
+    try:
+        entries = webhook_payload.get(&quot;entry&quot;, [])
+        if not entries:
+            return None
+        changes = entries[0].get(&quot;changes&quot;, [])
+        if not changes:
+            return None
+        value = changes[0].get(&quot;value&quot;, {})
+
+        # Ignore outbound delivery/read status receipts
+        if &quot;messages&quot; not in value or not value[&quot;messages&quot;]:
+            return None
+
+        msg = value[&quot;messages&quot;][0]
+        wamid = msg.get(&quot;id&quot;, &quot;&quot;)
+        if not wamid or wamid in processed_wamids:
+            return None
+
+        processed_wamids.add(wamid)
+        msg_type = msg.get(&quot;type&quot;, &quot;unknown&quot;)
+        text_body = msg.get(&quot;text&quot;, {}).get(&quot;body&quot;) if msg_type == &quot;text&quot; else None
+        media_id = msg.get(msg_type, {}).get(&quot;id&quot;) if msg_type in (&quot;audio&quot;, &quot;document&quot;, &quot;image&quot;) else None
+
+        return InboundWhatsAppMessage(
+            wamid=wamid,
+            sender_phone=msg.get(&quot;from&quot;, &quot;&quot;),
+            timestamp_unix=int(msg.get(&quot;timestamp&quot;, 0)),
+            message_type=msg_type,
+            text_body=text_body,
+            media_id=media_id,
+        )
+    except (KeyError, IndexError, ValueError):
+        return None
+
+def build_outbound_whatsapp_payload(
+    recipient_phone: str,
+    reply_text: str,
+    last_inbound_unix: int,
+    current_unix: int,
+    fallback_template_name: str = &quot;support_followup_update&quot;,
+) -&gt; Dict[str, Any]:
+    &quot;&quot;&quot;Builds a free-form text payload if within 24 hours (86,400s), else switches to a Template message.&quot;&quot;&quot;
+    elapsed_seconds = current_unix - last_inbound_unix
+    if elapsed_seconds &lt; 86400:
+        return {
+            &quot;messaging_product&quot;: &quot;whatsapp&quot;,
+            &quot;recipient_type&quot;: &quot;individual&quot;,
+            &quot;to&quot;: recipient_phone,
+            &quot;type&quot;: &quot;text&quot;,
+            &quot;text&quot;: {&quot;preview_url&quot;: False, &quot;body&quot;: reply_text[:4096]},
+        }
+    return {
+        &quot;messaging_product&quot;: &quot;whatsapp&quot;,
+        &quot;to&quot;: recipient_phone,
+        &quot;type&quot;: &quot;template&quot;,
+        &quot;template&quot;: {
+            &quot;name&quot;: fallback_template_name,
+            &quot;language&quot;: {&quot;code&quot;: &quot;en_US&quot;},
+            &quot;components&quot;: [
+                {
+                    &quot;type&quot;: &quot;body&quot;,
+                    &quot;parameters&quot;: [{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: reply_text[:1024]}],
+                }
+            ],
+        },
+    }
+</code></pre>
+</div><h2 id="section-testing-the-whatsapp-bot-tests-test-whatsapp-bot-py">Testing the WhatsApp Bot (tests/test_whatsapp_bot.py)</h2>
+<div class="blog-code"><div class="blog-code-label">python</div><pre tabindex="0" aria-label="python code block"><code class="language-python">import hmac
+import hashlib
+import pytest
+from app.webhook_security import verify_meta_webhook_challenge, verify_meta_hmac_signature
+from app.parser_dispatcher import extract_inbound_message, build_outbound_whatsapp_payload
+
+def test_meta_hmac_signature_validation():
+    secret = &quot;my_meta_app_secret&quot;
+    body = b'{&quot;object&quot;:&quot;whatsapp_business_account&quot;}'
+    valid_sig = &quot;sha256=&quot; + hmac.new(secret.encode(), body, hashlib.sha256).hexdigest()
+
+    assert verify_meta_hmac_signature(body, valid_sig, secret) is True
+    assert verify_meta_hmac_signature(body, &quot;sha256=deadbeef&quot;, secret) is False
+
+def test_webhook_deduplication_and_status_filtering():
+    seen = set()
+    status_payload = {&quot;entry&quot;: [{&quot;changes&quot;: [{&quot;value&quot;: {&quot;statuses&quot;: [{&quot;id&quot;: &quot;wamid.1&quot;, &quot;status&quot;: &quot;delivered&quot;}]}}]}]}
+    assert extract_inbound_message(status_payload, seen) is None
+
+    msg_payload = {
+        &quot;entry&quot;: [{
+            &quot;changes&quot;: [{
+                &quot;value&quot;: {
+                    &quot;messages&quot;: [{
+                        &quot;id&quot;: &quot;wamid.abc123&quot;,
+                        &quot;from&quot;: &quot;919876543210&quot;,
+                        &quot;timestamp&quot;: &quot;1761800000&quot;,
+                        &quot;type&quot;: &quot;text&quot;,
+                        &quot;text&quot;: {&quot;body&quot;: &quot;Where is my order?&quot;},
+                    }]
+                }
+            }]
+        }]
+    }
+    first = extract_inbound_message(msg_payload, seen)
+    assert first is not None
+    assert first.wamid == &quot;wamid.abc123&quot;
+    # Second delivery of same wamid must be ignored
+    assert extract_inbound_message(msg_payload, seen) is None
+
+def test_24_hour_window_switches_to_template():
+    within_24h = build_outbound_whatsapp_payload(&quot;919876543210&quot;, &quot;Your order shipped!&quot;, 1000, 1000 + 3600)
+    assert within_24h[&quot;type&quot;] == &quot;text&quot;
+
+    after_24h = build_outbound_whatsapp_payload(&quot;919876543210&quot;, &quot;Your order shipped!&quot;, 1000, 1000 + 90000)
+    assert after_24h[&quot;type&quot;] == &quot;template&quot;
+</code></pre>
+</div><h2 id="section-deployment-monitoring-cost-considerations">Deployment, Monitoring &amp; Cost Considerations</h2>
+<ul>
+<li>Avoiding Unofficial WhatsApp Scraping Libraries (<code>baileys</code> / <code>whatsapp-web.js</code>) in Production: While unofficial browser-automated libraries exist on GitHub, Meta actively bans phone numbers that use unofficial WebSocket clients for automated business support. Always use the official Meta WhatsApp Business Cloud API (graph.facebook.com), which provides a free tier for user-initiated service conversations and official webhook SLAs.</li>
+<li>Cost Breakdown: Meta Cloud API charges $0 platform fee for user-initiated Customer Service Window replies in standard tiers; LLM inference + Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) voice-note transcription for 5,000 conversations/month costs ~$5.00–$12.00/month.</li>
+</ul>
+<h2 id="section-useful-tools-documentation-and-github-repositories">Useful Tools, Documentation and GitHub Repositories</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Purpose</th>
+<th scope="col">Type</th>
+<th scope="col">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meta WhatsApp Cloud API Docs</td>
+<td>Official webhook, media, and template API reference</td>
+<td>Documentation</td>
+<td>https://www.google.com/search?q=https://developers.facebook.com/docs/whatsapp/cloud-api</td>
+</tr>
+<tr>
+<td>Faster-Whisper</td>
+<td>Transcribing inbound WhatsApp .ogg Opus voice notes</td>
+<td>Open-Source (MIT)</td>
+<td>https://github.com/SYSTRAN/faster-whisper</td>
+</tr>
+<tr>
+<td>FastAPI</td>
+<td>Async webhook endpoint with BackgroundTasks</td>
+<td>Open-Source (MIT)</td>
+<td>https://www.google.com/search?q=https://github.com/fastapi/fastapi</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-why-does-meta-keep-sending-the-same-whatsapp-message-to-my-webhook-multiple-times">Why does Meta keep sending the same WhatsApp message to my webhook multiple times?</h3>
+<p>If your webhook endpoint waits for a slow LLM call (5–10 seconds) before returning HTTP 200 OK, Meta's webhook dispatcher times out and retries delivery exponentially. Always validate the HMAC signature, enqueue the job to a background task or outbox table, and return 200 OK within 200ms.</p>
+<h3 id="section-why-does-my-bot-trigger-on-its-own-outbound-messages">Why does my bot trigger on its own outbound messages?</h3>
+<p>Meta sends statuses (sent, delivered, read) to the exact same /webhook URL as inbound user messages. Check if &quot;messages&quot; not in value: (as shown in extract_inbound_message) to ignore status receipts.</p>
+<h3 id="section-how-do-i-handle-a-human-agent-taking-over-a-whatsapp-conversation">How do I handle a human agent taking over a WhatsApp conversation?</h3>
+<p>Add a mode column (AI_ACTIVE vs HUMAN_HANDOFF) on your whatsapp_sessions table. When the user asks for a human or sentiment is negative, set mode = &quot;HUMAN_HANDOFF&quot; and forward subsequent webhook messages strictly to your helpdesk UI without triggering LLM replies.</p>
+<h3 id="section-how-do-i-download-an-image-pdf-or-voice-note-sent-by-a-user-on-whatsapp">How do I download an image, PDF, or voice note sent by a user on WhatsApp?</h3>
+<p>The webhook only gives you a media_id. Make a GET request to https://graph.facebook.com/v21.0/{media_id} to retrieve the temporary url, then make a second GET request to that url with Authorization: Bearer {WHATSAPP_TOKEN} to download the binary file.</p>
+<h3 id="section-what-is-the-maximum-character-length-of-a-whatsapp-text-message">What is the maximum character length of a WhatsApp text message?</h3>
+<p>4,096 characters. In practice, keep AI support replies under 600 characters formatted with bullet points so they are easy to read on a mobile screen.</p>
+<h3 id="section-when-do-i-need-a-pre-approved-meta-template-message">When do I need a pre-approved Meta Template Message?</h3>
+<p>Whenever you initiate a message to a user first (such as a shipping alert) or reply more than 24 hours after the user's last inbound message.</p>
+<h3 id="section-can-i-use-interactive-buttons-reply-buttons-and-list-messages-with-an-ai-bot">Can I use interactive buttons (<code>Reply Buttons</code> and <code>List Messages</code>) with an AI bot?</h3>
+<p>Yes; when the agent needs the user to pick from 2–3 structured options (e.g., <em>&quot;1. Track Order, 2. Return Item, 3. Talk to Human&quot;</em>), send an &quot;interactive&quot; button payload so the user can tap once instead of typing.</p>
+<h3 id="section-how-do-i-protect-customer-pii-in-whatsapp-logs">How do I protect customer PII in WhatsApp logs?</h3>
+<p>Mask phone numbers and redact credit card or government ID numbers using Presidio (https://github.com/microsoft/presidio) before storing transcripts or sending text to external LLM APIs.</p>
+</div>
+
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.google.com/search?q=https://developers.facebook.com/docs/whatsapp/cloud-api" rel="noopener">Meta WhatsApp Cloud API Docs (Official webhook, media, and template API reference)</a></li><li><a href="https://github.com/SYSTRAN/faster-whisper" rel="noopener">Faster-Whisper (Transcribing inbound WhatsApp .ogg Opus voice notes)</a></li><li><a href="https://www.google.com/search?q=https://github.com/fastapi/fastapi" rel="noopener">FastAPI (Async webhook endpoint with BackgroundTasks)</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ftechnology%2Fbuild-whatsapp-ai-customer-support-bot-business-api%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-email-assistant-replies-inbox-automation/" aria-label="Read How to Build an AI Email Assistant That Reads, Replies and Organises Emails"><img src="/assets/images/blog/build-ai-email-assistant-replies-inbox-automation/cover.svg" alt="Technical architecture diagram for How to Build an AI Email Assistant That Reads, Replies and Organises Emails" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/build-ai-email-assistant-replies-inbox-automation/">How to Build an AI Email Assistant That Reads, Replies and Organises Emails</a></h3>
+<p>Build a secure AI email assistant in Python that classifies threads, extracts attachments, applies labels, and creates human-approved reply drafts via Gmail or IMAP.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-customer-support-agent-ticket-resolution/" aria-label="Read How to Build an AI Customer Support Agent That Resolves Tickets Automatically"><img src="/assets/images/blog/build-ai-customer-support-agent-ticket-resolution/cover.svg" alt="Technical architecture diagram for How to Build an AI Customer Support Agent That Resolves Tickets Automatically" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/build-ai-customer-support-agent-ticket-resolution/">How to Build an AI Customer Support Agent That Resolves Tickets Automatically</a></h3>
+<p>Learn how to build a production AI customer support agent in Python with hybrid RAG, CRM tool calling, hallucination checks, and human agent escalation.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>8 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/technology/build-ai-invoice-processing-agent-financial-extraction/" aria-label="Read How to Build an AI Invoice Processing Agent That Extracts and Validates Financial Data"><img src="/assets/images/blog/build-ai-invoice-processing-agent-financial-extraction/cover.svg" alt="Technical architecture diagram for How to Build an AI Invoice Processing Agent That Extracts and Validates Financial Data" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/technology/">Technology</a></div>
+<h3><a href="/blog/technology/build-ai-invoice-processing-agent-financial-extraction/">How to Build an AI Invoice Processing Agent That Extracts and Validates Financial Data</a></h3>
+<p>Learn how to build an AI invoice automation agent in Python using PaddleOCR, Docling, Decimal arithmetic validation, GST/tax checks, and duplicate detection.</p>
+<div class="blog-meta"><time datetime="2026-10-31">31 Oct 2026</time><span>8 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>
