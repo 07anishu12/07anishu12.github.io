@@ -43,6 +43,64 @@ test("rejects canonical URLs ending in index.html", () => {
   assert.throws(() => validateSite(root), /canonical ends with index\.html/);
 });
 
+test("validates sitemap index and referenced child sitemaps", () => {
+  const root = fixture();
+  fs.writeFileSync(
+    path.join(root, "sitemap.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://aniket.app/sitemap-pages.xml</loc>
+    <lastmod>2026-10-31T22:00:00+05:30</lastmod>
+  </sitemap>
+</sitemapindex>`,
+  );
+  fs.writeFileSync(
+    path.join(root, "sitemap-pages.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://aniket.app/</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+</urlset>`,
+  );
+  assert.deepEqual(validateSite(root), { urls: 1, htmlPages: 1, schemaTypes: { Person: 1, WebSite: 1 } });
+});
+
+test("rejects a sitemap index containing direct <url> tags", () => {
+  const root = fixture();
+  fs.writeFileSync(
+    path.join(root, "sitemap.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://aniket.app/</loc></url>
+</sitemapindex>`,
+  );
+  assert.throws(() => validateSite(root), /sitemap index must not contain <url> elements directly/);
+});
+
+test("rejects duplicate URLs across child sitemaps in index", () => {
+  const root = fixture();
+  fs.writeFileSync(
+    path.join(root, "sitemap.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://aniket.app/sitemap-1.xml</loc></sitemap>
+  <sitemap><loc>https://aniket.app/sitemap-2.xml</loc></sitemap>
+</sitemapindex>`,
+  );
+  fs.writeFileSync(
+    path.join(root, "sitemap-1.xml"),
+    `<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://aniket.app/</loc></url></urlset>`,
+  );
+  fs.writeFileSync(
+    path.join(root, "sitemap-2.xml"),
+    `<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://aniket.app/</loc></url></urlset>`,
+  );
+  assert.throws(() => validateSite(root), /contains duplicate URLs/);
+});
+
 test("routing keeps known legacy redirects permanent", async () => {
   const { default: config } = await import("../../apps/web/next.config.mjs?seo-test");
   const redirects = await config.redirects();

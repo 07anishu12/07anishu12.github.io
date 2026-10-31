@@ -63,49 +63,10 @@ ${link('Crawler policy', '/robots.txt', 'Crawl rules; this navigation file does 
 }
 
 function sitemap(posts, root = ROOT) {
-  // Preserve existing portfolio entries and real lastmod values, replacing only blog entries.
-  const current = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  const removedPaths = new Set(['/about', '/about.html', '/contact', '/contact.html', '/privacy', '/privacy.html', '/work.html', '/index.html']);
-  const normalizePath = value => {
-    const url = new URL(value);
-    if (url.pathname !== '/' && !url.pathname.endsWith('/') && !path.extname(url.pathname)) url.pathname += '/';
-    return `${ORIGIN}${url.pathname}`;
-  };
-  const seen = new Set();
-  const preserved = [];
-  for (const item of current.match(/<url>[\s\S]*?<\/url>/g) || []) {
-    const source = item.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
-    if (!source || /https?:\/\/[^/]+\/blog\//.test(item)) continue;
-    const loc = normalizePath(source);
-    if (removedPaths.has(new URL(loc).pathname) || seen.has(loc)) continue;
-    seen.add(loc);
-    const lastmod = item.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/)?.[1];
-    preserved.push(`<url><loc>${loc}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`);
-  }
-  const listingUrls = [...outputs(posts, { root }).keys()].filter(f => {
-    if (!f.endsWith('index.html')) return false;
-    if (posts.some(p => f === `${p.url.slice(1)}index.html`)) return false;
-    const category = f.match(new RegExp(`^blog\\/(${Object.keys(CATEGORIES).join('|')})\\/`))?.[1];
-    if (category && !posts.some(p => p.category === category)) return false;
-    return true;
-  });
-  const rows = listingUrls.map(file => {
-    const url = '/' + file.replace(/index\.html$/, '');
-    const category = url.match(new RegExp(`^\\/blog\\/(${Object.keys(CATEGORIES).join('|')})\\/`))?.[1];
-    const dates = posts.filter(p => !category || p.category === category).map(p => p.dateModified || p.datePublished).sort();
-    const lastmod = dates.length ? dates.at(-1) : '';
-    return `<url><loc>${ORIGIN}${url}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`;
-  });
-  for (const p of posts) rows.push(`<url><loc>${ORIGIN}${p.url}</loc><lastmod>${p.dateModified || p.datePublished}</lastmod></url>`);
-  const entries = [...preserved];
-  for (const row of rows) {
-    const loc = row.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
-    if (!loc || seen.has(loc)) continue;
-    seen.add(loc);
-    entries.push(row);
-  }
-  if (!seen.has(`${ORIGIN}/`)) entries.unshift(`<url><loc>${ORIGIN}/</loc></url>`);
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.map(row => '  ' + row).join('\n')}\n</urlset>\n`;
+  const { generateAllSitemaps, writeSitemapsToDirectory } = require('../seo/sitemap-builder');
+  const result = generateAllSitemaps({ posts, origin: ORIGIN });
+  writeSitemapsToDirectory(root, result.files);
+  return result.files.get('sitemap.xml');
 }
 
 function updateHome(html, posts) {
@@ -156,7 +117,7 @@ function prepareOutput(dir) {
 }
 function copyPublic(root, dest, posts) {
   for (const name of fs.readdirSync(root)) {
-    if (name.endsWith('.html') || ['robots.txt', 'sitemap.xml', 'llms.txt', '.nojekyll', 'CNAME'].includes(name)) fs.copyFileSync(path.join(root, name), path.join(dest, name));
+    if (name.endsWith('.html') || (name.startsWith('sitemap') && name.endsWith('.xml')) || ['robots.txt', 'llms.txt', '.nojekyll', 'CNAME'].includes(name)) fs.copyFileSync(path.join(root, name), path.join(dest, name));
   }
   for (const dir of ['learnings', 'projects', 'research', 'topics', 'author', 'blog']) {
     for (const file of walk(path.join(root, dir))) {

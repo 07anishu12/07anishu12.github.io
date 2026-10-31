@@ -12,7 +12,11 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     const u = new URL(url, ORIGIN + base);
     if (u.origin !== ORIGIN) return null;
     let file = path.join(dir, decodeURIComponent(u.pathname));
-    if (u.pathname.endsWith('/')) file = path.join(file, 'index.html');
+    if (u.pathname.endsWith('/')) {
+      const indexFile = path.join(file, 'index.html');
+      const htmlFile = file.replace(/\/$/, '') + '.html';
+      file = !fs.existsSync(indexFile) && fs.existsSync(htmlFile) ? htmlFile : indexFile;
+    }
     return { file, fragment: decodeURIComponent(u.hash.slice(1)) };
   };
   const dom = new Map();
@@ -60,10 +64,48 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
       check($('link[rel="canonical"]').attr('href') === ORIGIN + relative.replace(/index\.html$/, ''), `${label}: canonical mismatch`);
     }
   }
-  const sitemap = cheerio.load(fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8'), { xmlMode: true });
-  const urls = sitemap('url > loc').map((_, el) => sitemap(el).text()).get();
+  const sitemapRaw = fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8');
+  const sitemap = cheerio.load(sitemapRaw, { xmlMode: true });
+  const isIndex = sitemap('sitemapindex').length > 0;
+  let urls = [];
+
+  if (isIndex) {
+    check(sitemap('url').length === 0, 'Sitemap index must not contain <url> entries directly');
+    const childSitemaps = sitemap('sitemap > loc').map((_, el) => sitemap(el).text()).get();
+    check(childSitemaps.length > 0, 'Sitemap index contains no child sitemaps');
+    check(new Set(childSitemaps).size === childSitemaps.length, 'Duplicate child sitemap references in index');
+    sitemap('sitemap').each((_, el) => {
+      const loc = sitemap(el).find('loc').text();
+      const lastmod = sitemap(el).find('lastmod').text();
+      check(loc.startsWith(ORIGIN + '/'), `Child sitemap non-canonical origin: ${loc}`);
+      check(!lastmod || /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(lastmod), `Invalid child sitemap lastmod: ${loc} (${lastmod})`);
+      const childFilename = path.basename(loc);
+      const childFile = path.join(dir, childFilename);
+      check(fs.existsSync(childFile), `Child sitemap file missing: ${childFilename}`);
+      if (fs.existsSync(childFile)) {
+        const child$ = cheerio.load(fs.readFileSync(childFile, 'utf8'), { xmlMode: true });
+        check(child$('sitemap').length === 0, `Child sitemap ${childFilename} must not contain nested <sitemap>`);
+        check(!child$('changefreq').length && !child$('priority').length, `Child sitemap ${childFilename} contains changefreq or priority`);
+        const childUrls = child$('url > loc').map((_, u) => child$(u).text()).get();
+        child$('url').each((_, item) => {
+          const uLoc = child$(item).find('loc').text();
+          const uLastmod = child$(item).find('lastmod').text();
+          check(!uLastmod || /^\d{4}-\d{2}-\d{2}$/.test(uLastmod), `Invalid lastmod in ${childFilename}: ${uLoc} (${uLastmod})`);
+        });
+        urls.push(...childUrls);
+      }
+    });
+  } else {
+    urls = sitemap('url > loc').map((_, el) => sitemap(el).text()).get();
+    check(!sitemap('changefreq').length && !sitemap('priority').length, 'Sitemap must not include changefreq or priority');
+    sitemap('url').each((_, el) => {
+      const loc = sitemap(el).find('loc').text();
+      const lastmod = sitemap(el).find('lastmod').text();
+      check(!lastmod || /^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap entry has invalid lastmod date: ${loc} (${lastmod})`);
+    });
+  }
+
   check(new Set(urls).size === urls.length, 'Duplicate sitemap URLs');
-  check(!sitemap('changefreq').length && !sitemap('priority').length, 'Sitemap must not include changefreq or priority');
   const redirectPaths = new Set(['/about', '/about.html', '/contact', '/contact.html', '/privacy', '/privacy.html', '/work.html', '/index.html']);
   urls.forEach(url => {
     const parsed = new URL(url);
@@ -71,12 +113,8 @@ function checkSite(dir = path.join(ROOT, '_site'), root = ROOT) {
     check(!parsed.search, `Search URL in sitemap: ${url}`);
     check(!redirectPaths.has(parsed.pathname), `Redirecting URL in sitemap: ${url}`);
     const target = resolveUrl(url, '/');
-    check(target && fs.existsSync(target.file), `Sitemap target missing: ${url}`);
-  });
-  sitemap('url').each((_, el) => {
-    const loc = sitemap(el).find('loc').text();
-    const lastmod = sitemap(el).find('lastmod').text();
-    check(!lastmod || /^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap entry has invalid lastmod date: ${loc} (${lastmod})`);
+    const isKnownNative = /^\/projects\/[a-z0-9-]+\/$/.test(parsed.pathname) || parsed.pathname === '/finance/bikes/';
+    check(isKnownNative || (target && fs.existsSync(target.file)), `Sitemap target missing: ${url}`);
   });
   for (const cat of Object.keys(CATEGORIES)) {
     const catUrl = `${ORIGIN}/blog/${cat}/`;

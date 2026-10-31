@@ -56,23 +56,68 @@ export function validateSite(root) {
   if (failures.length) throw new Error(failures.join("\n"));
 
   const sitemap = load(fs.readFileSync(sitemapPath, "utf8"), { xmlMode: true });
-  const urls = sitemap("url > loc").map((_, element) => sitemap(element).text()).get();
+  const isIndex = sitemap("sitemapindex").length > 0;
+  let urls = [];
+
+  if (isIndex) {
+    check(!sitemap("url").length, "sitemap index must not contain <url> elements directly");
+    check(!sitemap("changefreq").length && !sitemap("priority").length, "sitemap index contains changefreq or priority");
+    const childSitemaps = sitemap("sitemap > loc").map((_, element) => sitemap(element).text()).get();
+    check(childSitemaps.length > 0, "sitemap index contains no child sitemaps");
+    check(new Set(childSitemaps).size === childSitemaps.length, "sitemap index contains duplicate child sitemaps");
+
+    sitemap("sitemap").each((_, element) => {
+      const loc = sitemap(element).find("loc").text();
+      const lastmod = sitemap(element).find("lastmod").text();
+      check(!lastmod || /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(lastmod), `invalid child sitemap lastmod: ${lastmod}`);
+      let parsed;
+      try { parsed = new URL(loc); } catch { failures.push(`invalid child sitemap URL: ${loc}`); return; }
+      check(parsed.origin === ORIGIN, `noncanonical child sitemap origin: ${loc}`);
+      check(parsed.protocol === "https:", `non-HTTPS child sitemap URL: ${loc}`);
+      check(!parsed.search && !parsed.hash, `parameterized child sitemap URL: ${loc}`);
+
+      const childFile = path.join(root, path.basename(parsed.pathname));
+      check(fs.existsSync(childFile), `child sitemap file is missing: ${path.basename(parsed.pathname)}`);
+      if (fs.existsSync(childFile)) {
+        const child$ = load(fs.readFileSync(childFile, "utf8"), { xmlMode: true });
+        check(!child$("sitemap").length, `child sitemap ${path.basename(loc)} contains nested <sitemap>`);
+        check(!child$("changefreq").length && !child$("priority").length, `child sitemap ${path.basename(loc)} contains changefreq or priority`);
+        const childUrls = child$("url > loc").map((_, el) => child$(el).text()).get();
+        for (const u of childUrls) {
+          let uParsed;
+          try { uParsed = new URL(u); } catch { failures.push(`invalid sitemap URL: ${u}`); continue; }
+          check(uParsed.origin === ORIGIN, `noncanonical sitemap origin: ${u}`);
+          check(uParsed.protocol === "https:", `non-HTTPS sitemap URL: ${u}`);
+          check(!uParsed.search && !uParsed.hash, `parameterized sitemap URL: ${u}`);
+          check(!redirectPaths.has(uParsed.pathname), `redirecting sitemap URL: ${u}`);
+        }
+        child$("url").each((_, el) => {
+          const uLastmod = child$(el).find("lastmod").text();
+          check(!uLastmod || /^\d{4}-\d{2}-\d{2}$/.test(uLastmod), `invalid sitemap lastmod: ${uLastmod}`);
+        });
+        urls.push(...childUrls);
+      }
+    });
+  } else {
+    urls = sitemap("url > loc").map((_, element) => sitemap(element).text()).get();
+    check(!sitemap("changefreq").length && !sitemap("priority").length, "sitemap.xml contains changefreq or priority");
+    for (const url of urls) {
+      let parsed;
+      try { parsed = new URL(url); } catch { failures.push(`invalid sitemap URL: ${url}`); continue; }
+      check(parsed.origin === ORIGIN, `noncanonical sitemap origin: ${url}`);
+      check(parsed.protocol === "https:", `non-HTTPS sitemap URL: ${url}`);
+      check(!parsed.search && !parsed.hash, `parameterized sitemap URL: ${url}`);
+      check(!redirectPaths.has(parsed.pathname), `redirecting sitemap URL: ${url}`);
+    }
+    sitemap("url").each((_, element) => {
+      const lastmod = sitemap(element).find("lastmod").text();
+      check(!lastmod || /^\d{4}-\d{2}-\d{2}$/.test(lastmod), `invalid sitemap lastmod: ${lastmod}`);
+    });
+  }
+
   check(urls.length > 0, "sitemap.xml contains no URLs");
   check(urls.includes(`${ORIGIN}/`), "sitemap.xml is missing the canonical homepage");
   check(new Set(urls).size === urls.length, "sitemap.xml contains duplicate URLs");
-  check(!sitemap("changefreq").length && !sitemap("priority").length, "sitemap.xml contains changefreq or priority");
-  for (const url of urls) {
-    let parsed;
-    try { parsed = new URL(url); } catch { failures.push(`invalid sitemap URL: ${url}`); continue; }
-    check(parsed.origin === ORIGIN, `noncanonical sitemap origin: ${url}`);
-    check(parsed.protocol === "https:", `non-HTTPS sitemap URL: ${url}`);
-    check(!parsed.search && !parsed.hash, `parameterized sitemap URL: ${url}`);
-    check(!redirectPaths.has(parsed.pathname), `redirecting sitemap URL: ${url}`);
-  }
-  sitemap("url").each((_, element) => {
-    const lastmod = sitemap(element).find("lastmod").text();
-    check(!lastmod || /^\d{4}-\d{2}-\d{2}$/.test(lastmod), `invalid sitemap lastmod: ${lastmod}`);
-  });
 
   const robots = fs.readFileSync(robotsPath, "utf8");
   check(robots.includes(`Sitemap: ${ORIGIN}/sitemap.xml`), "robots.txt sitemap declaration is missing");

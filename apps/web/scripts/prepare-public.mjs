@@ -64,69 +64,13 @@ fs.mkdirSync(out, { recursive: true });
 // Reuse the existing publisher's public allowlist and draft-image isolation.
 fs.cpSync(path.join(root, "_site"), out, { recursive: true });
 
-const sitemapPath = path.join(out, "sitemap.xml");
-if (fs.existsSync(sitemapPath)) {
-  let xml = fs.readFileSync(sitemapPath, "utf8");
-  const blocks = xml.match(/<url>[\s\S]*?<\/url>/g) || [];
-  const seen = new Set();
-  const removed = new Set([
-    "/about",
-    "/about.html",
-    "/contact",
-    "/contact.html",
-    "/privacy",
-    "/privacy.html",
-    "/work.html",
-    "/index.html",
-  ]);
-  const origin = process.env.CANONICAL_ORIGIN || "https://aniket.app";
-  const normalizePath = (value) => {
-    const url = new URL(value);
-    if (
-      url.pathname !== "/" &&
-      !url.pathname.endsWith("/") &&
-      !path.extname(url.pathname)
-    )
-      url.pathname += "/";
-    return `${origin}${url.pathname}`;
-  };
-  const normalized = blocks
-    .map((block) => {
-      const source = block.match(/<loc>([\s\S]*?)<\/loc>/)?.[1];
-      if (!source) return null;
-      const loc = normalizePath(source);
-      // Exclude paginated archive views from XML sitemap to preserve crawl budget
-      if (/\/page\/\d+\/$/.test(new URL(loc).pathname)) return null;
-      if (removed.has(new URL(loc).pathname) || seen.has(loc)) return null;
-      seen.add(loc);
-      const lastmod = block.match(
-        /<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/,
-      )?.[1];
-      return `<url><loc>${loc}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}</url>`;
-    })
-    .filter(Boolean);
-  const paths = [
-    "/",
-    "/about/",
-    "/work/",
-    "/projects/",
-    "/research/",
-    "/contact/",
-    "/privacy/",
-    "/finance/bikes/",
-    "/author/aniket-thakur/",
-    ...projects.map((p) => `/projects/${p.slug}/`),
-  ];
-  for (const p of paths) {
-    const url = `${origin}${p}`;
-    if (!seen.has(url)) {
-      seen.add(url);
-      normalized.push(`<url><loc>${url}</loc></url>`);
-    }
-  }
-  xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${normalized.map((entry) => `  ${entry}`).join("\n")}\n</urlset>\n`;
-  fs.writeFileSync(sitemapPath, xml);
-}
+const { generateAllSitemaps, writeSitemapsToDirectory } = require("../../../tools/seo/sitemap-builder.js");
+const sitemaps = generateAllSitemaps({
+  posts: rawArticles,
+  projects,
+  origin: process.env.CANONICAL_ORIGIN || "https://aniket.app",
+});
+writeSitemapsToDirectory(out, sitemaps.files);
 
 const publicRouteReplacements = [
   ["/about.html", "/about/"],

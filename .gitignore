@@ -14,6 +14,7 @@ node_modules/
 **/dist/
 _site/
 _preview/
+generated/
 .validation/
 .env
 .env.local

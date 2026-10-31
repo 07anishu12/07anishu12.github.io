@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const config = window.PORTFOLIO_CONFIG || {};
-  if (!['https://aniket.app', 'https://07anishu12.github.io'].includes(location.origin) || document.documentElement.dataset.preview === 'true' || !/^G-[A-Z0-9]+$/.test(config.measurementId || '')) return;
+  if (!['https://aniket.app', 'https://07anishu12.github.io'].includes(location.origin) || document.documentElement.dataset.preview === 'true' || !/^G-[A-Z0-9]+$/.test(config.measurementId || '') || (typeof navigator !== 'undefined' && navigator.webdriver)) return;
   // No consent system existed. If enabled in config, the site's consent UI must
   // set portfolioAnalyticsConsent=true and dispatch portfolio:analytics-consent.
   let started = false;
@@ -10,21 +10,27 @@
     started = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-    const canonical = document.querySelector('link[rel="canonical"]')?.href || `${location.origin}/404.html`;
-    const article = document.querySelector('[data-article-slug]');
-    const context = article ? { article_category: article.dataset.articleCategory, article_slug: article.dataset.articleSlug } : {};
-    let pageLocation = canonical;
-    try {
-      const allowed = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id', 'utm_source_platform', 'utm_creative_format', 'utm_marketing_tactic', 'gclid', 'dclid', 'fbclid', 'msclkid', 'ttclid'];
-      const current = new URL(location.href);
-      const params = new URLSearchParams();
-      for (const key of allowed) {
-        const val = current.searchParams.get(key);
-        if (val) params.set(key, val);
-      }
-      const qs = params.toString();
-      if (qs) pageLocation = `${canonical}${canonical.includes('?') ? '&' : '?'}${qs}`;
-    } catch { /* Fallback to canonical. */ }
+
+    function resolvePageContext() {
+      const canonical = document.querySelector('link[rel="canonical"]')?.href || `${location.origin}${location.pathname}`;
+      const article = document.querySelector('[data-article-slug]');
+      const context = article ? { article_category: article.dataset.articleCategory, article_slug: article.dataset.articleSlug } : {};
+      let pageLocation = canonical;
+      try {
+        const allowed = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id', 'utm_source_platform', 'utm_creative_format', 'utm_marketing_tactic', 'gclid', 'dclid', 'fbclid', 'msclkid', 'ttclid'];
+        const current = new URL(location.href);
+        const params = new URLSearchParams();
+        for (const key of allowed) {
+          const val = current.searchParams.get(key);
+          if (val) params.set(key, val);
+        }
+        const qs = params.toString();
+        if (qs) pageLocation = `${canonical}${canonical.includes('?') ? '&' : '?'}${qs}`;
+      } catch { /* Fallback to canonical. */ }
+      return { canonical, pageLocation, context };
+    }
+
+    const initial = resolvePageContext();
     let referrer = '';
     try {
       const ref = new URL(document.referrer);
@@ -32,23 +38,58 @@
     } catch { /* No referrer. */ }
     window.gtag('js', new Date());
     window.gtag('config', config.measurementId, {
-      ...context, page_location: pageLocation, page_referrer: referrer,
+      ...initial.context, page_location: initial.pageLocation, page_referrer: referrer,
       allow_google_signals: false, allow_ad_personalization_signals: false
     });
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(config.measurementId)}`;
     document.head.appendChild(script);
+
+    function syncSpaRoute() {
+      const current = resolvePageContext();
+      window.gtag('set', {
+        ...current.context,
+        page_location: current.pageLocation,
+        page_title: document.title
+      });
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('popstate', () => {
+        if (typeof setTimeout !== 'undefined') setTimeout(syncSpaRoute, 50);
+        else syncSpaRoute();
+      });
+      if (typeof history !== 'undefined') {
+        const origPush = history.pushState;
+        if (typeof origPush === 'function') {
+          history.pushState = function () {
+            const res = origPush.apply(this, arguments);
+            if (typeof setTimeout !== 'undefined') setTimeout(syncSpaRoute, 50);
+            else syncSpaRoute();
+            return res;
+          };
+        }
+        const origReplace = history.replaceState;
+        if (typeof origReplace === 'function') {
+          history.replaceState = function () {
+            const res = origReplace.apply(this, arguments);
+            if (typeof setTimeout !== 'undefined') setTimeout(syncSpaRoute, 50);
+            else syncSpaRoute();
+            return res;
+          };
+        }
+      }
+    }
+
     document.addEventListener('click', event => {
       if (config.requireAnalyticsConsent && window.portfolioAnalyticsConsent !== true) return;
       const a = event.target.closest('a, button');
       if (!a) return;
       const href = a.getAttribute('href') || '';
-      const currentCanonical = document.querySelector('link[rel="canonical"]')?.href || canonical;
-      const currentArticle = document.querySelector('[data-article-slug]');
-      const currentContext = currentArticle ? { article_category: currentArticle.dataset.articleCategory, article_slug: currentArticle.dataset.articleSlug } : context;
-      let name, params = { ...currentContext };
-      if (a.dataset.share) { name = 'share'; params.method = a.dataset.share; params.content_type = 'article'; params.item_id = currentCanonical; }
+      const current = resolvePageContext();
+      let name, params = { ...current.context };
+      if (a.dataset.share) { name = 'share'; params.method = a.dataset.share; params.content_type = 'article'; params.item_id = current.canonical; }
       else if (href.startsWith('mailto:')) { name = 'contact_click'; params.contact_method = 'email'; }
       else if (href.startsWith('tel:')) { name = 'contact_click'; params.contact_method = 'phone'; }
       else if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) { name = 'contact_click'; params.contact_method = 'whatsapp'; }

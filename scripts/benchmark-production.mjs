@@ -45,6 +45,11 @@ async function measurePage(browser, url, isMobile, isCold) {
   const context = await browser.newContext(contextOptions);
   const page = await context.newPage();
 
+  // Block analytics and tag manager scripts so synthetic performance runs do not pollute GA4
+  await page.route(/(googletagmanager|google-analytics|analytics\.js)/, (route) =>
+    route.abort()
+  );
+
   // Emulate network conditions for Mobile
   const client = await context.newCDPSession(page);
   if (isMobile) {

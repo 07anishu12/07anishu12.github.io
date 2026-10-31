@@ -18,18 +18,39 @@ const ORIGIN = (process.env.ORIGIN || "https://aniket.app").replace(/\/$/, "");
 const CONCURRENCY = parseInt(process.env.CONCURRENCY || "6", 10);
 const SITEMAP_URL = `${ORIGIN}/sitemap.xml`;
 
+function extractPageUrls(xmlContent, localDir = ".") {
+  const matches = [...xmlContent.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map((m) => m[1].trim());
+  const urls = [];
+  for (const loc of matches) {
+    if (loc.endsWith(".xml")) {
+      try {
+        const childFilename = path.basename(new URL(loc).pathname);
+        const childPath = path.resolve(localDir, childFilename);
+        if (fs.existsSync(childPath)) {
+          const childXml = fs.readFileSync(childPath, "utf8");
+          urls.push(...extractPageUrls(childXml, localDir));
+        }
+      } catch {
+        // ignore invalid URL
+      }
+    } else {
+      urls.push(loc);
+    }
+  }
+  return urls;
+}
+
 async function getUrls() {
   return new Promise((resolve) => {
     https.get(SITEMAP_URL, (res) => {
       let data = "";
       res.on("data", (c) => (data += c));
       res.on("end", () => {
-        const matches = [...data.matchAll(/<loc>([\s\S]*?)<\/loc>/g)];
-        let urls = matches.map((m) => m[1].trim());
+        let urls = extractPageUrls(data, "apps/web/public");
         if (!urls.length) {
           try {
             const local = fs.readFileSync(path.resolve("sitemap.xml"), "utf8");
-            urls = [...local.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map((m) => m[1].trim());
+            urls = extractPageUrls(local, ".");
           } catch {
             urls = [`${ORIGIN}/`];
           }
@@ -39,7 +60,7 @@ async function getUrls() {
     }).on("error", () => {
       try {
         const local = fs.readFileSync(path.resolve("sitemap.xml"), "utf8");
-        resolve([...local.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map((m) => m[1].trim()));
+        resolve(extractPageUrls(local, "."));
       } catch {
         resolve([`${ORIGIN}/`]);
       }

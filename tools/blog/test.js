@@ -13,7 +13,7 @@ const example = fs.readFileSync(path.join(__dirname, 'examples/formatting.md'), 
 function fixture() {
   // Synthetic test workspace; production sources and Google files are never mutated.
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'portfolio-blog-test-'));
-  for (const name of [...fs.readdirSync(ROOT).filter(f => f.endsWith('.html')), 'sitemap.xml', 'robots.txt', '.nojekyll']) if (fs.existsSync(path.join(ROOT, name))) fs.copyFileSync(path.join(ROOT, name), path.join(root, name));
+  for (const name of [...fs.readdirSync(ROOT).filter(f => f.endsWith('.html') || (f.startsWith('sitemap') && f.endsWith('.xml'))), 'robots.txt', '.nojekyll']) if (fs.existsSync(path.join(ROOT, name))) fs.copyFileSync(path.join(ROOT, name), path.join(root, name));
   for (const dir of ['learnings', 'projects', 'research', 'topics', 'author', 'assets', 'data']) fs.cpSync(path.join(ROOT, dir), path.join(root, dir), { recursive: true });
   // Isolate real articles from synthetic test content.
   fs.rmSync(path.join(root, 'data/blog'), { recursive: true, force: true });
@@ -138,14 +138,15 @@ test('Publishing lifecycle, safe cleanup, draft exclusion, sitemap, llms.txt, an
     const valid = example.replace('draft: true', 'draft: false');
     fs.writeFileSync(f.file, valid);
     const sitemapFile = path.join(f.root, 'sitemap.xml');
-    fs.writeFileSync(sitemapFile, fs.readFileSync(sitemapFile, 'utf8').replace(/\s*<url><loc>https:\/\/aniket\.app\/<\/loc><\/url>/, ''));
     // Synthetic filename/content exclusively in the temporary test workspace.
     fs.writeFileSync(path.join(f.root, 'googleSYNTHETIC.html'), 'google-site-verification: googleSYNTHETIC.html\n');
     let dir = buildSite({ root: f.root });
     checkSite(dir, f.root);
     const originalSitemap = fs.readFileSync(path.join(f.root, 'sitemap.xml'), 'utf8');
-    assert.ok(originalSitemap.includes('<loc>https://aniket.app/</loc>'), 'canonical homepage is missing');
-    assert.equal((originalSitemap.match(/<loc>https:\/\/aniket\.app\/<\/loc>/g) || []).length, 1, 'canonical homepage should occur exactly once');
+    assert.ok(originalSitemap.includes('<loc>https://aniket.app/sitemap-pages.xml</loc>'), 'sitemap-pages.xml is missing from index');
+    const pagesSitemap = fs.readFileSync(path.join(f.root, 'sitemap-pages.xml'), 'utf8');
+    assert.ok(pagesSitemap.includes('<loc>https://aniket.app/</loc>'), 'canonical homepage is missing');
+    assert.equal((pagesSitemap.match(/<loc>https:\/\/aniket\.app\/<\/loc>/g) || []).length, 1, 'canonical homepage should occur exactly once');
     buildSite({ root: f.root });
     assert.equal(fs.readFileSync(sitemapFile, 'utf8'), originalSitemap, 'sitemap changes on an unchanged build');
     const oldFile = path.join(f.root, 'blog/technology/formatting-example/index.html');
@@ -230,16 +231,17 @@ test('RSS retirement removes owned output and links; crawler guide lists only pu
   } finally { f.clean(); }
 });
 
-function analyticsHarness({ production = true, id = 'G-SYNTHETIC', consent = false, requireConsent = false, preview = false, href = ORIGIN + '/?email=SYNTHETIC' } = {}) {
+function analyticsHarness({ production = true, id = 'G-SYNTHETIC', consent = false, requireConsent = false, preview = false, href = ORIGIN + '/?email=SYNTHETIC', webdriver = false } = {}) {
   const handlers = {}, scripts = [];
   const window = { PORTFOLIO_CONFIG: { measurementId: id, requireAnalyticsConsent: requireConsent }, portfolioAnalyticsConsent: consent, addEventListener: (n, fn) => { handlers[n] = fn; } };
   const document = { documentElement: { dataset: { preview: String(preview) } }, referrer: 'https://example.org/private?email=SYNTHETIC', querySelector: q => q.startsWith('link') ? { href: ORIGIN + '/blog/technology/test/' } : { dataset: { articleCategory: 'technology', articleSlug: 'test' } }, head: { appendChild: s => scripts.push(s) }, createElement: () => ({}), addEventListener: (n, fn) => { handlers[n] = fn; } };
-  vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'assets/js/analytics.js'), 'utf8'), { window, document, location: { origin: production ? ORIGIN : 'http://127.0.0.1:4173', pathname: '/', href }, URL, Date, URLSearchParams });
+  const navigator = { webdriver };
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'assets/js/analytics.js'), 'utf8'), { window, document, location: { origin: production ? ORIGIN : 'http://127.0.0.1:4173', pathname: '/', href }, URL, Date, URLSearchParams, navigator });
   const click = ({ href = '', dataset = {}, reference = false }) => handlers.click?.({ target: { closest: () => ({ dataset, getAttribute: () => href, closest: () => reference }) } });
   return { window, scripts, handlers, click };
 }
 test('Analytics gates, one config/page-view, consent, events, and personal-information exclusions', () => {
-  for (const options of [{ production: false }, { id: '' }, { preview: true }]) assert.equal(analyticsHarness(options).scripts.length, 0);
+  for (const options of [{ production: false }, { id: '' }, { preview: true }, { webdriver: true }]) assert.equal(analyticsHarness(options).scripts.length, 0);
   const h = analyticsHarness({ requireConsent: true });
   assert.equal(h.scripts.length, 0);
   h.window.portfolioAnalyticsConsent = true; h.handlers['portfolio:analytics-consent'](); h.handlers['portfolio:analytics-consent']();

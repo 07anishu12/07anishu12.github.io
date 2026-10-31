@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import dynamic from "next/dynamic";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";

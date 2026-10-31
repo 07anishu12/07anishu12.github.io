@@ -1,5 +1,5 @@
 export const revalidate = 600;
-import { listPosts, getPaginatedPosts } from "../../lib/blog";
+import { getPaginatedPosts } from "../../lib/blog";
 import { BlogIndex } from "../../components/BlogIndex";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import {

@@ -70,19 +70,39 @@ function broadcastEvent(type, data) {
 // ---------------------------------------------------------------------------
 // Sitemap Fetcher
 // ---------------------------------------------------------------------------
+function extractSitemapUrls(xml, baseDir = path.resolve(__dirname, '../..')) {
+  const matches = [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map(m => m[1].trim());
+  const urls = [];
+  for (const loc of matches) {
+    if (loc.endsWith('.xml')) {
+      try {
+        const filename = path.basename(new URL(loc).pathname);
+        const childPath = path.join(baseDir, filename);
+        if (fs.existsSync(childPath)) {
+          const childXml = fs.readFileSync(childPath, 'utf8');
+          urls.push(...extractSitemapUrls(childXml, baseDir));
+        }
+      } catch {
+        // ignore
+      }
+    } else {
+      urls.push(loc);
+    }
+  }
+  return urls;
+}
+
 async function fetchSitemapUrls(sitemapUrl = `${ORIGIN}/sitemap.xml`) {
   return new Promise((resolve) => {
     https.get(sitemapUrl, { timeout: 10000 }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        const matches = [...data.matchAll(/<loc>([\s\S]*?)<\/loc>/g)];
-        let urls = matches.map(m => m[1].trim());
+        let urls = extractSitemapUrls(data);
         if (!urls.length) {
-          // Fallback to local sitemap
           try {
             const localXml = fs.readFileSync(path.resolve(__dirname, '../../sitemap.xml'), 'utf8');
-            urls = [...localXml.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map(m => m[1].trim());
+            urls = extractSitemapUrls(localXml);
           } catch {
             urls = [`${ORIGIN}/`];
           }
@@ -93,8 +113,7 @@ async function fetchSitemapUrls(sitemapUrl = `${ORIGIN}/sitemap.xml`) {
       // Fallback to local
       try {
         const localXml = fs.readFileSync(path.resolve(__dirname, '../../sitemap.xml'), 'utf8');
-        const urls = [...localXml.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map(m => m[1].trim());
-        resolve(urls);
+        resolve(extractSitemapUrls(localXml));
       } catch {
         resolve([`${ORIGIN}/`]);
       }
