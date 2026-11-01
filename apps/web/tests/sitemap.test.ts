@@ -50,7 +50,7 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
   const expectedCounts: Record<SitemapGroupId, number> = {
     pages: 6,
     "blog-categories": 5,
-    "blog-technology": 125,
+    "blog-technology": 126,
     "blog-automotive": 393,
     "blog-product": 25,
     "blog-finance": 42,
@@ -87,8 +87,8 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
     }
   }
 
-  assert.equal(totalUrls, 612, "Total eligible URLs must be exactly 612");
-  assert.equal(allUrls.size, 612, "All 612 URLs must be unique");
+  assert.equal(totalUrls, 613, "Total eligible URLs must be exactly 613");
+  assert.equal(allUrls.size, 613, "All 613 URLs must be unique");
 });
 
 test("Route handlers return HTTP 200 with application/xml Content-Type", async () => {

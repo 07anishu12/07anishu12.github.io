@@ -8277,6 +8277,21 @@
       },
       "rationale": "Owner-confirmed publication date.",
       "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/binance-6-3-billion-hack-north-korea-explained.md",
+      "url": "/blog/technology/binance-6-3-billion-hack-north-korea-explained/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "Binance $6.3B hack investigative threat intelligence report published with verified date."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
     }
   ]
 }
