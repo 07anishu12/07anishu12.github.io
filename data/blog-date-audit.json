@@ -8292,6 +8292,456 @@
       },
       "rationale": "Owner-confirmed publication date.",
       "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-agents-what-are-they-and-how-do-they-work.md",
+      "url": "/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch.md",
+      "url": "/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-workflow-automation-how-to-automate-business-processes.md",
+      "url": "/blog/technology/ai-workflow-automation-how-to-automate-business-processes/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools.md",
+      "url": "/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-a-real-time-ai-voice-assistant.md",
+      "url": "/blog/technology/how-to-build-a-real-time-ai-voice-assistant/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations.md",
+      "url": "/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/what-are-large-language-models-llms-and-how-do-they-work.md",
+      "url": "/blog/technology/what-are-large-language-models-llms-and-how-do-they-work/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-a-rag-application-using-your-own-documents.md",
+      "url": "/blog/technology/how-to-build-a-rag-application-using-your-own-documents/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information.md",
+      "url": "/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application.md",
+      "url": "/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data.md",
+      "url": "/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis.md",
+      "url": "/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-an-ai-chatbot-using-python-and-llm-apis.md",
+      "url": "/blog/technology/how-to-build-an-ai-chatbot-using-python-and-llm-apis/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch.md",
+      "url": "/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-build-an-ai-customer-support-system.md",
+      "url": "/blog/technology/how-to-build-an-ai-customer-support-system/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-design-a-production-ready-llm-architecture.md",
+      "url": "/blog/technology/how-to-design-a-production-ready-llm-architecture/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications.md",
+      "url": "/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-artificial-intelligence-is-transforming-the-financial-industry.md",
+      "url": "/blog/technology/how-artificial-intelligence-is-transforming-the-financial-industry/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/applications-of-artificial-intelligence-in-healthcare.md",
+      "url": "/blog/technology/applications-of-artificial-intelligence-in-healthcare/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-ai-is-transforming-education-and-personalized-learning.md",
+      "url": "/blog/technology/how-ai-is-transforming-education-and-personalized-learning/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance.md",
+      "url": "/blog/technology/ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-artificial-intelligence-is-changing-cybersecurity.md",
+      "url": "/blog/technology/how-artificial-intelligence-is-changing-cybersecurity/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/15-real-world-applications-of-ai-in-small-and-large-businesses.md",
+      "url": "/blog/technology/15-real-world-applications-of-ai-in-small-and-large-businesses/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/best-ai-tools-for-developers-researchers-and-businesses.md",
+      "url": "/blog/technology/best-ai-tools-for-developers-researchers-and-businesses/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-vs-machine-learning-vs-deep-learning-whats-the-difference.md",
+      "url": "/blog/technology/ai-vs-machine-learning-vs-deep-learning-whats-the-difference/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap.md",
+      "url": "/blog/technology/how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/will-ai-replace-software-engineers-and-data-scientists.md",
+      "url": "/blog/technology/will-ai-replace-software-engineers-and-data-scientists/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product.md",
+      "url": "/blog/technology/how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems.md",
+      "url": "/blog/technology/ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/technology/how-to-reduce-llm-api-costs-and-improve-inference-speed.md",
+      "url": "/blog/technology/how-to-reduce-llm-api-costs-and-improve-inference-speed/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-01",
+        "note": "AI Knowledge Library 30-Article Collection published with owner verification."
+      },
+      "rationale": "Owner-confirmed publication date.",
+      "reviewRequired": false
     }
   ]
 }

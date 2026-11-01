@@ -1,0 +1,939 @@
+{
+  "timestamp": "2026-11-01T22:11:16+05:30",
+  "totalArticles": 30,
+  "totalQueries": 120,
+  "averageScore": 100,
+  "passedRate": "100%",
+  "results": [
+    {
+      "articleNumber": 1,
+      "title": "AI Agents: What Are They and How Do They Work?",
+      "slug": "ai-agents-what-are-they-and-how-do-they-work",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "metaDesc": "Learn what AI agents are, how they reason, use tools, remember context and complete tasks, with practical examples, architecture and implementation guidance.",
+      "titleTag": "AI Agents: What Are They and How Do They Work?",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1898,
+      "queries": [
+        {
+          "query": "AI agents",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build agents: what are they and how do they work?",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Agents Autonomous AI tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "How is an AI agent different from a chatbot?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 2,
+      "title": "How to Build a Multi-Agent AI System from Scratch",
+      "slug": "how-to-build-a-multi-agent-ai-system-from-scratch",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/",
+      "metaDesc": "Understand multi-agent architecture, agent roles, orchestration, shared state, tool access, evaluation and the trade-offs involved in building coordinated AI agents.",
+      "titleTag": "How to Build a Multi-Agent AI System from Scratch",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1806,
+      "queries": [
+        {
+          "query": "multi-agent AI system",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build a multi-agent ai system from scratch",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Multi-Agent Systems Agent Orchestration tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is a multi-agent system?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 3,
+      "title": "AI Workflow Automation: How to Automate Business Processes",
+      "slug": "ai-workflow-automation-how-to-automate-business-processes",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/ai-workflow-automation-how-to-automate-business-processes/",
+      "metaDesc": "A practical guide to AI workflow automation, including process selection, workflow design, API integrations, human approvals, reliability and business metrics.",
+      "titleTag": "AI Workflow Automation: How to Automate Business Processes",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1700,
+      "queries": [
+        {
+          "query": "AI workflow automation",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build workflow automation: how to automate business processes",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Workflow Automation Business Automation tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is AI workflow automation?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 4,
+      "title": "How to Build an AI Agent That Can Browse the Internet and Use Tools",
+      "slug": "how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools/",
+      "metaDesc": "Learn how browser agents work and how to design web research and computer-use workflows with tool schemas, source validation, permissions and safeguards.",
+      "titleTag": "How to Build an AI Agent That Can Browse the Internet and",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1698,
+      "queries": [
+        {
+          "query": "AI browser agent",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build an ai agent that can browse the internet and use tools",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Browser Agent Playwright tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is an AI browser agent?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 5,
+      "title": "How to Build a Real-Time AI Voice Assistant",
+      "slug": "how-to-build-a-real-time-ai-voice-assistant",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-a-real-time-ai-voice-assistant/",
+      "metaDesc": "Explore real-time voice assistant architecture, speech recognition, turn detection, LLMs, text-to-speech, streaming, latency, privacy and evaluation.",
+      "titleTag": "How to Build a Real-Time AI Voice Assistant",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1669,
+      "queries": [
+        {
+          "query": "real-time AI voice assistant",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build a real-time ai voice assistant",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Voice AI Real-Time Audio tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What components are needed for a voice assistant?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 6,
+      "title": "AI Agent Memory: How to Build Agents That Remember Previous Conversations",
+      "slug": "ai-agent-memory-how-to-build-agents-that-remember-previous-conversations",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations/",
+      "metaDesc": "Learn how AI agent memory works, how to store conversation state and user preferences, and how to retrieve, update and govern persistent memory.",
+      "titleTag": "AI Agent Memory: How to Build Agents That Remember Previous",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1706,
+      "queries": [
+        {
+          "query": "AI agent memory",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build agent memory: how to build agents that remember previous conversations",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Agent Memory State Persistence tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is AI agent memory?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 7,
+      "title": "What Are Large Language Models (LLMs) and How Do They Work?",
+      "slug": "what-are-large-language-models-llms-and-how-do-they-work",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/what-are-large-language-models-llms-and-how-do-they-work/",
+      "metaDesc": "Large language models are AI systems trained on large collections of text and other data to predict and generate sequences. They can summarize, transl.",
+      "titleTag": "What Are Large Language Models (LLMs) and How Do They Work?",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1632,
+      "queries": [
+        {
+          "query": "LLMs explained",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build large language models (llms) and how do they work?",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Large Language Models Transformers tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 8,
+      "title": "How to Build a RAG Application Using Your Own Documents",
+      "slug": "how-to-build-a-rag-application-using-your-own-documents",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-a-rag-application-using-your-own-documents/",
+      "metaDesc": "Retrieval-augmented generation (RAG) connects a language model to a collection of external information. Instead of relying only on what the model lear.",
+      "titleTag": "How to Build a RAG Application Using Your Own Documents",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1700,
+      "queries": [
+        {
+          "query": "RAG application",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build a rag application using your own documents",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "RAG Document Intelligence tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 9,
+      "title": "Vector Databases Explained: How AI Understands and Searches Information",
+      "slug": "vector-databases-explained-how-ai-understands-and-searches-information",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information/",
+      "metaDesc": "A vector database stores numerical representations of data called embeddings and makes it possible to find items that are conceptually similar. Unlike.",
+      "titleTag": "Vector Databases Explained: How AI Understands and Searches",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1653,
+      "queries": [
+        {
+          "query": "vector database",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build vector databases explained: how ai understands and searches information",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Vector Databases Embeddings tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 10,
+      "title": "Fine-Tuning vs RAG: Which Approach Should You Use for Your AI Application?",
+      "slug": "fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application/",
+      "metaDesc": "RAG and fine-tuning solve different problems. RAG supplies relevant external information at runtime, while fine-tuning changes model behavior by train.",
+      "titleTag": "Fine-Tuning vs RAG: Which Approach Should You Use for Your",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1633,
+      "queries": [
+        {
+          "query": "RAG vs fine tuning",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build fine-tuning vs rag: which approach should you use for your ai application?",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Fine-Tuning RAG tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 11,
+      "title": "Model Context Protocol (MCP): How AI Connects to External Tools and Data",
+      "slug": "model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data/",
+      "metaDesc": "Model Context Protocol (MCP) is an open protocol designed to standardize how AI applications connect to external tools and context providers. It provi.",
+      "titleTag": "Model Context Protocol (MCP): How AI Connects to External",
+      "faqsCount": 5,
+      "h2Count": 23,
+      "h3Count": 10,
+      "wordCount": 1655,
+      "queries": [
+        {
+          "query": "MCP explained",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build model context protocol (mcp): how ai connects to external tools and data",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Model Context Protocol MCP tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 12,
+      "title": "How to Run LLMs Locally: Build Private AI Without Cloud APIs",
+      "slug": "how-to-run-llms-locally-build-private-ai-without-cloud-apis",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis/",
+      "metaDesc": "Running an LLM locally means hosting model inference on hardware you control rather than sending every prompt to a hosted API. It can improve data con.",
+      "titleTag": "How to Run LLMs Locally: Build Private AI Without Cloud APIs",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1678,
+      "queries": [
+        {
+          "query": "run LLM locally",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how to run llms locally: build private ai without cloud apis",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Local LLMs Ollama tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 13,
+      "title": "How to Build an AI Chatbot Using Python and LLM APIs",
+      "slug": "how-to-build-an-ai-chatbot-using-python-and-llm-apis",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-chatbot-using-python-and-llm-apis/",
+      "metaDesc": "A modern AI chatbot uses a language model to interpret user messages and generate responses. A useful application also needs a backend, conversation s.",
+      "titleTag": "How to Build an AI Chatbot Using Python and LLM APIs",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1677,
+      "queries": [
+        {
+          "query": "build AI chatbot Python",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build an ai chatbot using python and llm apis",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Chatbot FastAPI tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 14,
+      "title": "How to Build an AI-Powered SaaS Product from Scratch",
+      "slug": "how-to-build-an-ai-powered-saas-product-from-scratch",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/",
+      "metaDesc": "An AI-powered SaaS product combines a recurring software service with AI capabilities that solve a specific customer problem. The strongest products b.",
+      "titleTag": "How to Build an AI-Powered SaaS Product from Scratch",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1649,
+      "queries": [
+        {
+          "query": "AI SaaS development",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build an ai-powered saas product from scratch",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI SaaS Product Architecture tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 15,
+      "title": "How to Build an AI Customer Support System",
+      "slug": "how-to-build-an-ai-customer-support-system",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-customer-support-system/",
+      "metaDesc": "An AI customer support system helps customers find answers, understand account information and resolve routine issues. The best design does not simply.",
+      "titleTag": "How to Build an AI Customer Support System",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1655,
+      "queries": [
+        {
+          "query": "AI customer support",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build an ai customer support system",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Customer Support Automated Triage tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 16,
+      "title": "How to Design a Production-Ready LLM Architecture",
+      "slug": "how-to-design-a-production-ready-llm-architecture",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-design-a-production-ready-llm-architecture/",
+      "metaDesc": "A production-ready LLM application is a software system built around a model, not merely a prompt sent to an API. It must handle identity, data access.",
+      "titleTag": "How to Design a Production-Ready LLM Architecture",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1692,
+      "queries": [
+        {
+          "query": "production LLM architecture",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how to design a production-ready llm architecture",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Production LLM Architecture Enterprise AI tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 17,
+      "title": "How to Evaluate, Monitor and Debug LLM Applications",
+      "slug": "how-to-evaluate-monitor-and-debug-llm-applications",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/",
+      "metaDesc": "LLM evaluation measures whether an AI application performs its intended task accurately, safely and consistently. Monitoring shows how it behaves in r.",
+      "titleTag": "How to Evaluate, Monitor and Debug LLM Applications",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1642,
+      "queries": [
+        {
+          "query": "LLM evaluation",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how to evaluate, monitor and debug llm applications",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "LLM Evaluation AI Observability tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the central concept?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 18,
+      "title": "How Artificial Intelligence Is Transforming the Financial Industry",
+      "slug": "how-artificial-intelligence-is-transforming-the-financial-industry",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-artificial-intelligence-is-transforming-the-financial-industry/",
+      "metaDesc": "Financial institutions use AI to process information, detect unusual patterns, support customer service, forecast operational needs and assist analyst.",
+      "titleTag": "How Artificial Intelligence Is Transforming the Financial",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1682,
+      "queries": [
+        {
+          "query": "AI in finance",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how artificial intelligence is transforming the financial industry",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI in Finance Financial Engineering tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 19,
+      "title": "Applications of Artificial Intelligence in Healthcare",
+      "slug": "applications-of-artificial-intelligence-in-healthcare",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/applications-of-artificial-intelligence-in-healthcare/",
+      "metaDesc": "AI is used in healthcare to support image analysis, clinical documentation, patient communication, research, operational planning and drug discovery..",
+      "titleTag": "Applications of Artificial Intelligence in Healthcare",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1666,
+      "queries": [
+        {
+          "query": "AI in healthcare",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build applications of artificial intelligence in healthcare",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI in Healthcare Clinical AI tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 20,
+      "title": "How AI Is Transforming Education and Personalized Learning",
+      "slug": "how-ai-is-transforming-education-and-personalized-learning",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-ai-is-transforming-education-and-personalized-learning/",
+      "metaDesc": "AI can help learners receive explanations, practice questions, feedback and learning materials adapted to their current understanding. It can also ass.",
+      "titleTag": "How AI Is Transforming Education and Personalized Learning",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1650,
+      "queries": [
+        {
+          "query": "AI in education",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how ai is transforming education and personalized learning",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI in Education Personalized Learning tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 21,
+      "title": "AI in the Automotive Industry: From Self-Driving Cars to Predictive Maintenance",
+      "slug": "ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance/",
+      "metaDesc": "AI is changing automotive engineering, manufacturing, vehicle operations and mobility services. It supports driver assistance, perception, predictive.",
+      "titleTag": "AI in the Automotive Industry: From Self-Driving Cars to",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1644,
+      "queries": [
+        {
+          "query": "AI in automotive",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build in the automotive industry: from self-driving cars to predictive maintenance",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Automotive AI Autonomous Driving tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 22,
+      "title": "How Artificial Intelligence Is Changing Cybersecurity",
+      "slug": "how-artificial-intelligence-is-changing-cybersecurity",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-artificial-intelligence-is-changing-cybersecurity/",
+      "metaDesc": "AI is used in cybersecurity to prioritize alerts, identify anomalous behavior, summarize incidents, analyze malware and help security teams investigat.",
+      "titleTag": "How Artificial Intelligence Is Changing Cybersecurity",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1643,
+      "queries": [
+        {
+          "query": "AI in cybersecurity",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how artificial intelligence is changing cybersecurity",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI in Cybersecurity Threat Detection tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 23,
+      "title": "15 Real-World Applications of AI in Small and Large Businesses",
+      "slug": "15-real-world-applications-of-ai-in-small-and-large-businesses",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/15-real-world-applications-of-ai-in-small-and-large-businesses/",
+      "metaDesc": "Businesses use AI to improve how they communicate, analyze information, manage operations and serve customers. The most valuable applications are conn.",
+      "titleTag": "15 Real-World Applications of AI in Small and Large",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1693,
+      "queries": [
+        {
+          "query": "AI business applications",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build 15 real-world applications of ai in small and large businesses",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Business Applications Enterprise Automation tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 24,
+      "title": "Best AI Tools for Developers, Researchers and Businesses",
+      "slug": "best-ai-tools-for-developers-researchers-and-businesses",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/best-ai-tools-for-developers-researchers-and-businesses/",
+      "metaDesc": "AI tools now support coding, research, writing, design, data analysis, meeting workflows and customer operations. There is no universal best tool: sel.",
+      "titleTag": "Best AI Tools for Developers, Researchers and Businesses",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1671,
+      "queries": [
+        {
+          "query": "best AI tools",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build best ai tools for developers, researchers and businesses",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Best AI Tools Developer Productivity tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 25,
+      "title": "AI vs Machine Learning vs Deep Learning: What's the Difference?",
+      "slug": "ai-vs-machine-learning-vs-deep-learning-whats-the-difference",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/ai-vs-machine-learning-vs-deep-learning-whats-the-difference/",
+      "metaDesc": "Artificial intelligence is the broad field of building systems that perform tasks associated with intelligent behavior. Machine learning is a subset o.",
+      "titleTag": "AI vs Machine Learning vs Deep Learning: What's the",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1693,
+      "queries": [
+        {
+          "query": "AI vs machine learning",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build vs machine learning vs deep learning: what's the difference?",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Machine Learning Deep Learning tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 26,
+      "title": "How to Become an AI Engineer in 2027: Skills, Tools and Roadmap",
+      "slug": "how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap/",
+      "metaDesc": "An AI engineer builds software products that use machine learning or generative AI to solve practical problems. The role requires more than knowing mo.",
+      "titleTag": "How to Become an AI Engineer in 2027: Skills, Tools and",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1674,
+      "queries": [
+        {
+          "query": "AI engineer roadmap 2027",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how to become an ai engineer in 2027: skills, tools and roadmap",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Engineer Roadmap Career Guide tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 27,
+      "title": "Will AI Replace Software Engineers and Data Scientists?",
+      "slug": "will-ai-replace-software-engineers-and-data-scientists",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/will-ai-replace-software-engineers-and-data-scientists/",
+      "metaDesc": "AI is changing software engineering and data science by automating parts of coding, analysis, documentation and experimentation. That does not mean ev.",
+      "titleTag": "Will AI Replace Software Engineers and Data Scientists?",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1672,
+      "queries": [
+        {
+          "query": "will AI replace software engineers",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build will ai replace software engineers and data scientists?",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "Future of Work Software Engineering tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 28,
+      "title": "How to Start an AI Startup: From Identifying a Problem to Building an AI Product",
+      "slug": "how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product/",
+      "metaDesc": "An AI startup succeeds by solving a real customer problem, not by using the newest model. The founder must identify a painful workflow, understand who.",
+      "titleTag": "How to Start an AI Startup: From Identifying a Problem to",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1694,
+      "queries": [
+        {
+          "query": "AI startup ideas",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how to start an ai startup: from identifying a problem to building an ai product",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Startups Product Discovery tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 29,
+      "title": "AI Safety, Hallucinations and Responsible AI: Challenges of Building Reliable Systems",
+      "slug": "ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems/",
+      "metaDesc": "AI safety and responsible AI cover methods used to reduce harm and make AI systems dependable, fair, secure and accountable. A hallucination occurs wh.",
+      "titleTag": "AI Safety, Hallucinations and Responsible AI: Challenges of",
+      "faqsCount": 5,
+      "h2Count": 22,
+      "h3Count": 10,
+      "wordCount": 1665,
+      "queries": [
+        {
+          "query": "AI hallucinations",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build safety, hallucinations and responsible ai: challenges of building reliable systems",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "AI Safety Hallucinations tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the main application?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    },
+    {
+      "articleNumber": 30,
+      "title": "How to Reduce LLM API Costs and Improve Inference Speed",
+      "slug": "how-to-reduce-llm-api-costs-and-improve-inference-speed",
+      "score": 100,
+      "url": "https://aniket.app/blog/technology/how-to-reduce-llm-api-costs-and-improve-inference-speed/",
+      "metaDesc": "Learn how to reduce LLM API costs and latency through model routing, prompt optimization, caching, batching, retrieval design and production monitoring.",
+      "titleTag": "How to Reduce LLM API Costs and Improve Inference Speed",
+      "faqsCount": 5,
+      "h2Count": 21,
+      "h3Count": 10,
+      "wordCount": 1646,
+      "queries": [
+        {
+          "query": "reduce LLM API costs",
+          "type": "Exact Primary"
+        },
+        {
+          "query": "how to build how to reduce llm api costs and improve inference speed",
+          "type": "Intent-Driven Long-tail"
+        },
+        {
+          "query": "LLM Cost Reduction Inference Speed tutorial",
+          "type": "Topic Discovery"
+        },
+        {
+          "query": "What is the fastest way to reduce LLM costs?",
+          "type": "Conversational FAQ"
+        }
+      ]
+    }
+  ]
+}

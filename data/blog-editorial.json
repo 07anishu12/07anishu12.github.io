@@ -3660,6 +3660,186 @@
       "reviewer": "Aniket Thakur",
       "reviewedOn": "2026-11-01",
       "note": "Binance $6.3B hack investigative threat intelligence report publication."
+    },
+    "/blog/technology/ai-agents-what-are-they-and-how-do-they-work/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/ai-workflow-automation-how-to-automate-business-processes/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-a-real-time-ai-voice-assistant/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/what-are-large-language-models-llms-and-how-do-they-work/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-a-rag-application-using-your-own-documents/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-an-ai-chatbot-using-python-and-llm-apis/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-build-an-ai-customer-support-system/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-design-a-production-ready-llm-architecture/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-artificial-intelligence-is-transforming-the-financial-industry/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/applications-of-artificial-intelligence-in-healthcare/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-ai-is-transforming-education-and-personalized-learning/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-artificial-intelligence-is-changing-cybersecurity/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/15-real-world-applications-of-ai-in-small-and-large-businesses/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/best-ai-tools-for-developers-researchers-and-businesses/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/ai-vs-machine-learning-vs-deep-learning-whats-the-difference/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/will-ai-replace-software-engineers-and-data-scientists/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
+    },
+    "/blog/technology/how-to-reduce-llm-api-costs-and-improve-inference-speed/": {
+      "status": "approved",
+      "reviewer": "Aniket Thakur",
+      "reviewedOn": "2026-11-01",
+      "note": "AI Knowledge Library 30-Article Collection publication."
     }
   }
 }
