@@ -64,6 +64,13 @@ fs.mkdirSync(out, { recursive: true });
 // Reuse the existing publisher's public allowlist and draft-image isolation.
 fs.cpSync(path.join(root, "_site"), out, { recursive: true });
 
+// Remove static index.html so Next.js App Router root page.tsx serves '/' and
+// next.config.mjs permanently 308-redirects any direct '/index.html' requests to '/'.
+const publicIndexHtml = path.join(out, "index.html");
+if (fs.existsSync(publicIndexHtml)) {
+  fs.rmSync(publicIndexHtml);
+}
+
 const { generateAllSitemaps, writeSitemapsToDirectory } = require("../../../tools/seo/sitemap-builder.js");
 const sitemaps = generateAllSitemaps({
   posts: rawArticles,

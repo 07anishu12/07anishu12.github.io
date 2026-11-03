@@ -1,0 +1,371 @@
+{
+  "totalNodes": 776,
+  "totalEdges": 14711,
+  "orphanPagesCount": 0,
+  "orphanPages": [],
+  "weaklyConnectedCount": 308,
+  "underLinkedImportantPagesCount": 603,
+  "underLinkedImportantPages": [
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/",
+      "title": "How to Build an AI-Powered SaaS Product from Scratch",
+      "inDegree": 11,
+      "depth": 3,
+      "wordCount": 1853
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-customer-support-system/",
+      "title": "How to Build an AI Customer Support System",
+      "inDegree": 11,
+      "depth": 3,
+      "wordCount": 1853
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/",
+      "title": "How to Evaluate, Monitor and Debug LLM Applications",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1835
+    },
+    {
+      "url": "https://aniket.app/blog/technology/applications-of-artificial-intelligence-in-healthcare/",
+      "title": "Applications of Artificial Intelligence in Healthcare",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1849
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-chatbot-using-python-and-llm-apis/",
+      "title": "How to Build an AI Chatbot Using Python and LLM APIs",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1889
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-ai-is-transforming-education-and-personalized-learning/",
+      "title": "How AI Is Transforming Education and Personalized Learning",
+      "inDegree": 5,
+      "depth": 3,
+      "wordCount": 1848
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance/",
+      "title": "AI in the Automotive Industry: From Self-Driving Cars to",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1835
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-artificial-intelligence-is-changing-cybersecurity/",
+      "title": "How Artificial Intelligence Is Changing Cybersecurity",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1834
+    },
+    {
+      "url": "https://aniket.app/blog/technology/15-real-world-applications-of-ai-in-small-and-large-businesses/",
+      "title": "15 Real-World Applications of AI in Small and Large",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1891
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-artificial-intelligence-is-transforming-the-financial-industry/",
+      "title": "How Artificial Intelligence Is Transforming the Financial",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1871
+    },
+    {
+      "url": "https://aniket.app/blog/technology/best-ai-tools-for-developers-researchers-and-businesses/",
+      "title": "Best AI Tools for Developers, Researchers and Businesses",
+      "inDegree": 4,
+      "depth": 3,
+      "wordCount": 1872
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-vs-machine-learning-vs-deep-learning-whats-the-difference/",
+      "title": "AI vs Machine Learning vs Deep Learning: What's the",
+      "inDegree": 3,
+      "depth": 4,
+      "wordCount": 1897
+    },
+    {
+      "url": "https://aniket.app/blog/technology/will-ai-replace-software-engineers-and-data-scientists/",
+      "title": "Will AI Replace Software Engineers and Data Scientists?",
+      "inDegree": 3,
+      "depth": 4,
+      "wordCount": 1887
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product/",
+      "title": "How to Start an AI Startup: From Identifying a Problem to",
+      "inDegree": 3,
+      "depth": 4,
+      "wordCount": 1923
+    },
+    {
+      "url": "https://aniket.app/blog/technology/binance-6-3-billion-hack-north-korea-explained/",
+      "title": "Binance $6.3B Hack Explained: How It Happened | Aniket.app",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 5753
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems/",
+      "title": "AI Safety, Hallucinations and Responsible AI: Challenges of",
+      "inDegree": 7,
+      "depth": 3,
+      "wordCount": 1888
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/",
+      "title": "Build an AI Research Agent: Web Search & Report Guide",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 3527
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-email-assistant-replies-inbox-automation/",
+      "title": "How to Build an AI Email Assistant: Gmail, IMAP & Drafts",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1815
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap/",
+      "title": "How to Become an AI Engineer in 2027: Skills, Tools and",
+      "inDegree": 4,
+      "depth": 4,
+      "wordCount": 1886
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-meeting-assistant-transcription-action-items/",
+      "title": "Build an AI Meeting Assistant: Transcription & Action Items",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1914
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-reduce-llm-api-costs-and-improve-inference-speed/",
+      "title": "How to Reduce LLM API Costs and Improve Inference Speed",
+      "inDegree": 2,
+      "depth": 4,
+      "wordCount": 1853
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-recruitment-agent-resume-screening/",
+      "title": "Build an AI Recruitment Agent: Resume Parsing & Ranking",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1806
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-customer-support-agent-ticket-resolution/",
+      "title": "Build an AI Customer Support Agent: RAG, CRM & Escalation",
+      "inDegree": 2,
+      "depth": 4,
+      "wordCount": 1687
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-financial-analyst-annual-reports-sec/",
+      "title": "Build an AI Financial Analyst: 10-K Parsing & Ratio Engine",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1915
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/",
+      "title": "Build an AI Browser Agent: Playwright, DOM & Browser-Use",
+      "inDegree": 2,
+      "depth": 3,
+      "wordCount": 1772
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-sales-agent-lead-qualification-outreach/",
+      "title": "Build an AI Sales Agent: Lead Scoring, CRM & Follow-Ups",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1832
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-project-management-assistant-task-tracking/",
+      "title": "Build an AI Project Management Assistant: DAGs & Deadlines",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1628
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-invoice-processing-agent-financial-extraction/",
+      "title": "Build an AI Invoice Processing Agent: OCR, GST & Validation",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1579
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-academic-research-assistant-paper-summaries/",
+      "title": "Build an AI Research Assistant: OpenAlex, arXiv & Citations",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1715
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-personal-assistant-daily-digital-work/",
+      "title": "Build a Personal AI Assistant: Tools, Memory & Privacy",
+      "inDegree": 1,
+      "depth": 4,
+      "wordCount": 1654
+    }
+  ],
+  "depthDistribution": {
+    "Depth 1": 15,
+    "Depth 2": 46,
+    "Depth 0": 1,
+    "Depth 3": 152,
+    "Depth 4": 540,
+    "Depth 5": 16,
+    "Depth 6": 6
+  },
+  "topPageRank": [
+    {
+      "url": "https://aniket.app/blog/",
+      "title": "Writing & Technical Library — Aniket Thakur",
+      "pageRank": 100,
+      "inDegree": 750,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/projects/",
+      "title": "Projects & Systems — Aniket Thakur",
+      "pageRank": 95.34,
+      "inDegree": 739,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/work/",
+      "title": "Work & Engineering Delivery — Aniket Thakur",
+      "pageRank": 93.44,
+      "inDegree": 669,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/",
+      "title": "Aniket Thakur — AI Engineer, Product Manager & AI Researcher",
+      "pageRank": 91.69,
+      "inDegree": 669,
+      "depth": 0
+    },
+    {
+      "url": "https://aniket.app/contact/",
+      "title": "Contact — Aniket Thakur | AI Engineering, Product & Research",
+      "pageRank": 90.64,
+      "inDegree": 739,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/research/",
+      "title": "AI Research — Graph Neural Networks & Scientific LLM Evaluation — Aniket Thakur",
+      "pageRank": 89.3,
+      "inDegree": 669,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/about/",
+      "title": "About — Aniket Thakur | AI Engineer, Product Manager & Researcher",
+      "pageRank": 88.46,
+      "inDegree": 739,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/privacy/",
+      "title": "Privacy — Aniket Thakur",
+      "pageRank": 86.4,
+      "inDegree": 669,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/projects/finance-tools/",
+      "title": "Finance Tools — DCF Valuation — Case Study & Architecture | Aniket Thakur",
+      "pageRank": 26.5,
+      "inDegree": 212,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/finance/bikes/",
+      "title": "Bike buying enquiries — Aniket Thakur",
+      "pageRank": 23.36,
+      "inDegree": 437,
+      "depth": 2
+    },
+    {
+      "url": "https://aniket.app/projects/seojev-laya/",
+      "title": "SEOJEV / Laya — Case Study & Architecture | Aniket Thakur",
+      "pageRank": 19.28,
+      "inDegree": 161,
+      "depth": 2
+    },
+    {
+      "url": "https://aniket.app/research/graph-neural-networks-ecological-modeling.html",
+      "title": "Graph Neural Networks for Ecological Trophic Dynamics — Aniket Thakur",
+      "pageRank": 18.81,
+      "inDegree": 8,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/blog/auto/",
+      "title": "Auto Articles — Aniket Thakur",
+      "pageRank": 18.36,
+      "inDegree": 464,
+      "depth": 2
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "title": "AI Agents: What Are They and How Do They Work?",
+      "pageRank": 18.36,
+      "inDegree": 159,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/",
+      "title": "How to Build a Multi-Agent AI System from Scratch",
+      "pageRank": 18.2,
+      "inDegree": 158,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-workflow-automation-how-to-automate-business-processes/",
+      "title": "AI Workflow Automation: How to Automate Business Processes",
+      "pageRank": 16.73,
+      "inDegree": 141,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/projects/signal-desk/",
+      "title": "Signal Desk — Lead Agent — Case Study & Architecture | Aniket Thakur",
+      "pageRank": 16.06,
+      "inDegree": 17,
+      "depth": 1
+    },
+    {
+      "url": "https://aniket.app/assets/Aniket_Thakur_Resume.pdf",
+      "title": "https://aniket.app/assets/Aniket_Thakur_Resume.pdf",
+      "pageRank": 15.53,
+      "inDegree": 81,
+      "depth": 2
+    },
+    {
+      "url": "https://aniket.app/blog/technology/",
+      "title": "Technology Articles — Aniket Thakur",
+      "pageRank": 15.47,
+      "inDegree": 227,
+      "depth": 2
+    },
+    {
+      "url": "https://aniket.app/projects/invoice-ocr/",
+      "title": "Invoice OCR Extractor — Case Study & Architecture | Aniket Thakur",
+      "pageRank": 14.63,
+      "inDegree": 159,
+      "depth": 2
+    }
+  ]
+}

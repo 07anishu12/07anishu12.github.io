@@ -1,0 +1,37 @@
+{
+  "evaluatedArticlesCount": 691,
+  "nearDuplicatesCount": 5,
+  "nearDuplicates": [
+    {
+      "urlA": "https://aniket.app/blog/auto/best-scooty-under-rs-70-000-in-india/",
+      "urlB": "https://aniket.app/blog/auto/best-scooty-under-rs-80-000-in-india/",
+      "similarityScore": 68,
+      "reason": "High lexical overlap (68% 3-gram similarity). Possible template duplication."
+    },
+    {
+      "urlA": "https://aniket.app/blog/auto/best-bikes-under-rs-2-lakh-in-india/",
+      "urlB": "https://aniket.app/blog/auto/best-naked-bikes-under-rs-2-lakh-in-india/",
+      "similarityScore": 71,
+      "reason": "High lexical overlap (71% 3-gram similarity). Possible template duplication."
+    },
+    {
+      "urlA": "https://aniket.app/blog/auto/best-naked-bikes-under-rs-2-lakh-in-india/",
+      "urlB": "https://aniket.app/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india/",
+      "similarityScore": 65,
+      "reason": "High lexical overlap (65% 3-gram similarity). Possible template duplication."
+    },
+    {
+      "urlA": "https://aniket.app/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india/",
+      "urlB": "https://aniket.app/blog/auto/best-sports-bikes-under-2-lakh-design-performance/",
+      "similarityScore": 85,
+      "reason": "High lexical overlap (85% 3-gram similarity). Possible template duplication."
+    },
+    {
+      "urlA": "https://aniket.app/blog/auto/best-cruiser-bikes-under-rs-2-lakh/",
+      "urlB": "https://aniket.app/blog/auto/best-cruiser-bikes-under-rs-3-lakh/",
+      "similarityScore": 65,
+      "reason": "High lexical overlap (65% 3-gram similarity). Possible template duplication."
+    }
+  ],
+  "internalLinkingOpportunities": []
+}

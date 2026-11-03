@@ -1,0 +1,216 @@
+{
+  "historicalDate": "2026-10-24T03:05:00Z",
+  "currentDate": "2026-11-03T18:11:23.150Z",
+  "historicalHost": "https://07anishu12.github.io",
+  "currentHost": "https://aniket.app",
+  "metrics": {
+    "totalUrls": {
+      "historical": 243,
+      "current": 752,
+      "delta": 509,
+      "percentageGrowth": 209.5
+    },
+    "avgTtfbMs": {
+      "historical": 20,
+      "current": 481,
+      "deltaMs": 461
+    },
+    "totalWordCount": {
+      "historical": 276539,
+      "current": 911242,
+      "delta": 634703
+    }
+  },
+  "newlyAddedPathsCount": 563,
+  "sampleAddedPaths": [
+    {
+      "pathname": "/privacy/",
+      "url": "https://aniket.app/privacy/",
+      "title": "Privacy — Aniket Thakur"
+    },
+    {
+      "pathname": "/contact/",
+      "url": "https://aniket.app/contact/",
+      "title": "Contact — Aniket Thakur | AI Engineering, Product & Research"
+    },
+    {
+      "pathname": "/work/",
+      "url": "https://aniket.app/work/",
+      "title": "Work & Engineering Delivery — Aniket Thakur"
+    },
+    {
+      "pathname": "/about/",
+      "url": "https://aniket.app/about/",
+      "title": "About — Aniket Thakur | AI Engineer, Product Manager & Researcher"
+    },
+    {
+      "pathname": "/research/",
+      "url": "https://aniket.app/research/",
+      "title": "AI Research — Graph Neural Networks & Scientific LLM Evaluation — Aniket Thakur"
+    },
+    {
+      "pathname": "/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "url": "https://aniket.app/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "title": "AI Agents: What Are They and How Do They Work?"
+    },
+    {
+      "pathname": "/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools/",
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools/",
+      "title": "How to Build an AI Agent That Can Browse the Internet and"
+    },
+    {
+      "pathname": "/blog/technology/how-to-build-a-real-time-ai-voice-assistant/",
+      "url": "https://aniket.app/blog/technology/how-to-build-a-real-time-ai-voice-assistant/",
+      "title": "How to Build a Real-Time AI Voice Assistant"
+    },
+    {
+      "pathname": "/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/",
+      "url": "https://aniket.app/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/",
+      "title": "How to Build a Multi-Agent AI System from Scratch"
+    },
+    {
+      "pathname": "/blog/technology/ai-workflow-automation-how-to-automate-business-processes/",
+      "url": "https://aniket.app/blog/technology/ai-workflow-automation-how-to-automate-business-processes/",
+      "title": "AI Workflow Automation: How to Automate Business Processes"
+    },
+    {
+      "pathname": "/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations/",
+      "url": "https://aniket.app/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations/",
+      "title": "AI Agent Memory: How to Build Agents That Remember Previous"
+    },
+    {
+      "pathname": "/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information/",
+      "url": "https://aniket.app/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information/",
+      "title": "Vector Databases Explained: How AI Understands and Searches"
+    },
+    {
+      "pathname": "/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application/",
+      "url": "https://aniket.app/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application/",
+      "title": "Fine-Tuning vs RAG: Which Approach Should You Use for Your"
+    },
+    {
+      "pathname": "/blog/technology/what-are-large-language-models-llms-and-how-do-they-work/",
+      "url": "https://aniket.app/blog/technology/what-are-large-language-models-llms-and-how-do-they-work/",
+      "title": "What Are Large Language Models (LLMs) and How Do They Work?"
+    },
+    {
+      "pathname": "/blog/technology/how-to-build-a-rag-application-using-your-own-documents/",
+      "url": "https://aniket.app/blog/technology/how-to-build-a-rag-application-using-your-own-documents/",
+      "title": "How to Build a RAG Application Using Your Own Documents"
+    },
+    {
+      "pathname": "/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis/",
+      "url": "https://aniket.app/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis/",
+      "title": "How to Run LLMs Locally: Build Private AI Without Cloud APIs"
+    },
+    {
+      "pathname": "/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data/",
+      "url": "https://aniket.app/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data/",
+      "title": "Model Context Protocol (MCP): How AI Connects to External"
+    },
+    {
+      "pathname": "/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/",
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/",
+      "title": "How to Build an AI-Powered SaaS Product from Scratch"
+    },
+    {
+      "pathname": "/blog/technology/how-to-build-an-ai-customer-support-system/",
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-customer-support-system/",
+      "title": "How to Build an AI Customer Support System"
+    },
+    {
+      "pathname": "/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/",
+      "url": "https://aniket.app/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/",
+      "title": "How to Evaluate, Monitor and Debug LLM Applications"
+    }
+  ],
+  "removedPathsCount": 55,
+  "sampleRemovedPaths": [
+    {
+      "pathname": "/topics/artificial-intelligence.html",
+      "originalUrl": "https://07anishu12.github.io/topics/artificial-intelligence.html"
+    },
+    {
+      "pathname": "/topics/seo-automation.html",
+      "originalUrl": "https://07anishu12.github.io/topics/seo-automation.html"
+    },
+    {
+      "pathname": "/topics/fintech.html",
+      "originalUrl": "https://07anishu12.github.io/topics/fintech.html"
+    },
+    {
+      "pathname": "/learnings/distilled-video-models-regional-ai-production.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/distilled-video-models-regional-ai-production.html"
+    },
+    {
+      "pathname": "/learnings/why-market-validation-trumps-vibes.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/why-market-validation-trumps-vibes.html"
+    },
+    {
+      "pathname": "/topics/data-science.html",
+      "originalUrl": "https://07anishu12.github.io/topics/data-science.html"
+    },
+    {
+      "pathname": "/learnings/tata-sons-vs-tata-trusts-ownership-and-control.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/tata-sons-vs-tata-trusts-ownership-and-control.html"
+    },
+    {
+      "pathname": "/learnings/what-nsfr-actually-tells-you-about-a-bank.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/what-nsfr-actually-tells-you-about-a-bank.html"
+    },
+    {
+      "pathname": "/learnings/physical-ai-heavy-industry-hardware-bottleneck.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/physical-ai-heavy-industry-hardware-bottleneck.html"
+    },
+    {
+      "pathname": "/learnings/robot-fleet-configuration-in-micro-factories.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/robot-fleet-configuration-in-micro-factories.html"
+    },
+    {
+      "pathname": "/learnings/public-market-stress-test-for-ai-valuations.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/public-market-stress-test-for-ai-valuations.html"
+    },
+    {
+      "pathname": "/learnings/deterministic-validation-schemas-multi-llm-pipelines.html",
+      "originalUrl": "https://07anishu12.github.io/learnings/deterministic-validation-schemas-multi-llm-pipelines.html"
+    },
+    {
+      "pathname": "/blog/page/7/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/7/"
+    },
+    {
+      "pathname": "/blog/page/2/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/2/"
+    },
+    {
+      "pathname": "/blog/page/4/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/4/"
+    },
+    {
+      "pathname": "/blog/page/6/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/6/"
+    },
+    {
+      "pathname": "/blog/page/5/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/5/"
+    },
+    {
+      "pathname": "/blog/page/3/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/3/"
+    },
+    {
+      "pathname": "/blog/page/8/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/8/"
+    },
+    {
+      "pathname": "/blog/page/10/",
+      "originalUrl": "https://07anishu12.github.io/blog/page/10/"
+    }
+  ],
+  "keyMigrationFindings": [
+    "Domain migration successfully re-hosted site from GitHub Pages (07anishu12.github.io) to custom domain (aniket.app) on Vercel.",
+    "Catalog expanded by +509 URLs with massive additions in Automotive and Technology AI knowledge libraries.",
+    "New architecture introduced Vercel edge trailing slash redirects (HTTP 308) and uncovered root static file bypass (/index.html returning HTTP 200).",
+    "WWW subdomain currently issues HTTP 307 temporary redirect instead of 301/308 permanent redirect."
+  ]
+}

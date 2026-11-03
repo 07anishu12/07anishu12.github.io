@@ -13,6 +13,7 @@ const STATIC_PAGE_DATES = {
   '/about/': '2026-10-25',
   '/work/': '2026-10-30',
   '/research/': '2026-10-25',
+  '/research/graph-neural-networks-ecological-modeling.html': '2026-10-25',
   '/contact/': '2026-10-25',
   '/privacy/': '2026-10-25'
 };

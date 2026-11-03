@@ -5,6 +5,8 @@
   "packageManager": "pnpm@12.15.0",
   "description": "Aniket Thakur personal portfolio and knowledge library",
   "scripts": {
+    "audit:agent": "node tools/audit-agent/run-audit.js",
+    "audit:serve": "node tools/audit-agent/serve-dashboard.js",
     "admin": "node tools/admin/server.js",
     "crawler": "node tools/crawler/server.js",
     "build:content": "node tools/admin/build.js",

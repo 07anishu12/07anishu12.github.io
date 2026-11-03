@@ -3,3 +3,4 @@ public/
 *.tsbuildinfo
 generated/
 .data/
+.vercel

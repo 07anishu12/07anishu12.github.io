@@ -1,0 +1,563 @@
+{
+  "probeResults": [
+    {
+      "variation": "Root vs index.html",
+      "requestedUrl": "https://aniket.app/index.html",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    },
+    {
+      "variation": "HTTP vs HTTPS",
+      "requestedUrl": "http://aniket.app/",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    },
+    {
+      "variation": "WWW vs Non-WWW",
+      "requestedUrl": "https://www.aniket.app/",
+      "initialStatus": "SSL_ERR",
+      "finalUrl": "https://www.aniket.app/",
+      "finalStatus": 526,
+      "canonicalUrl": null,
+      "canonicalStatus": "ssl-failure",
+      "issue": "SSL Certificate Name Mismatch: The TLS certificate served by Vercel for www.aniket.app only contains SAN 'DNS:aniket.app'. It lacks 'www.aniket.app'. Any client or search crawler accessing https://www.aniket.app triggers ERR_CERT_COMMON_NAME_INVALID before HTTP redirects can execute.",
+      "severity": "P0",
+      "sslDetails": {
+        "hostname": "www.aniket.app",
+        "validForHost": false,
+        "subjectCN": "aniket.app",
+        "subjectAltNames": "DNS:aniket.app",
+        "validFrom": "Oct 25 06:42:22 2026 GMT",
+        "validTo": "Jan 23 06:42:21 2027 GMT"
+      }
+    },
+    {
+      "variation": "Trailing slash on /about",
+      "requestedUrl": "https://aniket.app/about",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/about/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/about/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    },
+    {
+      "variation": "Trailing slash on /projects",
+      "requestedUrl": "https://aniket.app/projects",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/projects/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/projects/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    },
+    {
+      "variation": "Trailing slash on /blog",
+      "requestedUrl": "https://aniket.app/blog",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/blog/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/blog/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    },
+    {
+      "variation": "Static .html on /about.html",
+      "requestedUrl": "https://aniket.app/about.html",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/about/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/about/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    },
+    {
+      "variation": "Static .html on /work.html",
+      "requestedUrl": "https://aniket.app/work.html",
+      "initialStatus": 308,
+      "finalUrl": "https://aniket.app/projects/",
+      "finalStatus": 200,
+      "canonicalUrl": "https://aniket.app/projects/",
+      "canonicalStatus": "self-referential",
+      "issue": null,
+      "severity": "PASS"
+    }
+  ],
+  "duplicateSlugsCount": 33,
+  "duplicateSlugs": [
+    {
+      "slug": "graph-neural-networks-ecological-modeling.html",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/research/graph-neural-networks-ecological-modeling.html",
+        "https://aniket.app/learnings/graph-neural-networks-ecological-modeling.html"
+      ]
+    },
+    {
+      "slug": "privacy",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/privacy/",
+        "https://aniket.app/privacy"
+      ]
+    },
+    {
+      "slug": "blog",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/",
+        "https://aniket.app/blog/?page=2"
+      ]
+    },
+    {
+      "slug": "build-ai-research-agent-web-search-reports",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/",
+        "https://aniket.app/writing/build-ai-research-agent-web-search-reports/"
+      ]
+    },
+    {
+      "slug": "build-ai-email-assistant-replies-inbox-automation",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-ai-email-assistant-replies-inbox-automation/",
+        "https://aniket.app/writing/build-ai-email-assistant-replies-inbox-automation/"
+      ]
+    },
+    {
+      "slug": "build-ai-meeting-assistant-transcription-action-items",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-ai-meeting-assistant-transcription-action-items/",
+        "https://aniket.app/writing/build-ai-meeting-assistant-transcription-action-items/"
+      ]
+    },
+    {
+      "slug": "build-ai-customer-support-agent-ticket-resolution",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-ai-customer-support-agent-ticket-resolution/",
+        "https://aniket.app/writing/build-ai-customer-support-agent-ticket-resolution/"
+      ]
+    },
+    {
+      "slug": "build-ai-financial-analyst-annual-reports-sec",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-ai-financial-analyst-annual-reports-sec/",
+        "https://aniket.app/writing/build-ai-financial-analyst-annual-reports-sec/"
+      ]
+    },
+    {
+      "slug": "build-ai-data-analyst-csv-charts-pandas",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-ai-data-analyst-csv-charts-pandas/",
+        "https://aniket.app/writing/build-ai-data-analyst-csv-charts-pandas/"
+      ]
+    },
+    {
+      "slug": "build-whatsapp-ai-customer-support-bot-business-api",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/",
+        "https://aniket.app/writing/build-whatsapp-ai-customer-support-bot-business-api/"
+      ]
+    },
+    {
+      "slug": "contact.html",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/contact.html",
+        "https://aniket.app/author/contact.html"
+      ]
+    },
+    {
+      "slug": "work.html",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/work.html",
+        "https://aniket.app/author/work.html"
+      ]
+    },
+    {
+      "slug": "about.html",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/about.html",
+        "https://aniket.app/author/about.html"
+      ]
+    },
+    {
+      "slug": "learnings.html",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/learnings.html",
+        "https://aniket.app/author/learnings.html"
+      ]
+    },
+    {
+      "slug": "4",
+      "count": 3,
+      "instances": [
+        "https://aniket.app/blog/technology/page/4/",
+        "https://aniket.app/blog/finance/page/4/",
+        "https://aniket.app/blog/auto/page/4/"
+      ]
+    },
+    {
+      "slug": "5",
+      "count": 3,
+      "instances": [
+        "https://aniket.app/blog/technology/page/5/",
+        "https://aniket.app/blog/finance/page/5/",
+        "https://aniket.app/blog/auto/page/5/"
+      ]
+    },
+    {
+      "slug": "2",
+      "count": 4,
+      "instances": [
+        "https://aniket.app/blog/technology/page/2/",
+        "https://aniket.app/blog/finance/page/2/",
+        "https://aniket.app/blog/product/page/2/",
+        "https://aniket.app/blog/auto/page/2/"
+      ]
+    },
+    {
+      "slug": "3",
+      "count": 4,
+      "instances": [
+        "https://aniket.app/blog/technology/page/3/",
+        "https://aniket.app/blog/finance/page/3/",
+        "https://aniket.app/blog/product/page/3/",
+        "https://aniket.app/blog/auto/page/3/"
+      ]
+    },
+    {
+      "slug": "6",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/6/",
+        "https://aniket.app/blog/auto/page/6/"
+      ]
+    },
+    {
+      "slug": "graph-neural-networks.html",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/topics/graph-neural-networks.html",
+        "https://aniket.app/author/topics/graph-neural-networks.html"
+      ]
+    },
+    {
+      "slug": "7",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/7/",
+        "https://aniket.app/blog/auto/page/7/"
+      ]
+    },
+    {
+      "slug": "8",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/8/",
+        "https://aniket.app/blog/auto/page/8/"
+      ]
+    },
+    {
+      "slug": "11",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/11/",
+        "https://aniket.app/blog/auto/page/11/"
+      ]
+    },
+    {
+      "slug": "10",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/10/",
+        "https://aniket.app/blog/auto/page/10/"
+      ]
+    },
+    {
+      "slug": "12",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/12/",
+        "https://aniket.app/blog/auto/page/12/"
+      ]
+    },
+    {
+      "slug": "9",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/9/",
+        "https://aniket.app/blog/auto/page/9/"
+      ]
+    },
+    {
+      "slug": "14",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/14/",
+        "https://aniket.app/blog/auto/page/14/"
+      ]
+    },
+    {
+      "slug": "13",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/13/",
+        "https://aniket.app/blog/auto/page/13/"
+      ]
+    },
+    {
+      "slug": "16",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/16/",
+        "https://aniket.app/blog/auto/page/16/"
+      ]
+    },
+    {
+      "slug": "17",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/17/",
+        "https://aniket.app/blog/auto/page/17/"
+      ]
+    },
+    {
+      "slug": "15",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/15/",
+        "https://aniket.app/blog/auto/page/15/"
+      ]
+    },
+    {
+      "slug": "18",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/technology/page/18/",
+        "https://aniket.app/blog/auto/page/18/"
+      ]
+    },
+    {
+      "slug": ")",
+      "count": 7,
+      "instances": [
+        "https://aniket.app/writing/build-ai-financial-analyst-annual-reports-sec/%5D(/writing/build-ai-data-analyst-csv-charts-pandas/)",
+        "https://aniket.app/writing/build-ai-excel-agent-spreadsheets-analysis/%5D(/writing/build-ai-invoice-processing-agent-financial-extraction/)",
+        "https://aniket.app/writing/build-ai-project-management-assistant-task-tracking/%5D(/writing/build-multilingual-ai-voice-assistant-hindi-english/)",
+        "https://aniket.app/writing/build-ai-browser-agent-web-navigation-tasks/%5D(/writing/build-ai-academic-research-assistant-paper-summaries/)",
+        "https://aniket.app/writing/build-ai-excel-agent-spreadsheets-analysis/%5D(/writing/build-ai-sql-agent-natural-language-database-queries/)",
+        "https://aniket.app/writing/build-ai-recruitment-agent-resume-screening/%5D(/writing/build-ai-phone-receptionist-twilio-voice-calls/)",
+        "https://aniket.app/writing/build-ai-phone-receptionist-twilio-voice-calls/%5D(/writing/build-real-time-ai-translation-voice-conversations/)"
+      ]
+    }
+  ],
+  "duplicateTitlesCount": 8,
+  "duplicateTitles": [
+    {
+      "normalizedTitle": "aniket thakur — ai engineer, product manager & ai researcher",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/",
+          "title": "Aniket Thakur — AI Engineer, Product Manager & AI Researcher"
+        },
+        {
+          "url": "https://aniket.app/index.html",
+          "title": "Aniket Thakur — AI Engineer, Product Manager & AI Researcher"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "privacy — aniket thakur",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/privacy/",
+          "title": "Privacy — Aniket Thakur"
+        },
+        {
+          "url": "https://aniket.app/privacy",
+          "title": "Privacy — Aniket Thakur"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "contact — aniket thakur | ai engineering, product & research",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/contact/",
+          "title": "Contact — Aniket Thakur | AI Engineering, Product & Research"
+        },
+        {
+          "url": "https://aniket.app/contact.html",
+          "title": "Contact — Aniket Thakur | AI Engineering, Product & Research"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "about — aniket thakur | ai engineer, product manager & researcher",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/about/",
+          "title": "About — Aniket Thakur | AI Engineer, Product Manager & Researcher"
+        },
+        {
+          "url": "https://aniket.app/about.html",
+          "title": "About — Aniket Thakur | AI Engineer, Product Manager & Researcher"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "writing & technical library — aniket thakur",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/blog/",
+          "title": "Writing & Technical Library — Aniket Thakur"
+        },
+        {
+          "url": "https://aniket.app/blog/?page=2",
+          "title": "Writing & Technical Library — Aniket Thakur"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "best sports bikes under ₹2 lakh in india | 2026 price & buying guide",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india/",
+          "title": "Best Sports Bikes Under ₹2 Lakh in India | 2026 Price & Buying Guide"
+        },
+        {
+          "url": "https://aniket.app/blog/auto/best-sports-bikes-under-2-lakh-design-performance/",
+          "title": "Best Sports Bikes Under ₹2 Lakh in India | 2026 Price & Buying Guide"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "projects & systems — aniket thakur",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/projects/",
+          "title": "Projects & Systems — Aniket Thakur"
+        },
+        {
+          "url": "https://aniket.app/work.html",
+          "title": "Projects & Systems — Aniket Thakur"
+        }
+      ]
+    },
+    {
+      "normalizedTitle": "aniket thakur — author profile & entity overview",
+      "count": 2,
+      "instances": [
+        {
+          "url": "https://aniket.app/author/aniket-thakur/",
+          "title": "Aniket Thakur — Author Profile & Entity Overview"
+        },
+        {
+          "url": "https://aniket.app/author/aniket-thakur.html",
+          "title": "Aniket Thakur — Author Profile & Entity Overview"
+        }
+      ]
+    }
+  ],
+  "duplicateCanonicalsCount": 8,
+  "duplicateCanonicals": [
+    {
+      "canonicalUrl": "https://aniket.app/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/",
+        "https://aniket.app/index.html"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/privacy/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/privacy/",
+        "https://aniket.app/privacy"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/contact/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/contact/",
+        "https://aniket.app/contact.html"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/about/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/about/",
+        "https://aniket.app/about.html"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/research/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/research/",
+        "https://aniket.app/research/index.html"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/blog/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/blog/",
+        "https://aniket.app/blog/?page=2"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/projects/",
+      "count": 3,
+      "instances": [
+        "https://aniket.app/projects/",
+        "https://aniket.app/work.html",
+        "https://aniket.app/projects/index.html"
+      ]
+    },
+    {
+      "canonicalUrl": "https://aniket.app/author/aniket-thakur/",
+      "count": 2,
+      "instances": [
+        "https://aniket.app/author/aniket-thakur/",
+        "https://aniket.app/author/aniket-thakur.html"
+      ]
+    }
+  ],
+  "inconsistentCanonicalsCount": 0,
+  "inconsistentCanonicals": []
+}

@@ -11,6 +11,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: "www.aniket.app" }],
         destination: "https://aniket.app/:path*",

@@ -105,6 +105,7 @@ test("routing keeps known legacy redirects permanent", async () => {
   const { default: config } = await import("../../apps/web/next.config.mjs?seo-test");
   const redirects = await config.redirects();
   assert.deepEqual(redirects.map(({ source, destination, permanent }) => ({ source, destination, permanent })), [
+    { source: "/index.html", destination: "/", permanent: true },
     { source: "/:path*", destination: "https://aniket.app/:path*", permanent: true },
     { source: "/about.html", destination: "/about/", permanent: true },
     { source: "/contact.html", destination: "/contact/", permanent: true },

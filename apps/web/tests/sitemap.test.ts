@@ -48,9 +48,9 @@ test("Parent sitemap index returns valid XML and correct schema", () => {
 
 test("Child sitemaps return valid URL sets with exact classification counts", () => {
   const expectedCounts: Record<SitemapGroupId, number> = {
-    pages: 6,
+    pages: 7,
     "blog-categories": 5,
-    "blog-technology": 126,
+    "blog-technology": 156,
     "blog-automotive": 393,
     "blog-product": 25,
     "blog-finance": 42,
@@ -80,15 +80,15 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
       assert.ok(entry.loc.startsWith(ORIGIN), `URL must use canonical origin: ${entry.loc}`);
       assert.ok(!entry.loc.includes("www."), `Legacy www found in URL: ${entry.loc}`);
       assert.ok(!entry.loc.includes("github.io"), `Legacy github.io found in URL: ${entry.loc}`);
-      assert.ok(entry.loc.endsWith("/"), `URL must preserve trailing slash: ${entry.loc}`);
+      assert.ok(entry.loc.endsWith("/") || entry.loc.endsWith(".html"), `URL must preserve trailing slash or .html: ${entry.loc}`);
       if (entry.lastmod) {
         assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod), `Invalid lastmod date: ${entry.lastmod}`);
       }
     }
   }
 
-  assert.equal(totalUrls, 613, "Total eligible URLs must be exactly 613");
-  assert.equal(allUrls.size, 613, "All 613 URLs must be unique");
+  assert.equal(totalUrls, 644, "Total eligible URLs must be exactly 644");
+  assert.equal(allUrls.size, 644, "All 644 URLs must be unique");
 });
 
 test("Route handlers return HTTP 200 with application/xml Content-Type", async () => {

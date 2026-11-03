@@ -1,0 +1,3289 @@
+{
+  "totalSitemaps": 10,
+  "totalUrls": 644,
+  "sitemaps": {
+    "https://aniket.app/sitemap.xml": {
+      "type": "index",
+      "childrenCount": 9,
+      "children": [
+        "https://aniket.app/sitemap-pages.xml",
+        "https://aniket.app/sitemap-blog-categories.xml",
+        "https://aniket.app/sitemap-blog-technology.xml",
+        "https://aniket.app/sitemap-blog-automotive.xml",
+        "https://aniket.app/sitemap-blog-product.xml",
+        "https://aniket.app/sitemap-blog-finance.xml",
+        "https://aniket.app/sitemap-projects.xml",
+        "https://aniket.app/sitemap-author.xml",
+        "https://aniket.app/sitemap-tools.xml"
+      ],
+      "errors": []
+    },
+    "https://aniket.app/sitemap-pages.xml": {
+      "type": "urlset",
+      "urlsCount": 7,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-blog-categories.xml": {
+      "type": "urlset",
+      "urlsCount": 5,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-blog-technology.xml": {
+      "type": "urlset",
+      "urlsCount": 156,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-blog-automotive.xml": {
+      "type": "urlset",
+      "urlsCount": 393,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-blog-product.xml": {
+      "type": "urlset",
+      "urlsCount": 25,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-blog-finance.xml": {
+      "type": "urlset",
+      "urlsCount": 42,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-projects.xml": {
+      "type": "urlset",
+      "urlsCount": 14,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-author.xml": {
+      "type": "urlset",
+      "urlsCount": 1,
+      "errors": []
+    },
+    "https://aniket.app/sitemap-tools.xml": {
+      "type": "urlset",
+      "urlsCount": 1,
+      "errors": []
+    }
+  },
+  "urls": [
+    {
+      "url": "https://aniket.app/",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/about/",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/work/",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/research/",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/research/graph-neural-networks-ecological-modeling.html",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/contact/",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/privacy/",
+      "sitemapSource": "https://aniket.app/sitemap-pages.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-categories.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-categories.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-categories.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/blog/product/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-categories.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-categories.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-a-multi-agent-ai-system-from-scratch/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-workflow-automation-how-to-automate-business-processes/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-agent-that-can-browse-the-internet-and-use-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-a-real-time-ai-voice-assistant/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-agent-memory-how-to-build-agents-that-remember-previous-conversations/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/what-are-large-language-models-llms-and-how-do-they-work/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-a-rag-application-using-your-own-documents/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/vector-databases-explained-how-ai-understands-and-searches-information/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/fine-tuning-vs-rag-which-approach-should-you-use-for-your-ai-application/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/model-context-protocol-mcp-how-ai-connects-to-external-tools-and-data/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-run-llms-locally-build-private-ai-without-cloud-apis/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-chatbot-using-python-and-llm-apis/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-powered-saas-product-from-scratch/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-build-an-ai-customer-support-system/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-design-a-production-ready-llm-architecture/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-evaluate-monitor-and-debug-llm-applications/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-artificial-intelligence-is-transforming-the-financial-industry/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/applications-of-artificial-intelligence-in-healthcare/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-ai-is-transforming-education-and-personalized-learning/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-in-the-automotive-industry-from-self-driving-cars-to-predictive-maintenance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-artificial-intelligence-is-changing-cybersecurity/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/15-real-world-applications-of-ai-in-small-and-large-businesses/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/best-ai-tools-for-developers-researchers-and-businesses/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-vs-machine-learning-vs-deep-learning-whats-the-difference/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-become-an-ai-engineer-in-2027-skills-tools-and-roadmap/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/will-ai-replace-software-engineers-and-data-scientists/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-start-an-ai-startup-from-identifying-a-problem-to-building-an-ai-product/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-safety-hallucinations-and-responsible-ai-challenges-of-building-reliable-systems/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/how-to-reduce-llm-api-costs-and-improve-inference-speed/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/binance-6-3-billion-hack-north-korea-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-11-01"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-research-agent-web-search-reports/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-excel-agent-spreadsheets-analysis/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-email-assistant-replies-inbox-automation/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-meeting-assistant-transcription-action-items/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-recruitment-agent-resume-screening/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-customer-support-agent-ticket-resolution/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-sales-agent-lead-qualification-outreach/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-financial-analyst-annual-reports-sec/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-sql-agent-natural-language-database-queries/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-data-analyst-csv-charts-pandas/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-browser-agent-web-navigation-tasks/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-academic-research-assistant-paper-summaries/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-invoice-processing-agent-financial-extraction/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-project-management-assistant-task-tracking/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-personal-assistant-daily-digital-work/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-whatsapp-ai-customer-support-bot-business-api/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-phone-receptionist-twilio-voice-calls/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-multilingual-ai-voice-assistant-hindi-english/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-real-time-ai-translation-voice-conversations/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-video-assistant-recordings-question-answering/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-interviewer-technical-screening-scoring/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-tutor-interactive-conversations-learning/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-ai-accessibility-assistant-image-description-reading/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-31"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/agentic-coding-build-test-deploy-applications/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-agent-development-skills-tools-memory-orchestration/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-app-builders-vs-traditional-development-startups/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-benchmark-wars-higher-score-not-better-model/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-call-centres-virtual-receptionists-voice-agents-customer-ops/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-coding-low-ram-laptop-quantization-local-cloud/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-content-pipelines-automating-research-drafting-without-spam/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-cybersecurity-2026-autonomous-agents-vulnerability-discovery/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-engineering-jobs-india-skills-employers-looking-for-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-generated-evidence-legal-documents-provenance-disclosure/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-generated-pull-requests-how-to-review-agent-code/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-governance-india-what-businesses-need-to-know-emerging-rules/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-indian-banking-fintech-fraud-underwriting-customer-support/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-indian-education-personal-tutors-automated-assessment-risks/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-inference-bottleneck-serve-llms-faster-cheaper/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-memory-and-context-windows-why-long-conversations-fail/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-reasoning-models-vs-standard-chat-models-differences/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-search-vs-traditional-google-search-discovery-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-security-skills-protecting-agents-llm-applications/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-testing-evaluation-skills-every-developer-needs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-testing-tools-can-llms-generate-useful-unit-integration-tests/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-video-generation-2026-models-creators-marketing-teams/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-voice-agents-indian-businesses-regional-languages-real-calls/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/backend-engineering-skills-production-ready-ai-systems/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/beyond-llms-jev-and-cdm-ai-models-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/beyond-mcp-comparing-tool-calling-apis-agent-protocols/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/beyond-text-multimodal-ai-images-audio-video/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-reliable-ai-agents-retries-observability-human-approval/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/building-ai-indian-languages-challenges-multilingual-models/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/building-production-ready-ai-agent-persistent-memory-tool-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/can-ai-agents-update-website-safely-permissions-publishing-controls/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/can-chatgpt-and-claude-cite-your-website-crawlability-audit/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/claude-code-vs-openai-codex-vs-gemini-cli-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/deepseek-new-inference-approaches-deepinfer-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/deployment-devops-skills-ai-applications/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/from-ai-chatbots-to-autonomous-ai-agents-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/from-prompt-to-production-shipping-ai-features-nextjs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/frontend-development-skills-ai-powered-applications/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/generative-engine-optimization-geo-what-to-measure/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/github-skills-ai-assisted-software-development/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/headless-cms-vs-ai-native-cms-architecture-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/indias-ai-infrastructure-race-domestic-data-centres-compute-demand/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/indias-ai-startup-ecosystem-opportunities-beyond-chatbots/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/local-ai-inference-running-llms-on-own-computers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/mcp-development-skills-connecting-ai-models-to-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/mcp-explained-model-context-protocol-external-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/mixture-of-experts-moe-architecture-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/new-ai-powered-cms-research-drafts-metadata-publishing/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/open-weight-vs-closed-ai-models-developers-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/physical-ai-robotics-models-moving-into-real-world/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/prompt-engineering-vs-context-engineering/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/prompt-injection-rogue-ai-agents-protect-tools-credentials-data/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/quantization-explained-running-larger-ai-models-less-memory/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/rag-engineering-skills-building-searchable-knowledge-systems/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/rag-vs-fine-tuning-vs-search-how-ai-retrieves-knowledge/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/real-time-voice-ai-full-duplex-conversation/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/small-language-models-vs-frontier-ai-when-slms-win/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/sovereign-ai-india-models-data-compute-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/structured-data-ai-search-what-schema-org-can-and-cannot-do/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/why-ai-search-engines-ignore-your-pages-crawling-rendering-quality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-agents-vs-workflow-automation-choose-by-control/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ai-memory-context-chat-history-and-persistent-data/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/browser-use-guide-how-ai-agents-operate-websites/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-a-local-pdf-chatbot-a-minimal-working-design/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-a-real-time-voice-agent-a-practical-blueprint/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-an-ai-agent-with-tool-calls-and-human-approval/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/build-rag-answers-with-verifiable-source-citations/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/chroma-vs-qdrant-vs-pgvector-a-practical-choice/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/deepseek-models-weights-distillation-and-local-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/dify-tutorial-build-a-document-workflow-application/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/embedding-models-explained-text-vectors-and-search/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/evaluate-an-ai-coding-agent-before-codebase-access/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/evaluate-an-ai-github-repository-before-installing/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/evaluate-rag-retrieval-faithfulness-and-citations/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/gguf-vs-safetensors-choose-the-right-model-files/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/haystack-tutorial-build-a-small-retrieval-pipeline/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/keyword-vs-semantic-search-when-to-use-hybrid-search/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/langchain-vs-llamaindex-choose-a-rag-framework/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/llm-context-windows-tokens-memory-and-documents/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/local-llm-vs-cloud-ai-privacy-cost-and-convenience/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/local-llms-on-8-gb-ram-and-a-4-gb-gpu/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/local-text-to-speech-choose-models-and-voice-licences/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/local-vs-hosted-coding-ai-compare-real-development/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/mcp-explained-how-ai-apps-connect-to-external-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/measure-llm-speed-tokens-first-response-and-latency/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/multimodal-llms-images-documents-and-audio-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/n8n-ai-tutorial-build-a-safe-everyday-workflow/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ollama-api-tutorial-connect-a-local-model-to-python/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/open-source-llms-weights-code-and-commercial-rights/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/postgresql-and-pgvector-build-semantic-search/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/prompt-injection-in-rag-and-agents-practical-defences/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/q4-vs-q5-vs-fp16-model-quantisation-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/qwen-models-choose-for-coding-reasoning-or-chat/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/rag-chunking-fixed-size-overlap-and-semantic-splits/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/rag-vs-fine-tuning-choose-the-right-ai-approach/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/ragflow-tutorial-ask-questions-about-your-documents/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/reduce-llm-hallucinations-with-schemas-and-evidence/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/run-a-local-llm-without-a-dedicated-gpu/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/run-an-llm-on-apple-silicon-memory-and-metal/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/test-llm-benchmarks-beyond-the-headline-score/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/useful-mcp-servers-files-databases-and-developer-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/technology/whisper-cpp-vs-faster-whisper-for-local-transcription/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-technology.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-for-a-50-km-daily-commute-in-india-per-day-cost-seat-comfort-90000-km-math/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-for-new-drivers-in-india-bonnet-visibility-hill-hold-scratch-friendly-picks/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-for-senior-citizens-in-india-easy-knee-friendly-entry-visibility-comfort/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-in-india-for-a-small-family-with-a-child-seat-stroller-luggage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/buy-a-car-now-or-wait-for-a-facelift-or-festive-offer-in-india-the-complete-timing-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-hf-deluxe-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-xtreme-125r-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-vs-hf-deluxe-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-vs-honda-shine-125/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-xtreme-125r-vs-tvs-raider-125/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-n125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-n160-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-platina-100-vs-hero-splendor-plus/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-shine-100-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-shine-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-sp-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-6g-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-vs-tvs-jupiter-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-sp-125-vs-bajaj-pulsar-125/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-raider-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-apache-rtr-160-4v-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-jupiter-110-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/suzuki-access-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-rayzr-125-fi-hybrid-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-calculate-bike-mileage-in-kmpl/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-mileage-bikes-in-india-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-mileage-scooters-in-india-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-hunter-350-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-classic-350-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-himalayan-450-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-classic-350-vs-hunter-350-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-hunter-350-vs-tvs-ronin/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-classic-350-vs-honda-cb350/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-iqube-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-iqube-st-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-chetak-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ather-450x-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ather-rizta-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ola-s1-pro-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ola-s1-x-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-e-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-iqube-vs-bajaj-chetak/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ather-450x-vs-tvs-iqube/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ather-rizta-vs-tvs-iqube/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ola-s1-pro-vs-ather-450x/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-chetak-vs-ather-rizta/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-scooter-vs-petrol-scooter-running-cost/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-for-40-km-daily-commute/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-100-to-125cc-bikes-for-daily-commuting/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-150-to-160cc-bikes-for-daily-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-vs-honda-shine-100-vs-bajaj-platina-100/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/activa-125-vs-jupiter-125-vs-access-125/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-passion-plus-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-glamour-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-ns125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-ns160-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-150-vs-pulsar-n160-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-150-vs-tvs-apache-rtr-160/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-platina-110-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-220f-mileage-and-top-speed/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-unicorn-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-hornet-2-0-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-dio-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-sport-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-radeon-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-apache-rtr-160-2v-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-apache-rtr-180-vs-rtr-160-4v/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-apache-rtr-200-4v-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-jupiter-125-vs-suzuki-access-125/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-ntorq-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/suzuki-burgman-street-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/suzuki-avenis-125-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-fascino-125-fi-hybrid-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-fz-s-fi-hybrid-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-mt-15-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-r15-v4-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-fz-s-vs-tvs-apache-rtr-160-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-top-speed/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-mileage-after-5-years/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/suzuki-access-125-vs-honda-activa-125/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-bullet-350-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-meteor-350-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-guerrilla-450-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-himalayan-450-vs-ktm-390-adventure/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-vida-vx2-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/river-indie-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ola-s1-x-vs-tvs-iqube/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-vida-vx2-vs-tvs-iqube/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-for-100-km-daily-commute/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/claimed-mileage-vs-real-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/city-vs-highway-mileage-bike/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-speed-for-bike-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-much-petrol-does-a-bike-use-in-10-20-30-50-km/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/cost-to-ride-a-bike-for-1000-km-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-petrol-consumption-at-40-60-80-100-kmph/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/why-has-my-bike-mileage-decreased/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/does-bike-mileage-improve-after-first-service/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-mileage-calculator-petrol-cost/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-50-km-daily-commute/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-office-commuting-in-heavy-traffic/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/petrol-vs-electric-two-wheeler-3-year-ownership-cost/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-vs-scooter-for-daily-commuting-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-for-daily-office-commutes-in-heavy-indian-traffic-smoothness-ac-mileage/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/buy-a-car-in-cash-or-on-loan-in-india-post-tax-math-for-salaried-business-buyers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/car-emi-as-a-share-of-monthly-income-in-india-the-safe-1015-household-framework/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/on-road-price-vs-emi-in-india-8-ongoing-costs-first-time-car-buyers-forget/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/salary-needed-for-a-10-lakh-15-lakh-or-20-lakh-car-in-india-realistic-scenarios/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-ev-vs-used-petrol-car-in-india-battery-health-warranty-transfer-inspection-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/can-you-own-an-ev-without-home-charging-in-india-an-honest-apartment-buyers-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-28"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ev-battery-warranty-replacement-cost-in-india-coverage-terms-exclusions-insurance-rules/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-28"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/home-ev-charging-cost-in-india-exact-monthly-bill-tariffs-charging-loss-math/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-28"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/real-world-ev-range-vs-claimed-range-in-india-speed-ac-hills-the-15-buffer-rule/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-28"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/strong-hybrid-vs-ev-in-india-which-fits-apartment-residents-highway-drivers-best/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-28"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-cars-under-15-lakh-in-india-real-range-battery-sizes-variant-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-27"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-cars-under-20-lakh-in-india-350-km-real-range-primary-family-evs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-27"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-suvs-under-30-lakh-in-india-450530-km-real-range-road-trip-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-27"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/buying-an-older-diesel-car-in-delhi-ncr-10-year-elv-rule-grap-bans-noc-reality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-26"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-vs-petrol-in-india-honest-5-year-total-ownership-cost-calculation/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-26"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-check-challans-hypothecation-documents-before-buying-a-used-car-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-26"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-transfer-car-rc-insurance-ownership-in-india-step-by-step-parivahan-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-26"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/are-cheap-used-luxury-cars-expensive-to-maintain-in-india-the-12-lakh-bmwmercedes-reality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/car-depreciation-in-3-5-and-7-years-in-india-market-reality-vs-insurance-idv/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-much-down-payment-should-you-make-on-a-car-in-india-new-vs-used-math/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-car-emi-calculator-in-india-monthly-payments-total-interest-the-flat-rate-trap/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-car-loan-vs-personal-loan-in-india-interest-rates-hidden-fees-total-repayment/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/which-cars-have-better-resale-value-in-india-segment-leaders-what-drives-liquidity/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-150cc-bikes-in-india-for-city-riding/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-both-city-riding-and-highway-trips/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-with-digital-displays-and-bluetooth-under-rs-1-5-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-first-bike-to-buy-after-college-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-sporty-scooters-under-rs-1-5-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-two-wheelers-for-grocery-runs-errands-and-everyday-family-needs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bikes-with-low-maintenance-costs-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/certified-pre-owned-vs-regular-used-car-in-india-what-the-warranty-actually-covers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-hf-deluxe-is-it-a-good-budget-bike-for-daily-commuting/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-vs-suzuki-access-which-is-better-for-daily-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-calculate-a-used-cars-fair-price-in-india-the-4-step-valuation-formula/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-inspect-a-used-car-before-buying-in-india-accident-flood-mechanical-checklist/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-hunter-350-price-features-and-everyday-usability/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-hunter-350-vs-classic-350-which-should-you-buy/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-car-dealer-vs-direct-owner-in-india-price-savings-risks-safe-payment-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-fz-vs-tvs-apache-rtr-160-which-is-better-for-the-city/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-24"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/abs-vs-cbs-braking-systems-what-should-a-bike-buyer-know/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-125cc-scooters-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-125cc-scooters-to-buy-this-diwali/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-riders-who-want-to-minimise-daily-fuel-spending/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-low-service-cost-bikes-under-rs-1-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-for-college-students-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooty-under-rs-70-000-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-two-wheelers-for-short-city-trips-and-heavy-traffic/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-used-cars-under-3-lakh-in-india-an-inspection-first-survival-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-used-cars-under-5-lakh-for-first-time-buyers-dependable-picks-budget-breakdown/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-used-suvs-under-10-lakh-in-india-reliable-picks-vs-high-maintenance-traps/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-shine-125-price-mileage-and-features/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-sp-125-is-it-worth-buying-in-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-many-kilometres-are-too-many-for-a-used-car-in-india-odometer-vs-condition-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/suzuki-access-price-comfort-and-practicality-for-families/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/three-year-old-used-car-vs-new-entry-level-car-in-india-the-65-lakh-showdown/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-jupiter-which-variant-offers-the-best-value/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-toyota-innova-crysta-or-fortuner-is-it-worth-buying-at-1-lakh-kilometres/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-r15-vs-yamaha-mt-15-sports-bike-or-naked-bike/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/125cc-vs-150cc-vs-160cc-bikes/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/abs-vs-cbs-bikes/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/access-125-vs-activa-125-daily-scooter-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/adas-in-indian-cars-acc-aeb-and-lane-assistance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/alloy-wheels-vs-steel-wheels-for-indian-roads-pothole-survival-ride-comfort-cost/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/apache-rtr-160-4v-vs-pulsar-n160-value-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ather-rizta-vs-tvs-iqube-family-ev-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/base-vs-mid-vs-top-variant-in-india-how-to-pick-the-exact-sweet-spot-trim/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-city-riding-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-2-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-3-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-for-commuting-india-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-29"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-under-rs-1-5-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-naked-bikes-under-rs-2-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-with-bluetooth-navigation-and-smart-features/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooty-for-women-riders-in-india-comfort-weight-and-features/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooty-under-rs-80-000-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-sports-bikes-under-rs-2-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bharat-ncap-ratings-explained-for-car-buyers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-emi-calculator-down-payment-and-loan-tenure/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-mileage-full-tank-method-and-accurate-averages/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/car-insurance-in-india-idv-and-add-ons-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/car-loan-emi-calculator-payments-and-total-interest/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/car-on-road-price-in-india-calculate-the-full-cost/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/choose-touring-motorcycle-indian-highways/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/classic-350-vs-honda-cb350-retro-buying-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/cng-vs-petrol-cars-running-costs-and-trade-offs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-vs-petrol-cars-india-break-even-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-vs-petrol-scooter-break-even-calculator/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ertiga-vs-kia-carens-family-mpv-buying-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/five-year-car-ownership-cost-a-practical-model/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-vs-tvs-jupiter-daily-commuter-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hunter-350-vs-tvs-ronin-city-motorcycle-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hybrid-vs-electric-vs-petrol-cars-india-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/improve-car-mileage-in-city-traffic-safe-habits/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/innova-hycross-vs-invicto-hybrid-mpv-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/jupiter-110-vs-activa-110-family-scooter-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ktm-390-duke-vs-speed-400-practical-buying-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/motorcycle-maintenance-oil-chain-brakes-and-tyres/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/new-car-vs-used-car-in-india-5-year-cost-loan-interest-risk-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/new-vs-second-hand-bike-total-ownership-cost/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/nexon-ev-vs-punch-ev-range-charging-and-space/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ola-electric-vs-ather-what-buyers-should-compare/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/pulsar-n125-vs-tvs-raider-125-commuter-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/scooters-with-the-longest-seats-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/scorpio-n-vs-xuv700-model-year-buying-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/splendor-plus-vs-hf-deluxe-commuter-value-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/thar-vs-jimny-4x4-practicality-and-buying-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tubeless-vs-tube-motorcycle-tyres/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-iqube-vs-bajaj-chetak-electric-scooter-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-jupiter-on-road-prices-across-major-indian-cities/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-jupiter-vs-suzuki-access-comfort-features-and-value/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/two-wheeler-insurance-cover-add-ons/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/two-wheeler-loan-eligibility-in-india-documents-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-car-buying-checklist-in-india-before-you-pay/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/used-electric-car-battery-health-india-checklist/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/what-to-check-before-buying-a-new-bike-from-a-showroom/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/xtreme-125r-vs-raider-125-sporty-commuter-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/360-degree-camera-vs-rear-camera-in-india-tight-parking-help-vs-real-costs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/automatic-climate-control-vs-manual-ac-in-india-does-it-cool-better-or-just-smarter/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-100cc-bikes-in-india-price-mileage-and-features/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-125cc-bikes-in-india-top-options-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-200cc-bikes-in-india-under-rs-2-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-and-scooters-to-buy-before-the-end-of-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-5-lakh-for-diwali/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-with-dual-channel-abs-under-rs-2-5-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-for-families-seat-comfort-storage-and-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-under-rs-1-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-price-mileage-features-and-variants-in-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-110-vs-activa-125-which-one-is-worth-buying/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/should-you-buy-a-bike-in-december-2026-or-wait-until-january-2027/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tata-aeris-review/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-raider-125-vs-honda-sp-125-which-is-better-for-daily-commuting/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ventilated-seats-rear-ac-vents-powered-seats-which-comfort-features-actually-matter-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-mt-15-is-it-a-good-daily-use-naked-bike/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-21"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/6-airbags-vs-2-airbags-in-india-why-airbag-count-alone-doesnt-equal-a-safe-car/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/adas-in-indian-cars-which-features-actually-help-where-you-must-take-over/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/annual-car-maintenance-cost-in-india-by-segment-5-year-service-tyres-battery-reserve/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-110cc-bikes-in-india-for-budget-conscious-buyers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-160cc-bikes-in-india-performance-mileage-and-price/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-night-riding-headlight-performance-and-safety-features/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-2-lakh-to-buy-before-chhath-puja/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-to-buy-during-diwali-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-lightweight-scooters-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-and-bikes-for-riders-who-prefer-an-easy-low-seat-height-design/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-for-daily-city-traffic/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hero-splendor-plus-vs-hero-hf-deluxe-which-budget-bike-wins/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-many-airbags-do-you-really-need-in-india-where-all-6-airbags-sit-who-they-protect/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-much-range-can-you-expect-from-an-electric-scooter-in-daily-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-choose-a-safe-car-in-india-crash-tests-body-shells-active-safety-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/is-a-sunroof-worth-paying-extra-for-in-india-heat-maintenance-safety-reality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tubeless-vs-tube-type-tyres-which-is-better-for-indian-roads/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-apache-rtr-160-price-performance-and-features/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-raider-125-price-features-and-everyday-practicality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/tvs-raider-vs-bajaj-pulsar-n125-which-125cc-bike-should-you-buy/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-20"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/automatic-vs-manual-mileage-in-india-amt-cvt-torque-converter-dct-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-n125-price-features-and-who-should-buy-it/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-and-scooters-to-buy-in-january-2027-mileage-comfort-and-budget/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-first-time-riders-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-small-towns-and-rural-roads/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cruiser-bikes-under-rs-2-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-two-wheelers-for-delivery-and-other-working-professionals/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bikes-with-the-best-suspension-for-pothole-filled-indian-roads/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-scooter-battery-warranty-and-charging-what-to-check-before-buying/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-vs-petrol-scooter-a-five-year-ownership-cost-comparison/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-shine-125-vs-honda-sp-125-which-bike-is-better/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-to-calculate-car-mileage-using-the-full-tank-method-auto-cut-off-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/new-bike-vs-used-bike-under-rs-1-lakh-which-is-better-value/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-hunter-350-on-road-price-by-city-cost-breakdown/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/scooter-vs-bike-for-women-commuters-which-is-more-practical/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/why-is-my-car-giving-low-mileage-a-prioritized-diagnostic-checklist/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-rayzr-vs-yamaha-fascino-which-scooty-is-better/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-19"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-long-daily-commutes-with-low-running-costs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-to-buy-on-diwali-2026-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-2-5-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-with-long-seats-for-rider-and-pillion-comfort/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-family-scooters-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-family-scooters-to-buy-before-diwali-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-highway-bikes-under-rs-2-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-low-maintenance-bikes-for-students/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-mileage-bikes-to-buy-during-the-festive-season/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-premium-scooters-under-rs-1-5-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-under-rs-1-5-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-two-wheelers-for-everyday-family-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-emi-for-a-rs-1-lakh-loan-monthly-payments-for-different-tenures/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/city-mileage-vs-highway-mileage-explained-why-traffic-ac-gear-ratios-change-everything/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/cng-vs-petrol-monthly-savings-trade-offs-net-cashflow-after-emi-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/cost-of-driving-1000-km-in-india-petrol-diesel-cng-strong-hybrid-ev-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/royal-enfield-classic-350-vs-bullet-350-differences-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/strong-hybrid-vs-petrol-in-india-exact-break-even-calculation-for-city-highway-drivers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-18"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-adventure-bikes-under-rs-3-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-2-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-25-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-5-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-70-000-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-80-000-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-commuter-bikes-in-india-for-everyday-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-mileage-cars-in-india-arai-claimed-figures-vs-real-world-traffic-reality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-touring-bikes-under-rs-3-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-yamaha-scooty-in-india-rayzr-vs-fascino-and-other-options/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-insurance-in-india-what-new-buyers-need-to-know/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/dhanteras-bike-buying-checklist-2026-booking-payment-and-delivery/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-which-variant-is-best-for-your-budget/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-much-down-payment-do-you-need-to-buy-a-bike-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/is-diwali-a-good-time-to-buy-a-bike-in-india-price-delivery-and-booking-checklist/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/jeep-meridian-vs-toyota-fortuner-urban-monocoque-comfort-vs-ladder-frame-toughness/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/luxury-badge-vs-fully-loaded-mainstream-suv-in-india-5-year-cost-reality-check/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/petrol-vs-diesel-break-even-distance-in-india-compact-vs-heavy-suv-math/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/skoda-kodiaq-vs-toyota-fortuner-european-luxury-pace-vs-rugged-resale-dominance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/toyota-innova-hycross-vs-kia-carnival-does-the-carnival-justify-twice-the-price/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-17"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-250cc-bikes-under-rs-3-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-comfortable-pillion-riding/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-short-riders-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-1-lakh-on-road-in-india-which-options-actually-fit/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-60-lakh-for-highway-touring-fatigue-free-seats-stability-range/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-mileage-bikes-in-india-for-daily-commuting/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-mileage-scooters-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-retro-style-bikes-under-rs-2-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-to-buy-on-diwali-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-under-rs-1-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-with-comfortable-suspension-for-indian-roads/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-suvs-under-50-lakh-in-india-rugged-dominance-vs-european-luxury-space/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-suvs-under-70-lakh-in-india-real-engineering-vs-badge-only-markups/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bike-on-road-prices-in-delhi-ncr-ex-showroom-price-rto-and-insurance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/drum-brakes-vs-disc-brakes-which-should-you-choose/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-on-road-price-in-delhi-noida-and-gurugram-what-changes/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/single-channel-vs-dual-channel-abs-is-the-upgrade-worth-it/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/toyota-fortuner-vs-mg-gloster-rugged-resale-king-vs-full-size-luxury-cruiser/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-16"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-7-seater-cars-under-30-lakh-in-india-third-row-comfort-safety-fuel-economy/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-tall-riders-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-35-lakh-in-india-what-actually-feels-premium-on-the-road/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cruiser-bikes-under-rs-3-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-electric-scooters-for-a-daily-commute-of-around-30-km/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-family-cars-under-40-lakh-in-india-comfort-quietness-safety-over-badge-hype/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-fully-faired-sports-bikes-under-rs-3-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-motorcycles-for-weekend-long-distance-touring/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooters-with-large-boot-space/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-scooty-under-rs-1-lakh-for-diwali-2026/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-value-bikes-between-rs-1-lakh-and-rs-1-5-lakh/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bikes-with-strong-resale-value-in-india-what-should-buyers-compare/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/cars-with-high-ground-clearance-for-indian-roads-unladen-vs-full-load-reality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/compact-suv-vs-mid-size-suv-in-india-does-the-extra-4-lakh-buy-real-space/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/naked-bike-vs-sports-bike-which-is-better-for-indian-roads/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/real-mileage-vs-claimed-mileage-what-should-bike-buyers-expect/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/suv-vs-sedan-in-india-ground-clearance-reality-comfort-boot-space-value-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/top-5-bikes-under-rs-1-lakh-to-buy-this-diwali/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/why-does-the-on-road-price-of-a-bike-vary-by-city/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-fz-series-which-model-is-best-for-city-riding/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-15"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/bajaj-pulsar-ns160-vs-tvs-apache-rtr-160-which-offers-better-value/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-300-350cc-bikes-under-rs-3-lakh-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-7-seater-cars-under-20-lakh-in-india-real-third-row-space-boot-audit/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-for-office-commutes-of-30-50-km-a-day/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-under-rs-90-000-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-bikes-with-low-seat-height-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-20-lakh-for-a-family-of-five-true-3-across-rear-seat-boot-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-25-lakh-for-highway-trips-high-speed-stability-range-comfort/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-sports-bikes-under-2-lakh-design-performance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-suvs-under-15-lakh-in-india-exact-value-for-money-variants-to-buy/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-suvs-under-30-lakh-in-india-top-spec-performance-comfort-safety-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-two-wheelers-for-daily-family-travel-during-chhath-puja/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/electric-scooter-vs-petrol-scooter-which-is-better-for-indian-commuters/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/ex-showroom-vs-on-road-bike-price-the-difference-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/honda-activa-vs-tvs-jupiter-which-scooter-should-you-buy/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/monthly-cost-of-owning-a-bike-in-india-fuel-service-and-insurance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/obd2-and-current-emission-standards-for-indian-two-wheelers-what-buyers-should-know/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/should-you-exchange-your-old-bike-or-buy-a-new-one-during-diwali/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/yamaha-r15-price-features-and-practicality-for-indian-riders/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-14"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-suvs-under-12-lakh-in-india-exact-mid-variants-that-fit-your-on-road-budget/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-13"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hyundai-creta-vs-kia-seltos-ride-comfort-engines-variants-family-value-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-13"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/hyundai-venue-vs-kia-sonet-5-real-differences-between-these-mechanical-twins/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-13"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/mahindra-xuv-3xo-vs-tata-nexon-rear-space-boot-reality-automatics-safety-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-13"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/maruti-fronx-vs-toyota-taisor-variant-mapping-warranty-price-differences-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-13"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/toyota-innova-crysta-vs-innova-hycross-diesel-manual-toughness-vs-hybrid-automatic-comfort/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-13"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/maruti-brezza-vs-tata-nexon-safety-engines-automatics-ownership-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-12"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/maruti-dzire-vs-honda-amaze-rear-seat-comfort-cvt-vs-ags-safety-mileage-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-12"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/maruti-wagonr-vs-tata-tiago-space-mileage-vs-crash-safety-highway-poise/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-12"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cng-cars-under-10-lakh-in-india-boot-space-real-mileage-twin-cylinder-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-11"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/how-new-car-on-road-price-is-calculated-in-india-line-by-line-invoice-audit/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-11"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/is-the-base-variant-worth-buying-in-india-factory-safety-vs-aftermarket-risks/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-11"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/maruti-baleno-vs-hyundai-i20-cabin-luxury-automatic-gearboxes-real-mileage-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-11"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/maruti-swift-vs-hyundai-grand-i10-nios-city-drivability-mileage-ownership-cost-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-11"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/petrol-vs-cng-under-10-lakh-honest-break-even-distance-cost-calculation/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-11"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-automatic-cars-under-10-lakh-in-india-amt-vs-cvt-smoothness-mileage-compared/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-10"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-10-lakh-in-india-hatchback-vs-compact-suv-vs-sedan/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-10"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-5-lakh-in-india-what-your-budget-actually-buys-on-the-road/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-10"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-cars-under-7-lakh-for-first-time-buyers-low-stress-ownership-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-10"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-family-cars-under-8-lakh-in-india-space-boot-ac-and-child-seat-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-10"
+    },
+    {
+      "url": "https://aniket.app/blog/auto/best-small-cars-for-crowded-indian-cities-dimensions-turning-radius-traffic-ease/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-automotive.xml",
+      "lastmod": "2026-10-10"
+    },
+    {
+      "url": "https://aniket.app/blog/product/ab-testing-for-product-managers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/agile-product-management-scrum-kanban/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/ai-product-management-llms-evaluation-costs-safety/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/best-product-management-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/customer-discovery-for-product-managers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/go-to-market-strategy-for-product-managers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/how-to-become-a-product-manager/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/how-to-build-a-product-roadmap/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/how-to-diagnose-a-drop-in-product-metrics/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/how-to-write-a-product-requirements-document-prd/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-design-for-pms-wireframes-prototypes-usability-testing/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-management-okrs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-manager-interview-preparation/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-manager-vs-project-manager-vs-business-analyst/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-market-fit-meaning-metrics-examples/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-metrics-explained-north-star-kpis-retention/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-operations-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/product-strategy-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/rice-moscow-ice-prioritization-frameworks/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/stakeholder-management-for-product-managers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/user-personas-jobs-to-be-done-customer-journey-mapping/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/what-does-a-product-manager-do/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/what-is-an-mvp-minimum-viable-product/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/what-is-product-management/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/product/why-products-fail-root-cause-analysis-postmortems/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-product.xml",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/asset-allocation-equity-debt-gold-and-cash/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/bond-duration-vs-maturity-understand-rate-risk/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/build-a-basic-lbo-model-debt-equity-and-exit-returns/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/build-a-three-statement-financial-model-in-excel/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/calculate-emi-in-excel-formula-and-amortisation/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/cfa-program-exams-eligibility-costs-and-careers/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/cfa-vs-frm-vs-mba-in-finance-choose-by-career-goal/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/comparable-company-analysis-build-a-trading-comps-table/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/credit-card-minimum-due-vs-total-due-interest-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/dcf-valuation-in-excel-a-step-by-step-model/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/dividend-yield-vs-payout-ratio-assess-sustainability/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/emergency-fund-calculator-three-to-twelve-months/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/enterprise-value-vs-equity-value-formula-and-example/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/equity-vs-debt-mutual-fund-taxation-what-to-check/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/ev-ebitda-vs-p-e-which-valuation-multiple-to-use/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/excel-financial-modelling-functions-and-shortcuts/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/excel-goal-seek-and-data-tables-for-sensitivity/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/excel-pivot-tables-for-revenue-costs-and-transactions/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/financial-due-diligence-a-practical-acquisition-checklist/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/fixed-vs-floating-rate-loans-costs-and-trade-offs/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/free-cash-flow-vs-net-profit-why-cash-can-disappear/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-a-private-equity-deal-works-sourcing-to-exit/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-cibil-scores-are-calculated-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-rbi-repo-rate-changes-affect-loans-and-fds/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-to-calculate-wacc-formula-and-worked-example/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-to-read-a-credit-report-in-india/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-to-read-an-investment-banking-pitchbook/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/how-to-write-an-equity-research-report/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/investment-banking-technical-interview-questions/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/investment-banking-vs-private-equity-career-guide/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/irr-vs-moic-in-private-equity-returns-explained/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/loan-prepayment-vs-higher-emi-compare-interest-savings/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/nominal-vs-real-returns-calculate-inflation-impact/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/old-vs-new-tax-regime-compare-tax-year-2026-27/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/p-e-ratio-explained-reading-high-and-low-valuations/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/precedent-transactions-vs-trading-comparables/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/revenue-forecasting-in-excel-drivers-and-seasonality/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/roe-vs-roce-vs-roic-measure-capital-efficiency/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/sumifs-index-match-and-xlookup-for-finance/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/venture-capital-vs-private-equity-strategy-and-ownership/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/vlookup-vs-xlookup-for-financial-analysts/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/blog/finance/why-bond-prices-fall-when-interest-rates-rise/",
+      "sitemapSource": "https://aniket.app/sitemap-blog-finance.xml",
+      "lastmod": "2026-10-22"
+    },
+    {
+      "url": "https://aniket.app/projects/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/fundflow-sentinel/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/classevidence-ai/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/finance-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/signal-desk/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/fastcharger/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/prompt-bi/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/india-document-tools/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/content-automation/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/vehicle-catalogue-pipeline/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/invoice-ocr/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/seojev-laya/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/omnichannel/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/projects/oist-graph-research/",
+      "sitemapSource": "https://aniket.app/sitemap-projects.xml",
+      "lastmod": "2026-10-30"
+    },
+    {
+      "url": "https://aniket.app/author/aniket-thakur/",
+      "sitemapSource": "https://aniket.app/sitemap-author.xml",
+      "lastmod": "2026-10-25"
+    },
+    {
+      "url": "https://aniket.app/finance/bikes/",
+      "sitemapSource": "https://aniket.app/sitemap-tools.xml",
+      "lastmod": "2026-10-25"
+    }
+  ]
+}
