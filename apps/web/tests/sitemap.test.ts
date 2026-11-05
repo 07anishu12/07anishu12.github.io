@@ -51,7 +51,7 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
     pages: 7,
     "blog-categories": 5,
     "blog-technology": 156,
-    "blog-automotive": 393,
+    "blog-automotive": 473,
     "blog-product": 25,
     "blog-finance": 42,
     projects: 14,
@@ -87,8 +87,8 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
     }
   }
 
-  assert.equal(totalUrls, 644, "Total eligible URLs must be exactly 644");
-  assert.equal(allUrls.size, 644, "All 644 URLs must be unique");
+  assert.equal(totalUrls, 724, "Total eligible URLs must be exactly 724");
+  assert.equal(allUrls.size, 724, "All 724 URLs must be unique");
 });
 
 test("Route handlers return HTTP 200 with application/xml Content-Type", async () => {

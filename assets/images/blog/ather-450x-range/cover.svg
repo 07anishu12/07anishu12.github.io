@@ -1,1 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">Ather 450X Range: Claimed vs Real Range at Different Riding Speeds</title><desc id="desc">Illustrative title artwork for an Indian two-wheeler guide.</desc><rect width="1200" height="630" fill="#f6f3ed"/><circle cx="1080" cy="100" r="270" fill="#208b80" opacity=".12"/><circle cx="1110" cy="510" r="190" fill="#208b80" opacity=".10"/><rect x="78" y="80" width="10" height="470" rx="5" fill="#208b80"/><text x="112" y="114" fill="#208b80" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">INDIA · TWO-WHEELER GUIDE</text><text x="78" y="220" fill="#1f2927" font-family="Arial,sans-serif" font-size="43" font-weight="700"><tspan x="78" dy="0">Ather 450X Range: Claimed vs Real Range</tspan><tspan x="78" dy="52">at Different Riding Speeds</tspan></text><text x="78" y="550" fill="#59625e" font-family="Arial,sans-serif" font-size="20" letter-spacing="2">ARTICLE #064  ·  WAVE 2</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Ather 450X Range: Claimed vs Real Range at Different Riding Speeds">
+  <defs>
+    <linearGradient id="bgGrad_1891355740" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F6"/>
+      <stop offset="100%" stop-color="#FFF7ED"/>
+    </linearGradient>
+    <pattern id="dotGrid_1891355740" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#94A3B8" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1200" height="675" fill="url(#bgGrad_1891355740)"/>
+  <rect width="1200" height="675" fill="url(#dotGrid_1891355740)"/>
+
+  <!-- Outer Fine Card Border -->
+  <rect x="36" y="36" width="1128" height="603" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left Editorial Typography Column -->
+  <g transform="translate(85, 95)">
+    <!-- Top Pillar Badges -->
+    <rect x="0" y="0" width="160" height="32" rx="16" fill="#FFEDD5" stroke="#C2410C" stroke-opacity="0.3"/>
+    <circle cx="16" cy="16" r="4.5" fill="#C2410C"/>
+    <text x="28" y="21" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#9A3412" letter-spacing="1">AUTO</text>
+    
+    <text x="175" y="21" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#64748B">SCOOTER ARCHITECTURE</text>
+
+    <!-- Main Title Multi-line -->
+    <g transform="translate(0, 75)">
+      
+        <text x="0" y="0" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="-0.6">Ather 450X Range: Claimed vs</text>
+      
+        <text x="0" y="44" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="-0.6">Real Range at Different Riding</text>
+      
+        <text x="0" y="88" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="-0.6">Speeds</text>
+      
+    </g>
+
+    <!-- Subtitle / Series -->
+    <g transform="translate(0, 222)">
+      <text x="0" y="16" font-family="Newsreader, Georgia, serif" font-size="19" font-style="italic" fill="#C2410C">
+        Technical Library · Verified Research
+      </text>
+
+      <!-- Topic Pill Badges -->
+      <g transform="translate(0, 36)">
+        <rect x="0" y="0" width="160" height="28" rx="6" fill="#F1F5F9" stroke="#E2E8F0"/>
+        <text x="80" y="18" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">ather 450x range</text>
+
+        <rect x="175" y="0" width="170" height="28" rx="6" fill="#F1F5F9" stroke="#E2E8F0"/>
+        <text x="260" y="18" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">ather 450x real range</text>
+      </g>
+    </g>
+
+    <!-- Author & Research Attribution Stamp -->
+    <g transform="translate(0, 445)">
+      <circle cx="16" cy="16" r="16" fill="#C2410C"/>
+      <text x="16" y="21" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">AT</text>
+      <text x="44" y="14" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Aniket Thakur</text>
+      <text x="44" y="29" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="11" fill="#64748B">Engineering &amp; Research Library · 2026-10-29</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Illustration Component -->
+  
+    <g transform="translate(640, 150)">
+      <rect width="470" height="380" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <!-- Header -->
+      <path d="M 0 0 L 470 0 L 470 36 L 0 36 Z" fill="#F8FAFC" rx="12"/>
+      <circle cx="20" cy="18" r="4" fill="#C2410C"/>
+      <text x="32" y="22" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0F172A" letter-spacing="1">URBAN SCOOTER ARCHITECTURE · STEP-THROUGH</text>
+
+      <!-- Dimension Floor Reference -->
+      <line x1="50" y1="310" x2="420" y2="310" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="235" y="330" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748B" text-anchor="middle">GROUND CLEARANCE: 165 MM</text>
+
+      <!-- Rear Wheel (10-12 inch) -->
+      <circle cx="130" cy="245" r="46" fill="none" stroke="#0F172A" stroke-width="6"/>
+      <circle cx="130" cy="245" r="32" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="130" cy="245" r="12" fill="#0F172A"/>
+      <!-- Front Wheel -->
+      <circle cx="360" cy="245" r="46" fill="none" stroke="#0F172A" stroke-width="6"/>
+      <circle cx="360" cy="245" r="32" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="360" cy="245" r="12" fill="#0F172A"/>
+
+      <!-- Under-seat Body / Engine / Battery Enclosure -->
+      <path d="M 110 240 C 100 170, 150 160, 220 160 L 220 220 L 150 250 Z" fill="#C2410C" fill-opacity="0.15" stroke="#C2410C" stroke-width="2.5"/>
+      <rect x="130" y="195" width="75" height="40" rx="4" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+      <text x="167" y="220" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#0F172A" text-anchor="middle">POWERTRAIN</text>
+
+      <!-- Step-through Flat Floorboard -->
+      <path d="M 220 220 L 285 220 L 295 160" fill="none" stroke="#0F172A" stroke-width="4"/>
+      <line x1="225" y1="226" x2="280" y2="226" stroke="#C2410C" stroke-width="2"/>
+
+      <!-- Seat -->
+      <path d="M 120 160 C 145 155, 185 155, 220 160 L 220 172 L 125 170 Z" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+
+      <!-- Front Apron & Handlebar -->
+      <path d="M 285 220 L 330 115 C 335 105, 345 100, 355 105 L 340 180 L 360 245" fill="none" stroke="#0F172A" stroke-width="3.5"/>
+      <path d="M 330 115 L 320 85 L 345 80" fill="none" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="340,95 355,95 350,110" fill="#C2410C"/>
+
+      <!-- Spec Badges -->
+      <rect x="25" y="55" width="135" height="42" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="35" y="73" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700" fill="#64748B">BOOT CAPACITY</text>
+      <text x="35" y="90" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#0F172A">28-34 LITRES</text>
+
+      <rect x="310" y="55" width="135" height="42" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="320" y="73" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700" fill="#64748B">RANGE / TANK</text>
+      <text x="320" y="90" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#C2410C">120 KM / 5.5L</text>
+    </g>
+  
+</svg>

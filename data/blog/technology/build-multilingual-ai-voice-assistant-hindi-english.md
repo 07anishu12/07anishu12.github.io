@@ -81,7 +81,7 @@ faqItems:
 To build a multilingual AI voice assistant for Indian users who naturally blend Hindi and English within the same sentence (Hinglish code-switching, e.g., *"Mera order status check karo aur delivery address update karna hai"*), you cannot force the user to select a rigid "Hindi" or "English" language toggle at the start of the conversation. Standard monolingual ASR models garble English technical nouns (*"EMI"*, *"refund"*, *"account statement"*) when forced into pure Hindi mode, or transcribe Hindi verbs as nonsense English homophones when locked to en-US. To build a fluent Hindi-English voice assistant, you must configure code-switch-aware multilingual Speech Recognition, Devanagari/Roman script and numeric normalisation, bilingual system prompt grounding, and Indic-accent neural Text-to-Speech.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: Combine this bilingual pipeline with [Article 17: How to Build an AI Phone Receptionist and [Article 19: How to Build a Real-Time AI Translation System ](/writing/build-ai-phone-receptionist-twilio-voice-calls/](/writing/build-real-time-ai-translation-voice-conversations/)).
+> **Architecture Reference:** Internal Link Suggestion: Combine this bilingual pipeline with [Article 17: How to Build an AI Phone Receptionist](/writing/build-ai-phone-receptionist-twilio-voice-calls/) and [Article 19: How to Build a Real-Time AI Translation System](/writing/build-real-time-ai-translation-voice-conversations/).
 
 ## Bilingual & Code-Switching Voice Architecture
 

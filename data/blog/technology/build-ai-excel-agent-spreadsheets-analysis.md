@@ -83,7 +83,7 @@ faqItems:
 Building an AI agent for Excel requires separating statistical data reading from structural workbook mutation. While pandas excels at vectorised filtering, aggregation, and exploratory statistics over tabular data, pandas.to_excel() overwrites existing cell formatting, conditional styles, column widths, and native Excel formulas (=SUM(), =INDEX/MATCH()). To build a reliable AI Excel agent that reads, analyses, and updates .xlsx workbooks without corrupting user files, you must pair Pandas for read-only analytical profiling with OpenPyXL for surgical cell updates, native formula insertion, and embedded chart generation, backed by a shadow-copy validation pipeline.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Finance Tools — DCF Valuation](/projects/finance-tools/) case study for how deterministic Python/FastAPI engines reconcile JSON state with .xlsx workbooks with zero cell drift, and cross-reference [Article 8: How to Build an AI Financial Analyst and [Article 10: How to Build an AI Data Analyst ](/writing/build-ai-financial-analyst-annual-reports-sec/](/writing/build-ai-data-analyst-csv-charts-pandas/)).
+> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Finance Tools — DCF Valuation](/projects/finance-tools/) case study for how deterministic Python/FastAPI engines reconcile JSON state with .xlsx workbooks with zero cell drift, and cross-reference [Article 8: How to Build an AI Financial Analyst](/writing/build-ai-financial-analyst-annual-reports-sec/) and [Article 10: How to Build an AI Data Analyst](/writing/build-ai-data-analyst-csv-charts-pandas/).
 
 ## What an AI Excel Agent Is and Practical Use Cases
 

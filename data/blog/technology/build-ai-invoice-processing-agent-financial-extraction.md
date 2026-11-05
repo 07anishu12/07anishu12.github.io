@@ -81,7 +81,7 @@ faqItems:
 To build an AI invoice processing agent ready for Accounts Payable (AP) production, you must combine multilingual OCR and Vision-Language extraction with exact `decimal.Decimal` arithmetic validation, tax ID checksum verification (such as India's 15-character GSTIN or EU VAT), and composite duplicate detection. Never use standard IEEE 754 binary float types (0.1 + 0.2 == 0.30000000000000004) for invoice line items, and never post an extracted invoice directly to an ERP ledger without verifying that $\sum (\text{Quantity} \times \text{Unit Price}) + \text{Tax} = \text{Grand Total}$.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Invoice OCR Extractor](/projects/invoice-ocr/) system in the project directory, and cross-reference [Article 8: How to Build an AI Financial Analyst ](/writing/build-ai-financial-analyst-annual-reports-sec/).
+> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Invoice OCR Extractor](/projects/invoice-ocr/) system in the project directory, and cross-reference [Article 8: How to Build an AI Financial Analyst](/writing/build-ai-financial-analyst-annual-reports-sec/).
 
 ## Invoice Ingestion, OCR & Arithmetic Validation Architecture
 

@@ -81,7 +81,7 @@ faqItems:
 To build an AI academic research assistant that discovers peer-reviewed literature, maps citation graphs, compares experimental methodologies, and synthesises literature reviews without fabricating citations, you must query authoritative scholarly metadata graphs—specifically **OpenAlex** (https://openalex.org/), **Semantic Scholar** (https://www.semanticscholar.org/product/api), Crossref, and arXiv—and anchor every claim to a verified Digital Object Identifier (DOI) or arXiv ID. Generic web search engines struggle to return structured citation networks, inverted abstract indices, or retraction flags, and asking an LLM to generate a bibliography from memory guarantees hallucinated author-year-journal combinations.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [OIST Applied AI Research](/research/) section detailing automated scientific literature ingestion pipelines that synthesize unstructured publications into structured datasets, and cross-reference [Article 1: How to Build an AI Research Agent ](/writing/build-ai-research-agent-web-search-reports/).
+> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [OIST Applied AI Research](/research/) section detailing automated scientific literature ingestion pipelines that synthesize unstructured publications into structured datasets, and cross-reference [Article 1: How to Build an AI Research Agent](/writing/build-ai-research-agent-web-search-reports/).
 
 ## Scholarly Discovery, Citation Graph & Synthesis Architecture
 

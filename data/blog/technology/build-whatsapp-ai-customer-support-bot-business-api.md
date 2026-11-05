@@ -81,7 +81,7 @@ faqItems:
 To build a WhatsApp AI chatbot for customer support that passes Meta's production review and handles real customer traffic reliably, you must engineer around three WhatsApp Business Platform constraints: (1) Webhook verification and `X-Hub-Signature-256` HMAC-SHA256 payload authentication, (2) immediate `<2.5s` HTTP `200 OK` acknowledgement with asynchronous message deduplication (since Meta retries unacknowledged webhooks and delivers status receipts on the same endpoint), and (3) strict enforcement of Meta's 24-hour Customer Service Window (switching automatically from free-form text replies to pre-approved Template Messages when more than 24 hours have elapsed since the user's last inbound message).
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Signal Desk — Lead Agent](/projects/signal-desk/) case study for how an event-driven WhatsApp state machine with HMAC token authentication and PostgreSQL transactional outbox queues guarantees zero dropped messages, and cross-reference [Article 6: How to Build an AI Customer Support Agent ](/writing/build-ai-customer-support-agent-ticket-resolution/).
+> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Signal Desk — Lead Agent](/projects/signal-desk/) case study for how an event-driven WhatsApp state machine with HMAC token authentication and PostgreSQL transactional outbox queues guarantees zero dropped messages, and cross-reference [Article 6: How to Build an AI Customer Support Agent](/writing/build-ai-customer-support-agent-ticket-resolution/).
 
 ## WhatsApp Business Platform & Cloud API Architecture
 

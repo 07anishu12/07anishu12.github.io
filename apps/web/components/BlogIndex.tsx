@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useRef } from "react";
 import Link from "next/link";
+import { ArticleCardImage } from "./ArticleCardImage";
 
 export interface PostItem {
   title: string;
@@ -13,13 +14,14 @@ export interface PostItem {
   coverImageAlt?: string;
   readingTime?: number;
   featured?: boolean;
+  tags?: string[];
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
   technology: "#1d4ed8",
-  finance: "#15803d",
-  auto: "#b45309",
-  product: "#6b21a8",
+  finance: "#059669",
+  auto: "#c2410c",
+  product: "#7c3aed",
 };
 
 function formatDate(dateStr: string): string {
@@ -131,11 +133,13 @@ export function BlogIndex({
           activeCategory === "all" ||
           p.category.toLowerCase() === activeCategory.toLowerCase();
         if (!matchesCat) return false;
-        return (
-          p.title.toLowerCase().includes(q) ||
-          p.description.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q)
-        );
+        
+        const inTitle = p.title.toLowerCase().includes(q);
+        const inDesc = p.description.toLowerCase().includes(q);
+        const inCat = p.category.toLowerCase().includes(q);
+        const inTags = p.tags && Array.isArray(p.tags) && p.tags.some(t => t.toLowerCase().includes(q));
+
+        return inTitle || inDesc || inCat || inTags;
       });
 
       return {
@@ -168,6 +172,36 @@ export function BlogIndex({
     if (pageNum <= 1) return cleanBase;
     return `${cleanBase}?page=${pageNum}`;
   };
+
+  // Generate pagination page list with ellipsis
+  const paginationRange = useMemo(() => {
+    const total = resolvedTotalPages;
+    const current = initialCurrentPage;
+    if (total <= 7) {
+      return Array.from({ length: total }, (_, i) => i + 1);
+    }
+
+    const pages: (number | string)[] = [];
+    pages.push(1);
+
+    if (current > 3) {
+      pages.push("...");
+    }
+
+    const start = Math.max(2, current - 1);
+    const end = Math.min(total - 1, current + 1);
+
+    for (let i = start; i <= end; i++) {
+      pages.push(i);
+    }
+
+    if (current < total - 2) {
+      pages.push("...");
+    }
+
+    pages.push(total);
+    return pages;
+  }, [resolvedTotalPages, initialCurrentPage]);
 
   return (
     <div className="blog-library-wrapper">
@@ -278,26 +312,19 @@ export function BlogIndex({
         >
           <div className="spotlight-card">
             <div className="spotlight-image-col">
-              {featuredPost.coverImage ? (
-                <img
+              <Link
+                href={`/blog/${featuredPost.category}/${featuredPost.slug}/`}
+                aria-label={featuredPost.title}
+                tabIndex={-1}
+              >
+                <ArticleCardImage
                   src={featuredPost.coverImage}
                   alt={featuredPost.coverImageAlt || featuredPost.title}
+                  category={featuredPost.category}
+                  priority={true}
                   className="spotlight-img"
-                  fetchPriority="high"
-                  decoding="async"
                 />
-              ) : (
-                <div
-                  className="spotlight-placeholder"
-                  style={{
-                    backgroundColor:
-                      CATEGORY_COLORS[featuredPost.category.toLowerCase()] ||
-                      "var(--blue)",
-                  }}
-                >
-                  <span>{featuredPost.category}</span>
-                </div>
-              )}
+              </Link>
             </div>
             <div className="spotlight-content-col">
               <div className="spotlight-badge-row">
@@ -324,6 +351,7 @@ export function BlogIndex({
               <h2 className="spotlight-title">
                 <Link
                   href={`/blog/${featuredPost.category}/${featuredPost.slug}/`}
+                  title={featuredPost.title}
                 >
                   {featuredPost.title}
                 </Link>
@@ -362,27 +390,16 @@ export function BlogIndex({
                 <Link
                   href={`/blog/${p.category}/${p.slug}/`}
                   className="article-card-cover-link"
-                  aria-hidden="true"
+                  aria-label={p.title}
                   tabIndex={-1}
                 >
-                  {p.coverImage ? (
-                    <img
-                      src={p.coverImage}
-                      alt={p.coverImageAlt || p.title}
-                      className="article-card-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : (
-                    <div className="article-card-placeholder">
-                      <span
-                        className="placeholder-cat"
-                        style={{ color: catColor }}
-                      >
-                        {p.category}
-                      </span>
-                    </div>
-                  )}
+                  <ArticleCardImage
+                    src={p.coverImage}
+                    alt={p.coverImageAlt || p.title}
+                    category={p.category}
+                    priority={false}
+                    className="article-card-cover"
+                  />
                 </Link>
 
                 <div className="article-card-content">
@@ -408,7 +425,10 @@ export function BlogIndex({
                   </div>
 
                   <h3 className="article-card-title">
-                    <Link href={`/blog/${p.category}/${p.slug}/`}>
+                    <Link
+                      href={`/blog/${p.category}/${p.slug}/`}
+                      title={p.title}
+                    >
                       {p.title}
                     </Link>
                   </h3>
@@ -468,10 +488,36 @@ export function BlogIndex({
             </span>
           )}
 
-          <span className="pagination-status">
-            Page <strong>{initialCurrentPage}</strong> of{" "}
-            <strong>{resolvedTotalPages}</strong>
-          </span>
+          <div className="pagination-numbers">
+            {paginationRange.map((pageItem, index) => {
+              if (pageItem === "...") {
+                return (
+                  <span key={`dots-${index}`} className="pagination-ellipsis">
+                    …
+                  </span>
+                );
+              }
+              const pageNum = Number(pageItem);
+              const isCurrent = pageNum === initialCurrentPage;
+              return isCurrent ? (
+                <span
+                  key={pageNum}
+                  className="pagination-number pagination-current"
+                  aria-current="page"
+                >
+                  {pageNum}
+                </span>
+              ) : (
+                <Link
+                  key={pageNum}
+                  href={getPageHref(pageNum)}
+                  className="pagination-number"
+                >
+                  {pageNum}
+                </Link>
+              );
+            })}
+          </div>
 
           {initialCurrentPage < resolvedTotalPages ? (
             <Link

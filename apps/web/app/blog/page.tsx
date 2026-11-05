@@ -1,4 +1,6 @@
 export const revalidate = 600;
+
+import type { Metadata } from "next";
 import { getPaginatedPosts } from "../../lib/blog";
 import { BlogIndex } from "../../components/BlogIndex";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
@@ -7,19 +9,26 @@ import {
   CollectionPageStructuredData,
 } from "../../components/StructuredData";
 
-export const metadata = {
-  title: "Writing & Technical Library — Aniket Thakur",
-  description:
-    "326 in-depth articles by Aniket Thakur covering AI engineering, quantitative finance, systems architecture, product discovery, and automotive technology.",
-  alternates: { canonical: "/blog/" },
-  openGraph: {
-    title: "Writing & Technical Library — Aniket Thakur",
-    description:
-      "326 technical guides, financial models, and engineering deep dives by Aniket Thakur.",
-    url: "/blog/",
-    images: ["/assets/img/aniket-portrait.png"],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { total } = getPaginatedPosts({ category: "all", page: 1, pageSize: 1 });
+  return {
+    title: `Writing & Technical Library (${total} Publications) — Aniket Thakur`,
+    description: `${total} in-depth technical guides, valuation models, systems architecture analyses, and automotive economics by Aniket Thakur.`,
+    alternates: { canonical: "/blog/" },
+    openGraph: {
+      title: "Writing & Technical Library — Aniket Thakur",
+      description: `${total} technical guides, financial models, and engineering deep dives by Aniket Thakur.`,
+      url: "/blog/",
+      images: ["/assets/img/aniket-portrait.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Writing & Technical Library — Aniket Thakur",
+      description: `${total} original technical guides, quantitative models, and system architectures.`,
+      images: ["/assets/img/aniket-portrait.png"],
+    },
+  };
+}
 
 export default async function BlogPage({
   searchParams,
@@ -54,8 +63,8 @@ export default async function BlogPage({
     <main className="section blog-page">
       <CollectionPageStructuredData
         url="/blog/"
-        name={metadata.title}
-        description={metadata.description}
+        name={`Writing & Technical Library — Aniket Thakur`}
+        description={`${total} in-depth technical guides, valuation models, and engineering architectures.`}
         items={structuredItems}
       />
       <BreadcrumbStructuredData

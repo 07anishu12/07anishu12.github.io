@@ -81,7 +81,7 @@ faqItems:
 To build an AI sales agent that discovers high-intent prospects, enriches company data, scores Ideal Customer Profile (ICP) fit, and schedules personalised follow-ups without losing events or triggering spam blacklists, you must pair structured company enrichment with a durable PostgreSQL transactional outbox and strict anti-spam compliance checks. Many prototype sales bots wire a webhook directly to an LLM and an SMTP sender; when a third-party CRM API times out or a prospect replies *"Stop emailing me,"* stateless scripts drop the lead or continue sending unwanted follow-ups.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Signal Desk — Lead Agent](/projects/signal-desk/) engineering case study for how a PostgreSQL transactional outbox with advisory locks guarantees atomic lead routing and deduplication, and cross-reference [Article 3: How to Build an AI Email Assistant ](/writing/build-ai-email-assistant-replies-inbox-automation/).
+> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Signal Desk — Lead Agent](/projects/signal-desk/) engineering case study for how a PostgreSQL transactional outbox with advisory locks guarantees atomic lead routing and deduplication, and cross-reference [Article 3: How to Build an AI Email Assistant](/writing/build-ai-email-assistant-replies-inbox-automation/).
 
 ## System Architecture: Enrichment, ICP Scoring & Transactional Outbox
 

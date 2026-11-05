@@ -2407,11 +2407,54 @@ button:disabled {
   align-items: center;
   gap: 16px;
   padding-top: 24px;
+  padding-bottom: 24px;
   border-top: 1px solid var(--line);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 .pagination-btn {
-  min-height: 44px;
-  padding: 0 20px;
+  min-height: 42px;
+  padding: 0 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pagination-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+.pagination-number:hover {
+  color: var(--ink);
+  background: #f1f5f9;
+  border-color: var(--line);
+}
+.pagination-current {
+  color: #ffffff;
+  background: var(--ink);
+  border-color: var(--ink);
+  font-weight: 700;
+}
+.pagination-ellipsis {
+  padding: 0 4px;
+  color: var(--muted);
+  font-weight: 700;
 }
 .pagination-status {
   font-size: 0.88rem;

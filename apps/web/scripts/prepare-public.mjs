@@ -64,6 +64,36 @@ fs.mkdirSync(out, { recursive: true });
 // Reuse the existing publisher's public allowlist and draft-image isolation.
 fs.cpSync(path.join(root, "_site"), out, { recursive: true });
 
+// Ensure category fallbacks and all article covers are copied to public
+const fallbackSrc = path.join(root, "assets/images/fallback");
+const fallbackDest = path.join(out, "assets/images/fallback");
+if (fs.existsSync(fallbackSrc)) {
+  fs.mkdirSync(fallbackDest, { recursive: true });
+  fs.cpSync(fallbackSrc, fallbackDest, { recursive: true });
+}
+
+for (const p of rawArticles) {
+  if (p.coverImage) {
+    const srcImg = path.join(root, p.coverImage.replace(/^\//, ""));
+    const destImg = path.join(out, p.coverImage.replace(/^\//, ""));
+    if (fs.existsSync(srcImg)) {
+      fs.mkdirSync(path.dirname(destImg), { recursive: true });
+      fs.copyFileSync(srcImg, destImg);
+    }
+  }
+}
+
+if (fs.existsSync(path.join(root, "data/article_covers_manifest.json"))) {
+  fs.copyFileSync(
+    path.join(root, "data/article_covers_manifest.json"),
+    path.join(out, "article_covers_manifest.json")
+  );
+  fs.copyFileSync(
+    path.join(root, "data/article_covers_manifest.json"),
+    path.join("generated/article_covers_manifest.json")
+  );
+}
+
 // Remove static index.html so Next.js App Router root page.tsx serves '/' and
 // next.config.mjs permanently 308-redirects any direct '/index.html' requests to '/'.
 const publicIndexHtml = path.join(out, "index.html");

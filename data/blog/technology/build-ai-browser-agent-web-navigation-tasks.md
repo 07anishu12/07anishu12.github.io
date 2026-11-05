@@ -81,7 +81,7 @@ faqItems:
 To build an AI browser agent that reliably navigates dynamic websites, fills multi-step forms, and executes workflows without breaking whenever a CSS class name changes, you must combine DOM Accessibility Tree indexing with visual Set-of-Marks (SoM) screenshot grounding and mandatory human approval gates for state-mutating actions. Traditional Selenium or Playwright scripts hardcode brittle XPath or CSS selectors (div.btn-primary-v2 > span) that break on every frontend deployment. Conversely, sending a raw 5MB HTML string to an LLM overflows the context window. By injecting a lightweight JavaScript script that assigns sequential numeric IDs ([1], [2], [3]) to visible, interactive DOM elements (<button>, <input>, <a>, <select>) and pairing them with Playwright for Python (https://github.com/microsoft/playwright-python) or Browser-Use (https://github.com/browser-use/browser-use), your agent can navigate complex web applications using compact numeric element indices.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: For read-only web research and report synthesis, see [Article 1: How to Build an AI Research Agent That Searches the Web and Writes Reports ](/writing/build-ai-research-agent-web-search-reports/).
+> **Architecture Reference:** Internal Link Suggestion: For read-only web research and report synthesis, see [Article 1: How to Build an AI Research Agent That Searches the Web and Writes Reports](/writing/build-ai-research-agent-web-search-reports/).
 
 ## Browser Automation Architecture: DOM Indexing, Grounding & Action Safety
 

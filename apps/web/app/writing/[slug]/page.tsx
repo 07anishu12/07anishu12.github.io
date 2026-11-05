@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import manifestData from "../../../generated/articles_manifest.json";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { ArticleTableOfContents } from "../../../components/ArticleTableOfContents";
+import { ArticleCardImage } from "../../../components/ArticleCardImage";
 import {
   BlogPostingStructuredData,
   BreadcrumbStructuredData,
@@ -235,27 +236,24 @@ export default async function WritingArticlePage({ params }: RouteProps) {
         <p className="article-lead">{post.description}</p>
 
         {/* 6. Featured SVG Cover Image */}
-        {post.coverImage && (
-          <figure className="article-cover-figure" style={{ margin: "24px 0" }}>
-            <div className="article-cover-wrapper" style={{ borderRadius: "14px", overflow: "hidden", border: "1px solid #E5E2D9" }}>
-              <img
-                src={post.coverImage}
-                alt={post.coverImageAlt || post.title}
-                width={post.width || 1200}
-                height={post.height || 675}
-                fetchPriority="high"
-                decoding="async"
-                className="article-cover-image"
-                style={{ width: "100%", height: "auto", display: "block" }}
-              />
-            </div>
-            {post.imageCaption && (
-              <figcaption className="article-image-caption" style={{ fontSize: "0.85rem", color: "#6B7280", marginTop: "8px" }}>
-                {post.imageCaption}
-              </figcaption>
-            )}
-          </figure>
-        )}
+        <figure className="article-cover-figure" style={{ margin: "24px 0" }}>
+          <div className="article-cover-wrapper" style={{ borderRadius: "14px", overflow: "hidden", border: "1px solid #E5E2D9" }}>
+            <ArticleCardImage
+              src={post.coverImage}
+              alt={post.coverImageAlt || post.title}
+              category={post.category || "technology"}
+              priority={true}
+              className="article-cover-image"
+              width={post.width || 1200}
+              height={post.height || 675}
+            />
+          </div>
+          {post.imageCaption && (
+            <figcaption className="article-image-caption" style={{ fontSize: "0.85rem", color: "#6B7280", marginTop: "8px" }}>
+              {post.imageCaption}
+            </figcaption>
+          )}
+        </figure>
 
         {/* 7. Quick Answer Summary */}
         {post.quickAnswer && (

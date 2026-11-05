@@ -81,7 +81,7 @@ faqItems:
 To build an AI data analyst that ingests arbitrary CSV files, cleans dirty columns, runs statistical hypothesis tests, and generates publication-grade charts in response to natural-language questions, you must never pass raw CSV rows into the LLM prompt or call unrestricted exec() on AI-generated Python code. Real-world CSVs contain hundreds of thousands of rows, mixed encodings (UTF-8-SIG, Latin-1), currency strings ("$1,420.50"), and missing values. Instead, your architecture should extract a compact statistical schema profile, let the LLM generate AST-validated Pandas/Matplotlib analysis scripts (or declarative analysis specifications), execute them in an isolated subprocess with strict resource and import allowlists, and return both the verifiable numerical table and the rendered chart image.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: Compare this CSV/DataFrame pipeline with [Article 2: How to Build an AI Excel Agent and [Article 9: How to Build an AI SQL Agent ](/writing/build-ai-excel-agent-spreadsheets-analysis/](/writing/build-ai-sql-agent-natural-language-database-queries/)).
+> **Architecture Reference:** Internal Link Suggestion: Compare this CSV/DataFrame pipeline with [Article 2: How to Build an AI Excel Agent](/writing/build-ai-excel-agent-spreadsheets-analysis/) and [Article 9: How to Build an AI SQL Agent](/writing/build-ai-sql-agent-natural-language-database-queries/).
 
 ## System Architecture: Profiling, AST-Validated Execution & Chart Generation
 

@@ -81,7 +81,7 @@ faqItems:
 To build an AI interviewer that conducts structured technical or behavioural interviews and produces reliable, legally defensible candidate evaluations, you must replace open-ended LLM impressions with Behaviorally Anchored Rating Scales (BARS), bounded adaptive depth-probing, and deterministic code test-case execution. When an unstructured LLM conducts an interview, it often asks leading questions, penalises non-native speech disfluencies (*"um"*, pauses, regional accents), or exhibits recency bias. By structuring the interview as a finite state machine—where each competency has a standardized root question, up to 2 adaptive follow-up probes triggered only when specific rubric evidence is missing, and a 1-to-5 BARS rubric anchored to explicit behavioural indicators—you achieve high inter-rater reliability and fairness.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: Connect this structured interview pipeline with [Article 5: How to Build an AI Recruitment Agent That Screens Resumes and Shortlists Candidates and [Article 17: How to Build an AI Phone Receptionist ](/writing/build-ai-recruitment-agent-resume-screening/](/writing/build-ai-phone-receptionist-twilio-voice-calls/)).
+> **Architecture Reference:** Internal Link Suggestion: Connect this structured interview pipeline with [Article 5: How to Build an AI Recruitment Agent That Screens Resumes and Shortlists Candidates](/writing/build-ai-recruitment-agent-resume-screening/) and [Article 17: How to Build an AI Phone Receptionist](/writing/build-ai-phone-receptionist-twilio-voice-calls/).
 
 ## Structured Interview Workflow & BARS Evaluation Architecture
 

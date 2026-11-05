@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { ArticleTableOfContents } from "../../../../components/ArticleTableOfContents";
+import { ArticleCardImage } from "../../../../components/ArticleCardImage";
 import { LeadCaptureForm } from "../../../../components/LeadCaptureForm";
 import { InquiryButton } from "../../../../components/InquiryButton";
 import {
@@ -189,37 +190,35 @@ export default async function BlogPostPage({ params }: RouteProps) {
         <p className="article-lead">{post.description}</p>
 
         {/* 6. Featured image with responsive sizing and caption */}
-        {post.coverImage && (
-          <figure className="article-cover-figure">
-            <div className="article-cover-wrapper">
-              <img
-                src={post.coverImage}
-                alt={post.coverImageAlt || post.title}
-                width={post.width || 1200}
-                height={post.height || 675}
-                fetchPriority="high"
-                decoding="async"
-                className="article-cover-image"
-              />
-            </div>
-            {(post.imageCaption || post.imageCredit) && (
-              <figcaption className="article-image-caption">
-                {post.imageCaption}{" "}
-                {post.imageSourceUrl ? (
-                  <a
-                    href={post.imageSourceUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    {post.imageCredit || "Image source"}
-                  </a>
-                ) : (
-                  post.imageCredit
-                )}
-              </figcaption>
-            )}
-          </figure>
-        )}
+        <figure className="article-cover-figure">
+          <div className="article-cover-wrapper" style={{ borderRadius: "14px", overflow: "hidden", border: "1px solid var(--line)" }}>
+            <ArticleCardImage
+              src={post.coverImage}
+              alt={post.coverImageAlt || post.title}
+              category={post.category}
+              priority={true}
+              className="article-cover-image"
+              width={post.width || 1200}
+              height={post.height || 675}
+            />
+          </div>
+          {(post.imageCaption || post.imageCredit) && (
+            <figcaption className="article-image-caption">
+              {post.imageCaption}{" "}
+              {post.imageSourceUrl ? (
+                <a
+                  href={post.imageSourceUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {post.imageCredit || "Image source"}
+                </a>
+              ) : (
+                post.imageCredit
+              )}
+            </figcaption>
+          )}
+        </figure>
 
         {/* 7. Quick Answer (if available) */}
         {post.quickAnswer && (

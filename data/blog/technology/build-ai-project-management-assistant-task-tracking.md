@@ -81,7 +81,7 @@ faqItems:
 To build an AI project management assistant that genuinely prevents missed deadlines rather than acting as a glorified todo-list wrapper, you must combine unstructured task and deadline extraction (from standup transcripts, Slack threads, and PR descriptions) with a deterministic Directed Acyclic Graph (DAG) Critical Path Engine. LLMs excel at reading a messy engineering update (*"Auth API migration is blocked until the DB schema PR merges; needs 3 more days"*) and turning it into a structured dependency edge, but deterministic graph algorithms are required to detect circular dependencies, propagate cascading slippage across downstream milestones, and identify zero-slack bottlenecks.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: Pair this project tracker with [Article 4: How to Build an AI Meeting Assistant That Takes Notes and Tracks Action Items ](/writing/build-ai-meeting-assistant-transcription-action-items/).
+> **Architecture Reference:** Internal Link Suggestion: Pair this project tracker with [Article 4: How to Build an AI Meeting Assistant That Takes Notes and Tracks Action Items](/writing/build-ai-meeting-assistant-transcription-action-items/).
 
 ## Project Data Architecture & Critical Path Risk Engine
 

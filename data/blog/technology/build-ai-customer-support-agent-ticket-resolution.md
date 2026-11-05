@@ -81,7 +81,7 @@ faqItems:
 To build an AI customer support agent that resolves real customer tickets rather than frustrating users with generic FAQ links, you must combine Hybrid Knowledge-Base Retrieval (RAG) with authenticated CRM/Order tool calling and a deterministic confidence-based human escalation gate. Roughly 40% of support tickets ask informational questions (*"How do I configure SSO?"*), another 40% require account-specific state lookups or actions (*"Where is order #8492?"* or *"Refund my duplicate charge"*), and the remaining 20% involve complex edge cases or upset customers that must be routed immediately to a human specialist with a structured context handoff.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: For deploying this support architecture directly onto WhatsApp Business Cloud API, see [Article 16: How to Build a WhatsApp AI Customer Support Bot with Business API Integration ](/writing/build-whatsapp-ai-customer-support-bot-business-api/).
+> **Architecture Reference:** Internal Link Suggestion: For deploying this support architecture directly onto WhatsApp Business Cloud API, see [Article 16: How to Build a WhatsApp AI Customer Support Bot with Business API Integration](/writing/build-whatsapp-ai-customer-support-bot-business-api/).
 
 ## Customer Support Architecture: Triage, Hybrid RAG, Action Tools & Human Handoff
 

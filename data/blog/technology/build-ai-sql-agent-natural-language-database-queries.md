@@ -83,7 +83,7 @@ faqItems:
 To build an AI SQL agent that translates natural-language questions into accurate PostgreSQL, MySQL, or SQLite queries without exposing your database to destructive mutations or runaway full-table scans, you must implement three mandatory defence-in-depth layers: (1) AST-level SQL parsing and linting using [SQLGlot](https://github.com/tobymao/sqlglot) to block any non-SELECT statement or unauthorized table access before execution, (2) database-enforced read-only transactions with statement timeouts, and (3) schema pruning with bounded self-correction loops.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [[Prompt BI](/projects/prompt-bi/)](/projects/prompt-bi/) engineering system overview for how AST query linting blocks unsafe SQL mutations in production analytics pipelines, and cross-reference [Article 10: How to Build an AI Data Analyst ](/writing/build-ai-data-analyst-csv-charts-pandas/).
+> **Architecture Reference:** Internal Link Suggestion: On Aniket.app (https://aniket.app/), see the [Prompt BI](/projects/prompt-bi/) engineering system overview for how AST query linting blocks unsafe SQL mutations in production analytics pipelines, and cross-reference [Article 10: How to Build an AI Data Analyst](/writing/build-ai-data-analyst-csv-charts-pandas/).
 
 ## Natural-Language-to-SQL Architecture & Security Boundaries
 

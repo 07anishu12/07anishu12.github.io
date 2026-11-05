@@ -118,7 +118,7 @@ Many developers prematurely reach for multi-agent role-playing frameworks where 
 - Parallel Multi-Agent Subgraphs (For broad multi-entity research): When researching 10 distinct companies simultaneously, spawning parallel worker subgraphs via LangGraph's Send API or orchestrating specialized crews via CrewAI (https://github.com/crewaiinc/crewai) isolates each company's raw HTML scraping tokens from the main synthesis context window.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: For a deeper dive into state reducers and loop bounds in LangGraph and Pydantic AI, see our guide on [[AI Agent Development Skills: Tools, Memory, and Orchestration](/blog/technology/ai-agent-development-skills-tools-memory-orchestration/)](/blog/technology/ai-agent-development-skills-tools-memory-orchestration/) on Aniket.app, as well as [Article 11: How to Build an AI Browser Agent and [Article 12: How to Build an AI Academic Research Assistant ](/writing/build-ai-browser-agent-web-navigation-tasks/](/writing/build-ai-academic-research-assistant-paper-summaries/)).
+> **Architecture Reference:** Internal Link Suggestion: For a deeper dive into state reducers and loop bounds in LangGraph and Pydantic AI, see our guide on [AI Agent Development Skills: Tools, Memory, and Orchestration](/blog/technology/ai-agent-development-skills-tools-memory-orchestration/) on Aniket.app, as well as [Article 11: How to Build an AI Browser Agent](/writing/build-ai-browser-agent-web-navigation-tasks/) and [Article 12: How to Build an AI Academic Research Assistant](/writing/build-ai-academic-research-assistant-paper-summaries/).
 
 ## System Architecture
 

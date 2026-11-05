@@ -83,7 +83,7 @@ faqItems:
 To build an AI meeting assistant that accurately attributes decisions and tracks action items across multi-speaker calls, you must combine Speech-to-Text (STT) word-level timestamps with Speaker Diarisation ("who spoke when") before passing the aligned transcript to an LLM. A raw, unlabelled transcript blends the client's objections with the account manager's commitments, causing the LLM to assign action items to the wrong person. By combining Faster-Whisper (https://github.com/SYSTRAN/faster-whisper) (or Deepgram Nova-3) with speaker diarisation, Silero Voice Activity Detection (VAD), and structured Pydantic extraction, you can build a privacy-first meeting assistant that produces speaker-attributed minutes, assigns tasks with deadlines, and syncs follow-ups to Google Calendar or project trackers.
 
 > [!TIP]
-> **Architecture Reference:** Internal Link Suggestion: Connect this pipeline with [Article 14: How to Build an AI Project Management Assistant That Tracks Tasks and Deadlines and [Article 18: How to Build a Multilingual AI Voice Assistant ](/writing/build-ai-project-management-assistant-task-tracking/](/writing/build-multilingual-ai-voice-assistant-hindi-english/)).
+> **Architecture Reference:** Internal Link Suggestion: Connect this pipeline with [Article 14: How to Build an AI Project Management Assistant That Tracks Tasks and Deadlines](/writing/build-ai-project-management-assistant-task-tracking/) and [Article 18: How to Build a Multilingual AI Voice Assistant](/writing/build-multilingual-ai-voice-assistant-hindi-english/).
 
 ## Audio Capture, Speech-to-Text, and Speaker Diarisation Architecture
 
