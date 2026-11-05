@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": "https://aniket.app/",
+      "title": "Aniket Thakur — AI Engineer, Product Manager & AI Researcher",
+      "links": 51
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 65
+    },
+    {
+      "path": "/blog/?page=2",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/?page=2",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 67
+    },
+    {
+      "path": "/blog/?page=3",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/?page=3",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 68
+    },
+    {
+      "path": "/blog/auto/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/",
+      "title": "Auto Articles — Aniket Thakur",
+      "links": 119
+    },
+    {
+      "path": "/blog/finance/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/finance/",
+      "title": "Finance Articles — Aniket Thakur",
+      "links": 71
+    },
+    {
+      "path": "/blog/technology/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/technology/",
+      "title": "Technology Articles — Aniket Thakur",
+      "links": 84
+    },
+    {
+      "path": "/writing/?page=2",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/?page=2",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 68
+    },
+    {
+      "path": "/blog/auto/10-global-motorcycles-that-indian-buyers-should-watch-after-eicma-2026/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/10-global-motorcycles-that-indian-buyers-should-watch-after-eicma-2026/",
+      "title": "10 Global Bikes to Watch After EICMA 2026: India Buyer Guide",
+      "links": 53
+    },
+    {
+      "path": "/blog/auto/which-eicma-2026-motorcycles-could-launch-in-india-brand-wise-analysis/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/which-eicma-2026-motorcycles-could-launch-in-india-brand-wise-analysis/",
+      "title": "Which EICMA 2026 Bikes Will Launch in India? Brand Analysis",
+      "links": 53
+    },
+    {
+      "path": "/blog/auto/upcoming-premium-adventure-bikes-in-india-new-global-models-to-watch-in-2027/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/upcoming-premium-adventure-bikes-in-india-new-global-models-to-watch-in-2027/",
+      "title": "Upcoming Premium Adventure Bikes in India 2027: Top Models",
+      "links": 53
+    },
+    {
+      "path": "/blog/auto/upcoming-450cc-and-500cc-bikes-in-india-new-international-models-explained/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/upcoming-450cc-and-500cc-bikes-in-india-new-international-models-explained/",
+      "title": "Upcoming 450cc & 500cc Bikes in India 2027: Full Guide",
+      "links": 53
+    },
+    {
+      "path": "/blog/auto/upcoming-750cc-motorcycles-in-india-royal-enfields-new-platform-and-global-competition/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/upcoming-750cc-motorcycles-in-india-royal-enfields-new-platform-and-global-competition/",
+      "title": "Upcoming 750cc Motorcycles in India 2027: RE Platform & Rivals",
+      "links": 55
+    },
+    {
+      "path": "/blog/auto/will-yamaha-bring-its-new-rw-adventure-scooters-to-india-expected-launch-possibilities/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/will-yamaha-bring-its-new-rw-adventure-scooters-to-india-expected-launch-possibilities/",
+      "title": "Will Yamaha Bring RW Adventure Scooters to India? Analysis",
+      "links": 55
+    },
+    {
+      "path": "/blog/auto/eicma-2026-complete-highlights-all-major-motorcycle-and-scooter-reveals/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/eicma-2026-complete-highlights-all-major-motorcycle-and-scooter-reveals/",
+      "title": "EICMA 2026 Complete Highlights: All Major Motorcycle Reveals",
+      "links": 54
+    },
+    {
+      "path": "/blog/auto/top-20-most-important-motorcycle-launches-at-eicma-2026/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/top-20-most-important-motorcycle-launches-at-eicma-2026/",
+      "title": "Top 20 Most Important Motorcycle Launches at EICMA 2026",
+      "links": 53
+    },
+    {
+      "path": "/blog/auto/top-10-biggest-motorcycle-technology-developments-revealed-at-eicma-2026/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/top-10-biggest-motorcycle-technology-developments-revealed-at-eicma-2026/",
+      "title": "Top 10 Motorcycle Tech Developments at EICMA 2026",
+      "links": 54
+    },
+    {
+      "path": "/blog/auto/honda-sensing-ride-explained-the-new-rider-assistance-technology-on-the-africa-twin/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/honda-sensing-ride-explained-the-new-rider-assistance-technology-on-the-africa-twin/",
+      "title": "Honda SENSING RIDE Explained: Radar Tech on Africa Twin",
+      "links": 54
+    }
+  ],
+  "logs": [],
+  "page": {
+    "id": "page-1793908192112-8",
+    "url": "https://aniket.app/blog/auto/honda-sensing-ride-explained-the-new-rider-assistance-technology-on-the-africa-twin/",
+    "title": "Honda SENSING RIDE Explained: Radar Tech on Africa Twin"
+  },
+  "artifacts": [],
+  "warnings": [],
+  "limits": {
+    "outputTruncated": false,
+    "snapshotTruncated": false
+  },
+  "timings": {
+    "quickjs_boot_ms": 0,
+    "client_bundle_init_ms": 101,
+    "program_ms": 8066,
+    "browser_wait_ms": 8069
+  }
+}
