@@ -3,7 +3,7 @@ import path from 'node:path';
 const source='_site', output='_legacy-site';
 const origin='https://aniket.app';
 async function walk(dir){const files=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())files.push(...await walk(p));else files.push(p);}return files;}
-const files=(await walk(source)).filter(p=>p.endsWith('.html')&&!p.endsWith('/404.html'));
+const files=(await walk(source)).filter(p=>p.endsWith('.html')&&!p.endsWith('/404.html')&&!/^google[a-z0-9]+\.html$/.test(path.basename(p)));
 const mappings=[];
 for(const file of files){const html=await fs.readFile(file,'utf8');const canonical=html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/)?.[1];if(!canonical)throw Error(`Missing canonical: ${file}`);const u=new URL(canonical);u.protocol='https:';u.host='aniket.app';mappings.push({file,target:u.href});}
 const targets=[...new Set(mappings.map(m=>m.target))];const verified=new Map();
