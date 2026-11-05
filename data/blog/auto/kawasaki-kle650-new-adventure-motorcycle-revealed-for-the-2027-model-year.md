@@ -1,0 +1,146 @@
+---
+title: "Kawasaki KLE650: New Adventure Motorcycle Revealed for the 2027 Model Year"
+seoTitle: "2027 Kawasaki KLE650 Adventure Motorcycle Unveiled"
+slug: "kawasaki-kle650-new-adventure-motorcycle-revealed-for-the-2027-model-year"
+description: "Kawasaki revives the legendary KLE badge at EICMA 2026 with the 2027 KLE650 adventure bike, featuring a 21-inch front wheel and off-road chassis."
+category: "auto"
+tags:
+  - "Auto"
+  - "EICMA 2026"
+  - "Japanese Motorcycle Manufacturers"
+  - "Kawasaki"
+  - "Kawasaki KLE650"
+  - "Kawasaki KLE650 EICMA"
+author: "Aniket Thakur"
+datePublished: "2026-11-02"
+dateModified: "2026-11-02"
+coverImage: "/assets/images/blog/kawasaki-kle650-new-adventure-motorcycle-revealed-for-the-2027-model-year/cover.svg"
+coverImageAlt: "EICMA 2026 specification matrix and editorial overview for Kawasaki KLE650: New Adventure Motorcycle Revealed for the 2027 Model Year"
+imageCaption: "Technical specifications, engine architecture, and verified parameters for Kawasaki KLE650: New Adventure Motorcycle Revealed for the 2027 Model Year unveiled at EICMA 2026."
+draft: false
+featured: false
+seoKeywords: "Kawasaki KLE650, Kawasaki KLE650 EICMA, Kawasaki 650 adventure bike, 21-inch Kawasaki ADV, upcoming Kawasaki bikes, KLE650 specs"
+primaryKeyword: "Kawasaki KLE650"
+publishOrder: 20
+quickAnswer:
+  question: "Kawasaki KLE650: New Adventure Motorcycle Revealed for the 2027 Model Year: Direct Launch & Specification Verdict"
+  answer: "Kawasaki revives the legendary KLE badge at EICMA 2026 with the 2027 KLE650 adventure bike, featuring a 21-inch front wheel and off-road chassis."
+  facts:
+    - label: "Engine Type"
+      value: "649cc, Liquid-Cooled, Parallel-Twin, DOH"
+    - label: "Maximum Power"
+      value: "67 hp (49.3 kW) @ 8,000 rpm"
+    - label: "Peak Torque"
+      value: "62 Nm @ 6,500 rpm"
+    - label: "Transmission"
+      value: "6-Speed with Assist & Slipper Clutch"
+  goodFor:
+    - "Motorcycle enthusiasts comparing verified EICMA 2026 technical specifications."
+    - "Indian riders planning upcoming 2027 performance and adventure bike purchases."
+  watchFor:
+    - "Commercial dealership availability and final on-road pricing subject to official rollout."
+    - "Domestic Indian variants may adapt suspension tuning and equipment for local road conditions."
+  note: "EICMA 2026 Milan Exhibition Archive \u00b7 Verified Technical Specifications"
+faqItems:
+  - question: "How is the KLE650 different from the Versys 650?"
+    answer: "While the Versys 650 is a road-biased tourer with 17-inch alloy wheels, the new KLE650 is a true dual-sport adventure bike featuring a 21-inch front wheel, 210mm long-travel suspension, and off-road chassis geometry."
+  - question: "Does the Kawasaki KLE650 have switchable ABS?"
+    answer: "Yes, the KLE650 features dedicated Off-Road ABS modes, allowing the rider to completely deactivate rear-wheel ABS for dirt riding."
+  - question: "When will the Kawasaki KLE650 launch in India?"
+    answer: "India Kawasaki Motors has confirmed the motorcycle will launch in India in the third quarter of 2027 via local SKD assembly."
+  - question: "What wheel sizes are fitted on the KLE650?"
+    answer: "The motorcycle features authentic dirt dimensions: a 21-inch front wheel and an 18-inch rear wheel, equipped with tubeless spoked rims."
+sources:
+  - title: "Kawasaki Motors Official Global Portal"
+    url: "https://www.kawasaki.com/"
+  - title: "EICMA 2026 Official Exhibition Directory"
+    url: "https://www.eicma.it/"
+showSources: true
+---
+
+## 1. Introduction
+
+Kawasaki has electrified off-road adventure enthusiasts at EICMA 2026 by resurrecting its legendary dualsport nameplate with the global premiere of the all-new 2027 Kawasaki KLE650. While the existing Versys 650 has served admirably as a comfortable, tarmac-biased sports-tourer riding on 17-inch cast alloy wheels, Kawasaki lacked an authentic, rugged middleweight off-road explorer capable of taking on brutal wilderness trails. The new KLE650 decisively rectifies that void. Built around a proven 649cc parallel-twin engine housed in an all-new steel perimeter chassis, the KLE650 features genuine dirt credentials: a 21-inch wire-spoked front wheel, long-travel adjustable suspension, rally-inspired styling, and switchable off-road electronics, marking Kawasaki's triumphant return to authentic middleweight dual-sport motorcycling.
+
+## 2. Launch and Availability
+
+The 2027 Kawasaki KLE650 was officially presented on November 3, 2026, at the Fiera Milano exhibition halls during EICMA. Kawasaki confirmed that series production will commence in early 2027, with European showroom arrivals scheduled for May 2027. Offered in both standard full-power trim and a 35 kW A2-licencecompliant version, the motorcycle is engineered to capture the booming global middleweight adventure market. For the Indian market, India Kawasaki Motors has confirmed that the KLE650 will launch in the third quarter of 2027, assembled locally at its Chakan plant in Pune to ensure competitive pricing.
+
+## 3. Engine and Performance
+
+Powering the KLE650 is Kawasaki's bulletproof 649cc, liquid-cooled, DOHC, eight-valve parallel-twin engine with a 180-degree crankshaft. Extensively recalibrated for off-road expedition duties, the engine features revised intake tracts, new 36mm throttle bodies, and customized ECU fuel maps that boost low-rpm grunt and throttle tractability across loose sand and mud. The engine produces 67 hp (49.3 kW) at 8,000 rpm and 62 Nm of peak torque at 6,500 rpm. Power is delivered through a rugged six-speed gearbox equipped with an Assist & Slipper clutch, with gear ratios specifically shortened in first and second gears to facilitate low-speed technical climbing over rocky obstacles.
+
+| Specification Attribute | Technical Details & Verified Parameters |
+| :--- | :--- |
+| Engine Type | 649cc, Liquid-Cooled, Parallel-Twin, DOHC 8-Valve |
+| Maximum Power | 67 hp (49.3 kW) @ 8,000 rpm |
+| Peak Torque | 62 Nm @ 6,500 rpm |
+| Transmission | 6-Speed with Assist & Slipper Clutch |
+| Chassis | High-Tensile Steel Trellis Perimeter Frame with Aluminum Swingarm |
+| Front Suspension | 43mm Inverted Long-Travel Cartridge Forks, 210mm Travel, Fully Adjustable |
+| Rear Suspension | Linkage-Assisted Monoshock, 200mm Travel, Preload & Rebound Adjustable |
+| Braking Setup | Dual 300mm Wave Discs with 2-Piston Calipers / 240mm Rear Disc with Switchable ABS |
+| Wheel Setup | 21-inch Front / 18-inch Rear Wire-Spoked Wheels (Tubeless) |
+| Kerb Weight | 202 kg |
+
+
+## 4. Design and hardware
+
+The aesthetic execution of the KLE650 takes direct inspiration from Dakar rally-raid racers. It features a tall, vertical rally fairing, stacked dual-LED headlights, a clear rally screen, and integrated radiator stone guards. The chassis is a brand-new high-tensile steel perimeter frame engineered specifically to endure repeated offroad impacts and heavy luggage loads. Long-travel suspension is handled by 43mm inverted front cartridge forks delivering 210mm of travel, paired with a rear linkage monoshock offering 200mm of wheel travel. Authentic off-road wire-spoked wheels in 21-inch front and 18-inch rear dimensions are fitted with tubeless dual-sport knobby tires, providing an outstanding 235mm of ground clearance alongside an 850mm rally seat height.
+
+## 5. Features and technology
+
+Technological appointments are tailored for wilderness navigation and durability. The cockpit houses a robust 5.0-inch colour TFT display with high-contrast day/night modes, Bluetooth smartphone connectivity, turn-byturn navigation, and ride telemetry. Electronic rider aids include Kawasaki Traction Control (KTRC) with an 'Off-Road' setting that allows controlled rear wheel spin to power out of deep gravel. The dual-channel ABS includes an intuitive handlebar button that disengages rear-wheel ABS completely for dirt braking control. Standard adventure equipment includes an aluminum engine sump guard, rugged handguards, and a heavyduty rear luggage rack.
+
+## 6. Expected price and market positioning
+
+In European showrooms, the 2027 Kawasaki KLE650 is expected to retail at an attractive introductory price of approximately €8,400 to €8,900, directly targeting the Yamaha Ténéré 700 (€10,500). In India, domestic assembly via the SKD route will enable India Kawasaki Motors to price the KLE650 between Rs 6.80 lakh and Rs 7.40 lakh ex-showroom. Kawasaki will position the KLE650 as a bulletproof, accessible, go-anywhere expedition motorcycle for passionate overland adventure travelers.
+
+## 7. India launch possibility
+
+> [!NOTE]
+> **India Market Status:** Confirmed For India
+
+Confirmed for India. Kawasaki has an established enthusiast following in India for its
+
+650cc twin-cylinder family. Indian adventure riders have long demanded a genuine 21-inch off-road
+
+adventure bike from Kawasaki to bridge the gap between entry-level 450cc singles and heavy liter-class tourers. India Kawasaki Motors confirmed at EICMA that the KLE650 will make its official Indian debut in the third quarter of 2027, distributed through its nationwide dealer network with full expedition accessory support.
+
+## 8. Rivals and alternatives
+
+The Kawasaki KLE650 enters into direct competition against the Yamaha Ténéré 700, the Aprilia Tuareg 660, the Suzuki V-Strom 800DE, and the Royal Enfield Himalayan 750. Compared to the Yamaha Ténéré 700, the KLE650 offers lower ownership costs, tubeless spoked wheels, and more accessible seat height ergonomics, making it a formidable contender in the midweight adventure category.
+
+## 9. Frequently Asked Questions
+
+### Q: How is the KLE650 different from the Versys 650?
+
+While the Versys 650 is a road-biased tourer with 17-inch alloy wheels, the new KLE650 is a true dual-sport adventure bike featuring a 21-inch front wheel, 210mm long-travel suspension, and off-road chassis geometry.
+
+### Q: Does the Kawasaki KLE650 have switchable ABS?
+
+Yes, the KLE650 features dedicated Off-Road ABS modes, allowing the rider to completely deactivate rear-wheel ABS for dirt riding.
+
+### Q: When will the Kawasaki KLE650 launch in India?
+
+India Kawasaki Motors has confirmed the motorcycle will launch in India in the third quarter of 2027 via local SKD assembly.
+
+### Q: What wheel sizes are fitted on the KLE650?
+
+The motorcycle features authentic dirt dimensions: a 21-inch front wheel and an 18-inch rear wheel, equipped with tubeless spoked rims.
+
+## 10. Conclusion
+
+The 2027 Kawasaki KLE650 revealed at EICMA 2026 is precisely the motorcycle dual-sport purists have been demanding for years. By marrying Kawasaki's indestructible 649cc parallel-twin engine with a dedicated offroad chassis, authentic 21/18-inch tubeless spoked wheels, long-travel suspension, and purposeful rally-raid styling, Kawasaki has crafted a formidable adventure weapon. It is poised to become an instant favorite on global trails and Indian Himalayan highways.
+
+## Related EICMA 2026 Motorcycle Coverage
+
+- [2027 Kawasaki Versys 900 Adventure Tourer Unveiled](/blog/auto/kawasaki-versys-900-new-adventure-touring-motorcycle-and-key-features/) — *Kawasaki Versys 900: New Adventure Touring Motorcycle and Key Features*
+- [BMW F 450 GS vs Royal Enfield Himalayan 450](/blog/auto/bmw-f-450-gs-vs-royal-enfield-himalayan-450-engine-features-and-adventure-capabilities/) — *BMW F 450 GS vs Royal Enfield Himalayan 450: Engine, Features and Adventure Capabilities*
+- [Upcoming Bikes in India for 2027](/blog/auto/upcoming-bikes-in-india-for-2027-all-major-motorcycles-revealed-at-eicma-2026/) — *Upcoming Bikes in India for 2027: All Major Motorcycles Revealed at EICMA 2026*
+- [EICMA 2026 Complete Highlights](/blog/auto/eicma-2026-complete-highlights-all-major-motorcycle-and-scooter-reveals/) — *EICMA 2026 Complete Highlights: All Major Motorcycle and Scooter Reveals*
+
+## Authoritative References and Documentation
+
+- [Kawasaki Motors Official Global Portal](https://www.kawasaki.com/)
+- [EICMA 2026 Official Exhibition Directory](https://www.eicma.it/)

@@ -1,0 +1,146 @@
+---
+title: "Norton 450 Urban Unveiled at EICMA 2026: 454cc Engine, 47PS Power and Complete Details"
+seoTitle: "Norton 450 Urban Unveiled at EICMA 2026: Specs & India Plans"
+slug: "norton-450-urban-unveiled-at-eicma-2026-454cc-engine-47ps-power-and-complete-details"
+description: "Norton reveals the 450 Urban at EICMA 2026 featuring a 454cc liquid-cooled engine producing 47 bhp and 45 Nm. Read full specifications and launch details."
+category: "auto"
+tags:
+  - "Auto"
+  - "EICMA 2026"
+  - "Major International Motorcycle Launches"
+  - "Norton"
+  - "Norton 450 Urban"
+  - "Norton EICMA 2026"
+author: "Aniket Thakur"
+datePublished: "2026-11-01"
+dateModified: "2026-11-01"
+coverImage: "/assets/images/blog/norton-450-urban-unveiled-at-eicma-2026-454cc-engine-47ps-power-and-complete-details/cover.svg"
+coverImageAlt: "EICMA 2026 specification matrix and editorial overview for Norton 450 Urban Unveiled at EICMA 2026: 454cc Engine, 47PS Power and Complete Details"
+imageCaption: "Technical specifications, engine architecture, and verified parameters for Norton 450 Urban Unveiled at EICMA 2026: 454cc Engine, 47PS Power and Complete Details unveiled at EICMA 2026."
+draft: false
+featured: false
+seoKeywords: "Norton 450 Urban, Norton EICMA 2026, Norton 454cc, TVS Norton motorcycle, upcoming Norton bikes India, Norton Urban specs, 450cc roadster"
+primaryKeyword: "Norton 450 Urban"
+publishOrder: 4
+quickAnswer:
+  question: "Norton 450 Urban Unveiled at EICMA 2026: 454cc Engine, 47PS Power and Complete Details: Direct Launch & Specification Verdict"
+  answer: "Norton reveals the 450 Urban at EICMA 2026 featuring a 454cc liquid-cooled engine producing 47 bhp and 45 Nm. Read full specifications and launch details."
+  facts:
+    - label: "Engine Type"
+      value: "454cc, Liquid-Cooled, Single-Cylinder, D"
+    - label: "Maximum Power"
+      value: "47 bhp (47.6 PS) @ 8,000 rpm"
+    - label: "Peak Torque"
+      value: "45 Nm @ 6,000 rpm"
+    - label: "Transmission"
+      value: "6-Speed with Slipper Clutch & Bi-directi"
+  goodFor:
+    - "Motorcycle enthusiasts comparing verified EICMA 2026 technical specifications."
+    - "Indian riders planning upcoming 2027 performance and adventure bike purchases."
+  watchFor:
+    - "Commercial dealership availability and final on-road pricing subject to official rollout."
+    - "Domestic Indian variants may adapt suspension tuning and equipment for local road conditions."
+  note: "EICMA 2026 Milan Exhibition Archive \u00b7 Verified Technical Specifications"
+faqItems:
+  - question: "Who owns Norton Motorcycles now?"
+    answer: "Norton Motorcycles is wholly owned by TVS Motor Company, one of India's largest and most technologically advanced automotive manufacturers."
+  - question: "What engine powers the Norton 450 Urban?"
+    answer: "It is powered by a new 454cc, liquid-cooled, single-cylinder DOHC engine producing 47 bhp and 45 Nm of torque."
+  - question: "Will the Norton 450 Urban launch in India?"
+    answer: "Yes, there is strong evidence supporting an Indian launch in late 2027, leveraging TVS's Hosur manufacturing base."
+  - question: "What variants of the 450 Urban will be available?"
+    answer: "Norton will offer two variants: the road-focused Urban Roadster and the adventure-styled Urban Scrambler."
+sources:
+  - title: "Norton Motorcycles Official Portal"
+    url: "https://www.nortonmotorcycles.com/"
+  - title: "EICMA 2026 Official Exhibition Directory"
+    url: "https://www.eicma.it/"
+showSources: true
+---
+
+## 1. Introduction
+
+Historic British brand Norton Motorcycles, operating under the ownership and strategic investment of India's TVS Motor Company, has unveiled the all-new Norton 450 Urban at EICMA 2026 in Milan. Signifying Norton's strategic entry into the lucrative global A2-licence sub-500cc segment, the 450 Urban marks a profound philosophical pivot from low-volume bespoke hyperbikes toward accessible, premium urban motorcycling. Built around a state-of-the-art 454cc liquid-cooled single-cylinder powertrain, the motorcycle will be offered in two distinct guises: the minimalist Urban Roadster and the rugged Urban Scrambler. Combining Norton's legendary British industrial design ethos with TVS's manufacturing scale and engineering precision, the 450 Urban stands as one of the most commercially vital unveils of EICMA 2026.
+
+## 2. Launch and Availability
+
+The Norton 450 Urban made its public debut on November 3, 2026, at the Fiera Milano showroom grounds. Norton announced that customer deliveries in the United Kingdom and key European export markets will commence in mid-2027. Production will follow a dual-location strategy, with high-volume precision component manufacturing and engine assembly anchored at TVS's Hosur facility in India, while Europeanspec final assembly takes place at Norton's Solihull headquarters in England. For the Indian market, commercial release is slated for late 2027, marking the official vanguard of Norton's retail re-entry into the subcontinent.
+
+## 3. Engine and Performance
+
+Propelling both variants of the Norton 450 Urban is an all-new 454cc, liquid-cooled, single-cylinder, fourvalve DOHC engine. Designed specifically to deliver linear low-to-midrange thrust tailored for congested urban environments, the motor develops a verified 47 bhp (47.6 PS) at 8,000 rpm and 45 Nm of peak torque at 6,000 rpm. The powerplant complies strictly with European A2 power-to-weight limits and Euro 5+ emission thresholds. Power is routed through a six-speed transmission paired with an assist-and-slipper clutch and a factory-fitted bi-directional quickshifter. Norton's engineering team emphasized vibration dampening, employing dual counterbalancer shafts to ensure silk-smooth operation even at highway speeds.
+
+| Specification Attribute | Technical Details & Verified Parameters |
+| :--- | :--- |
+| Engine Type | 454cc, Liquid-Cooled, Single-Cylinder, DOHC 4-Valve |
+| Maximum Power | 47 bhp (47.6 PS) @ 8,000 rpm |
+| Peak Torque | 45 Nm @ 6,000 rpm |
+| Transmission | 6-Speed with Slipper Clutch & Bi-directional Quickshifter |
+| Chassis | Lightweight Tubular Steel Trellis with Aluminum Swingarm |
+| Front Suspension | 43mm Inverted Upside-Down Forks |
+| Rear Suspension | Preload-Adjustable Monoshock |
+| Braking Setup | 320mm Front Disc with Radial 4-Piston Caliper / 240mm Rear Disc |
+| Fuel Capacity | 12.0 Litres |
+| Kerb Weight | Under 180 kg (Target 176 kg) |
+
+
+## 4. Design and hardware
+
+The aesthetic execution of the 450 Urban reflects modern British minimalism. It features clean, chiseled body lines, an authentic teardrop-profile fuel tank with signature Norton recessed emblems, and a short, bobbed tail section. The Urban Roadster variant utilizes 17-inch cast alloy wheels with low-profile Michelin road tires, an underslung exhaust system, and flat handlebar ergonomics. In contrast, the Urban Scrambler variant gains wire-spoked wheels (19-inch front, 17-inch rear), dual-sport block tires, a raised side-exit exhaust canister, protective brush guards, and wider handlebars. Both variants utilize a lightweight tubular steel trellis frame that keeps overall kerb weight under 180 kg.
+
+## 5. Features and technology
+
+Technological appointments are premium yet restrained to preserve the bike's uncluttered cockpit. A highresolution 5.0-inch TFT display provides smartphone connectivity, turn-by-turn navigation, and ride data telemetry. The electronics package incorporates electronic ride-by-wire throttle actuation, offering two riding modes: Urban and Rain. Dual-channel ABS developed by Continental features rear-wheel deactivation on the Scrambler version. Lighting is full-LED with a striking circular daytime running light ring. A discreet USB-C port is integrated into the steering headstock for mobile charging on the move.
+
+## 6. Expected price and market positioning
+
+In the UK, Norton targets an introductory retail price of approximately £5,600, while European retail pricing is projected around €6,400. In India, TVS's complete domestic manufacturing footprint will enable an astonishingly competitive pricing structure. Industry insiders anticipate an ex-showroom price between Rs 3.10 lakh and Rs 3.50 lakh. Norton will position the 450 Urban as a sophisticated boutique alternative to mass-market single-cylinder machines, targeting discerning urban commuters and design-conscious riders.
+
+## 7. India launch possibility
+
+> [!NOTE]
+> **India Market Status:** Strong Possibility, Supported By Evidence
+
+Strong possibility, supported by evidence. TVS Motor
+
+Company, which owns 100 percent of Norton, has publicly affirmed plans to introduce the Norton brand to Indian showrooms through exclusive boutique retail lounges located in Tier-1 metropolitan cities. With the powertrain and frame developed and manufactured directly at TVS's Hosur facility in Tamil Nadu, an Indian
+
+market launch is commercially logical. Trial assembly and testing on Indian roads are expected to culminate in an official domestic launch in late 2027 following the initial European market rollout.
+
+## 8. Rivals and alternatives
+
+The Norton 450 Urban will directly confront the Triumph Speed 400 and Scrambler 400X, the Royal Enfield Guerrilla 450, the BMW G 310 R, and the Husqvarna Svartpilen 401. Norton aims to distinguish the 450 Urban through its bespoke British styling, higher torque output (45 Nm versus 37.5 Nm on the Triumph 400), standard bi-directional quickshifter, and the aristocratic prestige associated with the historic Norton emblem.
+
+## 9. Frequently Asked Questions
+
+### Q: Who owns Norton Motorcycles now?
+
+Norton Motorcycles is wholly owned by TVS Motor Company, one of India's largest and most technologically advanced automotive manufacturers.
+
+### Q: What engine powers the Norton 450 Urban?
+
+It is powered by a new 454cc, liquid-cooled, single-cylinder DOHC engine producing 47 bhp and 45 Nm of torque.
+
+### Q: Will the Norton 450 Urban launch in India?
+
+Yes, there is strong evidence supporting an Indian launch in late 2027, leveraging TVS's Hosur manufacturing base.
+
+### Q: What variants of the 450 Urban will be available?
+
+Norton will offer two variants: the road-focused Urban Roadster and the adventure-styled Urban Scrambler.
+
+## 10. Conclusion
+
+The Norton 450 Urban unveiled at EICMA 2026 marks the dawn of a transformative era for Norton Motorcycles. By merging TVS's exceptional industrial capabilities with Norton's storied British design heritage, the 450 Urban delivers a highly compelling, 47 bhp roadster and scrambler package. For riders seeking exclusivity, robust torque, and modern technology in an accessible package, the Norton 450 Urban represents the most exciting modern-classic single-cylinder debut of the year.
+
+## Related EICMA 2026 Motorcycle Coverage
+
+- [Royal Enfield Continental GT 750 Revealed at EICMA 2026](/blog/auto/royal-enfield-continental-gt-750-new-750cc-cafe-racer-revealed-at-eicma-2026/) — *Royal Enfield Continental GT 750: New 750cc Café Racer Revealed at EICMA 2026*
+- [Royal Enfield Himalayan 750 vs Continental GT 750 Compared](/blog/auto/royal-enfield-himalayan-750-vs-continental-gt-750-engine-purpose-and-key-differences/) — *Royal Enfield Himalayan 750 vs Continental GT 750: Engine, Purpose and Key Differences*
+- [Upcoming Bikes in India for 2027](/blog/auto/upcoming-bikes-in-india-for-2027-all-major-motorcycles-revealed-at-eicma-2026/) — *Upcoming Bikes in India for 2027: All Major Motorcycles Revealed at EICMA 2026*
+- [EICMA 2026 Complete Highlights](/blog/auto/eicma-2026-complete-highlights-all-major-motorcycle-and-scooter-reveals/) — *EICMA 2026 Complete Highlights: All Major Motorcycle and Scooter Reveals*
+
+## Authoritative References and Documentation
+
+- [Norton Motorcycles Official Portal](https://www.nortonmotorcycles.com/)
+- [EICMA 2026 Official Exhibition Directory](https://www.eicma.it/)

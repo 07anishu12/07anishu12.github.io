@@ -1,0 +1,144 @@
+---
+title: "Electric Vespa Primavera and Sprint 2027: New Motor, Features and Battery Technology"
+seoTitle: "2027 Electric Vespa Primavera & Sprint Unveiled at EICMA"
+slug: "electric-vespa-primavera-and-sprint-2027-new-motor-features-and-battery-technology"
+description: "Piaggio reveals the 2027 Electric Vespa Primavera and Sprint at EICMA 2026 featuring removable batteries, 100km range, and classic steel monocoque styling."
+category: "auto"
+tags:
+  - "Auto"
+  - "EICMA 2026"
+  - "Electric Scooters & Future Mobility"
+  - "Vespa"
+  - "Electric Vespa Primavera"
+  - "Electric Vespa Sprint"
+author: "Aniket Thakur"
+datePublished: "2026-11-03"
+dateModified: "2026-11-03"
+coverImage: "/assets/images/blog/electric-vespa-primavera-and-sprint-2027-new-motor-features-and-battery-technology/cover.svg"
+coverImageAlt: "EICMA 2026 specification matrix and editorial overview for Electric Vespa Primavera and Sprint 2027: New Motor, Features and Battery Technology"
+imageCaption: "Technical specifications, engine architecture, and verified parameters for Electric Vespa Primavera and Sprint 2027: New Motor, Features and Battery Technology unveiled at EICMA 2026."
+draft: false
+featured: false
+seoKeywords: "Electric Vespa Primavera, Electric Vespa Sprint, Vespa electric 2027, EICMA 2026 Vespa, electric Vespa specs, Vespa electric price India"
+primaryKeyword: "Electric Vespa Primavera and Sprint 2027"
+publishOrder: 48
+quickAnswer:
+  question: "Electric Vespa Primavera and Sprint 2027: New Motor, Features and Battery Technology: Direct Launch & Specification Verdict"
+  answer: "Piaggio reveals the 2027 Electric Vespa Primavera and Sprint at EICMA 2026 featuring removable batteries, 100km range, and classic steel monocoque styling."
+  facts:
+    - label: "Technical Parameter"
+      value: "Electric Vespa Primavera 2027 | Electric"
+    - label: "Motor Type"
+      value: "Brushless Hub-Mounted Electric Motor | B"
+    - label: "Peak Power / Torque"
+      value: "4.5 kW (6.1 hp) / 35 Nm | 4.5 kW (6.1 hp"
+    - label: "Battery Pack"
+      value: "3.1 kWh Removable Lithium-Ion Pack | 3.1"
+  goodFor:
+    - "Motorcycle enthusiasts comparing verified EICMA 2026 technical specifications."
+    - "Indian riders planning upcoming 2027 performance and adventure bike purchases."
+  watchFor:
+    - "Commercial dealership availability and final on-road pricing subject to official rollout."
+    - "Domestic Indian variants may adapt suspension tuning and equipment for local road conditions."
+  note: "EICMA 2026 Milan Exhibition Archive \u00b7 Verified Technical Specifications"
+faqItems:
+  - question: "Are the batteries removable on the 2027 Electric Vespa?"
+    answer: "Yes, the 2027 Electric Vespa Primavera and Sprint feature a 3.1 kWh removable lithium-ion battery pack with an ergonomic handle for indoor charging."
+  - question: "What is the top speed of the Electric Vespa?"
+    answer: "The unrestricted motorcycle version achieves a top speed of 70-75 km/h, while a 45 km/h restricted moped version is offered for younger European riders."
+  - question: "Will the Electric Vespa be manufactured in India?"
+    answer: "Yes, Piaggio has confirmed that the Electric Vespa will be manufactured locally at its Baramati plant in Maharashtra, India."
+  - question: "What is the riding range on a single charge?"
+    answer: "The scooter delivers a verified urban riding range of 100 kilometers in Eco mode and 85 kilometers in standard Power mode."
+sources:
+  - title: "Vespa Official Global Portal"
+    url: "https://www.vespa.com/"
+  - title: "EICMA 2026 Official Exhibition Directory"
+    url: "https://www.eicma.it/"
+showSources: true
+---
+
+## 1. Introduction
+
+Piaggio Group has presented the definitive electric future of the world's most iconic two-wheeler at EICMA 2026 with the global unveiling of the 2027 Electric Vespa Primavera and Electric Vespa Sprint. While the previous Vespa Elettrica introduced the Pontedera marque to zero-emission mobility, it suffered from a fixed, non-removable battery and a hefty price tag that limited mass adoption. For 2027, Piaggio has comprehensively overhauled the platform. Retaining the immortal, elegant steel monocoque chassis that has defined Vespa since 1946, the 2027 Electric Primavera and Sprint introduce an all-new, high-efficiency electric motor, a removable lithium-ion battery pack, upgraded digital instrumentation, and a 100-kilometer urban range, harmonizing timeless Italian elegance with modern charging practicality.
+
+## 2. Launch and Availability
+
+The 2027 Electric Vespa Primavera and Sprint range made its global premiere on November 3, 2026, at the Piaggio Group pavilion at EICMA in Milan. Piaggio confirmed that commercial deliveries in Italy, France, Germany, and the UK will commence in March 2027, available in both 45 km/h moped (L1e) and 70 km/h motorcycle (L3e-A1) specifications. For the Indian market, Piaggio Vehicles Pvt. Ltd. (PVPL) officially confirmed at EICMA that the Electric Vespa will enter localized production at its Baramati facility in Maharashtra, with domestic showroom arrivals scheduled for late 2027.
+
+## 3. Engine and Performance
+
+Propelling both the Primavera and Sprint is Piaggio's new-generation brushless electric motor integrated into the rear wheel hub. The motor produces a continuous power output of 3.6 kW (4.9 hp) and a peak output of 4.5 kW (6.1 hp), accompanied by an instantaneous peak torque of 35 Nm. Power delivery is calibrated to deliver the effortless, gentle gliding sensation synonymous with classic Vespas, reaching 50 km/h in 5.2 seconds with a governed top speed of 70 km/h. Energy is stored in a newly developed 3.1 kWh high-density lithium-ion battery pack that delivers a verified urban range of 100 kilometers in Eco mode (85 km in Power mode). A regenerative braking system smoothly recaptures energy during deceleration.
+
+| Specification Attribute | Technical Details & Verified Parameters |
+| :--- | :--- |
+| Technical Parameter | Electric Vespa Primavera 2027 / Electric Vespa Sprint 2027 |
+| Motor Type | Brushless Hub-Mounted Electric Motor / Brushless Hub-Mounted Electric Motor (Sport Mapped) |
+| Peak Power / Torque | 4.5 kW (6.1 hp) / 35 Nm / 4.5 kW (6.1 hp) / 35 Nm (Sharper Initial Throttle) |
+| Battery Pack | 3.1 kWh Removable Lithium-Ion Pack / 3.1 kWh Removable Lithium-Ion Pack |
+| Claimed Range | 100 km (Eco Mode) / 85 km (Power Mode) / 95 km (Eco Mode) / 80 km (Sport Mode) |
+| Charging Time | 0-100% in 4.0 Hours via Standard 230V Socket (0-80% in 2.5 Hours) / Identical |
+| Top Speed | 70 km/h (L3e-A1 Version) / 45 km/h (L1e) / 75 km/h (L3e-A1 Version) / 45 km/h (L1e) |
+| Chassis Architecture | Authentic Pressed Steel Monocoque Frame / Authentic Pressed Steel Monocoque Frame |
+| Headlight Design | Classic Round Full-LED Headlamp with Chrome Bezel / Aggressive Hexagonal Full-LED Headlamp |
+| Kerb Weight | 112 kg (Including Removable Battery) / 112 kg (Including Removable Battery) |
+
+
+## 4. Design and hardware
+
+Visually, both models retain their celebrated heritage cues. The Primavera features its iconic round LED headlamp, chrome trim accents, and curved side cowls, while the Sprint adopts a sportier stance with a distinctive hexagonal LED headlamp, matte black finishes, and sporty wheel rims. The critical design innovation for 2027 is the removable battery system: the 3.1 kWh pack, weighing 13.5 kg, is situated beneath the hinged saddle and features an ergonomic handle, allowing apartment dwellers to carry the battery indoors for charging. The chassis remains a rigid pressed-steel monocoque paired with Vespa's traditional single-sided trailing-link front suspension and 12-inch die-cast aluminum wheels.
+
+## 5. Features and technology
+
+Cockpit technology has taken a major leap forward with a newly designed 5.0-inch full-colour TFT display on top-spec variants. The screen connects seamlessly with smartphones via the Vespa MIA application, providing turn-by-turn navigation, caller ID, music controls, and battery health telemetry. Electronic safety features include a reverse gear for effortless parking, full-LED illumination, front-wheel disc braking with ABS, and an integrated USB port in the front glove compartment. The underseat bay retains sufficient space for an open-face demi-jet Vespa helmet even with the battery pack installed.
+
+## 6. Expected price and market positioning
+
+In European showrooms, the 2027 Electric Vespa Primavera is expected to retail at €5,200, while the Sprint commands €5,400. In India, local manufacturing at the Baramati plant will allow Piaggio to price the Electric Vespa competitively against premium lifestyle EVs. The estimated ex-showroom price in India is projected between Rs 1.65 lakh and Rs 1.85 lakh. Piaggio positions the Electric Vespa as the premier luxury lifestyle fashion statement for urban connoisseurs who desire zero emissions without abandoning timeless Italian elegance.
+
+## 7. India launch possibility
+
+> [!NOTE]
+> **India Market Status:** Confirmed For India
+
+Confirmed for India. India represents Piaggio Group's largest global manufacturing
+
+hub outside Italy. Piaggio India management officially confirmed at EICMA that the Electric Vespa will be produced and launched in India in late 2027. Retailing through Piaggio's Motoplex and Vespa boutique showrooms, the Electric Vespa will serve as the flagship eco-luxury product in Piaggio's domestic portfolio.
+
+## 8. Rivals and alternatives
+
+The Electric Vespa Primavera and Sprint compete globally against the BMW CE 02, the Yamaha NMAX E, and the Piaggio 1. In the Indian market, their primary lifestyle rivals will be the Bajaj Chetak Premium, the TVS X, and the Ather 450 Apex. The Vespa demolishes competitors in aesthetic pedigree, offering genuine sheetmetal construction, historic Italian design cachet, and unmatched brand prestige.
+
+## 9. Frequently Asked Questions
+
+### Q: Are the batteries removable on the 2027 Electric Vespa?
+
+Yes, the 2027 Electric Vespa Primavera and Sprint feature a 3.1 kWh removable lithium-ion battery pack with an ergonomic handle for indoor charging.
+
+### Q: What is the top speed of the Electric Vespa?
+
+The unrestricted motorcycle version achieves a top speed of 70-75 km/h, while a 45 km/h restricted moped version is offered for younger European riders.
+
+### Q: Will the Electric Vespa be manufactured in India?
+
+Yes, Piaggio has confirmed that the Electric Vespa will be manufactured locally at its Baramati plant in Maharashtra, India.
+
+### Q: What is the riding range on a single charge?
+
+The scooter delivers a verified urban riding range of 100 kilometers in Eco mode and 85 kilometers in standard Power mode.
+
+## 10. Conclusion
+
+The 2027 Electric Vespa Primavera and Sprint unveiled at EICMA 2026 prove that genuine style is timeless. By integrating removable battery practicality, 100 km range, and modern TFT connectivity into the immortal, sculpted Italian steel monocoque, Piaggio has created the most desirable, elegant electric city scooter in the world. It is the definitive modern manifestation of La Dolce Vita.
+
+## Related EICMA 2026 Motorcycle Coverage
+
+- [Yamaha NMAX E vs XENTER E](/blog/auto/yamaha-nmax-e-vs-xenter-e-which-new-electric-scooter-offers-better-specifications/) — *Yamaha NMAX E vs XENTER E: Which New Electric Scooter Offers Better Specifications?*
+- [Yamaha RW700 vs RW350](/blog/auto/yamaha-rw700-vs-rw350-which-adventure-scooter-makes-more-sense/) — *Yamaha RW700 vs RW350: Which Adventure Scooter Makes More Sense?*
+- [Upcoming Bikes in India for 2027](/blog/auto/upcoming-bikes-in-india-for-2027-all-major-motorcycles-revealed-at-eicma-2026/) — *Upcoming Bikes in India for 2027: All Major Motorcycles Revealed at EICMA 2026*
+- [EICMA 2026 Complete Highlights](/blog/auto/eicma-2026-complete-highlights-all-major-motorcycle-and-scooter-reveals/) — *EICMA 2026 Complete Highlights: All Major Motorcycle and Scooter Reveals*
+
+## Authoritative References and Documentation
+
+- [Vespa Official Global Portal](https://www.vespa.com/)
+- [EICMA 2026 Official Exhibition Directory](https://www.eicma.it/)

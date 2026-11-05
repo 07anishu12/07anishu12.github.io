@@ -1,0 +1,146 @@
+---
+title: "Aprilia SR GT 200 2027: What's New in the Updated Urban Adventure Scooter?"
+seoTitle: "2027 Aprilia SR GT 200 Adventure Scooter Unveiled"
+slug: "aprilia-sr-gt-200-2027-whats-new-in-the-updated-urban-adventure-scooter"
+description: "Aprilia unveils the updated 2027 SR GT 200 at EICMA 2026 featuring a 174cc liquid-cooled engine, 17.4 hp, long-travel Showa forks, and crossover styling."
+category: "auto"
+tags:
+  - "Auto"
+  - "EICMA 2026"
+  - "European & Italian Motorcycle Launches"
+  - "Aprilia"
+  - "Aprilia SR GT 200 2027"
+  - "SR GT 200 EICMA"
+author: "Aniket Thakur"
+datePublished: "2026-11-02"
+dateModified: "2026-11-02"
+coverImage: "/assets/images/blog/aprilia-sr-gt-200-2027-whats-new-in-the-updated-urban-adventure-scooter/cover.svg"
+coverImageAlt: "EICMA 2026 specification matrix and editorial overview for Aprilia SR GT 200 2027: What's New in the Updated Urban Adventure Scooter?"
+imageCaption: "Technical specifications, engine architecture, and verified parameters for Aprilia SR GT 200 2027: What's New in the Updated Urban Adventure Scooter? unveiled at EICMA 2026."
+draft: false
+featured: false
+seoKeywords: "Aprilia SR GT 200 2027, SR GT 200 EICMA, Aprilia adventure scooter, 174cc urban scooter, upcoming Aprilia scooters, SR GT 200 specs"
+primaryKeyword: "Aprilia SR GT 200 2027"
+publishOrder: 31
+quickAnswer:
+  question: "Aprilia SR GT 200 2027: What's New in the Updated Urban Adventure Scooter?: Direct Launch & Specification Verdict"
+  answer: "Aprilia unveils the updated 2027 SR GT 200 at EICMA 2026 featuring a 174cc liquid-cooled engine, 17.4 hp, long-travel Showa forks, and crossover styling."
+  facts:
+    - label: "Engine Type"
+      value: "174cc, Liquid-Cooled, Single-Cylinder, S"
+    - label: "Maximum Power"
+      value: "17.4 hp (13 kW) @ 8,500 rpm"
+    - label: "Peak Torque"
+      value: "16.5 Nm @ 7,000 rpm"
+    - label: "Transmission"
+      value: "CVT Automatic with RISS Start & Stop Sys"
+  goodFor:
+    - "Motorcycle enthusiasts comparing verified EICMA 2026 technical specifications."
+    - "Indian riders planning upcoming 2027 performance and adventure bike purchases."
+  watchFor:
+    - "Commercial dealership availability and final on-road pricing subject to official rollout."
+    - "Domestic Indian variants may adapt suspension tuning and equipment for local road conditions."
+  note: "EICMA 2026 Milan Exhibition Archive \u00b7 Verified Technical Specifications"
+faqItems:
+  - question: "What is the top speed of the Aprilia SR GT 200?"
+    answer: "The SR GT 200 achieves a top speed of approximately 115 km/h, making it fully capable of highway cruising."
+  - question: "How much power does the 174cc engine produce?"
+    answer: "The liquid-cooled 4-valve i-get engine produces 17.4 hp at 8,500 rpm and 16.5 Nm of peak torque at 7,000 rpm."
+  - question: "What is the ground clearance of the SR GT 200?"
+    answer: "It features an exceptional 175 mm ground clearance, allowing it to clear steep speed humps and rocky unpaved paths easily."
+  - question: "Will the Aprilia SR GT 200 be sold in India?"
+    answer: "Piaggio India has strong interest in launching the SR GT 200 domestically, with expected availability in late 2027 via local assembly."
+sources:
+  - title: "Aprilia Official Global Portal"
+    url: "https://www.aprilia.com/"
+  - title: "EICMA 2026 Official Exhibition Directory"
+    url: "https://www.eicma.it/"
+showSources: true
+---
+
+## 1. Introduction
+
+Aprilia has amplified its urban adventure scooter lineup at EICMA 2026 by unveiling the thoroughly updated 2027 Aprilia SR GT 200. Slotting above the 125cc commuter model, the SR GT 200 delivers the additional displacement, highway velocity, and two-up touring reserves demanded by suburban commuters and weekend tourers. For 2027, Aprilia has refined the 174cc liquid-cooled i-get single-cylinder engine, fitted upgraded petal disc brakes with Bosch ABS, retuned the long-travel Showa suspension, and introduced striking matte graphics inspired by Aprilia Factory racing liveries. Combining genuine crossover rough-road resilience with motorcycle-grade agility, the 2027 SR GT 200 offers the ultimate blend of weekday utility and weekend adventure escape.
+
+## 2. Launch and Availability
+
+The 2027 Aprilia SR GT 200 was officially unveiled on November 3, 2026, at the Piaggio Group pavilion during EICMA in Milan. Aprilia confirmed that series production is underway, with European showroom deliveries commencing in March 2027 across standard and SR GT 200 Sport trims. Global export shipments to Japan, Southeast Asia, and Australia will follow in summer 2027. Regarding the Indian market, Piaggio Vehicles Pvt. Ltd. (PVPL) has confirmed that it is actively evaluating bringing the 200cc platform to India via local assembly in late 2027 to cater to the growing appetite for premium maxi-scooters.
+
+## 3. Engine and Performance
+
+Powering the SR GT 200 is Piaggio's modern 174cc, liquid-cooled, four-stroke, single-cylinder i-get engine with SOHC and a four-valve cylinder head. Engineered with an aluminum cylinder, Nikasil coating, and a lightweight piston, the engine produces an energetic 17.4 hp (13 kW) at 8,500 rpm and 16.5 Nm of peak torque at 7,000 rpm. The torque curve is broad and responsive, providing brisk passing acceleration on 100 km/h ring-road highways. The powertrain features the RISS (Regulator Inverter Start & Stop) system, which eliminates the conventional starter motor to provide silent engine restarts while delivering a thrifty fuel economy rating of 38.5 km/l on the WMTC cycle. A reinforced continuously variable transmission (CVT) ensures seamless, responsive drive.
+
+| Specification Attribute | Technical Details & Verified Parameters |
+| :--- | :--- |
+| Engine Type | 174cc, Liquid-Cooled, Single-Cylinder, SOHC 4-Valve i-get |
+| Maximum Power | 17.4 hp (13 kW) @ 8,500 rpm |
+| Peak Torque | 16.5 Nm @ 7,000 rpm |
+| Transmission | CVT Automatic with RISS Start & Stop System |
+| Fuel Efficiency | 38.5 km/l (WMTC Claimed) / 340+ km Range |
+| Front Suspension | 33mm Showa Telescopic Hydraulic Forks, 122mm Travel |
+| Rear Suspension | Twin Showa Shock Absorbers, 5-Step Preload Adjustable, 102mm Travel |
+| Braking Setup | 260mm Front Petal Wave Disc with Bosch ABS / 220mm Rear Wave Disc |
+| Wheel Setup | 14-inch Front / 13-inch Rear Alloy Wheels with All-Terrain Tires |
+| Kerb Weight | 148 kg (Road-Ready) |
+
+
+## 4. Design and hardware
+
+The 2027 SR GT 200 embodies aggressive crossover styling. The front apron features a menacing full-LED tri-headlight assembly derived from the RS 660, crowned by a tall, dark-tinted touring windscreen that deflects buffeting wind at speed. Wide, naked aluminum handlebars provide commanding steering leverage across rough roads and dense traffic. The high-rigidity steel double-cradle frame is paired with long-travel suspension consisting of 33mm Showa front forks with 122mm of travel and twin Showa rear shocks providing 102mm of travel. Generous 175mm ground clearance, an integrated engine bash plate, and allterrain tires ensure that rough cobblestones, broken tarmac, and unpaved gravel detours pose zero threat.
+
+## 5. Features and technology
+
+The cockpit houses a high-contrast digital LCD instrument panel that integrates seamlessly with smartphones via the Aprilia MIA multimedia system. When connected, the display alerts the rider to incoming phone calls, messages, and allows turn-by-turn navigation prompts. Underseat storage is generous at 25 litres, equipped with an interior courtesy light and ample room for a full-face helmet plus riding gear. A secondary 9.0-litre central fuel tank is placed within the floorboard tunnel to optimize the center of gravity while providing a long-distance touring range exceeding 340 kilometers. A weather-sealed front glove compartment houses a fast-charging USB port.
+
+## 6. Expected price and market positioning
+
+In European showrooms, the 2027 Aprilia SR GT 200 is priced at approximately €4,499 for the standard version and €4,699 for the Sport edition, positioned as a high-performance urban crossover competing against the Honda ADV350. In India, local assembly at Piaggio's Baramati plant would enable an estimated ex-showroom price between Rs 1.70 lakh and Rs 1.95 lakh. Aprilia will position the SR GT 200 as a premium lifestyle crossover scooter for enthusiasts seeking the power of a 200cc motorcycle with step-through comfort.
+
+## 7. India launch possibility
+
+> [!NOTE]
+> **India Market Status:** Strong Possibility, Supported By Evidence
+
+Strong possibility, supported by evidence. Piaggio India
+
+already manufactures the 160cc i-get engine locally and has indicated plans to upgrade its performance scooter portfolio to 200cc to combat the Yamaha Aerox 155. Reliable automotive reports in India indicate that
+
+Piaggio has registered the SR GT 200 design with domestic patent authorities, paving the way for a potential commercial launch in late 2027.
+
+## 8. Rivals and alternatives
+
+In the global marketplace, the Aprilia SR GT 200 competes with the Kymco DT X125/360 and the Honda ADV160 / ADV350. In India, its closest performance rival would be the Yamaha Aerox 155. Against the Aerox 155, the SR GT 200 delivers more horsepower (17.4 hp vs 15 hp), greater torque (16.5 Nm vs 13.9 Nm), superior ground clearance (175mm vs 145mm), and longer-travel Showa suspension.
+
+## 9. Frequently Asked Questions
+
+### Q: What is the top speed of the Aprilia SR GT 200?
+
+The SR GT 200 achieves a top speed of approximately 115 km/h, making it fully capable of highway cruising.
+
+### Q: How much power does the 174cc engine produce?
+
+The liquid-cooled 4-valve i-get engine produces 17.4 hp at 8,500 rpm and 16.5 Nm of peak torque at 7,000 rpm.
+
+### Q: What is the ground clearance of the SR GT 200?
+
+It features an exceptional 175 mm ground clearance, allowing it to clear steep speed humps and rocky unpaved paths easily.
+
+### Q: Will the Aprilia SR GT 200 be sold in India?
+
+Piaggio India has strong interest in launching the SR GT 200 domestically, with expected availability in late 2027 via local assembly.
+
+## 10. Conclusion
+
+The 2027 Aprilia SR GT 200 unveiled at EICMA 2026 is an exceptional blend of urban practical luxury and rugged crossover versatility. With 17.4 hp of liquid-cooled punch, long-travel Showa suspension, generous 175mm ground clearance, and aggressive Noale racing styling, the SR GT 200 proves that daily commuting can be an exhilarating, go-anywhere adventure.
+
+## Related EICMA 2026 Motorcycle Coverage
+
+- [2027 Aprilia SR GT 125 Adventure Scooter Unveiled](/blog/auto/aprilia-sr-gt-125-2027-new-design-features-and-scooter-updates/) — *Aprilia SR GT 125 2027: New Design, Features and Scooter Updates*
+- [Norton 450 Urban vs Hero XPulse 450 Compared](/blog/auto/norton-450-urban-vs-hero-xpulse-450-what-indian-buyers-should-know/) — *Norton 450 Urban vs Hero XPulse 450: What Indian Buyers Should Know*
+- [Upcoming Bikes in India for 2027](/blog/auto/upcoming-bikes-in-india-for-2027-all-major-motorcycles-revealed-at-eicma-2026/) — *Upcoming Bikes in India for 2027: All Major Motorcycles Revealed at EICMA 2026*
+- [Yamaha Y-AMT Explained](/blog/auto/yamaha-y-amt-explained-how-automated-manual-transmission-works-on-the-rw700/) — *Yamaha Y-AMT Explained: How Automated Manual Transmission Works on the RW700*
+
+## Authoritative References and Documentation
+
+- [Aprilia Official Global Portal](https://www.aprilia.com/)
+- [EICMA 2026 Official Exhibition Directory](https://www.eicma.it/)
