@@ -719,6 +719,18 @@ export async function POST(request: Request) {
       );
     } else {
       console.error("Google Sheets sync failed:", sheetsResult.error);
+      return NextResponse.json(
+        {
+          ok: false,
+          error: {
+            code: "SHEETS_SYNC_ERROR",
+            message:
+              "The enquiry service could not sync with Google Sheets (OAuth token expired). Please connect directly via WhatsApp in the meantime.",
+            details: sheetsResult.error,
+          },
+        },
+        { status: 502 },
+      );
     }
   }
 

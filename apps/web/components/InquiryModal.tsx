@@ -469,7 +469,7 @@ export function InquiryModal() {
             aria-busy={isSubmitting}
           >
             {/* Honeypot field for bot suppression */}
-            <div className="lead-honeypot" aria-hidden="true">
+            <div className="lead-honeypot" style={{ display: "none" }} aria-hidden="true">
               <label>
                 Leave this blank:
                 <input
@@ -498,13 +498,47 @@ export function InquiryModal() {
                   background: "#fef2f2",
                   border: "1px solid #fecaca",
                   borderRadius: 10,
-                  padding: "12px 14px",
+                  padding: "14px 16px",
                   color: "#991b1b",
-                  fontSize: "0.85rem",
-                  lineHeight: 1.45,
+                  fontSize: "0.875rem",
+                  lineHeight: 1.5,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
                 }}
               >
-                <strong>Submission alert:</strong> {errorMessage}
+                <div>
+                  <strong>Submission alert:</strong> {errorMessage}
+                </div>
+                <div>
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                      `Hi Aniket, I was trying to submit an enquiry on your website${
+                        activeType === "automotive" && autoValues.vehicleModel
+                          ? ` for ${autoValues.vehicleModel}`
+                          : ""
+                      }.`,
+                    )}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button button-primary"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                      fontSize: "0.85rem",
+                      padding: "8px 16px",
+                      background: "#25D366",
+                      borderColor: "#25D366",
+                      color: "#FFFFFF",
+                      textDecoration: "none",
+                      borderRadius: 8,
+                      fontWeight: 600,
+                    }}
+                  >
+                    Connect directly on WhatsApp ↗
+                  </a>
+                </div>
               </div>
             )}
 
