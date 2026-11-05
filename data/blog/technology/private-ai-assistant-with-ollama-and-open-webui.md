@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/private-ai-assistant-with-ollama-and-open-webui/
 coverImageAlt: Diagram explaining private AI assistant
 imageCaption: Original explanatory diagram showing private AI assistant and its
   main decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: Ollama FAQ

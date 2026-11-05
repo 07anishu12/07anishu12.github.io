@@ -16,7 +16,7 @@ dateModified: 2026-10-22
 coverImage: /assets/images/blog/vllm-explained-serving-language-models-to-many-users/cover.svg
 coverImageAlt: Diagram explaining vLLM serving
 imageCaption: Original explanatory diagram showing vLLM serving and its main decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: vLLM official repository

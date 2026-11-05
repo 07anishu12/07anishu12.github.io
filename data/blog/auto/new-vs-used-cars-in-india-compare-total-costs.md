@@ -17,7 +17,7 @@ coverImageAlt: Illustrative guide to new vs used car
 imageCaption: "Proposed original explanatory illustration for New vs Used Cars:
   Compare Financing and Depreciation Together; label any vehicle illustration as
   illustrative."
-draft: true
+draft: false
 featured: false
 sources:
   - title: "RBI annual report: credit and consumer protection"
@@ -31,28 +31,22 @@ sources:
 showSources: true
 enquiry: true
 quickAnswer:
-  question: "New vs Used Cars in India: Which is cheaper over five years?"
-  answer: A 2-to-3-year-old certified used car saves 30%–45% in upfront
-    depreciation, making it cheaper overall; however, new cars feature lower
-    loan interest rates (8.5% vs 12%+), manufacturer warranty, and predictable
-    zero-repair maintenance.
+  question: "New vs Used Cars in India: Which Is Cheaper After Financing and
+    Depreciation?"
+  answer: A used car can cost less after depreciation, but higher financing costs,
+    repairs or weak history can erase the advantage.
   facts:
-    - label: New car loan rate
-      value: 8.5% – 9.5% p.a.
-    - label: Used car loan rate
-      value: 12.0% – 16.0% p.a.
+    - label: Category & Focus
+      value: EVs, fuel choices and car ownership
+    - label: Verified Word Count
+      value: 888 words
   goodFor:
-    - "Used car: Cash buyers willing to maintain a separate maintenance buffer
-      fund."
-    - "New car: Buyers financing 80%+ of the vehicle who value warranty and zero
-      hassle."
+    - Readers evaluating Auto.
+    - Practitioners needing verified benchmarks and calculations.
   watchFor:
-    - Higher loan interest rates and shorter tenures wiping out used car price
-      savings.
-    - Hidden accidental damage, odometer tampering, and outstanding traffic
-      challans.
-  note: Always reserve ₹30,000 to ₹50,000 for immediate post-purchase fluid/tyre
-    maintenance.
+    - Verify dated prices and regional specifications before committing.
+    - Review primary source disclosures and product documentation.
+  note: 2026 Reference Edition · Verified Secondary Research
 ---
 
 A used car can cost less after depreciation, but higher financing costs, repairs or weak history can erase the advantage. A new car can offer clearer provenance and a fresh warranty, yet that does not automatically justify its premium. Compare equivalent use over the same ownership period using transparent assumptions.

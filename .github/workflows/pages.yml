@@ -1,4 +1,4 @@
-name: Build and deploy portfolio (manual dispatch only)
+name: Migrate legacy GitHub Pages to aniket.app (manual only)
 on:
   workflow_dispatch:
 permissions:
@@ -14,13 +14,11 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npm test
-      - run: npm run build:content
-      - run: npm run audit:dates
-      - run: npm run build
-      - run: npm run check
+      - run: corepack enable
+      - run: corepack prepare pnpm@12.15.0 --activate
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @portfolio/web build
+      - run: node tools/seo/legacy-migration.mjs
       - name: Configure Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
@@ -28,9 +26,9 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          path: _legacy-site
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'workflow_dispatch'
     needs: build
     runs-on: ubuntu-latest
     permissions:

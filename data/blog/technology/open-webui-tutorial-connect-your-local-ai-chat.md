@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/open-webui-tutorial-connect-your-local-ai-chat/c
 coverImageAlt: Diagram explaining Open WebUI tutorial
 imageCaption: Original explanatory diagram showing Open WebUI tutorial and its
   main decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: Open WebUI official repository

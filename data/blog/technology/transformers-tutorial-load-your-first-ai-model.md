@@ -17,7 +17,7 @@ coverImage: /assets/images/blog/transformers-tutorial-load-your-first-ai-model/c
 coverImageAlt: Diagram explaining Transformers tutorial
 imageCaption: Original explanatory diagram showing Transformers tutorial and its
   main decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: Transformers official repository

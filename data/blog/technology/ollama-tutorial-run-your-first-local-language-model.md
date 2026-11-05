@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/ollama-tutorial-run-your-first-local-language-mo
 coverImageAlt: Diagram explaining Ollama tutorial
 imageCaption: Original explanatory diagram showing Ollama tutorial and its main
   decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: Ollama quickstart

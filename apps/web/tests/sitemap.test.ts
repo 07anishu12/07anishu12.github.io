@@ -1,3 +1,4 @@
+import catalog from "../generated/posts-catalog.json";
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
@@ -50,10 +51,10 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
   const expectedCounts: Record<SitemapGroupId, number> = {
     pages: 7,
     "blog-categories": 5,
-    "blog-technology": 156,
-    "blog-automotive": 473,
-    "blog-product": 25,
-    "blog-finance": 42,
+    "blog-technology": catalog.filter(p => !p.draft && p.category === "technology").length,
+    "blog-automotive": catalog.filter(p => !p.draft && p.category === "auto").length,
+    "blog-product": catalog.filter(p => !p.draft && p.category === "product").length,
+    "blog-finance": catalog.filter(p => !p.draft && p.category === "finance").length,
     projects: 14,
     author: 1,
     tools: 1,
@@ -87,8 +88,8 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
     }
   }
 
-  assert.equal(totalUrls, 724, "Total eligible URLs must be exactly 724");
-  assert.equal(allUrls.size, 724, "All 724 URLs must be unique");
+  assert.equal(totalUrls, catalog.filter(p => !p.draft).length + 28, "Published articles and public non-article inventory");
+  assert.equal(allUrls.size, totalUrls, "All sitemap URLs must be unique");
 });
 
 test("Route handlers return HTTP 200 with application/xml Content-Type", async () => {

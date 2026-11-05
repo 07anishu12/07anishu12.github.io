@@ -513,6 +513,10 @@
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>
+    <loc>https://aniket.app/blog/technology/free-local-llms-hardware-quality-and-licence-guide/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://aniket.app/blog/technology/gguf-vs-safetensors-choose-the-right-model-files/</loc>
     <lastmod>2026-10-22</lastmod>
   </url>
@@ -526,6 +530,10 @@
   </url>
   <url>
     <loc>https://aniket.app/blog/technology/langchain-vs-llamaindex-choose-a-rag-framework/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://aniket.app/blog/technology/llama-cpp-tutorial-quantised-models-and-gguf-setup/</loc>
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>
@@ -569,11 +577,23 @@
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>
+    <loc>https://aniket.app/blog/technology/ollama-tutorial-run-your-first-local-language-model/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://aniket.app/blog/technology/open-source-llms-weights-code-and-commercial-rights/</loc>
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>
+    <loc>https://aniket.app/blog/technology/open-webui-tutorial-connect-your-local-ai-chat/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://aniket.app/blog/technology/postgresql-and-pgvector-build-semantic-search/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://aniket.app/blog/technology/private-ai-assistant-with-ollama-and-open-webui/</loc>
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>
@@ -617,7 +637,19 @@
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>
+    <loc>https://aniket.app/blog/technology/transformers-tutorial-load-your-first-ai-model/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://aniket.app/blog/technology/unsloth-tutorial-plan-a-small-model-fine-tuning-run/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://aniket.app/blog/technology/useful-mcp-servers-files-databases-and-developer-tools/</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://aniket.app/blog/technology/vllm-explained-serving-language-models-to-many-users/</loc>
     <lastmod>2026-10-22</lastmod>
   </url>
   <url>

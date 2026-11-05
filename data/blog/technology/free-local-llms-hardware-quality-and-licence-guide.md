@@ -18,7 +18,7 @@ coverImage: /assets/images/blog/free-local-llms-hardware-quality-and-licence-gui
 coverImageAlt: Diagram explaining free local LLMs
 imageCaption: Original explanatory diagram showing free local LLMs and its main
   decision points.
-draft: true
+draft: false
 featured: true
 sources:
   - title: Qwen3 official repository

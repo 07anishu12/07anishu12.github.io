@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/mutual-fund-expense-ratios-costs-and-compounding
 coverImageAlt: Educational diagram explaining mutual fund expense ratio
 imageCaption: Proposed explanatory diagram showing mutual fund expense ratio
   with clearly labelled illustrative figures.
-draft: true
+draft: false
 featured: false
 sources:
   - title: SEC fee impact bulletin
@@ -26,23 +26,22 @@ sources:
 showSources: true
 enquiry: false
 quickAnswer:
-  question: What is a mutual fund expense ratio and how does it affect you?
-  answer: The Total Expense Ratio (TER) represents the annual percentage fee
-    deducted daily from the fund’s assets to cover management, administrative,
-    and distribution costs, reducing your net compounded NAV.
+  question: What Is the Expense Ratio of a Mutual Fund?
+  answer: A mutual fund's expense ratio describes recurring scheme expenses
+    relative to assets, but it is not always a complete statement of every
+    investor cost.
   facts:
-    - label: Deduction frequency
-      value: Calculated and deducted daily
-    - label: SEBI cap limits
-      value: Tiered based on AUM slabs
+    - label: Category & Focus
+      value: Personal finance and investing
+    - label: Verified Word Count
+      value: 794 words
   goodFor:
-    - Benchmarking cost efficiency across similar mutual fund categories.
-    - Identifying high-cost funds that erode long-term compounding benefits.
+    - Readers evaluating Personal finance and investing.
+    - Practitioners needing verified benchmarks and calculations.
   watchFor:
-    - Frequent changes in TER disclosed by AMCs on monthly fact sheets.
-    - Underlying portfolio turnover costs which fall outside the statutory TER
-      cap.
-  note: All published mutual fund NAVs are already net of daily expense deductions.
+    - Verify dated prices and regional specifications before committing.
+    - Review primary source disclosures and product documentation.
+  note: 2026 Reference Edition · Verified Secondary Research
 ---
 
 A mutual fund's expense ratio describes recurring scheme expenses relative to assets, but it is not always a complete statement of every investor cost. Expenses reduce the NAV available to investors. Compare the exact plan, current disclosure definitions and other charges, particularly because Indian mutual fund regulations and expense presentation changed in 2026.

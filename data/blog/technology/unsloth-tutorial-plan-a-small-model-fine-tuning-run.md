@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/unsloth-tutorial-plan-a-small-model-fine-tuning-
 coverImageAlt: Diagram explaining Unsloth tutorial
 imageCaption: Original explanatory diagram showing Unsloth tutorial and its main
   decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: Unsloth fine-tuning guide

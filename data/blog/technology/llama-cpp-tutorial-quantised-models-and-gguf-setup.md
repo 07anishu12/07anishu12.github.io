@@ -16,7 +16,7 @@ coverImage: /assets/images/blog/llama-cpp-tutorial-quantised-models-and-gguf-set
 coverImageAlt: Diagram explaining llama.cpp tutorial
 imageCaption: Original explanatory diagram showing llama.cpp tutorial and its
   main decision points.
-draft: true
+draft: false
 featured: false
 sources:
   - title: llama.cpp official repository
