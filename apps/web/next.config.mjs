@@ -31,6 +31,21 @@ const nextConfig = {
         destination: "/author/aniket-thakur/",
         permanent: true,
       },
+      {
+        source: "/blog/page/1/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/blog/:category/page/1/",
+        destination: "/blog/:category/",
+        permanent: true,
+      },
+      {
+        source: "/writing/page/1/",
+        destination: "/writing/",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

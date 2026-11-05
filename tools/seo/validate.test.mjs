@@ -112,5 +112,8 @@ test("routing keeps known legacy redirects permanent", async () => {
     { source: "/privacy.html", destination: "/privacy/", permanent: true },
     { source: "/work.html", destination: "/projects/", permanent: true },
     { source: "/author/aniket-thakur.html", destination: "/author/aniket-thakur/", permanent: true },
+    { source: "/blog/page/1/", destination: "/blog/", permanent: true },
+    { source: "/blog/:category/page/1/", destination: "/blog/:category/", permanent: true },
+    { source: "/writing/page/1/", destination: "/writing/", permanent: true },
   ]);
 });
