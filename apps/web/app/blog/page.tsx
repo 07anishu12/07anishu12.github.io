@@ -85,29 +85,14 @@ export default async function BlogPage({
 
         {/* Hero Section */}
         <header className="blog-hero">
-          <p className="eyebrow">The Technical Library · {total} Publications</p>
+          <p className="eyebrow">Technical Library · {total} Publications</p>
           <h1 className="page-title">
-            Ideas, tested &amp; <em className="serif">explained with care.</em>
+            Research, ideas &amp; <em className="serif">engineering insights.</em>
           </h1>
           <p className="intro">
-            An extensive library of technical guides, valuation models, AI
-            implementation patterns, and automotive economics. Written for
-            engineers, analysts, and founders who care about verifiable
-            mechanics over surface-level commentary.
+            A curated library of technical guides, AI implementations, financial
+            research, product insights and automotive analysis.
           </p>
-
-          <div className="blog-library-stats">
-            <div className="stat-pill">
-              <strong>{total}</strong> Published Guides
-            </div>
-            <div className="stat-pill">
-              <strong>{categories.length}</strong> Core Pillars (Technology,
-              Finance, Auto, Product)
-            </div>
-            <div className="stat-pill">
-              <strong>100%</strong> Original Analysis &amp; Implementations
-            </div>
-          </div>
         </header>
 
         {/* Interactive Library & Grid */}

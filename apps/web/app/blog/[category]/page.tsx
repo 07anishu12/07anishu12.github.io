@@ -109,21 +109,11 @@ export default async function CategoryPage({
 
         {/* Hero Section */}
         <header className="blog-hero">
-          <p className="eyebrow">Writing / {name} Pillar</p>
+          <p className="eyebrow">Writing / {name} Pillar · {total} Publications</p>
           <h1 className="page-title">
             Explore <em className="serif">{name}.</em>
           </h1>
           <p className="intro">{description}</p>
-
-          <div className="blog-library-stats">
-            <div className="stat-pill">
-              <strong>{total}</strong> {name} Articles
-            </div>
-            <div className="stat-pill">
-              Part of the <strong>{categoryCounts.all || 562}-article</strong>{" "}
-              Technical Library
-            </div>
-          </div>
         </header>
 
         {/* Interactive Library Filtered to Category */}

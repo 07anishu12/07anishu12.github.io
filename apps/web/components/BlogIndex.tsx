@@ -24,6 +24,14 @@ const CATEGORY_COLORS: Record<string, string> = {
   product: "#7c3aed",
 };
 
+const CATEGORY_DISPLAY_NAMES: Record<string, string> = {
+  all: "All Writing",
+  auto: "Automotive",
+  technology: "Technology",
+  product: "Product",
+  finance: "Finance",
+};
+
 function formatDate(dateStr: string): string {
   if (!dateStr) return "";
   try {
@@ -234,7 +242,7 @@ export function BlogIndex({
               href={`/blog/${c.toLowerCase()}/`}
               className={`category-pill ${isActive ? "category-pill-active" : ""}`}
             >
-              {c.charAt(0).toUpperCase() + c.slice(1)}{" "}
+              {CATEGORY_DISPLAY_NAMES[c.toLowerCase()] || (c.charAt(0).toUpperCase() + c.slice(1))}{" "}
               <span className="pill-badge">{count}</span>
             </Link>
           );
@@ -270,7 +278,7 @@ export function BlogIndex({
               loadSearchIndex();
               setQuery(e.target.value);
             }}
-            placeholder={`Search ${resolvedTotalPosts} guides, models, and systems...`}
+            placeholder={`Search ${resolvedTotalPosts} publications across automotive, AI, finance & product...`}
             aria-label="Search technical library"
           />
           {query && (
@@ -344,7 +352,7 @@ export function BlogIndex({
                         "var(--blue)",
                     }}
                   ></span>
-                  {featuredPost.category}
+                  {CATEGORY_DISPLAY_NAMES[featuredPost.category.toLowerCase()] || featuredPost.category}
                 </span>
                 <span className="spotlight-tag">Featured Analysis</span>
               </div>
@@ -412,7 +420,7 @@ export function BlogIndex({
                         className="category-bullet"
                         style={{ background: catColor }}
                       ></span>
-                      {p.category}
+                      {CATEGORY_DISPLAY_NAMES[p.category.toLowerCase()] || p.category}
                     </span>
                     <span className="article-card-date">
                       {formatDate(p.datePublished)}

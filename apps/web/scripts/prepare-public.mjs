@@ -72,6 +72,14 @@ if (fs.existsSync(fallbackSrc)) {
   fs.cpSync(fallbackSrc, fallbackDest, { recursive: true });
 }
 
+// Ensure stock blueprint images are copied to public
+const stockSrc = path.join(root, "assets/images/stock");
+const stockDest = path.join(out, "assets/images/stock");
+if (fs.existsSync(stockSrc)) {
+  fs.mkdirSync(stockDest, { recursive: true });
+  fs.cpSync(stockSrc, stockDest, { recursive: true });
+}
+
 for (const p of rawArticles) {
   if (p.coverImage) {
     const srcImg = path.join(root, p.coverImage.replace(/^\//, ""));
