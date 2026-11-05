@@ -108,7 +108,7 @@ A robust research agent operates in five distinct phases:
 
 #### Source Verification & Reflection Loop: A critic node evaluates whether the extracted evidence answers all sub-questions and checks whether claims are corroborated. If gaps remain—and the loop count is below a hard ceiling (e.g., max_iterations = 3)—the agent formulates follow-up queries.
 
-1. Report Synthesis & Citation Management: The writer node synthesizes the verified passages into a structured report and validates that every inline [Title](URL) link maps to an actually retrieved source in the state registry, eliminating hallucinated URLs.
+1. Report Synthesis & Citation Management: The writer node synthesizes the verified passages into a structured report and validates that every inline `[Title](URL)` link maps to an actually retrieved source in the state registry, eliminating hallucinated URLs.
 
 ### Single-Agent State Machine vs. Multi-Agent Architecture
 

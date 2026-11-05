@@ -1,8 +1,7 @@
+import { archiveState, type ArchiveParams } from "../../../lib/archive";
 export const revalidate = 600;
-import { notFound } from "next/navigation";
 import {
   listPosts,
-  getPaginatedPosts,
   categoryDescriptions,
 } from "../../../lib/blog";
 import { BlogIndex } from "../../../components/BlogIndex";
@@ -20,23 +19,27 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams?: Promise<ArchiveParams>;
 }) {
   const { category } = await params;
+  const { canonical, query } = archiveState(category, await searchParams);
   const name = `${category.charAt(0).toUpperCase()}${category.slice(1)}`;
   return {
     title: `${name} Articles & Guides — Aniket Thakur`,
     description:
       categoryDescriptions[category] ||
       `Published ${category} articles, implementation guides, and analyses by Aniket Thakur.`,
-    alternates: { canonical: `/blog/${category}/` },
+    alternates: { canonical },
+    robots: query ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
       title: `${name} Articles & Guides — Aniket Thakur`,
       description:
         categoryDescriptions[category] ||
         `Published ${category} articles, implementation guides, and analyses by Aniket Thakur.`,
-      url: `/blog/${category}/`,
+      url: canonical,
       images: ["/assets/img/aniket-portrait.png"],
     },
   };
@@ -47,28 +50,10 @@ export default async function CategoryPage({
   searchParams,
 }: {
   params: Promise<{ category: string }>;
-  searchParams?: Promise<{ page?: string; q?: string }>;
+  searchParams?: Promise<ArchiveParams>;
 }) {
   const { category } = await params;
-  const resolvedParams = searchParams ? await searchParams : {};
-  const page = Math.max(1, parseInt(resolvedParams.page || "1", 10) || 1);
-  const query = resolvedParams.q || "";
-
-  const {
-    posts: categoryPosts,
-    total,
-    totalPages,
-    pageSize,
-    categories,
-    categoryCounts,
-  } = getPaginatedPosts({
-    category,
-    page,
-    pageSize: 12,
-    query,
-  });
-
-  if (!total && !query) notFound();
+  const { posts: categoryPosts, total, totalPages, pageSize, categories, categoryCounts, page, canonical } = archiveState(category, await searchParams);
 
   const name = `${category.charAt(0).toUpperCase()}${category.slice(1)}`;
   const description =
@@ -84,7 +69,7 @@ export default async function CategoryPage({
   return (
     <main className="section blog-category-page">
       <CollectionPageStructuredData
-        url={`/blog/${category}/`}
+        url={canonical}
         name={`${name} Articles — Aniket Thakur`}
         description={description}
         items={structuredItems}

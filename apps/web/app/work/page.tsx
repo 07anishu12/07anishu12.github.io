@@ -83,8 +83,8 @@ const primaryCaseStudies: CaseStudy[] = [
     ],
     projectSlug: "fundflow-sentinel",
     repoUrl: "https://github.com/07anishu12/FundFlow-Sentinel",
-    articleUrl: "/blog/finance/direct-vs-regular-mutual-funds-in-india-explained/",
-    articleLabel: "Read the Mutual Fund Investment Guide →",
+    articleUrl: "/blog/finance/",
+    articleLabel: "Explore Finance Articles →",
   },
   {
     id: "classevidence-ai",

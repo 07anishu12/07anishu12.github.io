@@ -83,8 +83,8 @@ export const projects: ProjectItem[] = [
     testsAndReproducibility:
       "Tested on Python 3.11 with 287 automated unit and integration tests ('make test'). Includes deterministic offline CLI orchestration ('python -m fundflow.cli --offline all') with SHA-256 digest receipts in 'data/outputs/run_report.json'.",
     relatedPath:
-      "/blog/finance/direct-vs-regular-mutual-funds-in-india-explained/",
-    relatedLabel: "Read the Mutual Fund Investment Guide →",
+      "/blog/finance/",
+    relatedLabel: "Explore Finance Articles →",
     relatedProjects: [
       { slug: "finance-tools", title: "Finance Tools — DCF Valuation" },
       {

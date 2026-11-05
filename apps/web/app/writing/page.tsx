@@ -1,7 +1,7 @@
 export const revalidate = 600;
 
 import type { Metadata } from "next";
-import { getPaginatedPosts } from "../../lib/blog";
+import { archiveState, type ArchiveParams } from "../../lib/archive";
 import { BlogIndex } from "../../components/BlogIndex";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import {
@@ -10,16 +10,17 @@ import {
 } from "../../components/StructuredData";
 import Link from "next/link";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const { total } = getPaginatedPosts({ category: "all", page: 1, pageSize: 1 });
+export async function generateMetadata({ searchParams }: { searchParams?: Promise<ArchiveParams> }): Promise<Metadata> {
+  const { total, canonical, query } = archiveState("all", await searchParams);
   return {
     title: `Writing & Technical Library (${total} Publications) — Aniket Thakur`,
     description: `${total} comprehensive engineering guides, quantitative valuation models, systems architecture analyses, and automotive economics by Aniket Thakur.`,
-    alternates: { canonical: "/blog/" },
+    alternates: { canonical },
+    robots: query ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
       title: "Writing & Technical Library — Aniket Thakur",
       description: `${total} technical guides, financial models, and engineering deep dives by Aniket Thakur.`,
-      url: "/writing/",
+      url: canonical,
       images: ["/assets/img/aniket-portrait.png"],
     },
     twitter: {
@@ -34,25 +35,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function WritingPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ page?: string; q?: string }>;
+  searchParams?: Promise<ArchiveParams>;
 }) {
-  const resolvedParams = searchParams ? await searchParams : {};
-  const page = Math.max(1, parseInt(resolvedParams.page || "1", 10) || 1);
-  const query = resolvedParams.q || "";
-
-  const {
-    posts: pagePosts,
-    total,
-    totalPages,
-    pageSize,
-    categories,
-    categoryCounts,
-  } = getPaginatedPosts({
-    category: "all",
-    page,
-    pageSize: 12,
-    query,
-  });
+  const { posts: pagePosts, total, totalPages, pageSize, categories, categoryCounts, page, canonical } = archiveState("all", await searchParams);
 
   const structuredItems = pagePosts.slice(0, 30).map((p) => ({
     name: p.title,
@@ -63,7 +48,7 @@ export default async function WritingPage({
   return (
     <main className="section writing-index-page blog-page">
       <CollectionPageStructuredData
-        url="/writing/"
+        url={canonical}
         name={`Writing & Technical Library — Aniket Thakur`}
         description={`${total} in-depth technical guides, valuation models, and engineering architectures.`}
         items={structuredItems}

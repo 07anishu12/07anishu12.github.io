@@ -117,7 +117,7 @@
 </ol>
 <h4 id="section-source-verification-reflection-loop-a-critic-node-evaluates-whether-the-extracted-evidence-answers-all-sub-questions-and-checks-whether-claims-are-corroborated-if-gaps-remain-and-the-loop-count-is-below-a-hard-ceiling-e-g-max-iterations-3-the-agent-formulates-follow-up-queries">Source Verification &amp; Reflection Loop: A critic node evaluates whether the extracted evidence answers all sub-questions and checks whether claims are corroborated. If gaps remain—and the loop count is below a hard ceiling (e.g., max_iterations = 3)—the agent formulates follow-up queries.</h4>
 <ol>
-<li>Report Synthesis &amp; Citation Management: The writer node synthesizes the verified passages into a structured report and validates that every inline <a href="URL">Title</a> link maps to an actually retrieved source in the state registry, eliminating hallucinated URLs.</li>
+<li>Report Synthesis &amp; Citation Management: The writer node synthesizes the verified passages into a structured report and validates that every inline <code>[Title](URL)</code> link maps to an actually retrieved source in the state registry, eliminating hallucinated URLs.</li>
 </ol>
 <h3 id="section-single-agent-state-machine-vs-multi-agent-architecture">Single-Agent State Machine vs. Multi-Agent Architecture</h3>
 <p>Many developers prematurely reach for multi-agent role-playing frameworks where three or four conversational agents chat back and forth. In practice:</p>

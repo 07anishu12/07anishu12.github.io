@@ -1,0 +1,79 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": "https://aniket.app/",
+      "title": "Aniket Thakur — AI Engineer, Product Manager & AI Researcher",
+      "links": 51
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 65
+    },
+    {
+      "path": "/blog/?page=2",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/?page=2",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 67
+    },
+    {
+      "path": "/blog/?page=3",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/?page=3",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 68
+    },
+    {
+      "path": "/blog/auto/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/auto/",
+      "title": "Auto Articles & Guides — Aniket Thakur",
+      "links": 66
+    },
+    {
+      "path": "/blog/finance/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/finance/",
+      "title": "Finance Articles & Guides — Aniket Thakur",
+      "links": 67
+    },
+    {
+      "path": "/blog/technology/",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/technology/",
+      "title": "Technology Articles & Guides — Aniket Thakur",
+      "links": 66
+    },
+    {
+      "path": "/writing/?page=2",
+      "status": 200,
+      "canonical": "https://aniket.app/blog/?page=2",
+      "title": "Writing & Technical Library (696 Publications) — Aniket Thakur",
+      "links": 68
+    }
+  ],
+  "logs": [],
+  "page": {
+    "id": "page-1793908192112-8",
+    "url": "http://localhost:3100/writing/?page=2",
+    "title": "Writing & Technical Library (696 Publications) — Aniket Thakur"
+  },
+  "artifacts": [],
+  "warnings": [],
+  "limits": {
+    "outputTruncated": false,
+    "snapshotTruncated": false
+  },
+  "timings": {
+    "quickjs_boot_ms": 6,
+    "client_bundle_init_ms": 173,
+    "program_ms": 2848,
+    "browser_wait_ms": 2853
+  }
+}
