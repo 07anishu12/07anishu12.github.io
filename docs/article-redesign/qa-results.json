@@ -1,0 +1,343 @@
+{
+  "pages": [
+    {
+      "url": "/blog/finance/asset-allocation-equity-debt-gold-and-cash/",
+      "status": 200,
+      "h1": 1,
+      "headline": true,
+      "canonical": "https://aniket.app/blog/finance/asset-allocation-equity-debt-gold-and-cash/",
+      "published": true,
+      "bodyInResponse": true,
+      "brokenAnchors": 0,
+      "sizes": [
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "scroll": 1440,
+          "articleRight": 1180,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 1280,
+          "viewport": 1280,
+          "scroll": 1280,
+          "articleRight": 1180,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "scroll": 768,
+          "articleRight": 744,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "scroll": 390,
+          "articleRight": 366,
+          "overflows": [],
+          "font": "17px"
+        },
+        {
+          "width": 360,
+          "viewport": 360,
+          "scroll": 360,
+          "articleRight": 336,
+          "overflows": [],
+          "font": "17px"
+        }
+      ],
+      "axe": []
+    },
+    {
+      "url": "/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "status": 200,
+      "h1": 1,
+      "headline": true,
+      "canonical": "https://aniket.app/blog/technology/ai-agents-what-are-they-and-how-do-they-work/",
+      "published": true,
+      "bodyInResponse": true,
+      "brokenAnchors": 0,
+      "sizes": [
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "scroll": 1440,
+          "articleRight": 1260,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 1280,
+          "viewport": 1280,
+          "scroll": 1280,
+          "articleRight": 1180,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "scroll": 768,
+          "articleRight": 744,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "scroll": 390,
+          "articleRight": 366,
+          "overflows": [],
+          "font": "17px"
+        },
+        {
+          "width": 360,
+          "viewport": 360,
+          "scroll": 360,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "17px"
+        }
+      ],
+      "axe": []
+    },
+    {
+      "url": "/blog/auto/10-global-motorcycles-that-indian-buyers-should-watch-after-eicma-2026/",
+      "status": 200,
+      "h1": 1,
+      "headline": true,
+      "canonical": "https://aniket.app/blog/auto/10-global-motorcycles-that-indian-buyers-should-watch-after-eicma-2026/",
+      "published": true,
+      "bodyInResponse": true,
+      "brokenAnchors": 0,
+      "sizes": [
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "scroll": 1440,
+          "articleRight": 1260,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 1280,
+          "viewport": 1280,
+          "scroll": 1280,
+          "articleRight": 1180,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "scroll": 768,
+          "articleRight": 744,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "scroll": 390,
+          "articleRight": 366,
+          "overflows": [],
+          "font": "17px"
+        },
+        {
+          "width": 360,
+          "viewport": 360,
+          "scroll": 360,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "17px"
+        }
+      ],
+      "axe": []
+    },
+    {
+      "url": "/blog/product/ab-testing-for-product-managers/",
+      "status": 200,
+      "h1": 1,
+      "headline": true,
+      "canonical": "https://aniket.app/blog/product/ab-testing-for-product-managers/",
+      "published": true,
+      "bodyInResponse": true,
+      "brokenAnchors": 0,
+      "sizes": [
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "scroll": 1440,
+          "articleRight": 1260,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 1280,
+          "viewport": 1280,
+          "scroll": 1280,
+          "articleRight": 1180,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "scroll": 768,
+          "articleRight": 744,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "scroll": 390,
+          "articleRight": 366,
+          "overflows": [],
+          "font": "17px"
+        },
+        {
+          "width": 360,
+          "viewport": 360,
+          "scroll": 360,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "17px"
+        }
+      ],
+      "axe": []
+    },
+    {
+      "url": "/writing/build-ai-research-agent-web-search-reports/",
+      "status": 200,
+      "h1": 1,
+      "headline": true,
+      "canonical": "https://aniket.app/writing/build-ai-research-agent-web-search-reports/",
+      "published": true,
+      "bodyInResponse": true,
+      "brokenAnchors": 0,
+      "sizes": [
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "scroll": 1440,
+          "articleRight": 1260,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 1280,
+          "viewport": 1280,
+          "scroll": 1280,
+          "articleRight": 1180,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "scroll": 768,
+          "articleRight": 744,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "scroll": 390,
+          "articleRight": 366,
+          "overflows": [],
+          "font": "17px"
+        },
+        {
+          "width": 360,
+          "viewport": 360,
+          "scroll": 360,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "17px"
+        }
+      ],
+      "axe": []
+    },
+    {
+      "url": "/blog/auto/hero-splendor-plus-mileage/",
+      "status": 200,
+      "h1": 1,
+      "headline": true,
+      "canonical": "https://aniket.app/blog/auto/hero-splendor-plus-mileage/",
+      "published": true,
+      "bodyInResponse": true,
+      "brokenAnchors": 0,
+      "sizes": [
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "scroll": 1440,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 1280,
+          "viewport": 1280,
+          "scroll": 1280,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "scroll": 768,
+          "articleRight": 336,
+          "overflows": [],
+          "font": "18px"
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "scroll": 390,
+          "articleRight": 336,
+          "overflows": [],
+          "font": "17px"
+        },
+        {
+          "width": 360,
+          "viewport": 360,
+          "scroll": 360,
+          "articleRight": 342,
+          "overflows": [],
+          "font": "17px"
+        }
+      ],
+      "axe": []
+    }
+  ],
+  "interactions": {
+    "tocKeyboardCollapse": true,
+    "activeSection": true,
+    "faqKeyboardCollapse": true,
+    "faqAnchorReopens": true
+  },
+  "noJs": {
+    "body": true,
+    "faqVisible": true,
+    "tocLinks": 22
+  },
+  "table": {
+    "available": 1,
+    "keyboardScrollable": true,
+    "headerScopes": true
+  },
+  "sampleInitialCLS": {
+    "width": 360,
+    "value": 0,
+    "url": "/blog/auto/10-global-motorcycles-that-indian-buyers-should-watch-after-eicma-2026/"
+  }
+}

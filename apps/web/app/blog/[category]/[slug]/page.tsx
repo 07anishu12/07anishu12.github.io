@@ -4,7 +4,14 @@ import { notFound } from "next/navigation";
 
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { ArticleTableOfContents } from "../../../../components/ArticleTableOfContents";
-import { ArticleCardImage } from "../../../../components/ArticleCardImage";
+import {
+  ArticleHeader,
+  ArticleHero,
+  ArticleOverview,
+  ArticleAuthorInformation,
+  articleDate,
+} from "../../../../components/ArticleEditorial";
+import { ArticleBody } from "../../../../components/ArticleBody";
 import { LeadCaptureForm } from "../../../../components/LeadCaptureForm";
 import { InquiryButton } from "../../../../components/InquiryButton";
 import {
@@ -15,20 +22,6 @@ import {
 import { getPost, isLeadCapturePost, listPosts } from "../../../../lib/blog";
 
 type RouteProps = { params: Promise<{ category: string; slug: string }> };
-
-function formatDate(dateStr: string): string {
-  if (!dateStr) return "";
-  try {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return dateStr;
-  }
-}
 
 export function generateStaticParams() {
   return listPosts().map((post) => ({
@@ -122,260 +115,162 @@ export default async function BlogPostPage({ params }: RouteProps) {
           ]}
         />
 
-        {/* 2. Category label */}
-        <div className="article-category-wrap">
-          <Link
-            href={`/blog/${post.category}/`}
-            className={`article-category-badge badge-${post.category.toLowerCase()}`}
-          >
-            {categoryName}
-          </Link>
-        </div>
-
-        {/* 3. Article Title */}
-        <h1 className="article-headline">{post.title}</h1>
-
-        {/* 4. Publication date, modified date, author */}
-        <div className="article-header-meta">
-          <div className="article-author-info">
-            <picture>
-              <source
-                srcSet="/assets/img/aniket-author-avatar.avif"
-                type="image/avif"
-              />
-              <source
-                srcSet="/assets/img/aniket-author-avatar.webp"
-                type="image/webp"
-              />
-              <img
-                src="/assets/img/aniket-author-avatar.webp"
-                alt="Aniket Thakur"
-                width={40}
-                height={40}
-                loading="lazy"
-                decoding="async"
-                className="article-author-avatar"
-              />
-            </picture>
-            <div className="article-author-text">
-              <span className="article-author-name">Aniket Thakur</span>
-              <div className="article-date-row">
-                <time dateTime={post.datePublished}>
-                  Published {formatDate(post.datePublished)}
-                </time>
-                {post.dateModified && post.dateModified !== post.datePublished && (
-                  <>
-                    <span className="meta-sep" aria-hidden="true">
-                      ·
-                    </span>
-                    <time dateTime={post.dateModified}>
-                      Updated {formatDate(post.dateModified)}
-                    </time>
-                  </>
-                )}
-                {post.readingTime && (
-                  <>
-                    <span className="meta-sep" aria-hidden="true">
-                      ·
-                    </span>
-                    <span>{post.readingTime} min read</span>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 5. Short, useful introduction */}
-        <p className="article-lead">{post.description}</p>
-
-        {/* 6. Featured image with responsive sizing and caption */}
-        <figure className="article-cover-figure">
-          <div className="article-cover-wrapper" style={{ borderRadius: "14px", overflow: "hidden", border: "1px solid var(--line)" }}>
-            <ArticleCardImage
-              src={post.coverImage}
-              alt={post.coverImageAlt || post.title}
-              category={post.category}
-              priority={true}
-              className="article-cover-image"
-              width={post.width || 1200}
-              height={post.height || 675}
-            />
-          </div>
-          {(post.imageCaption || post.imageCredit) && (
-            <figcaption className="article-image-caption">
-              {post.imageCaption}{" "}
-              {post.imageSourceUrl ? (
-                <a
-                  href={post.imageSourceUrl}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  {post.imageCredit || "Image source"}
-                </a>
-              ) : (
-                post.imageCredit
-              )}
-            </figcaption>
-          )}
-        </figure>
-
-        {/* 7. Quick Answer (if available) */}
-        {post.quickAnswer && (
-          <aside className="prose quick-answer">
-            <h2>{post.quickAnswer.question}</h2>
-            <p>{post.quickAnswer.answer}</p>
-            <dl>
-              {post.quickAnswer.facts.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label}</dt>
-                  <dd>{f.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <h3>Good for</h3>
-            <ul>
-              {post.quickAnswer.goodFor.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
-            <h3>Watch for</h3>
-            <ul>
-              {post.quickAnswer.watchFor.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
-            {post.quickAnswer.note && <p>{post.quickAnswer.note}</p>}
-          </aside>
-        )}
-
-        {/* 8. Table of Contents */}
-        {post.headings.length > 0 && (
+        <ArticleHeader post={post} />
+        <div className="article-reading-layout">
           <ArticleTableOfContents headings={post.headings} />
-        )}
+          <div className="article-reading-main">
+            <ArticleHero post={post} />
+            <ArticleOverview summary={post.quickAnswer} />
+            <ArticleBody post={post} />
 
-        {/* 9. Article Body */}
-        <div
-          className="prose article-prose"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+            {/* 10. Sources and References */}
+            {post.sources.length > 0 && (
+              <section id="article-sources" className="article-sources-section">
+                <h2 className="article-subheading">Sources &amp; References</h2>
+                <ul className="article-sources-list">
+                  {post.sources.map((s) => (
+                    <li key={s.url}>
+                      <a href={s.url} rel="noreferrer" target="_blank">
+                        {s.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
-        {/* 10. Sources and References */}
-        {post.sources.length > 0 && (
-          <section className="article-sources-section">
-            <h2 className="article-subheading">Sources &amp; References</h2>
-            <ul className="article-sources-list">
-              {post.sources.map((s) => (
-                <li key={s.url}>
-                  <a href={s.url} rel="noreferrer" target="_blank">
-                    {s.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+            {/* 11. Contextual Architecture Bridge */}
+            {post.category === "technology" && (
+              <aside className="article-project-bridge">
+                <p>
+                  <strong>Verified Engineering Systems:</strong> Explore
+                  production architectures in{" "}
+                  <Link href="/projects/">Projects</Link>, including the{" "}
+                  <Link href="/projects/finance-tools/">
+                    Finance Tools DCF Engine
+                  </Link>
+                  ,{" "}
+                  <Link href="/projects/invoice-ocr/">
+                    Invoice Document Parser
+                  </Link>
+                  , and{" "}
+                  <Link href="/projects/seojev-laya/">SEOJEV / Laya Agent</Link>
+                  .
+                </p>
+              </aside>
+            )}
+            {post.category === "auto" && (
+              <aside className="article-project-bridge">
+                <p>
+                  <strong>Finance &amp; Affordability Review:</strong> Planning
+                  a two-wheeler purchase? Check out the{" "}
+                  <Link href="/finance/bikes/">
+                    Bike Finance, Ownership Cost &amp; On-Road Price Calculator
+                  </Link>{" "}
+                  to calculate real monthly commitments before dealership
+                  visits.
+                </p>
+              </aside>
+            )}
+            {post.category === "finance" && (
+              <aside className="article-project-bridge">
+                <p>
+                  <strong>Quantitative Modeling:</strong> Review our
+                  deterministic DCF valuation tool in{" "}
+                  <Link href="/projects/finance-tools/">
+                    Finance Tools Case Study
+                  </Link>{" "}
+                  or plan vehicle budgets with the{" "}
+                  <Link href="/finance/bikes/">Bike Finance Calculator</Link>.
+                </p>
+              </aside>
+            )}
 
-        {/* 11. Contextual Architecture Bridge */}
-        {post.category === "technology" && (
-          <aside className="article-project-bridge" style={{ marginTop: 32, padding: "16px 20px", background: "rgba(0, 0, 0, 0.02)", borderRadius: 8, border: "1px solid rgba(0, 0, 0, 0.08)" }}>
-            <p style={{ margin: 0, fontSize: "0.95rem" }}>
-              <strong>Verified Engineering Systems:</strong> Explore production architectures in{" "}
-              <Link href="/projects/" style={{ textDecoration: "underline" }}>Projects</Link>, including the{" "}
-              <Link href="/projects/finance-tools/" style={{ textDecoration: "underline" }}>Finance Tools DCF Engine</Link>,{" "}
-              <Link href="/projects/invoice-ocr/" style={{ textDecoration: "underline" }}>Invoice Document Parser</Link>, and{" "}
-              <Link href="/projects/seojev-laya/" style={{ textDecoration: "underline" }}>SEOJEV / Laya Agent</Link>.
-            </p>
-          </aside>
-        )}
-        {post.category === "auto" && (
-          <aside className="article-project-bridge" style={{ marginTop: 32, padding: "16px 20px", background: "rgba(0, 0, 0, 0.02)", borderRadius: 8, border: "1px solid rgba(0, 0, 0, 0.08)" }}>
-            <p style={{ margin: 0, fontSize: "0.95rem" }}>
-              <strong>Finance &amp; Affordability Review:</strong> Planning a two-wheeler purchase? Check out the{" "}
-              <Link href="/finance/bikes/" style={{ textDecoration: "underline" }}>Bike Finance, Ownership Cost &amp; On-Road Price Calculator</Link>{" "}
-              to calculate real monthly commitments before dealership visits.
-            </p>
-          </aside>
-        )}
-        {post.category === "finance" && (
-          <aside className="article-project-bridge" style={{ marginTop: 32, padding: "16px 20px", background: "rgba(0, 0, 0, 0.02)", borderRadius: 8, border: "1px solid rgba(0, 0, 0, 0.08)" }}>
-            <p style={{ margin: 0, fontSize: "0.95rem" }}>
-              <strong>Quantitative Modeling:</strong> Review our deterministic DCF valuation tool in{" "}
-              <Link href="/projects/finance-tools/" style={{ textDecoration: "underline" }}>Finance Tools Case Study</Link>{" "}
-              or plan vehicle budgets with the <Link href="/finance/bikes/" style={{ textDecoration: "underline" }}>Bike Finance Calculator</Link>.
-            </p>
-          </aside>
-        )}
+            {/* 12. Continue reading with dynamic contextual selection */}
+            <nav className="article-related-nav" aria-label="Related articles">
+              <h2 className="article-subheading">Continue reading</h2>
+              <ul className="article-related-list">
+                {(() => {
+                  const allCategoryPosts = listPosts().filter(
+                    (p) => p.category === post.category && p.slug !== post.slug,
+                  );
+                  const currentPostIndex = allCategoryPosts.findIndex(
+                    (p) => p.slug === post.slug,
+                  );
+                  const scored = allCategoryPosts.map((p, idx) => {
+                    let score = 0;
+                    if (post.tags && p.tags) {
+                      score +=
+                        p.tags.filter((t) => post.tags.includes(t)).length * 5;
+                    }
+                    const offset = Math.abs(
+                      idx - (currentPostIndex >= 0 ? currentPostIndex : 0),
+                    );
+                    score += Math.max(0, 10 - offset);
+                    return { post: p, score };
+                  });
+                  scored.sort((a, b) => b.score - a.score);
+                  return scored.slice(0, 4).map(({ post: p }) => (
+                    <li key={p.slug}>
+                      <span className="article-related-meta">
+                        {p.category} ·{" "}
+                        <time dateTime={p.datePublished}>
+                          {articleDate(p.datePublished)}
+                        </time>
+                      </span>
+                      <Link href={`/blog/${p.category}/${p.slug}/`}>
+                        {p.title}
+                      </Link>
+                      {p.description && <p>{p.description}</p>}
+                    </li>
+                  ));
+                })()}
+              </ul>
+              <Link
+                href={`/blog/${post.category}/`}
+                className="article-all-category-link"
+              >
+                All {categoryName} articles →
+              </Link>
+            </nav>
 
-        {/* 12. Continue reading with dynamic contextual selection */}
-        <nav className="article-related-nav" aria-label="Related articles">
-          <h2 className="article-subheading">Continue reading</h2>
-          <ul className="article-related-list">
-            {(() => {
-              const allCategoryPosts = listPosts().filter(
-                (p) => p.category === post.category && p.slug !== post.slug,
-              );
-              const currentPostIndex = allCategoryPosts.findIndex(
-                (p) => p.slug === post.slug,
-              );
-              const scored = allCategoryPosts.map((p, idx) => {
-                let score = 0;
-                if (post.tags && p.tags) {
-                  score += p.tags.filter((t) => post.tags.includes(t)).length * 5;
-                }
-                const offset = Math.abs(idx - (currentPostIndex >= 0 ? currentPostIndex : 0));
-                score += Math.max(0, 10 - offset);
-                return { post: p, score };
-              });
-              scored.sort((a, b) => b.score - a.score);
-              return scored.slice(0, 4).map(({ post: p }) => (
-                <li key={p.slug}>
-                  <Link href={`/blog/${p.category}/${p.slug}/`}>{p.title}</Link>
-                </li>
-              ));
-            })()}
-          </ul>
-          <Link
-            href={`/blog/${post.category}/`}
-            className="article-all-category-link"
-          >
-            All {categoryName} articles →
-          </Link>
-        </nav>
+            {/* 12. Finance educational note */}
+            {post.category === "finance" && (
+              <aside className="article-disclaimer-card">
+                <strong>Educational content:</strong> This article is general
+                information, not personalised financial, tax, or investment
+                advice.
+              </aside>
+            )}
 
-        {/* 12. Finance educational note */}
-        {post.category === "finance" && (
-          <aside className="article-disclaimer-card">
-            <strong>Educational content:</strong> This article is general
-            information, not personalised financial, tax, or investment advice.
-          </aside>
-        )}
+            {/* 13. Lead capture panel */}
+            {isLeadCapturePost(post) && (
+              <section className="lead-panel">
+                <div>
+                  <p className="eyebrow">A practical next step</p>
+                  <h2>Want a focused comparison?</h2>
+                  <p>
+                    Share a few basics. This form does not approve a loan or
+                    promise a product recommendation.
+                  </p>
+                </div>
+                <LeadCaptureForm source={post.slug} campaign={post.category} />
+              </section>
+            )}
 
-        {/* 13. Lead capture panel */}
-        {isLeadCapturePost(post) && (
-          <section className="lead-panel">
-            <div>
-              <p className="eyebrow">A practical next step</p>
-              <h2>Want a focused comparison?</h2>
-              <p>
-                Share a few basics. This form does not approve a loan or promise
-                a product recommendation.
-              </p>
-            </div>
-            <LeadCaptureForm source={post.slug} campaign={post.category} />
-          </section>
-        )}
-
-        {/* 14. Contextual Inquiry Trigger */}
-        {post.enquiry && (
-          <div className="article-enquiry-box">
-            <InquiryButton
-              className="button button-primary"
-              category={post.category}
-              sourceSlug={post.slug}
-            />
+            {/* 14. Contextual Inquiry Trigger */}
+            {post.enquiry && (
+              <div className="article-enquiry-box">
+                <InquiryButton
+                  className="button button-primary"
+                  category={post.category}
+                  sourceSlug={post.slug}
+                />
+              </div>
+            )}
+            <ArticleAuthorInformation post={post} />
           </div>
-        )}
+        </div>
       </article>
     </main>
   );
