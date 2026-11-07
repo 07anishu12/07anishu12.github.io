@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Factor Exposure &amp; Attribution | Fama-French &amp; Style Analysis</title>
+<meta name="description" content="Decompose equity portfolio returns across systematic risk factors (Size, Value, Momentum, Quality, and Low Volatility) using multi-factor regression models.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Factor Exposure &amp; Attribution | Fama-French &amp; Style Analysis">
+<meta property="og:description" content="Decompose equity portfolio returns across systematic risk factors (Size, Value, Momentum, Quality, and Low Volatility) using multi-factor regression models.">
+<meta property="og:url" content="https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/cover.svg">
+<meta property="og:image:alt" content="Illustrative guide to Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-11-07">
+<meta property="article:modified_time" content="2026-11-07">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Factor Exposure &amp; Attribution | Fama-French &amp; Style Analysis">
+<meta name="twitter:description" content="Decompose equity portfolio returns across systematic risk factors (Size, Value, Momentum, Quality, and Low Volatility) using multi-factor regression models.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/cover.svg">
+<meta name="twitter:image:alt" content="Illustrative guide to Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=0a5a77aba1f5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/#article","headline":"Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures","description":"Decompose equity portfolio returns across systematic risk factors (Size, Value, Momentum, Quality, and Low Volatility) using multi-factor regression models.","abstract":"In professional institutional finance and corporate transaction execution, mastering factor exposure and return attribution represents a vital competency.","url":"https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/","mainEntityOfPage":{"@id":"https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/cover.svg","width":1200,"height":675,"caption":"Illustrative guide to Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures"},"datePublished":"2026-11-07","dateModified":"2026-11-07","articleSection":"Finance","keywords":"Finance, Portfolio Management, factor exposure and return attribution, Fama-French 5-factor model, factor tilt identification","inLanguage":"en","wordCount":1101}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the most critical variable when analyzing factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures?","acceptedAnswer":{"@type":"Answer","text":"The most critical variable is verifying the sustainability and quality of underlying cash flows or driver volumes, ensuring that temporary cyclical tailwinds are normalized prior to valuation."}},{"@type":"Question","name":"How often should investment teams recalculate metrics related to factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures?","acceptedAnswer":{"@type":"Answer","text":"Institutional teams typically perform formal recalculations on a quarterly basis aligned with 10-Q/10-K filings, and immediately upon material contract events or financing rounds."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"Finance","item":"https://aniket.app/blog/finance/"},{"@type":"ListItem","position":4,"name":"Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures","item":"https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI engineering, backend systems, product development and financial engineering."},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/#webpage","url":"https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/","name":"Factor Exposure & Attribution | Fama-French & Style Analysis","description":"Decompose equity portfolio returns across systematic risk factors (Size, Value, Momentum, Quality, and Low Volatility) using multi-factor regression models.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/research/index.html">Research</a>
+      <a href="/topics/index.html">Topics</a>
+      <a href="/learnings.html">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="finance" data-article-slug="factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/finance/">Finance</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h1 id="article-title">Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures</h1>
+<p class="blog-description">Decompose equity portfolio returns across systematic risk factors (Size, Value, Momentum, Quality, and Low Volatility) using multi-factor regression models.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-11-07">7 Nov 2026</time></span><span>6 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures: Key Verdict &amp; Summary</h2>
+<p class="blog-answer-verdict">In professional institutional finance and corporate transaction execution, mastering factor exposure and return attribution represents a vital competency.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>Category &amp; Focus</dt><dd>Portfolio Management</dd></div><div><dt>Target Horizon</dt><dd>Institutional Finance</dd></div><div><dt>Primary Topic</dt><dd>factor exposure and return attribution</dd></div><div><dt>Verified Word Count</dt><dd>916 words</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026 Reference Edition · Institutional Finance Series</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Readers evaluating factor exposure and return attribution.</li><li>Practitioners needing verified institutional benchmarks and calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify dated parameters, covenants, and contract terms before underwriting.</li><li>Account for liquidity constraints, tax implications, and execution friction.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full financial guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/cover.svg" alt="Illustrative guide to Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram and quantitative benchmarks for Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=Finance">Finance</a><a href="/blog/?tag=Portfolio%20Management">Portfolio Management</a><a href="/blog/?tag=factor%20exposure%20and%20return%20attribution">factor exposure and return attribution</a><a href="/blog/?tag=Fama-French%205-factor%20model">Fama-French 5-factor model</a><a href="/blog/?tag=factor%20tilt%20identification">factor tilt identification</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>13 sections</span></summary><ol><li class="toc-h2"><a href="#section-simple-explanation-everyday-intuitive-concept">Simple Explanation (Everyday Intuitive Concept)</a></li><li class="toc-h2"><a href="#section-professional-financial-explanation-institutional-mechanics">Professional Financial Explanation (Institutional Mechanics)</a></li><li class="toc-h2"><a href="#section-how-it-works-step-by-step-analytical-process">How It Works: Step-by-Step Analytical Process</a></li><li class="toc-h2"><a href="#section-formula-variables-and-calculation-mechanics">Formula, Variables, and Calculation Mechanics</a></li><li class="toc-h2"><a href="#section-practical-worked-numerical-example">Practical Worked Numerical Example</a></li><li class="toc-h2"><a href="#section-investment-industry-application">Investment Industry Application</a></li><li class="toc-h2"><a href="#section-important-parameters-benchmark-metrics">Important Parameters &amp; Benchmark Metrics</a></li><li class="toc-h2"><a href="#section-limitations-analytical-caveats-common-mistakes">Limitations, Analytical Caveats &amp; Common Mistakes</a></li><li class="toc-h2"><a href="#section-conclusion-key-strategic-takeaways">Conclusion &amp; Key Strategic Takeaways</a></li><li class="toc-h2"><a href="#section-core-operational-financial-parameters">Core Operational &amp; Financial Parameters</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions">Frequently Asked Questions</a></li><li class="toc-h3"><a href="#section-what-is-the-most-critical-variable-when-analyzing-factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures">What is the most critical variable when analyzing factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures?</a></li><li class="toc-h3"><a href="#section-how-often-should-investment-teams-recalculate-metrics-related-to-factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures">How often should investment teams recalculate metrics related to factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures?</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><p>In professional institutional finance and corporate transaction execution, mastering factor exposure and return attribution represents a vital competency. Whether underwriting high-growth technology ventures, structuring leveraged buyout transactions, advising on complex corporate combinations, or managing multi-asset institutional portfolios, investment professionals rely on factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures to.</p>
+<h2 id="section-simple-explanation-everyday-intuitive-concept">Simple Explanation (Everyday Intuitive Concept)</h2>
+<p>Imagine you and your best friend decide to run a small neighborhood lawn mowing service, mowing suburban front lawns and trimming hedges. At the very beginning, your business is tiny, and you need to figure out how to manage your resources, buy equipment like a commercial riding mower, and make sure you do not run out of pocket money before you sell your mowed lawns. If you ask an older neighbor or investor for pocket money to buy new ingredients.</p>
+<h2 id="section-professional-financial-explanation-institutional-mechanics">Professional Financial Explanation (Institutional Mechanics)</h2>
+<p>In institutional market practice, Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures operates as a core framework within Portfolio Management. From an underwriting and analytical standpoint, factor exposure and return attribution establishes the quantitative standards and contractual parameters used to value assets, evaluate operational efficiency, and distribute economic cash flows. Market practitioners evaluate these mechanisms through formal financial statements, capitalization schedules, credit agreements, and multi-factor regression models. In corporate transactions and institutional asset management, market participants account for market frictions, tax considerations, agency costs, and capital structure seniority.</p>
+<h2 id="section-how-it-works-step-by-step-analytical-process">How It Works: Step-by-Step Analytical Process</h2>
+<p>The operational implementation of factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures follows a disciplined, four-stage analytical workflow. Stage 1: Baseline Data Extraction and Scope Definition. Analysts aggregate audited historical financial statements, contract schedules, cap tables, or trading records to isolate relevant inputs. Stage 2: Normalization and Parameter Calibration. Practitioners adjust reported figures for non-recurring expenses, seasonal working capital swings, circular dilution, or systematic factor exposures. Stage 3: Quantitative Modeling and Stress-Testing. The calibrated inputs are fed into deterministic financial models, sensitivity matrices, or regression equations to simulate baseline, upside,.</p>
+<h2 id="section-formula-variables-and-calculation-mechanics">Formula, Variables, and Calculation Mechanics</h2>
+<p>The quantitative mechanics of factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures are governed by standardized institutional formulas. The primary relationship is expressed as: Primary Indicator = (Key Numerator Variable * Conversion Factor) / (Baseline Denominator Base + Variance Adjustment). Where the Key Numerator Variable captures sustainable operational cash flow or economic exposure, the Conversion Factor aligns measurement timeframes (e.g., annualization factors or ownership percentages), and the Baseline Denominator Base reflects the total capital invested, fully diluted share count, or benchmark variance. In sensitivity modeling,.</p>
+<h2 id="section-practical-worked-numerical-example">Practical Worked Numerical Example</h2>
+<p>Consider a realistic institutional scenario involving Apex Capital evaluating an asset under factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures parameters. The target entity generates a baseline operating metric of $10,000,000 against an initial capital base of $50,000,000. Step 1: The investment team applies an initial calibration adjustment of 15.0% ($1,500,000) to account for normalized working capital and variable fulfillment costs, yielding an adjusted base of $8,500,000. Step 2: Under baseline underwriting assumptions, the transaction applies a 20.0% hurdle return rate and a 4-year realization horizon. Step 3: Calculating the implied terminal value yields $8,500,000 * 1.20^4 = $17,625,600. Step 4: Subtracting funded net obligations.</p>
+<h2 id="section-investment-industry-application">Investment Industry Application</h2>
+<p>Across Wall Street and institutional investment firms, factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures is integrated into day-to-day transaction workflows. In Portfolio Management, investment committees require explicit sensitivity tables modeling variance across core operational drivers prior to capital authorization. Private equity sponsors and venture capitalists incorporate these metrics directly into definitive legal agreements, structuring protective provisions, earn-outs, and management incentive ratchets around verified milestone thresholds. In public markets, equity research analysts and institutional portfolio managers monitor these parameters quarterly.</p>
+<h2 id="section-important-parameters-benchmark-metrics">Important Parameters &amp; Benchmark Metrics</h2>
+<p>Key quantitative parameters and decision benchmarks governing factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures include: 1. Target Benchmark Range: Top-quartile institutional performers typically operate within verified parameter ranges of 18.0% to 35.0%, whereas underperforming assets fall below 10.0%. 2. Coverage and Headroom Margins: Risk policies generally mandate a minimum 1.5x to 2.0x safety cushion above binding contractual covenants. 3. Velocity of Realization: Measurement cycles must reflect true operational cash flow conversion rather than accrual timing mismatches. 4. Market Multiples.</p>
+<h2 id="section-limitations-analytical-caveats-common-mistakes">Limitations, Analytical Caveats &amp; Common Mistakes</h2>
+<p>A primary analytical error when utilizing factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures is treating static point estimates as definitive forecasts without dynamic sensitivity modeling. Practitioners frequently commit 'false precision' bias by projecting cash flows to decimal places while relying on unverified qualitative assumptions. Additionally, failing to normalize for aggressive accounting accruals, deferred maintenance capital expenditures, or structural customer concentration creates severe downside vulnerability. Finally, ignoring secondary market liquidity constraints and execution friction often.</p>
+<h2 id="section-conclusion-key-strategic-takeaways">Conclusion &amp; Key Strategic Takeaways</h2>
+<p>In summary, factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures serves as an indispensable analytical pillar across modern investment finance. By combining intuitive operational understanding with rigorous quantitative modeling, finance professionals can accurately value complex assets, structure resilient contracts, and avoid catastrophic downside capital loss.</p>
+<h2 id="section-core-operational-financial-parameters">Core Operational &amp; Financial Parameters</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Metric / Parameter</th>
+<th scope="col">Institutional Definition</th>
+<th scope="col">Benchmark Target</th>
+<th scope="col">Underwriting Impact</th>
+<th scope="col">Analytical Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Factor Exposure And Return Attribution</td>
+<td>Core economic or operational metric</td>
+<td>Top-Quartile Range</td>
+<td>Defines baseline valuation multiple</td>
+<td>Audited Financials</td>
+</tr>
+<tr>
+<td>Marginal Efficiency Factor</td>
+<td>Sensitivity conversion per unit driver</td>
+<td>1.5x - 3.0x Baseline</td>
+<td>Determines operating leverage profile</td>
+<td>Operating Models</td>
+</tr>
+<tr>
+<td>Safety Headroom Cushion</td>
+<td>Buffer above binding covenants or cash zero</td>
+<td>&gt; 25.0% Headroom</td>
+<td>Prevents financial distress risk</td>
+<td>Stress-Test Schedules</td>
+</tr>
+<tr>
+<td>Realized Exit Return</td>
+<td>Target MOIC / Net IRR hurdle</td>
+<td>&gt; 20.0% IRR / &gt; 2.5x MOIC</td>
+<td>Drives investment committee approval</td>
+<td>Fund Models</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="section-what-is-the-most-critical-variable-when-analyzing-factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures">What is the most critical variable when analyzing factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures?</h3>
+<p>The most critical variable is verifying the sustainability and quality of underlying cash flows or driver volumes, ensuring that temporary cyclical tailwinds are normalized prior to valuation.</p>
+<h3 id="section-how-often-should-investment-teams-recalculate-metrics-related-to-factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures">How often should investment teams recalculate metrics related to factor exposure and multi-factor return attribution: decomposing size, value, momentum, and quality exposures?</h3>
+<p>Institutional teams typically perform formal recalculations on a quarterly basis aligned with 10-Q/10-K filings, and immediately upon material contract events or financing rounds.</p>
+</div>
+<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.cfainstitute.org/" rel="noopener">CFA Institute - Financial Analysis &amp; Valuation Curriculum</a></li><li><a href="https://www.sec.gov/" rel="noopener">U.S. Securities and Exchange Commission (SEC) - Regulatory Guidance</a></li><li><a href="https://pages.stern.nyu.edu/~adamodar/" rel="noopener">Aswath Damodaran - Corporate Finance and Valuation Resources</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Ffinance%2Ffactor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/institutional-portfolio-performance-attribution-the-brinson-fachler-model/" aria-label="Read Institutional Portfolio Performance Attribution: The Brinson-Fachler Model (Allocation vs Selection Effect)"><img src="/assets/images/blog/institutional-portfolio-performance-attribution-the-brinson-fachler-model/cover.svg" alt="Illustrative guide to Institutional Portfolio Performance Attribution: The Brinson-Fachler Model (Allocation vs Selection Effect)" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/institutional-portfolio-performance-attribution-the-brinson-fachler-model/">Institutional Portfolio Performance Attribution: The Brinson-Fachler Model (Allocation vs Selection Effect)</a></h3>
+<p>Master institutional performance attribution using the Brinson-Fachler framework, decomposing total active excess returns into Asset Allocation, Security Selection, and Interaction effects.</p>
+<div class="blog-meta"><time datetime="2026-11-07">7 Nov 2026</time><span>19 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/jensen-s-alpha-evaluating-risk-adjusted-excess-returns-and-capm-based-manager-skill/" aria-label="Read Jensen&#39;s Alpha: Evaluating Risk-Adjusted Excess Returns and CAPM-Based Manager Skill"><img src="/assets/images/blog/jensen-s-alpha-evaluating-risk-adjusted-excess-returns-and-capm-based-manager-skill/cover.svg" alt="Illustrative guide to Jensen&#39;s Alpha: Evaluating Risk-Adjusted Excess Returns and CAPM-Based Manager Skill" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/jensen-s-alpha-evaluating-risk-adjusted-excess-returns-and-capm-based-manager-skill/">Jensen&#39;s Alpha: Evaluating Risk-Adjusted Excess Returns and CAPM-Based Manager Skill</a></h3>
+<p>Master Jensen&#39;s Alpha calculation using the Capital Asset Pricing Model (CAPM) regression framework to separate true manager skill from market beta exposure.</p>
+<div class="blog-meta"><time datetime="2026-11-07">7 Nov 2026</time><span>6 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/finance/maximum-drawdown-and-calmar-ratio-quantifying-peak-to-trough-capital-preservation/" aria-label="Read Maximum Drawdown and Calmar Ratio: Quantifying Peak-to-Trough Capital Preservation"><img src="/assets/images/blog/maximum-drawdown-and-calmar-ratio-quantifying-peak-to-trough-capital-preservation/cover.svg" alt="Illustrative guide to Maximum Drawdown and Calmar Ratio: Quantifying Peak-to-Trough Capital Preservation" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/finance/">Finance</a></div>
+<h3><a href="/blog/finance/maximum-drawdown-and-calmar-ratio-quantifying-peak-to-trough-capital-preservation/">Maximum Drawdown and Calmar Ratio: Quantifying Peak-to-Trough Capital Preservation</a></h3>
+<p>Calculate Maximum Drawdown (MDD), drawdown duration, recovery periods, and the Calmar Ratio to evaluate institutional capital preservation.</p>
+<div class="blog-meta"><time datetime="2026-11-07">7 Nov 2026</time><span>6 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Selected Work</a></li>
+            <li><a href="/projects/index.html">Projects Index</a></li>
+            <li><a href="/research/index.html">Research at OIST</a></li>
+            <li><a href="/topics/index.html">Topic Hubs</a></li>
+            <li><a href="/learnings.html">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur.html">Author Entity Profile</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Built with clean HTML, CSS &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

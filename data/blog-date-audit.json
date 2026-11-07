@@ -9302,6 +9302,1506 @@
       "dateModified": "2026-11-05",
       "status": "verified",
       "evidence": "Published on 2026-11-05 per authoritative EICMA 2026 80-article editorial schedule."
+    },
+    {
+      "source": "data/blog/finance/how-vc-firms-identify-and-source-investment-opportunities.md",
+      "url": "/blog/finance/how-vc-firms-identify-and-source-investment-opportunities/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How VC Firms Identify and Source Investment Opportunities on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-startup-investment-screening-and-triage-works.md",
+      "url": "/blog/finance/how-startup-investment-screening-and-triage-works/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Startup Investment Screening and Triage Works on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-venture-capitalists-evaluate-founder-background-and-capability.md",
+      "url": "/blog/finance/how-venture-capitalists-evaluate-founder-background-and-capability/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Venture Capitalists Evaluate Founder Background and Capability on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/founder-market-fit-and-its-startup-investment-implications.md",
+      "url": "/blog/finance/founder-market-fit-and-its-startup-investment-implications/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Founder-Market Fit and Its Startup Investment Implications on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-early-stage-investors-assess-product-market-fit.md",
+      "url": "/blog/finance/how-early-stage-investors-assess-product-market-fit/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Early-Stage Investors Assess Product-Market Fit on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/calculating-tam-sam-and-som-a-market-sizing-guide-for-investors.md",
+      "url": "/blog/finance/calculating-tam-sam-and-som-a-market-sizing-guide-for-investors/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Calculating TAM, SAM, and SOM: A Market Sizing Guide for Investors on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/startup-financial-modelling-building-bottom-up-revenue-forecasts.md",
+      "url": "/blog/finance/startup-financial-modelling-building-bottom-up-revenue-forecasts/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Startup Financial Modelling: Building Bottom-Up Revenue Forecasts on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/startup-valuation-methodologies-across-seed-and-series-a.md",
+      "url": "/blog/finance/startup-valuation-methodologies-across-seed-and-series-a/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Startup Valuation Methodologies Across Seed and Series A on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/applying-revenue-multiples-in-early-stage-venture-capital.md",
+      "url": "/blog/finance/applying-revenue-multiples-in-early-stage-venture-capital/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Applying Revenue Multiples in Early-Stage Venture Capital on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/the-venture-capital-method-of-valuation-target-returns-and-exit-values.md",
+      "url": "/blog/finance/the-venture-capital-method-of-valuation-target-returns-and-exit-values/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of The Venture Capital Method of Valuation: Target Returns and Exit Values on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/pre-money-vs-post-money-valuation-mechanics-and-ownership-math.md",
+      "url": "/blog/finance/pre-money-vs-post-money-valuation-mechanics-and-ownership-math/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Pre-Money vs Post-Money Valuation: Mechanics and Ownership Math on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/startup-equity-dilution-how-follow-on-rounds-impact-early-shareholders.md",
+      "url": "/blog/finance/startup-equity-dilution-how-follow-on-rounds-impact-early-shareholders/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Startup Equity Dilution: How Follow-on Rounds Impact Early Shareholders on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/fully-diluted-ownership-calculations-options-warrants-and-notes.md",
+      "url": "/blog/finance/fully-diluted-ownership-calculations-options-warrants-and-notes/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Fully Diluted Ownership Calculations: Options, Warrants, and Notes on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cap-table-construction-and-analysis-managing-equity-structure.md",
+      "url": "/blog/finance/cap-table-construction-and-analysis-managing-equity-structure/",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Cap Table Construction and Analysis: Managing Equity Structure on 2026-11-01 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/safe-agreements-vs-convertible-notes-investment-structures-and-conversion-math.md",
+      "url": "/blog/finance/safe-agreements-vs-convertible-notes-investment-structures-and-conversion-math/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of SAFE Agreements vs Convertible Notes: Investment Structures and Conversion Math on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/startup-preferred-shares-rights-preferences-and-class-distinctions.md",
+      "url": "/blog/finance/startup-preferred-shares-rights-preferences-and-class-distinctions/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Startup Preferred Shares: Rights, Preferences, and Class Distinctions on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/liquidation-preferences-senior-pari-passu-and-tiered-waterfall-returns.md",
+      "url": "/blog/finance/liquidation-preferences-senior-pari-passu-and-tiered-waterfall-returns/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Liquidation Preferences: Senior, Pari Passu, and Tiered Waterfall Returns on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/participating-vs-non-participating-preferred-stock-in-downside-and-upside-scenarios.md",
+      "url": "/blog/finance/participating-vs-non-participating-preferred-stock-in-downside-and-upside-scenarios/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Participating vs Non-Participating Preferred Stock in Downside and Upside Scenarios on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/anti-dilution-protection-full-ratchet-vs-weighted-average-mechanics.md",
+      "url": "/blog/finance/anti-dilution-protection-full-ratchet-vs-weighted-average-mechanics/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Anti-Dilution Protection: Full Ratchet vs Weighted Average Mechanics on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/pro-rata-rights-calculating-and-exercising-follow-on-allocations.md",
+      "url": "/blog/finance/pro-rata-rights-calculating-and-exercising-follow-on-allocations/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Pro-Rata Rights: Calculating and Exercising Follow-on Allocations on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/vc-term-sheet-negotiation-key-commercial-terms-vs-control-provisions.md",
+      "url": "/blog/finance/vc-term-sheet-negotiation-key-commercial-terms-vs-control-provisions/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of VC Term Sheet Negotiation: Key Commercial Terms vs Control Provisions on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/startup-unit-economics-analyzing-contribution-margin-at-the-transaction-level.md",
+      "url": "/blog/finance/startup-unit-economics-analyzing-contribution-margin-at-the-transaction-level/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Startup Unit Economics: Analyzing Contribution Margin at the Transaction Level on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cac-ltv-and-payback-periods-measuring-startup-customer-acquisition-efficiency.md",
+      "url": "/blog/finance/cac-ltv-and-payback-periods-measuring-startup-customer-acquisition-efficiency/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of CAC, LTV, and Payback Periods: Measuring Startup Customer Acquisition Efficiency on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/gross-margin-vs-contribution-margin-evaluating-startup-operating-leverage.md",
+      "url": "/blog/finance/gross-margin-vs-contribution-margin-evaluating-startup-operating-leverage/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Gross Margin vs Contribution Margin: Evaluating Startup Operating Leverage on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/burn-rate-and-cash-runway-monitoring-capital-consumption-and-survival-horizon.md",
+      "url": "/blog/finance/burn-rate-and-cash-runway-monitoring-capital-consumption-and-survival-horizon/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Burn Rate and Cash Runway: Monitoring Capital Consumption and Survival Horizon on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cohort-retention-analysis-evaluating-churn-net-revenue-retention-and-ltv.md",
+      "url": "/blog/finance/cohort-retention-analysis-evaluating-churn-net-revenue-retention-and-ltv/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Cohort Retention Analysis: Evaluating Churn, Net Revenue Retention, and LTV on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/startup-financial-due-diligence-verifying-revenue-billings-and-unit-costs.md",
+      "url": "/blog/finance/startup-financial-due-diligence-verifying-revenue-billings-and-unit-costs/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Startup Financial Due Diligence: Verifying Revenue, Billings, and Unit Costs on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/technical-and-commercial-due-diligence-in-early-stage-software-investing.md",
+      "url": "/blog/finance/technical-and-commercial-due-diligence-in-early-stage-software-investing/",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Technical and Commercial Due Diligence in Early-Stage Software Investing on 2026-11-02 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/investment-committee-evaluation-building-the-venture-capital-investment-memo.md",
+      "url": "/blog/finance/investment-committee-evaluation-building-the-venture-capital-investment-memo/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Investment Committee Evaluation: Building the Venture Capital Investment Memo on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/vc-portfolio-construction-power-law-dynamics-fund-size-and-reserve-strategy.md",
+      "url": "/blog/finance/vc-portfolio-construction-power-law-dynamics-fund-size-and-reserve-strategy/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of VC Portfolio Construction: Power Law Dynamics, Fund Size, and Reserve Strategy on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/follow-on-investment-decisions-evaluating-winners-and-limiting-capital-drag.md",
+      "url": "/blog/finance/follow-on-investment-decisions-evaluating-winners-and-limiting-capital-drag/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Follow-on Investment Decisions: Evaluating Winners and Limiting Capital Drag on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/venture-capital-exit-strategies-m-a-ipos-and-secondary-liquidity.md",
+      "url": "/blog/finance/venture-capital-exit-strategies-m-a-ipos-and-secondary-liquidity/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Venture Capital Exit Strategies: M&A, IPOs, and Secondary Liquidity on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/venture-capital-fund-economics-management-fees-carried-interest-and-hurdle-rates.md",
+      "url": "/blog/finance/venture-capital-fund-economics-management-fees-carried-interest-and-hurdle-rates/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Venture Capital Fund Economics: Management Fees, Carried Interest, and Hurdle Rates on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-break-into-venture-capital-networking-sourcing-proof-and-theses.md",
+      "url": "/blog/finance/how-to-break-into-venture-capital-networking-sourcing-proof-and-theses/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How to Break into Venture Capital: Networking, Sourcing Proof, and Theses on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-prepare-for-a-vc-investment-analyst-technical-interview.md",
+      "url": "/blog/finance/how-to-prepare-for-a-vc-investment-analyst-technical-interview/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How to Prepare for a VC Investment Analyst Technical Interview on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/private-equity-deal-sourcing-proprietary-sourcing-vs-intermediated-auctions.md",
+      "url": "/blog/finance/private-equity-deal-sourcing-proprietary-sourcing-vs-intermediated-auctions/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Private Equity Deal Sourcing: Proprietary Sourcing vs Intermediated Auctions on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/investment-thesis-development-identifying-platform-candidates-and-industry-tailwinds.md",
+      "url": "/blog/finance/investment-thesis-development-identifying-platform-candidates-and-industry-tailwinds/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Investment Thesis Development: Identifying Platform Candidates and Industry Tailwinds on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/screening-acquisition-targets-establishing-strategic-and-financial-investment-criteria.md",
+      "url": "/blog/finance/screening-acquisition-targets-establishing-strategic-and-financial-investment-criteria/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Screening Acquisition Targets: Establishing Strategic and Financial Investment Criteria on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/financial-due-diligence-in-private-equity-scope-workstreams-and-red-flag-identification.md",
+      "url": "/blog/finance/financial-due-diligence-in-private-equity-scope-workstreams-and-red-flag-identification/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Financial Due Diligence in Private Equity: Scope, Workstreams, and Red Flag Identification on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/commercial-due-diligence-assessing-industry-structure-pricing-power-and-competitive-moats.md",
+      "url": "/blog/finance/commercial-due-diligence-assessing-industry-structure-pricing-power-and-competitive-moats/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Commercial Due Diligence: Assessing Industry Structure, Pricing Power, and Competitive Moats on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/quality-of-earnings-analysis-uncovering-pro-forma-earnings-realities.md",
+      "url": "/blog/finance/quality-of-earnings-analysis-uncovering-pro-forma-earnings-realities/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Quality of Earnings (QofE) Analysis: Uncovering Pro Forma Earnings Realities on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/normalised-ebitda-adjustments-non-recurring-expenses-owner-add-backs-and-run-rate-normalisation.md",
+      "url": "/blog/finance/normalised-ebitda-adjustments-non-recurring-expenses-owner-add-backs-and-run-rate-normalisation/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Normalised EBITDA Adjustments: Non-Recurring Expenses, Owner Add-backs, and Run-Rate Normalisation on 2026-11-03 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/working-capital-adjustments-in-acquisitions-pegs-targets-and-true-up-mechanics.md",
+      "url": "/blog/finance/working-capital-adjustments-in-acquisitions-pegs-targets-and-true-up-mechanics/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Working Capital Adjustments in Acquisitions: Pegs, Targets, and True-Up Mechanics on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/net-debt-calculations-in-m-a-identifying-funded-debt-cash-like-items-and-debt-like-items.md",
+      "url": "/blog/finance/net-debt-calculations-in-m-a-identifying-funded-debt-cash-like-items-and-debt-like-items/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Net Debt Calculations in M&A: Identifying Funded Debt, Cash-like Items, and Debt-like Items on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/entry-valuation-considerations-balancing-multiple-paid-leverage-capacity-and-margin-expansion.md",
+      "url": "/blog/finance/entry-valuation-considerations-balancing-multiple-paid-leverage-capacity-and-margin-expansion/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Entry Valuation Considerations: Balancing Multiple Paid, Leverage Capacity, and Margin Expansion on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/advanced-lbo-financing-structures-senior-secured-subordinated-mezzanine-and-unitranche-debt.md",
+      "url": "/blog/finance/advanced-lbo-financing-structures-senior-secured-subordinated-mezzanine-and-unitranche-debt/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Advanced LBO Financing Structures: Senior Secured, Subordinated Mezzanine, and Unitranche Debt on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/debt-capacity-analysis-stress-testing-leverage-coverage-ratios-and-cash-flow-headroom.md",
+      "url": "/blog/finance/debt-capacity-analysis-stress-testing-leverage-coverage-ratios-and-cash-flow-headroom/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Debt Capacity Analysis: Stress-Testing Leverage, Coverage Ratios, and Cash Flow Headroom on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/debt-covenant-analysis-maintenance-vs-incurrence-covenants-in-leveraged-finance.md",
+      "url": "/blog/finance/debt-covenant-analysis-maintenance-vs-incurrence-covenants-in-leveraged-finance/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Debt Covenant Analysis: Maintenance vs Incurrence Covenants in Leveraged Finance on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/management-incentive-plans-designing-stock-option-pools-and-sweet-equity-in-buyouts.md",
+      "url": "/blog/finance/management-incentive-plans-designing-stock-option-pools-and-sweet-equity-in-buyouts/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Management Incentive Plans: Designing Stock Option Pools and Sweet Equity in Buyouts on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/management-rollover-equity-tax-structuring-alignment-and-ownership-retention.md",
+      "url": "/blog/finance/management-rollover-equity-tax-structuring-alignment-and-ownership-retention/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Management Rollover Equity: Tax Structuring, Alignment, and Ownership Retention on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/buy-and-build-strategies-scaling-platforms-through-strategic-add-on-consolidation.md",
+      "url": "/blog/finance/buy-and-build-strategies-scaling-platforms-through-strategic-add-on-consolidation/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Buy-and-Build Strategies: Scaling Platforms Through Strategic Add-on Consolidation on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/add-on-acquisitions-sourcing-synergy-realisation-and-multiple-arbitrage-mechanics.md",
+      "url": "/blog/finance/add-on-acquisitions-sourcing-synergy-realisation-and-multiple-arbitrage-mechanics/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Add-on Acquisitions: Sourcing, Synergy Realisation, and Multiple Arbitrage Mechanics on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/operational-value-creation-in-private-equity-developing-100-day-plans-and-operational-initiatives.md",
+      "url": "/blog/finance/operational-value-creation-in-private-equity-developing-100-day-plans-and-operational-initiatives/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Operational Value Creation in Private Equity: Developing 100-Day Plans and Operational Initiatives on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/revenue-enhancement-strategies-pricing-optimisation-sales-force-effectiveness-and-cross-selling.md",
+      "url": "/blog/finance/revenue-enhancement-strategies-pricing-optimisation-sales-force-effectiveness-and-cross-selling/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Revenue Enhancement Strategies: Pricing Optimisation, Sales Force Effectiveness, and Cross-Selling on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cost-optimisation-in-portfolio-companies-zero-based-budgeting-procurement-and-sg-a-rationalisation.md",
+      "url": "/blog/finance/cost-optimisation-in-portfolio-companies-zero-based-budgeting-procurement-and-sg-a-rationalisation/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Cost Optimisation in Portfolio Companies: Zero-Based Budgeting, Procurement, and SG&A Rationalisation on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/private-equity-exit-readiness-preparing-a-portfolio-company-for-a-high-value-sale.md",
+      "url": "/blog/finance/private-equity-exit-readiness-preparing-a-portfolio-company-for-a-high-value-sale/",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Private Equity Exit Readiness: Preparing a Portfolio Company for a High-Value Sale on 2026-11-04 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/secondary-buyouts-value-drivers-risks-and-underwriting-expectations-between-sponsors.md",
+      "url": "/blog/finance/secondary-buyouts-value-drivers-risks-and-underwriting-expectations-between-sponsors/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Secondary Buyouts: Value Drivers, Risks, and Underwriting Expectations Between Sponsors on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/gp-led-secondary-transactions-tender-offers-continuation-vehicles-and-portfolio-recapitalisations.md",
+      "url": "/blog/finance/gp-led-secondary-transactions-tender-offers-continuation-vehicles-and-portfolio-recapitalisations/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of GP-Led Secondary Transactions: Tender Offers, Continuation Vehicles, and Portfolio Recapitalisations on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/continuation-funds-structuring-conflicts-valuations-and-lp-election-processes.md",
+      "url": "/blog/finance/continuation-funds-structuring-conflicts-valuations-and-lp-election-processes/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Continuation Funds: Structuring Conflicts, Valuations, and LP Election Processes on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/private-equity-fund-waterfalls-and-performance-metrics-american-vs-european-waterfalls-dpi-tvpi-and-rvpi.md",
+      "url": "/blog/finance/private-equity-fund-waterfalls-and-performance-metrics-american-vs-european-waterfalls-dpi-tvpi-and-rvpi/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Private Equity Fund Waterfalls and Performance Metrics: American vs European Waterfalls, DPI, TVPI, and RVPI on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-investment-banking-deal-origination-works-sector-coverage-pitching-and-relationship-management.md",
+      "url": "/blog/finance/how-investment-banking-deal-origination-works-sector-coverage-pitching-and-relationship-management/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Investment Banking Deal Origination Works: Sector Coverage, Pitching, and Relationship Management on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/sell-side-m-a-process-execution-from-engagement-to-closing-across-structured-auction-stages.md",
+      "url": "/blog/finance/sell-side-m-a-process-execution-from-engagement-to-closing-across-structured-auction-stages/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Sell-Side M&A Process Execution: From Engagement to Closing Across Structured Auction Stages on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/buy-side-m-a-advisory-target-search-synergy-analysis-and-tactical-bidding-strategy.md",
+      "url": "/blog/finance/buy-side-m-a-advisory-target-search-synergy-analysis-and-tactical-bidding-strategy/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Buy-Side M&A Advisory: Target Search, Synergy Analysis, and Tactical Bidding Strategy on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-investment-bankers-prepare-pitchbooks-structure-strategic-narrative-and-valuation-summaries.md",
+      "url": "/blog/finance/how-investment-bankers-prepare-pitchbooks-structure-strategic-narrative-and-valuation-summaries/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Investment Bankers Prepare Pitchbooks: Structure, Strategic Narrative, and Valuation Summaries on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-a-confidential-information-memorandum-is-structured-positioning-and-disclosure-strategy.md",
+      "url": "/blog/finance/how-a-confidential-information-memorandum-is-structured-positioning-and-disclosure-strategy/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How a Confidential Information Memorandum (CIM) is Structured: Positioning and Disclosure Strategy on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/crafting-the-m-a-teaser-anonymity-core-investment-highlights-and-teaser-distribution.md",
+      "url": "/blog/finance/crafting-the-m-a-teaser-anonymity-core-investment-highlights-and-teaser-distribution/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Crafting the M&A Teaser: Anonymity, Core Investment Highlights, and Teaser Distribution on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/confidentiality-agreements-in-m-a-key-terms-non-solicitation-and-standstill-provisions.md",
+      "url": "/blog/finance/confidentiality-agreements-in-m-a-key-terms-non-solicitation-and-standstill-provisions/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Confidentiality Agreements (NDAs) in M&A: Key Terms, Non-Solicitation, and Standstill Provisions on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/letters-of-intent-and-term-sheets-binding-vs-non-binding-clauses-and-deal-protection.md",
+      "url": "/blog/finance/letters-of-intent-and-term-sheets-binding-vs-non-binding-clauses-and-deal-protection/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Letters of Intent (LOI) and Term Sheets: Binding vs Non-Binding Clauses and Deal Protection on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/enterprise-value-to-equity-value-adjustments-the-complete-bridge-from-enterprise-value-to-purchase-price.md",
+      "url": "/blog/finance/enterprise-value-to-equity-value-adjustments-the-complete-bridge-from-enterprise-value-to-purchase-price/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Enterprise Value to Equity Value Adjustments: The Complete Bridge from Enterprise Value to Purchase Price on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cash-free-debt-free-transaction-structures-working-capital-true-ups-and-debt-settlements.md",
+      "url": "/blog/finance/cash-free-debt-free-transaction-structures-working-capital-true-ups-and-debt-settlements/",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Cash-Free, Debt-Free Transaction Structures: Working Capital True-Ups and Debt Settlements on 2026-11-05 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/negotiating-the-working-capital-peg-setting-12-month-averages-and-seasonality-adjustments.md",
+      "url": "/blog/finance/negotiating-the-working-capital-peg-setting-12-month-averages-and-seasonality-adjustments/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Negotiating the Working Capital Peg: Setting 12-Month Averages and Seasonality Adjustments on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/earn-outs-and-contingent-consideration-structuring-milestones-payout-formulas-and-dispute-avoidance.md",
+      "url": "/blog/finance/earn-outs-and-contingent-consideration-structuring-milestones-payout-formulas-and-dispute-avoidance/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Earn-Outs and Contingent Consideration: Structuring Milestones, Payout Formulas, and Dispute Avoidance on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/m-a-synergy-valuation-quantifying-cost-synergies-revenue-synergies-and-integration-costs.md",
+      "url": "/blog/finance/m-a-synergy-valuation-quantifying-cost-synergies-revenue-synergies-and-integration-costs/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of M&A Synergy Valuation: Quantifying Cost Synergies, Revenue Synergies, and Integration Costs on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/accretion-dilution-analysis-in-m-a-calculating-pro-forma-eps-impact-and-break-even-synergies.md",
+      "url": "/blog/finance/accretion-dilution-analysis-in-m-a-calculating-pro-forma-eps-impact-and-break-even-synergies/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Accretion/Dilution Analysis in M&A: Calculating Pro Forma EPS Impact and Break-Even Synergies on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/purchase-price-allocation-fair-value-asset-step-ups-tangible-intangible-assets-and-goodwill-creation.md",
+      "url": "/blog/finance/purchase-price-allocation-fair-value-asset-step-ups-tangible-intangible-assets-and-goodwill-creation/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Purchase Price Allocation (PPA): Fair Value Asset Step-ups, Tangible/Intangible Assets, and Goodwill Creation on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/fairness-opinions-in-m-a-analytical-scope-board-governance-and-valuation-methodologies.md",
+      "url": "/blog/finance/fairness-opinions-in-m-a-analytical-scope-board-governance-and-valuation-methodologies/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Fairness Opinions in M&A: Analytical Scope, Board Governance, and Valuation Methodologies on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/cross-border-m-a-transactions-foreign-exchange-risk-regulatory-approvals-and-geopolitical-considerations.md",
+      "url": "/blog/finance/cross-border-m-a-transactions-foreign-exchange-risk-regulatory-approvals-and-geopolitical-considerations/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Cross-Border M&A Transactions: Foreign Exchange Risk, Regulatory Approvals, and Geopolitical Considerations on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/investment-banking-transaction-execution-managing-virtual-data-rooms-diligence-q-a-and-definitive-agreements.md",
+      "url": "/blog/finance/investment-banking-transaction-execution-managing-virtual-data-rooms-diligence-q-a-and-definitive-agreements/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Investment Banking Transaction Execution: Managing Virtual Data Rooms, Diligence Q&A, and Definitive Agreements on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-investment-banking-analysts-build-football-field-valuation-charts-synthesizing-multiple-methodologies.md",
+      "url": "/blog/finance/how-investment-banking-analysts-build-football-field-valuation-charts-synthesizing-multiple-methodologies/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Investment Banking Analysts Build Football Field Valuation Charts: Synthesizing Multiple Methodologies on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-to-prepare-for-investment-banking-technical-interviews-accounting-m-a-mechanics-and-deal-valuation.md",
+      "url": "/blog/finance/how-to-prepare-for-investment-banking-technical-interviews-accounting-m-a-mechanics-and-deal-valuation/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How to Prepare for Investment Banking Technical Interviews: Accounting, M&A Mechanics, and Deal Valuation on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/how-equity-research-analysts-develop-actionable-investment-theses-catalysts-consensus-gaps-and-variant-perception.md",
+      "url": "/blog/finance/how-equity-research-analysts-develop-actionable-investment-theses-catalysts-consensus-gaps-and-variant-perception/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of How Equity Research Analysts Develop Actionable Investment Theses: Catalysts, Consensus Gaps, and Variant Perception on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/analysing-earnings-quality-detecting-revenue-manipulation-accrual-distortions-and-cash-flow-divergence.md",
+      "url": "/blog/finance/analysing-earnings-quality-detecting-revenue-manipulation-accrual-distortions-and-cash-flow-divergence/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Analysing Earnings Quality: Detecting Revenue Manipulation, Accrual Distortions, and Cash Flow Divergence on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/forecasting-corporate-revenue-using-operating-drivers-unit-economics-volume-and-pricing-matrices.md",
+      "url": "/blog/finance/forecasting-corporate-revenue-using-operating-drivers-unit-economics-volume-and-pricing-matrices/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Forecasting Corporate Revenue Using Operating Drivers: Unit Economics, Volume, and Pricing Matrices on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/segment-level-financial-analysis-unbundling-business-units-segment-margins-and-capital-allocation.md",
+      "url": "/blog/finance/segment-level-financial-analysis-unbundling-business-units-segment-margins-and-capital-allocation/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Segment-Level Financial Analysis: Unbundling Business Units, Segment Margins, and Capital Allocation on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/calculating-and-interpreting-return-on-invested-capital-operating-profit-invested-capital-and-roic-bridges.md",
+      "url": "/blog/finance/calculating-and-interpreting-return-on-invested-capital-operating-profit-invested-capital-and-roic-bridges/",
+      "datePublished": "2026-11-06",
+      "dateModified": "2026-11-06",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Calculating and Interpreting Return on Invested Capital (ROIC): Operating Profit, Invested Capital, and ROIC Bridges on 2026-11-06 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/analysing-sustainable-competitive-advantages-pricing-power-switching-costs-and-network-effects.md",
+      "url": "/blog/finance/analysing-sustainable-competitive-advantages-pricing-power-switching-costs-and-network-effects/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Analysing Sustainable Competitive Advantages (Economic Moats): Pricing Power, Switching Costs, and Network Effects on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/normalised-earnings-and-mid-cycle-margin-analysis-cyclicality-peak-vs-trough-earnings-and-sustainable-valuation.md",
+      "url": "/blog/finance/normalised-earnings-and-mid-cycle-margin-analysis-cyclicality-peak-vs-trough-earnings-and-sustainable-valuation/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Normalised Earnings and Mid-Cycle Margin Analysis: Cyclicality, Peak vs Trough Earnings, and Sustainable Valuation on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/residual-income-valuation-cost-of-equity-book-value-and-economic-value-added-modelling.md",
+      "url": "/blog/finance/residual-income-valuation-cost-of-equity-book-value-and-economic-value-added-modelling/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Residual Income Valuation: Cost of Equity, Book Value, and Economic Value Added (EVA) Modelling on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/applying-the-dividend-discount-model-gordon-growth-multi-stage-growth-and-financial-sector-applications.md",
+      "url": "/blog/finance/applying-the-dividend-discount-model-gordon-growth-multi-stage-growth-and-financial-sector-applications/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Applying the Dividend Discount Model (DDM): Gordon Growth, Multi-Stage Growth, and Financial Sector Applications on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/sum-of-the-parts-valuation-valuing-conglomerates-and-multi-segment-businesses.md",
+      "url": "/blog/finance/sum-of-the-parts-valuation-valuing-conglomerates-and-multi-segment-businesses/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Sum-of-the-Parts (SOTP) Valuation: Valuing Conglomerates and Multi-Segment Businesses on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/scenario-analysis-in-valuation-constructing-robust-bull-base-and-bear-investment-cases.md",
+      "url": "/blog/finance/scenario-analysis-in-valuation-constructing-robust-bull-base-and-bear-investment-cases/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Scenario Analysis in Valuation: Constructing Robust Bull, Base, and Bear Investment Cases on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/setting-and-defending-an-equity-research-price-target-weighting-methodologies-valuation-multiples-and-risk-factors.md",
+      "url": "/blog/finance/setting-and-defending-an-equity-research-price-target-weighting-methodologies-valuation-multiples-and-risk-factors/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Setting and Defending an Equity Research Price Target: Weighting Methodologies, Valuation Multiples, and Risk Factors on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/the-sharpe-ratio-in-practice-formula-risk-free-rate-benchmarking-and-performance-interpretation.md",
+      "url": "/blog/finance/the-sharpe-ratio-in-practice-formula-risk-free-rate-benchmarking-and-performance-interpretation/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of The Sharpe Ratio in Practice: Formula, Risk-Free Rate Benchmarking, and Performance Interpretation on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/the-sortino-ratio-and-downside-risk-measuring-asymmetric-volatility-and-target-semivariance.md",
+      "url": "/blog/finance/the-sortino-ratio-and-downside-risk-measuring-asymmetric-volatility-and-target-semivariance/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of The Sortino Ratio and Downside Risk: Measuring Asymmetric Volatility and Target Semivariance on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/the-information-ratio-evaluating-active-portfolio-management-and-tracking-error-efficiency.md",
+      "url": "/blog/finance/the-information-ratio-evaluating-active-portfolio-management-and-tracking-error-efficiency/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of The Information Ratio: Evaluating Active Portfolio Management and Tracking Error Efficiency on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/jensen-s-alpha-evaluating-risk-adjusted-excess-returns-and-capm-based-manager-skill.md",
+      "url": "/blog/finance/jensen-s-alpha-evaluating-risk-adjusted-excess-returns-and-capm-based-manager-skill/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Jensen's Alpha: Evaluating Risk-Adjusted Excess Returns and CAPM-Based Manager Skill on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/maximum-drawdown-and-calmar-ratio-quantifying-peak-to-trough-capital-preservation.md",
+      "url": "/blog/finance/maximum-drawdown-and-calmar-ratio-quantifying-peak-to-trough-capital-preservation/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Maximum Drawdown and Calmar Ratio: Quantifying Peak-to-Trough Capital Preservation on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures.md",
+      "url": "/blog/finance/factor-exposure-and-multi-factor-return-attribution-decomposing-size-value-momentum-and-quality-exposures/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Factor Exposure and Multi-Factor Return Attribution: Decomposing Size, Value, Momentum, and Quality Exposures on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/portfolio-risk-contribution-marginal-contribution-to-risk-and-component-var-analysis.md",
+      "url": "/blog/finance/portfolio-risk-contribution-marginal-contribution-to-risk-and-component-var-analysis/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Portfolio Risk Contribution: Marginal Contribution to Risk (MCR) and Component VaR Analysis on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
+    },
+    {
+      "source": "data/blog/finance/institutional-portfolio-performance-attribution-the-brinson-fachler-model.md",
+      "url": "/blog/finance/institutional-portfolio-performance-attribution-the-brinson-fachler-model/",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "status": "owner-confirmed",
+      "confidence": "owner-confirmed",
+      "evidence": {
+        "kind": "site-owner-confirmation",
+        "confirmedOn": "2026-11-07",
+        "note": "Site owner confirmed publication of Institutional Portfolio Performance Attribution: The Brinson-Fachler Model (Allocation vs Selection Effect) on 2026-11-07 from the professional investment finance library."
+      },
+      "rationale": "Owner-confirmed publication date in November 2026.",
+      "reviewRequired": false
     }
   ]
 }
