@@ -78,8 +78,18 @@ async function worker(workerId) {
         while (scrolled < totalHeight) {
           window.scrollBy(0, distance);
           scrolled += distance;
-          await new Promise((r) => setTimeout(r, 60));
+          await new Promise((r) => setTimeout(r, 50));
         }
+        // Wait for all loaded images to decode/settle
+        const imgs = Array.from(document.querySelectorAll("img"));
+        await Promise.allSettled(
+          imgs.map(async (img) => {
+            if (img.complete) return;
+            try {
+              if (img.decode) await img.decode();
+            } catch (_) {}
+          })
+        );
         await new Promise((r) => setTimeout(r, 100));
         window.scrollTo({ top: 0, behavior: "instant" });
       });
@@ -96,7 +106,7 @@ async function worker(workerId) {
         const h3Count = document.querySelectorAll("h3").length;
 
         const images = Array.from(document.querySelectorAll("img"));
-        const brokenImages = images.filter((img) => img.naturalWidth === 0 && !img.src.startsWith("data:")).map((img) => img.src);
+        const brokenImages = images.filter((img) => img.complete && img.naturalWidth === 0 && !img.src.startsWith("data:")).map((img) => img.src);
         const imagesMissingAlt = images.filter((img) => !img.hasAttribute("alt") || img.getAttribute("alt").trim() === "").map((img) => img.src);
 
         const internalLinks = Array.from(document.querySelectorAll("a[href]"))
@@ -186,3 +196,4 @@ await fs.writeFile(outputFile, JSON.stringify({
 }, null, 2));
 
 console.log(`Audit complete: ${results.length} pages audited and saved to ${outputFile}`);
+process.exit(0);
