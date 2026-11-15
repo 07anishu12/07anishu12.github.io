@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Callable vs Putable Bonds: How to Calculate Their Values — CFA Level II</title>
+<meta name="description" content="Master callable vs putable bonds cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, compariso.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Callable vs Putable Bonds: How to Calculate Their Values — CFA Level II">
+<meta property="og:description" content="Master callable vs putable bonds cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, compariso.">
+<meta property="og:url" content="https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/cfa-level-2-callable-vs-putable-bonds-calculate-values/cover.svg">
+<meta property="og:image:alt" content="Illustrative guide to Callable vs Putable Bonds: How to Calculate Their Values">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-11-13">
+<meta property="article:modified_time" content="2026-11-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Callable vs Putable Bonds: How to Calculate Their Values — CFA Level II">
+<meta name="twitter:description" content="Master callable vs putable bonds cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, compariso.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/cfa-level-2-callable-vs-putable-bonds-calculate-values/cover.svg">
+<meta name="twitter:image:alt" content="Illustrative guide to Callable vs Putable Bonds: How to Calculate Their Values">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=f5763b87ac64">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/#article","headline":"Callable vs Putable Bonds: How to Calculate Their Values","description":"Master callable vs putable bonds cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, compariso.","abstract":"Callable vs Putable Bonds: How to Calculate Their Values covers calculating Callable and Putable bond values on a binomial tree (capping at Call Price and flooring at Put Price), embedded option value, OAS vs Volatility sensitivity, and Convertible Bond.","url":"https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/","mainEntityOfPage":{"@id":"https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur/"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur/"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/cfa-level-2-callable-vs-putable-bonds-calculate-values/cover.svg","width":1200,"height":675,"caption":"Illustrative guide to Callable vs Putable Bonds: How to Calculate Their Values"},"datePublished":"2026-11-13","dateModified":"2026-11-13","articleSection":"CFA","keywords":"CFA, Level II, Fixed Income, callable vs putable bonds cfa level 2, callable vs putable bonds cfa level 2 formula","inLanguage":"en","wordCount":1830}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the primary formula for callable vs putable bonds cfa level 2 in Level II Fixed Income?","acceptedAnswer":{"@type":"Answer","text":"The primary equations for Callable vs Putable Bonds: How to Calculate Their Values govern Fixed Income calculations across the CFA curriculum. Candidates must master these formulas alongside their underlying assumptions and variable definitions."}},{"@type":"Question","name":"How is callable vs putable bonds cfa level 2 tested on the CFA Level II exam?","acceptedAnswer":{"@type":"Answer","text":"On the CFA exam, Callable vs Putable Bonds: How to Calculate Their Values is tested through computational problem-solving and conceptual scenario questions. Candidates are evaluated on formula recall, calculator speed, and avoiding common distractor traps."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"CFA","item":"https://aniket.app/blog/cfa/"},{"@type":"ListItem","position":4,"name":"Callable vs Putable Bonds: How to Calculate Their Values","item":"https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","alternateName":["Aniket","07anishu12"],"jobTitle":"AI Engineer & Associate Product Manager","url":"https://aniket.app/author/aniket-thakur/","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.","sameAs":["https://github.com/07anishu12","https://www.linkedin.com/in/aniket-thakur-a23a9b372","https://x.com/07anni04","https://medium.com/@kumaraniketn"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University","alternateName":"DSEU","sameAs":"https://dseu.ac.in/"},{"@type":"CollegeOrUniversity","name":"WorldQuant University","sameAs":"https://www.wqu.edu/"}],"worksFor":[{"@type":"Organization","name":"Drivio Technologies","sameAs":"https://drivio.in"}],"affiliation":[{"@type":"ResearchOrganization","name":"Okinawa Institute of Science and Technology Graduate University","alternateName":"OIST","sameAs":"https://www.oist.jp/"}],"knowsAbout":["Artificial Intelligence","AI Engineering","Agentic AI","Large Language Models","Graph Neural Networks","Data Engineering","Fintech","Financial Engineering","Quantitative Finance"]},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/#webpage","url":"https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/","name":"Callable vs Putable Bonds: How to Calculate Their Values — CFA Level II","description":"Master callable vs putable bonds cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, compariso.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about/">About</a>
+        <a href="/work/">Work</a>
+        <a href="/research/">Research</a>
+        <a href="/topics/">Topics</a>
+        <a href="/learnings/">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about/">About</a>
+      <a href="/work/">Work</a>
+      <a href="/research/">Research</a>
+      <a href="/topics/">Topics</a>
+      <a href="/learnings/">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact/">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="cfa" data-article-slug="cfa-level-2-callable-vs-putable-bonds-calculate-values">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/cfa/">CFA</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h1 id="article-title">Callable vs Putable Bonds: How to Calculate Their Values</h1>
+<p class="blog-description">Master callable vs putable bonds cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, compariso.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-11-13">13 Nov 2026</time></span><span>10 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Callable vs Putable Bonds: How to Calculate Their Values: Key Summary &amp; Verdict</h2>
+<p class="blog-answer-verdict">Callable vs Putable Bonds: How to Calculate Their Values covers calculating Callable and Putable bond values on a binomial tree (capping at Call Price and flooring at Put Price), embedded option value, OAS vs Volatility sensitivity, and Convertible Bond.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>CFA Level</dt><dd>Level II</dd></div><div><dt>Curriculum Subject</dt><dd>Fixed Income</dd></div><div><dt>Topic Focus</dt><dd>callable vs putable bonds cfa level</dd></div><div><dt>Syllabus Standard</dt><dd>2026–2027 Curriculum</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026–2027 CFA Program Curriculum Series · Aniket Thakur</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Candidates preparing for CFA Level II (Fixed Income) exam questions.</li><li>Financial analysts requiring verified formulas and worked calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify compounding periodicity, sign conventions, and calculator mode (BGN vs END).</li><li>Review boundary conditions and common exam distractor traps.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full financial guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/cfa-level-2-callable-vs-putable-bonds-calculate-values/cover.svg" alt="Illustrative guide to Callable vs Putable Bonds: How to Calculate Their Values" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram, curriculum models, and quantitative benchmarks for Callable vs Putable Bonds: How to Calculate Their Values.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=CFA">CFA</a><a href="/blog/?tag=Level%20II">Level II</a><a href="/blog/?tag=Fixed%20Income">Fixed Income</a><a href="/blog/?tag=callable%20vs%20putable%20bonds%20cfa%20level%202">callable vs putable bonds cfa level 2</a><a href="/blog/?tag=callable%20vs%20putable%20bonds%20cfa%20level%202%20formula">callable vs putable bonds cfa level 2 formula</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>22 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-concept-explanation-institutional-framework">Concept Explanation &amp; Institutional Framework</a></li><li class="toc-h2"><a href="#section-core-formulas-mathematical-equations">Core Formulas &amp; Mathematical Equations</a></li><li class="toc-h3"><a href="#section-formula-1-callable-putable-bond-decomposition-node-rules">Formula 1: Callable &amp; Putable Bond Decomposition &amp; Node Rules</a></li><li class="toc-h3"><a href="#section-formula-2-convertible-bond-valuation-metrics">Formula 2: Convertible Bond Valuation Metrics</a></li><li class="toc-h2"><a href="#section-step-by-step-worked-numerical-examples">Step-by-Step Worked Numerical Examples</a></li><li class="toc-h3"><a href="#section-worked-example-1-valuing-a-2-year-callable-bond-and-putable-bond-on-a-binomial-tree">Worked Example 1: Valuing a 2-Year Callable Bond and Putable Bond on a Binomial Tree</a></li><li class="toc-h3"><a href="#section-worked-example-2-analyzing-a-convertible-bond-conversion-value-market-conversion-price-and-premium">Worked Example 2: Analyzing a Convertible Bond: Conversion Value, Market Conversion Price, and Premium</a></li><li class="toc-h2"><a href="#section-comparison-reference-analysis">Comparison &amp; Reference Analysis</a></li><li class="toc-h2"><a href="#section-real-world-financial-applications">Real-World Financial Applications</a></li><li class="toc-h2"><a href="#section-cfa-examination-perspective-testing-patterns">CFA Examination Perspective &amp; Testing Patterns</a></li><li class="toc-h2"><a href="#section-cfa-practice-questions-detailed-solutions">CFA Practice Questions &amp; Detailed Solutions</a></li><li class="toc-h3"><a href="#section-practice-question-1">Practice Question 1</a></li><li class="toc-h3"><a href="#section-practice-question-2">Practice Question 2</a></li><li class="toc-h3"><a href="#section-practice-question-3">Practice Question 3</a></li><li class="toc-h2"><a href="#section-common-mistakes-exam-traps-to-avoid">Common Mistakes &amp; Exam Traps to Avoid</a></li><li class="toc-h2"><a href="#section-key-takeaways-revision-notes">Key Takeaways &amp; Revision Notes</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-what-is-the-primary-formula-for-callable-vs-putable-bonds-cfa-level-2-in-level-ii-fixed-income">What is the primary formula for callable vs putable bonds cfa level 2 in Level II Fixed Income?</a></li><li class="toc-h3"><a href="#section-how-is-callable-vs-putable-bonds-cfa-level-2-tested-on-the-cfa-level-ii-exam">How is callable vs putable bonds cfa level 2 tested on the CFA Level II exam?</a></li><li class="toc-h2"><a href="#section-curriculum-alignment-related-library-articles">Curriculum Alignment &amp; Related Library Articles</a></li><li class="toc-h3"><a href="#section-related-cfa-study-guides">Related CFA Study Guides</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>Callable vs Putable Bonds: How to Calculate Their Values covers calculating Callable and Putable bond values on a binomial tree (capping at Call Price and flooring at Put Price), embedded option value, OAS vs Volatility sensitivity, and Convertible Bond valuation metrics in Level II Fixed Income (LM 3: Valuation and Analysis of Bonds with Embedded Options — V_Callable = V_Straight − V_Call, V_Putable = V_Straight + V_Put, Binomial tree node capping/flooring rules, Volatility impact on OAS vs Price, Convertible bond metrics (Conversion Value, Straight Value, Market Conversion Premium)), with verified formulas, two worked examples, and three practice MCQs.</p>
+<h2 id="section-concept-explanation-institutional-framework">Concept Explanation &amp; Institutional Framework</h2>
+<p>Callable &amp; Putable Bond Decomposition &amp; Node Rules (V_Callable = V_Straight − V_Issuer_Call (Node Value = min(Backward Induction Value, Call Price)) ; V_Putable = V_Straight + V_Investor_Put (Node Value = max(Backward Induction Value, Put Price))) and Convertible Bond Valuation Metrics (Conversion Value = Stock Price × Conversion Ratio ; V_Convertible = V_Straight + V_Call_on_Stock ; Market Conversion Price = Convertible Bond Price / Conversion Ratio) govern calculating Callable and Putable bond values on a binomial tree (capping at Call Price and flooring at Put Price), embedded option value, OAS vs Volatility sensitivity, and Convertible Bond valuation metrics.</p>
+<h2 id="section-core-formulas-mathematical-equations">Core Formulas &amp; Mathematical Equations</h2>
+<blockquote class="blog-callout blog-callout-note">
+<p><strong>Note:</strong> The following analytical equations govern problem-solving and numerical questions across this curriculum reading.</p>
+</blockquote>
+<h3 id="section-formula-1-callable-putable-bond-decomposition-node-rules">Formula 1: Callable &amp; Putable Bond Decomposition &amp; Node Rules</h3>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">V_Callable = V_Straight − V_Issuer_Call (Node Value = min(Backward Induction Value, Call Price))
+
+V_Putable = V_Straight + V_Investor_Put (Node Value = max(Backward Induction Value, Put Price))</code></pre></div>
+<p><strong>Institutional Context &amp; Variable Breakdown:</strong></p>
+<ul>
+<li>
+<p>At every callable node on a binomial tree, replace any value above the Call Price with the Call Price.</p>
+</li>
+<li>
+<p>at every putable node, replace any value below the Put Price with the Put Price.</p>
+</li>
+</ul>
+<h3 id="section-formula-2-convertible-bond-valuation-metrics">Formula 2: Convertible Bond Valuation Metrics</h3>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">Conversion Value = Stock Price × Conversion Ratio
+
+V_Convertible = V_Straight + V_Call_on_Stock
+
+Market Conversion Price = Convertible Bond Price / Conversion Ratio</code></pre></div>
+<p><strong>Institutional Context &amp; Variable Breakdown:</strong></p>
+<ul>
+<li>
+<p>A convertible bond's minimum value floor is max(Straight Bond Value, Conversion Value).</p>
+</li>
+<li>
+<p>the gap above that floor is the option time value.</p>
+</li>
+</ul>
+<h2 id="section-step-by-step-worked-numerical-examples">Step-by-Step Worked Numerical Examples</h2>
+<h3 id="section-worked-example-1-valuing-a-2-year-callable-bond-and-putable-bond-on-a-binomial-tree">Worked Example 1: Valuing a 2-Year Callable Bond and Putable Bond on a Binomial Tree</h3>
+<p><strong>Problem &amp; Given Scenario:</strong>
+Recall from Article 137 our 2-year, 5.0% annual coupon bond ($100 par) on the binomial tree (r_0 = 3.50%, r_{1,u} = 5.493%, r_{1,d} = 4.070%), where the Straight Bond had t = 1 nodal values of V_{1,u} = $99.5327 and V_{1,d} = $100.8936, and V_Straight(0) = $101.655. Now value: (A) a Callable Bond callable at t = 1 at $100.00 par; and (B) a Putable Bond putable at t = 1 at $100.00 par.</p>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">V_Callable = V_Straight − V_Issuer_Call (Node Value = min(Backward Induction Value, Call Price))
+
+V_Putable = V_Straight + V_Investor_Put (Node Value = max(Backward Induction Value, Put Price))</code></pre></div>
+<p><strong>Step-by-Step Substitution &amp; Calculation:</strong></p>
+<p>Part A (Callable at $100 at t = 1): At the t = 1 down-rate node, V_{1,d} = $100.8936 &gt; $100.00 Call Price, so the issuer calls the bond and caps V_{1,d_Callable} = $100.0000! (Up-node stays $99.5327). Discount to t = 0: V_Callable(0) = [0.5($99.5327 + $5) + 0.5($100.0000 + $5)] / 1.0350 = $104.7664 / 1.0350 = $101.2235 ≈ $101.22. Value of Embedded Call Option = V_Straight − V_Callable = $101.655 − $101.224 = $0.431. Part B (Putable at $100 at t = 1): At the t = 1 up-rate node, V_{1,u} = $99.5327 &lt; $100.00 Put Price, so the investor exercises the put and floors V_{1,u_Putable} = $100.0000! (Down-node stays $100.8936). Discount to t = 0: V_Putable(0) = [0.5($100.0000 + $5) + 0.5($100.8936 + $5)] / 1.0350 = $105.4468 / 1.0350 = $101.881 ≈ $101.88. Value of Embedded Put Option = V_Putable − V_Straight = $101.881 − $101.655 = $0.226.</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Financial Interpretation &amp; Exam Takeaway:</strong>
+Capping the down-rate node at $100 reduces the Callable Bond value by $0.43, whereas flooring the up-rate node at $100 increases the Putable Bond value by $0.23!</p>
+</blockquote>
+<h3 id="section-worked-example-2-analyzing-a-convertible-bond-conversion-value-market-conversion-price-and-premium">Worked Example 2: Analyzing a Convertible Bond: Conversion Value, Market Conversion Price, and Premium</h3>
+<p><strong>Problem &amp; Given Scenario:</strong>
+A 5-year, 3.0% convertible bond ($1,000 par) is convertible into 25 common shares (Conversion Ratio = 25) and currently trades in the market at $1,150.00. The underlying stock trades at $42.00 per share, and an otherwise identical straight bond trades at $940.00.</p>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">Conversion Value = Stock Price × Conversion Ratio
+
+V_Convertible = V_Straight + V_Call_on_Stock
+
+Market Conversion Price = Convertible Bond Price / Conversion Ratio</code></pre></div>
+<p><strong>Step-by-Step Substitution &amp; Calculation:</strong></p>
+<ul>
+<li>
+<p><strong>Step 1. Conversion Value (Parity Value) = 25 shares × $42.00 = $1,050.00.</strong></p>
+</li>
+<li>
+<p><strong>Step 2. Minimum Value Floor = max(Straight Value $940, Conversion Value $1,050) = $1,050.00.</strong></p>
+</li>
+<li>
+<p><strong>Step 3. Market Conversion Price (effective price paid per share via the bond) = $1,150.00 / 25 = $46.00 per share.</strong></p>
+</li>
+<li>
+<p><strong>Step 4. Market Conversion Premium per Share = $46.00 − $42.00 = $4.00 (Market Conversion Premium Ratio = $4.00 / $42.00 = 9.52%).</strong></p>
+</li>
+<li>
+<p><strong>Step 5. Premium over Straight Value = ($1,150 / $940) − 1 = 22.34%.</strong></p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Financial Interpretation &amp; Exam Takeaway:</strong>
+Convertible bondholders pay a 9.52% conversion premium ($46 vs $42) in exchange for the $940 straight-bond downside floor and a 3.0% coupon yield advantage over common stock.</p>
+</blockquote>
+<h2 id="section-comparison-reference-analysis">Comparison &amp; Reference Analysis</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Shock / Change in Market Input</th>
+<th scope="col">Effect on Callable Bond Value</th>
+<th scope="col">Effect on Putable Bond Value</th>
+<th scope="col">Effect on Computed OAS (Given Fixed Market Price)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interest Rate Volatility (σ) Rises</td>
+<td>Decreases (Call option worth more to issuer)</td>
+<td>Increases (Put option worth more to holder)</td>
+<td>Callable OAS Decreases; Putable OAS Increases</td>
+</tr>
+<tr>
+<td>Interest Rate Volatility (σ) Falls</td>
+<td>Increases (Call option worth less)</td>
+<td>Decreases (Put option worth less)</td>
+<td>Callable OAS Increases; Putable OAS Decreases</td>
+</tr>
+<tr>
+<td>Parallel Yield Curve Drop (−Δy)</td>
+<td>Rises less than Straight (capped at Call)</td>
+<td>Rises same as Straight (Put goes OTM)</td>
+<td>Unchanged if model is well-calibrated</td>
+</tr>
+<tr>
+<td>Parallel Yield Curve Hike (+Δy)</td>
+<td>Falls same as Straight (Call goes OTM)</td>
+<td>Falls less than Straight (floored at Put)</td>
+<td>Unchanged</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-real-world-financial-applications">Real-World Financial Applications</h2>
+<p>Analysts apply Callable &amp; Putable Bond Decomposition &amp; Node Rules and Convertible Bond Valuation Metrics across Fixed Income valuation and risk management.</p>
+<h2 id="section-cfa-examination-perspective-testing-patterns">CFA Examination Perspective &amp; Testing Patterns</h2>
+<p>Tested on the CFA Level II exam (LM 3: Valuation and Analysis of Bonds with Embedded Options — V_Callable = V_Straight − V_Call, V_Putable = V_Straight + V_Put, Binomial tree node capping/flooring rules, Volatility impact on OAS vs Price, Convertible bond metrics (Conversion Value, Straight Value, Market Conversion Premium)) via quantitative and conceptual MCQs.</p>
+<h2 id="section-cfa-practice-questions-detailed-solutions">CFA Practice Questions &amp; Detailed Solutions</h2>
+<h3 id="section-practice-question-1">Practice Question 1</h3>
+<p><strong>Question:</strong> An option-free straight bond has an arbitrage-free value of $102.40. An otherwise identical callable bond trades at $99.80, and an otherwise identical putable bond trades at $104.10. The values of the embedded call option and embedded put option, respectively, are:</p>
+<ul>
+<li>
+<p><strong>[A]</strong> Call value = $2.60; Put value = $1.70</p>
+</li>
+<li>
+<p><strong>[B]</strong> Call value = $1.70; Put value = $2.60</p>
+</li>
+<li>
+<p><strong>[C]</strong> Call value = $4.30; Put value = $2.60</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option A.</strong></p>
+<p><strong>Explanation:</strong> V_Call = V_Straight − V_Callable = $102.40 − $99.80 = $2.60. V_Put = V_Putable − V_Straight = $104.10 − $102.40 = $1.70.</p>
+</blockquote>
+<h3 id="section-practice-question-2">Practice Question 2</h3>
+<p><strong>Question:</strong> If an analyst increases the assumed interest rate volatility (σ) in a binomial interest rate tree while holding the observed market price of a callable bond constant, what happens to the model-computed Option-Adjusted Spread (OAS) of the callable bond?</p>
+<ul>
+<li>
+<p><strong>[A]</strong> The computed OAS increases</p>
+</li>
+<li>
+<p><strong>[B]</strong> The computed OAS decreases, because higher volatility increases the value of the embedded call option, requiring a smaller OAS spread to discount the tree down to the fixed market price</p>
+</li>
+<li>
+<p><strong>[C]</strong> The computed OAS is unaffected by volatility assumptions</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option B.</strong></p>
+<p><strong>Explanation:</strong> Higher assumed volatility makes the issuer's short call option more costly (lowering model bond value at any given spread); to match the observed market price, the required discount spread (OAS) must decrease.</p>
+</blockquote>
+<h3 id="section-practice-question-3">Practice Question 3</h3>
+<p><strong>Question:</strong> A $1,000 par convertible bond has a conversion ratio of 20 shares and currently trades at $1,080. If the underlying common stock trades at $50.00 per share, the bond's Market Conversion Price and Market Conversion Premium per Share are:</p>
+<ul>
+<li>
+<p><strong>[A]</strong> Market Conversion Price = $54.00; Market Conversion Premium per Share = $4.00</p>
+</li>
+<li>
+<p><strong>[B]</strong> Market Conversion Price = $50.00; Market Conversion Premium per Share = $80.00</p>
+</li>
+<li>
+<p><strong>[C]</strong> Market Conversion Price = $46.30; Market Conversion Premium per Share = $3.70</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option A.</strong></p>
+<p><strong>Explanation:</strong> Market Conversion Price = Convertible Bond Price / Conversion Ratio = $1,080 / 20 = $54.00. Market Conversion Premium per Share = $54.00 − $50.00 = $4.00 (or 8.0%).</p>
+</blockquote>
+<h2 id="section-common-mistakes-exam-traps-to-avoid">Common Mistakes &amp; Exam Traps to Avoid</h2>
+<ul>
+<li>
+<p><strong>Periodicity Mismatch: Failing to align compounding frequency in Callable &amp; Putable Bond Decomposition &amp; Node Rules.</strong></p>
+</li>
+<li>
+<p><strong>Timing Errors: Mixing beginning and ending balances in Convertible Bond Valuation Metrics.</strong></p>
+</li>
+<li>
+<p><strong>Distractor Traps: Stopping at an unadjusted intermediate step.</strong></p>
+</li>
+</ul>
+<h2 id="section-key-takeaways-revision-notes">Key Takeaways &amp; Revision Notes</h2>
+<ul>
+<li>
+<p><strong>Takeaway 1: Callable &amp; Putable Bond Decomposition &amp; Node Rules: V_Callable = V_Straight − V_Issuer_Call (Node Value = min(Backward Induction Value, Call Price)) ; V_Putable = V_Straight + V_Investor_Put (Node Value = max(Backward Induction Value, Put Price)).</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 2: Convertible Bond Valuation Metrics: Conversion Value = Stock Price × Conversion Ratio ; V_Convertible = V_Straight + V_Call_on_Stock ; Market Conversion Price = Convertible Bond Price / Conversion Ratio.</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 3: Capping the down-rate node at $100 reduces the Callable Bond value by $0.43, whereas floor.</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 4: Convertible bondholders pay a 9.52% conversion premium ($46 vs $42) in exchange for the $9.</strong></p>
+</li>
+</ul>
+<h2 id="section-frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-what-is-the-primary-formula-for-callable-vs-putable-bonds-cfa-level-2-in-level-ii-fixed-income">What is the primary formula for callable vs putable bonds cfa level 2 in Level II Fixed Income?</h3>
+<p>The primary equations for Callable vs Putable Bonds: How to Calculate Their Values govern Fixed Income calculations across the CFA curriculum. Candidates must master these formulas alongside their underlying assumptions and variable definitions.</p>
+<h3 id="section-how-is-callable-vs-putable-bonds-cfa-level-2-tested-on-the-cfa-level-ii-exam">How is callable vs putable bonds cfa level 2 tested on the CFA Level II exam?</h3>
+<p>On the CFA exam, Callable vs Putable Bonds: How to Calculate Their Values is tested through computational problem-solving and conceptual scenario questions. Candidates are evaluated on formula recall, calculator speed, and avoiding common distractor traps.</p>
+<h2 id="section-curriculum-alignment-related-library-articles">Curriculum Alignment &amp; Related Library Articles</h2>
+<p>This guide is part of the <strong>2026–2027 CFA Program Preparation Series</strong> (Level II · Fixed Income).</p>
+<h3 id="section-related-cfa-study-guides">Related CFA Study Guides</h3>
+<ul>
+<li>
+<p><a href="/blog/cfa/cfa-level-2-mortgage-backed-securities-vs-asset-backed-securities/">Mortgage-Backed Securities vs Asset-Backed Securities Explained</a></p>
+</li>
+<li>
+<p><a href="/blog/cfa/cfa-level-2-calculate-credit-spreads-analyse-bond-credit-risk/">How to Calculate Credit Spreads and Analyse Bond Credit Risk</a></p>
+</li>
+<li>
+<p><a href="/blog/cfa/cfa-level-2-key-rate-duration-vs-modified-duration/">Key Rate Duration vs Modified Duration: Differences and Examples</a></p>
+</li>
+</ul>
+</div>
+<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general educational and exam preparation information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.cfainstitute.org/en/programs/cfa/curriculum" rel="noopener">CFA Institute 2026–2027 Program Curriculum: Fixed Income</a></li><li><a href="https://www.cfainstitute.org/en/programs/cfa/candidate" rel="noopener">CFA Institute Candidate Study Resources &amp; Topic Outlines</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/cfa/cfa-level-2-callable-vs-putable-bonds-calculate-values/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Fcfa%2Fcfa-level-2-callable-vs-putable-bonds-calculate-values%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-2-calculate-credit-spreads-analyse-bond-credit-risk/" aria-label="Read How to Calculate Credit Spreads and Analyse Bond Credit Risk"><img src="/assets/images/blog/cfa-level-2-calculate-credit-spreads-analyse-bond-credit-risk/cover.svg" alt="Illustrative guide to How to Calculate Credit Spreads and Analyse Bond Credit Risk" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-2-calculate-credit-spreads-analyse-bond-credit-risk/">How to Calculate Credit Spreads and Analyse Bond Credit Risk</a></h3>
+<p>Master calculate credit spreads cfa level 2 for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison.</p>
+<div class="blog-meta"><time datetime="2026-11-13">13 Nov 2026</time><span>10 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-2-calculate-forward-interest-rates-from-spot-rates/" aria-label="Read How to Calculate Forward Interest Rates From Spot Rates"><img src="/assets/images/blog/cfa-level-2-calculate-forward-interest-rates-from-spot-rates/cover.svg" alt="Illustrative guide to How to Calculate Forward Interest Rates From Spot Rates" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-2-calculate-forward-interest-rates-from-spot-rates/">How to Calculate Forward Interest Rates From Spot Rates</a></h3>
+<p>Master calculate forward rates from spot rates cfa for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, com.</p>
+<div class="blog-meta"><time datetime="2026-11-13">13 Nov 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-2-fixed-income-important-formulas-practice-questions/" aria-label="Read CFA Level 2 Fixed Income: Important Formulas and Practice Questions"><img src="/assets/images/blog/cfa-level-2-fixed-income-important-formulas-practice-questions/cover.svg" alt="Illustrative guide to CFA Level 2 Fixed Income: Important Formulas and Practice Questions" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-2-fixed-income-important-formulas-practice-questions/">CFA Level 2 Fixed Income: Important Formulas and Practice Questions</a></h3>
+<p>Master cfa level 2 fixed income formulas for Level II (Fixed Income). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison ta.</p>
+<div class="blog-meta"><time datetime="2026-11-13">13 Nov 2026</time><span>9 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about/">About</a></li>
+            <li><a href="/work/">Selected Work</a></li>
+            <li><a href="/projects/">Projects Index</a></li>
+            <li><a href="/research/">Research at OIST</a></li>
+            <li><a href="/topics/">Topic Hubs</a></li>
+            <li><a href="/learnings/">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur/">Author Entity Profile</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Systems &amp; Engineering Architecture · High-Performance Web</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

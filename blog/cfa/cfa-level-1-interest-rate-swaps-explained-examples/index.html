@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Interest Rate Swaps Explained With Numerical Examples — CFA Level I</title>
+<meta name="description" content="Master interest rate swaps cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table, and 3 p.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Interest Rate Swaps Explained With Numerical Examples — CFA Level I">
+<meta property="og:description" content="Master interest rate swaps cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table, and 3 p.">
+<meta property="og:url" content="https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/cfa-level-1-interest-rate-swaps-explained-examples/cover.svg">
+<meta property="og:image:alt" content="Illustrative guide to Interest Rate Swaps Explained With Numerical Examples">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-11-11">
+<meta property="article:modified_time" content="2026-11-11">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Interest Rate Swaps Explained With Numerical Examples — CFA Level I">
+<meta name="twitter:description" content="Master interest rate swaps cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table, and 3 p.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/cfa-level-1-interest-rate-swaps-explained-examples/cover.svg">
+<meta name="twitter:image:alt" content="Illustrative guide to Interest Rate Swaps Explained With Numerical Examples">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=f5763b87ac64">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/#article","headline":"Interest Rate Swaps Explained With Numerical Examples","description":"Master interest rate swaps cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table, and 3 p.","abstract":"Interest Rate Swaps Explained With Numerical Examples is a core Level I Derivatives topic (LM 7: Pricing and Valuation of Swaps — Plain-vanilla fixed-for-floating interest rate swaps, swap par rate vs forward rate series, net periodic settlement payments.","url":"https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/","mainEntityOfPage":{"@id":"https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur/"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur/"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/cfa-level-1-interest-rate-swaps-explained-examples/cover.svg","width":1200,"height":675,"caption":"Illustrative guide to Interest Rate Swaps Explained With Numerical Examples"},"datePublished":"2026-11-11","dateModified":"2026-11-11","articleSection":"CFA","keywords":"CFA, Level I, Derivatives, interest rate swaps cfa, interest rate swaps cfa formula","inLanguage":"en","wordCount":1710}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the primary formula for interest rate swaps cfa in Level I Derivatives?","acceptedAnswer":{"@type":"Answer","text":"The primary equations for Interest Rate Swaps Explained With Numerical Examples govern Derivatives calculations across the CFA curriculum. Candidates must master these formulas alongside their underlying assumptions and variable definitions."}},{"@type":"Question","name":"How is interest rate swaps cfa tested on the CFA Level I exam?","acceptedAnswer":{"@type":"Answer","text":"On the CFA exam, Interest Rate Swaps Explained With Numerical Examples is tested through computational problem-solving and conceptual scenario questions. Candidates are evaluated on formula recall, calculator speed, and avoiding common distractor traps."}},{"@type":"Question","name":"How does Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) connect to related topics in Derivatives?","acceptedAnswer":{"@type":"Answer","text":"Within Derivatives, Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) links directly to How to Calculate Profit and Loss i within the standard CFA Derivatives curriculum framework."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"CFA","item":"https://aniket.app/blog/cfa/"},{"@type":"ListItem","position":4,"name":"Interest Rate Swaps Explained With Numerical Examples","item":"https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","alternateName":["Aniket","07anishu12"],"jobTitle":"AI Engineer & Associate Product Manager","url":"https://aniket.app/author/aniket-thakur/","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.","sameAs":["https://github.com/07anishu12","https://www.linkedin.com/in/aniket-thakur-a23a9b372","https://x.com/07anni04","https://medium.com/@kumaraniketn"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University","alternateName":"DSEU","sameAs":"https://dseu.ac.in/"},{"@type":"CollegeOrUniversity","name":"WorldQuant University","sameAs":"https://www.wqu.edu/"}],"worksFor":[{"@type":"Organization","name":"Drivio Technologies","sameAs":"https://drivio.in"}],"affiliation":[{"@type":"ResearchOrganization","name":"Okinawa Institute of Science and Technology Graduate University","alternateName":"OIST","sameAs":"https://www.oist.jp/"}],"knowsAbout":["Artificial Intelligence","AI Engineering","Agentic AI","Large Language Models","Graph Neural Networks","Data Engineering","Fintech","Financial Engineering","Quantitative Finance"]},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/#webpage","url":"https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/","name":"Interest Rate Swaps Explained With Numerical Examples — CFA Level I","description":"Master interest rate swaps cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table, and 3 p.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about/">About</a>
+        <a href="/work/">Work</a>
+        <a href="/research/">Research</a>
+        <a href="/topics/">Topics</a>
+        <a href="/learnings/">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about/">About</a>
+      <a href="/work/">Work</a>
+      <a href="/research/">Research</a>
+      <a href="/topics/">Topics</a>
+      <a href="/learnings/">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact/">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="cfa" data-article-slug="cfa-level-1-interest-rate-swaps-explained-examples">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/cfa/">CFA</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h1 id="article-title">Interest Rate Swaps Explained With Numerical Examples</h1>
+<p class="blog-description">Master interest rate swaps cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table, and 3 p.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-11-11">11 Nov 2026</time></span><span>9 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Interest Rate Swaps Explained With Numerical Examples: Key Summary &amp; Verdict</h2>
+<p class="blog-answer-verdict">Interest Rate Swaps Explained With Numerical Examples is a core Level I Derivatives topic (LM 7: Pricing and Valuation of Swaps — Plain-vanilla fixed-for-floating interest rate swaps, swap par rate vs forward rate series, net periodic settlement payments.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>CFA Level</dt><dd>Level I</dd></div><div><dt>Curriculum Subject</dt><dd>Derivatives</dd></div><div><dt>Topic Focus</dt><dd>interest rate swaps cfa</dd></div><div><dt>Syllabus Standard</dt><dd>2026–2027 Curriculum</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026–2027 CFA Program Curriculum Series · Aniket Thakur</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Candidates preparing for CFA Level I (Derivatives) exam questions.</li><li>Financial analysts requiring verified formulas and worked calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify compounding periodicity, sign conventions, and calculator mode (BGN vs END).</li><li>Review boundary conditions and common exam distractor traps.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full financial guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/cfa-level-1-interest-rate-swaps-explained-examples/cover.svg" alt="Illustrative guide to Interest Rate Swaps Explained With Numerical Examples" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram, curriculum models, and quantitative benchmarks for Interest Rate Swaps Explained With Numerical Examples.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=CFA">CFA</a><a href="/blog/?tag=Level%20I">Level I</a><a href="/blog/?tag=Derivatives">Derivatives</a><a href="/blog/?tag=interest%20rate%20swaps%20cfa">interest rate swaps cfa</a><a href="/blog/?tag=interest%20rate%20swaps%20cfa%20formula">interest rate swaps cfa formula</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>23 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-concept-explanation-institutional-framework">Concept Explanation &amp; Institutional Framework</a></li><li class="toc-h2"><a href="#section-core-formulas-mathematical-equations">Core Formulas &amp; Mathematical Equations</a></li><li class="toc-h3"><a href="#section-formula-1-periodic-net-swap-settlement-payment-pay-fixed-receive-floating">Formula 1: Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating)</a></li><li class="toc-h3"><a href="#section-formula-2-bond-replication-of-swap-value">Formula 2: Bond Replication of Swap Value</a></li><li class="toc-h2"><a href="#section-step-by-step-worked-numerical-examples">Step-by-Step Worked Numerical Examples</a></li><li class="toc-h3"><a href="#section-worked-example-1-calculating-net-quarterly-settlement-cash-flows-on-a-50m-interest-rate-swap">Worked Example 1: Calculating Net Quarterly Settlement Cash Flows on a $50M Interest Rate Swap</a></li><li class="toc-h3"><a href="#section-worked-example-2-converting-a-floating-rate-corporate-loan-into-a-fixed-rate-liability-using-a-swap">Worked Example 2: Converting a Floating-Rate Corporate Loan into a Fixed-Rate Liability Using a Swap</a></li><li class="toc-h2"><a href="#section-comparison-reference-analysis">Comparison &amp; Reference Analysis</a></li><li class="toc-h2"><a href="#section-real-world-financial-applications">Real-World Financial Applications</a></li><li class="toc-h2"><a href="#section-cfa-examination-perspective-testing-patterns">CFA Examination Perspective &amp; Testing Patterns</a></li><li class="toc-h2"><a href="#section-cfa-practice-questions-detailed-solutions">CFA Practice Questions &amp; Detailed Solutions</a></li><li class="toc-h3"><a href="#section-practice-question-1">Practice Question 1</a></li><li class="toc-h3"><a href="#section-practice-question-2">Practice Question 2</a></li><li class="toc-h3"><a href="#section-practice-question-3">Practice Question 3</a></li><li class="toc-h2"><a href="#section-common-mistakes-exam-traps-to-avoid">Common Mistakes &amp; Exam Traps to Avoid</a></li><li class="toc-h2"><a href="#section-key-takeaways-revision-notes">Key Takeaways &amp; Revision Notes</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-what-is-the-primary-formula-for-interest-rate-swaps-cfa-in-level-i-derivatives">What is the primary formula for interest rate swaps cfa in Level I Derivatives?</a></li><li class="toc-h3"><a href="#section-how-is-interest-rate-swaps-cfa-tested-on-the-cfa-level-i-exam">How is interest rate swaps cfa tested on the CFA Level I exam?</a></li><li class="toc-h3"><a href="#section-how-does-periodic-net-swap-settlement-payment-pay-fixed-receive-floating-connect-to-related-topics-in-derivatives">How does Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) connect to related topics in Derivatives?</a></li><li class="toc-h2"><a href="#section-curriculum-alignment-related-library-articles">Curriculum Alignment &amp; Related Library Articles</a></li><li class="toc-h3"><a href="#section-related-cfa-study-guides">Related CFA Study Guides</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>Interest Rate Swaps Explained With Numerical Examples is a core Level I Derivatives topic (LM 7: Pricing and Valuation of Swaps — Plain-vanilla fixed-for-floating interest rate swaps, swap par rate vs forward rate series, net periodic settlement payments, pay-fixed vs receive-fixed valuation) focusing on plain-vanilla interest rate swap structure, replication as a series of off-market FRAs or a Fixed Bond vs Floating Bond pair, net periodic settlement calculations, and duration impact. This guide covers the governing equations (Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) and Bond Replication of Swap Value), two verified numerical examples, a comparison table, and three original CFA-style practice questions.</p>
+<h2 id="section-concept-explanation-institutional-framework">Concept Explanation &amp; Institutional Framework</h2>
+<p>From first principles, plain-vanilla interest rate swap structure, replication as a series of off-market FRAs or a Fixed Bond vs Floating Bond pair, net periodic settlement calculations, and duration impact links theoretical valuation and risk mechanics to practical decisions in Derivatives. Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) (Net Cash Flow to Fixed Payer = Notional × (MRR_{t−1} − Fixed Swap Rate s) × (Days / 360 or Period Fraction)) establishes the primary relationship (Interest rate swaps do NOT exchange notional principal; counterparties exchange only the net interest difference on each settlement date.), while Bond Replication of Swap Value (V_Swap(Pay-Fixed) = V_Floating_Bond − V_Fixed_Bond ; V_Swap(Receive-Fixed) = V_Fixed_Bond − V_Floating_Bond) governs A Receive-Fixed swap is economically equivalent to being Long a Fixed-Rate Bond and Short a Floating-Rate Note (increasing portfolio duration).</p>
+<h2 id="section-core-formulas-mathematical-equations">Core Formulas &amp; Mathematical Equations</h2>
+<blockquote class="blog-callout blog-callout-note">
+<p><strong>Note:</strong> The following analytical equations govern problem-solving and numerical questions across this curriculum reading.</p>
+</blockquote>
+<h3 id="section-formula-1-periodic-net-swap-settlement-payment-pay-fixed-receive-floating">Formula 1: Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating)</h3>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">Net Cash Flow to Fixed Payer = Notional × (MRR_{t−1} − Fixed Swap Rate s) × (Days / 360 or Period Fraction)</code></pre></div>
+<p><strong>Institutional Context &amp; Variable Breakdown:</strong></p>
+<ul>
+<li>
+<p>Interest rate swaps do NOT exchange notional principal.</p>
+</li>
+<li>
+<p>counterparties exchange only the net interest difference on each settlement date.</p>
+</li>
+</ul>
+<h3 id="section-formula-2-bond-replication-of-swap-value">Formula 2: Bond Replication of Swap Value</h3>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">V_Swap(Pay-Fixed) = V_Floating_Bond − V_Fixed_Bond
+
+V_Swap(Receive-Fixed) = V_Fixed_Bond − V_Floating_Bond</code></pre></div>
+<p><strong>Institutional Context &amp; Variable Breakdown:</strong> A Receive-Fixed swap is economically equivalent to being Long a Fixed-Rate Bond and Short a Floating-Rate Note (increasing portfolio duration).</p>
+<h2 id="section-step-by-step-worked-numerical-examples">Step-by-Step Worked Numerical Examples</h2>
+<h3 id="section-worked-example-1-calculating-net-quarterly-settlement-cash-flows-on-a-50m-interest-rate-swap">Worked Example 1: Calculating Net Quarterly Settlement Cash Flows on a $50M Interest Rate Swap</h3>
+<p><strong>Problem &amp; Given Scenario:</strong>
+Corporate Issuer A enters a $50,000,000 notional plain-vanilla interest rate swap as the Fixed-Rate Payer at a fixed swap rate of s = 4.20% per annum, receiving 3-month SOFR quarterly (using exact 0.25 year / 90/360 quarterly fractions). Calculate Issuer A's net cash flow for Quarter 1 (when 3-month SOFR reset at 4.80%) and Quarter 2 (when 3-month SOFR reset at 3.60%).</p>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">Net Cash Flow to Fixed Payer = Notional × (MRR_{t−1} − Fixed Swap Rate s) × (Days / 360 or Period Fraction)</code></pre></div>
+<p><strong>Step-by-Step Substitution &amp; Calculation:</strong></p>
+<p>Quarter 1 (SOFR = 4.80% &gt; 4.20% fixed): Net Cash Flow to Fixed Payer = $50,000,000 × (0.0480 − 0.0420) × 0.25 = $50,000,000 × (+0.0060) × 0.25 = +$75,000 net inflow received by Issuer A. Quarter 2 (SOFR = 3.60% &lt; 4.20% fixed): Net Cash Flow = $50,000,000 × (0.0360 − 0.0420) × 0.25 = $50,000,000 × (−0.0060) × 0.25 = −$75,000 net outflow paid by Issuer A.</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Financial Interpretation &amp; Exam Takeaway:</strong>
+Remember that the floating rate (MRR/SOFR) is set at the beginning of each period (in advance) and paid at the end of the period (in arrears), netted against the fixed leg.</p>
+</blockquote>
+<h3 id="section-worked-example-2-converting-a-floating-rate-corporate-loan-into-a-fixed-rate-liability-using-a-swap">Worked Example 2: Converting a Floating-Rate Corporate Loan into a Fixed-Rate Liability Using a Swap</h3>
+<p><strong>Problem &amp; Given Scenario:</strong>
+A borrower has a $100M floating-rate bank loan paying SOFR + 150 bps. To eliminate rising interest rate risk, the borrower enters a $100M Pay-Fixed, Receive-SOFR swap at a fixed swap rate of 4.10%.</p>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">V_Swap(Pay-Fixed) = V_Floating_Bond − V_Fixed_Bond
+
+V_Swap(Receive-Fixed) = V_Fixed_Bond − V_Floating_Bond</code></pre></div>
+<p><strong>Step-by-Step Substitution &amp; Calculation:</strong></p>
+<p>Loan Outflow: −(SOFR + 1.50%). Swap Floating Inflow: +SOFR. Swap Fixed Outflow: −4.10%. Net Synthetic Fixed Borrowing Rate = −SOFR − 1.50% + SOFR − 4.10% = −5.60% fixed!</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Financial Interpretation &amp; Exam Takeaway:</strong>
+By paying fixed (4.10%) and receiving floating (SOFR) on the swap, the borrower cancels out its floating SOFR loan exposure and locks in a synthetic fixed rate of 5.60%.</p>
+</blockquote>
+<h2 id="section-comparison-reference-analysis">Comparison &amp; Reference Analysis</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Swap Position</th>
+<th scope="col">Equivalent Bond Portfolio</th>
+<th scope="col">Net Duration (ModDur) Impact</th>
+<th scope="col">Profits When Market Rates...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pay-Fixed, Receive-Floating</td>
+<td>Long FRN + Short Fixed-Rate Bond</td>
+<td>Negative Duration (ModDur &lt; 0)</td>
+<td>RISE (floating receipts increase)</td>
+</tr>
+<tr>
+<td>Receive-Fixed, Pay-Floating</td>
+<td>Long Fixed-Rate Bond + Short FRN</td>
+<td>Positive Duration (ModDur &gt; 0)</td>
+<td>FALL (locked-in fixed coupon rises in PV)</td>
+</tr>
+<tr>
+<td>At Inception (t = 0 Par Swap)</td>
+<td>Par Fixed Rate s_0 set so V_0 = $0</td>
+<td>Price = Par on both legs at t = 0</td>
+<td>Zero upfront payment required</td>
+</tr>
+<tr>
+<td>Portfolio Immunization Use</td>
+<td>Overlay without selling cash bonds</td>
+<td>Shifts portfolio Money Duration</td>
+<td>Capital-efficient duration management</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-real-world-financial-applications">Real-World Financial Applications</h2>
+<p>In institutional Derivatives practice, analysts apply Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) and Bond Replication of Swap Value to value securities, audit financial statements, and manage portfolio risk.</p>
+<h2 id="section-cfa-examination-perspective-testing-patterns">CFA Examination Perspective &amp; Testing Patterns</h2>
+<p>On the CFA Level I exam (LM 7: Pricing and Valuation of Swaps — Plain-vanilla fixed-for-floating interest rate swaps, swap par rate vs forward rate series, net periodic settlement payments, pay-fixed vs receive-fixed valuation), interest rate swaps cfa is tested via standalone 90-second MCQs combining Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) calculations with economic interpretation.</p>
+<h2 id="section-cfa-practice-questions-detailed-solutions">CFA Practice Questions &amp; Detailed Solutions</h2>
+<h3 id="section-practice-question-1">Practice Question 1</h3>
+<p><strong>Question:</strong> A pension fund enters a $20,000,000 notional interest rate swap as the Receive-Fixed, Pay-Floating counterparty at an annual fixed swap rate of 4.50%, settled semiannually (period fraction = 0.50). If the 6-month floating reference rate for the first period is 3.80%, the net settlement payment at the end of the first 6-month period is:</p>
+<ul>
+<li>
+<p><strong>[A]</strong> The pension fund receives $70,000</p>
+</li>
+<li>
+<p><strong>[B]</strong> The pension fund pays $70,000</p>
+</li>
+<li>
+<p><strong>[C]</strong> The pension fund receives $140,000</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option A.</strong></p>
+<p><strong>Explanation:</strong> Net settlement to the Receive-Fixed counterparty = Notional × (Fixed Rate − Floating Rate) × 0.50 = $20,000,000 × (0.0450 − 0.0380) × 0.50 = $20,000,000 × 0.0070 × 0.50 = +$70,000 received.</p>
+</blockquote>
+<h3 id="section-practice-question-2">Practice Question 2</h3>
+<p><strong>Question:</strong> After entering a Pay-Fixed, Receive-Floating plain-vanilla interest rate swap at inception (when V_0 = $0), market interest rates across the entire yield curve rise sharply. The mark-to-market value of the swap to the Pay-Fixed counterparty is now:</p>
+<ul>
+<li>
+<p><strong>[A]</strong> Positive, because the present value of the fixed payments owed has fallen below the value of the floating leg</p>
+</li>
+<li>
+<p><strong>[B]</strong> Negative</p>
+</li>
+<li>
+<p><strong>[C]</strong> Zero, because swaps are marked to market daily like futures</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option A.</strong></p>
+<p><strong>Explanation:</strong> A Pay-Fixed swap is equivalent to being Long a Floating-Rate Bond (~par) and Short a Fixed-Rate Bond. When interest rates rise, the value of the Fixed-Rate Bond liability falls below par, creating a positive mark-to-market asset value for the Fixed-Rate Payer.</p>
+</blockquote>
+<h3 id="section-practice-question-3">Practice Question 3</h3>
+<p><strong>Question:</strong> A fixed-income portfolio manager wishes to REDUCE the Modified Duration of a long-term corporate bond portfolio without selling the underlying bonds. Which interest rate swap position should the manager enter?</p>
+<ul>
+<li>
+<p><strong>[A]</strong> Receive-fixed, pay-floating swap</p>
+</li>
+<li>
+<p><strong>[B]</strong> Pay-fixed, receive-floating swap (which has negative modified duration)</p>
+</li>
+<li>
+<p><strong>[C]</strong> Buy a receiver swaption</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option B.</strong></p>
+<p><strong>Explanation:</strong> A Pay-Fixed, Receive-Floating swap has negative duration (ModDur_FRN − ModDur_Fixed &lt; 0), which directly offsets and reduces the positive duration of the cash bond portfolio.</p>
+</blockquote>
+<h2 id="section-common-mistakes-exam-traps-to-avoid">Common Mistakes &amp; Exam Traps to Avoid</h2>
+<ul>
+<li>
+<p><strong>Periodicity Mismatch: Failing to align compounding frequency in Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating).</strong></p>
+</li>
+<li>
+<p><strong>Timing Errors: Mixing beginning and ending balances in Bond Replication of Swap Value.</strong></p>
+</li>
+<li>
+<p><strong>Distractor Traps: Stopping at an unadjusted intermediate step.</strong></p>
+</li>
+</ul>
+<h2 id="section-key-takeaways-revision-notes">Key Takeaways &amp; Revision Notes</h2>
+<ul>
+<li>
+<p><strong>Takeaway 1: Curriculum Scope: LM 7: Pricing and Valuation of Swaps — Plain-vanilla fixed-for-floating interest rate swaps, swap par rate vs forward rate series, net periodic settlement payments, pay-fixed vs receive-fixed valuation (Level I · Derivatives).</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 2: Primary Formula (Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating)): Net Cash Flow to Fixed Payer = Notional × (MRR_{t−1} − Fixed Swap Rate s) × (Days / 360 or Period Fraction).</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 3: Secondary Formula (Bond Replication of Swap Value): V_Swap(Pay-Fixed) = V_Floating_Bond − V_Fixed_Bond ; V_Swap(Receive-Fixed) = V_Fixed_Bond − V_Floating_Bond.</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 4: Key Insight 1: Remember that the floating rate (MRR/SOFR) is set at the beginning of each period (in advance) and paid at the end of the period (in arrears.</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 5: Key Insight 2: By paying fixed (4.10%) and receiving floating (SOFR) on the swap, the borrower cancels out its floating SOFR loan exposure and locks in a.</strong></p>
+</li>
+</ul>
+<h2 id="section-frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-what-is-the-primary-formula-for-interest-rate-swaps-cfa-in-level-i-derivatives">What is the primary formula for interest rate swaps cfa in Level I Derivatives?</h3>
+<p>The primary equations for Interest Rate Swaps Explained With Numerical Examples govern Derivatives calculations across the CFA curriculum. Candidates must master these formulas alongside their underlying assumptions and variable definitions.</p>
+<h3 id="section-how-is-interest-rate-swaps-cfa-tested-on-the-cfa-level-i-exam">How is interest rate swaps cfa tested on the CFA Level I exam?</h3>
+<p>On the CFA exam, Interest Rate Swaps Explained With Numerical Examples is tested through computational problem-solving and conceptual scenario questions. Candidates are evaluated on formula recall, calculator speed, and avoiding common distractor traps.</p>
+<h3 id="section-how-does-periodic-net-swap-settlement-payment-pay-fixed-receive-floating-connect-to-related-topics-in-derivatives">How does Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) connect to related topics in Derivatives?</h3>
+<p>Within Derivatives, Periodic Net Swap Settlement Payment (Pay-Fixed / Receive-Floating) links directly to How to Calculate Profit and Loss i within the standard CFA Derivatives curriculum framework.</p>
+<h2 id="section-curriculum-alignment-related-library-articles">Curriculum Alignment &amp; Related Library Articles</h2>
+<p>This guide is part of the <strong>2026–2027 CFA Program Preparation Series</strong> (Level I · Derivatives).</p>
+<h3 id="section-related-cfa-study-guides">Related CFA Study Guides</h3>
+<ul>
+<li>
+<p><a href="/blog/cfa/cfa-level-1-calculate-profit-and-loss-in-futures-contracts/">How to Calculate Profit and Loss in Futures Contracts</a></p>
+</li>
+<li>
+<p><a href="/blog/cfa/cfa-level-1-how-investors-use-derivatives-for-hedging/">How Do Investors Use Derivatives for Hedging?</a></p>
+</li>
+<li>
+<p><a href="/blog/cfa/cfa-level-1-european-vs-american-options-differences/">European vs American Options: Differences With Examples</a></p>
+</li>
+</ul>
+</div>
+<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general educational and exam preparation information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.cfainstitute.org/en/programs/cfa/curriculum" rel="noopener">CFA Institute 2026–2027 Program Curriculum: Derivatives</a></li><li><a href="https://www.cfainstitute.org/en/programs/cfa/candidate" rel="noopener">CFA Institute Candidate Study Resources &amp; Topic Outlines</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/cfa/cfa-level-1-interest-rate-swaps-explained-examples/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Fcfa%2Fcfa-level-1-interest-rate-swaps-explained-examples%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-1-calculate-call-option-and-put-option-payoffs/" aria-label="Read How to Calculate Call Option and Put Option Payoffs"><img src="/assets/images/blog/cfa-level-1-calculate-call-option-and-put-option-payoffs/cover.svg" alt="Illustrative guide to How to Calculate Call Option and Put Option Payoffs" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-1-calculate-call-option-and-put-option-payoffs/">How to Calculate Call Option and Put Option Payoffs</a></h3>
+<p>Master How to Calculate Call Option and Put Option Payoffs for CFA Level I (Derivatives). Includes verified curriculum formulas, worked numerical examples, and exam review notes.</p>
+<div class="blog-meta"><time datetime="2026-11-11">11 Nov 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-1-calculate-profit-and-loss-in-futures-contracts/" aria-label="Read How to Calculate Profit and Loss in Futures Contracts"><img src="/assets/images/blog/cfa-level-1-calculate-profit-and-loss-in-futures-contracts/cover.svg" alt="Illustrative guide to How to Calculate Profit and Loss in Futures Contracts" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-1-calculate-profit-and-loss-in-futures-contracts/">How to Calculate Profit and Loss in Futures Contracts</a></h3>
+<p>Master how to calculate futures profit and loss for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparis.</p>
+<div class="blog-meta"><time datetime="2026-11-11">11 Nov 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-1-call-options-vs-put-options-how-they-work/" aria-label="Read Call Options vs Put Options: How Do They Work?"><img src="/assets/images/blog/cfa-level-1-call-options-vs-put-options-how-they-work/cover.svg" alt="Illustrative guide to Call Options vs Put Options: How Do They Work?" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-1-call-options-vs-put-options-how-they-work/">Call Options vs Put Options: How Do They Work?</a></h3>
+<p>Master call options vs put options cfa for Level I (Derivatives). Includes verified CFA formulas, 2 step-by-step solved numerical examples, comparison table,.</p>
+<div class="blog-meta"><time datetime="2026-11-11">11 Nov 2026</time><span>9 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about/">About</a></li>
+            <li><a href="/work/">Selected Work</a></li>
+            <li><a href="/projects/">Projects Index</a></li>
+            <li><a href="/research/">Research at OIST</a></li>
+            <li><a href="/topics/">Topic Hubs</a></li>
+            <li><a href="/learnings/">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur/">Author Entity Profile</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Systems &amp; Engineering Architecture · High-Performance Web</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

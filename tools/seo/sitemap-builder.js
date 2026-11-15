@@ -15,7 +15,24 @@ const STATIC_PAGE_DATES = {
   '/research/': '2026-10-25',
   '/research/graph-neural-networks-ecological-modeling.html': '2026-10-25',
   '/contact/': '2026-10-25',
-  '/privacy/': '2026-10-25'
+  '/privacy/': '2026-10-25',
+  '/topics/': '2026-11-07',
+  '/topics/ai-engineering/': '2026-11-07',
+  '/topics/agentic-ai/': '2026-11-07',
+  '/topics/data-engineering/': '2026-11-07',
+  '/topics/fintech-product/': '2026-11-07',
+  '/topics/quantitative-finance/': '2026-11-07',
+  '/topics/ai-research/': '2026-11-07',
+  '/learnings/': '2026-10-30',
+  '/learnings/deterministic-validation-schemas-multi-llm-pipelines.html': '2026-10-30',
+  '/learnings/distilled-video-models-regional-ai-production.html': '2026-10-30',
+  '/learnings/graph-neural-networks-ecological-modeling.html': '2026-10-25',
+  '/learnings/physical-ai-heavy-industry-hardware-bottleneck.html': '2026-10-25',
+  '/learnings/public-market-stress-test-for-ai-valuations.html': '2026-10-25',
+  '/learnings/robot-fleet-configuration-in-micro-factories.html': '2026-10-25',
+  '/learnings/tata-sons-vs-tata-trusts-ownership-and-control.html': '2026-10-25',
+  '/learnings/what-nsfr-actually-tells-you-about-a-bank.html': '2026-10-25',
+  '/learnings/why-market-validation-trumps-vibes.html': '2026-10-25'
 };
 
 const PROJECT_SLUGS = [
@@ -38,7 +55,8 @@ const CATEGORY_MAP = {
   technology: 'blog-technology',
   auto: 'blog-automotive',
   product: 'blog-product',
-  finance: 'blog-finance'
+  finance: 'blog-finance',
+  cfa: 'blog-cfa'
 };
 
 const SITEMAP_CONFIGS = [
@@ -71,6 +89,11 @@ const SITEMAP_CONFIGS = [
     id: 'blog-finance',
     filename: 'sitemap-blog-finance.xml',
     description: 'Finance articles'
+  },
+  {
+    id: 'blog-cfa',
+    filename: 'sitemap-blog-cfa.xml',
+    description: 'CFA Program and curriculum articles'
   },
   {
     id: 'projects',
@@ -199,7 +222,7 @@ function collectSitemapData({ posts = [], projects = PROJECT_SLUGS, origin = ORI
     loc: normalizeUrl('/blog/', origin),
     lastmod: categoryDates.all || '2026-10-31'
   });
-  for (const cat of ['technology', 'auto', 'product', 'finance']) {
+  for (const cat of ['technology', 'auto', 'product', 'finance', 'cfa']) {
     const catPosts = posts.filter(p => p.category === cat);
     if (catPosts.length > 0) {
       groups.get('blog-categories').push({

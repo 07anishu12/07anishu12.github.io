@@ -9,6 +9,7 @@ import {
   getSitemapIndexXml,
   getSitemapXml,
   SitemapGroupId,
+  STATIC_PAGE_DATES,
 } from "../lib/sitemap";
 
 import { GET as getIndexHandler } from "../app/sitemap.xml/route";
@@ -18,6 +19,7 @@ import { GET as getBlogTechHandler } from "../app/sitemap-blog-technology.xml/ro
 import { GET as getBlogAutoHandler } from "../app/sitemap-blog-automotive.xml/route";
 import { GET as getBlogProductHandler } from "../app/sitemap-blog-product.xml/route";
 import { GET as getBlogFinanceHandler } from "../app/sitemap-blog-finance.xml/route";
+import { GET as getBlogCfaHandler } from "../app/sitemap-blog-cfa.xml/route";
 import { GET as getProjectsHandler } from "../app/sitemap-projects.xml/route";
 import { GET as getAuthorHandler } from "../app/sitemap-author.xml/route";
 import { GET as getToolsHandler } from "../app/sitemap-tools.xml/route";
@@ -29,8 +31,8 @@ test("Parent sitemap index returns valid XML and correct schema", () => {
   assert.ok(!xml.includes("<url>"), "Parent index must never contain individual <url> tags");
 
   const locMatches = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  assert.equal(locMatches.length, 9, "Expected 9 child sitemaps in index");
-  assert.equal(new Set(locMatches).size, 9, "Child sitemaps in index must be unique");
+  assert.equal(locMatches.length, 10, "Expected 10 child sitemaps in index");
+  assert.equal(new Set(locMatches).size, 10, "Child sitemaps in index must be unique");
 
   for (const config of SITEMAP_CONFIGS) {
     const expectedLoc = `${ORIGIN}/${config.filename}`;
@@ -38,7 +40,7 @@ test("Parent sitemap index returns valid XML and correct schema", () => {
   }
 
   const lastmodMatches = [...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1]);
-  assert.equal(lastmodMatches.length, 9, "All child sitemaps must have lastmod");
+  assert.equal(lastmodMatches.length, 10, "All child sitemaps must have lastmod");
   for (const lm of lastmodMatches) {
     assert.ok(
       /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(lm),
@@ -49,12 +51,13 @@ test("Parent sitemap index returns valid XML and correct schema", () => {
 
 test("Child sitemaps return valid URL sets with exact classification counts", () => {
   const expectedCounts: Record<SitemapGroupId, number> = {
-    pages: 7,
-    "blog-categories": 5,
+    pages: Object.keys(STATIC_PAGE_DATES).length,
+    "blog-categories": 6,
     "blog-technology": catalog.filter(p => !p.draft && p.category === "technology").length,
     "blog-automotive": catalog.filter(p => !p.draft && p.category === "auto").length,
     "blog-product": catalog.filter(p => !p.draft && p.category === "product").length,
     "blog-finance": catalog.filter(p => !p.draft && p.category === "finance").length,
+    "blog-cfa": catalog.filter(p => !p.draft && p.category === "cfa").length,
     projects: 14,
     author: 1,
     tools: 1,
@@ -88,7 +91,7 @@ test("Child sitemaps return valid URL sets with exact classification counts", ()
     }
   }
 
-  assert.equal(totalUrls, catalog.filter(p => !p.draft).length + 28, "Published articles and public non-article inventory");
+  assert.equal(totalUrls, catalog.filter(p => !p.draft).length + Object.keys(STATIC_PAGE_DATES).length + 22, "Published articles and public non-article inventory");
   assert.equal(allUrls.size, totalUrls, "All sitemap URLs must be unique");
 });
 
@@ -101,6 +104,7 @@ test("Route handlers return HTTP 200 with application/xml Content-Type", async (
     { name: "blog-automotive", handler: getBlogAutoHandler },
     { name: "blog-product", handler: getBlogProductHandler },
     { name: "blog-finance", handler: getBlogFinanceHandler },
+    { name: "blog-cfa", handler: getBlogCfaHandler },
     { name: "projects", handler: getProjectsHandler },
     { name: "author", handler: getAuthorHandler },
     { name: "tools", handler: getToolsHandler },

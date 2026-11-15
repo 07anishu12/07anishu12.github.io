@@ -110,10 +110,90 @@ test("routing keeps known legacy redirects permanent", async () => {
     { source: "/about.html", destination: "/about/", permanent: true },
     { source: "/contact.html", destination: "/contact/", permanent: true },
     { source: "/privacy.html", destination: "/privacy/", permanent: true },
-    { source: "/work.html", destination: "/projects/", permanent: true },
+    { source: "/work.html", destination: "/work/", permanent: true },
+    { source: "/learnings.html", destination: "/learnings/", permanent: true },
+    { source: "/topics/index.html", destination: "/topics/", permanent: true },
     { source: "/author/aniket-thakur.html", destination: "/author/aniket-thakur/", permanent: true },
     { source: "/blog/page/1/", destination: "/blog/", permanent: true },
     { source: "/blog/:category/page/1/", destination: "/blog/:category/", permanent: true },
-    { source: "/writing/page/1/", destination: "/writing/", permanent: true },
+    { source: "/writing", destination: "/blog/", permanent: true },
+    { source: "/writing/", destination: "/blog/", permanent: true },
+    { source: "/writing/page/1/", destination: "/blog/", permanent: true },
+    { source: "/writing/:slug/", destination: "/blog/technology/:slug/", permanent: true },
+    { source: "/blog/automotive/", destination: "/blog/auto/", permanent: true },
+    { source: "/blog/automotive/:slug/", destination: "/blog/auto/:slug/", permanent: true },
+    { source: "/topics/artificial-intelligence.html", destination: "/topics/ai-engineering/", permanent: true },
+    { source: "/topics/data-science.html", destination: "/topics/data-engineering/", permanent: true },
+    { source: "/topics/fintech.html", destination: "/topics/fintech-product/", permanent: true },
+    { source: "/topics/graph-neural-networks.html", destination: "/topics/ai-research/", permanent: true },
+    { source: "/topics/seo-automation.html", destination: "/topics/ai-engineering/", permanent: true },
   ]);
+});
+
+test("sitemap and content inventory parity: all published articles exist in sitemaps", async () => {
+  const { readArticles } = await import("../blog/content.js");
+  const { generateAllSitemaps } = await import("./sitemap-builder.js");
+  const posts = readArticles();
+  const { totalUrls, files } = generateAllSitemaps({ posts });
+  assert.equal(posts.length, 1001, "Expected 1001 published markdown articles in data/blog");
+  assert.equal(totalUrls, 1047, "Expected 1047 total URLs across sitemaps");
+
+  const sitemapIndex = files.get("sitemap.xml");
+  assert.ok(sitemapIndex.includes("sitemap-blog-technology.xml"));
+  assert.ok(sitemapIndex.includes("sitemap-blog-automotive.xml"));
+  assert.ok(sitemapIndex.includes("sitemap-blog-product.xml"));
+  assert.ok(sitemapIndex.includes("sitemap-blog-finance.xml"));
+  assert.ok(sitemapIndex.includes("sitemap-blog-cfa.xml"));
+
+  const autoXml = files.get("sitemap-blog-automotive.xml");
+  const techXml = files.get("sitemap-blog-technology.xml");
+  const finXml = files.get("sitemap-blog-finance.xml");
+  const prodXml = files.get("sitemap-blog-product.xml");
+  const cfaXml = files.get("sitemap-blog-cfa.xml");
+
+  for (const post of posts) {
+    const expectedLoc = `<loc>https://aniket.app/blog/${post.category}/${post.slug}/</loc>`;
+    if (post.category === "auto") assert.ok(autoXml.includes(expectedLoc), `Missing auto post in sitemap: ${post.slug}`);
+    else if (post.category === "technology") assert.ok(techXml.includes(expectedLoc), `Missing tech post in sitemap: ${post.slug}`);
+    else if (post.category === "finance") assert.ok(finXml.includes(expectedLoc), `Missing finance post in sitemap: ${post.slug}`);
+    else if (post.category === "product") assert.ok(prodXml.includes(expectedLoc), `Missing product post in sitemap: ${post.slug}`);
+    else if (post.category === "cfa") assert.ok(cfaXml.includes(expectedLoc), `Missing cfa post in sitemap: ${post.slug}`);
+  }
+});
+
+test("robots.txt behavior: declares sitemap and allows public crawler access", () => {
+  const robots = fs.readFileSync(path.resolve("robots.txt"), "utf8");
+  assert.ok(/^User-agent:\s*\*$/m.test(robots), "Must declare wildcard user agent");
+  assert.ok(robots.includes("Sitemap: https://aniket.app/sitemap.xml"), "Must declare canonical sitemap");
+  assert.ok(robots.includes("Disallow: /admin/"), "Admin must be disallowed");
+  assert.ok(robots.includes("Disallow: /api/"), "API must be disallowed");
+  assert.ok(!robots.includes("Disallow: /blog/auto"), "Automotive articles must never be disallowed");
+  assert.ok(!robots.includes("Disallow: /topics/"), "Topic hubs must never be disallowed");
+});
+
+test("noindex detection: rejects pages marked with noindex in production build", () => {
+  const root = fixture();
+  fs.writeFileSync(
+    path.join(root, "article.html"),
+    `<!doctype html><html lang="en"><head><title>Title</title><meta name="description" content="Desc"><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://aniket.app/article/"></head><body><h1>Title</h1></body></html>`,
+  );
+  assert.throws(() => validateSite(root), /published noindex/);
+});
+
+test("metadata completeness: requires title, description, and exactly one H1", () => {
+  const root = fixture();
+  fs.writeFileSync(
+    path.join(root, "missing-h1.html"),
+    `<!doctype html><html lang="en"><head><title>Title</title><meta name="description" content="Desc"><link rel="canonical" href="https://aniket.app/missing-h1/"></head><body><h2>Subheading</h2></body></html>`,
+  );
+  assert.throws(() => validateSite(root), /expected exactly one H1/);
+});
+
+test("structured data validity: requires valid JSON-LD and Person/WebSite entities", () => {
+  const root = fixture();
+  fs.writeFileSync(
+    path.join(root, "bad-jsonld.html"),
+    `<!doctype html><html lang="en"><head><title>Title</title><meta name="description" content="Desc"><script type="application/ld+json">{ broken json </script><link rel="canonical" href="https://aniket.app/bad-jsonld/"></head><body><h1>Title</h1></body></html>`,
+  );
+  assert.throws(() => validateSite(root), /invalid JSON-LD/);
 });

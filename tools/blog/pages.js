@@ -124,17 +124,26 @@ function card(post, heading = 'h2', eager = false) {
 }
 const empty = '<div class="blog-empty"><p>No articles published here yet. Explore the <a class="meta-link" href="/learnings.html">Learnings library →</a></p></div>';
 function latest(posts) {
-  return `<!-- BLOG:LATEST:START -->\n<section class="blog-latest" aria-labelledby="latest-articles"><div class="container"><p class="eyebrow">From the blog</p><h2 id="latest-articles">Latest <span class="serif-accent">Articles.</span></h2><p>Technology, Product, Auto, and Finance.</p>${posts.length ? `<div class="blog-grid">${posts.slice(0, 3).map(p => card(p, 'h3')).join('\n')}</div>` : empty}<a class="meta-link" href="/blog/">Browse all articles →</a></div></section>\n<!-- BLOG:LATEST:END -->`;
+  return `<!-- BLOG:LATEST:START -->\n<section class="blog-latest" aria-labelledby="latest-articles"><div class="container"><p class="eyebrow">From the blog</p><h2 id="latest-articles">Latest <span class="serif-accent">Articles.</span></h2><p>Technology, Product, Auto, Finance, and CFA.</p>${posts.length ? `<div class="blog-grid">${posts.slice(0, 3).map(p => card(p, 'h3')).join('\n')}</div>` : empty}<a class="meta-link" href="/blog/">Browse all articles →</a></div></section>\n<!-- BLOG:LATEST:END -->`;
 }
 function listing(posts, { category = '', number = 1, size = 9, ...options } = {}) {
   const base = `/blog/${category ? `${category}/` : ''}`, url = number === 1 ? base : `${base}page/${number}/`;
   const total = Math.max(1, Math.ceil(posts.length / size)), selected = posts.slice((number - 1) * size, number * size);
   const title = category ? `${CATEGORIES[category].name} Articles` : 'Blog';
-  const description = category ? CATEGORIES[category].description : 'Articles by Aniket Thakur on Technology, Product, Auto, and Finance.';
+  const description = category ? CATEGORIES[category].description : 'Articles by Aniket Thakur on Technology, Product, Auto, Finance, and CFA.';
+  const financeBanner = category === 'finance'
+    ? `<div class="cfa-portal-card" role="region" aria-label="CFA Program Educational Library">
+<div class="blog-card-labels"><span class="eyebrow" style="background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe;">Curriculum Hub</span><span class="tag">180 Articles</span></div>
+<h2>Chartered Financial Analyst (CFA) Learning Library</h2>
+<p>Preparing for the CFA exams? Explore our dedicated 180-article master library covering Level I &amp; Level II Quantitative Methods, Financial Statement Analysis, Equity Investments, Fixed Income, Derivatives, Alternative Investments, Corporate Issuers, Portfolio Management, and Ethics.</p>
+<a class="btn-cfa" href="/blog/cfa/">Explore CFA Section (180 Articles) &rarr;</a>
+</div>`
+    : '';
   return page({ ...options, title: `${title}${number > 1 ? ` — Page ${number}` : ''}`, description, url,
     breadcrumbs: [{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog/' }, ...(category ? [{ name: CATEGORIES[category].name, url: base }] : [])],
     content: `<header class="blog-heading"><p class="eyebrow">Writing &amp; explainers</p><h1>${e(title)}<span class="serif-accent">.</span></h1><p class="lead">${e(description)}</p></header>
 <nav class="blog-categories" aria-label="Article categories"><a href="/blog/"${!category ? ' aria-current="page"' : ''}>All articles</a>${Object.entries(CATEGORIES).map(([key, c]) => `<a href="/blog/${key}/"${category === key ? ' aria-current="page"' : ''}>${c.name}</a>`).join('')}</nav>
+${financeBanner}
 <form class="blog-search" data-blog-search data-category="${category}" role="search" hidden><label>Search articles<input type="search" name="q" autocomplete="off" placeholder="Title, topic, or phrase"></label><label>Topic tag<select name="tag"><option value="">All topics</option></select></label></form>
 <p class="blog-status" data-search-status role="status"></p><div class="blog-grid" data-search-results hidden></div>
 <div data-static-listing>${selected.length ? `<div class="blog-grid">${selected.map((p, i) => card(p, 'h2', i < 3)).join('\n')}</div>` : empty}
@@ -144,7 +153,7 @@ ${total > 1 ? `<nav class="blog-pagination" aria-label="Article pages">${Array.f
 function quickAnswer(post) {
   const q = post.quickAnswer;
   if (!q) return '';
-  const ctaText = post.category === 'auto' ? 'Read the full buying guide' : (post.category === 'finance' ? 'Read the full financial guide' : (post.category === 'product' ? 'Read the full product guide' : 'Read the full technical guide'));
+  const ctaText = post.category === 'auto' ? 'Read the full buying guide' : (['finance', 'cfa'].includes(post.category) ? 'Read the full financial guide' : (post.category === 'product' ? 'Read the full product guide' : 'Read the full technical guide'));
   return `<section class="blog-answer" aria-labelledby="article-answer">
 <p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">${e(q.question)}</h2>
 <p class="blog-answer-verdict">${e(q.answer)}</p>
@@ -180,7 +189,7 @@ ${quickAnswer(post)}
 <nav class="blog-tags" aria-label="Article topics">${post.tags.map(t => `<a href="/blog/?tag=${encodeURIComponent(t)}">${e(t)}</a>`).join('')}</nav>
 ${post.headings.length >= 3 ? `<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>${post.headings.length} sections</span></summary><ol>${post.headings.map(h => `<li class="toc-${h.level}"><a href="#${h.id}">${e(h.text)}</a></li>`).join('')}</ol></details></nav>` : ''}
 <div class="blog-body" id="article-details">${post.html}</div>
-${post.category === 'finance' ? '<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>' : ''}
+${['finance', 'cfa'].includes(post.category) ? '<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general educational and exam preparation information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>' : ''}
 ${post.sources.length && post.showSources !== false ? `<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol>${post.sources.map(s => `<li><a href="${e(s.url)}" rel="noopener">${e(s.title)}</a></li>`).join('')}</ol></section>` : ''}
 ${renderLeadCapture(post)}
 ${enquiry(post, options.root || ROOT)}

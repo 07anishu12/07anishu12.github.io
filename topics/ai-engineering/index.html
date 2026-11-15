@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>AI Engineering &amp; Frontier LLM Systems — Aniket Thakur</title>
+  <meta name="description" content="Technical authority hub on AI Engineering, LLM system architecture, deterministic JSON validation, multi-model tiering, and production reliability by Aniket Thakur.">
+  <link rel="canonical" href="https://aniket.app/topics/ai-engineering/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="AI Engineering &amp; Frontier LLM Systems — Aniket Thakur">
+  <meta property="og:description" content="Production AI engineering: multi-model orchestration, schema guardrails, model distillation, and low-latency LLM systems.">
+  <meta property="og:url" content="https://aniket.app/topics/ai-engineering/">
+  <meta property="og:image" content="https://aniket.app/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Engineering &amp; Frontier LLM Systems — Aniket Thakur">
+  <meta name="twitter:description" content="Production AI engineering, schema validation, and multi-model orchestration by Aniket Thakur.">
+  <meta name="twitter:image" content="https://aniket.app/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://aniket.app/topics/ai-engineering/#webpage",
+        "url": "https://aniket.app/topics/ai-engineering/",
+        "name": "AI Engineering & Frontier LLM Systems — Aniket Thakur",
+        "description": "Comprehensive authority hub on AI Engineering, Multi-LLM pipelines, and generative agent architectures authored by Aniket Thakur.",
+        "about": [
+          {"@type": "Thing", "name": "Artificial Intelligence", "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"},
+          {"@type": "Thing", "name": "Large Language Models"},
+          {"@type": "Thing", "name": "AI Engineering"},
+          {"@type": "Thing", "name": "Prompt Engineering"}
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://aniket.app/#person",
+          "name": "Aniket Thakur",
+          "url": "https://aniket.app/author/aniket-thakur.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aniket.app/topics/ai-engineering/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aniket.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Topics",
+            "item": "https://aniket.app/topics/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Engineering",
+            "item": "https://aniket.app/topics/ai-engineering/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","alternateName":["Aniket","07anishu12"],"jobTitle":"AI Engineer & Associate Product Manager","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.","sameAs":["https://github.com/07anishu12","https://www.linkedin.com/in/aniket-thakur-a23a9b372","https://x.com/07anni04","https://medium.com/@kumaraniketn"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University","alternateName":"DSEU","sameAs":"https://dseu.ac.in/"},{"@type":"CollegeOrUniversity","name":"WorldQuant University","sameAs":"https://www.wqu.edu/"}],"worksFor":[{"@type":"Organization","name":"Drivio Technologies","sameAs":"https://drivio.in"}],"affiliation":[{"@type":"ResearchOrganization","name":"Okinawa Institute of Science and Technology Graduate University","alternateName":"OIST","sameAs":"https://www.oist.jp/"}],"knowsAbout":["Artificial Intelligence","AI Engineering","Agentic AI","Large Language Models","Graph Neural Networks","Data Engineering","Fintech","Financial Engineering","Quantitative Finance"]},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/topics/ai-engineering/#webpage","url":"https://aniket.app/topics/ai-engineering/","name":"AI Engineering &amp; Frontier LLM Systems — Aniket Thakur","description":"Technical authority hub on AI Engineering, LLM system architecture, deterministic JSON validation, multi-model tiering, and production reliability by Aniket Thakur.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+  <link rel="stylesheet" href="/assets/css/blog.css?v=f5763b87ac64">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+  <script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body data-page="topics">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html" aria-current="page">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/topics/index.html">Topics</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">AI Engineering</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-meta-top">
+          <span class="badge badge-featured">Pillar Hub</span>
+          <span class="meta-tag">Multi-LLM · Deterministic Validation · Production AI</span>
+          <span class="meta-dot">·</span>
+          <span>By Aniket Thakur</span>
+        </div>
+
+        <h1 class="article-title" style="font-size: clamp(2.1rem, 4vw, 3rem);">
+          AI Engineering &amp; <span class="serif-accent">Frontier LLM Systems.</span>
+        </h1>
+
+        <p class="lead">
+          Engineering production-grade AI applications by replacing fragile prompting with multi-model tiering, deterministic schema enforcement, model distillation, and rigorous domain evaluation.
+        </p>
+
+        <div class="article-byline">
+          <div class="byline-avatar">
+            <img src="/assets/img/aniket-portrait.png" alt="Aniket Thakur" width="40" height="40">
+          </div>
+          <div>
+            <div class="byline-name"><a href="/author/aniket-thakur.html">Aniket Thakur</a></div>
+            <div class="byline-role">AI Engineer, Associate Product Manager &amp; AI Researcher</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <h2>What is AI Engineering in Production?</h2>
+        <p>
+          AI Engineering is the systematic discipline of transforming probabilistic foundation models into deterministic, reproducible, and cost-efficient software systems. While simple API wrappers demonstrate conversational capabilities, enterprise production demands strict reliability: zero unhandled JSON parse exceptions, sub-second p95 latency for interactive flows, bounded token consumption, and rigorous guardrails against model hallucination and security vulnerabilities.
+        </p>
+        <p>
+          Moving beyond single-model dependency requires an intentional architectural posture:
+        </p>
+        <ul>
+          <li><strong>Multi-Model Tiering:</strong> Routing fast classification, entity parsing, and preliminary filtering to cost-effective models (e.g., Gemini Flash, DeepSeek-V3), while reserving expensive reasoning models (Claude 3.5 Sonnet, GPT-4o) exclusively for complex syntheses.</li>
+          <li><strong>Deterministic Output Validation:</strong> Enforcing strict Pydantic and Zod schema contracts at model boundaries. Natural language is parsed through structured schema decoders with programmatic self-correction loops before data reaches persistence layers.</li>
+          <li><strong>Prompt Caching &amp; Token Economics:</strong> Designing static prompt prefixes and state snapshots that leverage KV-cache reuse, reducing inference latency by up to 80% and API overhead by 50%+.</li>
+          <li><strong>Domain-Grounded Evaluation:</strong> Replacing subjective manual inspection with automated golden-dataset eval harnesses that score factual recall, format compliance, and semantic drift.</li>
+        </ul>
+
+        <h2>Production Systems &amp; Case Studies</h2>
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-featured">Case Study</span>
+            <h3><a href="/projects/seo-agent-laya.html">Laya — Automated SEO Intelligence &amp; Generation System</a></h3>
+            <p>A multi-agent production pipeline connecting live web scraping, SERP ranking signals, and multi-model generation with structured validation, cutting publishing cycles by 70%.</p>
+            <a class="topic-hub-link" href="/projects/seo-agent-laya.html">Explore Laya Architecture →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Data Product</span>
+            <h3><a href="/projects/prompt-based-bi.html">Prompt-Based Business Intelligence System</a></h3>
+            <p>Natural-language query engine over enterprise relational databases featuring schema injection, AST query validation, and read-only execution guardrails.</p>
+            <a class="topic-hub-link" href="/projects/prompt-based-bi.html">Explore Prompt-BI Architecture →</a>
+          </div>
+        </div>
+
+        <h2>Curated Technical Focus Areas</h2>
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Security Architecture</span>
+            <h3><a href="/blog/technology/">AI Security &amp; LLM Protection</a></h3>
+            <p>Safeguarding production agents against prompt injection, SSRF, tool poisoning, and link-local credential exfiltration.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Explore Security Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Model Architectures</span>
+            <h3><a href="/blog/technology/">Frontier Model Analysis &amp; MLA</a></h3>
+            <p>Detailed analysis of Multi-Head Latent Attention (MLA), Mixture-of-Experts architectures, and cost-performance trade-offs.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Explore Architecture Analyses →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Validation Frameworks</span>
+            <h3><a href="/blog/technology/">Type-Safe Agent Validation</a></h3>
+            <p>Architectural evaluation of schema-first agent validation versus state-machine graph execution for production reliability.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Explore Agent Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Vector Infrastructure</span>
+            <h3><a href="/blog/technology/">Vector Search &amp; Relational Databases</a></h3>
+            <p>Benchmarking index build times, query latency, recall tradeoffs, and operational costs across pgvector and specialized stores.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Explore Vector Guides →</a>
+          </div>
+        </div>
+
+        <h2>Research &amp; Engineering Monographs</h2>
+        <ul>
+          <li><a href="/learnings/deterministic-validation-schemas-multi-llm-pipelines.html">Designing Deterministic Validation Schemas for Multi-LLM Pipelines</a>: Engineering note on self-healing programmatic retries and schema boundaries.</li>
+          <li><a href="/learnings/distilled-video-models-regional-ai-production.html">Distilled Video Models &amp; Regional AI Production Economics</a>: How distillation makes programmatic generation economically feasible.</li>
+          <li><a href="/research/graph-neural-networks-ecological-modeling.html">Graph Neural Networks for Ecological Food Web Modeling (OIST Research)</a>: Deep learning on topological graphs and ecological energy dynamics.</li>
+        </ul>
+      </div>
+
+      <footer class="article-footer" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+        <p class="eyebrow">Explore Other Topical Authority Hubs</p>
+        <div class="btn-group">
+          <a class="btn btn-secondary btn-sm" href="/topics/agentic-ai/">Agentic AI Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/data-engineering/">Data Engineering Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/fintech-product/">Fintech &amp; Product Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/quantitative-finance/">Quantitative Finance Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/ai-research/">AI Research Hub →</a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">AI Engineer, Associate Product Manager &amp; AI Researcher.<br>Building production AI systems, quantitative models, and data products.</p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/research/index.html">Research</a></li>
+            <li><a href="/topics/index.html">Topics</a></li>
+            <li><a href="/learnings.html">Learnings</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

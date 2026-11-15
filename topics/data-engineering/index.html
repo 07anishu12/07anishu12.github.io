@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Data Engineering, SQL &amp; High-Throughput Systems — Aniket Thakur</title>
+  <meta name="description" content="Technical authority hub on Data Engineering, high-throughput PostgreSQL architectures, transactional outbox patterns, AST validation, and geospatial indexing by Aniket Thakur.">
+  <link rel="canonical" href="https://aniket.app/topics/data-engineering/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="Data Engineering, SQL &amp; High-Throughput Systems — Aniket Thakur">
+  <meta property="og:description" content="Production data engineering architectures: transactional outbox, PostgreSQL tuning, NL-to-SQL AST validation, and geospatial indexing.">
+  <meta property="og:url" content="https://aniket.app/topics/data-engineering/">
+  <meta property="og:image" content="https://aniket.app/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Data Engineering, SQL &amp; High-Throughput Systems — Aniket Thakur">
+  <meta name="twitter:description" content="PostgreSQL tuning, transactional outbox, AST validation, and data pipelines by Aniket Thakur.">
+  <meta name="twitter:image" content="https://aniket.app/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://aniket.app/topics/data-engineering/#webpage",
+        "url": "https://aniket.app/topics/data-engineering/",
+        "name": "Data Engineering, SQL & High-Throughput Systems — Aniket Thakur",
+        "description": "Comprehensive authority hub on Data Engineering, high-throughput PostgreSQL pipelines, and reliable data architectures authored by Aniket Thakur.",
+        "about": [
+          {"@type": "Thing", "name": "Data Engineering", "sameAs": "https://en.wikipedia.org/wiki/Data_engineering"},
+          {"@type": "Thing", "name": "PostgreSQL"},
+          {"@type": "Thing", "name": "SQL"},
+          {"@type": "Thing", "name": "Data Pipeline"}
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://aniket.app/#person",
+          "name": "Aniket Thakur",
+          "url": "https://aniket.app/author/aniket-thakur.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aniket.app/topics/data-engineering/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aniket.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Topics",
+            "item": "https://aniket.app/topics/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Data Engineering",
+            "item": "https://aniket.app/topics/data-engineering/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","alternateName":["Aniket","07anishu12"],"jobTitle":"AI Engineer & Associate Product Manager","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.","sameAs":["https://github.com/07anishu12","https://www.linkedin.com/in/aniket-thakur-a23a9b372","https://x.com/07anni04","https://medium.com/@kumaraniketn"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University","alternateName":"DSEU","sameAs":"https://dseu.ac.in/"},{"@type":"CollegeOrUniversity","name":"WorldQuant University","sameAs":"https://www.wqu.edu/"}],"worksFor":[{"@type":"Organization","name":"Drivio Technologies","sameAs":"https://drivio.in"}],"affiliation":[{"@type":"ResearchOrganization","name":"Okinawa Institute of Science and Technology Graduate University","alternateName":"OIST","sameAs":"https://www.oist.jp/"}],"knowsAbout":["Artificial Intelligence","AI Engineering","Agentic AI","Large Language Models","Graph Neural Networks","Data Engineering","Fintech","Financial Engineering","Quantitative Finance"]},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/topics/data-engineering/#webpage","url":"https://aniket.app/topics/data-engineering/","name":"Data Engineering, SQL &amp; High-Throughput Systems — Aniket Thakur","description":"Technical authority hub on Data Engineering, high-throughput PostgreSQL architectures, transactional outbox patterns, AST validation, and geospatial indexing by Aniket Thakur.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+  <link rel="stylesheet" href="/assets/css/blog.css?v=f5763b87ac64">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+  <script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body data-page="topics">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html" aria-current="page">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/topics/index.html">Topics</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Data Engineering</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-meta-top">
+          <span class="badge badge-featured">Pillar Hub</span>
+          <span class="meta-tag">PostgreSQL · Distributed ETL · Transactional Systems</span>
+          <span class="meta-dot">·</span>
+          <span>By Aniket Thakur</span>
+        </div>
+
+        <h1 class="article-title" style="font-size: clamp(2.1rem, 4vw, 3rem);">
+          Data Engineering, SQL &amp; <span class="serif-accent">High-Throughput Systems.</span>
+        </h1>
+
+        <p class="lead">
+          Building resilient, high-concurrency data systems: transactional outbox guarantees, PostgreSQL query optimization, Abstract Syntax Tree validation for natural language SQL, and geospatial telemetry.
+        </p>
+
+        <div class="article-byline">
+          <div class="byline-avatar">
+            <img src="/assets/img/aniket-portrait.png" alt="Aniket Thakur" width="40" height="40">
+          </div>
+          <div>
+            <div class="byline-name"><a href="/author/aniket-thakur.html">Aniket Thakur</a></div>
+            <div class="byline-role">AI Engineer, Associate Product Manager &amp; AI Researcher</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <h2>The Architecture of Modern Data Systems</h2>
+        <p>
+          Data Engineering forms the indispensable foundational layer for analytics, financial modeling, and production machine learning. Without reliable data ingestion, strict schema evolution, and provable transactional consistency, downstream models operate on poisoned signals. In production architectures, data systems must guarantee high availability, idempotent writes, and sub-second analytical aggregations across hundreds of millions of rows.
+        </p>
+        <p>
+          Key architectural disciplines implemented across my work include:
+        </p>
+        <ul>
+          <li><strong>Transactional Outbox &amp; Exactly-Once Semantics:</strong> Decoupling database state transitions from message brokers (Kafka, RabbitMQ) by writing domain events to an outbox table within the same ACID transaction, eliminating dual-write inconsistencies.</li>
+          <li><strong>Abstract Syntax Tree (AST) Validation:</strong> Ensuring natural language-to-SQL query generation engines parse SQL queries into syntax trees to enforce read-only table allowlists, disallow schema modifications (DROP/ALTER), and inject tenant isolation clauses.</li>
+          <li><strong>Advanced PostgreSQL Indexing:</strong> Optimizing relational engines using GIN indexes for JSONB unstructured attributes, BRIN indexes for ordered time-series datasets, and HNSW/IVFFlat indexes for high-dimensional vector embeddings via pgvector.</li>
+          <li><strong>Geospatial Partitioning:</strong> Leveraging PostGIS and spatial R-tree indices for high-frequency coordinate queries, geofencing, and proximity radius lookups across EV charging and vehicle dispatch fleets.</li>
+        </ul>
+
+        <h2>Production Systems &amp; Case Studies</h2>
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-featured">Data Product</span>
+            <h3><a href="/projects/prompt-based-bi.html">Prompt-Based Business Intelligence System</a></h3>
+            <p>Self-serve data analytics platform allowing non-technical operators to query complex relational data using natural language, backed by automated schema context and AST safety validation.</p>
+            <a class="topic-hub-link" href="/projects/prompt-based-bi.html">Explore Prompt-BI Architecture →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Case Study</span>
+            <h3><a href="/projects/seo-agent-laya.html">Laya — Automated Data Pipeline &amp; Scraper</a></h3>
+            <p>High-throughput automated ETL pipeline synchronizing search signals, competitor indices, and structured article outputs with deterministic validation.</p>
+            <a class="topic-hub-link" href="/projects/seo-agent-laya.html">Explore Laya Pipeline →</a>
+          </div>
+        </div>
+
+        <h2>Curated Technical Focus Areas</h2>
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Database Tuning</span>
+            <h3><a href="/blog/technology/">PostgreSQL Optimization</a></h3>
+            <p>Practical tuning of shared_buffers, work_mem, autovacuum parameters, connection pools (PgBouncer), and WAL writers under high concurrent transaction volume.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Database Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Hybrid Search</span>
+            <h3><a href="/blog/technology/">pgvector &amp; Hybrid Indexing</a></h3>
+            <p>Implementing Reciprocal Rank Fusion combining full-text tsvector search and pgvector HNSW embeddings within a single ACID-compliant database.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Vector Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Schema Design</span>
+            <h3><a href="/blog/technology/">JSONB &amp; Expression Indexing</a></h3>
+            <p>Mastering JSONB indexing strategies: jsonb_path_ops vs jsonb_ops, expression indexes for nested attributes, and query execution plan analysis.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Indexing Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Vector Infrastructure</span>
+            <h3><a href="/blog/technology/">Vector Storage at Scale</a></h3>
+            <p>Architectural breakdown of vector indexing algorithms (HNSW, IVF-PQ) and memory management tradeoffs at scale.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Storage Guides →</a>
+          </div>
+        </div>
+
+        <h2>Related Research &amp; Monographs</h2>
+        <ul>
+          <li><a href="/learnings/robot-fleet-configuration-in-micro-factories.html">Robot Fleet Configuration in Micro-Factories</a>: Data collection and telemetry synchronization across distributed edge hardware.</li>
+          <li><a href="/topics/quantitative-finance/">Quantitative Finance &amp; Financial Engineering</a>: Temporal feature matrices and zero-leakage time-series pipelines.</li>
+          <li><a href="/projects/index.html">Projects Index</a>: Complete catalogue of verified production software architectures.</li>
+        </ul>
+      </div>
+
+      <footer class="article-footer" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+        <p class="eyebrow">Explore Other Topical Authority Hubs</p>
+        <div class="btn-group">
+          <a class="btn btn-secondary btn-sm" href="/topics/ai-engineering/">AI Engineering Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/agentic-ai/">Agentic AI Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/fintech-product/">Fintech &amp; Product Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/quantitative-finance/">Quantitative Finance Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/ai-research/">AI Research Hub →</a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">AI Engineer, Associate Product Manager &amp; AI Researcher.<br>Building production AI systems, quantitative models, and data products.</p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/research/index.html">Research</a></li>
+            <li><a href="/topics/index.html">Topics</a></li>
+            <li><a href="/learnings.html">Learnings</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

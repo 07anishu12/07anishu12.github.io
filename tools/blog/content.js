@@ -8,18 +8,73 @@ const { assertApproved } = require('./editorial');
 
 const ROOT = path.resolve(__dirname, '../..');
 const ORIGIN = process.env.CANONICAL_ORIGIN || 'https://aniket.app';
-const AUTHOR = { '@type': 'Person', '@id': `${ORIGIN}/#person`, name: 'Aniket Thakur', url: `${ORIGIN}/author/aniket-thakur.html` };
+const AUTHOR = { '@type': 'Person', '@id': `${ORIGIN}/#person`, name: 'Aniket Thakur', url: `${ORIGIN}/author/aniket-thakur/` };
 const CATEGORIES = {
   technology: { name: 'Technology', description: 'AI, software, gadgets, tutorials, comparisons, and explainers.' },
   product: { name: 'Product', description: 'Product discovery, experimentation, AI product execution, and product operations.' },
   auto: { name: 'Auto', description: 'Cars, bikes, EVs, ownership costs, and automotive technology.' },
-  finance: { name: 'Finance', description: 'Personal finance, markets, fintech, and financial explainers.' }
+  finance: { name: 'Finance', description: 'Personal finance, markets, fintech, and financial explainers.' },
+  cfa: { name: 'CFA', description: 'Chartered Financial Analyst (CFA) curriculum guides, Level I and II formulas, valuation models, and exam preparation.' }
 };
 const escape = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const json = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const assert = (ok, message) => { if (!ok) throw new Error(message); };
 const httpUrl = s => { try { const u = new URL(s); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password; } catch { return false; } };
-const personEntity = () => ({ '@type': 'Person', '@id': `${ORIGIN}/#person`, name: 'Aniket Thakur', url: `${ORIGIN}/author/aniket-thakur.html`, image: `${ORIGIN}/assets/img/aniket-portrait.png`, description: 'AI engineering, backend systems, product development and financial engineering.' });
+const personEntity = () => ({
+  '@type': 'Person',
+  '@id': `${ORIGIN}/#person`,
+  name: 'Aniket Thakur',
+  alternateName: ['Aniket', '07anishu12'],
+  jobTitle: 'AI Engineer & Associate Product Manager',
+  url: `${ORIGIN}/author/aniket-thakur/`,
+  image: `${ORIGIN}/assets/img/aniket-portrait.png`,
+  description: 'AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.',
+  sameAs: [
+    'https://github.com/07anishu12',
+    'https://www.linkedin.com/in/aniket-thakur-a23a9b372',
+    'https://x.com/07anni04',
+    'https://medium.com/@kumaraniketn'
+  ],
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Delhi Skill and Entrepreneurship University',
+      alternateName: 'DSEU',
+      sameAs: 'https://dseu.ac.in/'
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'WorldQuant University',
+      sameAs: 'https://www.wqu.edu/'
+    }
+  ],
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: 'Drivio Technologies',
+      sameAs: 'https://drivio.in'
+    }
+  ],
+  affiliation: [
+    {
+      '@type': 'ResearchOrganization',
+      name: 'Okinawa Institute of Science and Technology Graduate University',
+      alternateName: 'OIST',
+      sameAs: 'https://www.oist.jp/'
+    }
+  ],
+  knowsAbout: [
+    'Artificial Intelligence',
+    'AI Engineering',
+    'Agentic AI',
+    'Large Language Models',
+    'Graph Neural Networks',
+    'Data Engineering',
+    'Fintech',
+    'Financial Engineering',
+    'Quantitative Finance'
+  ]
+});
 const websiteEntity = () => ({ '@type': 'WebSite', '@id': `${ORIGIN}/#website`, url: `${ORIGIN}/`, name: 'Aniket Thakur', description: 'Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.', publisher: { '@id': `${ORIGIN}/#person` }, inLanguage: 'en' });
 const siteGraph = ({ url, title, description }) => ({ '@context': 'https://schema.org', '@graph': [personEntity(), websiteEntity(), { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en', isPartOf: { '@id': `${ORIGIN}/#website` }, about: { '@id': `${ORIGIN}/#person` } }] });
 
@@ -59,6 +114,9 @@ function renderMarkdown(body) {
     const label = ts[i].info.trim().split(/\s+/)[0] || 'text';
     if (label.toLowerCase() === 'mermaid') {
       return `<div class="blog-diagram" role="region" aria-label="Visual workflow diagram" tabindex="0"><div class="blog-diagram-header"><span class="blog-diagram-badge">Visual Workflow</span><span class="blog-diagram-label">Architecture Diagram</span></div><pre class="mermaid">${escape(ts[i].content.trim())}</pre></div>\n`;
+    }
+    if (label.toLowerCase() === 'formula' || label.toLowerCase() === 'equation' || label.toLowerCase() === 'math') {
+      return `<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">${escape(ts[i].content.trim())}</code></pre></div>\n`;
     }
     return `<div class="blog-code"><div class="blog-code-label">${escape(label)}</div>${fence(ts, i, options, env, renderer).replace('<pre>', `<pre tabindex="0" aria-label="${escape(label)} code block">`)}</div>`;
   };

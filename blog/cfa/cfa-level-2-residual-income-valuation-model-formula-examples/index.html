@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FAF9F6">
+<title>Residual Income Valuation Model: Formula and Numerical Examples — CFA Level II</title>
+<meta name="description" content="Master Residual Income Valuation Model: Formula and Numerical Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Thakur">
+<meta property="og:title" content="Residual Income Valuation Model: Formula and Numerical Examples — CFA Level II">
+<meta property="og:description" content="Master Residual Income Valuation Model: Formula and Numerical Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.">
+<meta property="og:url" content="https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/">
+<meta property="og:image" content="https://aniket.app/assets/images/blog/cfa-level-2-residual-income-valuation-model-formula-examples/cover.svg">
+<meta property="og:image:alt" content="Illustrative guide to Residual Income Valuation Model: Formula and Numerical Examples">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="article:published_time" content="2026-11-13">
+<meta property="article:modified_time" content="2026-11-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Residual Income Valuation Model: Formula and Numerical Examples — CFA Level II">
+<meta name="twitter:description" content="Master Residual Income Valuation Model: Formula and Numerical Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.">
+<meta name="twitter:image" content="https://aniket.app/assets/images/blog/cfa-level-2-residual-income-valuation-model-formula-examples/cover.svg">
+<meta name="twitter:image:alt" content="Illustrative guide to Residual Income Valuation Model: Formula and Numerical Examples">
+<link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+<link rel="stylesheet" href="/assets/css/blog.css?v=f5763b87ac64">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+<script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/#article","headline":"Residual Income Valuation Model: Formula and Numerical Examples","description":"Master Residual Income Valuation Model: Formula and Numerical Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.","abstract":"Residual Income Valuation Model: Formula and Numerical Examples covers calculating Residual Income (RI_t = E_t − r × B_{t−1} = (ROE_t − r) × B_{t−1}), single-stage and multistage RI valuation with persistence factor ω, and adjusting for clean surplus.","url":"https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/","mainEntityOfPage":{"@id":"https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/#webpage"},"author":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur/"},"publisher":{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","url":"https://aniket.app/author/aniket-thakur/"},"image":{"@type":"ImageObject","url":"https://aniket.app/assets/images/blog/cfa-level-2-residual-income-valuation-model-formula-examples/cover.svg","width":1200,"height":675,"caption":"Illustrative guide to Residual Income Valuation Model: Formula and Numerical Examples"},"datePublished":"2026-11-13","dateModified":"2026-11-13","articleSection":"CFA","keywords":"CFA, Level II, Equity Investments, residual income valuation model cfa, residual income valuation model cfa formula","inLanguage":"en","wordCount":1698}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the primary formula for residual income valuation model cfa in Level II Equity Investments?","acceptedAnswer":{"@type":"Answer","text":"The primary equations for Residual Income Valuation Model: Formula and Numerical Examples govern Equity Investments calculations across the CFA curriculum. Candidates must master these formulas alongside their underlying assumptions and variable definitions."}},{"@type":"Question","name":"How is residual income valuation model cfa tested on the CFA Level II exam?","acceptedAnswer":{"@type":"Answer","text":"On the CFA exam, Residual Income Valuation Model: Formula and Numerical Examples is tested through computational problem-solving and conceptual scenario questions. Candidates are evaluated on formula recall, calculator speed, and avoiding common distractor traps."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aniket.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://aniket.app/blog/"},{"@type":"ListItem","position":3,"name":"CFA","item":"https://aniket.app/blog/cfa/"},{"@type":"ListItem","position":4,"name":"Residual Income Valuation Model: Formula and Numerical Examples","item":"https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/"}]}</script>
+<script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","alternateName":["Aniket","07anishu12"],"jobTitle":"AI Engineer & Associate Product Manager","url":"https://aniket.app/author/aniket-thakur/","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.","sameAs":["https://github.com/07anishu12","https://www.linkedin.com/in/aniket-thakur-a23a9b372","https://x.com/07anni04","https://medium.com/@kumaraniketn"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University","alternateName":"DSEU","sameAs":"https://dseu.ac.in/"},{"@type":"CollegeOrUniversity","name":"WorldQuant University","sameAs":"https://www.wqu.edu/"}],"worksFor":[{"@type":"Organization","name":"Drivio Technologies","sameAs":"https://drivio.in"}],"affiliation":[{"@type":"ResearchOrganization","name":"Okinawa Institute of Science and Technology Graduate University","alternateName":"OIST","sameAs":"https://www.oist.jp/"}],"knowsAbout":["Artificial Intelligence","AI Engineering","Agentic AI","Large Language Models","Graph Neural Networks","Data Engineering","Fintech","Financial Engineering","Quantitative Finance"]},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/#webpage","url":"https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/","name":"Residual Income Valuation Model: Formula and Numerical Examples — CFA Level II","description":"Master Residual Income Valuation Model: Formula and Numerical Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+</head>
+<body data-page="blog-article">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about/">About</a>
+        <a href="/work/">Work</a>
+        <a href="/research/">Research</a>
+        <a href="/topics/">Topics</a>
+        <a href="/learnings/">Learnings</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/about/">About</a>
+      <a href="/work/">Work</a>
+      <a href="/research/">Research</a>
+      <a href="/topics/">Topics</a>
+      <a href="/learnings/">Learnings</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact/">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-secondary" data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+        <a class="btn btn-primary" data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp Me ↗</a>
+      </div>
+    </nav>
+  </header>
+
+<main id="main-content" class="container blog-layout">
+<article class="blog-article" data-article-category="cfa" data-article-slug="cfa-level-2-residual-income-valuation-model-formula-examples">
+<div class="reading-progress-track" aria-hidden="true"><div class="reading-progress-bar" id="reading-progress"></div></div>
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/cfa/">CFA</a><span aria-current="page">Article</span></nav>
+<header class="blog-article-header"><div class="blog-header-badge"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h1 id="article-title">Residual Income Valuation Model: Formula and Numerical Examples</h1>
+<p class="blog-description">Master Residual Income Valuation Model: Formula and Numerical Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.</p>
+<div class="blog-meta"><a rel="author" href="/author/aniket-thakur.html">Aniket Thakur</a><span>Published <time datetime="2026-11-13">13 Nov 2026</time></span><span>9 min read</span></div></header>
+<section class="blog-answer" aria-labelledby="article-answer">
+<p class="blog-answer-kicker">The 30-second answer</p><h2 id="article-answer">Residual Income Valuation Model: Formula and Numerical Examples: Key Summary &amp; Verdict</h2>
+<p class="blog-answer-verdict">Residual Income Valuation Model: Formula and Numerical Examples covers calculating Residual Income (RI_t = E_t − r × B_{t−1} = (ROE_t − r) × B_{t−1}), single-stage and multistage RI valuation with persistence factor ω, and adjusting for clean surplus.</p>
+<dl class="blog-answer-facts" aria-describedby="article-answer-note"><div><dt>CFA Level</dt><dd>Level II</dd></div><div><dt>Curriculum Subject</dt><dd>Equity Investments</dd></div><div><dt>Topic Focus</dt><dd>residual income valuation model cfa</dd></div><div><dt>Syllabus Standard</dt><dd>2026–2027 Curriculum</dd></div></dl>
+<p class="blog-answer-note" id="article-answer-note">2026–2027 CFA Program Curriculum Series · Aniket Thakur</p>
+<div class="blog-answer-decisions"><div class="blog-answer-good"><h3>Good fit</h3><ul><li>Candidates preparing for CFA Level II (Equity Investments) exam questions.</li><li>Financial analysts requiring verified formulas and worked calculations.</li></ul></div><div class="blog-answer-watch"><h3>Check first</h3><ul><li>Verify compounding periodicity, sign conventions, and calculator mode (BGN vs END).</li><li>Review boundary conditions and common exam distractor traps.</li></ul></div></div>
+<a class="blog-answer-read" href="#article-details">Read the full financial guide <span aria-hidden="true">↓</span></a>
+</section>
+<figure class="blog-cover"><img src="/assets/images/blog/cfa-level-2-residual-income-valuation-model-formula-examples/cover.svg" alt="Illustrative guide to Residual Income Valuation Model: Formula and Numerical Examples" width="1200" height="675" fetchpriority="high" decoding="async"><figcaption>Original explanatory diagram, curriculum models, and quantitative benchmarks for Residual Income Valuation Model: Formula and Numerical Examples.</figcaption></figure>
+<nav class="blog-tags" aria-label="Article topics"><a href="/blog/?tag=CFA">CFA</a><a href="/blog/?tag=Level%20II">Level II</a><a href="/blog/?tag=Equity%20Investments">Equity Investments</a><a href="/blog/?tag=residual%20income%20valuation%20model%20cfa">residual income valuation model cfa</a><a href="/blog/?tag=residual%20income%20valuation%20model%20cfa%20formula">residual income valuation model cfa formula</a></nav>
+<nav class="blog-toc" aria-labelledby="article-toc"><details><summary><h2 id="article-toc">On this page</h2><span>22 sections</span></summary><ol><li class="toc-h2"><a href="#section-introduction">Introduction</a></li><li class="toc-h2"><a href="#section-concept-explanation-institutional-framework">Concept Explanation &amp; Institutional Framework</a></li><li class="toc-h2"><a href="#section-core-formulas-mathematical-equations">Core Formulas &amp; Mathematical Equations</a></li><li class="toc-h3"><a href="#section-formula-1-residual-income-ri-single-stage-ri-valuation-formula">Formula 1: Residual Income (RI) &amp; Single-Stage RI Valuation Formula</a></li><li class="toc-h3"><a href="#section-formula-2-multistage-continuing-residual-income-with-persistence-factor-ω">Formula 2: Multistage Continuing Residual Income with Persistence Factor (ω)</a></li><li class="toc-h2"><a href="#section-step-by-step-worked-numerical-examples">Step-by-Step Worked Numerical Examples</a></li><li class="toc-h3"><a href="#section-worked-example-1-three-year-explicit-residual-income-valuation-table">Worked Example 1: Three-Year Explicit Residual Income Valuation Table</a></li><li class="toc-h3"><a href="#section-worked-example-2-single-stage-residual-income-valuation-and-implied-growth-rate">Worked Example 2: Single-Stage Residual Income Valuation and Implied Growth Rate</a></li><li class="toc-h2"><a href="#section-comparison-reference-analysis">Comparison &amp; Reference Analysis</a></li><li class="toc-h2"><a href="#section-real-world-financial-applications">Real-World Financial Applications</a></li><li class="toc-h2"><a href="#section-cfa-examination-perspective-testing-patterns">CFA Examination Perspective &amp; Testing Patterns</a></li><li class="toc-h2"><a href="#section-cfa-practice-questions-detailed-solutions">CFA Practice Questions &amp; Detailed Solutions</a></li><li class="toc-h3"><a href="#section-practice-question-1">Practice Question 1</a></li><li class="toc-h3"><a href="#section-practice-question-2">Practice Question 2</a></li><li class="toc-h3"><a href="#section-practice-question-3">Practice Question 3</a></li><li class="toc-h2"><a href="#section-common-mistakes-exam-traps-to-avoid">Common Mistakes &amp; Exam Traps to Avoid</a></li><li class="toc-h2"><a href="#section-key-takeaways-revision-notes">Key Takeaways &amp; Revision Notes</a></li><li class="toc-h2"><a href="#section-frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a></li><li class="toc-h3"><a href="#section-what-is-the-primary-formula-for-residual-income-valuation-model-cfa-in-level-ii-equity-investments">What is the primary formula for residual income valuation model cfa in Level II Equity Investments?</a></li><li class="toc-h3"><a href="#section-how-is-residual-income-valuation-model-cfa-tested-on-the-cfa-level-ii-exam">How is residual income valuation model cfa tested on the CFA Level II exam?</a></li><li class="toc-h2"><a href="#section-curriculum-alignment-related-library-articles">Curriculum Alignment &amp; Related Library Articles</a></li><li class="toc-h3"><a href="#section-related-cfa-study-guides">Related CFA Study Guides</a></li></ol></details></nav>
+<div class="blog-body" id="article-details"><h2 id="section-introduction">Introduction</h2>
+<p>Residual Income Valuation Model: Formula and Numerical Examples covers calculating Residual Income (RI_t = E_t − r × B_{t−1} = (ROE_t − r) × B_{t−1}), single-stage and multistage RI valuation with persistence factor ω, and adjusting for clean surplus violations in Level II Equity Investments (LM 7: Residual Income Valuation — Residual Income (RI) formula, EVA vs RI, Single-Stage RI model, Multistage RI model with persistence factor (ω), Clean Surplus Violations), with verified formulas, two worked examples, and three practice MCQs.</p>
+<h2 id="section-concept-explanation-institutional-framework">Concept Explanation &amp; Institutional Framework</h2>
+<p>Residual Income (RI) &amp; Single-Stage RI Valuation Formula (RI_t = E_t − (r × B_{t−1}) = (ROE_t − r) × B_{t−1} ; V_0 = B_0 + [(ROE − r) / (r − g)] × B_0) and Multistage Continuing Residual Income with Persistence Factor (ω) (PV_T(Continuing RI) = RI_T / (1 + r − ω) (or if RI fades to industry ROE at t = T: V_T − B_T = (P_T − B_T))) govern calculating Residual Income (RI_t = E_t − r × B_{t−1} = (ROE_t − r) × B_{t−1}), single-stage and multistage RI valuation with persistence factor ω, and adjusting for clean surplus violations.</p>
+<h2 id="section-core-formulas-mathematical-equations">Core Formulas &amp; Mathematical Equations</h2>
+<blockquote class="blog-callout blog-callout-note">
+<p><strong>Note:</strong> The following analytical equations govern problem-solving and numerical questions across this curriculum reading.</p>
+</blockquote>
+<h3 id="section-formula-1-residual-income-ri-single-stage-ri-valuation-formula">Formula 1: Residual Income (RI) &amp; Single-Stage RI Valuation Formula</h3>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">RI_t = E_t − (r × B_{t−1}) = (ROE_t − r) × B_{t−1}
+
+V_0 = B_0 + [(ROE − r) / (r − g)] × B_0</code></pre></div>
+<p><strong>Institutional Context &amp; Variable Breakdown:</strong> Values a stock as current Book Value per share (B_0) plus the present value of future economic profits above the equity capital charge (r × B_{t−1}).</p>
+<h3 id="section-formula-2-multistage-continuing-residual-income-with-persistence-factor-ω">Formula 2: Multistage Continuing Residual Income with Persistence Factor (ω)</h3>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">PV_T(Continuing RI) = RI_T / (1 + r − ω) (or if RI fades to industry ROE at t = T: V_T − B_T = (P_T − B_T))</code></pre></div>
+<p><strong>Institutional Context &amp; Variable Breakdown:</strong></p>
+<ul>
+<li>
+<p>ω ∈ [0, 1] is the persistence factor: ω = 1 means RI_T continues at a constant level forever (PV = RI_T / r).</p>
+</li>
+<li>
+<p>ω = 0 means RI drops to zero immediately after Year T.</p>
+</li>
+</ul>
+<h2 id="section-step-by-step-worked-numerical-examples">Step-by-Step Worked Numerical Examples</h2>
+<h3 id="section-worked-example-1-three-year-explicit-residual-income-valuation-table">Worked Example 1: Three-Year Explicit Residual Income Valuation Table</h3>
+<p><strong>Problem &amp; Given Scenario:</strong>
+A company has current Book Value per share B_0 = $20.00, required return on equity r = 10.0%, and pays out 50% of earnings as dividends. Return on Equity (ROE) will be 18.0% in Years 1 and 2, and then drop to the competitive cost of equity (10.0%, so RI = $0) from Year 3 onward. Calculate Intrinsic Value V_0.</p>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">RI_t = E_t − (r × B_{t−1}) = (ROE_t − r) × B_{t−1}
+
+V_0 = B_0 + [(ROE − r) / (r − g)] × B_0</code></pre></div>
+<p><strong>Step-by-Step Substitution &amp; Calculation:</strong></p>
+<p>Year 1: E_1 = 18% × $20.00 = $3.60; D_1 = $1.80; Equity Charge = 10% × $20.00 = $2.00; RI_1 = $3.60 − $2.00 = +$1.60; Ending Book Value B_1 = $20.00 + $3.60 − $1.80 = $21.80. Year 2: E_2 = 18% × $21.80 = $3.924; D_2 = $1.962; Equity Charge = 10% × $21.80 = $2.180; RI_2 = $3.924 − $2.180 = +$1.744; Ending B_2 = $23.762. Year 3+: Since ROE = r = 10.0%, all future RI = $0.00! Intrinsic Value V_0 = B_0 + RI_1 / 1.10 + RI_2 / 1.10^2 = $20.00 + ($1.60 / 1.10) + ($1.744 / 1.21) = $20.00 + $1.4545 + $1.4413 = $22.8958 ≈ $22.90.</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Financial Interpretation &amp; Exam Takeaway:</strong>
+Always multiply r by BEGINNING Book Value B_{t−1} (not Ending Book Value B_t!) when computing each year's equity charge and Residual Income.</p>
+</blockquote>
+<h3 id="section-worked-example-2-single-stage-residual-income-valuation-and-implied-growth-rate">Worked Example 2: Single-Stage Residual Income Valuation and Implied Growth Rate</h3>
+<p><strong>Problem &amp; Given Scenario:</strong>
+A bank has B_0 = $30.00, constant ROE = 14.0%, constant growth g = 4.0%, and required return r = 9.0%. Compute Intrinsic Value V_0 and verify its implied P/B ratio.</p>
+<div class="blog-formula" role="region" aria-label="Mathematical formula" tabindex="0"><div class="blog-formula-label">Formula Expression</div><pre tabindex="0" aria-label="Formula display"><code class="language-formula">PV_T(Continuing RI) = RI_T / (1 + r − ω) (or if RI fades to industry ROE at t = T: V_T − B_T = (P_T − B_T))</code></pre></div>
+<p><strong>Step-by-Step Substitution &amp; Calculation:</strong></p>
+<p>V_0 = B_0 + [(ROE − r) / (r − g)] × B_0 = $30.00 + [(0.14 − 0.09) / (0.09 − 0.04)] × $30.00 = $30.00 + (0.05 / 0.05) × $30.00 = $30.00 + $30.00 = $60.00 (Implied P/B = $60 / $30 = 2.00x).</p>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Financial Interpretation &amp; Exam Takeaway:</strong>
+Notice that dividing the single-stage RI equation by B_0 yields V_0 / B_0 = 1 + (ROE − r)/(r − g) = (ROE − g)/(r − g)—the exact Justified P/B formula!</p>
+</blockquote>
+<h2 id="section-comparison-reference-analysis">Comparison &amp; Reference Analysis</h2>
+<div class="blog-table" role="region" aria-label="Article table" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">Persistence Scenario (after Year T)</th>
+<th scope="col">Persistence Factor (ω)</th>
+<th scope="col">Continuing Value Formula at t = T−1</th>
+<th scope="col">Economic Industry Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RI drops immediately to zero</td>
+<td>ω = 0.00</td>
+<td>CV_{T−1} = 0</td>
+<td>Patent expiration / fierce competition</td>
+</tr>
+<tr>
+<td>RI decays gradually toward zero</td>
+<td>0 &lt; ω &lt; 1 (typically 0.62)</td>
+<td>RI_T / (1 + r − ω)</td>
+<td>Gradual competitive erosion of moat</td>
+</tr>
+<tr>
+<td>RI stays constant forever</td>
+<td>ω = 1.00</td>
+<td>RI_T / r</td>
+<td>Permanent dollar economic moat</td>
+</tr>
+<tr>
+<td>RI grows at rate g forever</td>
+<td>ω = 1 + g</td>
+<td>RI_T / (r − g)</td>
+<td>Perpetual expanding franchise</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-real-world-financial-applications">Real-World Financial Applications</h2>
+<p>Analysts apply Residual Income (RI) &amp; Single-Stage RI Valuation Formula and Multistage Continuing Residual Income with Persistence Factor (ω) across Equity Investments valuation and risk management.</p>
+<h2 id="section-cfa-examination-perspective-testing-patterns">CFA Examination Perspective &amp; Testing Patterns</h2>
+<p>Tested on the CFA Level II exam (LM 7: Residual Income Valuation — Residual Income (RI) formula, EVA vs RI, Single-Stage RI model, Multistage RI model with persistence factor (ω), Clean Surplus Violations) via quantitative and conceptual MCQs.</p>
+<h2 id="section-cfa-practice-questions-detailed-solutions">CFA Practice Questions &amp; Detailed Solutions</h2>
+<h3 id="section-practice-question-1">Practice Question 1</h3>
+<p><strong>Question:</strong> A company has a beginning Book Value per share (B_0) of $25.00, expects Year 1 Earnings per share (E_1) of $4.25, and expects to pay a Year 1 Dividend (D_1) of $1.50. If the required return on equity is 11.0%, the company's Year 1 Residual Income per share (RI_1) is:</p>
+<ul>
+<li>
+<p><strong>[A]</strong> $1.25</p>
+</li>
+<li>
+<p><strong>[B]</strong> $1.50</p>
+</li>
+<li>
+<p><strong>[C]</strong> $2.75</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option B.</strong></p>
+<p><strong>Explanation:</strong> Equity charge = r × B_0 = 11.0% × $25.00 = $2.75. Residual Income RI_1 = E_1 − (r × B_0) = $4.25 − $2.75 = $1.50. (Dividends $1.50 affect Ending Book Value B_1 = $25 + $4.25 − $1.50 = $27.75, not RI_1!).</p>
+</blockquote>
+<h3 id="section-practice-question-2">Practice Question 2</h3>
+<p><strong>Question:</strong> In a multistage Residual Income model, an analyst estimates Year 3 Residual Income (RI_3) at $2.40 per share and assumes that from Year 3 onward, residual income will decay with a persistence factor of ω = 0.70. At a required return on equity of r = 10.0%, the present value of continuing residual income as of the end of Year 2 (t = 2) is:</p>
+<ul>
+<li>
+<p><strong>[A]</strong> $6.00</p>
+</li>
+<li>
+<p><strong>[B]</strong> $8.00</p>
+</li>
+<li>
+<p><strong>[C]</strong> $24.00</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option A.</strong></p>
+<p><strong>Explanation:</strong> Continuing Value at t = T − 1 (end of Year 2) = RI_3 / (1 + r − ω) = $2.40 / (1 + 0.10 − 0.70) = $2.40 / 0.40 = $6.00.</p>
+</blockquote>
+<h3 id="section-practice-question-3">Practice Question 3</h3>
+<p><strong>Question:</strong> The Residual Income model relies on the 'clean surplus relation' (B_t = B_{t−1} + E_t − D_t). Which accounting practice violates clean surplus accounting and requires analyst adjustment if expected to be non-zero in the future?</p>
+<ul>
+<li>
+<p><strong>[A]</strong> Recognizing recurring foreign currency translation adjustments, pension remeasurements, or FVOCI security gains directly in Other Comprehensive Income (OCI) bypassing Net Income</p>
+</li>
+<li>
+<p><strong>[B]</strong> Using straight-line depreciation instead of accelerated depreciation</p>
+</li>
+<li>
+<p><strong>[C]</strong> Paying cash dividends</p>
+</li>
+</ul>
+<blockquote class="blog-callout blog-callout-tip">
+<p><strong>Tip:</strong> <strong>Correct Answer: Option A.</strong></p>
+<p><strong>Explanation:</strong> Items that bypass the income statement and flow directly into shareholders' equity via OCI violate the clean surplus relation; if non-zero in expectation, the analyst should use Total Comprehensive Income instead of Net Income.</p>
+</blockquote>
+<h2 id="section-common-mistakes-exam-traps-to-avoid">Common Mistakes &amp; Exam Traps to Avoid</h2>
+<ul>
+<li>
+<p><strong>Periodicity Mismatch: Failing to align compounding frequency in Residual Income (RI) &amp; Single-Stage RI Valuation Formula.</strong></p>
+</li>
+<li>
+<p><strong>Timing Errors: Mixing beginning and ending balances in Multistage Continuing Residual Income with Persistence Factor (ω).</strong></p>
+</li>
+<li>
+<p><strong>Distractor Traps: Stopping at an unadjusted intermediate step.</strong></p>
+</li>
+</ul>
+<h2 id="section-key-takeaways-revision-notes">Key Takeaways &amp; Revision Notes</h2>
+<ul>
+<li>
+<p><strong>Takeaway 1: Residual Income (RI) &amp; Single-Stage RI Valuation Formula: RI_t = E_t − (r × B_{t−1}) = (ROE_t − r) × B_{t−1} ; V_0 = B_0 + [(ROE − r) / (r − g)] × B_0.</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 2: Multistage Continuing Residual Income with Persistence Factor (ω): PV_T(Continuing RI) = RI_T / (1 + r − ω) (or if RI fades to industry ROE at t = T: V_T − B_T = (P_T − B_T)).</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 3: Always multiply r by BEGINNING Book Value B_{t−1} (not Ending Book Value B_t!) when comput.</strong></p>
+</li>
+<li>
+<p><strong>Takeaway 4: Notice that dividing the single-stage RI equation by B_0 yields V_0 / B_0 = 1 + (ROE − r)/.</strong></p>
+</li>
+</ul>
+<h2 id="section-frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h2>
+<h3 id="section-what-is-the-primary-formula-for-residual-income-valuation-model-cfa-in-level-ii-equity-investments">What is the primary formula for residual income valuation model cfa in Level II Equity Investments?</h3>
+<p>The primary equations for Residual Income Valuation Model: Formula and Numerical Examples govern Equity Investments calculations across the CFA curriculum. Candidates must master these formulas alongside their underlying assumptions and variable definitions.</p>
+<h3 id="section-how-is-residual-income-valuation-model-cfa-tested-on-the-cfa-level-ii-exam">How is residual income valuation model cfa tested on the CFA Level II exam?</h3>
+<p>On the CFA exam, Residual Income Valuation Model: Formula and Numerical Examples is tested through computational problem-solving and conceptual scenario questions. Candidates are evaluated on formula recall, calculator speed, and avoiding common distractor traps.</p>
+<h2 id="section-curriculum-alignment-related-library-articles">Curriculum Alignment &amp; Related Library Articles</h2>
+<p>This guide is part of the <strong>2026–2027 CFA Program Preparation Series</strong> (Level II · Equity Investments).</p>
+<h3 id="section-related-cfa-study-guides">Related CFA Study Guides</h3>
+<ul>
+<li>
+<p><a href="/blog/cfa/cfa-level-2-dividend-discount-model-multistage-valuation/">Dividend Discount Model: How to Solve Multistage Valuation Questions</a></p>
+</li>
+<li>
+<p><a href="/blog/cfa/cfa-level-2-enterprise-value-vs-equity-value-calculate-both/">Enterprise Value vs Equity Value: How to Calculate Both</a></p>
+</li>
+<li>
+<p><a href="/blog/cfa/cfa-level-2-build-dcf-valuation-model-step-by-step/">How to Build a DCF Valuation Model Step by Step</a></p>
+</li>
+</ul>
+</div>
+<aside class="blog-disclaimer"><strong>Educational content:</strong> This article provides general educational and exam preparation information, not personalised financial, tax, or investment advice. Check the dates, sources, assumptions, and risks before making decisions.</aside>
+<section class="blog-sources" aria-labelledby="article-sources"><h2 id="article-sources">Sources &amp; references</h2><ol><li><a href="https://www.cfainstitute.org/en/programs/cfa/curriculum" rel="noopener">CFA Institute 2026–2027 Program Curriculum: Equity Investments</a></li><li><a href="https://www.cfainstitute.org/en/programs/cfa/candidate" rel="noopener">CFA Institute Candidate Study Resources &amp; Topic Outlines</a></li></ol></section>
+
+
+<div class="blog-sharing"><span>Share this article</span><button type="button" class="btn btn-secondary btn-sm" data-share="copy" data-url="https://aniket.app/blog/cfa/cfa-level-2-residual-income-valuation-model-formula-examples/">Copy link</button><a class="btn btn-secondary btn-sm" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faniket.app%2Fblog%2Fcfa%2Fcfa-level-2-residual-income-valuation-model-formula-examples%2F" target="_blank" rel="noopener">LinkedIn ↗</a><span data-share-status role="status"></span></div>
+<section class="blog-related" aria-labelledby="article-related"><h2 id="article-related">Related articles</h2><div class="blog-grid"><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-2-build-dcf-valuation-model-step-by-step/" aria-label="Read How to Build a DCF Valuation Model Step by Step"><img src="/assets/images/blog/cfa-level-2-build-dcf-valuation-model-step-by-step/cover.svg" alt="Illustrative guide to How to Build a DCF Valuation Model Step by Step" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-2-build-dcf-valuation-model-step-by-step/">How to Build a DCF Valuation Model Step by Step</a></h3>
+<p>Master How to Build a DCF Valuation Model Step by Step for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.</p>
+<div class="blog-meta"><time datetime="2026-11-13">13 Nov 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-2-calculate-fcff-and-fcfe-solved-examples/" aria-label="Read How to Calculate FCFF and FCFE With Solved Examples"><img src="/assets/images/blog/cfa-level-2-calculate-fcff-and-fcfe-solved-examples/cover.svg" alt="Illustrative guide to How to Calculate FCFF and FCFE With Solved Examples" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-2-calculate-fcff-and-fcfe-solved-examples/">How to Calculate FCFF and FCFE With Solved Examples</a></h3>
+<p>Master How to Calculate FCFF and FCFE With Solved Examples for CFA Level II (Equity Investments). Includes verified curriculum formulas, worked numerical examples, and exam review notes.</p>
+<div class="blog-meta"><time datetime="2026-11-13">13 Nov 2026</time><span>9 min read</span></div>
+</article><article class="blog-card">
+<a class="blog-card-image" href="/blog/cfa/cfa-level-2-dividend-discount-model-multistage-valuation/" aria-label="Read Dividend Discount Model: How to Solve Multistage Valuation Questions"><img src="/assets/images/blog/cfa-level-2-dividend-discount-model-multistage-valuation/cover.svg" alt="Illustrative guide to Dividend Discount Model: How to Solve Multistage Valuation Questions" width="1200" height="675" loading="lazy" decoding="async"></a>
+<div class="blog-card-labels"><a class="eyebrow" href="/blog/cfa/">CFA</a></div>
+<h3><a href="/blog/cfa/cfa-level-2-dividend-discount-model-multistage-valuation/">Dividend Discount Model: How to Solve Multistage Valuation Questions</a></h3>
+<p>Master multistage dividend discount model cfa for Level II (Equity Investments). Includes verified CFA formulas, 2 step-by-step solved numerical examples, co.</p>
+<div class="blog-meta"><time datetime="2026-11-13">13 Nov 2026</time><span>9 min read</span></div>
+</article></div></section>
+</article></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">
+            AI Researcher &amp; Product Builder.<br>
+            Bridging machine learning models, product delivery, and financial systems.
+          </p>
+          <p class="meta-text" data-contact="location">New Delhi, India</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/about/">About</a></li>
+            <li><a href="/work/">Selected Work</a></li>
+            <li><a href="/projects/">Projects Index</a></li>
+            <li><a href="/research/">Research at OIST</a></li>
+            <li><a href="/topics/">Topic Hubs</a></li>
+            <li><a href="/learnings/">Learnings &amp; Notes</a></li>
+            <li><a href="/author/aniket-thakur/">Author Entity Profile</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list">
+            <li><a data-contact-link="email" href="mailto:kumaraniketn@gmail.com"><span data-contact="email">kumaraniketn@gmail.com</span></a></li>
+            <li><a data-contact-link="phone" href="tel:+918448769791"><span data-contact="phoneDisplay">+91 8448769791</span></a></li>
+            <li><a data-contact-link="whatsapp" href="https://wa.me/817012905081" target="_blank" rel="noopener">WhatsApp: <span data-contact="whatsappDisplay">+81 70-1290-5081</span> ↗</a></li>
+            <li><a data-contact-link="linkedin" href="https://www.linkedin.com/in/aniket-thakur-a23a9b372" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a data-contact-link="github" href="https://github.com/07anishu12" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a data-contact-link="resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aniket Thakur. All rights reserved.</span>
+        <span>Systems &amp; Engineering Architecture · High-Performance Web</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/main.js?v=2.1.0" defer></script>
+<script src="/assets/js/blog.js" defer></script>
+</body>
+</html>

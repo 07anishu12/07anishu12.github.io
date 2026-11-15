@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Agentic AI &amp; Reliable Autonomous Systems — Aniket Thakur</title>
+  <meta name="description" content="Technical authority hub on Agentic AI, autonomous multi-agent systems, deterministic tool use, state machines, and eval harnesses by Aniket Thakur.">
+  <link rel="canonical" href="https://aniket.app/topics/agentic-ai/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aniket Thakur">
+  <meta property="og:title" content="Agentic AI &amp; Reliable Autonomous Systems — Aniket Thakur">
+  <meta property="og:description" content="Pillar guide to Agentic AI: autonomous tool use, deterministic evaluation, multi-agent coordination, and failure recovery in production.">
+  <meta property="og:url" content="https://aniket.app/topics/agentic-ai/">
+  <meta property="og:image" content="https://aniket.app/assets/img/aniket-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agentic AI &amp; Reliable Autonomous Systems — Aniket Thakur">
+  <meta name="twitter:description" content="Autonomous tool use, deterministic evaluation, multi-agent systems, and failure recovery by Aniket Thakur.">
+  <meta name="twitter:image" content="https://aniket.app/assets/img/aniket-portrait.png">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.1.1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://aniket.app/topics/agentic-ai/#webpage",
+        "url": "https://aniket.app/topics/agentic-ai/",
+        "name": "Agentic AI & Reliable Autonomous Systems — Aniket Thakur",
+        "description": "Pillar guide and authority hub on Agentic AI, autonomous tool execution, and multi-agent coordination authored by Aniket Thakur.",
+        "about": [
+          {"@type": "Thing", "name": "Agentic AI"},
+          {"@type": "Thing", "name": "Multi-Agent Systems"},
+          {"@type": "Thing", "name": "Autonomous Agents"},
+          {"@type": "Thing", "name": "AI Reliability"}
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://aniket.app/#person",
+          "name": "Aniket Thakur",
+          "url": "https://aniket.app/author/aniket-thakur.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aniket.app/topics/agentic-ai/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aniket.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Topics",
+            "item": "https://aniket.app/topics/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Agentic AI",
+            "item": "https://aniket.app/topics/agentic-ai/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json" data-seo-site-schema>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aniket.app/#person","name":"Aniket Thakur","alternateName":["Aniket","07anishu12"],"jobTitle":"AI Engineer & Associate Product Manager","url":"https://aniket.app/author/aniket-thakur.html","image":"https://aniket.app/assets/img/aniket-portrait.png","description":"AI Engineer, AI Researcher, and Associate Product Manager working across Generative AI, LLM systems, Agentic AI, Fintech, and Financial Engineering.","sameAs":["https://github.com/07anishu12","https://www.linkedin.com/in/aniket-thakur-a23a9b372","https://x.com/07anni04","https://medium.com/@kumaraniketn"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University","alternateName":"DSEU","sameAs":"https://dseu.ac.in/"},{"@type":"CollegeOrUniversity","name":"WorldQuant University","sameAs":"https://www.wqu.edu/"}],"worksFor":[{"@type":"Organization","name":"Drivio Technologies","sameAs":"https://drivio.in"}],"affiliation":[{"@type":"ResearchOrganization","name":"Okinawa Institute of Science and Technology Graduate University","alternateName":"OIST","sameAs":"https://www.oist.jp/"}],"knowsAbout":["Artificial Intelligence","AI Engineering","Agentic AI","Large Language Models","Graph Neural Networks","Data Engineering","Fintech","Financial Engineering","Quantitative Finance"]},{"@type":"WebSite","@id":"https://aniket.app/#website","url":"https://aniket.app/","name":"Aniket Thakur","description":"Personal portfolio, projects, research, learnings, and articles by Aniket Thakur.","publisher":{"@id":"https://aniket.app/#person"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://aniket.app/topics/agentic-ai/#webpage","url":"https://aniket.app/topics/agentic-ai/","name":"Agentic AI &amp; Reliable Autonomous Systems — Aniket Thakur","description":"Technical authority hub on Agentic AI, autonomous multi-agent systems, deterministic tool use, state machines, and eval harnesses by Aniket Thakur.","inLanguage":"en","isPartOf":{"@id":"https://aniket.app/#website"},"about":{"@id":"https://aniket.app/#person"}}]}</script>
+  <link rel="stylesheet" href="/assets/css/blog.css?v=f5763b87ac64">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/site-config.js?v=f807f88424b6" defer></script>
+  <script src="/assets/js/lead-capture.js?v=3bd7e9e9dd33" defer></script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body data-page="topics">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aniket Thakur homepage">
+        <span class="brand-name">Aniket Thakur</span>
+        <span class="brand-desc">AI × Product × Finance</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/research/index.html">Research</a>
+        <a href="/topics/index.html" aria-current="page">Topics</a>
+        <a href="/learnings.html">Learnings</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-quiet btn-sm nav-resume" href="/assets/Aniket_Thakur_Resume.pdf" download>Download Résumé ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="article-container container" style="max-width: 960px;">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/topics/index.html">Topics</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Agentic AI</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-meta-top">
+          <span class="badge badge-featured">Pillar Hub</span>
+          <span class="meta-tag">Autonomous Agents · Tool Invocation · Reliability</span>
+          <span class="meta-dot">·</span>
+          <span>By Aniket Thakur</span>
+        </div>
+
+        <h1 class="article-title" style="font-size: clamp(2.1rem, 4vw, 3rem);">
+          Agentic AI &amp; <span class="serif-accent">Reliable Autonomous Systems.</span>
+        </h1>
+
+        <p class="lead">
+          Designing production agentic workflows that balance autonomous decision-making with strict execution limits, deterministic tool verification, stateful persistence, and self-correcting error recovery.
+        </p>
+
+        <div class="article-byline">
+          <div class="byline-avatar">
+            <img src="/assets/img/aniket-portrait.png" alt="Aniket Thakur" width="40" height="40">
+          </div>
+          <div>
+            <div class="byline-name"><a href="/author/aniket-thakur.html">Aniket Thakur</a></div>
+            <div class="byline-role">AI Engineer, Associate Product Manager &amp; AI Researcher</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <h2>Defining Agentic AI in Production</h2>
+        <p>
+          Agentic AI refers to computational architectures where a model is granted agency to reason through multi-step objectives, plan subtasks, invoke external tools, inspect environmental feedback, and iteratively adjust its actions until a termination criterion is met. Unlike rigid procedural scripts or single-turn completions, agentic systems handle ambiguity, navigate dynamic state changes, and synthesize complex multi-modal outputs.
+        </p>
+        <p>
+          However, unbounded agency in production introduces high failure risks. To build production-grade agentic architectures, four invariants must be enforced:
+        </p>
+        <ul>
+          <li><strong>Finite State Machines &amp; Graphs:</strong> Constraining agent trajectories to directed graphs where state transitions, retry loops, and maximum iteration bounds are programmatically governed.</li>
+          <li><strong>Deterministic Tool Sandboxing:</strong> Restricting tool execution to validated API surfaces with strict parameter typing, rate limiting, and link-local address filtering to prevent SSRF vulnerabilities.</li>
+          <li><strong>Memory Isolation &amp; Compaction:</strong> Maintaining clear distinctions between short-term conversational context, persistent agent state, and external retrieval data to prevent context pollution and token exhaustion.</li>
+          <li><strong>Evaluation-Driven Refinement:</strong> Measuring agent reliability across automated multi-turn eval harnesses that grade step-by-step tool selection accuracy, plan execution fidelity, and graceful failure handling.</li>
+        </ul>
+
+        <h2>Production Systems &amp; Case Studies</h2>
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-featured">Flagship Agent</span>
+            <h3><a href="/projects/seo-agent-laya.html">Laya — Autonomous SEO Agent Pipeline</a></h3>
+            <p>An autonomous system that decomposes keyword targets, crawls competitor SERPs, generates structured topical clusters, and validates content quality against search heuristics.</p>
+            <a class="topic-hub-link" href="/projects/seo-agent-laya.html">Explore Laya Architecture →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Data Product</span>
+            <h3><a href="/projects/prompt-based-bi.html">Prompt-Based Business Intelligence System</a></h3>
+            <p>Natural-language query layer over enterprise relational databases featuring schema injection, AST query validation, and read-only execution guardrails.</p>
+            <a class="topic-hub-link" href="/projects/prompt-based-bi.html">Explore Prompt-BI Architecture →</a>
+          </div>
+        </div>
+
+        <h2>Curated Technical Focus Areas</h2>
+        <div class="topic-hub-grid" style="margin: 24px 0;">
+          <div class="topic-hub-card">
+            <span class="badge badge-published">System Design</span>
+            <h3><a href="/blog/technology/">AI Agents vs Automation</a></h3>
+            <p>Framework for deciding between deterministic state machines, DAG-based automation, and autonomous LLM agents based on task predictability.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Architecture Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Framework Evaluation</span>
+            <h3><a href="/blog/technology/">Pydantic AI &amp; LangGraph</a></h3>
+            <p>Comparing Pydantic AI's type-safe schema validation against LangGraph's cyclic state graphs for complex, multi-agent enterprise applications.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Framework Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Security Engineering</span>
+            <h3><a href="/blog/technology/">Agent Security &amp; Isolation</a></h3>
+            <p>Hardening agent tool-execution boundaries, defending against indirect prompt injection, and sanitizing untrusted inputs in autonomous workflows.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Security Guides →</a>
+          </div>
+
+          <div class="topic-hub-card">
+            <span class="badge badge-published">Fine-Tuning</span>
+            <h3><a href="/blog/technology/">Local Model Fine-Tuning</a></h3>
+            <p>Fine-tuning compact open weights for specialized tool-calling, instruction-following, and latency-sensitive agent runtimes on consumer GPUs.</p>
+            <a class="topic-hub-link" href="/blog/technology/">Read Fine-Tuning Guides →</a>
+          </div>
+        </div>
+
+        <h2>Monographs &amp; Research Foundations</h2>
+        <ul>
+          <li><a href="/learnings/deterministic-validation-schemas-multi-llm-pipelines.html">Designing Deterministic Validation Schemas for Multi-LLM Pipelines</a>: Ensuring agent outputs strictly conform to required contract schemas before execution.</li>
+          <li><a href="/topics/ai-engineering/">AI Engineering &amp; Frontier LLM Systems</a>: The companion pillar hub covering token economics, multi-model tiering, and prompt caching.</li>
+          <li><a href="/projects/index.html">Projects Index</a>: Complete catalogue of verified production software architectures.</li>
+        </ul>
+      </div>
+
+      <footer class="article-footer" style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+        <p class="eyebrow">Explore Other Topical Authority Hubs</p>
+        <div class="btn-group">
+          <a class="btn btn-secondary btn-sm" href="/topics/ai-engineering/">AI Engineering Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/data-engineering/">Data Engineering Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/fintech-product/">Fintech &amp; Product Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/quantitative-finance/">Quantitative Finance Hub →</a>
+          <a class="btn btn-secondary btn-sm" href="/topics/ai-research/">AI Research Hub →</a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Aniket Thakur</span>
+          <p class="footer-brand-desc">AI Engineer, Associate Product Manager &amp; AI Researcher.<br>Building production AI systems, quantitative models, and data products.</p>
+          <p class="meta-text">New Delhi, India</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/research/index.html">Research</a></li>
+            <li><a href="/topics/index.html">Topics</a></li>
+            <li><a href="/learnings.html">Learnings</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
